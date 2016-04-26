@@ -24,7 +24,7 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>ContaResponse</returns>
-        ContaResponse ConsultarContaUsingGET1 (int? idEmissor, int? idConta);
+        ContaResponse ConsultarContaUsingGET (int? idEmissor, int? idConta);
   
         /// <summary>
         /// /contas/{idConta}
@@ -35,7 +35,7 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>ApiResponse of ContaResponse</returns>
-        ApiResponse<ContaResponse> ConsultarContaUsingGET1WithHttpInfo (int? idEmissor, int? idConta);
+        ApiResponse<ContaResponse> ConsultarContaUsingGETWithHttpInfo (int? idEmissor, int? idConta);
 
         /// <summary>
         /// /contas/{idConta}
@@ -46,7 +46,7 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGET1Async (int? idEmissor, int? idConta);
+        System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idEmissor, int? idConta);
 
         /// <summary>
         /// /contas/{idConta}
@@ -57,7 +57,7 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGET1AsyncWithHttpInfo (int? idEmissor, int? idConta);
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idEmissor, int? idConta);
         
     }
   
@@ -143,9 +143,9 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param> 
         /// <param name="idConta">ID da Conta</param> 
         /// <returns>ContaResponse</returns>
-        public ContaResponse ConsultarContaUsingGET1 (int? idEmissor, int? idConta)
+        public ContaResponse ConsultarContaUsingGET (int? idEmissor, int? idConta)
         {
-             ApiResponse<ContaResponse> response = ConsultarContaUsingGET1WithHttpInfo(idEmissor, idConta);
+             ApiResponse<ContaResponse> response = ConsultarContaUsingGETWithHttpInfo(idEmissor, idConta);
              return response.Data;
         }
 
@@ -155,14 +155,14 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param> 
         /// <param name="idConta">ID da Conta</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
-        public ApiResponse< ContaResponse > ConsultarContaUsingGET1WithHttpInfo (int? idEmissor, int? idConta)
+        public ApiResponse< ContaResponse > ConsultarContaUsingGETWithHttpInfo (int? idEmissor, int? idConta)
         {
             
             // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ConsultarContaUsingGET1");
+            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ConsultarContaUsingGET");
             
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET1");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET");
             
     
             var path_ = "/api/v1/contas/{idConta}";
@@ -209,9 +209,9 @@ namespace Conductor.CaaS.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET1: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET1: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ContaResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -225,9 +225,9 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        public async System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGET1Async (int? idEmissor, int? idConta)
+        public async System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idEmissor, int? idConta)
         {
-             ApiResponse<ContaResponse> response = await ConsultarContaUsingGET1AsyncWithHttpInfo(idEmissor, idConta);
+             ApiResponse<ContaResponse> response = await ConsultarContaUsingGETAsyncWithHttpInfo(idEmissor, idConta);
              return response.Data;
 
         }
@@ -238,12 +238,12 @@ namespace Conductor.CaaS.Api
         /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGET1AsyncWithHttpInfo (int? idEmissor, int? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idEmissor, int? idConta)
         {
             // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ConsultarContaUsingGET1");
+            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ConsultarContaUsingGET");
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET1");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET");
             
     
             var path_ = "/api/v1/contas/{idConta}";
@@ -290,9 +290,9 @@ namespace Conductor.CaaS.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET1: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET1: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling ConsultarContaUsingGET: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ContaResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
