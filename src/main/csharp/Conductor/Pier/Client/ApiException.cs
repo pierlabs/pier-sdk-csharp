@@ -1,6 +1,6 @@
 using System;
 
-namespace Conductor.CaaS.Client
+namespace Conductor.Pier.Client
 {
     /// <summary>
     /// API Exception

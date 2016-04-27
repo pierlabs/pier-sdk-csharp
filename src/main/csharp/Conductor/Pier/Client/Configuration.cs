@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Conductor.CaaS.Client
+namespace Conductor.Pier.Client
 {
     /// <summary>
     /// Represents a set of configuration settings
@@ -24,6 +24,8 @@ namespace Conductor.CaaS.Client
         /// <param name="apiKeyPrefix">Dictionary of API key prefix</param>
         /// <param name="tempFolderPath">Temp folder path</param>
         /// <param name="dateTimeFormat">DateTime format string</param>
+        /// <param name="timeout">HTTP connection timeout (in milliseconds)</param>
+        /// <param name="userAgent">HTTP user agent</param>
         public Configuration(ApiClient apiClient = null,
                              Dictionary<String, String> defaultHeader = null,
                              string username = null,
@@ -33,17 +35,16 @@ namespace Conductor.CaaS.Client
                              Dictionary<String, String> apiKeyPrefix = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
-                             int timeout = 100000
+                             int timeout = 100000,
+                             string userAgent = "Swagger-Codegen/0.0.1/csharp"
                             )
         {
-            if (apiClient == null)
-                ApiClient = ApiClient.Default;
-            else 
-                ApiClient = apiClient;
+            setApiClientUsingDefault(apiClient);
 
             Username = username;
             Password = password;
             AccessToken = accessToken;
+            UserAgent = userAgent;
 
             if (defaultHeader != null)
                 DefaultHeader = defaultHeader;
@@ -63,18 +64,15 @@ namespace Conductor.CaaS.Client
         /// <param name="apiClient">Api client.</param>
         public Configuration(ApiClient apiClient)
         {
-            if (apiClient == null)
-                ApiClient = ApiClient.Default;
-            else 
-                ApiClient = apiClient;
+            setApiClientUsingDefault(apiClient);
         }
-  
+
         /// <summary>
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
         public const string Version = "0.0.1";
-  
+
         /// <summary>
         /// Gets or sets the default Configuration.
         /// </summary>
@@ -91,7 +89,8 @@ namespace Conductor.CaaS.Client
 
             set 
             {
-                ApiClient.RestClient.Timeout = value;
+                if (ApiClient != null)
+                    ApiClient.RestClient.Timeout = value;
             }
         }
 
@@ -101,8 +100,31 @@ namespace Conductor.CaaS.Client
         /// <value>The API client.</value>
         public ApiClient ApiClient;
 
+        /// <summary>
+        /// Set the ApiClient using Default or ApiClient instance.
+        /// </summary>
+        /// <param name="apiClient">An instance of ApiClient.</param>
+        /// <returns></returns>
+        public void setApiClientUsingDefault (ApiClient apiClient = null)
+        {
+            if (apiClient == null)
+            {
+                if (Default != null && Default.ApiClient == null)
+                    Default.ApiClient = new ApiClient();
+
+                ApiClient = Default != null ? Default.ApiClient : new ApiClient();
+            }
+            else
+            {
+                if (Default != null && Default.ApiClient == null)
+                    Default.ApiClient = apiClient;
+
+                ApiClient = apiClient;
+            }
+        }
+
         private Dictionary<String, String> _defaultHeaderMap = new Dictionary<String, String>();
-        
+
         /// <summary>
         /// Gets or sets the default header.
         /// </summary>
@@ -128,17 +150,23 @@ namespace Conductor.CaaS.Client
         }
 
         /// <summary>
+        /// Gets or sets the HTTP user agent.
+        /// </summary>
+        /// <value>Http user agent.</value>
+        public String UserAgent { get; set; }
+
+        /// <summary>
         /// Gets or sets the username (HTTP basic authentication).
         /// </summary>
         /// <value>The username.</value>
         public String Username { get; set; }
-  
+
         /// <summary>
         /// Gets or sets the password (HTTP basic authentication).
         /// </summary>
         /// <value>The password.</value>
         public String Password { get; set; }
-  
+
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         /// </summary>
@@ -150,7 +178,7 @@ namespace Conductor.CaaS.Client
         /// </summary>
         /// <value>The API key.</value>
         public Dictionary<String, String> ApiKey = new Dictionary<String, String>();
-  
+
         /// <summary>
         /// Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
         /// </summary>
@@ -172,9 +200,9 @@ namespace Conductor.CaaS.Client
             else
                 return apiKeyValue;
         }
-  
+
         private string _tempFolderPath = Path.GetTempPath();
-  
+
         /// <summary>
         /// Gets or sets the temporary folder path to store the files downloaded from the server.
         /// </summary>
@@ -182,19 +210,19 @@ namespace Conductor.CaaS.Client
         public String TempFolderPath
         {
             get { return _tempFolderPath; }
-  
-            set 
+
+            set
             {
                 if (String.IsNullOrEmpty(value))
                 {
                     _tempFolderPath = value;
                     return;
                 }
-      
+
                 // create the directory if it does not exist
                 if (!Directory.Exists(value)) 
                     Directory.CreateDirectory(value);
-      
+
                 // check if the path contains directory separator at the end
                 if (value[value.Length - 1] == Path.DirectorySeparatorChar)
                     _tempFolderPath = value;
@@ -241,7 +269,7 @@ namespace Conductor.CaaS.Client
         /// </summary>
         public static String ToDebugReport()
         {
-            String report = "C# SDK (Conductor.CaaS) Debug Report:\n";
+            String report = "C# SDK (Conductor.Pier) Debug Report:\n";
             report += "    OS: " + Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + Assembly
                      .GetExecutingAssembly()
@@ -249,7 +277,7 @@ namespace Conductor.CaaS.Client
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 0.0.1\n";
             report += "    SDK Package Version: 0.0.1\n";
-  
+
             return report;
         }
     }

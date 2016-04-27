@@ -4,56 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace Conductor.CaaS.Model
+namespace Conductor.Pier.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CancelarCartaoResponse :  IEquatable<CancelarCartaoResponse>
-    {
+    public partial class DesbloquearCartaoResponse :  IEquatable<DesbloquearCartaoResponse>
+    { 
+    
         /// <summary>
-        /// Initializes a new instance of the <see cref="CancelarCartaoResponse" /> class.
+        /// Initializes a new instance of the <see cref="DesbloquearCartaoResponse" /> class.
+        /// Initializes a new instance of the <see cref="DesbloquearCartaoResponse" />class.
         /// </summary>
-        public CancelarCartaoResponse()
+        /// <param name="CodigoRetorno">CodigoRetorno.</param>
+        /// <param name="DescricaoRetorno">DescricaoRetorno.</param>
+
+        public DesbloquearCartaoResponse(int? CodigoRetorno = null, string DescricaoRetorno = null)
         {
+            this.CodigoRetorno = CodigoRetorno;
+            this.DescricaoRetorno = DescricaoRetorno;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CodigoRetorno
         /// </summary>
         [DataMember(Name="codigoRetorno", EmitDefaultValue=false)]
         public int? CodigoRetorno { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DescricaoRetorno
         /// </summary>
         [DataMember(Name="descricaoRetorno", EmitDefaultValue=false)]
         public string DescricaoRetorno { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets IdCartao
-        /// </summary>
-        [DataMember(Name="idCartao", EmitDefaultValue=false)]
-        public int? IdCartao { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets IdConta
-        /// </summary>
-        [DataMember(Name="idConta", EmitDefaultValue=false)]
-        public int? IdConta { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,11 +52,9 @@ namespace Conductor.CaaS.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CancelarCartaoResponse {\n");
+            sb.Append("class DesbloquearCartaoResponse {\n");
             sb.Append("  CodigoRetorno: ").Append(CodigoRetorno).Append("\n");
             sb.Append("  DescricaoRetorno: ").Append(DescricaoRetorno).Append("\n");
-            sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
-            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -88,15 +77,15 @@ namespace Conductor.CaaS.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CancelarCartaoResponse);
+            return this.Equals(obj as DesbloquearCartaoResponse);
         }
 
         /// <summary>
-        /// Returns true if CancelarCartaoResponse instances are equal
+        /// Returns true if DesbloquearCartaoResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CancelarCartaoResponse to be compared</param>
+        /// <param name="other">Instance of DesbloquearCartaoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CancelarCartaoResponse other)
+        public bool Equals(DesbloquearCartaoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -112,16 +101,6 @@ namespace Conductor.CaaS.Model
                     this.DescricaoRetorno == other.DescricaoRetorno ||
                     this.DescricaoRetorno != null &&
                     this.DescricaoRetorno.Equals(other.DescricaoRetorno)
-                ) && 
-                (
-                    this.IdCartao == other.IdCartao ||
-                    this.IdCartao != null &&
-                    this.IdCartao.Equals(other.IdCartao)
-                ) && 
-                (
-                    this.IdConta == other.IdConta ||
-                    this.IdConta != null &&
-                    this.IdConta.Equals(other.IdConta)
                 );
         }
 
@@ -138,16 +117,10 @@ namespace Conductor.CaaS.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CodigoRetorno != null)
-                    hash = hash * 57 + this.CodigoRetorno.GetHashCode();
+                    hash = hash * 59 + this.CodigoRetorno.GetHashCode();
                 
                 if (this.DescricaoRetorno != null)
-                    hash = hash * 57 + this.DescricaoRetorno.GetHashCode();
-                
-                if (this.IdCartao != null)
-                    hash = hash * 57 + this.IdCartao.GetHashCode();
-                
-                if (this.IdConta != null)
-                    hash = hash * 57 + this.IdConta.GetHashCode();
+                    hash = hash * 59 + this.DescricaoRetorno.GetHashCode();
                 
                 return hash;
             }

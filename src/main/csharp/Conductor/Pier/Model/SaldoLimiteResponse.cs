@@ -4,252 +4,287 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace Conductor.CaaS.Model
+namespace Conductor.Pier.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class SaldoLimiteResponse :  IEquatable<SaldoLimiteResponse>
-    {
+    public partial class SaldoLimiteResponse :  IEquatable<SaldoLimiteResponse>
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SaldoLimiteResponse" /> class.
+        /// Initializes a new instance of the <see cref="SaldoLimiteResponse" />class.
         /// </summary>
-        public SaldoLimiteResponse()
+        /// <param name="DisponibCompraNac">DisponibCompraNac.</param>
+        /// <param name="DisponibGlobalCredito">DisponibGlobalCredito.</param>
+        /// <param name="DisponibParceladoNac">DisponibParceladoNac.</param>
+        /// <param name="DisponibParcelasNac">DisponibParcelasNac.</param>
+        /// <param name="DisponibSaqueNacGlobal">DisponibSaqueNacGlobal.</param>
+        /// <param name="FlagAntecipacao">FlagAntecipacao.</param>
+        /// <param name="LimiteCompraNac">LimiteCompraNac.</param>
+        /// <param name="LimiteCreditoConcedido">LimiteCreditoConcedido.</param>
+        /// <param name="LimiteCreditoDisponivel">LimiteCreditoDisponivel.</param>
+        /// <param name="LimiteGlobalCredito">LimiteGlobalCredito.</param>
+        /// <param name="LimiteParceladoNac">LimiteParceladoNac.</param>
+        /// <param name="LimiteParcelasNac">LimiteParcelasNac.</param>
+        /// <param name="LimitePontuacao">LimitePontuacao.</param>
+        /// <param name="LimiteSaqueNacGlobal">LimiteSaqueNacGlobal.</param>
+        /// <param name="NumeroCiclo">NumeroCiclo.</param>
+        /// <param name="PontosConcedidos">PontosConcedidos.</param>
+        /// <param name="PontosRemanescentes">PontosRemanescentes.</param>
+        /// <param name="ProximoVencimentoPadrao">ProximoVencimentoPadrao.</param>
+        /// <param name="ProximoVencimentoReal">ProximoVencimentoReal.</param>
+        /// <param name="SaldoAtualFinal">SaldoAtualFinal.</param>
+        /// <param name="SaldoCredor">SaldoCredor.</param>
+        /// <param name="SaldoDevedor">SaldoDevedor.</param>
+        /// <param name="SaldoDevedorOneroso">SaldoDevedorOneroso.</param>
+        /// <param name="SaldoDevedorTotal">SaldoDevedorTotal.</param>
+        /// <param name="SaltaExtratoAnterior">SaltaExtratoAnterior.</param>
+        /// <param name="TotalDisponivelUtilizacao">TotalDisponivelUtilizacao.</param>
+        /// <param name="TotalFuturo">TotalFuturo.</param>
+        /// <param name="ValorMinimoExtrato">ValorMinimoExtrato.</param>
+        /// <param name="ValorMinimoExtratoOriginal">ValorMinimoExtratoOriginal.</param>
+        /// <param name="VencimentoPadraoAnterior">VencimentoPadraoAnterior.</param>
+        /// <param name="VencimentoPosProx">VencimentoPosProx.</param>
+        /// <param name="VencimentoRealAnterior">VencimentoRealAnterior.</param>
+
+        public SaldoLimiteResponse(double? DisponibCompraNac = null, double? DisponibGlobalCredito = null, double? DisponibParceladoNac = null, double? DisponibParcelasNac = null, double? DisponibSaqueNacGlobal = null, bool? FlagAntecipacao = null, double? LimiteCompraNac = null, double? LimiteCreditoConcedido = null, double? LimiteCreditoDisponivel = null, double? LimiteGlobalCredito = null, double? LimiteParceladoNac = null, double? LimiteParcelasNac = null, double? LimitePontuacao = null, double? LimiteSaqueNacGlobal = null, int? NumeroCiclo = null, double? PontosConcedidos = null, double? PontosRemanescentes = null, string ProximoVencimentoPadrao = null, string ProximoVencimentoReal = null, double? SaldoAtualFinal = null, double? SaldoCredor = null, double? SaldoDevedor = null, double? SaldoDevedorOneroso = null, double? SaldoDevedorTotal = null, double? SaltaExtratoAnterior = null, double? TotalDisponivelUtilizacao = null, double? TotalFuturo = null, double? ValorMinimoExtrato = null, double? ValorMinimoExtratoOriginal = null, string VencimentoPadraoAnterior = null, string VencimentoPosProx = null, string VencimentoRealAnterior = null)
         {
+            this.DisponibCompraNac = DisponibCompraNac;
+            this.DisponibGlobalCredito = DisponibGlobalCredito;
+            this.DisponibParceladoNac = DisponibParceladoNac;
+            this.DisponibParcelasNac = DisponibParcelasNac;
+            this.DisponibSaqueNacGlobal = DisponibSaqueNacGlobal;
+            this.FlagAntecipacao = FlagAntecipacao;
+            this.LimiteCompraNac = LimiteCompraNac;
+            this.LimiteCreditoConcedido = LimiteCreditoConcedido;
+            this.LimiteCreditoDisponivel = LimiteCreditoDisponivel;
+            this.LimiteGlobalCredito = LimiteGlobalCredito;
+            this.LimiteParceladoNac = LimiteParceladoNac;
+            this.LimiteParcelasNac = LimiteParcelasNac;
+            this.LimitePontuacao = LimitePontuacao;
+            this.LimiteSaqueNacGlobal = LimiteSaqueNacGlobal;
+            this.NumeroCiclo = NumeroCiclo;
+            this.PontosConcedidos = PontosConcedidos;
+            this.PontosRemanescentes = PontosRemanescentes;
+            this.ProximoVencimentoPadrao = ProximoVencimentoPadrao;
+            this.ProximoVencimentoReal = ProximoVencimentoReal;
+            this.SaldoAtualFinal = SaldoAtualFinal;
+            this.SaldoCredor = SaldoCredor;
+            this.SaldoDevedor = SaldoDevedor;
+            this.SaldoDevedorOneroso = SaldoDevedorOneroso;
+            this.SaldoDevedorTotal = SaldoDevedorTotal;
+            this.SaltaExtratoAnterior = SaltaExtratoAnterior;
+            this.TotalDisponivelUtilizacao = TotalDisponivelUtilizacao;
+            this.TotalFuturo = TotalFuturo;
+            this.ValorMinimoExtrato = ValorMinimoExtrato;
+            this.ValorMinimoExtratoOriginal = ValorMinimoExtratoOriginal;
+            this.VencimentoPadraoAnterior = VencimentoPadraoAnterior;
+            this.VencimentoPosProx = VencimentoPosProx;
+            this.VencimentoRealAnterior = VencimentoRealAnterior;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets DisponibCompraNac
         /// </summary>
         [DataMember(Name="disponibCompraNac", EmitDefaultValue=false)]
         public double? DisponibCompraNac { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DisponibGlobalCredito
         /// </summary>
         [DataMember(Name="disponibGlobalCredito", EmitDefaultValue=false)]
         public double? DisponibGlobalCredito { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DisponibParceladoNac
         /// </summary>
         [DataMember(Name="disponibParceladoNac", EmitDefaultValue=false)]
         public double? DisponibParceladoNac { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DisponibParcelasNac
         /// </summary>
         [DataMember(Name="disponibParcelasNac", EmitDefaultValue=false)]
         public double? DisponibParcelasNac { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DisponibSaqueNacGlobal
         /// </summary>
         [DataMember(Name="disponibSaqueNacGlobal", EmitDefaultValue=false)]
         public double? DisponibSaqueNacGlobal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FlagAntecipacao
         /// </summary>
         [DataMember(Name="flagAntecipacao", EmitDefaultValue=false)]
         public bool? FlagAntecipacao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteCompraNac
         /// </summary>
         [DataMember(Name="limiteCompraNac", EmitDefaultValue=false)]
         public double? LimiteCompraNac { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteCreditoConcedido
         /// </summary>
         [DataMember(Name="limiteCreditoConcedido", EmitDefaultValue=false)]
         public double? LimiteCreditoConcedido { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteCreditoDisponivel
         /// </summary>
         [DataMember(Name="limiteCreditoDisponivel", EmitDefaultValue=false)]
         public double? LimiteCreditoDisponivel { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteGlobalCredito
         /// </summary>
         [DataMember(Name="limiteGlobalCredito", EmitDefaultValue=false)]
         public double? LimiteGlobalCredito { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteParceladoNac
         /// </summary>
         [DataMember(Name="limiteParceladoNac", EmitDefaultValue=false)]
         public double? LimiteParceladoNac { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteParcelasNac
         /// </summary>
         [DataMember(Name="limiteParcelasNac", EmitDefaultValue=false)]
         public double? LimiteParcelasNac { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimitePontuacao
         /// </summary>
         [DataMember(Name="limitePontuacao", EmitDefaultValue=false)]
         public double? LimitePontuacao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LimiteSaqueNacGlobal
         /// </summary>
         [DataMember(Name="limiteSaqueNacGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueNacGlobal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumeroCiclo
         /// </summary>
         [DataMember(Name="numeroCiclo", EmitDefaultValue=false)]
         public int? NumeroCiclo { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PontosConcedidos
         /// </summary>
         [DataMember(Name="pontosConcedidos", EmitDefaultValue=false)]
         public double? PontosConcedidos { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PontosRemanescentes
         /// </summary>
         [DataMember(Name="pontosRemanescentes", EmitDefaultValue=false)]
         public double? PontosRemanescentes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ProximoVencimentoPadrao
         /// </summary>
         [DataMember(Name="proximoVencimentoPadrao", EmitDefaultValue=false)]
         public string ProximoVencimentoPadrao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ProximoVencimentoReal
         /// </summary>
         [DataMember(Name="proximoVencimentoReal", EmitDefaultValue=false)]
         public string ProximoVencimentoReal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoAtualFinal
         /// </summary>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoCredor
         /// </summary>
         [DataMember(Name="saldoCredor", EmitDefaultValue=false)]
         public double? SaldoCredor { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoDevedor
         /// </summary>
         [DataMember(Name="saldoDevedor", EmitDefaultValue=false)]
         public double? SaldoDevedor { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoDevedorOneroso
         /// </summary>
         [DataMember(Name="saldoDevedorOneroso", EmitDefaultValue=false)]
         public double? SaldoDevedorOneroso { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoDevedorTotal
         /// </summary>
         [DataMember(Name="saldoDevedorTotal", EmitDefaultValue=false)]
         public double? SaldoDevedorTotal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaltaExtratoAnterior
         /// </summary>
         [DataMember(Name="saltaExtratoAnterior", EmitDefaultValue=false)]
         public double? SaltaExtratoAnterior { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalDisponivelUtilizacao
         /// </summary>
         [DataMember(Name="totalDisponivelUtilizacao", EmitDefaultValue=false)]
         public double? TotalDisponivelUtilizacao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalFuturo
         /// </summary>
         [DataMember(Name="totalFuturo", EmitDefaultValue=false)]
         public double? TotalFuturo { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ValorMinimoExtrato
         /// </summary>
         [DataMember(Name="valorMinimoExtrato", EmitDefaultValue=false)]
         public double? ValorMinimoExtrato { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ValorMinimoExtratoOriginal
         /// </summary>
         [DataMember(Name="valorMinimoExtratoOriginal", EmitDefaultValue=false)]
         public double? ValorMinimoExtratoOriginal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VencimentoPadraoAnterior
         /// </summary>
         [DataMember(Name="vencimentoPadraoAnterior", EmitDefaultValue=false)]
         public string VencimentoPadraoAnterior { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VencimentoPosProx
         /// </summary>
         [DataMember(Name="vencimentoPosProx", EmitDefaultValue=false)]
         public string VencimentoPosProx { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VencimentoRealAnterior
         /// </summary>
         [DataMember(Name="vencimentoRealAnterior", EmitDefaultValue=false)]
         public string VencimentoRealAnterior { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -318,7 +353,7 @@ namespace Conductor.CaaS.Model
         /// <summary>
         /// Returns true if SaldoLimiteResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SaldoLimiteResponse to be compared</param>
+        /// <param name="other">Instance of SaldoLimiteResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SaldoLimiteResponse other)
         {
@@ -502,100 +537,100 @@ namespace Conductor.CaaS.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.DisponibCompraNac != null)
-                    hash = hash * 57 + this.DisponibCompraNac.GetHashCode();
+                    hash = hash * 59 + this.DisponibCompraNac.GetHashCode();
                 
                 if (this.DisponibGlobalCredito != null)
-                    hash = hash * 57 + this.DisponibGlobalCredito.GetHashCode();
+                    hash = hash * 59 + this.DisponibGlobalCredito.GetHashCode();
                 
                 if (this.DisponibParceladoNac != null)
-                    hash = hash * 57 + this.DisponibParceladoNac.GetHashCode();
+                    hash = hash * 59 + this.DisponibParceladoNac.GetHashCode();
                 
                 if (this.DisponibParcelasNac != null)
-                    hash = hash * 57 + this.DisponibParcelasNac.GetHashCode();
+                    hash = hash * 59 + this.DisponibParcelasNac.GetHashCode();
                 
                 if (this.DisponibSaqueNacGlobal != null)
-                    hash = hash * 57 + this.DisponibSaqueNacGlobal.GetHashCode();
+                    hash = hash * 59 + this.DisponibSaqueNacGlobal.GetHashCode();
                 
                 if (this.FlagAntecipacao != null)
-                    hash = hash * 57 + this.FlagAntecipacao.GetHashCode();
+                    hash = hash * 59 + this.FlagAntecipacao.GetHashCode();
                 
                 if (this.LimiteCompraNac != null)
-                    hash = hash * 57 + this.LimiteCompraNac.GetHashCode();
+                    hash = hash * 59 + this.LimiteCompraNac.GetHashCode();
                 
                 if (this.LimiteCreditoConcedido != null)
-                    hash = hash * 57 + this.LimiteCreditoConcedido.GetHashCode();
+                    hash = hash * 59 + this.LimiteCreditoConcedido.GetHashCode();
                 
                 if (this.LimiteCreditoDisponivel != null)
-                    hash = hash * 57 + this.LimiteCreditoDisponivel.GetHashCode();
+                    hash = hash * 59 + this.LimiteCreditoDisponivel.GetHashCode();
                 
                 if (this.LimiteGlobalCredito != null)
-                    hash = hash * 57 + this.LimiteGlobalCredito.GetHashCode();
+                    hash = hash * 59 + this.LimiteGlobalCredito.GetHashCode();
                 
                 if (this.LimiteParceladoNac != null)
-                    hash = hash * 57 + this.LimiteParceladoNac.GetHashCode();
+                    hash = hash * 59 + this.LimiteParceladoNac.GetHashCode();
                 
                 if (this.LimiteParcelasNac != null)
-                    hash = hash * 57 + this.LimiteParcelasNac.GetHashCode();
+                    hash = hash * 59 + this.LimiteParcelasNac.GetHashCode();
                 
                 if (this.LimitePontuacao != null)
-                    hash = hash * 57 + this.LimitePontuacao.GetHashCode();
+                    hash = hash * 59 + this.LimitePontuacao.GetHashCode();
                 
                 if (this.LimiteSaqueNacGlobal != null)
-                    hash = hash * 57 + this.LimiteSaqueNacGlobal.GetHashCode();
+                    hash = hash * 59 + this.LimiteSaqueNacGlobal.GetHashCode();
                 
                 if (this.NumeroCiclo != null)
-                    hash = hash * 57 + this.NumeroCiclo.GetHashCode();
+                    hash = hash * 59 + this.NumeroCiclo.GetHashCode();
                 
                 if (this.PontosConcedidos != null)
-                    hash = hash * 57 + this.PontosConcedidos.GetHashCode();
+                    hash = hash * 59 + this.PontosConcedidos.GetHashCode();
                 
                 if (this.PontosRemanescentes != null)
-                    hash = hash * 57 + this.PontosRemanescentes.GetHashCode();
+                    hash = hash * 59 + this.PontosRemanescentes.GetHashCode();
                 
                 if (this.ProximoVencimentoPadrao != null)
-                    hash = hash * 57 + this.ProximoVencimentoPadrao.GetHashCode();
+                    hash = hash * 59 + this.ProximoVencimentoPadrao.GetHashCode();
                 
                 if (this.ProximoVencimentoReal != null)
-                    hash = hash * 57 + this.ProximoVencimentoReal.GetHashCode();
+                    hash = hash * 59 + this.ProximoVencimentoReal.GetHashCode();
                 
                 if (this.SaldoAtualFinal != null)
-                    hash = hash * 57 + this.SaldoAtualFinal.GetHashCode();
+                    hash = hash * 59 + this.SaldoAtualFinal.GetHashCode();
                 
                 if (this.SaldoCredor != null)
-                    hash = hash * 57 + this.SaldoCredor.GetHashCode();
+                    hash = hash * 59 + this.SaldoCredor.GetHashCode();
                 
                 if (this.SaldoDevedor != null)
-                    hash = hash * 57 + this.SaldoDevedor.GetHashCode();
+                    hash = hash * 59 + this.SaldoDevedor.GetHashCode();
                 
                 if (this.SaldoDevedorOneroso != null)
-                    hash = hash * 57 + this.SaldoDevedorOneroso.GetHashCode();
+                    hash = hash * 59 + this.SaldoDevedorOneroso.GetHashCode();
                 
                 if (this.SaldoDevedorTotal != null)
-                    hash = hash * 57 + this.SaldoDevedorTotal.GetHashCode();
+                    hash = hash * 59 + this.SaldoDevedorTotal.GetHashCode();
                 
                 if (this.SaltaExtratoAnterior != null)
-                    hash = hash * 57 + this.SaltaExtratoAnterior.GetHashCode();
+                    hash = hash * 59 + this.SaltaExtratoAnterior.GetHashCode();
                 
                 if (this.TotalDisponivelUtilizacao != null)
-                    hash = hash * 57 + this.TotalDisponivelUtilizacao.GetHashCode();
+                    hash = hash * 59 + this.TotalDisponivelUtilizacao.GetHashCode();
                 
                 if (this.TotalFuturo != null)
-                    hash = hash * 57 + this.TotalFuturo.GetHashCode();
+                    hash = hash * 59 + this.TotalFuturo.GetHashCode();
                 
                 if (this.ValorMinimoExtrato != null)
-                    hash = hash * 57 + this.ValorMinimoExtrato.GetHashCode();
+                    hash = hash * 59 + this.ValorMinimoExtrato.GetHashCode();
                 
                 if (this.ValorMinimoExtratoOriginal != null)
-                    hash = hash * 57 + this.ValorMinimoExtratoOriginal.GetHashCode();
+                    hash = hash * 59 + this.ValorMinimoExtratoOriginal.GetHashCode();
                 
                 if (this.VencimentoPadraoAnterior != null)
-                    hash = hash * 57 + this.VencimentoPadraoAnterior.GetHashCode();
+                    hash = hash * 59 + this.VencimentoPadraoAnterior.GetHashCode();
                 
                 if (this.VencimentoPosProx != null)
-                    hash = hash * 57 + this.VencimentoPosProx.GetHashCode();
+                    hash = hash * 59 + this.VencimentoPosProx.GetHashCode();
                 
                 if (this.VencimentoRealAnterior != null)
-                    hash = hash * 57 + this.VencimentoRealAnterior.GetHashCode();
+                    hash = hash * 59 + this.VencimentoRealAnterior.GetHashCode();
                 
                 return hash;
             }

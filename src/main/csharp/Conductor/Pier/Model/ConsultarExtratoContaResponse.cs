@@ -4,140 +4,159 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace Conductor.CaaS.Model
+namespace Conductor.Pier.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ConsultarExtratoContaResponse :  IEquatable<ConsultarExtratoContaResponse>
-    {
+    public partial class ConsultarExtratoContaResponse :  IEquatable<ConsultarExtratoContaResponse>
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultarExtratoContaResponse" /> class.
+        /// Initializes a new instance of the <see cref="ConsultarExtratoContaResponse" />class.
         /// </summary>
-        public ConsultarExtratoContaResponse()
+        /// <param name="CodigoRetorno">CodigoRetorno.</param>
+        /// <param name="ComprasNacionais">ComprasNacionais.</param>
+        /// <param name="Cpf">Cpf.</param>
+        /// <param name="CreditosNacionais">CreditosNacionais.</param>
+        /// <param name="DataVencimento">DataVencimento.</param>
+        /// <param name="DebitosNacionais">DebitosNacionais.</param>
+        /// <param name="DescricaoRetorno">DescricaoRetorno.</param>
+        /// <param name="Extrato">Extrato.</param>
+        /// <param name="IdCartao">IdCartao.</param>
+        /// <param name="IdConta">IdConta.</param>
+        /// <param name="Multa">Multa.</param>
+        /// <param name="Pagamentos">Pagamentos.</param>
+        /// <param name="SaldoAtualFinal">SaldoAtualFinal.</param>
+        /// <param name="SaldoExtratoAnterior">SaldoExtratoAnterior.</param>
+        /// <param name="TarifasNacionais">TarifasNacionais.</param>
+        /// <param name="ValorMinimoExtrato">ValorMinimoExtrato.</param>
+
+        public ConsultarExtratoContaResponse(int? CodigoRetorno = null, double? ComprasNacionais = null, string Cpf = null, double? CreditosNacionais = null, string DataVencimento = null, double? DebitosNacionais = null, string DescricaoRetorno = null, List<ExtratoResponse> Extrato = null, int? IdCartao = null, int? IdConta = null, double? Multa = null, double? Pagamentos = null, double? SaldoAtualFinal = null, double? SaldoExtratoAnterior = null, double? TarifasNacionais = null, double? ValorMinimoExtrato = null)
         {
+            this.CodigoRetorno = CodigoRetorno;
+            this.ComprasNacionais = ComprasNacionais;
+            this.Cpf = Cpf;
+            this.CreditosNacionais = CreditosNacionais;
+            this.DataVencimento = DataVencimento;
+            this.DebitosNacionais = DebitosNacionais;
+            this.DescricaoRetorno = DescricaoRetorno;
+            this.Extrato = Extrato;
+            this.IdCartao = IdCartao;
+            this.IdConta = IdConta;
+            this.Multa = Multa;
+            this.Pagamentos = Pagamentos;
+            this.SaldoAtualFinal = SaldoAtualFinal;
+            this.SaldoExtratoAnterior = SaldoExtratoAnterior;
+            this.TarifasNacionais = TarifasNacionais;
+            this.ValorMinimoExtrato = ValorMinimoExtrato;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CodigoRetorno
         /// </summary>
         [DataMember(Name="codigoRetorno", EmitDefaultValue=false)]
         public int? CodigoRetorno { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ComprasNacionais
         /// </summary>
         [DataMember(Name="comprasNacionais", EmitDefaultValue=false)]
         public double? ComprasNacionais { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Cpf
         /// </summary>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreditosNacionais
         /// </summary>
         [DataMember(Name="creditosNacionais", EmitDefaultValue=false)]
         public double? CreditosNacionais { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DataVencimento
         /// </summary>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DebitosNacionais
         /// </summary>
         [DataMember(Name="debitosNacionais", EmitDefaultValue=false)]
         public double? DebitosNacionais { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DescricaoRetorno
         /// </summary>
         [DataMember(Name="descricaoRetorno", EmitDefaultValue=false)]
         public string DescricaoRetorno { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Extrato
         /// </summary>
         [DataMember(Name="extrato", EmitDefaultValue=false)]
         public List<ExtratoResponse> Extrato { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IdCartao
         /// </summary>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public int? IdCartao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IdConta
         /// </summary>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public int? IdConta { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Multa
         /// </summary>
         [DataMember(Name="multa", EmitDefaultValue=false)]
         public double? Multa { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Pagamentos
         /// </summary>
         [DataMember(Name="pagamentos", EmitDefaultValue=false)]
         public double? Pagamentos { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoAtualFinal
         /// </summary>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SaldoExtratoAnterior
         /// </summary>
         [DataMember(Name="saldoExtratoAnterior", EmitDefaultValue=false)]
         public double? SaldoExtratoAnterior { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TarifasNacionais
         /// </summary>
         [DataMember(Name="tarifasNacionais", EmitDefaultValue=false)]
         public double? TarifasNacionais { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ValorMinimoExtrato
         /// </summary>
         [DataMember(Name="valorMinimoExtrato", EmitDefaultValue=false)]
         public double? ValorMinimoExtrato { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -190,7 +209,7 @@ namespace Conductor.CaaS.Model
         /// <summary>
         /// Returns true if ConsultarExtratoContaResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConsultarExtratoContaResponse to be compared</param>
+        /// <param name="other">Instance of ConsultarExtratoContaResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConsultarExtratoContaResponse other)
         {
@@ -294,52 +313,52 @@ namespace Conductor.CaaS.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CodigoRetorno != null)
-                    hash = hash * 57 + this.CodigoRetorno.GetHashCode();
+                    hash = hash * 59 + this.CodigoRetorno.GetHashCode();
                 
                 if (this.ComprasNacionais != null)
-                    hash = hash * 57 + this.ComprasNacionais.GetHashCode();
+                    hash = hash * 59 + this.ComprasNacionais.GetHashCode();
                 
                 if (this.Cpf != null)
-                    hash = hash * 57 + this.Cpf.GetHashCode();
+                    hash = hash * 59 + this.Cpf.GetHashCode();
                 
                 if (this.CreditosNacionais != null)
-                    hash = hash * 57 + this.CreditosNacionais.GetHashCode();
+                    hash = hash * 59 + this.CreditosNacionais.GetHashCode();
                 
                 if (this.DataVencimento != null)
-                    hash = hash * 57 + this.DataVencimento.GetHashCode();
+                    hash = hash * 59 + this.DataVencimento.GetHashCode();
                 
                 if (this.DebitosNacionais != null)
-                    hash = hash * 57 + this.DebitosNacionais.GetHashCode();
+                    hash = hash * 59 + this.DebitosNacionais.GetHashCode();
                 
                 if (this.DescricaoRetorno != null)
-                    hash = hash * 57 + this.DescricaoRetorno.GetHashCode();
+                    hash = hash * 59 + this.DescricaoRetorno.GetHashCode();
                 
                 if (this.Extrato != null)
-                    hash = hash * 57 + this.Extrato.GetHashCode();
+                    hash = hash * 59 + this.Extrato.GetHashCode();
                 
                 if (this.IdCartao != null)
-                    hash = hash * 57 + this.IdCartao.GetHashCode();
+                    hash = hash * 59 + this.IdCartao.GetHashCode();
                 
                 if (this.IdConta != null)
-                    hash = hash * 57 + this.IdConta.GetHashCode();
+                    hash = hash * 59 + this.IdConta.GetHashCode();
                 
                 if (this.Multa != null)
-                    hash = hash * 57 + this.Multa.GetHashCode();
+                    hash = hash * 59 + this.Multa.GetHashCode();
                 
                 if (this.Pagamentos != null)
-                    hash = hash * 57 + this.Pagamentos.GetHashCode();
+                    hash = hash * 59 + this.Pagamentos.GetHashCode();
                 
                 if (this.SaldoAtualFinal != null)
-                    hash = hash * 57 + this.SaldoAtualFinal.GetHashCode();
+                    hash = hash * 59 + this.SaldoAtualFinal.GetHashCode();
                 
                 if (this.SaldoExtratoAnterior != null)
-                    hash = hash * 57 + this.SaldoExtratoAnterior.GetHashCode();
+                    hash = hash * 59 + this.SaldoExtratoAnterior.GetHashCode();
                 
                 if (this.TarifasNacionais != null)
-                    hash = hash * 57 + this.TarifasNacionais.GetHashCode();
+                    hash = hash * 59 + this.TarifasNacionais.GetHashCode();
                 
                 if (this.ValorMinimoExtrato != null)
-                    hash = hash * 57 + this.ValorMinimoExtrato.GetHashCode();
+                    hash = hash * 59 + this.ValorMinimoExtrato.GetHashCode();
                 
                 return hash;
             }

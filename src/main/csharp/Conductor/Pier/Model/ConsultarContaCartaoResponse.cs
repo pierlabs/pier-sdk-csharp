@@ -4,105 +4,119 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace Conductor.CaaS.Model
+namespace Conductor.Pier.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CartaoResponse :  IEquatable<CartaoResponse>
-    {
+    public partial class ConsultarContaCartaoResponse :  IEquatable<ConsultarContaCartaoResponse>
+    { 
+    
         /// <summary>
-        /// Initializes a new instance of the <see cref="CartaoResponse" /> class.
+        /// Initializes a new instance of the <see cref="ConsultarContaCartaoResponse" /> class.
+        /// Initializes a new instance of the <see cref="ConsultarContaCartaoResponse" />class.
         /// </summary>
-        public CartaoResponse()
+        /// <param name="DataValidade">DataValidade.</param>
+        /// <param name="DescricaoEstagio">DescricaoEstagio.</param>
+        /// <param name="DescricaoStatus">DescricaoStatus.</param>
+        /// <param name="Estagio">Estagio.</param>
+        /// <param name="FlagCancelamento">FlagCancelamento.</param>
+        /// <param name="IdCartao">IdCartao.</param>
+        /// <param name="NumeroCartao">NumeroCartao.</param>
+        /// <param name="Portador">Portador.</param>
+        /// <param name="PortadorId">PortadorId.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="StatusData">StatusData.</param>
+
+        public ConsultarContaCartaoResponse(string DataValidade = null, string DescricaoEstagio = null, string DescricaoStatus = null, int? Estagio = null, bool? FlagCancelamento = null, int? IdCartao = null, string NumeroCartao = null, string Portador = null, int? PortadorId = null, int? Status = null, DateTime? StatusData = null)
         {
+            this.DataValidade = DataValidade;
+            this.DescricaoEstagio = DescricaoEstagio;
+            this.DescricaoStatus = DescricaoStatus;
+            this.Estagio = Estagio;
+            this.FlagCancelamento = FlagCancelamento;
+            this.IdCartao = IdCartao;
+            this.NumeroCartao = NumeroCartao;
+            this.Portador = Portador;
+            this.PortadorId = PortadorId;
+            this.Status = Status;
+            this.StatusData = StatusData;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets DataValidade
         /// </summary>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DescricaoEstagio
         /// </summary>
         [DataMember(Name="descricaoEstagio", EmitDefaultValue=false)]
         public string DescricaoEstagio { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DescricaoStatus
         /// </summary>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Estagio
         /// </summary>
         [DataMember(Name="estagio", EmitDefaultValue=false)]
         public int? Estagio { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FlagCancelamento
         /// </summary>
         [DataMember(Name="flagCancelamento", EmitDefaultValue=false)]
         public bool? FlagCancelamento { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IdCartao
         /// </summary>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public int? IdCartao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumeroCartao
         /// </summary>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Portador
         /// </summary>
         [DataMember(Name="portador", EmitDefaultValue=false)]
         public string Portador { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PortadorId
         /// </summary>
         [DataMember(Name="portadorId", EmitDefaultValue=false)]
         public int? PortadorId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StatusData
         /// </summary>
         [DataMember(Name="statusData", EmitDefaultValue=false)]
         public DateTime? StatusData { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,7 +124,7 @@ namespace Conductor.CaaS.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CartaoResponse {\n");
+            sb.Append("class ConsultarContaCartaoResponse {\n");
             sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
             sb.Append("  DescricaoEstagio: ").Append(DescricaoEstagio).Append("\n");
             sb.Append("  DescricaoStatus: ").Append(DescricaoStatus).Append("\n");
@@ -144,15 +158,15 @@ namespace Conductor.CaaS.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CartaoResponse);
+            return this.Equals(obj as ConsultarContaCartaoResponse);
         }
 
         /// <summary>
-        /// Returns true if CartaoResponse instances are equal
+        /// Returns true if ConsultarContaCartaoResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CartaoResponse to be compared</param>
+        /// <param name="other">Instance of ConsultarContaCartaoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CartaoResponse other)
+        public bool Equals(ConsultarContaCartaoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -229,37 +243,37 @@ namespace Conductor.CaaS.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.DataValidade != null)
-                    hash = hash * 57 + this.DataValidade.GetHashCode();
+                    hash = hash * 59 + this.DataValidade.GetHashCode();
                 
                 if (this.DescricaoEstagio != null)
-                    hash = hash * 57 + this.DescricaoEstagio.GetHashCode();
+                    hash = hash * 59 + this.DescricaoEstagio.GetHashCode();
                 
                 if (this.DescricaoStatus != null)
-                    hash = hash * 57 + this.DescricaoStatus.GetHashCode();
+                    hash = hash * 59 + this.DescricaoStatus.GetHashCode();
                 
                 if (this.Estagio != null)
-                    hash = hash * 57 + this.Estagio.GetHashCode();
+                    hash = hash * 59 + this.Estagio.GetHashCode();
                 
                 if (this.FlagCancelamento != null)
-                    hash = hash * 57 + this.FlagCancelamento.GetHashCode();
+                    hash = hash * 59 + this.FlagCancelamento.GetHashCode();
                 
                 if (this.IdCartao != null)
-                    hash = hash * 57 + this.IdCartao.GetHashCode();
+                    hash = hash * 59 + this.IdCartao.GetHashCode();
                 
                 if (this.NumeroCartao != null)
-                    hash = hash * 57 + this.NumeroCartao.GetHashCode();
+                    hash = hash * 59 + this.NumeroCartao.GetHashCode();
                 
                 if (this.Portador != null)
-                    hash = hash * 57 + this.Portador.GetHashCode();
+                    hash = hash * 59 + this.Portador.GetHashCode();
                 
                 if (this.PortadorId != null)
-                    hash = hash * 57 + this.PortadorId.GetHashCode();
+                    hash = hash * 59 + this.PortadorId.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.StatusData != null)
-                    hash = hash * 57 + this.StatusData.GetHashCode();
+                    hash = hash * 59 + this.StatusData.GetHashCode();
                 
                 return hash;
             }
