@@ -24,13 +24,12 @@ namespace Conductor.Pier.Api
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="nome">Nome (optional)</param>
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param>
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param>
         /// <returns>ConsultarContaResponse</returns>
-        ConsultarContaResponse BuscarContaUsingGET (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
+        ConsultarContaResponse BuscarContaUsingGET (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
   
         /// <summary>
         /// /contas/buscar
@@ -39,13 +38,12 @@ namespace Conductor.Pier.Api
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="nome">Nome (optional)</param>
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param>
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param>
         /// <returns>ApiResponse of ConsultarContaResponse</returns>
-        ApiResponse<ConsultarContaResponse> BuscarContaUsingGETWithHttpInfo (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
+        ApiResponse<ConsultarContaResponse> BuscarContaUsingGETWithHttpInfo (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
         
         /// <summary>
         /// /contas/{idConta}
@@ -54,10 +52,9 @@ namespace Conductor.Pier.Api
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>ContaResponse</returns>
-        ContaResponse ConsultarContaUsingGET (int? idEmissor, int? idConta);
+        ContaResponse ConsultarContaUsingGET (int? idConta);
   
         /// <summary>
         /// /contas/{idConta}
@@ -66,10 +63,9 @@ namespace Conductor.Pier.Api
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>ApiResponse of ContaResponse</returns>
-        ApiResponse<ContaResponse> ConsultarContaUsingGETWithHttpInfo (int? idEmissor, int? idConta);
+        ApiResponse<ContaResponse> ConsultarContaUsingGETWithHttpInfo (int? idConta);
         
         #endregion Synchronous Operations
         
@@ -82,13 +78,12 @@ namespace Conductor.Pier.Api
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="nome">Nome (optional)</param>
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param>
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param>
         /// <returns>Task of ConsultarContaResponse</returns>
-        System.Threading.Tasks.Task<ConsultarContaResponse> BuscarContaUsingGETAsync (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
+        System.Threading.Tasks.Task<ConsultarContaResponse> BuscarContaUsingGETAsync (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
 
         /// <summary>
         /// /contas/buscar
@@ -97,13 +92,12 @@ namespace Conductor.Pier.Api
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="nome">Nome (optional)</param>
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param>
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param>
         /// <returns>Task of ApiResponse (ConsultarContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultarContaResponse>> BuscarContaUsingGETAsyncWithHttpInfo (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
+        System.Threading.Tasks.Task<ApiResponse<ConsultarContaResponse>> BuscarContaUsingGETAsyncWithHttpInfo (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
         
         /// <summary>
         /// /contas/{idConta}
@@ -112,10 +106,9 @@ namespace Conductor.Pier.Api
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idEmissor, int? idConta);
+        System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idConta);
 
         /// <summary>
         /// /contas/{idConta}
@@ -124,10 +117,9 @@ namespace Conductor.Pier.Api
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idEmissor, int? idConta);
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idConta);
         
         #endregion Asynchronous Operations
         
@@ -225,15 +217,14 @@ namespace Conductor.Pier.Api
         /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param> 
         /// <param name="nome">Nome (optional)</param> 
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param> 
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param> 
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param> 
         /// <returns>ConsultarContaResponse</returns>
-        public ConsultarContaResponse BuscarContaUsingGET (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
+        public ConsultarContaResponse BuscarContaUsingGET (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
         {
-             ApiResponse<ConsultarContaResponse> localVarResponse = BuscarContaUsingGETWithHttpInfo(idEmissor, nome, cpf, numeroCartao, idConta);
+             ApiResponse<ConsultarContaResponse> localVarResponse = BuscarContaUsingGETWithHttpInfo(nome, cpf, numeroCartao, idConta);
              return localVarResponse.Data;
         }
 
@@ -241,18 +232,13 @@ namespace Conductor.Pier.Api
         /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param> 
         /// <param name="nome">Nome (optional)</param> 
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param> 
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param> 
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param> 
         /// <returns>ApiResponse of ConsultarContaResponse</returns>
-        public ApiResponse< ConsultarContaResponse > BuscarContaUsingGETWithHttpInfo (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
+        public ApiResponse< ConsultarContaResponse > BuscarContaUsingGETWithHttpInfo (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
         {
-            
-            // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null)
-                throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ContaApi->BuscarContaUsingGET");
             
     
             var localVarPath = "/api/v1/contas/buscar";
@@ -287,7 +273,6 @@ namespace Conductor.Pier.Api
             if (numeroCartao != null) localVarQueryParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             
-            if (idEmissor != null) localVarHeaderParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // header parameter
             
             
             
@@ -323,15 +308,14 @@ namespace Conductor.Pier.Api
         /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="nome">Nome (optional)</param>
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param>
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param>
         /// <returns>Task of ConsultarContaResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultarContaResponse> BuscarContaUsingGETAsync (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
+        public async System.Threading.Tasks.Task<ConsultarContaResponse> BuscarContaUsingGETAsync (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
         {
-             ApiResponse<ConsultarContaResponse> localVarResponse = await BuscarContaUsingGETAsyncWithHttpInfo(idEmissor, nome, cpf, numeroCartao, idConta);
+             ApiResponse<ConsultarContaResponse> localVarResponse = await BuscarContaUsingGETAsyncWithHttpInfo(nome, cpf, numeroCartao, idConta);
              return localVarResponse.Data;
 
         }
@@ -340,16 +324,13 @@ namespace Conductor.Pier.Api
         /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="nome">Nome (optional)</param>
         /// <param name="cpf">CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) (optional)</param>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) (optional)</param>
         /// <param name="idConta">ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf) (optional)</param>
         /// <returns>Task of ApiResponse (ConsultarContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultarContaResponse>> BuscarContaUsingGETAsyncWithHttpInfo (int? idEmissor, string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultarContaResponse>> BuscarContaUsingGETAsyncWithHttpInfo (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null)
         {
-            // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling BuscarContaUsingGET");
             
     
             var localVarPath = "/api/v1/contas/buscar";
@@ -384,7 +365,6 @@ namespace Conductor.Pier.Api
             if (numeroCartao != null) localVarQueryParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             
-            if (idEmissor != null) localVarHeaderParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // header parameter
             
             
             
@@ -420,12 +400,11 @@ namespace Conductor.Pier.Api
         /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param> 
         /// <param name="idConta">ID da Conta</param> 
         /// <returns>ContaResponse</returns>
-        public ContaResponse ConsultarContaUsingGET (int? idEmissor, int? idConta)
+        public ContaResponse ConsultarContaUsingGET (int? idConta)
         {
-             ApiResponse<ContaResponse> localVarResponse = ConsultarContaUsingGETWithHttpInfo(idEmissor, idConta);
+             ApiResponse<ContaResponse> localVarResponse = ConsultarContaUsingGETWithHttpInfo(idConta);
              return localVarResponse.Data;
         }
 
@@ -433,15 +412,10 @@ namespace Conductor.Pier.Api
         /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param> 
         /// <param name="idConta">ID da Conta</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
-        public ApiResponse< ContaResponse > ConsultarContaUsingGETWithHttpInfo (int? idEmissor, int? idConta)
+        public ApiResponse< ContaResponse > ConsultarContaUsingGETWithHttpInfo (int? idConta)
         {
-            
-            // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null)
-                throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ContaApi->ConsultarContaUsingGET");
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
@@ -477,7 +451,6 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
             
             
-            if (idEmissor != null) localVarHeaderParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // header parameter
             
             
             
@@ -513,12 +486,11 @@ namespace Conductor.Pier.Api
         /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        public async System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idEmissor, int? idConta)
+        public async System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idConta)
         {
-             ApiResponse<ContaResponse> localVarResponse = await ConsultarContaUsingGETAsyncWithHttpInfo(idEmissor, idConta);
+             ApiResponse<ContaResponse> localVarResponse = await ConsultarContaUsingGETAsyncWithHttpInfo(idConta);
              return localVarResponse.Data;
 
         }
@@ -527,13 +499,10 @@ namespace Conductor.Pier.Api
         /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEmissor">ID do Emissor</param>
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idEmissor, int? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idConta)
         {
-            // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling ConsultarContaUsingGET");
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET");
             
@@ -567,7 +536,6 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
             
             
-            if (idEmissor != null) localVarHeaderParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // header parameter
             
             
             
