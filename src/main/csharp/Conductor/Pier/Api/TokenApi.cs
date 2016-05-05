@@ -39,6 +39,28 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of BodyAccessToken</returns>
         ApiResponse<BodyAccessToken> CallbackUsingPOSTWithHttpInfo (BodyAccessToken bodyAccessToken);
         
+        /// <summary>
+        /// /tokens/validar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param>
+        /// <returns>Object</returns>
+        Object ValidarUsingPOST (BodyAccessToken bodyAccessToken);
+  
+        /// <summary>
+        /// /tokens/validar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ValidarUsingPOSTWithHttpInfo (BodyAccessToken bodyAccessToken);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -64,6 +86,28 @@ namespace Conductor.Pier.Api
         /// <param name="bodyAccessToken">bodyAccessToken</param>
         /// <returns>Task of ApiResponse (BodyAccessToken)</returns>
         System.Threading.Tasks.Task<ApiResponse<BodyAccessToken>> CallbackUsingPOSTAsyncWithHttpInfo (BodyAccessToken bodyAccessToken);
+        
+        /// <summary>
+        /// /tokens/validar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ValidarUsingPOSTAsync (BodyAccessToken bodyAccessToken);
+
+        /// <summary>
+        /// /tokens/validar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarUsingPOSTAsyncWithHttpInfo (BodyAccessToken bodyAccessToken);
         
         #endregion Asynchronous Operations
         
@@ -183,7 +227,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling TokenApi->CallbackUsingPOST");
             
     
-            var localVarPath = "/api/v1/tokens/callback";
+            var localVarPath = "/v1/tokens/callback";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -274,7 +318,7 @@ namespace Conductor.Pier.Api
             if (bodyAccessToken == null) throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling CallbackUsingPOST");
             
     
-            var localVarPath = "/api/v1/tokens/callback";
+            var localVarPath = "/v1/tokens/callback";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -337,6 +381,189 @@ namespace Conductor.Pier.Api
             return new ApiResponse<BodyAccessToken>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (BodyAccessToken) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BodyAccessToken)));
+            
+        }
+        
+        /// <summary>
+        /// /tokens/validar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param> 
+        /// <returns>Object</returns>
+        public Object ValidarUsingPOST (BodyAccessToken bodyAccessToken)
+        {
+             ApiResponse<Object> localVarResponse = ValidarUsingPOSTWithHttpInfo(bodyAccessToken);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// /tokens/validar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ValidarUsingPOSTWithHttpInfo (BodyAccessToken bodyAccessToken)
+        {
+            
+            // verify the required parameter 'bodyAccessToken' is set
+            if (bodyAccessToken == null)
+                throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling TokenApi->ValidarUsingPOST");
+            
+    
+            var localVarPath = "/v1/tokens/validar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (bodyAccessToken.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(bodyAccessToken); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = bodyAccessToken; // byte array
+            }
+
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// /tokens/validar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ValidarUsingPOSTAsync (BodyAccessToken bodyAccessToken)
+        {
+             ApiResponse<Object> localVarResponse = await ValidarUsingPOSTAsyncWithHttpInfo(bodyAccessToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// /tokens/validar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bodyAccessToken">bodyAccessToken</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarUsingPOSTAsyncWithHttpInfo (BodyAccessToken bodyAccessToken)
+        {
+            // verify the required parameter 'bodyAccessToken' is set
+            if (bodyAccessToken == null) throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling ValidarUsingPOST");
+            
+    
+            var localVarPath = "/v1/tokens/validar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (bodyAccessToken.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(bodyAccessToken); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = bodyAccessToken; // byte array
+            }
+
+            
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         

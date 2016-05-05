@@ -19,23 +19,56 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ActionEnum {
+            
+            [EnumMember(Value = "CREATED")]
+            Created,
+            
+            [EnumMember(Value = "UPDATED")]
+            Updated,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
+    
+        /// <summary>
         /// Initializes a new instance of the <see cref="BodyAccessToken" /> class.
         /// Initializes a new instance of the <see cref="BodyAccessToken" />class.
         /// </summary>
-        /// <param name="Body">Body.</param>
+        /// <param name="AuthToken">AuthToken.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="User">User.</param>
 
-        public BodyAccessToken(Body Body = null)
+        public BodyAccessToken(AuthToken AuthToken = null, ActionEnum? Action = null, string User = null)
         {
-            this.Body = Body;
+            this.AuthToken = AuthToken;
+            this.Action = Action;
+            this.User = User;
             
         }
         
     
         /// <summary>
-        /// Gets or Sets Body
+        /// Gets or Sets AuthToken
         /// </summary>
-        [DataMember(Name="body", EmitDefaultValue=false)]
-        public Body Body { get; set; }
+        [DataMember(Name="AuthToken", EmitDefaultValue=false)]
+        public AuthToken AuthToken { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets User
+        /// </summary>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public string User { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,7 +78,9 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BodyAccessToken {\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
+            sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -84,9 +119,19 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Body == other.Body ||
-                    this.Body != null &&
-                    this.Body.Equals(other.Body)
+                    this.AuthToken == other.AuthToken ||
+                    this.AuthToken != null &&
+                    this.AuthToken.Equals(other.AuthToken)
+                ) && 
+                (
+                    this.Action == other.Action ||
+                    this.Action != null &&
+                    this.Action.Equals(other.Action)
+                ) && 
+                (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 );
         }
 
@@ -102,8 +147,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Body != null)
-                    hash = hash * 59 + this.Body.GetHashCode();
+                if (this.AuthToken != null)
+                    hash = hash * 59 + this.AuthToken.GetHashCode();
+                
+                if (this.Action != null)
+                    hash = hash * 59 + this.Action.GetHashCode();
+                
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 return hash;
             }

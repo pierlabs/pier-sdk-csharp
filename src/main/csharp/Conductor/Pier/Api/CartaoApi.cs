@@ -461,7 +461,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'observacao' when calling CartaoApi->CancelarCartaoUsingPOST");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -561,7 +561,7 @@ namespace Conductor.Pier.Api
             if (observacao == null) throw new ApiException(400, "Missing required parameter 'observacao' when calling CancelarCartaoUsingPOST");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -658,7 +658,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->ConsultarCartaoUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -751,7 +751,7 @@ namespace Conductor.Pier.Api
             if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarCartaoUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -839,7 +839,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->ConsultarCartoesUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes";
+            var localVarPath = "/v1/contas/{idConta}/cartoes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -924,7 +924,7 @@ namespace Conductor.Pier.Api
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarCartoesUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes";
+            var localVarPath = "/v1/contas/{idConta}/cartoes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1022,7 +1022,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling CartaoApi->ConsultarExtratoFaturasUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1117,7 +1117,7 @@ namespace Conductor.Pier.Api
             if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarExtratoFaturasUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1211,7 +1211,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->ConsultarSaldosLimitesUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/limites";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1301,7 +1301,7 @@ namespace Conductor.Pier.Api
             if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarSaldosLimitesUsingGET");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/limites";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1400,7 +1400,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'codigoSegurancao' when calling CartaoApi->DesbloquearCartaoUsingPOST");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1495,7 +1495,7 @@ namespace Conductor.Pier.Api
             if (codigoSegurancao == null) throw new ApiException(400, "Missing required parameter 'codigoSegurancao' when calling DesbloquearCartaoUsingPOST");
             
     
-            var localVarPath = "/api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

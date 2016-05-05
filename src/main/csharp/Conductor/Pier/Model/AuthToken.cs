@@ -27,8 +27,8 @@ namespace Conductor.Pier.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-            [EnumMember(Value = "REVOKE")]
-            Revoke,
+            [EnumMember(Value = "REVOKED")]
+            Revoked,
             
             [EnumMember(Value = "DELETED")]
             Deleted
