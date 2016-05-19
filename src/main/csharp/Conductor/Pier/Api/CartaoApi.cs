@@ -18,32 +18,32 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear
         /// </summary>
         /// <remarks>
-        /// Cancelar um determinado cart\u00C3\u00A3o
+        /// Bloquear um determinado cart\u00C3\u00A3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do cancelamento</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param>
+        /// <param name="motivo">Motivo do bloqueio</param>
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
         /// <returns>CancelarCartaoResponse</returns>
-        CancelarCartaoResponse CancelarCartaoUsingPOST (int? idConta, int? idCartao, int? motivo, string observacao);
+        CancelarCartaoResponse BloquearCartaoUsingPOST (int? idConta, int? idCartao, int? motivo, string observacao = null);
   
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear
         /// </summary>
         /// <remarks>
-        /// Cancelar um determinado cart\u00C3\u00A3o
+        /// Bloquear um determinado cart\u00C3\u00A3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do cancelamento</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param>
+        /// <param name="motivo">Motivo do bloqueio</param>
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
         /// <returns>ApiResponse of CancelarCartaoResponse</returns>
-        ApiResponse<CancelarCartaoResponse> CancelarCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao);
+        ApiResponse<CancelarCartaoResponse> BloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null);
         
         /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}
@@ -94,56 +94,6 @@ namespace Conductor.Pier.Api
         ApiResponse<ConsultarCartaoResponse> ConsultarCartoesUsingGETWithHttpInfo (int? idConta);
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas
-        /// </summary>
-        /// <remarks>
-        /// Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param>
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
-        /// <returns>ConsultarExtratoContaResponse</returns>
-        ConsultarExtratoContaResponse ConsultarExtratoFaturasUsingGET (int? idConta, int? idCartao, string dataVencimento);
-  
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas
-        /// </summary>
-        /// <remarks>
-        /// Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param>
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
-        /// <returns>ApiResponse of ConsultarExtratoContaResponse</returns>
-        ApiResponse<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETWithHttpInfo (int? idConta, int? idCartao, string dataVencimento);
-        
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites
-        /// </summary>
-        /// <remarks>
-        /// Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <returns>ConsultarSaldoLimitesResponse</returns>
-        ConsultarSaldoLimitesResponse ConsultarSaldosLimitesUsingGET (int? idConta, int? idCartao);
-  
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites
-        /// </summary>
-        /// <remarks>
-        /// Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <returns>ApiResponse of ConsultarSaldoLimitesResponse</returns>
-        ApiResponse<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETWithHttpInfo (int? idConta, int? idCartao);
-        
-        /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}/desbloquear
         /// </summary>
         /// <remarks>
@@ -152,9 +102,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param>
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
         /// <returns>DesbloquearCartaoResponse</returns>
-        DesbloquearCartaoResponse DesbloquearCartaoUsingPOST (int? idConta, int? idCartao, string codigoSegurancao);
+        DesbloquearCartaoResponse DesbloquearCartaoUsingPOST (int? idConta, int? idCartao, string codigoSegurancao = null);
   
         /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}/desbloquear
@@ -165,41 +115,41 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param>
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of DesbloquearCartaoResponse</returns>
-        ApiResponse<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao);
+        ApiResponse<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear
         /// </summary>
         /// <remarks>
-        /// Cancelar um determinado cart\u00C3\u00A3o
+        /// Bloquear um determinado cart\u00C3\u00A3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do cancelamento</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param>
+        /// <param name="motivo">Motivo do bloqueio</param>
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
         /// <returns>Task of CancelarCartaoResponse</returns>
-        System.Threading.Tasks.Task<CancelarCartaoResponse> CancelarCartaoUsingPOSTAsync (int? idConta, int? idCartao, int? motivo, string observacao);
+        System.Threading.Tasks.Task<CancelarCartaoResponse> BloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, int? motivo, string observacao = null);
 
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear
         /// </summary>
         /// <remarks>
-        /// Cancelar um determinado cart\u00C3\u00A3o
+        /// Bloquear um determinado cart\u00C3\u00A3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do cancelamento</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param>
+        /// <param name="motivo">Motivo do bloqueio</param>
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
         /// <returns>Task of ApiResponse (CancelarCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CancelarCartaoResponse>> CancelarCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao);
+        System.Threading.Tasks.Task<ApiResponse<CancelarCartaoResponse>> BloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null);
         
         /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}
@@ -250,56 +200,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConsultarCartaoResponse>> ConsultarCartoesUsingGETAsyncWithHttpInfo (int? idConta);
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas
-        /// </summary>
-        /// <remarks>
-        /// Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param>
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
-        /// <returns>Task of ConsultarExtratoContaResponse</returns>
-        System.Threading.Tasks.Task<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETAsync (int? idConta, int? idCartao, string dataVencimento);
-
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas
-        /// </summary>
-        /// <remarks>
-        /// Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param>
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
-        /// <returns>Task of ApiResponse (ConsultarExtratoContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultarExtratoContaResponse>> ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo (int? idConta, int? idCartao, string dataVencimento);
-        
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites
-        /// </summary>
-        /// <remarks>
-        /// Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <returns>Task of ConsultarSaldoLimitesResponse</returns>
-        System.Threading.Tasks.Task<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETAsync (int? idConta, int? idCartao);
-
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites
-        /// </summary>
-        /// <remarks>
-        /// Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <returns>Task of ApiResponse (ConsultarSaldoLimitesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultarSaldoLimitesResponse>> ConsultarSaldosLimitesUsingGETAsyncWithHttpInfo (int? idConta, int? idCartao);
-        
-        /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}/desbloquear
         /// </summary>
         /// <remarks>
@@ -308,9 +208,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param>
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of DesbloquearCartaoResponse</returns>
-        System.Threading.Tasks.Task<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, string codigoSegurancao);
+        System.Threading.Tasks.Task<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, string codigoSegurancao = null);
 
         /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}/desbloquear
@@ -321,9 +221,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param>
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (DesbloquearCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DesbloquearCartaoResponse>> DesbloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao);
+        System.Threading.Tasks.Task<ApiResponse<DesbloquearCartaoResponse>> DesbloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null);
         
         #endregion Asynchronous Operations
         
@@ -418,50 +318,46 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar Cancelar um determinado cart\u00C3\u00A3o
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear Bloquear um determinado cart\u00C3\u00A3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param> 
-        /// <param name="motivo">Motivo do cancelamento</param> 
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param> 
+        /// <param name="motivo">Motivo do bloqueio</param> 
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param> 
         /// <returns>CancelarCartaoResponse</returns>
-        public CancelarCartaoResponse CancelarCartaoUsingPOST (int? idConta, int? idCartao, int? motivo, string observacao)
+        public CancelarCartaoResponse BloquearCartaoUsingPOST (int? idConta, int? idCartao, int? motivo, string observacao = null)
         {
-             ApiResponse<CancelarCartaoResponse> localVarResponse = CancelarCartaoUsingPOSTWithHttpInfo(idConta, idCartao, motivo, observacao);
+             ApiResponse<CancelarCartaoResponse> localVarResponse = BloquearCartaoUsingPOSTWithHttpInfo(idConta, idCartao, motivo, observacao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar Cancelar um determinado cart\u00C3\u00A3o
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear Bloquear um determinado cart\u00C3\u00A3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param> 
-        /// <param name="motivo">Motivo do cancelamento</param> 
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param> 
+        /// <param name="motivo">Motivo do bloqueio</param> 
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param> 
         /// <returns>ApiResponse of CancelarCartaoResponse</returns>
-        public ApiResponse< CancelarCartaoResponse > CancelarCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao)
+        public ApiResponse< CancelarCartaoResponse > BloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->CancelarCartaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->BloquearCartaoUsingPOST");
             
             // verify the required parameter 'idCartao' is set
             if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->CancelarCartaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->BloquearCartaoUsingPOST");
             
             // verify the required parameter 'motivo' is set
             if (motivo == null)
-                throw new ApiException(400, "Missing required parameter 'motivo' when calling CartaoApi->CancelarCartaoUsingPOST");
-            
-            // verify the required parameter 'observacao' is set
-            if (observacao == null)
-                throw new ApiException(400, "Missing required parameter 'observacao' when calling CartaoApi->CancelarCartaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'motivo' when calling CartaoApi->BloquearCartaoUsingPOST");
             
     
-            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/bloquear";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -513,9 +409,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CancelarCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -525,43 +421,41 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar Cancelar um determinado cart\u00C3\u00A3o
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear Bloquear um determinado cart\u00C3\u00A3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do cancelamento</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param>
+        /// <param name="motivo">Motivo do bloqueio</param>
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
         /// <returns>Task of CancelarCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CancelarCartaoResponse> CancelarCartaoUsingPOSTAsync (int? idConta, int? idCartao, int? motivo, string observacao)
+        public async System.Threading.Tasks.Task<CancelarCartaoResponse> BloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, int? motivo, string observacao = null)
         {
-             ApiResponse<CancelarCartaoResponse> localVarResponse = await CancelarCartaoUsingPOSTAsyncWithHttpInfo(idConta, idCartao, motivo, observacao);
+             ApiResponse<CancelarCartaoResponse> localVarResponse = await BloquearCartaoUsingPOSTAsyncWithHttpInfo(idConta, idCartao, motivo, observacao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/cancelar Cancelar um determinado cart\u00C3\u00A3o
+        /// /contas/{idConta}/cartoes/{idCartao}/bloquear Bloquear um determinado cart\u00C3\u00A3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do cancelamento</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento</param>
+        /// <param name="motivo">Motivo do bloqueio</param>
+        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
         /// <returns>Task of ApiResponse (CancelarCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CancelarCartaoResponse>> CancelarCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao)
+        public async System.Threading.Tasks.Task<ApiResponse<CancelarCartaoResponse>> BloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling CancelarCartaoUsingPOST");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling BloquearCartaoUsingPOST");
             // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling CancelarCartaoUsingPOST");
+            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling BloquearCartaoUsingPOST");
             // verify the required parameter 'motivo' is set
-            if (motivo == null) throw new ApiException(400, "Missing required parameter 'motivo' when calling CancelarCartaoUsingPOST");
-            // verify the required parameter 'observacao' is set
-            if (observacao == null) throw new ApiException(400, "Missing required parameter 'observacao' when calling CancelarCartaoUsingPOST");
+            if (motivo == null) throw new ApiException(400, "Missing required parameter 'motivo' when calling BloquearCartaoUsingPOST");
             
     
-            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar";
+            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/bloquear";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -614,9 +508,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CancelarCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -985,392 +879,14 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param> 
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param> 
-        /// <returns>ConsultarExtratoContaResponse</returns>
-        public ConsultarExtratoContaResponse ConsultarExtratoFaturasUsingGET (int? idConta, int? idCartao, string dataVencimento)
-        {
-             ApiResponse<ConsultarExtratoContaResponse> localVarResponse = ConsultarExtratoFaturasUsingGETWithHttpInfo(idConta, idCartao, dataVencimento);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param> 
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param> 
-        /// <returns>ApiResponse of ConsultarExtratoContaResponse</returns>
-        public ApiResponse< ConsultarExtratoContaResponse > ConsultarExtratoFaturasUsingGETWithHttpInfo (int? idConta, int? idCartao, string dataVencimento)
-        {
-            
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->ConsultarExtratoFaturasUsingGET");
-            
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->ConsultarExtratoFaturasUsingGET");
-            
-            // verify the required parameter 'dataVencimento' is set
-            if (dataVencimento == null)
-                throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling CartaoApi->ConsultarExtratoFaturasUsingGET");
-            
-    
-            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            
-            
-            
-            
-
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConsultarExtratoContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarExtratoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarExtratoContaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param>
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
-        /// <returns>Task of ConsultarExtratoContaResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETAsync (int? idConta, int? idCartao, string dataVencimento)
-        {
-             ApiResponse<ConsultarExtratoContaResponse> localVarResponse = await ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo(idConta, idCartao, dataVencimento);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/faturas Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o extrato</param>
-        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
-        /// <returns>Task of ApiResponse (ConsultarExtratoContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultarExtratoContaResponse>> ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo (int? idConta, int? idCartao, string dataVencimento)
-        {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarExtratoFaturasUsingGET");
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarExtratoFaturasUsingGET");
-            // verify the required parameter 'dataVencimento' is set
-            if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarExtratoFaturasUsingGET");
-            
-    
-            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConsultarExtratoContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarExtratoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarExtratoContaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param> 
-        /// <returns>ConsultarSaldoLimitesResponse</returns>
-        public ConsultarSaldoLimitesResponse ConsultarSaldosLimitesUsingGET (int? idConta, int? idCartao)
-        {
-             ApiResponse<ConsultarSaldoLimitesResponse> localVarResponse = ConsultarSaldosLimitesUsingGETWithHttpInfo(idConta, idCartao);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param> 
-        /// <returns>ApiResponse of ConsultarSaldoLimitesResponse</returns>
-        public ApiResponse< ConsultarSaldoLimitesResponse > ConsultarSaldosLimitesUsingGETWithHttpInfo (int? idConta, int? idCartao)
-        {
-            
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->ConsultarSaldosLimitesUsingGET");
-            
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->ConsultarSaldosLimitesUsingGET");
-            
-    
-            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/limites";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            
-            
-            
-            
-
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConsultarSaldoLimitesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarSaldoLimitesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarSaldoLimitesResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <returns>Task of ConsultarSaldoLimitesResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETAsync (int? idConta, int? idCartao)
-        {
-             ApiResponse<ConsultarSaldoLimitesResponse> localVarResponse = await ConsultarSaldosLimitesUsingGETAsyncWithHttpInfo(idConta, idCartao);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// /contas/{idConta}/cartoes/{idCartao}/limites Consulte os limites de um determinado cart\u00C3\u00A3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <returns>Task of ApiResponse (ConsultarSaldoLimitesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultarSaldoLimitesResponse>> ConsultarSaldosLimitesUsingGETAsyncWithHttpInfo (int? idConta, int? idCartao)
-        {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarSaldosLimitesUsingGET");
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarSaldosLimitesUsingGET");
-            
-    
-            var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/limites";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            
-            
-            
-            
-
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConsultarSaldoLimitesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarSaldoLimitesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarSaldoLimitesResponse)));
-            
-        }
-        
-        /// <summary>
         /// /contas/{idConta}/cartoes/{idCartao}/desbloquear Desbloquear cart\u00C3\u00A3o de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param> 
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param> 
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param> 
         /// <returns>DesbloquearCartaoResponse</returns>
-        public DesbloquearCartaoResponse DesbloquearCartaoUsingPOST (int? idConta, int? idCartao, string codigoSegurancao)
+        public DesbloquearCartaoResponse DesbloquearCartaoUsingPOST (int? idConta, int? idCartao, string codigoSegurancao = null)
         {
              ApiResponse<DesbloquearCartaoResponse> localVarResponse = DesbloquearCartaoUsingPOSTWithHttpInfo(idConta, idCartao, codigoSegurancao);
              return localVarResponse.Data;
@@ -1382,9 +898,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param> 
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param> 
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of DesbloquearCartaoResponse</returns>
-        public ApiResponse< DesbloquearCartaoResponse > DesbloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao)
+        public ApiResponse< DesbloquearCartaoResponse > DesbloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -1394,10 +910,6 @@ namespace Conductor.Pier.Api
             // verify the required parameter 'idCartao' is set
             if (idCartao == null)
                 throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->DesbloquearCartaoUsingPOST");
-            
-            // verify the required parameter 'codigoSegurancao' is set
-            if (codigoSegurancao == null)
-                throw new ApiException(400, "Missing required parameter 'codigoSegurancao' when calling CartaoApi->DesbloquearCartaoUsingPOST");
             
     
             var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";
@@ -1468,9 +980,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param>
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of DesbloquearCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, string codigoSegurancao)
+        public async System.Threading.Tasks.Task<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, string codigoSegurancao = null)
         {
              ApiResponse<DesbloquearCartaoResponse> localVarResponse = await DesbloquearCartaoUsingPOSTAsyncWithHttpInfo(idConta, idCartao, codigoSegurancao);
              return localVarResponse.Data;
@@ -1483,16 +995,14 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
         /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o</param>
+        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (DesbloquearCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DesbloquearCartaoResponse>> DesbloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao)
+        public async System.Threading.Tasks.Task<ApiResponse<DesbloquearCartaoResponse>> DesbloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling DesbloquearCartaoUsingPOST");
             // verify the required parameter 'idCartao' is set
             if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling DesbloquearCartaoUsingPOST");
-            // verify the required parameter 'codigoSegurancao' is set
-            if (codigoSegurancao == null) throw new ApiException(400, "Missing required parameter 'codigoSegurancao' when calling DesbloquearCartaoUsingPOST");
             
     
             var localVarPath = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear";

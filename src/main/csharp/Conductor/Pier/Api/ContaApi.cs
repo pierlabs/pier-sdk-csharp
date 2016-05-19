@@ -67,6 +67,52 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of ContaResponse</returns>
         ApiResponse<ContaResponse> ConsultarContaUsingGETWithHttpInfo (int? idConta);
         
+        /// <summary>
+        /// /contas/{idConta}/faturas
+        /// </summary>
+        /// <remarks>
+        /// Consulte os extratos/faturas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
+        /// <returns>ConsultarExtratoContaResponse</returns>
+        ConsultarExtratoContaResponse ConsultarExtratoFaturasUsingGET (int? idConta, string dataVencimento);
+  
+        /// <summary>
+        /// /contas/{idConta}/faturas
+        /// </summary>
+        /// <remarks>
+        /// Consulte os extratos/faturas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
+        /// <returns>ApiResponse of ConsultarExtratoContaResponse</returns>
+        ApiResponse<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETWithHttpInfo (int? idConta, string dataVencimento);
+        
+        /// <summary>
+        /// /contas/{idConta}/limites
+        /// </summary>
+        /// <remarks>
+        /// Consulte os limites de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <returns>ConsultarSaldoLimitesResponse</returns>
+        ConsultarSaldoLimitesResponse ConsultarSaldosLimitesUsingGET (int? idConta);
+  
+        /// <summary>
+        /// /contas/{idConta}/limites
+        /// </summary>
+        /// <remarks>
+        /// Consulte os limites de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <returns>ApiResponse of ConsultarSaldoLimitesResponse</returns>
+        ApiResponse<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETWithHttpInfo (int? idConta);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -120,6 +166,52 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">ID da Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idConta);
+        
+        /// <summary>
+        /// /contas/{idConta}/faturas
+        /// </summary>
+        /// <remarks>
+        /// Consulte os extratos/faturas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
+        /// <returns>Task of ConsultarExtratoContaResponse</returns>
+        System.Threading.Tasks.Task<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETAsync (int? idConta, string dataVencimento);
+
+        /// <summary>
+        /// /contas/{idConta}/faturas
+        /// </summary>
+        /// <remarks>
+        /// Consulte os extratos/faturas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
+        /// <returns>Task of ApiResponse (ConsultarExtratoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConsultarExtratoContaResponse>> ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo (int? idConta, string dataVencimento);
+        
+        /// <summary>
+        /// /contas/{idConta}/limites
+        /// </summary>
+        /// <remarks>
+        /// Consulte os limites de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <returns>Task of ConsultarSaldoLimitesResponse</returns>
+        System.Threading.Tasks.Task<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETAsync (int? idConta);
+
+        /// <summary>
+        /// /contas/{idConta}/limites
+        /// </summary>
+        /// <remarks>
+        /// Consulte os limites de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <returns>Task of ApiResponse (ConsultarSaldoLimitesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConsultarSaldoLimitesResponse>> ConsultarSaldosLimitesUsingGETAsyncWithHttpInfo (int? idConta);
         
         #endregion Asynchronous Operations
         
@@ -564,6 +656,360 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param> 
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param> 
+        /// <returns>ConsultarExtratoContaResponse</returns>
+        public ConsultarExtratoContaResponse ConsultarExtratoFaturasUsingGET (int? idConta, string dataVencimento)
+        {
+             ApiResponse<ConsultarExtratoContaResponse> localVarResponse = ConsultarExtratoFaturasUsingGETWithHttpInfo(idConta, dataVencimento);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param> 
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param> 
+        /// <returns>ApiResponse of ConsultarExtratoContaResponse</returns>
+        public ApiResponse< ConsultarExtratoContaResponse > ConsultarExtratoFaturasUsingGETWithHttpInfo (int? idConta, string dataVencimento)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarExtratoFaturasUsingGET");
+            
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null)
+                throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ContaApi->ConsultarExtratoFaturasUsingGET");
+            
+    
+            var localVarPath = "/v1/contas/{idConta}/faturas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            
+            
+            
+            
+
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConsultarExtratoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultarExtratoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarExtratoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
+        /// <returns>Task of ConsultarExtratoContaResponse</returns>
+        public async System.Threading.Tasks.Task<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETAsync (int? idConta, string dataVencimento)
+        {
+             ApiResponse<ConsultarExtratoContaResponse> localVarResponse = await ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo(idConta, dataVencimento);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <param name="dataVencimento">Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es</param>
+        /// <returns>Task of ApiResponse (ConsultarExtratoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultarExtratoContaResponse>> ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo (int? idConta, string dataVencimento)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarExtratoFaturasUsingGET");
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarExtratoFaturasUsingGET");
+            
+    
+            var localVarPath = "/v1/contas/{idConta}/faturas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultarExtratoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultarExtratoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarExtratoContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param> 
+        /// <returns>ConsultarSaldoLimitesResponse</returns>
+        public ConsultarSaldoLimitesResponse ConsultarSaldosLimitesUsingGET (int? idConta)
+        {
+             ApiResponse<ConsultarSaldoLimitesResponse> localVarResponse = ConsultarSaldosLimitesUsingGETWithHttpInfo(idConta);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param> 
+        /// <returns>ApiResponse of ConsultarSaldoLimitesResponse</returns>
+        public ApiResponse< ConsultarSaldoLimitesResponse > ConsultarSaldosLimitesUsingGETWithHttpInfo (int? idConta)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarSaldosLimitesUsingGET");
+            
+    
+            var localVarPath = "/v1/contas/{idConta}/limites";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConsultarSaldoLimitesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultarSaldoLimitesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarSaldoLimitesResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <returns>Task of ConsultarSaldoLimitesResponse</returns>
+        public async System.Threading.Tasks.Task<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETAsync (int? idConta)
+        {
+             ApiResponse<ConsultarSaldoLimitesResponse> localVarResponse = await ConsultarSaldosLimitesUsingGETAsyncWithHttpInfo(idConta);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">ID da Conta</param>
+        /// <returns>Task of ApiResponse (ConsultarSaldoLimitesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultarSaldoLimitesResponse>> ConsultarSaldosLimitesUsingGETAsyncWithHttpInfo (int? idConta)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarSaldosLimitesUsingGET");
+            
+    
+            var localVarPath = "/v1/contas/{idConta}/limites";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSaldosLimitesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultarSaldoLimitesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultarSaldoLimitesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarSaldoLimitesResponse)));
             
         }
         
