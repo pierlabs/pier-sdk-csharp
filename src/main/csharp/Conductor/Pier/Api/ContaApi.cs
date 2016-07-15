@@ -18,7 +18,7 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// /contas/buscar
+        /// Buscar contas
         /// </summary>
         /// <remarks>
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
@@ -32,7 +32,7 @@ namespace Conductor.Pier.Api
         ConsultarContaResponse BuscarContaUsingGET (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
   
         /// <summary>
-        /// /contas/buscar
+        /// Buscar contas
         /// </summary>
         /// <remarks>
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
@@ -46,7 +46,7 @@ namespace Conductor.Pier.Api
         ApiResponse<ConsultarContaResponse> BuscarContaUsingGETWithHttpInfo (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
         
         /// <summary>
-        /// /contas/{idConta}
+        /// Retorna uma conta
         /// </summary>
         /// <remarks>
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
@@ -57,7 +57,7 @@ namespace Conductor.Pier.Api
         ContaResponse ConsultarContaUsingGET (int? idConta);
   
         /// <summary>
-        /// /contas/{idConta}
+        /// Retorna uma conta
         /// </summary>
         /// <remarks>
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
@@ -68,10 +68,10 @@ namespace Conductor.Pier.Api
         ApiResponse<ContaResponse> ConsultarContaUsingGETWithHttpInfo (int? idConta);
         
         /// <summary>
-        /// /contas/{idConta}/faturas
+        /// Retorna os extratos
         /// </summary>
         /// <remarks>
-        /// Consulte os extratos/faturas de uma determinada conta
+        /// Consulte os extratos de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -80,10 +80,10 @@ namespace Conductor.Pier.Api
         ConsultarExtratoContaResponse ConsultarExtratoFaturasUsingGET (int? idConta, string dataVencimento);
   
         /// <summary>
-        /// /contas/{idConta}/faturas
+        /// Retorna os extratos
         /// </summary>
         /// <remarks>
-        /// Consulte os extratos/faturas de uma determinada conta
+        /// Consulte os extratos de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         ApiResponse<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETWithHttpInfo (int? idConta, string dataVencimento);
         
         /// <summary>
-        /// /contas/{idConta}/limites
+        /// Retorna o limite
         /// </summary>
         /// <remarks>
         /// Consulte os limites de uma determinada conta
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         ConsultarSaldoLimitesResponse ConsultarSaldosLimitesUsingGET (int? idConta);
   
         /// <summary>
-        /// /contas/{idConta}/limites
+        /// Retorna o limite
         /// </summary>
         /// <remarks>
         /// Consulte os limites de uma determinada conta
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// /contas/buscar
+        /// Buscar contas
         /// </summary>
         /// <remarks>
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
@@ -132,7 +132,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ConsultarContaResponse> BuscarContaUsingGETAsync (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
 
         /// <summary>
-        /// /contas/buscar
+        /// Buscar contas
         /// </summary>
         /// <remarks>
         /// Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
@@ -146,7 +146,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConsultarContaResponse>> BuscarContaUsingGETAsyncWithHttpInfo (string nome = null, string cpf = null, string numeroCartao = null, long? idConta = null);
         
         /// <summary>
-        /// /contas/{idConta}
+        /// Retorna uma conta
         /// </summary>
         /// <remarks>
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
@@ -157,7 +157,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ContaResponse> ConsultarContaUsingGETAsync (int? idConta);
 
         /// <summary>
-        /// /contas/{idConta}
+        /// Retorna uma conta
         /// </summary>
         /// <remarks>
         /// Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
@@ -168,10 +168,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> ConsultarContaUsingGETAsyncWithHttpInfo (int? idConta);
         
         /// <summary>
-        /// /contas/{idConta}/faturas
+        /// Retorna os extratos
         /// </summary>
         /// <remarks>
-        /// Consulte os extratos/faturas de uma determinada conta
+        /// Consulte os extratos de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -180,10 +180,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ConsultarExtratoContaResponse> ConsultarExtratoFaturasUsingGETAsync (int? idConta, string dataVencimento);
 
         /// <summary>
-        /// /contas/{idConta}/faturas
+        /// Retorna os extratos
         /// </summary>
         /// <remarks>
-        /// Consulte os extratos/faturas de uma determinada conta
+        /// Consulte os extratos de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -192,7 +192,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConsultarExtratoContaResponse>> ConsultarExtratoFaturasUsingGETAsyncWithHttpInfo (int? idConta, string dataVencimento);
         
         /// <summary>
-        /// /contas/{idConta}/limites
+        /// Retorna o limite
         /// </summary>
         /// <remarks>
         /// Consulte os limites de uma determinada conta
@@ -203,7 +203,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ConsultarSaldoLimitesResponse> ConsultarSaldosLimitesUsingGETAsync (int? idConta);
 
         /// <summary>
-        /// /contas/{idConta}/limites
+        /// Retorna o limite
         /// </summary>
         /// <remarks>
         /// Consulte os limites de uma determinada conta
@@ -306,7 +306,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
+        /// Buscar contas Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nome">Nome (optional)</param> 
@@ -321,7 +321,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
+        /// Buscar contas Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nome">Nome (optional)</param> 
@@ -333,7 +333,7 @@ namespace Conductor.Pier.Api
         {
             
     
-            var localVarPath = "/v1/contas/buscar";
+            var localVarPath = "/v1.1/contas/buscar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -397,7 +397,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
+        /// Buscar contas Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nome">Nome (optional)</param>
@@ -413,7 +413,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/buscar Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
+        /// Buscar contas Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nome">Nome (optional)</param>
@@ -425,7 +425,7 @@ namespace Conductor.Pier.Api
         {
             
     
-            var localVarPath = "/v1/contas/buscar";
+            var localVarPath = "/v1.1/contas/buscar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -489,7 +489,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
+        /// Retorna uma conta Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
@@ -501,7 +501,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
+        /// Retorna uma conta Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
@@ -514,7 +514,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarContaUsingGET");
             
     
-            var localVarPath = "/v1/contas/{idConta}";
+            var localVarPath = "/v1.1/contas/{idConta}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -575,7 +575,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
+        /// Retorna uma conta Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -588,7 +588,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/{idConta} Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
+        /// Retorna uma conta Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -599,7 +599,7 @@ namespace Conductor.Pier.Api
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET");
             
     
-            var localVarPath = "/v1/contas/{idConta}";
+            var localVarPath = "/v1.1/contas/{idConta}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -660,7 +660,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// Retorna os extratos Consulte os extratos de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
@@ -673,7 +673,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// Retorna os extratos Consulte os extratos de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
@@ -691,7 +691,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ContaApi->ConsultarExtratoFaturasUsingGET");
             
     
-            var localVarPath = "/v1/contas/{idConta}/faturas";
+            var localVarPath = "/v1.1/contas/{idConta}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -753,7 +753,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// Retorna os extratos Consulte os extratos de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -767,7 +767,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/{idConta}/faturas Consulte os extratos/faturas de uma determinada conta
+        /// Retorna os extratos Consulte os extratos de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -781,7 +781,7 @@ namespace Conductor.Pier.Api
             if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarExtratoFaturasUsingGET");
             
     
-            var localVarPath = "/v1/contas/{idConta}/faturas";
+            var localVarPath = "/v1.1/contas/{idConta}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -843,7 +843,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// Retorna o limite Consulte os limites de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
@@ -855,7 +855,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// Retorna o limite Consulte os limites de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param> 
@@ -868,7 +868,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarSaldosLimitesUsingGET");
             
     
-            var localVarPath = "/v1/contas/{idConta}/limites";
+            var localVarPath = "/v1.1/contas/{idConta}/limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -929,7 +929,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// Retorna o limite Consulte os limites de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -942,7 +942,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /contas/{idConta}/limites Consulte os limites de uma determinada conta
+        /// Retorna o limite Consulte os limites de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">ID da Conta</param>
@@ -953,7 +953,7 @@ namespace Conductor.Pier.Api
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarSaldosLimitesUsingGET");
             
     
-            var localVarPath = "/v1/contas/{idConta}/limites";
+            var localVarPath = "/v1.1/contas/{idConta}/limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
