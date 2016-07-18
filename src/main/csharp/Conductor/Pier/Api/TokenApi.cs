@@ -227,7 +227,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling TokenApi->CallbackUsingPOST");
             
     
-            var localVarPath = "/v1.1/tokens/callback";
+            var localVarPath = "/api/tokens/callback";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -318,7 +318,7 @@ namespace Conductor.Pier.Api
             if (bodyAccessToken == null) throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling CallbackUsingPOST");
             
     
-            var localVarPath = "/v1.1/tokens/callback";
+            var localVarPath = "/api/tokens/callback";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling TokenApi->ValidarUsingPOST");
             
     
-            var localVarPath = "/v1.1/tokens/validar";
+            var localVarPath = "/api/tokens/validar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -501,7 +501,7 @@ namespace Conductor.Pier.Api
             if (bodyAccessToken == null) throw new ApiException(400, "Missing required parameter 'bodyAccessToken' when calling ValidarUsingPOST");
             
     
-            var localVarPath = "/v1.1/tokens/validar";
+            var localVarPath = "/api/tokens/validar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

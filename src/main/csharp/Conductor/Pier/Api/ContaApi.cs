@@ -333,7 +333,7 @@ namespace Conductor.Pier.Api
         {
             
     
-            var localVarPath = "/v1.1/contas/buscar";
+            var localVarPath = "/api/contas/buscar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -425,7 +425,7 @@ namespace Conductor.Pier.Api
         {
             
     
-            var localVarPath = "/v1.1/contas/buscar";
+            var localVarPath = "/api/contas/buscar";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -514,7 +514,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarContaUsingGET");
             
     
-            var localVarPath = "/v1.1/contas/{idConta}";
+            var localVarPath = "/api/contas/{idConta}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -599,7 +599,7 @@ namespace Conductor.Pier.Api
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarContaUsingGET");
             
     
-            var localVarPath = "/v1.1/contas/{idConta}";
+            var localVarPath = "/api/contas/{idConta}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -691,7 +691,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ContaApi->ConsultarExtratoFaturasUsingGET");
             
     
-            var localVarPath = "/v1.1/contas/{idConta}/faturas";
+            var localVarPath = "/api/contas/{idConta}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -781,7 +781,7 @@ namespace Conductor.Pier.Api
             if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarExtratoFaturasUsingGET");
             
     
-            var localVarPath = "/v1.1/contas/{idConta}/faturas";
+            var localVarPath = "/api/contas/{idConta}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -868,7 +868,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarSaldosLimitesUsingGET");
             
     
-            var localVarPath = "/v1.1/contas/{idConta}/limites";
+            var localVarPath = "/api/contas/{idConta}/limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -953,7 +953,7 @@ namespace Conductor.Pier.Api
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarSaldosLimitesUsingGET");
             
     
-            var localVarPath = "/v1.1/contas/{idConta}/limites";
+            var localVarPath = "/api/contas/{idConta}/limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
