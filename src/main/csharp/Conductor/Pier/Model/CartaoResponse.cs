@@ -40,12 +40,13 @@ namespace Conductor.Pier.Model
         /// <param name="IdLog">IdLog.</param>
         /// <param name="IdPessoaFisica">IdPessoaFisica.</param>
         /// <param name="IdProduto">IdProduto.</param>
+        /// <param name="NomePlastico">NomePlastico.</param>
         /// <param name="NumeroCartao">NumeroCartao.</param>
         /// <param name="NumeroCartaoReal">NumeroCartaoReal.</param>
         /// <param name="StatusCartao">StatusCartao.</param>
         /// <param name="StatusData">StatusData.</param>
 
-        public CartaoResponse(int? Bin = null, int? CodRetorno = null, string CodigoDesbloqueio = null, string CriptografiaHSM = null, DateTime? DataEmissao = null, DateTime? DataValidade = null, string DataVencimentoPadrao = null, string DescricaoRetorno = null, int? EstagioCartao = null, DateTime? EstagioData = null, bool? FlagReversao = null, bool? FlagSenha = null, int? IdCartao = null, int? IdConta = null, int? IdEmissor = null, string IdLog = null, int? IdPessoaFisica = null, int? IdProduto = null, string NumeroCartao = null, string NumeroCartaoReal = null, int? StatusCartao = null, DateTime? StatusData = null)
+        public CartaoResponse(int? Bin = null, int? CodRetorno = null, string CodigoDesbloqueio = null, string CriptografiaHSM = null, DateTime? DataEmissao = null, DateTime? DataValidade = null, string DataVencimentoPadrao = null, string DescricaoRetorno = null, int? EstagioCartao = null, DateTime? EstagioData = null, bool? FlagReversao = null, bool? FlagSenha = null, int? IdCartao = null, int? IdConta = null, int? IdEmissor = null, string IdLog = null, int? IdPessoaFisica = null, int? IdProduto = null, string NomePlastico = null, string NumeroCartao = null, string NumeroCartaoReal = null, int? StatusCartao = null, DateTime? StatusData = null)
         {
             this.Bin = Bin;
             this.CodRetorno = CodRetorno;
@@ -65,6 +66,7 @@ namespace Conductor.Pier.Model
             this.IdLog = IdLog;
             this.IdPessoaFisica = IdPessoaFisica;
             this.IdProduto = IdProduto;
+            this.NomePlastico = NomePlastico;
             this.NumeroCartao = NumeroCartao;
             this.NumeroCartaoReal = NumeroCartaoReal;
             this.StatusCartao = StatusCartao;
@@ -182,6 +184,12 @@ namespace Conductor.Pier.Model
         public int? IdProduto { get; set; }
     
         /// <summary>
+        /// Gets or Sets NomePlastico
+        /// </summary>
+        [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
+        public string NomePlastico { get; set; }
+    
+        /// <summary>
         /// Gets or Sets NumeroCartao
         /// </summary>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
@@ -231,6 +239,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdLog: ").Append(IdLog).Append("\n");
             sb.Append("  IdPessoaFisica: ").Append(IdPessoaFisica).Append("\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
+            sb.Append("  NomePlastico: ").Append(NomePlastico).Append("\n");
             sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
             sb.Append("  NumeroCartaoReal: ").Append(NumeroCartaoReal).Append("\n");
             sb.Append("  StatusCartao: ").Append(StatusCartao).Append("\n");
@@ -363,6 +372,11 @@ namespace Conductor.Pier.Model
                     this.IdProduto.Equals(other.IdProduto)
                 ) && 
                 (
+                    this.NomePlastico == other.NomePlastico ||
+                    this.NomePlastico != null &&
+                    this.NomePlastico.Equals(other.NomePlastico)
+                ) && 
+                (
                     this.NumeroCartao == other.NumeroCartao ||
                     this.NumeroCartao != null &&
                     this.NumeroCartao.Equals(other.NumeroCartao)
@@ -449,6 +463,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdProduto != null)
                     hash = hash * 59 + this.IdProduto.GetHashCode();
+                
+                if (this.NomePlastico != null)
+                    hash = hash * 59 + this.NomePlastico.GetHashCode();
                 
                 if (this.NumeroCartao != null)
                     hash = hash * 59 + this.NumeroCartao.GetHashCode();
