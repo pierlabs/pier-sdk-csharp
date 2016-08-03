@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="StatusConta">StatusConta.</param>
         /// <param name="UfIdentidade">UfIdentidade.</param>
 
-        public ContaCartaoResponse(string CnpjLoja = null, string Cpf = null, string DataCadastroConta = null, string DataEmissaoIdentidade = null, string DataNascimento = null, string DddCelular = null, int? IdConta = null, string Nome = null, string NumeroCelular = null, string NumeroIdentidade = null, string OrgaoIdentidade = null, string PossuiCompraAprovada = null, int? StatusConta = null, string UfIdentidade = null)
+        public ContaCartaoResponse(string CnpjLoja = null, string Cpf = null, DateTime? DataCadastroConta = null, DateTime? DataEmissaoIdentidade = null, DateTime? DataNascimento = null, string DddCelular = null, int? IdConta = null, string Nome = null, string NumeroCelular = null, string NumeroIdentidade = null, string OrgaoIdentidade = null, string PossuiCompraAprovada = null, int? StatusConta = null, string UfIdentidade = null)
         {
             this.CnpjLoja = CnpjLoja;
             this.Cpf = Cpf;
@@ -73,19 +73,19 @@ namespace Conductor.Pier.Model
         /// Gets or Sets DataCadastroConta
         /// </summary>
         [DataMember(Name="dataCadastroConta", EmitDefaultValue=false)]
-        public string DataCadastroConta { get; set; }
+        public DateTime? DataCadastroConta { get; set; }
     
         /// <summary>
         /// Gets or Sets DataEmissaoIdentidade
         /// </summary>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
-        public string DataEmissaoIdentidade { get; set; }
+        public DateTime? DataEmissaoIdentidade { get; set; }
     
         /// <summary>
         /// Gets or Sets DataNascimento
         /// </summary>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
-        public string DataNascimento { get; set; }
+        public DateTime? DataNascimento { get; set; }
     
         /// <summary>
         /// Gets or Sets DddCelular
