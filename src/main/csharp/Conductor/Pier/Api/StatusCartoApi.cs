@@ -25,8 +25,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>EstgioCarto</returns>
-        EstgioCarto ConsultarStatusCartaoUsingGET (long? idStatusCartao);
+        /// <returns>StatusCarto</returns>
+        StatusCarto ConsultarStatusCartaoUsingGET (long? idStatusCartao);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
@@ -36,8 +36,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of EstgioCarto</returns>
-        ApiResponse<EstgioCarto> ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao);
+        /// <returns>ApiResponse of StatusCarto</returns>
+        ApiResponse<StatusCarto> ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -48,13 +48,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param>
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param>
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param>
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param>
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param>
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param>
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param>
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param>
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param>
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param>
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param>
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ListaDeStatusCartes</returns>
-        ListaDeStatusCartes ListarStatusCartoesUsingGET (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null);
+        ListaDeStatusCartes ListarStatusCartoesUsingGET (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -65,13 +78,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param>
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param>
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param>
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param>
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param>
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param>
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param>
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param>
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param>
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param>
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param>
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of ListaDeStatusCartes</returns>
-        ApiResponse<ListaDeStatusCartes> ListarStatusCartoesUsingGETWithHttpInfo (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null);
+        ApiResponse<ListaDeStatusCartes> ListarStatusCartoesUsingGETWithHttpInfo (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -85,8 +111,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of EstgioCarto</returns>
-        System.Threading.Tasks.Task<EstgioCarto> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao);
+        /// <returns>Task of StatusCarto</returns>
+        System.Threading.Tasks.Task<StatusCarto> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
@@ -96,8 +122,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (EstgioCarto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EstgioCarto>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao);
+        /// <returns>Task of ApiResponse (StatusCarto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StatusCarto>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -108,13 +134,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param>
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param>
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param>
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param>
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param>
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param>
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param>
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param>
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param>
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param>
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param>
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaDeStatusCartes</returns>
-        System.Threading.Tasks.Task<ListaDeStatusCartes> ListarStatusCartoesUsingGETAsync (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ListaDeStatusCartes> ListarStatusCartoesUsingGETAsync (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -125,13 +164,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param>
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param>
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param>
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param>
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param>
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param>
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param>
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param>
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param>
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param>
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param>
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaDeStatusCartes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaDeStatusCartes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<ListaDeStatusCartes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -230,10 +282,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>EstgioCarto</returns>
-        public EstgioCarto ConsultarStatusCartaoUsingGET (long? idStatusCartao)
+        /// <returns>StatusCarto</returns>
+        public StatusCarto ConsultarStatusCartaoUsingGET (long? idStatusCartao)
         {
-             ApiResponse<EstgioCarto> localVarResponse = ConsultarStatusCartaoUsingGETWithHttpInfo(idStatusCartao);
+             ApiResponse<StatusCarto> localVarResponse = ConsultarStatusCartaoUsingGETWithHttpInfo(idStatusCartao);
              return localVarResponse.Data;
         }
 
@@ -242,8 +294,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of EstgioCarto</returns>
-        public ApiResponse< EstgioCarto > ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao)
+        /// <returns>ApiResponse of StatusCarto</returns>
+        public ApiResponse< StatusCarto > ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao)
         {
             
             // verify the required parameter 'idStatusCartao' is set
@@ -304,9 +356,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<EstgioCarto>(localVarStatusCode,
+            return new ApiResponse<StatusCarto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EstgioCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstgioCarto)));
+                (StatusCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusCarto)));
             
         }
 
@@ -316,10 +368,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of EstgioCarto</returns>
-        public async System.Threading.Tasks.Task<EstgioCarto> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao)
+        /// <returns>Task of StatusCarto</returns>
+        public async System.Threading.Tasks.Task<StatusCarto> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao)
         {
-             ApiResponse<EstgioCarto> localVarResponse = await ConsultarStatusCartaoUsingGETAsyncWithHttpInfo(idStatusCartao);
+             ApiResponse<StatusCarto> localVarResponse = await ConsultarStatusCartaoUsingGETAsyncWithHttpInfo(idStatusCartao);
              return localVarResponse.Data;
 
         }
@@ -329,8 +381,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (EstgioCarto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EstgioCarto>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao)
+        /// <returns>Task of ApiResponse (StatusCarto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StatusCarto>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao)
         {
             // verify the required parameter 'idStatusCartao' is set
             if (idStatusCartao == null) throw new ApiException(400, "Missing required parameter 'idStatusCartao' when calling ConsultarStatusCartaoUsingGET");
@@ -390,9 +442,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EstgioCarto>(localVarStatusCode,
+            return new ApiResponse<StatusCarto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EstgioCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstgioCarto)));
+                (StatusCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusCarto)));
             
         }
         
@@ -402,15 +454,28 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param> 
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param> 
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param> 
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param> 
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param> 
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param> 
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param> 
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param> 
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param> 
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param> 
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param> 
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param> 
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param> 
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param> 
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param> 
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param> 
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ListaDeStatusCartes</returns>
-        public ListaDeStatusCartes ListarStatusCartoesUsingGET (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null)
+        public ListaDeStatusCartes ListarStatusCartoesUsingGET (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeStatusCartes> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(idStatusCartao, nome, idStatusDestinoDesbloqueio, cancelaConta, permiteDesbloqueio, page, limit);
+             ApiResponse<ListaDeStatusCartes> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(idStatusCartao, nome, flagAlteraStatus, flagDesbloqueio, flagReversaoDesbloqueio, idStatusDestinoDesbloqueio, flagCancelaCartao, flagReversaoCancelamento, flagEmiteProvisorio, flagCancelaConta, idStatusDestinoConta, flagReemiteCartao, flagCobraTarifa, flagOrigemTransferencia, flagDestinoTransferencia, flagCadastroSenha, flagCadastroNovaSenha, flagExcecaoBandeira, page, limit);
              return localVarResponse.Data;
         }
 
@@ -420,13 +485,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param> 
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param> 
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param> 
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param> 
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param> 
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param> 
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param> 
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param> 
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param> 
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param> 
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param> 
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param> 
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param> 
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param> 
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param> 
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param> 
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of ListaDeStatusCartes</returns>
-        public ApiResponse< ListaDeStatusCartes > ListarStatusCartoesUsingGETWithHttpInfo (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null)
+        public ApiResponse< ListaDeStatusCartes > ListarStatusCartoesUsingGETWithHttpInfo (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
             
     
@@ -459,9 +537,22 @@ namespace Conductor.Pier.Api
             
             if (idStatusCartao != null) localVarQueryParams.Add("id_status_cartao", Configuration.ApiClient.ParameterToString(idStatusCartao)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (flagAlteraStatus != null) localVarQueryParams.Add("flag_altera_status", Configuration.ApiClient.ParameterToString(flagAlteraStatus)); // query parameter
+            if (flagDesbloqueio != null) localVarQueryParams.Add("flag_desbloqueio", Configuration.ApiClient.ParameterToString(flagDesbloqueio)); // query parameter
+            if (flagReversaoDesbloqueio != null) localVarQueryParams.Add("flag_reversao_desbloqueio", Configuration.ApiClient.ParameterToString(flagReversaoDesbloqueio)); // query parameter
             if (idStatusDestinoDesbloqueio != null) localVarQueryParams.Add("id_status_destino_desbloqueio", Configuration.ApiClient.ParameterToString(idStatusDestinoDesbloqueio)); // query parameter
-            if (cancelaConta != null) localVarQueryParams.Add("cancela_conta", Configuration.ApiClient.ParameterToString(cancelaConta)); // query parameter
-            if (permiteDesbloqueio != null) localVarQueryParams.Add("permite_desbloqueio", Configuration.ApiClient.ParameterToString(permiteDesbloqueio)); // query parameter
+            if (flagCancelaCartao != null) localVarQueryParams.Add("flag_cancela_cartao", Configuration.ApiClient.ParameterToString(flagCancelaCartao)); // query parameter
+            if (flagReversaoCancelamento != null) localVarQueryParams.Add("flag_reversao_cancelamento", Configuration.ApiClient.ParameterToString(flagReversaoCancelamento)); // query parameter
+            if (flagEmiteProvisorio != null) localVarQueryParams.Add("flag_emite_provisorio", Configuration.ApiClient.ParameterToString(flagEmiteProvisorio)); // query parameter
+            if (flagCancelaConta != null) localVarQueryParams.Add("flag_cancela_conta", Configuration.ApiClient.ParameterToString(flagCancelaConta)); // query parameter
+            if (idStatusDestinoConta != null) localVarQueryParams.Add("id_status_destino_conta", Configuration.ApiClient.ParameterToString(idStatusDestinoConta)); // query parameter
+            if (flagReemiteCartao != null) localVarQueryParams.Add("flag_reemite_cartao", Configuration.ApiClient.ParameterToString(flagReemiteCartao)); // query parameter
+            if (flagCobraTarifa != null) localVarQueryParams.Add("flag_cobra_tarifa", Configuration.ApiClient.ParameterToString(flagCobraTarifa)); // query parameter
+            if (flagOrigemTransferencia != null) localVarQueryParams.Add("flag_origem_transferencia", Configuration.ApiClient.ParameterToString(flagOrigemTransferencia)); // query parameter
+            if (flagDestinoTransferencia != null) localVarQueryParams.Add("flag_destino_transferencia", Configuration.ApiClient.ParameterToString(flagDestinoTransferencia)); // query parameter
+            if (flagCadastroSenha != null) localVarQueryParams.Add("flag_cadastro_senha", Configuration.ApiClient.ParameterToString(flagCadastroSenha)); // query parameter
+            if (flagCadastroNovaSenha != null) localVarQueryParams.Add("flag_cadastro_nova_senha", Configuration.ApiClient.ParameterToString(flagCadastroNovaSenha)); // query parameter
+            if (flagExcecaoBandeira != null) localVarQueryParams.Add("flag_excecao_bandeira", Configuration.ApiClient.ParameterToString(flagExcecaoBandeira)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -502,15 +593,28 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param>
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param>
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param>
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param>
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param>
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param>
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param>
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param>
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param>
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param>
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param>
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaDeStatusCartes</returns>
-        public async System.Threading.Tasks.Task<ListaDeStatusCartes> ListarStatusCartoesUsingGETAsync (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ListaDeStatusCartes> ListarStatusCartoesUsingGETAsync (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeStatusCartes> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(idStatusCartao, nome, idStatusDestinoDesbloqueio, cancelaConta, permiteDesbloqueio, page, limit);
+             ApiResponse<ListaDeStatusCartes> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(idStatusCartao, nome, flagAlteraStatus, flagDesbloqueio, flagReversaoDesbloqueio, idStatusDestinoDesbloqueio, flagCancelaCartao, flagReversaoCancelamento, flagEmiteProvisorio, flagCancelaConta, idStatusDestinoConta, flagReemiteCartao, flagCobraTarifa, flagOrigemTransferencia, flagDestinoTransferencia, flagCadastroSenha, flagCadastroNovaSenha, flagExcecaoBandeira, page, limit);
              return localVarResponse.Data;
 
         }
@@ -521,13 +625,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (optional)</param>
+        /// <param name="flagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (optional)</param>
-        /// <param name="cancelaConta">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ter a sua conta Cancelada. (optional)</param>
-        /// <param name="permiteDesbloqueio">Indica que Cart\u00C3\u00B5es com este idStatusCartao podem ser Desbloqueados. (optional)</param>
+        /// <param name="flagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.  (optional)</param>
+        /// <param name="flagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (optional)</param>
+        /// <param name="flagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (optional)</param>
+        /// <param name="flagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (optional)</param>
+        /// <param name="idStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (optional)</param>
+        /// <param name="flagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (optional)</param>
+        /// <param name="flagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (optional)</param>
+        /// <param name="flagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (optional)</param>
+        /// <param name="flagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="flagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (optional)</param>
+        /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaDeStatusCartes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaDeStatusCartes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? idStatusCartao = null, string nome = null, long? idStatusDestinoDesbloqueio = null, string cancelaConta = null, string permiteDesbloqueio = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ListaDeStatusCartes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? idStatusCartao = null, string nome = null, string flagAlteraStatus = null, string flagDesbloqueio = null, string flagReversaoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, string flagCancelaCartao = null, string flagReversaoCancelamento = null, string flagEmiteProvisorio = null, string flagCancelaConta = null, long? idStatusDestinoConta = null, string flagReemiteCartao = null, string flagCobraTarifa = null, string flagOrigemTransferencia = null, string flagDestinoTransferencia = null, string flagCadastroSenha = null, string flagCadastroNovaSenha = null, string flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
             
     
@@ -560,9 +677,22 @@ namespace Conductor.Pier.Api
             
             if (idStatusCartao != null) localVarQueryParams.Add("id_status_cartao", Configuration.ApiClient.ParameterToString(idStatusCartao)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (flagAlteraStatus != null) localVarQueryParams.Add("flag_altera_status", Configuration.ApiClient.ParameterToString(flagAlteraStatus)); // query parameter
+            if (flagDesbloqueio != null) localVarQueryParams.Add("flag_desbloqueio", Configuration.ApiClient.ParameterToString(flagDesbloqueio)); // query parameter
+            if (flagReversaoDesbloqueio != null) localVarQueryParams.Add("flag_reversao_desbloqueio", Configuration.ApiClient.ParameterToString(flagReversaoDesbloqueio)); // query parameter
             if (idStatusDestinoDesbloqueio != null) localVarQueryParams.Add("id_status_destino_desbloqueio", Configuration.ApiClient.ParameterToString(idStatusDestinoDesbloqueio)); // query parameter
-            if (cancelaConta != null) localVarQueryParams.Add("cancela_conta", Configuration.ApiClient.ParameterToString(cancelaConta)); // query parameter
-            if (permiteDesbloqueio != null) localVarQueryParams.Add("permite_desbloqueio", Configuration.ApiClient.ParameterToString(permiteDesbloqueio)); // query parameter
+            if (flagCancelaCartao != null) localVarQueryParams.Add("flag_cancela_cartao", Configuration.ApiClient.ParameterToString(flagCancelaCartao)); // query parameter
+            if (flagReversaoCancelamento != null) localVarQueryParams.Add("flag_reversao_cancelamento", Configuration.ApiClient.ParameterToString(flagReversaoCancelamento)); // query parameter
+            if (flagEmiteProvisorio != null) localVarQueryParams.Add("flag_emite_provisorio", Configuration.ApiClient.ParameterToString(flagEmiteProvisorio)); // query parameter
+            if (flagCancelaConta != null) localVarQueryParams.Add("flag_cancela_conta", Configuration.ApiClient.ParameterToString(flagCancelaConta)); // query parameter
+            if (idStatusDestinoConta != null) localVarQueryParams.Add("id_status_destino_conta", Configuration.ApiClient.ParameterToString(idStatusDestinoConta)); // query parameter
+            if (flagReemiteCartao != null) localVarQueryParams.Add("flag_reemite_cartao", Configuration.ApiClient.ParameterToString(flagReemiteCartao)); // query parameter
+            if (flagCobraTarifa != null) localVarQueryParams.Add("flag_cobra_tarifa", Configuration.ApiClient.ParameterToString(flagCobraTarifa)); // query parameter
+            if (flagOrigemTransferencia != null) localVarQueryParams.Add("flag_origem_transferencia", Configuration.ApiClient.ParameterToString(flagOrigemTransferencia)); // query parameter
+            if (flagDestinoTransferencia != null) localVarQueryParams.Add("flag_destino_transferencia", Configuration.ApiClient.ParameterToString(flagDestinoTransferencia)); // query parameter
+            if (flagCadastroSenha != null) localVarQueryParams.Add("flag_cadastro_senha", Configuration.ApiClient.ParameterToString(flagCadastroSenha)); // query parameter
+            if (flagCadastroNovaSenha != null) localVarQueryParams.Add("flag_cadastro_nova_senha", Configuration.ApiClient.ParameterToString(flagCadastroNovaSenha)); // query parameter
+            if (flagExcecaoBandeira != null) localVarQueryParams.Add("flag_excecao_bandeira", Configuration.ApiClient.ParameterToString(flagExcecaoBandeira)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             

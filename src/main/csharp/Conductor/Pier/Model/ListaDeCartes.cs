@@ -12,46 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// 
+    /// Lista de Cart\u00C3\u00B5es
     /// </summary>
     [DataContract]
-    public partial class ConsultarCartaoResponse :  IEquatable<ConsultarCartaoResponse>
+    public partial class ListaDeCartes :  IEquatable<ListaDeCartes>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultarCartaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="ConsultarCartaoResponse" />class.
+        /// Initializes a new instance of the <see cref="ListaDeCartes" /> class.
+        /// Initializes a new instance of the <see cref="ListaDeCartes" />class.
         /// </summary>
-        /// <param name="Cartoes">Cartoes.</param>
-        /// <param name="CodigoRetorno">CodigoRetorno.</param>
-        /// <param name="DescricaoRetorno">DescricaoRetorno.</param>
+        /// <param name="Cartoes">Lista de cart\u00C3\u00B5es.</param>
 
-        public ConsultarCartaoResponse(List<CartaoResponseOld> Cartoes = null, int? CodigoRetorno = null, string DescricaoRetorno = null)
+        public ListaDeCartes(List<CartaoResponse> Cartoes = null)
         {
             this.Cartoes = Cartoes;
-            this.CodigoRetorno = CodigoRetorno;
-            this.DescricaoRetorno = DescricaoRetorno;
             
         }
         
     
         /// <summary>
-        /// Gets or Sets Cartoes
+        /// Lista de cart\u00C3\u00B5es
         /// </summary>
+        /// <value>Lista de cart\u00C3\u00B5es</value>
         [DataMember(Name="cartoes", EmitDefaultValue=false)]
-        public List<CartaoResponseOld> Cartoes { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets CodigoRetorno
-        /// </summary>
-        [DataMember(Name="codigoRetorno", EmitDefaultValue=false)]
-        public int? CodigoRetorno { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets DescricaoRetorno
-        /// </summary>
-        [DataMember(Name="descricaoRetorno", EmitDefaultValue=false)]
-        public string DescricaoRetorno { get; set; }
+        public List<CartaoResponse> Cartoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,10 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConsultarCartaoResponse {\n");
+            sb.Append("class ListaDeCartes {\n");
             sb.Append("  Cartoes: ").Append(Cartoes).Append("\n");
-            sb.Append("  CodigoRetorno: ").Append(CodigoRetorno).Append("\n");
-            sb.Append("  DescricaoRetorno: ").Append(DescricaoRetorno).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -86,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConsultarCartaoResponse);
+            return this.Equals(obj as ListaDeCartes);
         }
 
         /// <summary>
-        /// Returns true if ConsultarCartaoResponse instances are equal
+        /// Returns true if ListaDeCartes instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConsultarCartaoResponse to be compared</param>
+        /// <param name="other">Instance of ListaDeCartes to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConsultarCartaoResponse other)
+        public bool Equals(ListaDeCartes other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,16 +88,6 @@ namespace Conductor.Pier.Model
                     this.Cartoes == other.Cartoes ||
                     this.Cartoes != null &&
                     this.Cartoes.SequenceEqual(other.Cartoes)
-                ) && 
-                (
-                    this.CodigoRetorno == other.CodigoRetorno ||
-                    this.CodigoRetorno != null &&
-                    this.CodigoRetorno.Equals(other.CodigoRetorno)
-                ) && 
-                (
-                    this.DescricaoRetorno == other.DescricaoRetorno ||
-                    this.DescricaoRetorno != null &&
-                    this.DescricaoRetorno.Equals(other.DescricaoRetorno)
                 );
         }
 
@@ -132,12 +105,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.Cartoes != null)
                     hash = hash * 59 + this.Cartoes.GetHashCode();
-                
-                if (this.CodigoRetorno != null)
-                    hash = hash * 59 + this.CodigoRetorno.GetHashCode();
-                
-                if (this.DescricaoRetorno != null)
-                    hash = hash * 59 + this.DescricaoRetorno.GetHashCode();
                 
                 return hash;
             }

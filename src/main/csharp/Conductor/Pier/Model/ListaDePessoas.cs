@@ -12,31 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Status Cart\u00C3\u00B5es
+    /// Lista de Pessoas
     /// </summary>
     [DataContract]
-    public partial class ListaDeStatusCartes :  IEquatable<ListaDeStatusCartes>
+    public partial class ListaDePessoas :  IEquatable<ListaDePessoas>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaDeStatusCartes" /> class.
-        /// Initializes a new instance of the <see cref="ListaDeStatusCartes" />class.
+        /// Initializes a new instance of the <see cref="ListaDePessoas" /> class.
+        /// Initializes a new instance of the <see cref="ListaDePessoas" />class.
         /// </summary>
-        /// <param name="StatusCartoes">Lista de status cart\u00C3\u00B5es.</param>
+        /// <param name="Pessoas">Lista de pessoas.</param>
 
-        public ListaDeStatusCartes(List<StatusCarto> StatusCartoes = null)
+        public ListaDePessoas(List<Pessoa> Pessoas = null)
         {
-            this.StatusCartoes = StatusCartoes;
+            this.Pessoas = Pessoas;
             
         }
         
     
         /// <summary>
-        /// Lista de status cart\u00C3\u00B5es
+        /// Lista de pessoas
         /// </summary>
-        /// <value>Lista de status cart\u00C3\u00B5es</value>
-        [DataMember(Name="statusCartoes", EmitDefaultValue=false)]
-        public List<StatusCarto> StatusCartoes { get; set; }
+        /// <value>Lista de pessoas</value>
+        [DataMember(Name="pessoas", EmitDefaultValue=false)]
+        public List<Pessoa> Pessoas { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,8 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaDeStatusCartes {\n");
-            sb.Append("  StatusCartoes: ").Append(StatusCartoes).Append("\n");
+            sb.Append("class ListaDePessoas {\n");
+            sb.Append("  Pessoas: ").Append(Pessoas).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -69,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaDeStatusCartes);
+            return this.Equals(obj as ListaDePessoas);
         }
 
         /// <summary>
-        /// Returns true if ListaDeStatusCartes instances are equal
+        /// Returns true if ListaDePessoas instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaDeStatusCartes to be compared</param>
+        /// <param name="other">Instance of ListaDePessoas to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaDeStatusCartes other)
+        public bool Equals(ListaDePessoas other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -85,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.StatusCartoes == other.StatusCartoes ||
-                    this.StatusCartoes != null &&
-                    this.StatusCartoes.SequenceEqual(other.StatusCartoes)
+                    this.Pessoas == other.Pessoas ||
+                    this.Pessoas != null &&
+                    this.Pessoas.SequenceEqual(other.Pessoas)
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.StatusCartoes != null)
-                    hash = hash * 59 + this.StatusCartoes.GetHashCode();
+                if (this.Pessoas != null)
+                    hash = hash * 59 + this.Pessoas.GetHashCode();
                 
                 return hash;
             }
