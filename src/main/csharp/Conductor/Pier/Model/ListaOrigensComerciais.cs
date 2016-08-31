@@ -12,31 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Pessoas
+    /// Lista de Origens Comerciais
     /// </summary>
     [DataContract]
-    public partial class ListaDePessoas :  IEquatable<ListaDePessoas>
+    public partial class ListaOrigensComerciais :  IEquatable<ListaOrigensComerciais>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaDePessoas" /> class.
-        /// Initializes a new instance of the <see cref="ListaDePessoas" />class.
+        /// Initializes a new instance of the <see cref="ListaOrigensComerciais" /> class.
+        /// Initializes a new instance of the <see cref="ListaOrigensComerciais" />class.
         /// </summary>
-        /// <param name="Pessoas">Lista de pessoas.</param>
+        /// <param name="OrigensComerciais">Lista de origens comerciais.</param>
 
-        public ListaDePessoas(List<Pessoa> Pessoas = null)
+        public ListaOrigensComerciais(List<OrigemComercial> OrigensComerciais = null)
         {
-            this.Pessoas = Pessoas;
+            this.OrigensComerciais = OrigensComerciais;
             
         }
         
     
         /// <summary>
-        /// Lista de pessoas
+        /// Lista de origens comerciais
         /// </summary>
-        /// <value>Lista de pessoas</value>
-        [DataMember(Name="pessoas", EmitDefaultValue=false)]
-        public List<Pessoa> Pessoas { get; set; }
+        /// <value>Lista de origens comerciais</value>
+        [DataMember(Name="origensComerciais", EmitDefaultValue=false)]
+        public List<OrigemComercial> OrigensComerciais { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,8 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaDePessoas {\n");
-            sb.Append("  Pessoas: ").Append(Pessoas).Append("\n");
+            sb.Append("class ListaOrigensComerciais {\n");
+            sb.Append("  OrigensComerciais: ").Append(OrigensComerciais).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -69,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaDePessoas);
+            return this.Equals(obj as ListaOrigensComerciais);
         }
 
         /// <summary>
-        /// Returns true if ListaDePessoas instances are equal
+        /// Returns true if ListaOrigensComerciais instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaDePessoas to be compared</param>
+        /// <param name="other">Instance of ListaOrigensComerciais to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaDePessoas other)
+        public bool Equals(ListaOrigensComerciais other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -85,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Pessoas == other.Pessoas ||
-                    this.Pessoas != null &&
-                    this.Pessoas.SequenceEqual(other.Pessoas)
+                    this.OrigensComerciais == other.OrigensComerciais ||
+                    this.OrigensComerciais != null &&
+                    this.OrigensComerciais.SequenceEqual(other.OrigensComerciais)
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Pessoas != null)
-                    hash = hash * 59 + this.Pessoas.GetHashCode();
+                if (this.OrigensComerciais != null)
+                    hash = hash * 59 + this.OrigensComerciais.GetHashCode();
                 
                 return hash;
             }

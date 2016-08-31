@@ -12,31 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Origens Comerciais
+    /// Lista de Produtos
     /// </summary>
     [DataContract]
-    public partial class ListaDeOrigensComerciais :  IEquatable<ListaDeOrigensComerciais>
+    public partial class ListaProdutos :  IEquatable<ListaProdutos>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaDeOrigensComerciais" /> class.
-        /// Initializes a new instance of the <see cref="ListaDeOrigensComerciais" />class.
+        /// Initializes a new instance of the <see cref="ListaProdutos" /> class.
+        /// Initializes a new instance of the <see cref="ListaProdutos" />class.
         /// </summary>
-        /// <param name="OrigensComerciais">Lista de origens comerciais.</param>
+        /// <param name="Produtos">Lista de produtos.</param>
 
-        public ListaDeOrigensComerciais(List<OrigemComercial> OrigensComerciais = null)
+        public ListaProdutos(List<Produto> Produtos = null)
         {
-            this.OrigensComerciais = OrigensComerciais;
+            this.Produtos = Produtos;
             
         }
         
     
         /// <summary>
-        /// Lista de origens comerciais
+        /// Lista de produtos
         /// </summary>
-        /// <value>Lista de origens comerciais</value>
-        [DataMember(Name="origensComerciais", EmitDefaultValue=false)]
-        public List<OrigemComercial> OrigensComerciais { get; set; }
+        /// <value>Lista de produtos</value>
+        [DataMember(Name="produtos", EmitDefaultValue=false)]
+        public List<Produto> Produtos { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,8 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaDeOrigensComerciais {\n");
-            sb.Append("  OrigensComerciais: ").Append(OrigensComerciais).Append("\n");
+            sb.Append("class ListaProdutos {\n");
+            sb.Append("  Produtos: ").Append(Produtos).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -69,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaDeOrigensComerciais);
+            return this.Equals(obj as ListaProdutos);
         }
 
         /// <summary>
-        /// Returns true if ListaDeOrigensComerciais instances are equal
+        /// Returns true if ListaProdutos instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaDeOrigensComerciais to be compared</param>
+        /// <param name="other">Instance of ListaProdutos to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaDeOrigensComerciais other)
+        public bool Equals(ListaProdutos other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -85,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.OrigensComerciais == other.OrigensComerciais ||
-                    this.OrigensComerciais != null &&
-                    this.OrigensComerciais.SequenceEqual(other.OrigensComerciais)
+                    this.Produtos == other.Produtos ||
+                    this.Produtos != null &&
+                    this.Produtos.SequenceEqual(other.Produtos)
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.OrigensComerciais != null)
-                    hash = hash * 59 + this.OrigensComerciais.GetHashCode();
+                if (this.Produtos != null)
+                    hash = hash * 59 + this.Produtos.GetHashCode();
                 
                 return hash;
             }

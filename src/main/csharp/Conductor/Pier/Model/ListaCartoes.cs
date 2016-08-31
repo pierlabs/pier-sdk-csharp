@@ -15,16 +15,16 @@ namespace Conductor.Pier.Model
     /// Lista de Cart\u00C3\u00B5es
     /// </summary>
     [DataContract]
-    public partial class ListaDeCartes :  IEquatable<ListaDeCartes>
+    public partial class ListaCartoes :  IEquatable<ListaCartoes>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaDeCartes" /> class.
-        /// Initializes a new instance of the <see cref="ListaDeCartes" />class.
+        /// Initializes a new instance of the <see cref="ListaCartoes" /> class.
+        /// Initializes a new instance of the <see cref="ListaCartoes" />class.
         /// </summary>
         /// <param name="Cartoes">Lista de cart\u00C3\u00B5es.</param>
 
-        public ListaDeCartes(List<Carto> Cartoes = null)
+        public ListaCartoes(List<Cartao> Cartoes = null)
         {
             this.Cartoes = Cartoes;
             
@@ -36,7 +36,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Lista de cart\u00C3\u00B5es</value>
         [DataMember(Name="cartoes", EmitDefaultValue=false)]
-        public List<Carto> Cartoes { get; set; }
+        public List<Cartao> Cartoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,7 +45,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaDeCartes {\n");
+            sb.Append("class ListaCartoes {\n");
             sb.Append("  Cartoes: ").Append(Cartoes).Append("\n");
             
             sb.Append("}\n");
@@ -69,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaDeCartes);
+            return this.Equals(obj as ListaCartoes);
         }
 
         /// <summary>
-        /// Returns true if ListaDeCartes instances are equal
+        /// Returns true if ListaCartoes instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaDeCartes to be compared</param>
+        /// <param name="other">Instance of ListaCartoes to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaDeCartes other)
+        public bool Equals(ListaCartoes other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

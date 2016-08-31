@@ -51,8 +51,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ListaDeOrigensComerciais</returns>
-        ListaDeOrigensComerciais ListarOrigensComerciaisUsingGET (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>ListaOrigensComerciais</returns>
+        ListaOrigensComerciais ListarOrigensComerciaisUsingGET (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
@@ -66,8 +66,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ApiResponse of ListaDeOrigensComerciais</returns>
-        ApiResponse<ListaDeOrigensComerciais> ListarOrigensComerciaisUsingGETWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of ListaOrigensComerciais</returns>
+        ApiResponse<ListaOrigensComerciais> ListarOrigensComerciaisUsingGETWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -107,8 +107,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaDeOrigensComerciais</returns>
-        System.Threading.Tasks.Task<ListaDeOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>Task of ListaOrigensComerciais</returns>
+        System.Threading.Tasks.Task<ListaOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
@@ -122,8 +122,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaDeOrigensComerciais)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaDeOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (ListaOrigensComerciais)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListaOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -397,10 +397,10 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ListaDeOrigensComerciais</returns>
-        public ListaDeOrigensComerciais ListarOrigensComerciaisUsingGET (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>ListaOrigensComerciais</returns>
+        public ListaOrigensComerciais ListarOrigensComerciaisUsingGET (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeOrigensComerciais> localVarResponse = ListarOrigensComerciaisUsingGETWithHttpInfo(idOrigemComercial, nome, status, page, limit);
+             ApiResponse<ListaOrigensComerciais> localVarResponse = ListarOrigensComerciaisUsingGETWithHttpInfo(idOrigemComercial, nome, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -413,8 +413,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ApiResponse of ListaDeOrigensComerciais</returns>
-        public ApiResponse< ListaDeOrigensComerciais > ListarOrigensComerciaisUsingGETWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of ListaOrigensComerciais</returns>
+        public ApiResponse< ListaOrigensComerciais > ListarOrigensComerciaisUsingGETWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -475,9 +475,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarOrigensComerciaisUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ListaDeOrigensComerciais>(localVarStatusCode,
+            return new ApiResponse<ListaOrigensComerciais>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaDeOrigensComerciais) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaDeOrigensComerciais)));
+                (ListaOrigensComerciais) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaOrigensComerciais)));
             
         }
 
@@ -491,10 +491,10 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaDeOrigensComerciais</returns>
-        public async System.Threading.Tasks.Task<ListaDeOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>Task of ListaOrigensComerciais</returns>
+        public async System.Threading.Tasks.Task<ListaOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeOrigensComerciais> localVarResponse = await ListarOrigensComerciaisUsingGETAsyncWithHttpInfo(idOrigemComercial, nome, status, page, limit);
+             ApiResponse<ListaOrigensComerciais> localVarResponse = await ListarOrigensComerciaisUsingGETAsyncWithHttpInfo(idOrigemComercial, nome, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -508,8 +508,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status da Origem Comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaDeOrigensComerciais)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaDeOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (ListaOrigensComerciais)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ListaOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -571,9 +571,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarOrigensComerciaisUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ListaDeOrigensComerciais>(localVarStatusCode,
+            return new ApiResponse<ListaOrigensComerciais>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaDeOrigensComerciais) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaDeOrigensComerciais)));
+                (ListaOrigensComerciais) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaOrigensComerciais)));
             
         }
         

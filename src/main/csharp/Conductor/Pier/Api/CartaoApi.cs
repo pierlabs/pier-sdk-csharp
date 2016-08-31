@@ -18,260 +18,172 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Bloquear um determinado cart\u00C3\u00A3o
+        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do bloqueio</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
-        /// <returns>CancelarCartaoResponse</returns>
-        CancelarCartaoResponse BloquearCartaoUsingPOST (int? idConta, int? idCartao, int? motivo, string observacao = null);
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <returns>OrigemComercial</returns>
+        OrigemComercial ConsultarUsingGET (long? idCartao);
   
         /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Bloquear um determinado cart\u00C3\u00A3o
+        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do bloqueio</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
-        /// <returns>ApiResponse of CancelarCartaoResponse</returns>
-        ApiResponse<CancelarCartaoResponse> BloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null);
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <returns>ApiResponse of OrigemComercial</returns>
+        ApiResponse<OrigemComercial> ConsultarUsingGETWithHttpInfo (long? idCartao);
         
         /// <summary>
-        /// Retorna um cart\u00C3\u00A3o
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
+        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param>
-        /// <returns>ConsultarCartaoResponse</returns>
-        ConsultarCartaoResponse ConsultarCartaoUsingGET (int? idConta, int? idCartao, string numeroCartao = null);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <returns>ListaCartoes</returns>
+        ListaCartoes ListarUsingGET (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Retorna um cart\u00C3\u00A3o
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
+        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param>
-        /// <returns>ApiResponse of ConsultarCartaoResponse</returns>
-        ApiResponse<ConsultarCartaoResponse> ConsultarCartaoUsingGETWithHttpInfo (int? idConta, int? idCartao, string numeroCartao = null);
-        
-        /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es
-        /// </summary>
-        /// <remarks>
-        /// Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <returns>ConsultarCartaoResponse</returns>
-        ConsultarCartaoResponse ConsultarCartoesUsingGET (int? idConta);
-  
-        /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es
-        /// </summary>
-        /// <remarks>
-        /// Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <returns>ApiResponse of ConsultarCartaoResponse</returns>
-        ApiResponse<ConsultarCartaoResponse> ConsultarCartoesUsingGETWithHttpInfo (int? idConta);
-        
-        /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o
-        /// </summary>
-        /// <remarks>
-        /// Desbloquear cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>DesbloquearCartaoResponse</returns>
-        DesbloquearCartaoResponse DesbloquearCartaoUsingPOST (int? idConta, int? idCartao, string codigoSegurancao = null);
-  
-        /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o
-        /// </summary>
-        /// <remarks>
-        /// Desbloquear cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>ApiResponse of DesbloquearCartaoResponse</returns>
-        ApiResponse<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null);
-        
-        /// <summary>
-        /// Embossado
-        /// </summary>
-        /// <remarks>
-        /// N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <returns>EmbossadoCartaoResponse</returns>
-        EmbossadoCartaoResponse EmbossadoCartaoUsingPUT (int? idConta, int? idCartao);
-  
-        /// <summary>
-        /// Embossado
-        /// </summary>
-        /// <remarks>
-        /// N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <returns>ApiResponse of EmbossadoCartaoResponse</returns>
-        ApiResponse<EmbossadoCartaoResponse> EmbossadoCartaoUsingPUTWithHttpInfo (int? idConta, int? idCartao);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <returns>ApiResponse of ListaCartoes</returns>
+        ApiResponse<ListaCartoes> ListarUsingGETWithHttpInfo (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Bloquear um determinado cart\u00C3\u00A3o
+        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do bloqueio</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
-        /// <returns>Task of CancelarCartaoResponse</returns>
-        System.Threading.Tasks.Task<CancelarCartaoResponse> BloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, int? motivo, string observacao = null);
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <returns>Task of OrigemComercial</returns>
+        System.Threading.Tasks.Task<OrigemComercial> ConsultarUsingGETAsync (long? idCartao);
 
         /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Bloquear um determinado cart\u00C3\u00A3o
+        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do bloqueio</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
-        /// <returns>Task of ApiResponse (CancelarCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CancelarCartaoResponse>> BloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null);
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <returns>Task of ApiResponse (OrigemComercial)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarUsingGETAsyncWithHttpInfo (long? idCartao);
         
         /// <summary>
-        /// Retorna um cart\u00C3\u00A3o
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
+        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param>
-        /// <returns>Task of ConsultarCartaoResponse</returns>
-        System.Threading.Tasks.Task<ConsultarCartaoResponse> ConsultarCartaoUsingGETAsync (int? idConta, int? idCartao, string numeroCartao = null);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <returns>Task of ListaCartoes</returns>
+        System.Threading.Tasks.Task<ListaCartoes> ListarUsingGETAsync (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Retorna um cart\u00C3\u00A3o
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
+        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param>
-        /// <returns>Task of ApiResponse (ConsultarCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultarCartaoResponse>> ConsultarCartaoUsingGETAsyncWithHttpInfo (int? idConta, int? idCartao, string numeroCartao = null);
-        
-        /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es
-        /// </summary>
-        /// <remarks>
-        /// Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <returns>Task of ConsultarCartaoResponse</returns>
-        System.Threading.Tasks.Task<ConsultarCartaoResponse> ConsultarCartoesUsingGETAsync (int? idConta);
-
-        /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es
-        /// </summary>
-        /// <remarks>
-        /// Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <returns>Task of ApiResponse (ConsultarCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultarCartaoResponse>> ConsultarCartoesUsingGETAsyncWithHttpInfo (int? idConta);
-        
-        /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o
-        /// </summary>
-        /// <remarks>
-        /// Desbloquear cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of DesbloquearCartaoResponse</returns>
-        System.Threading.Tasks.Task<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, string codigoSegurancao = null);
-
-        /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o
-        /// </summary>
-        /// <remarks>
-        /// Desbloquear cart\u00C3\u00A3o de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of ApiResponse (DesbloquearCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DesbloquearCartaoResponse>> DesbloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null);
-        
-        /// <summary>
-        /// Embossado
-        /// </summary>
-        /// <remarks>
-        /// N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <returns>Task of EmbossadoCartaoResponse</returns>
-        System.Threading.Tasks.Task<EmbossadoCartaoResponse> EmbossadoCartaoUsingPUTAsync (int? idConta, int? idCartao);
-
-        /// <summary>
-        /// Embossado
-        /// </summary>
-        /// <remarks>
-        /// N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <returns>Task of ApiResponse (EmbossadoCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbossadoCartaoResponse>> EmbossadoCartaoUsingPUTAsyncWithHttpInfo (int? idConta, int? idCartao);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <returns>Task of ApiResponse (ListaCartoes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListaCartoes>> ListarUsingGETAsyncWithHttpInfo (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -366,46 +278,32 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o Bloquear um determinado cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param> 
-        /// <param name="motivo">Motivo do bloqueio</param> 
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param> 
-        /// <returns>CancelarCartaoResponse</returns>
-        public CancelarCartaoResponse BloquearCartaoUsingPOST (int? idConta, int? idCartao, int? motivo, string observacao = null)
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <returns>OrigemComercial</returns>
+        public OrigemComercial ConsultarUsingGET (long? idCartao)
         {
-             ApiResponse<CancelarCartaoResponse> localVarResponse = BloquearCartaoUsingPOSTWithHttpInfo(idConta, idCartao, motivo, observacao);
+             ApiResponse<OrigemComercial> localVarResponse = ConsultarUsingGETWithHttpInfo(idCartao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o Bloquear um determinado cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param> 
-        /// <param name="motivo">Motivo do bloqueio</param> 
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param> 
-        /// <returns>ApiResponse of CancelarCartaoResponse</returns>
-        public ApiResponse< CancelarCartaoResponse > BloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null)
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <returns>ApiResponse of OrigemComercial</returns>
+        public ApiResponse< OrigemComercial > ConsultarUsingGETWithHttpInfo (long? idCartao)
         {
-            
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->BloquearCartaoUsingPOST");
             
             // verify the required parameter 'idCartao' is set
             if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->BloquearCartaoUsingPOST");
-            
-            // verify the required parameter 'motivo' is set
-            if (motivo == null)
-                throw new ApiException(400, "Missing required parameter 'motivo' when calling CartaoApi->BloquearCartaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->ConsultarUsingGET");
             
     
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}/bloquear";
+            var localVarPath = "/api/cartoes/{id_cartao}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -431,383 +329,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            if (motivo != null) localVarQueryParams.Add("motivo", Configuration.ApiClient.ParameterToString(motivo)); // query parameter
-            if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
-            
-            
-            
-            
-
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<CancelarCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CancelarCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CancelarCartaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o Bloquear um determinado cart\u00C3\u00A3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do bloqueio</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
-        /// <returns>Task of CancelarCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CancelarCartaoResponse> BloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, int? motivo, string observacao = null)
-        {
-             ApiResponse<CancelarCartaoResponse> localVarResponse = await BloquearCartaoUsingPOSTAsyncWithHttpInfo(idConta, idCartao, motivo, observacao);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Bloqueia um cart\u00C3\u00A3o Bloquear um determinado cart\u00C3\u00A3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <param name="motivo">Motivo do bloqueio</param>
-        /// <param name="observacao">Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio (optional)</param>
-        /// <returns>Task of ApiResponse (CancelarCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CancelarCartaoResponse>> BloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, int? motivo, string observacao = null)
-        {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling BloquearCartaoUsingPOST");
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling BloquearCartaoUsingPOST");
-            // verify the required parameter 'motivo' is set
-            if (motivo == null) throw new ApiException(400, "Missing required parameter 'motivo' when calling BloquearCartaoUsingPOST");
-            
-    
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}/bloquear";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            if (motivo != null) localVarQueryParams.Add("motivo", Configuration.ApiClient.ParameterToString(motivo)); // query parameter
-            if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling BloquearCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CancelarCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CancelarCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CancelarCartaoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Retorna um cart\u00C3\u00A3o Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param> 
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param> 
-        /// <returns>ConsultarCartaoResponse</returns>
-        public ConsultarCartaoResponse ConsultarCartaoUsingGET (int? idConta, int? idCartao, string numeroCartao = null)
-        {
-             ApiResponse<ConsultarCartaoResponse> localVarResponse = ConsultarCartaoUsingGETWithHttpInfo(idConta, idCartao, numeroCartao);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retorna um cart\u00C3\u00A3o Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param> 
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param> 
-        /// <returns>ApiResponse of ConsultarCartaoResponse</returns>
-        public ApiResponse< ConsultarCartaoResponse > ConsultarCartaoUsingGETWithHttpInfo (int? idConta, int? idCartao, string numeroCartao = null)
-        {
-            
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->ConsultarCartaoUsingGET");
-            
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->ConsultarCartaoUsingGET");
-            
-    
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            
-            if (numeroCartao != null) localVarHeaderParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // header parameter
-            
-            
-            
-
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConsultarCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarCartaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Retorna um cart\u00C3\u00A3o Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param>
-        /// <returns>Task of ConsultarCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultarCartaoResponse> ConsultarCartaoUsingGETAsync (int? idConta, int? idCartao, string numeroCartao = null)
-        {
-             ApiResponse<ConsultarCartaoResponse> localVarResponse = await ConsultarCartaoUsingGETAsyncWithHttpInfo(idConta, idCartao, numeroCartao);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retorna um cart\u00C3\u00A3o Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta que pertence o cart\u00C3\u00A3o</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar</param>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) (optional)</param>
-        /// <returns>Task of ApiResponse (ConsultarCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultarCartaoResponse>> ConsultarCartaoUsingGETAsyncWithHttpInfo (int? idConta, int? idCartao, string numeroCartao = null)
-        {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarCartaoUsingGET");
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarCartaoUsingGET");
-            
-    
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            
-            if (numeroCartao != null) localVarHeaderParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // header parameter
-            
-            
-            
-
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConsultarCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarCartaoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <returns>ConsultarCartaoResponse</returns>
-        public ConsultarCartaoResponse ConsultarCartoesUsingGET (int? idConta)
-        {
-             ApiResponse<ConsultarCartaoResponse> localVarResponse = ConsultarCartoesUsingGETWithHttpInfo(idConta);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <returns>ApiResponse of ConsultarCartaoResponse</returns>
-        public ApiResponse< ConsultarCartaoResponse > ConsultarCartoesUsingGETWithHttpInfo (int? idConta)
-        {
-            
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->ConsultarCartoesUsingGET");
-            
-    
-            var localVarPath = "/api/contas/{idConta}/cartoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            if (idCartao != null) localVarPathParams.Add("id_cartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
             
             
             
@@ -830,43 +352,43 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartoesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ConsultarCartaoResponse>(localVarStatusCode,
+            return new ApiResponse<OrigemComercial>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarCartaoResponse)));
+                (OrigemComercial) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrigemComercial)));
             
         }
 
         
         /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es Consultar todos os cart\u00C3\u00B5es de uma determinada conta
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <returns>Task of ConsultarCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultarCartaoResponse> ConsultarCartoesUsingGETAsync (int? idConta)
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <returns>Task of OrigemComercial</returns>
+        public async System.Threading.Tasks.Task<OrigemComercial> ConsultarUsingGETAsync (long? idCartao)
         {
-             ApiResponse<ConsultarCartaoResponse> localVarResponse = await ConsultarCartoesUsingGETAsyncWithHttpInfo(idConta);
+             ApiResponse<OrigemComercial> localVarResponse = await ConsultarUsingGETAsyncWithHttpInfo(idCartao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Retorna todos os cart\u00C3\u00B5es Consultar todos os cart\u00C3\u00B5es de uma determinada conta
+        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <returns>Task of ApiResponse (ConsultarCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultarCartaoResponse>> ConsultarCartoesUsingGETAsyncWithHttpInfo (int? idConta)
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <returns>Task of ApiResponse (OrigemComercial)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarUsingGETAsyncWithHttpInfo (long? idCartao)
         {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarCartoesUsingGET");
+            // verify the required parameter 'idCartao' is set
+            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarUsingGET");
             
     
-            var localVarPath = "/api/contas/{idConta}/cartoes";
+            var localVarPath = "/api/cartoes/{id_cartao}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -892,7 +414,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            if (idCartao != null) localVarPathParams.Add("id_cartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
             
             
             
@@ -916,51 +438,77 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartoesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarCartoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ConsultarCartaoResponse>(localVarStatusCode,
+            return new ApiResponse<OrigemComercial>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConsultarCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarCartaoResponse)));
+                (OrigemComercial) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrigemComercial)));
             
         }
         
         /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o Desbloquear cart\u00C3\u00A3o de uma determinada conta
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param> 
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param> 
-        /// <returns>DesbloquearCartaoResponse</returns>
-        public DesbloquearCartaoResponse DesbloquearCartaoUsingPOST (int? idConta, int? idCartao, string codigoSegurancao = null)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param> 
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param> 
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param> 
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param> 
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param> 
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param> 
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param> 
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param> 
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param> 
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <returns>ListaCartoes</returns>
+        public ListaCartoes ListarUsingGET (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null)
         {
-             ApiResponse<DesbloquearCartaoResponse> localVarResponse = DesbloquearCartaoUsingPOSTWithHttpInfo(idConta, idCartao, codigoSegurancao);
+             ApiResponse<ListaCartoes> localVarResponse = ListarUsingGETWithHttpInfo(id, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, portador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o Desbloquear cart\u00C3\u00A3o de uma determinada conta
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param> 
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param> 
-        /// <returns>ApiResponse of DesbloquearCartaoResponse</returns>
-        public ApiResponse< DesbloquearCartaoResponse > DesbloquearCartaoUsingPOSTWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param> 
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param> 
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param> 
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param> 
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param> 
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param> 
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param> 
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param> 
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param> 
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <returns>ApiResponse of ListaCartoes</returns>
+        public ApiResponse< ListaCartoes > ListarUsingGETWithHttpInfo (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null)
         {
             
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->DesbloquearCartaoUsingPOST");
-            
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->DesbloquearCartaoUsingPOST");
-            
     
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}/desbloquear";
+            var localVarPath = "/api/cartoes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -986,196 +534,27 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
             
-            
-            if (codigoSegurancao != null) localVarHeaderParams.Add("codigoSegurancao", Configuration.ApiClient.ParameterToString(codigoSegurancao)); // header parameter
-            
-            
-            
-
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesbloquearCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesbloquearCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<DesbloquearCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DesbloquearCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DesbloquearCartaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o Desbloquear cart\u00C3\u00A3o de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of DesbloquearCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<DesbloquearCartaoResponse> DesbloquearCartaoUsingPOSTAsync (int? idConta, int? idCartao, string codigoSegurancao = null)
-        {
-             ApiResponse<DesbloquearCartaoResponse> localVarResponse = await DesbloquearCartaoUsingPOSTAsyncWithHttpInfo(idConta, idCartao, codigoSegurancao);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Desbloqueia um cart\u00C3\u00A3o Desbloquear cart\u00C3\u00A3o de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite</param>
-        /// <param name="codigoSegurancao">C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of ApiResponse (DesbloquearCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DesbloquearCartaoResponse>> DesbloquearCartaoUsingPOSTAsyncWithHttpInfo (int? idConta, int? idCartao, string codigoSegurancao = null)
-        {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling DesbloquearCartaoUsingPOST");
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling DesbloquearCartaoUsingPOST");
-            
-    
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}/desbloquear";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
-            
-            if (codigoSegurancao != null) localVarHeaderParams.Add("codigoSegurancao", Configuration.ApiClient.ParameterToString(codigoSegurancao)); // header parameter
-            
-            
-            
-
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesbloquearCartaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesbloquearCartaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<DesbloquearCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DesbloquearCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DesbloquearCartaoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Embossado N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param> 
-        /// <returns>EmbossadoCartaoResponse</returns>
-        public EmbossadoCartaoResponse EmbossadoCartaoUsingPUT (int? idConta, int? idCartao)
-        {
-             ApiResponse<EmbossadoCartaoResponse> localVarResponse = EmbossadoCartaoUsingPUTWithHttpInfo(idConta, idCartao);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Embossado N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param> 
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param> 
-        /// <returns>ApiResponse of EmbossadoCartaoResponse</returns>
-        public ApiResponse< EmbossadoCartaoResponse > EmbossadoCartaoUsingPUTWithHttpInfo (int? idConta, int? idCartao)
-        {
-            
-            // verify the required parameter 'idConta' is set
-            if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CartaoApi->EmbossadoCartaoUsingPUT");
-            
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->EmbossadoCartaoUsingPUT");
-            
-    
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}/embossado";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
-            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (idStatusCartao != null) localVarQueryParams.Add("idStatusCartao", Configuration.ApiClient.ParameterToString(idStatusCartao)); // query parameter
+            if (idEstagioCartao != null) localVarQueryParams.Add("idEstagioCartao", Configuration.ApiClient.ParameterToString(idEstagioCartao)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (idProduto != null) localVarQueryParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
+            if (portador != null) localVarQueryParams.Add("portador", Configuration.ApiClient.ParameterToString(portador)); // query parameter
+            if (numeroCartao != null) localVarQueryParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
+            if (nomeImpresso != null) localVarQueryParams.Add("nomeImpresso", Configuration.ApiClient.ParameterToString(nomeImpresso)); // query parameter
+            if (dataGeracao != null) localVarQueryParams.Add("dataGeracao", Configuration.ApiClient.ParameterToString(dataGeracao)); // query parameter
+            if (dataStatusCartao != null) localVarQueryParams.Add("dataStatusCartao", Configuration.ApiClient.ParameterToString(dataStatusCartao)); // query parameter
+            if (dataEstagioCartao != null) localVarQueryParams.Add("dataEstagioCartao", Configuration.ApiClient.ParameterToString(dataEstagioCartao)); // query parameter
+            if (dataValidade != null) localVarQueryParams.Add("dataValidade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
+            if (dataImpressao != null) localVarQueryParams.Add("dataImpressao", Configuration.ApiClient.ParameterToString(dataImpressao)); // query parameter
+            if (arquivoImpressao != null) localVarQueryParams.Add("arquivoImpressao", Configuration.ApiClient.ParameterToString(arquivoImpressao)); // query parameter
+            if (flagImpressaoOrigemComercial != null) localVarQueryParams.Add("flagImpressaoOrigemComercial", Configuration.ApiClient.ParameterToString(flagImpressaoOrigemComercial)); // query parameter
+            if (flagProvisorio != null) localVarQueryParams.Add("flagProvisorio", Configuration.ApiClient.ParameterToString(flagProvisorio)); // query parameter
+            if (codigoDesbloqueio != null) localVarQueryParams.Add("codigoDesbloqueio", Configuration.ApiClient.ParameterToString(codigoDesbloqueio)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -1191,53 +570,85 @@ namespace Conductor.Pier.Api
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EmbossadoCartaoUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EmbossadoCartaoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<EmbossadoCartaoResponse>(localVarStatusCode,
+            return new ApiResponse<ListaCartoes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EmbossadoCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbossadoCartaoResponse)));
+                (ListaCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaCartoes)));
             
         }
 
         
         /// <summary>
-        /// Embossado N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <returns>Task of EmbossadoCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<EmbossadoCartaoResponse> EmbossadoCartaoUsingPUTAsync (int? idConta, int? idCartao)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <returns>Task of ListaCartoes</returns>
+        public async System.Threading.Tasks.Task<ListaCartoes> ListarUsingGETAsync (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null)
         {
-             ApiResponse<EmbossadoCartaoResponse> localVarResponse = await EmbossadoCartaoUsingPUTAsyncWithHttpInfo(idConta, idCartao);
+             ApiResponse<ListaCartoes> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(id, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, portador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Embossado N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
+        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">ID da Conta</param>
-        /// <param name="idCartao">ID do Cart\u00C3\u00A3o que deseja cancelar</param>
-        /// <returns>Task of ApiResponse (EmbossadoCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbossadoCartaoResponse>> EmbossadoCartaoUsingPUTAsyncWithHttpInfo (int? idConta, int? idCartao)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
+        /// <param name="portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <returns>Task of ApiResponse (ListaCartoes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ListaCartoes>> ListarUsingGETAsyncWithHttpInfo (long? id = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, int? portador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? page = null, int? limit = null)
         {
-            // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EmbossadoCartaoUsingPUT");
-            // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling EmbossadoCartaoUsingPUT");
             
     
-            var localVarPath = "/api/contas/{idConta}/cartoes/{idCartao}/embossado";
+            var localVarPath = "/api/cartoes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1263,9 +674,27 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
-            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
             
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (idStatusCartao != null) localVarQueryParams.Add("idStatusCartao", Configuration.ApiClient.ParameterToString(idStatusCartao)); // query parameter
+            if (idEstagioCartao != null) localVarQueryParams.Add("idEstagioCartao", Configuration.ApiClient.ParameterToString(idEstagioCartao)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (idProduto != null) localVarQueryParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
+            if (portador != null) localVarQueryParams.Add("portador", Configuration.ApiClient.ParameterToString(portador)); // query parameter
+            if (numeroCartao != null) localVarQueryParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
+            if (nomeImpresso != null) localVarQueryParams.Add("nomeImpresso", Configuration.ApiClient.ParameterToString(nomeImpresso)); // query parameter
+            if (dataGeracao != null) localVarQueryParams.Add("dataGeracao", Configuration.ApiClient.ParameterToString(dataGeracao)); // query parameter
+            if (dataStatusCartao != null) localVarQueryParams.Add("dataStatusCartao", Configuration.ApiClient.ParameterToString(dataStatusCartao)); // query parameter
+            if (dataEstagioCartao != null) localVarQueryParams.Add("dataEstagioCartao", Configuration.ApiClient.ParameterToString(dataEstagioCartao)); // query parameter
+            if (dataValidade != null) localVarQueryParams.Add("dataValidade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
+            if (dataImpressao != null) localVarQueryParams.Add("dataImpressao", Configuration.ApiClient.ParameterToString(dataImpressao)); // query parameter
+            if (arquivoImpressao != null) localVarQueryParams.Add("arquivoImpressao", Configuration.ApiClient.ParameterToString(arquivoImpressao)); // query parameter
+            if (flagImpressaoOrigemComercial != null) localVarQueryParams.Add("flagImpressaoOrigemComercial", Configuration.ApiClient.ParameterToString(flagImpressaoOrigemComercial)); // query parameter
+            if (flagProvisorio != null) localVarQueryParams.Add("flagProvisorio", Configuration.ApiClient.ParameterToString(flagProvisorio)); // query parameter
+            if (codigoDesbloqueio != null) localVarQueryParams.Add("codigoDesbloqueio", Configuration.ApiClient.ParameterToString(codigoDesbloqueio)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -1282,19 +711,19 @@ namespace Conductor.Pier.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EmbossadoCartaoUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EmbossadoCartaoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EmbossadoCartaoResponse>(localVarStatusCode,
+            return new ApiResponse<ListaCartoes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EmbossadoCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbossadoCartaoResponse)));
+                (ListaCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaCartoes)));
             
         }
         

@@ -51,8 +51,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ListaDePessoas</returns>
-        ListaDePessoas ListarProdutosUsingGET (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>ListaProdutos</returns>
+        ListaProdutos ListarProdutosUsingGET (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -66,8 +66,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ApiResponse of ListaDePessoas</returns>
-        ApiResponse<ListaDePessoas> ListarProdutosUsingGETWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of ListaProdutos</returns>
+        ApiResponse<ListaProdutos> ListarProdutosUsingGETWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -107,8 +107,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaDePessoas</returns>
-        System.Threading.Tasks.Task<ListaDePessoas> ListarProdutosUsingGETAsync (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>Task of ListaProdutos</returns>
+        System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -122,8 +122,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaDePessoas)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaDePessoas>> ListarProdutosUsingGETAsyncWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (ListaProdutos)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -397,10 +397,10 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ListaDePessoas</returns>
-        public ListaDePessoas ListarProdutosUsingGET (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>ListaProdutos</returns>
+        public ListaProdutos ListarProdutosUsingGET (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDePessoas> localVarResponse = ListarProdutosUsingGETWithHttpInfo(idProduto, nome, status, page, limit);
+             ApiResponse<ListaProdutos> localVarResponse = ListarProdutosUsingGETWithHttpInfo(idProduto, nome, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -413,8 +413,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ApiResponse of ListaDePessoas</returns>
-        public ApiResponse< ListaDePessoas > ListarProdutosUsingGETWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of ListaProdutos</returns>
+        public ApiResponse< ListaProdutos > ListarProdutosUsingGETWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -475,9 +475,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarProdutosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ListaDePessoas>(localVarStatusCode,
+            return new ApiResponse<ListaProdutos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaDePessoas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaDePessoas)));
+                (ListaProdutos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaProdutos)));
             
         }
 
@@ -491,10 +491,10 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaDePessoas</returns>
-        public async System.Threading.Tasks.Task<ListaDePessoas> ListarProdutosUsingGETAsync (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>Task of ListaProdutos</returns>
+        public async System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDePessoas> localVarResponse = await ListarProdutosUsingGETAsyncWithHttpInfo(idProduto, nome, status, page, limit);
+             ApiResponse<ListaProdutos> localVarResponse = await ListarProdutosUsingGETAsyncWithHttpInfo(idProduto, nome, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -508,8 +508,8 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaDePessoas)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaDePessoas>> ListarProdutosUsingGETAsyncWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (ListaProdutos)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -571,9 +571,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarProdutosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ListaDePessoas>(localVarStatusCode,
+            return new ApiResponse<ListaProdutos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaDePessoas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaDePessoas)));
+                (ListaProdutos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaProdutos)));
             
         }
         

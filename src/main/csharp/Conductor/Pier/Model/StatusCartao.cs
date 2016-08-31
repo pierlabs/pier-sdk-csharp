@@ -15,12 +15,12 @@ namespace Conductor.Pier.Model
     /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
     /// </summary>
     [DataContract]
-    public partial class StatusCarto :  IEquatable<StatusCarto>
+    public partial class StatusCartao :  IEquatable<StatusCartao>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="StatusCarto" /> class.
-        /// Initializes a new instance of the <see cref="StatusCarto" />class.
+        /// Initializes a new instance of the <see cref="StatusCartao" /> class.
+        /// Initializes a new instance of the <see cref="StatusCartao" />class.
         /// </summary>
         /// <param name="FlagAlteraStatus">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (required).</param>
         /// <param name="FlagCadastroNovaSenha">Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha. (required).</param>
@@ -37,12 +37,12 @@ namespace Conductor.Pier.Model
         /// <param name="IdStatusDestinoDesbloqueio">Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (required).</param>
         /// <param name="Nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (required).</param>
 
-        public StatusCarto(int? FlagAlteraStatus = null, int? FlagCadastroNovaSenha = null, int? FlagCancelaConta = null, int? FlagCancelaNoDesbloqueio = null, int? FlagCobraTarifa = null, int? FlagDestinoTransferencia = null, int? FlagEmiteProvisorio = null, int? FlagExcecaoBandeira = null, int? FlagOrigemTransferencia = null, int? FlagReemiteCartao = null, long? Id = null, long? IdStatusDestinoConta = null, long? IdStatusDestinoDesbloqueio = null, string Nome = null)
+        public StatusCartao(int? FlagAlteraStatus = null, int? FlagCadastroNovaSenha = null, int? FlagCancelaConta = null, int? FlagCancelaNoDesbloqueio = null, int? FlagCobraTarifa = null, int? FlagDestinoTransferencia = null, int? FlagEmiteProvisorio = null, int? FlagExcecaoBandeira = null, int? FlagOrigemTransferencia = null, int? FlagReemiteCartao = null, long? Id = null, long? IdStatusDestinoConta = null, long? IdStatusDestinoDesbloqueio = null, string Nome = null)
         {
             // to ensure "FlagAlteraStatus" is required (not null)
             if (FlagAlteraStatus == null)
             {
-                throw new InvalidDataException("FlagAlteraStatus is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagAlteraStatus is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagCadastroNovaSenha" is required (not null)
             if (FlagCadastroNovaSenha == null)
             {
-                throw new InvalidDataException("FlagCadastroNovaSenha is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagCadastroNovaSenha is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagCancelaConta" is required (not null)
             if (FlagCancelaConta == null)
             {
-                throw new InvalidDataException("FlagCancelaConta is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagCancelaConta is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -69,7 +69,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagCobraTarifa" is required (not null)
             if (FlagCobraTarifa == null)
             {
-                throw new InvalidDataException("FlagCobraTarifa is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagCobraTarifa is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -78,7 +78,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagDestinoTransferencia" is required (not null)
             if (FlagDestinoTransferencia == null)
             {
-                throw new InvalidDataException("FlagDestinoTransferencia is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagDestinoTransferencia is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -87,7 +87,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagEmiteProvisorio" is required (not null)
             if (FlagEmiteProvisorio == null)
             {
-                throw new InvalidDataException("FlagEmiteProvisorio is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagEmiteProvisorio is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagExcecaoBandeira" is required (not null)
             if (FlagExcecaoBandeira == null)
             {
-                throw new InvalidDataException("FlagExcecaoBandeira is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagExcecaoBandeira is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagOrigemTransferencia" is required (not null)
             if (FlagOrigemTransferencia == null)
             {
-                throw new InvalidDataException("FlagOrigemTransferencia is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagOrigemTransferencia is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -114,7 +114,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagReemiteCartao" is required (not null)
             if (FlagReemiteCartao == null)
             {
-                throw new InvalidDataException("FlagReemiteCartao is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("FlagReemiteCartao is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -123,7 +123,7 @@ namespace Conductor.Pier.Model
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
-                throw new InvalidDataException("Id is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("Id is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -132,7 +132,7 @@ namespace Conductor.Pier.Model
             // to ensure "IdStatusDestinoConta" is required (not null)
             if (IdStatusDestinoConta == null)
             {
-                throw new InvalidDataException("IdStatusDestinoConta is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("IdStatusDestinoConta is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Model
             // to ensure "IdStatusDestinoDesbloqueio" is required (not null)
             if (IdStatusDestinoDesbloqueio == null)
             {
-                throw new InvalidDataException("IdStatusDestinoDesbloqueio is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("IdStatusDestinoDesbloqueio is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -150,7 +150,7 @@ namespace Conductor.Pier.Model
             // to ensure "Nome" is required (not null)
             if (Nome == null)
             {
-                throw new InvalidDataException("Nome is a required property for StatusCarto and cannot be null");
+                throw new InvalidDataException("Nome is a required property for StatusCartao and cannot be null");
             }
             else
             {
@@ -266,7 +266,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StatusCarto {\n");
+            sb.Append("class StatusCartao {\n");
             sb.Append("  FlagAlteraStatus: ").Append(FlagAlteraStatus).Append("\n");
             sb.Append("  FlagCadastroNovaSenha: ").Append(FlagCadastroNovaSenha).Append("\n");
             sb.Append("  FlagCancelaConta: ").Append(FlagCancelaConta).Append("\n");
@@ -303,15 +303,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StatusCarto);
+            return this.Equals(obj as StatusCartao);
         }
 
         /// <summary>
-        /// Returns true if StatusCarto instances are equal
+        /// Returns true if StatusCartao instances are equal
         /// </summary>
-        /// <param name="other">Instance of StatusCarto to be compared</param>
+        /// <param name="other">Instance of StatusCartao to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StatusCarto other)
+        public bool Equals(StatusCartao other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

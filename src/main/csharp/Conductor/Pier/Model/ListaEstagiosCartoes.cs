@@ -15,16 +15,16 @@ namespace Conductor.Pier.Model
     /// Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
     /// </summary>
     [DataContract]
-    public partial class ListaDeEstgiosCartes :  IEquatable<ListaDeEstgiosCartes>
+    public partial class ListaEstagiosCartoes :  IEquatable<ListaEstagiosCartoes>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaDeEstgiosCartes" /> class.
-        /// Initializes a new instance of the <see cref="ListaDeEstgiosCartes" />class.
+        /// Initializes a new instance of the <see cref="ListaEstagiosCartoes" /> class.
+        /// Initializes a new instance of the <see cref="ListaEstagiosCartoes" />class.
         /// </summary>
         /// <param name="EstagiosCartoes">Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es.</param>
 
-        public ListaDeEstgiosCartes(List<EstgioCarto> EstagiosCartoes = null)
+        public ListaEstagiosCartoes(List<EstagioCartao> EstagiosCartoes = null)
         {
             this.EstagiosCartoes = EstagiosCartoes;
             
@@ -36,7 +36,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es</value>
         [DataMember(Name="estagiosCartoes", EmitDefaultValue=false)]
-        public List<EstgioCarto> EstagiosCartoes { get; set; }
+        public List<EstagioCartao> EstagiosCartoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,7 +45,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaDeEstgiosCartes {\n");
+            sb.Append("class ListaEstagiosCartoes {\n");
             sb.Append("  EstagiosCartoes: ").Append(EstagiosCartoes).Append("\n");
             
             sb.Append("}\n");
@@ -69,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaDeEstgiosCartes);
+            return this.Equals(obj as ListaEstagiosCartoes);
         }
 
         /// <summary>
-        /// Returns true if ListaDeEstgiosCartes instances are equal
+        /// Returns true if ListaEstagiosCartoes instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaDeEstgiosCartes to be compared</param>
+        /// <param name="other">Instance of ListaEstagiosCartoes to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaDeEstgiosCartes other)
+        public bool Equals(ListaEstagiosCartoes other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

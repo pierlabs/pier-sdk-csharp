@@ -25,8 +25,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>StatusCarto</returns>
-        StatusCarto ConsultarStatusCartaoUsingGET (long? idStatusCartao);
+        /// <returns>StatusCartao</returns>
+        StatusCartao ConsultarStatusCartaoUsingGET (long? idStatusCartao);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
@@ -36,8 +36,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of StatusCarto</returns>
-        ApiResponse<StatusCarto> ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao);
+        /// <returns>ApiResponse of StatusCartao</returns>
+        ApiResponse<StatusCartao> ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -62,8 +62,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ListaDeStatusCartes</returns>
-        ListaDeStatusCartes ListarStatusCartoesUsingGET (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
+        /// <returns>ListaStatusCartoes</returns>
+        ListaStatusCartoes ListarStatusCartoesUsingGET (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -88,8 +88,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ApiResponse of ListaDeStatusCartes</returns>
-        ApiResponse<ListaDeStatusCartes> ListarStatusCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of ListaStatusCartoes</returns>
+        ApiResponse<ListaStatusCartoes> ListarStatusCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of StatusCarto</returns>
-        System.Threading.Tasks.Task<StatusCarto> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao);
+        /// <returns>Task of StatusCartao</returns>
+        System.Threading.Tasks.Task<StatusCartao> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
@@ -114,8 +114,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (StatusCarto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusCarto>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao);
+        /// <returns>Task of ApiResponse (StatusCartao)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StatusCartao>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -140,8 +140,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaDeStatusCartes</returns>
-        System.Threading.Tasks.Task<ListaDeStatusCartes> ListarStatusCartoesUsingGETAsync (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
+        /// <returns>Task of ListaStatusCartoes</returns>
+        System.Threading.Tasks.Task<ListaStatusCartoes> ListarStatusCartoesUsingGETAsync (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
@@ -166,8 +166,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaDeStatusCartes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaDeStatusCartes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (ListaStatusCartoes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListaStatusCartoes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -266,10 +266,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>StatusCarto</returns>
-        public StatusCarto ConsultarStatusCartaoUsingGET (long? idStatusCartao)
+        /// <returns>StatusCartao</returns>
+        public StatusCartao ConsultarStatusCartaoUsingGET (long? idStatusCartao)
         {
-             ApiResponse<StatusCarto> localVarResponse = ConsultarStatusCartaoUsingGETWithHttpInfo(idStatusCartao);
+             ApiResponse<StatusCartao> localVarResponse = ConsultarStatusCartaoUsingGETWithHttpInfo(idStatusCartao);
              return localVarResponse.Data;
         }
 
@@ -278,8 +278,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of StatusCarto</returns>
-        public ApiResponse< StatusCarto > ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao)
+        /// <returns>ApiResponse of StatusCartao</returns>
+        public ApiResponse< StatusCartao > ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao)
         {
             
             // verify the required parameter 'idStatusCartao' is set
@@ -340,9 +340,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<StatusCarto>(localVarStatusCode,
+            return new ApiResponse<StatusCartao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StatusCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusCarto)));
+                (StatusCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusCartao)));
             
         }
 
@@ -352,10 +352,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of StatusCarto</returns>
-        public async System.Threading.Tasks.Task<StatusCarto> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao)
+        /// <returns>Task of StatusCartao</returns>
+        public async System.Threading.Tasks.Task<StatusCartao> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao)
         {
-             ApiResponse<StatusCarto> localVarResponse = await ConsultarStatusCartaoUsingGETAsyncWithHttpInfo(idStatusCartao);
+             ApiResponse<StatusCartao> localVarResponse = await ConsultarStatusCartaoUsingGETAsyncWithHttpInfo(idStatusCartao);
              return localVarResponse.Data;
 
         }
@@ -365,8 +365,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (StatusCarto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusCarto>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao)
+        /// <returns>Task of ApiResponse (StatusCartao)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StatusCartao>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao)
         {
             // verify the required parameter 'idStatusCartao' is set
             if (idStatusCartao == null) throw new ApiException(400, "Missing required parameter 'idStatusCartao' when calling ConsultarStatusCartaoUsingGET");
@@ -426,9 +426,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<StatusCarto>(localVarStatusCode,
+            return new ApiResponse<StatusCartao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StatusCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusCarto)));
+                (StatusCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusCartao)));
             
         }
         
@@ -452,10 +452,10 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ListaDeStatusCartes</returns>
-        public ListaDeStatusCartes ListarStatusCartoesUsingGET (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
+        /// <returns>ListaStatusCartoes</returns>
+        public ListaStatusCartoes ListarStatusCartoesUsingGET (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeStatusCartes> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(id, nome, flagAlteraStatus, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, flagCancelaConta, idStatusDestinoConta, flagCobraTarifa, flagReemiteCartao, flagEmiteProvisorio, flagCadastroNovaSenha, flagOrigemTransferencia, flagDestinoTransferencia, flagExcecaoBandeira, page, limit);
+             ApiResponse<ListaStatusCartoes> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(id, nome, flagAlteraStatus, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, flagCancelaConta, idStatusDestinoConta, flagCobraTarifa, flagReemiteCartao, flagEmiteProvisorio, flagCadastroNovaSenha, flagOrigemTransferencia, flagDestinoTransferencia, flagExcecaoBandeira, page, limit);
              return localVarResponse.Data;
         }
 
@@ -479,8 +479,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ApiResponse of ListaDeStatusCartes</returns>
-        public ApiResponse< ListaDeStatusCartes > ListarStatusCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of ListaStatusCartoes</returns>
+        public ApiResponse< ListaStatusCartoes > ListarStatusCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
             
     
@@ -552,9 +552,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarStatusCartoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ListaDeStatusCartes>(localVarStatusCode,
+            return new ApiResponse<ListaStatusCartoes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaDeStatusCartes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaDeStatusCartes)));
+                (ListaStatusCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaStatusCartoes)));
             
         }
 
@@ -579,10 +579,10 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaDeStatusCartes</returns>
-        public async System.Threading.Tasks.Task<ListaDeStatusCartes> ListarStatusCartoesUsingGETAsync (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
+        /// <returns>Task of ListaStatusCartoes</returns>
+        public async System.Threading.Tasks.Task<ListaStatusCartoes> ListarStatusCartoesUsingGETAsync (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeStatusCartes> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(id, nome, flagAlteraStatus, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, flagCancelaConta, idStatusDestinoConta, flagCobraTarifa, flagReemiteCartao, flagEmiteProvisorio, flagCadastroNovaSenha, flagOrigemTransferencia, flagDestinoTransferencia, flagExcecaoBandeira, page, limit);
+             ApiResponse<ListaStatusCartoes> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(id, nome, flagAlteraStatus, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, flagCancelaConta, idStatusDestinoConta, flagCobraTarifa, flagReemiteCartao, flagEmiteProvisorio, flagCadastroNovaSenha, flagOrigemTransferencia, flagDestinoTransferencia, flagExcecaoBandeira, page, limit);
              return localVarResponse.Data;
 
         }
@@ -607,8 +607,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaDeStatusCartes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaDeStatusCartes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (ListaStatusCartoes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ListaStatusCartoes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraStatus = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, int? flagCancelaConta = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagReemiteCartao = null, int? flagEmiteProvisorio = null, int? flagCadastroNovaSenha = null, int? flagOrigemTransferencia = null, int? flagDestinoTransferencia = null, int? flagExcecaoBandeira = null, int? page = null, int? limit = null)
         {
             
     
@@ -681,9 +681,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarStatusCartoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ListaDeStatusCartes>(localVarStatusCode,
+            return new ApiResponse<ListaStatusCartoes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaDeStatusCartes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaDeStatusCartes)));
+                (ListaStatusCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaStatusCartoes)));
             
         }
         

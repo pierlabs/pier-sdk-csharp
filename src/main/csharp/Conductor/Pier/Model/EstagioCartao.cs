@@ -15,22 +15,22 @@ namespace Conductor.Pier.Model
     /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
     /// </summary>
     [DataContract]
-    public partial class EstgioCarto :  IEquatable<EstgioCarto>
+    public partial class EstagioCartao :  IEquatable<EstagioCartao>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EstgioCarto" /> class.
-        /// Initializes a new instance of the <see cref="EstgioCarto" />class.
+        /// Initializes a new instance of the <see cref="EstagioCartao" /> class.
+        /// Initializes a new instance of the <see cref="EstagioCartao" />class.
         /// </summary>
         /// <param name="Id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (required).</param>
         /// <param name="Nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (required).</param>
 
-        public EstgioCarto(long? Id = null, string Nome = null)
+        public EstagioCartao(long? Id = null, string Nome = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
-                throw new InvalidDataException("Id is a required property for EstgioCarto and cannot be null");
+                throw new InvalidDataException("Id is a required property for EstagioCartao and cannot be null");
             }
             else
             {
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Model
             // to ensure "Nome" is required (not null)
             if (Nome == null)
             {
-                throw new InvalidDataException("Nome is a required property for EstgioCarto and cannot be null");
+                throw new InvalidDataException("Nome is a required property for EstagioCartao and cannot be null");
             }
             else
             {
@@ -70,7 +70,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EstgioCarto {\n");
+            sb.Append("class EstagioCartao {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             
@@ -95,15 +95,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EstgioCarto);
+            return this.Equals(obj as EstagioCartao);
         }
 
         /// <summary>
-        /// Returns true if EstgioCarto instances are equal
+        /// Returns true if EstagioCartao instances are equal
         /// </summary>
-        /// <param name="other">Instance of EstgioCarto to be compared</param>
+        /// <param name="other">Instance of EstagioCartao to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EstgioCarto other)
+        public bool Equals(EstagioCartao other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

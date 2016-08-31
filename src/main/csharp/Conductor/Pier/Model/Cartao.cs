@@ -15,12 +15,12 @@ namespace Conductor.Pier.Model
     /// Objeto Cart\u00C3\u00A3o
     /// </summary>
     [DataContract]
-    public partial class Carto :  IEquatable<Carto>
+    public partial class Cartao :  IEquatable<Cartao>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Carto" /> class.
-        /// Initializes a new instance of the <see cref="Carto" />class.
+        /// Initializes a new instance of the <see cref="Cartao" /> class.
+        /// Initializes a new instance of the <see cref="Cartao" />class.
         /// </summary>
         /// <param name="ArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver..</param>
         /// <param name="CodigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade..</param>
@@ -41,7 +41,7 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
         /// <param name="Portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional..</param>
 
-        public Carto(string ArquivoImpressao = null, string CodigoDesbloqueio = null, DateTime? DataEstagioCartao = null, DateTime? DataGeracao = null, DateTime? DataImpressao = null, DateTime? DataStatusCartao = null, DateTime? DataValidade = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, long? Id = null, long? IdConta = null, long? IdEstagioCartao = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusCartao = null, string NomeImpresso = null, string NumeroCartao = null, int? Portador = null)
+        public Cartao(string ArquivoImpressao = null, string CodigoDesbloqueio = null, DateTime? DataEstagioCartao = null, DateTime? DataGeracao = null, DateTime? DataImpressao = null, DateTime? DataStatusCartao = null, DateTime? DataValidade = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, long? Id = null, long? IdConta = null, long? IdEstagioCartao = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusCartao = null, string NomeImpresso = null, string NumeroCartao = null, int? Portador = null)
         {
             this.ArquivoImpressao = ArquivoImpressao;
             this.CodigoDesbloqueio = CodigoDesbloqueio;
@@ -198,7 +198,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Carto {\n");
+            sb.Append("class Cartao {\n");
             sb.Append("  ArquivoImpressao: ").Append(ArquivoImpressao).Append("\n");
             sb.Append("  CodigoDesbloqueio: ").Append(CodigoDesbloqueio).Append("\n");
             sb.Append("  DataEstagioCartao: ").Append(DataEstagioCartao).Append("\n");
@@ -239,15 +239,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Carto);
+            return this.Equals(obj as Cartao);
         }
 
         /// <summary>
-        /// Returns true if Carto instances are equal
+        /// Returns true if Cartao instances are equal
         /// </summary>
-        /// <param name="other">Instance of Carto to be compared</param>
+        /// <param name="other">Instance of Cartao to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Carto other)
+        public bool Equals(Cartao other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
