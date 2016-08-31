@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IStatusCartoApi
+    public interface IStatusCartaoApi
     {
         #region Synchronous Operations
         
@@ -176,13 +176,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class StatusCartoApi : IStatusCartoApi
+    public class StatusCartaoApi : IStatusCartaoApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StatusCartoApi"/> class.
+        /// Initializes a new instance of the <see cref="StatusCartaoApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public StatusCartoApi(String basePath)
+        public StatusCartaoApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -194,12 +194,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="StatusCartoApi"/> class
+        /// Initializes a new instance of the <see cref="StatusCartaoApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public StatusCartoApi(Configuration configuration = null)
+        public StatusCartaoApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -284,7 +284,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idStatusCartao' is set
             if (idStatusCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusCartao' when calling StatusCartoApi->ConsultarStatusCartaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'idStatusCartao' when calling StatusCartaoApi->ConsultarStatusCartaoUsingGET");
             
     
             var localVarPath = "/api/status-cartoes/{id_status_cartao}";
