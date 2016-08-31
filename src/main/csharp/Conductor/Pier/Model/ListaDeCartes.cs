@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Cartoes">Lista de cart\u00C3\u00B5es.</param>
 
-        public ListaDeCartes(List<CartaoResponse> Cartoes = null)
+        public ListaDeCartes(List<Carto> Cartoes = null)
         {
             this.Cartoes = Cartoes;
             
@@ -36,7 +36,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Lista de cart\u00C3\u00B5es</value>
         [DataMember(Name="cartoes", EmitDefaultValue=false)]
-        public List<CartaoResponse> Cartoes { get; set; }
+        public List<Carto> Cartoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

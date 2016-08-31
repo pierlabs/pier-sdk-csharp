@@ -22,26 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusCarto" /> class.
         /// Initializes a new instance of the <see cref="StatusCarto" />class.
         /// </summary>
-        /// <param name="FlagAlteraStatus">Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o. (required).</param>
-        /// <param name="FlagCadastroNovaSenha">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda. (required).</param>
-        /// <param name="FlagCadastroSenha">Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o. (required).</param>
-        /// <param name="FlagCancelaCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado. (required).</param>
-        /// <param name="FlagCancelaConta">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada. (required).</param>
-        /// <param name="FlagCobraTarifa">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado. (required).</param>
-        /// <param name="FlagDesbloqueio">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados. (required).</param>
+        /// <param name="FlagAlteraStatus">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (required).</param>
+        /// <param name="FlagCadastroNovaSenha">Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha. (required).</param>
+        /// <param name="FlagCancelaConta">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada. (required).</param>
+        /// <param name="FlagCancelaNoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado..</param>
+        /// <param name="FlagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (required).</param>
         /// <param name="FlagDestinoTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es. (required).</param>
-        /// <param name="FlagEmiteProvisorio">Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido.  (required).</param>
+        /// <param name="FlagEmiteProvisorio">Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador. (required).</param>
         /// <param name="FlagExcecaoBandeira">Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel. (required).</param>
         /// <param name="FlagOrigemTransferencia">Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es. (required).</param>
-        /// <param name="FlagReemiteCartao">Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado. (required).</param>
-        /// <param name="FlagReversaoCancelamento">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito. (required).</param>
-        /// <param name="FlagReversaoDesbloqueio">Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito. (required).</param>
+        /// <param name="FlagReemiteCartao">Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente. (required).</param>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (required).</param>
-        /// <param name="IdStatusDestinoConta">Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta. (required).</param>
-        /// <param name="IdStatusDestinoDesbloqueio">Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado. (required).</param>
+        /// <param name="IdStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (required).</param>
+        /// <param name="IdStatusDestinoDesbloqueio">Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (required).</param>
         /// <param name="Nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (required).</param>
 
-        public StatusCarto(string FlagAlteraStatus = null, string FlagCadastroNovaSenha = null, string FlagCadastroSenha = null, string FlagCancelaCartao = null, string FlagCancelaConta = null, string FlagCobraTarifa = null, string FlagDesbloqueio = null, string FlagDestinoTransferencia = null, string FlagEmiteProvisorio = null, string FlagExcecaoBandeira = null, string FlagOrigemTransferencia = null, string FlagReemiteCartao = null, string FlagReversaoCancelamento = null, string FlagReversaoDesbloqueio = null, long? Id = null, long? IdStatusDestinoConta = null, long? IdStatusDestinoDesbloqueio = null, string Nome = null)
+        public StatusCarto(int? FlagAlteraStatus = null, int? FlagCadastroNovaSenha = null, int? FlagCancelaConta = null, int? FlagCancelaNoDesbloqueio = null, int? FlagCobraTarifa = null, int? FlagDestinoTransferencia = null, int? FlagEmiteProvisorio = null, int? FlagExcecaoBandeira = null, int? FlagOrigemTransferencia = null, int? FlagReemiteCartao = null, long? Id = null, long? IdStatusDestinoConta = null, long? IdStatusDestinoDesbloqueio = null, string Nome = null)
         {
             // to ensure "FlagAlteraStatus" is required (not null)
             if (FlagAlteraStatus == null)
@@ -61,24 +57,6 @@ namespace Conductor.Pier.Model
             {
                 this.FlagCadastroNovaSenha = FlagCadastroNovaSenha;
             }
-            // to ensure "FlagCadastroSenha" is required (not null)
-            if (FlagCadastroSenha == null)
-            {
-                throw new InvalidDataException("FlagCadastroSenha is a required property for StatusCarto and cannot be null");
-            }
-            else
-            {
-                this.FlagCadastroSenha = FlagCadastroSenha;
-            }
-            // to ensure "FlagCancelaCartao" is required (not null)
-            if (FlagCancelaCartao == null)
-            {
-                throw new InvalidDataException("FlagCancelaCartao is a required property for StatusCarto and cannot be null");
-            }
-            else
-            {
-                this.FlagCancelaCartao = FlagCancelaCartao;
-            }
             // to ensure "FlagCancelaConta" is required (not null)
             if (FlagCancelaConta == null)
             {
@@ -96,15 +74,6 @@ namespace Conductor.Pier.Model
             else
             {
                 this.FlagCobraTarifa = FlagCobraTarifa;
-            }
-            // to ensure "FlagDesbloqueio" is required (not null)
-            if (FlagDesbloqueio == null)
-            {
-                throw new InvalidDataException("FlagDesbloqueio is a required property for StatusCarto and cannot be null");
-            }
-            else
-            {
-                this.FlagDesbloqueio = FlagDesbloqueio;
             }
             // to ensure "FlagDestinoTransferencia" is required (not null)
             if (FlagDestinoTransferencia == null)
@@ -151,24 +120,6 @@ namespace Conductor.Pier.Model
             {
                 this.FlagReemiteCartao = FlagReemiteCartao;
             }
-            // to ensure "FlagReversaoCancelamento" is required (not null)
-            if (FlagReversaoCancelamento == null)
-            {
-                throw new InvalidDataException("FlagReversaoCancelamento is a required property for StatusCarto and cannot be null");
-            }
-            else
-            {
-                this.FlagReversaoCancelamento = FlagReversaoCancelamento;
-            }
-            // to ensure "FlagReversaoDesbloqueio" is required (not null)
-            if (FlagReversaoDesbloqueio == null)
-            {
-                throw new InvalidDataException("FlagReversaoDesbloqueio is a required property for StatusCarto and cannot be null");
-            }
-            else
-            {
-                this.FlagReversaoDesbloqueio = FlagReversaoDesbloqueio;
-            }
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
@@ -205,107 +156,80 @@ namespace Conductor.Pier.Model
             {
                 this.Nome = Nome;
             }
+            this.FlagCancelaNoDesbloqueio = FlagCancelaNoDesbloqueio;
             
         }
         
     
         /// <summary>
-        /// Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o.
+        /// Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
         /// </summary>
-        /// <value>Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o.</value>
+        /// <value>Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.</value>
         [DataMember(Name="flagAlteraStatus", EmitDefaultValue=false)]
-        public string FlagAlteraStatus { get; set; }
+        public int? FlagAlteraStatus { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda.
+        /// Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.
         /// </summary>
-        /// <value>Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda.</value>
+        /// <value>Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.</value>
         [DataMember(Name="flagCadastroNovaSenha", EmitDefaultValue=false)]
-        public string FlagCadastroNovaSenha { get; set; }
+        public int? FlagCadastroNovaSenha { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o.
+        /// Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.
         /// </summary>
-        /// <value>Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o.</value>
-        [DataMember(Name="flagCadastroSenha", EmitDefaultValue=false)]
-        public string FlagCadastroSenha { get; set; }
-    
-        /// <summary>
-        /// Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.
-        /// </summary>
-        /// <value>Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.</value>
-        [DataMember(Name="flagCancelaCartao", EmitDefaultValue=false)]
-        public string FlagCancelaCartao { get; set; }
-    
-        /// <summary>
-        /// Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada.
-        /// </summary>
-        /// <value>Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada.</value>
+        /// <value>Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.</value>
         [DataMember(Name="flagCancelaConta", EmitDefaultValue=false)]
-        public string FlagCancelaConta { get; set; }
+        public int? FlagCancelaConta { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado.
+        /// Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
         /// </summary>
-        /// <value>Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado.</value>
+        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.</value>
+        [DataMember(Name="flagCancelaNoDesbloqueio", EmitDefaultValue=false)]
+        public int? FlagCancelaNoDesbloqueio { get; set; }
+    
+        /// <summary>
+        /// Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+        /// </summary>
+        /// <value>Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.</value>
         [DataMember(Name="flagCobraTarifa", EmitDefaultValue=false)]
-        public string FlagCobraTarifa { get; set; }
-    
-        /// <summary>
-        /// Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados.
-        /// </summary>
-        /// <value>Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados.</value>
-        [DataMember(Name="flagDesbloqueio", EmitDefaultValue=false)]
-        public string FlagDesbloqueio { get; set; }
+        public int? FlagCobraTarifa { get; set; }
     
         /// <summary>
         /// Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.
         /// </summary>
         /// <value>Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.</value>
         [DataMember(Name="flagDestinoTransferencia", EmitDefaultValue=false)]
-        public string FlagDestinoTransferencia { get; set; }
+        public int? FlagDestinoTransferencia { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido. 
+        /// Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.
         /// </summary>
-        /// <value>Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido. </value>
+        /// <value>Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.</value>
         [DataMember(Name="flagEmiteProvisorio", EmitDefaultValue=false)]
-        public string FlagEmiteProvisorio { get; set; }
+        public int? FlagEmiteProvisorio { get; set; }
     
         /// <summary>
         /// Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
         /// </summary>
         /// <value>Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.</value>
         [DataMember(Name="flagExcecaoBandeira", EmitDefaultValue=false)]
-        public string FlagExcecaoBandeira { get; set; }
+        public int? FlagExcecaoBandeira { get; set; }
     
         /// <summary>
         /// Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.
         /// </summary>
         /// <value>Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.</value>
         [DataMember(Name="flagOrigemTransferencia", EmitDefaultValue=false)]
-        public string FlagOrigemTransferencia { get; set; }
+        public int? FlagOrigemTransferencia { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado.
+        /// Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.
         /// </summary>
-        /// <value>Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado.</value>
+        /// <value>Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.</value>
         [DataMember(Name="flagReemiteCartao", EmitDefaultValue=false)]
-        public string FlagReemiteCartao { get; set; }
-    
-        /// <summary>
-        /// Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito.
-        /// </summary>
-        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito.</value>
-        [DataMember(Name="flagReversaoCancelamento", EmitDefaultValue=false)]
-        public string FlagReversaoCancelamento { get; set; }
-    
-        /// <summary>
-        /// Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito.
-        /// </summary>
-        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito.</value>
-        [DataMember(Name="flagReversaoDesbloqueio", EmitDefaultValue=false)]
-        public string FlagReversaoDesbloqueio { get; set; }
+        public int? FlagReemiteCartao { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
@@ -315,16 +239,16 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
-        /// Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta.
+        /// Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
         /// </summary>
-        /// <value>Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta.</value>
+        /// <value>Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.</value>
         [DataMember(Name="idStatusDestinoConta", EmitDefaultValue=false)]
         public long? IdStatusDestinoConta { get; set; }
     
         /// <summary>
-        /// Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.
+        /// Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.</value>
+        /// <value>Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.</value>
         [DataMember(Name="idStatusDestinoDesbloqueio", EmitDefaultValue=false)]
         public long? IdStatusDestinoDesbloqueio { get; set; }
     
@@ -345,18 +269,14 @@ namespace Conductor.Pier.Model
             sb.Append("class StatusCarto {\n");
             sb.Append("  FlagAlteraStatus: ").Append(FlagAlteraStatus).Append("\n");
             sb.Append("  FlagCadastroNovaSenha: ").Append(FlagCadastroNovaSenha).Append("\n");
-            sb.Append("  FlagCadastroSenha: ").Append(FlagCadastroSenha).Append("\n");
-            sb.Append("  FlagCancelaCartao: ").Append(FlagCancelaCartao).Append("\n");
             sb.Append("  FlagCancelaConta: ").Append(FlagCancelaConta).Append("\n");
+            sb.Append("  FlagCancelaNoDesbloqueio: ").Append(FlagCancelaNoDesbloqueio).Append("\n");
             sb.Append("  FlagCobraTarifa: ").Append(FlagCobraTarifa).Append("\n");
-            sb.Append("  FlagDesbloqueio: ").Append(FlagDesbloqueio).Append("\n");
             sb.Append("  FlagDestinoTransferencia: ").Append(FlagDestinoTransferencia).Append("\n");
             sb.Append("  FlagEmiteProvisorio: ").Append(FlagEmiteProvisorio).Append("\n");
             sb.Append("  FlagExcecaoBandeira: ").Append(FlagExcecaoBandeira).Append("\n");
             sb.Append("  FlagOrigemTransferencia: ").Append(FlagOrigemTransferencia).Append("\n");
             sb.Append("  FlagReemiteCartao: ").Append(FlagReemiteCartao).Append("\n");
-            sb.Append("  FlagReversaoCancelamento: ").Append(FlagReversaoCancelamento).Append("\n");
-            sb.Append("  FlagReversaoDesbloqueio: ").Append(FlagReversaoDesbloqueio).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdStatusDestinoConta: ").Append(IdStatusDestinoConta).Append("\n");
             sb.Append("  IdStatusDestinoDesbloqueio: ").Append(IdStatusDestinoDesbloqueio).Append("\n");
@@ -409,29 +329,19 @@ namespace Conductor.Pier.Model
                     this.FlagCadastroNovaSenha.Equals(other.FlagCadastroNovaSenha)
                 ) && 
                 (
-                    this.FlagCadastroSenha == other.FlagCadastroSenha ||
-                    this.FlagCadastroSenha != null &&
-                    this.FlagCadastroSenha.Equals(other.FlagCadastroSenha)
-                ) && 
-                (
-                    this.FlagCancelaCartao == other.FlagCancelaCartao ||
-                    this.FlagCancelaCartao != null &&
-                    this.FlagCancelaCartao.Equals(other.FlagCancelaCartao)
-                ) && 
-                (
                     this.FlagCancelaConta == other.FlagCancelaConta ||
                     this.FlagCancelaConta != null &&
                     this.FlagCancelaConta.Equals(other.FlagCancelaConta)
                 ) && 
                 (
+                    this.FlagCancelaNoDesbloqueio == other.FlagCancelaNoDesbloqueio ||
+                    this.FlagCancelaNoDesbloqueio != null &&
+                    this.FlagCancelaNoDesbloqueio.Equals(other.FlagCancelaNoDesbloqueio)
+                ) && 
+                (
                     this.FlagCobraTarifa == other.FlagCobraTarifa ||
                     this.FlagCobraTarifa != null &&
                     this.FlagCobraTarifa.Equals(other.FlagCobraTarifa)
-                ) && 
-                (
-                    this.FlagDesbloqueio == other.FlagDesbloqueio ||
-                    this.FlagDesbloqueio != null &&
-                    this.FlagDesbloqueio.Equals(other.FlagDesbloqueio)
                 ) && 
                 (
                     this.FlagDestinoTransferencia == other.FlagDestinoTransferencia ||
@@ -457,16 +367,6 @@ namespace Conductor.Pier.Model
                     this.FlagReemiteCartao == other.FlagReemiteCartao ||
                     this.FlagReemiteCartao != null &&
                     this.FlagReemiteCartao.Equals(other.FlagReemiteCartao)
-                ) && 
-                (
-                    this.FlagReversaoCancelamento == other.FlagReversaoCancelamento ||
-                    this.FlagReversaoCancelamento != null &&
-                    this.FlagReversaoCancelamento.Equals(other.FlagReversaoCancelamento)
-                ) && 
-                (
-                    this.FlagReversaoDesbloqueio == other.FlagReversaoDesbloqueio ||
-                    this.FlagReversaoDesbloqueio != null &&
-                    this.FlagReversaoDesbloqueio.Equals(other.FlagReversaoDesbloqueio)
                 ) && 
                 (
                     this.Id == other.Id ||
@@ -508,20 +408,14 @@ namespace Conductor.Pier.Model
                 if (this.FlagCadastroNovaSenha != null)
                     hash = hash * 59 + this.FlagCadastroNovaSenha.GetHashCode();
                 
-                if (this.FlagCadastroSenha != null)
-                    hash = hash * 59 + this.FlagCadastroSenha.GetHashCode();
-                
-                if (this.FlagCancelaCartao != null)
-                    hash = hash * 59 + this.FlagCancelaCartao.GetHashCode();
-                
                 if (this.FlagCancelaConta != null)
                     hash = hash * 59 + this.FlagCancelaConta.GetHashCode();
                 
+                if (this.FlagCancelaNoDesbloqueio != null)
+                    hash = hash * 59 + this.FlagCancelaNoDesbloqueio.GetHashCode();
+                
                 if (this.FlagCobraTarifa != null)
                     hash = hash * 59 + this.FlagCobraTarifa.GetHashCode();
-                
-                if (this.FlagDesbloqueio != null)
-                    hash = hash * 59 + this.FlagDesbloqueio.GetHashCode();
                 
                 if (this.FlagDestinoTransferencia != null)
                     hash = hash * 59 + this.FlagDestinoTransferencia.GetHashCode();
@@ -537,12 +431,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagReemiteCartao != null)
                     hash = hash * 59 + this.FlagReemiteCartao.GetHashCode();
-                
-                if (this.FlagReversaoCancelamento != null)
-                    hash = hash * 59 + this.FlagReversaoCancelamento.GetHashCode();
-                
-                if (this.FlagReversaoDesbloqueio != null)
-                    hash = hash * 59 + this.FlagReversaoDesbloqueio.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

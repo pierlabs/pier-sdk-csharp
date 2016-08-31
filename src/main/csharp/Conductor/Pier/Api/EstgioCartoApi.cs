@@ -46,12 +46,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ListaDeEstgiosCartes</returns>
-        ListaDeEstgiosCartes ListarEstagiosCartoesUsingGET (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null);
+        ListaDeEstgiosCartes ListarEstagiosCartoesUsingGET (long? id, string nome, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
@@ -60,12 +60,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of ListaDeEstgiosCartes</returns>
-        ApiResponse<ListaDeEstgiosCartes> ListarEstagiosCartoesUsingGETWithHttpInfo (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null);
+        ApiResponse<ListaDeEstgiosCartes> ListarEstagiosCartoesUsingGETWithHttpInfo (long? id, string nome, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -100,12 +100,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaDeEstgiosCartes</returns>
-        System.Threading.Tasks.Task<ListaDeEstgiosCartes> ListarEstagiosCartoesUsingGETAsync (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ListaDeEstgiosCartes> ListarEstagiosCartoesUsingGETAsync (long? id, string nome, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
@@ -114,12 +114,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaDeEstgiosCartes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaDeEstgiosCartes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<ListaDeEstgiosCartes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id, string nome, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -388,14 +388,14 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o  Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param> 
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ListaDeEstgiosCartes</returns>
-        public ListaDeEstgiosCartes ListarEstagiosCartoesUsingGET (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null)
+        public ListaDeEstgiosCartes ListarEstagiosCartoesUsingGET (long? id, string nome, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeEstgiosCartes> localVarResponse = ListarEstagiosCartoesUsingGETWithHttpInfo(idEstagioCartao, nome, page, limit);
+             ApiResponse<ListaDeEstgiosCartes> localVarResponse = ListarEstagiosCartoesUsingGETWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
         }
 
@@ -403,13 +403,21 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o  Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param> 
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param> 
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of ListaDeEstgiosCartes</returns>
-        public ApiResponse< ListaDeEstgiosCartes > ListarEstagiosCartoesUsingGETWithHttpInfo (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null)
+        public ApiResponse< ListaDeEstgiosCartes > ListarEstagiosCartoesUsingGETWithHttpInfo (long? id, string nome, int? page = null, int? limit = null)
         {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstgioCartoApi->ListarEstagiosCartoesUsingGET");
+            
+            // verify the required parameter 'nome' is set
+            if (nome == null)
+                throw new ApiException(400, "Missing required parameter 'nome' when calling EstgioCartoApi->ListarEstagiosCartoesUsingGET");
             
     
             var localVarPath = "/api/estagios-cartoes";
@@ -439,7 +447,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idEstagioCartao != null) localVarQueryParams.Add("id_estagio_cartao", Configuration.ApiClient.ParameterToString(idEstagioCartao)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
@@ -479,14 +487,14 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o  Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaDeEstgiosCartes</returns>
-        public async System.Threading.Tasks.Task<ListaDeEstgiosCartes> ListarEstagiosCartoesUsingGETAsync (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ListaDeEstgiosCartes> ListarEstagiosCartoesUsingGETAsync (long? id, string nome, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaDeEstgiosCartes> localVarResponse = await ListarEstagiosCartoesUsingGETAsyncWithHttpInfo(idEstagioCartao, nome, page, limit);
+             ApiResponse<ListaDeEstgiosCartes> localVarResponse = await ListarEstagiosCartoesUsingGETAsyncWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
 
         }
@@ -495,13 +503,17 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o  Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o. (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaDeEstgiosCartes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaDeEstgiosCartes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? idEstagioCartao = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ListaDeEstgiosCartes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id, string nome, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarEstagiosCartoesUsingGET");
+            // verify the required parameter 'nome' is set
+            if (nome == null) throw new ApiException(400, "Missing required parameter 'nome' when calling ListarEstagiosCartoesUsingGET");
             
     
             var localVarPath = "/api/estagios-cartoes";
@@ -531,7 +543,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idEstagioCartao != null) localVarQueryParams.Add("id_estagio_cartao", Configuration.ApiClient.ParameterToString(idEstagioCartao)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
