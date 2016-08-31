@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="EstagioCartoes">EstagioCartoes.</param>
 
-        public PageEstagiosCartoes(PageImplOfEstagioCartao EstagioCartoes = null)
+        public PageEstagiosCartoes(PageApiOfEstagioCartao EstagioCartoes = null)
         {
             this.EstagioCartoes = EstagioCartoes;
             
@@ -35,7 +35,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets EstagioCartoes
         /// </summary>
         [DataMember(Name="estagioCartoes", EmitDefaultValue=false)]
-        public PageImplOfEstagioCartao EstagioCartoes { get; set; }
+        public PageApiOfEstagioCartao EstagioCartoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
