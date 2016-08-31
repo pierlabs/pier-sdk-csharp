@@ -50,8 +50,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ListaEstagiosCartoes</returns>
-        ListaEstagiosCartoes ListarEstagiosCartoesUsingGET (long? id = null, string nome = null, int? page = null, int? limit = null);
+        /// <returns>PageEstagiosCartoes</returns>
+        PageEstagiosCartoes ListarEstagiosCartoesUsingGET (long? id = null, string nome = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
@@ -64,8 +64,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ApiResponse of ListaEstagiosCartoes</returns>
-        ApiResponse<ListaEstagiosCartoes> ListarEstagiosCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of PageEstagiosCartoes</returns>
+        ApiResponse<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -104,8 +104,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaEstagiosCartoes</returns>
-        System.Threading.Tasks.Task<ListaEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (long? id = null, string nome = null, int? page = null, int? limit = null);
+        /// <returns>Task of PageEstagiosCartoes</returns>
+        System.Threading.Tasks.Task<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (long? id = null, string nome = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
@@ -118,8 +118,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaEstagiosCartoes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (PageEstagiosCartoes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -392,10 +392,10 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ListaEstagiosCartoes</returns>
-        public ListaEstagiosCartoes ListarEstagiosCartoesUsingGET (long? id = null, string nome = null, int? page = null, int? limit = null)
+        /// <returns>PageEstagiosCartoes</returns>
+        public PageEstagiosCartoes ListarEstagiosCartoesUsingGET (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaEstagiosCartoes> localVarResponse = ListarEstagiosCartoesUsingGETWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageEstagiosCartoes> localVarResponse = ListarEstagiosCartoesUsingGETWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
         }
 
@@ -407,8 +407,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ApiResponse of ListaEstagiosCartoes</returns>
-        public ApiResponse< ListaEstagiosCartoes > ListarEstagiosCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of PageEstagiosCartoes</returns>
+        public ApiResponse< PageEstagiosCartoes > ListarEstagiosCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
@@ -468,9 +468,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarEstagiosCartoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ListaEstagiosCartoes>(localVarStatusCode,
+            return new ApiResponse<PageEstagiosCartoes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaEstagiosCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaEstagiosCartoes)));
+                (PageEstagiosCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageEstagiosCartoes)));
             
         }
 
@@ -483,10 +483,10 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaEstagiosCartoes</returns>
-        public async System.Threading.Tasks.Task<ListaEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (long? id = null, string nome = null, int? page = null, int? limit = null)
+        /// <returns>Task of PageEstagiosCartoes</returns>
+        public async System.Threading.Tasks.Task<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaEstagiosCartoes> localVarResponse = await ListarEstagiosCartoesUsingGETAsyncWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageEstagiosCartoes> localVarResponse = await ListarEstagiosCartoesUsingGETAsyncWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
 
         }
@@ -499,8 +499,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaEstagiosCartoes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (PageEstagiosCartoes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
@@ -561,9 +561,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarEstagiosCartoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ListaEstagiosCartoes>(localVarStatusCode,
+            return new ApiResponse<PageEstagiosCartoes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaEstagiosCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaEstagiosCartoes)));
+                (PageEstagiosCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageEstagiosCartoes)));
             
         }
         

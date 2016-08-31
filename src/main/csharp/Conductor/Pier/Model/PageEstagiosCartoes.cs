@@ -12,31 +12,30 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+    /// Page de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
     /// </summary>
     [DataContract]
-    public partial class ListaEstagiosCartoes :  IEquatable<ListaEstagiosCartoes>
+    public partial class PageEstagiosCartoes :  IEquatable<PageEstagiosCartoes>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaEstagiosCartoes" /> class.
-        /// Initializes a new instance of the <see cref="ListaEstagiosCartoes" />class.
+        /// Initializes a new instance of the <see cref="PageEstagiosCartoes" /> class.
+        /// Initializes a new instance of the <see cref="PageEstagiosCartoes" />class.
         /// </summary>
-        /// <param name="EstagiosCartoes">Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es.</param>
+        /// <param name="EstagioCartoes">EstagioCartoes.</param>
 
-        public ListaEstagiosCartoes(List<EstagioCartao> EstagiosCartoes = null)
+        public PageEstagiosCartoes(PageImplOfEstagioCartao EstagioCartoes = null)
         {
-            this.EstagiosCartoes = EstagiosCartoes;
+            this.EstagioCartoes = EstagioCartoes;
             
         }
         
     
         /// <summary>
-        /// Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es
+        /// Gets or Sets EstagioCartoes
         /// </summary>
-        /// <value>Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es</value>
-        [DataMember(Name="estagiosCartoes", EmitDefaultValue=false)]
-        public List<EstagioCartao> EstagiosCartoes { get; set; }
+        [DataMember(Name="estagioCartoes", EmitDefaultValue=false)]
+        public PageImplOfEstagioCartao EstagioCartoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,8 +44,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaEstagiosCartoes {\n");
-            sb.Append("  EstagiosCartoes: ").Append(EstagiosCartoes).Append("\n");
+            sb.Append("class PageEstagiosCartoes {\n");
+            sb.Append("  EstagioCartoes: ").Append(EstagioCartoes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -69,15 +68,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaEstagiosCartoes);
+            return this.Equals(obj as PageEstagiosCartoes);
         }
 
         /// <summary>
-        /// Returns true if ListaEstagiosCartoes instances are equal
+        /// Returns true if PageEstagiosCartoes instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaEstagiosCartoes to be compared</param>
+        /// <param name="other">Instance of PageEstagiosCartoes to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaEstagiosCartoes other)
+        public bool Equals(PageEstagiosCartoes other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -85,9 +84,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.EstagiosCartoes == other.EstagiosCartoes ||
-                    this.EstagiosCartoes != null &&
-                    this.EstagiosCartoes.SequenceEqual(other.EstagiosCartoes)
+                    this.EstagioCartoes == other.EstagioCartoes ||
+                    this.EstagioCartoes != null &&
+                    this.EstagioCartoes.Equals(other.EstagioCartoes)
                 );
         }
 
@@ -103,8 +102,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.EstagiosCartoes != null)
-                    hash = hash * 59 + this.EstagiosCartoes.GetHashCode();
+                if (this.EstagioCartoes != null)
+                    hash = hash * 59 + this.EstagioCartoes.GetHashCode();
                 
                 return hash;
             }
