@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Produtos
+    /// Lista de Pessoas
     /// </summary>
     [DataContract]
-    public partial class ListaProdutos :  IEquatable<ListaProdutos>
+    public partial class PagePessoas :  IEquatable<PagePessoas>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ListaProdutos" /> class.
-        /// Initializes a new instance of the <see cref="ListaProdutos" />class.
+        /// Initializes a new instance of the <see cref="PagePessoas" /> class.
+        /// Initializes a new instance of the <see cref="PagePessoas" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public ListaProdutos(List<Produto> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PagePessoas(List<Pessoa> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<Produto> Content { get; set; }
+        public List<Pessoa> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ListaProdutos {\n");
+            sb.Append("class PagePessoas {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ListaProdutos);
+            return this.Equals(obj as PagePessoas);
         }
 
         /// <summary>
-        /// Returns true if ListaProdutos instances are equal
+        /// Returns true if PagePessoas instances are equal
         /// </summary>
-        /// <param name="other">Instance of ListaProdutos to be compared</param>
+        /// <param name="other">Instance of PagePessoas to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ListaProdutos other)
+        public bool Equals(PagePessoas other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

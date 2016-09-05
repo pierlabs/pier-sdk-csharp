@@ -55,8 +55,8 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ListaOrigensComerciais</returns>
-        ListaOrigensComerciais ListarUsingGET1 (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
+        /// <returns>PagePessoas</returns>
+        PagePessoas ListarUsingGET1 (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -74,8 +74,8 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ApiResponse of ListaOrigensComerciais</returns>
-        ApiResponse<ListaOrigensComerciais> ListarUsingGET1WithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of PagePessoas</returns>
+        ApiResponse<PagePessoas> ListarUsingGET1WithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -119,8 +119,8 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaOrigensComerciais</returns>
-        System.Threading.Tasks.Task<ListaOrigensComerciais> ListarUsingGET1Async (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
+        /// <returns>Task of PagePessoas</returns>
+        System.Threading.Tasks.Task<PagePessoas> ListarUsingGET1Async (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -138,8 +138,8 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaOrigensComerciais)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaOrigensComerciais>> ListarUsingGET1AsyncWithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (PagePessoas)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagePessoas>> ListarUsingGET1AsyncWithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -417,10 +417,10 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ListaOrigensComerciais</returns>
-        public ListaOrigensComerciais ListarUsingGET1 (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
+        /// <returns>PagePessoas</returns>
+        public PagePessoas ListarUsingGET1 (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaOrigensComerciais> localVarResponse = ListarUsingGET1WithHttpInfo(idPessoa, nome, tipo, cpf, cnpj, dataNascimento, cnpj2, page, limit);
+             ApiResponse<PagePessoas> localVarResponse = ListarUsingGET1WithHttpInfo(idPessoa, nome, tipo, cpf, cnpj, dataNascimento, cnpj2, page, limit);
              return localVarResponse.Data;
         }
 
@@ -437,8 +437,8 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ApiResponse of ListaOrigensComerciais</returns>
-        public ApiResponse< ListaOrigensComerciais > ListarUsingGET1WithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of PagePessoas</returns>
+        public ApiResponse< PagePessoas > ListarUsingGET1WithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
         {
             
     
@@ -503,9 +503,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ListaOrigensComerciais>(localVarStatusCode,
+            return new ApiResponse<PagePessoas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaOrigensComerciais) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaOrigensComerciais)));
+                (PagePessoas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoas)));
             
         }
 
@@ -523,10 +523,10 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ListaOrigensComerciais</returns>
-        public async System.Threading.Tasks.Task<ListaOrigensComerciais> ListarUsingGET1Async (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
+        /// <returns>Task of PagePessoas</returns>
+        public async System.Threading.Tasks.Task<PagePessoas> ListarUsingGET1Async (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaOrigensComerciais> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(idPessoa, nome, tipo, cpf, cnpj, dataNascimento, cnpj2, page, limit);
+             ApiResponse<PagePessoas> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(idPessoa, nome, tipo, cpf, cnpj, dataNascimento, cnpj2, page, limit);
              return localVarResponse.Data;
 
         }
@@ -544,8 +544,8 @@ namespace Conductor.Pier.Api
         /// <param name="cnpj2">N\u00C3\u00BAmero do CNPJ, quando PJ. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (ListaOrigensComerciais)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaOrigensComerciais>> ListarUsingGET1AsyncWithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (PagePessoas)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoas>> ListarUsingGET1AsyncWithHttpInfo (long? idPessoa = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, DateTime? dataNascimento = null, string cnpj2 = null, int? page = null, int? limit = null)
         {
             
     
@@ -611,9 +611,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ListaOrigensComerciais>(localVarStatusCode,
+            return new ApiResponse<PagePessoas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ListaOrigensComerciais) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListaOrigensComerciais)));
+                (PagePessoas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoas)));
             
         }
         
