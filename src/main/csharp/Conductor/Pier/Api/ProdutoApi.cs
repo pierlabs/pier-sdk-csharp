@@ -46,13 +46,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param>
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param>
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param>
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ListaProdutos</returns>
-        ListaProdutos ListarProdutosUsingGET (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        ListaProdutos ListarProdutosUsingGET (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -61,13 +61,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param>
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param>
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param>
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of ListaProdutos</returns>
-        ApiResponse<ListaProdutos> ListarProdutosUsingGETWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        ApiResponse<ListaProdutos> ListarProdutosUsingGETWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -102,13 +102,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param>
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param>
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param>
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaProdutos</returns>
-        System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -117,13 +117,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param>
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param>
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param>
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaProdutos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -392,15 +392,15 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param> 
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param> 
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param> 
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ListaProdutos</returns>
-        public ListaProdutos ListarProdutosUsingGET (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public ListaProdutos ListarProdutosUsingGET (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaProdutos> localVarResponse = ListarProdutosUsingGETWithHttpInfo(idProduto, nome, status, page, limit);
+             ApiResponse<ListaProdutos> localVarResponse = ListarProdutosUsingGETWithHttpInfo(id, nome, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -408,13 +408,13 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param> 
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param> 
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param> 
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of ListaProdutos</returns>
-        public ApiResponse< ListaProdutos > ListarProdutosUsingGETWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public ApiResponse< ListaProdutos > ListarProdutosUsingGETWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -445,7 +445,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idProduto != null) localVarQueryParams.Add("id_produto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
@@ -486,15 +486,15 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param>
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param>
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param>
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaProdutos</returns>
-        public async System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ListaProdutos> localVarResponse = await ListarProdutosUsingGETAsyncWithHttpInfo(idProduto, nome, status, page, limit);
+             ApiResponse<ListaProdutos> localVarResponse = await ListarProdutosUsingGETAsyncWithHttpInfo(id, nome, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -503,13 +503,13 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) (optional)</param>
-        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto (optional)</param>
-        /// <param name="status">Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
+        /// <param name="nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (optional)</param>
+        /// <param name="status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaProdutos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? idProduto = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -540,7 +540,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idProduto != null) localVarQueryParams.Add("id_produto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter

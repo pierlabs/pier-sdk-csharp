@@ -46,13 +46,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param>
-        /// <param name="nome">Nome da Origem Comercial (optional)</param>
-        /// <param name="status">Status da Origem Comercial (optional)</param>
+        /// <param name="id">Id da origem comercial (optional)</param>
+        /// <param name="nome">Nome da origem comercial (optional)</param>
+        /// <param name="status">Status da origem comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageOrigensComerciais</returns>
-        PageOrigensComerciais ListarOrigensComerciaisUsingGET (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        PageOrigensComerciais ListarOrigensComerciaisUsingGET (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
@@ -61,13 +61,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param>
-        /// <param name="nome">Nome da Origem Comercial (optional)</param>
-        /// <param name="status">Status da Origem Comercial (optional)</param>
+        /// <param name="id">Id da origem comercial (optional)</param>
+        /// <param name="nome">Nome da origem comercial (optional)</param>
+        /// <param name="status">Status da origem comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageOrigensComerciais</returns>
-        ApiResponse<PageOrigensComerciais> ListarOrigensComerciaisUsingGETWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        ApiResponse<PageOrigensComerciais> ListarOrigensComerciaisUsingGETWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -102,13 +102,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param>
-        /// <param name="nome">Nome da Origem Comercial (optional)</param>
-        /// <param name="status">Status da Origem Comercial (optional)</param>
+        /// <param name="id">Id da origem comercial (optional)</param>
+        /// <param name="nome">Nome da origem comercial (optional)</param>
+        /// <param name="status">Status da origem comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageOrigensComerciais</returns>
-        System.Threading.Tasks.Task<PageOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
@@ -117,13 +117,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param>
-        /// <param name="nome">Nome da Origem Comercial (optional)</param>
-        /// <param name="status">Status da Origem Comercial (optional)</param>
+        /// <param name="id">Id da origem comercial (optional)</param>
+        /// <param name="nome">Nome da origem comercial (optional)</param>
+        /// <param name="status">Status da origem comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageOrigensComerciais)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -392,15 +392,15 @@ namespace Conductor.Pier.Api
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param> 
-        /// <param name="nome">Nome da Origem Comercial (optional)</param> 
-        /// <param name="status">Status da Origem Comercial (optional)</param> 
+        /// <param name="id">Id da origem comercial (optional)</param> 
+        /// <param name="nome">Nome da origem comercial (optional)</param> 
+        /// <param name="status">Status da origem comercial (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageOrigensComerciais</returns>
-        public PageOrigensComerciais ListarOrigensComerciaisUsingGET (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public PageOrigensComerciais ListarOrigensComerciaisUsingGET (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageOrigensComerciais> localVarResponse = ListarOrigensComerciaisUsingGETWithHttpInfo(idOrigemComercial, nome, status, page, limit);
+             ApiResponse<PageOrigensComerciais> localVarResponse = ListarOrigensComerciaisUsingGETWithHttpInfo(id, nome, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -408,13 +408,13 @@ namespace Conductor.Pier.Api
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param> 
-        /// <param name="nome">Nome da Origem Comercial (optional)</param> 
-        /// <param name="status">Status da Origem Comercial (optional)</param> 
+        /// <param name="id">Id da origem comercial (optional)</param> 
+        /// <param name="nome">Nome da origem comercial (optional)</param> 
+        /// <param name="status">Status da origem comercial (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageOrigensComerciais</returns>
-        public ApiResponse< PageOrigensComerciais > ListarOrigensComerciaisUsingGETWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public ApiResponse< PageOrigensComerciais > ListarOrigensComerciaisUsingGETWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -445,7 +445,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idOrigemComercial != null) localVarQueryParams.Add("id_origem_comercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
@@ -486,15 +486,15 @@ namespace Conductor.Pier.Api
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param>
-        /// <param name="nome">Nome da Origem Comercial (optional)</param>
-        /// <param name="status">Status da Origem Comercial (optional)</param>
+        /// <param name="id">Id da origem comercial (optional)</param>
+        /// <param name="nome">Nome da origem comercial (optional)</param>
+        /// <param name="status">Status da origem comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageOrigensComerciais</returns>
-        public async System.Threading.Tasks.Task<PageOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageOrigensComerciais> localVarResponse = await ListarOrigensComerciaisUsingGETAsyncWithHttpInfo(idOrigemComercial, nome, status, page, limit);
+             ApiResponse<PageOrigensComerciais> localVarResponse = await ListarOrigensComerciaisUsingGETAsyncWithHttpInfo(id, nome, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -503,13 +503,13 @@ namespace Conductor.Pier.Api
         /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial (optional)</param>
-        /// <param name="nome">Nome da Origem Comercial (optional)</param>
-        /// <param name="status">Status da Origem Comercial (optional)</param>
+        /// <param name="id">Id da origem comercial (optional)</param>
+        /// <param name="nome">Nome da origem comercial (optional)</param>
+        /// <param name="status">Status da origem comercial (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageOrigensComerciais)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? idOrigemComercial = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageOrigensComerciais>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -540,7 +540,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idOrigemComercial != null) localVarQueryParams.Add("id_origem_comercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
