@@ -18,26 +18,26 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de uma determinada Pessoa.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param>
-        /// <returns>OrigemComercial</returns>
-        OrigemComercial ConsultarUsingGET1 (long? idOrigemComercial);
+        /// <param name="idPessoa">ID da Origem Comercial</param>
+        /// <returns>Pessoa</returns>
+        Pessoa ConsultarUsingGET1 (long? idPessoa);
   
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de uma determinada Pessoa.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param>
-        /// <returns>ApiResponse of OrigemComercial</returns>
-        ApiResponse<OrigemComercial> ConsultarUsingGET1WithHttpInfo (long? idOrigemComercial);
+        /// <param name="idPessoa">ID da Origem Comercial</param>
+        /// <returns>ApiResponse of Pessoa</returns>
+        ApiResponse<Pessoa> ConsultarUsingGET1WithHttpInfo (long? idPessoa);
         
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -82,26 +82,26 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de uma determinada Pessoa.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param>
-        /// <returns>Task of OrigemComercial</returns>
-        System.Threading.Tasks.Task<OrigemComercial> ConsultarUsingGET1Async (long? idOrigemComercial);
+        /// <param name="idPessoa">ID da Origem Comercial</param>
+        /// <returns>Task of Pessoa</returns>
+        System.Threading.Tasks.Task<Pessoa> ConsultarUsingGET1Async (long? idPessoa);
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de uma determinada Pessoa.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param>
-        /// <returns>Task of ApiResponse (OrigemComercial)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarUsingGET1AsyncWithHttpInfo (long? idOrigemComercial);
+        /// <param name="idPessoa">ID da Origem Comercial</param>
+        /// <returns>Task of ApiResponse (Pessoa)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Pessoa>> ConsultarUsingGET1AsyncWithHttpInfo (long? idPessoa);
         
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -234,32 +234,32 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param> 
-        /// <returns>OrigemComercial</returns>
-        public OrigemComercial ConsultarUsingGET1 (long? idOrigemComercial)
+        /// <param name="idPessoa">ID da Origem Comercial</param> 
+        /// <returns>Pessoa</returns>
+        public Pessoa ConsultarUsingGET1 (long? idPessoa)
         {
-             ApiResponse<OrigemComercial> localVarResponse = ConsultarUsingGET1WithHttpInfo(idOrigemComercial);
+             ApiResponse<Pessoa> localVarResponse = ConsultarUsingGET1WithHttpInfo(idPessoa);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param> 
-        /// <returns>ApiResponse of OrigemComercial</returns>
-        public ApiResponse< OrigemComercial > ConsultarUsingGET1WithHttpInfo (long? idOrigemComercial)
+        /// <param name="idPessoa">ID da Origem Comercial</param> 
+        /// <returns>ApiResponse of Pessoa</returns>
+        public ApiResponse< Pessoa > ConsultarUsingGET1WithHttpInfo (long? idPessoa)
         {
             
-            // verify the required parameter 'idOrigemComercial' is set
-            if (idOrigemComercial == null)
-                throw new ApiException(400, "Missing required parameter 'idOrigemComercial' when calling PessoaApi->ConsultarUsingGET1");
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null)
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling PessoaApi->ConsultarUsingGET1");
             
     
-            var localVarPath = "/api/pessoas/{id_origem_comercial}";
+            var localVarPath = "/api/pessoas/{id_pessoa}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -285,7 +285,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idOrigemComercial != null) localVarPathParams.Add("id_origem_comercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // path parameter
+            if (idPessoa != null) localVarPathParams.Add("id_pessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
             
             
             
@@ -312,39 +312,39 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<OrigemComercial>(localVarStatusCode,
+            return new ApiResponse<Pessoa>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrigemComercial) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrigemComercial)));
+                (Pessoa) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Pessoa)));
             
         }
 
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param>
-        /// <returns>Task of OrigemComercial</returns>
-        public async System.Threading.Tasks.Task<OrigemComercial> ConsultarUsingGET1Async (long? idOrigemComercial)
+        /// <param name="idPessoa">ID da Origem Comercial</param>
+        /// <returns>Task of Pessoa</returns>
+        public async System.Threading.Tasks.Task<Pessoa> ConsultarUsingGET1Async (long? idPessoa)
         {
-             ApiResponse<OrigemComercial> localVarResponse = await ConsultarUsingGET1AsyncWithHttpInfo(idOrigemComercial);
+             ApiResponse<Pessoa> localVarResponse = await ConsultarUsingGET1AsyncWithHttpInfo(idPessoa);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">ID da Origem Comercial</param>
-        /// <returns>Task of ApiResponse (OrigemComercial)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarUsingGET1AsyncWithHttpInfo (long? idOrigemComercial)
+        /// <param name="idPessoa">ID da Origem Comercial</param>
+        /// <returns>Task of ApiResponse (Pessoa)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Pessoa>> ConsultarUsingGET1AsyncWithHttpInfo (long? idPessoa)
         {
-            // verify the required parameter 'idOrigemComercial' is set
-            if (idOrigemComercial == null) throw new ApiException(400, "Missing required parameter 'idOrigemComercial' when calling ConsultarUsingGET1");
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling ConsultarUsingGET1");
             
     
-            var localVarPath = "/api/pessoas/{id_origem_comercial}";
+            var localVarPath = "/api/pessoas/{id_pessoa}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -370,7 +370,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idOrigemComercial != null) localVarPathParams.Add("id_origem_comercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // path parameter
+            if (idPessoa != null) localVarPathParams.Add("id_pessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
             
             
             
@@ -398,9 +398,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OrigemComercial>(localVarStatusCode,
+            return new ApiResponse<Pessoa>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrigemComercial) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrigemComercial)));
+                (Pessoa) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Pessoa)));
             
         }
         

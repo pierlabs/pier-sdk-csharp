@@ -26,7 +26,7 @@ namespace Conductor.Pier.Model
         /// <param name="Nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (required).</param>
         /// <param name="Status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (required).</param>
 
-        public Produto(long? Id = null, string Nome = null, string Status = null)
+        public Produto(long? Id = null, string Nome = null, int? Status = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -78,7 +78,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
+        public int? Status { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

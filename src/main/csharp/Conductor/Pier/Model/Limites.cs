@@ -12,22 +12,22 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// LimiteDisponibilidade
+    /// Limites
     /// </summary>
     [DataContract]
-    public partial class LimiteDisponibilidade :  IEquatable<LimiteDisponibilidade>
+    public partial class Limites :  IEquatable<Limites>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="LimiteDisponibilidade" /> class.
-        /// Initializes a new instance of the <see cref="LimiteDisponibilidade" />class.
+        /// Initializes a new instance of the <see cref="Limites" /> class.
+        /// Initializes a new instance of the <see cref="Limites" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Limite Disponibilidade (id). (required).</param>
         /// <param name="LimiteCompra">LimiteCompra (required).</param>
         /// <param name="LimiteConsignado">LimiteConsignado (required).</param>
         /// <param name="LimiteExterno">LimiteExterno (required).</param>
         /// <param name="LimiteExtra">LimiteExtra (required).</param>
-        /// <param name="LimiteGlobal">Campo que  (required).</param>
+        /// <param name="LimiteGlobal">LimiteGlobal (required).</param>
         /// <param name="LimiteInternacionalCompra">LimiteInternacionalCompra (required).</param>
         /// <param name="LimiteInternacionalParcelado">LimiteInternacionalParcelado (required).</param>
         /// <param name="LimiteInternacionalParcelas">LimiteInternacionalParcelas (required).</param>
@@ -39,12 +39,12 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteSaqueGlobal">LimiteSaqueGlobal (required).</param>
         /// <param name="LimiteSaquePeriodo">LimiteSaquePeriodo (required).</param>
 
-        public LimiteDisponibilidade(long? Id = null, double? LimiteCompra = null, double? LimiteConsignado = null, double? LimiteExterno = null, double? LimiteExtra = null, double? LimiteGlobal = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? LimiteMensal = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null)
+        public Limites(long? Id = null, double? LimiteCompra = null, double? LimiteConsignado = null, double? LimiteExterno = null, double? LimiteExtra = null, double? LimiteGlobal = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? LimiteMensal = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
-                throw new InvalidDataException("Id is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("Id is a required property for Limites and cannot be null");
             }
             else
             {
@@ -53,7 +53,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteCompra" is required (not null)
             if (LimiteCompra == null)
             {
-                throw new InvalidDataException("LimiteCompra is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteCompra is a required property for Limites and cannot be null");
             }
             else
             {
@@ -62,7 +62,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteConsignado" is required (not null)
             if (LimiteConsignado == null)
             {
-                throw new InvalidDataException("LimiteConsignado is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteConsignado is a required property for Limites and cannot be null");
             }
             else
             {
@@ -71,7 +71,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteExterno" is required (not null)
             if (LimiteExterno == null)
             {
-                throw new InvalidDataException("LimiteExterno is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteExterno is a required property for Limites and cannot be null");
             }
             else
             {
@@ -80,7 +80,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteExtra" is required (not null)
             if (LimiteExtra == null)
             {
-                throw new InvalidDataException("LimiteExtra is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteExtra is a required property for Limites and cannot be null");
             }
             else
             {
@@ -89,7 +89,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteGlobal" is required (not null)
             if (LimiteGlobal == null)
             {
-                throw new InvalidDataException("LimiteGlobal is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteGlobal is a required property for Limites and cannot be null");
             }
             else
             {
@@ -98,7 +98,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteInternacionalCompra" is required (not null)
             if (LimiteInternacionalCompra == null)
             {
-                throw new InvalidDataException("LimiteInternacionalCompra is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteInternacionalCompra is a required property for Limites and cannot be null");
             }
             else
             {
@@ -107,7 +107,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteInternacionalParcelado" is required (not null)
             if (LimiteInternacionalParcelado == null)
             {
-                throw new InvalidDataException("LimiteInternacionalParcelado is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteInternacionalParcelado is a required property for Limites and cannot be null");
             }
             else
             {
@@ -116,7 +116,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteInternacionalParcelas" is required (not null)
             if (LimiteInternacionalParcelas == null)
             {
-                throw new InvalidDataException("LimiteInternacionalParcelas is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteInternacionalParcelas is a required property for Limites and cannot be null");
             }
             else
             {
@@ -125,7 +125,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteInternacionalSaqueGlobal" is required (not null)
             if (LimiteInternacionalSaqueGlobal == null)
             {
-                throw new InvalidDataException("LimiteInternacionalSaqueGlobal is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteInternacionalSaqueGlobal is a required property for Limites and cannot be null");
             }
             else
             {
@@ -134,7 +134,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteInternacionalSaquePeriodo" is required (not null)
             if (LimiteInternacionalSaquePeriodo == null)
             {
-                throw new InvalidDataException("LimiteInternacionalSaquePeriodo is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteInternacionalSaquePeriodo is a required property for Limites and cannot be null");
             }
             else
             {
@@ -143,7 +143,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteMensal" is required (not null)
             if (LimiteMensal == null)
             {
-                throw new InvalidDataException("LimiteMensal is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteMensal is a required property for Limites and cannot be null");
             }
             else
             {
@@ -152,7 +152,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteParcelado" is required (not null)
             if (LimiteParcelado == null)
             {
-                throw new InvalidDataException("LimiteParcelado is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteParcelado is a required property for Limites and cannot be null");
             }
             else
             {
@@ -161,7 +161,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteParcelas" is required (not null)
             if (LimiteParcelas == null)
             {
-                throw new InvalidDataException("LimiteParcelas is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteParcelas is a required property for Limites and cannot be null");
             }
             else
             {
@@ -170,7 +170,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteSaqueGlobal" is required (not null)
             if (LimiteSaqueGlobal == null)
             {
-                throw new InvalidDataException("LimiteSaqueGlobal is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteSaqueGlobal is a required property for Limites and cannot be null");
             }
             else
             {
@@ -179,7 +179,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteSaquePeriodo" is required (not null)
             if (LimiteSaquePeriodo == null)
             {
-                throw new InvalidDataException("LimiteSaquePeriodo is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("LimiteSaquePeriodo is a required property for Limites and cannot be null");
             }
             else
             {
@@ -221,9 +221,8 @@ namespace Conductor.Pier.Model
         public double? LimiteExtra { get; set; }
     
         /// <summary>
-        /// Campo que 
+        /// Gets or Sets LimiteGlobal
         /// </summary>
-        /// <value>Campo que </value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
@@ -294,7 +293,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LimiteDisponibilidade {\n");
+            sb.Append("class Limites {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  LimiteCompra: ").Append(LimiteCompra).Append("\n");
             sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
@@ -333,15 +332,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LimiteDisponibilidade);
+            return this.Equals(obj as Limites);
         }
 
         /// <summary>
-        /// Returns true if LimiteDisponibilidade instances are equal
+        /// Returns true if Limites instances are equal
         /// </summary>
-        /// <param name="other">Instance of LimiteDisponibilidade to be compared</param>
+        /// <param name="other">Instance of Limites to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LimiteDisponibilidade other)
+        public bool Equals(Limites other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

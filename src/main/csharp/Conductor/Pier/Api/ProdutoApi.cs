@@ -18,26 +18,26 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de um determinado Produto.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
-        /// <returns>OrigemComercial</returns>
-        OrigemComercial ConsultarProdutoUsingGET (long? idProduto);
+        /// <returns>Produto</returns>
+        Produto ConsultarProdutoUsingGET (long? idProduto);
   
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de um determinado Produto.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
-        /// <returns>ApiResponse of OrigemComercial</returns>
-        ApiResponse<OrigemComercial> ConsultarProdutoUsingGETWithHttpInfo (long? idProduto);
+        /// <returns>ApiResponse of Produto</returns>
+        ApiResponse<Produto> ConsultarProdutoUsingGETWithHttpInfo (long? idProduto);
         
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ListaProdutos</returns>
-        ListaProdutos ListarProdutosUsingGET (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        ListaProdutos ListarProdutosUsingGET (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -67,33 +67,33 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of ListaProdutos</returns>
-        ApiResponse<ListaProdutos> ListarProdutosUsingGETWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        ApiResponse<ListaProdutos> ListarProdutosUsingGETWithHttpInfo (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de um determinado Produto.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
-        /// <returns>Task of OrigemComercial</returns>
-        System.Threading.Tasks.Task<OrigemComercial> ConsultarProdutoUsingGETAsync (long? idProduto);
+        /// <returns>Task of Produto</returns>
+        System.Threading.Tasks.Task<Produto> ConsultarProdutoUsingGETAsync (long? idProduto);
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Apresenta os dados de um determinado Produto.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
-        /// <returns>Task of ApiResponse (OrigemComercial)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarProdutoUsingGETAsyncWithHttpInfo (long? idProduto);
+        /// <returns>Task of ApiResponse (Produto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Produto>> ConsultarProdutoUsingGETAsyncWithHttpInfo (long? idProduto);
         
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -108,7 +108,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaProdutos</returns>
-        System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os Produtos do Emissor
@@ -123,7 +123,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaProdutos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -218,24 +218,24 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param> 
-        /// <returns>OrigemComercial</returns>
-        public OrigemComercial ConsultarProdutoUsingGET (long? idProduto)
+        /// <returns>Produto</returns>
+        public Produto ConsultarProdutoUsingGET (long? idProduto)
         {
-             ApiResponse<OrigemComercial> localVarResponse = ConsultarProdutoUsingGETWithHttpInfo(idProduto);
+             ApiResponse<Produto> localVarResponse = ConsultarProdutoUsingGETWithHttpInfo(idProduto);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param> 
-        /// <returns>ApiResponse of OrigemComercial</returns>
-        public ApiResponse< OrigemComercial > ConsultarProdutoUsingGETWithHttpInfo (long? idProduto)
+        /// <returns>ApiResponse of Produto</returns>
+        public ApiResponse< Produto > ConsultarProdutoUsingGETWithHttpInfo (long? idProduto)
         {
             
             // verify the required parameter 'idProduto' is set
@@ -243,7 +243,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'idProduto' when calling ProdutoApi->ConsultarProdutoUsingGET");
             
     
-            var localVarPath = "/api/produtos/{id_origem_comercial}";
+            var localVarPath = "/api/produtos/{id_produto}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -296,39 +296,39 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarProdutoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<OrigemComercial>(localVarStatusCode,
+            return new ApiResponse<Produto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrigemComercial) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrigemComercial)));
+                (Produto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Produto)));
             
         }
 
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
-        /// <returns>Task of OrigemComercial</returns>
-        public async System.Threading.Tasks.Task<OrigemComercial> ConsultarProdutoUsingGETAsync (long? idProduto)
+        /// <returns>Task of Produto</returns>
+        public async System.Threading.Tasks.Task<Produto> ConsultarProdutoUsingGETAsync (long? idProduto)
         {
-             ApiResponse<OrigemComercial> localVarResponse = await ConsultarProdutoUsingGETAsyncWithHttpInfo(idProduto);
+             ApiResponse<Produto> localVarResponse = await ConsultarProdutoUsingGETAsyncWithHttpInfo(idProduto);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
-        /// <returns>Task of ApiResponse (OrigemComercial)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarProdutoUsingGETAsyncWithHttpInfo (long? idProduto)
+        /// <returns>Task of ApiResponse (Produto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Produto>> ConsultarProdutoUsingGETAsyncWithHttpInfo (long? idProduto)
         {
             // verify the required parameter 'idProduto' is set
             if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling ConsultarProdutoUsingGET");
             
     
-            var localVarPath = "/api/produtos/{id_origem_comercial}";
+            var localVarPath = "/api/produtos/{id_produto}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -382,9 +382,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarProdutoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OrigemComercial>(localVarStatusCode,
+            return new ApiResponse<Produto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrigemComercial) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrigemComercial)));
+                (Produto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Produto)));
             
         }
         
@@ -398,7 +398,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ListaProdutos</returns>
-        public ListaProdutos ListarProdutosUsingGET (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public ListaProdutos ListarProdutosUsingGET (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null)
         {
              ApiResponse<ListaProdutos> localVarResponse = ListarProdutosUsingGETWithHttpInfo(id, nome, status, page, limit);
              return localVarResponse.Data;
@@ -414,7 +414,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of ListaProdutos</returns>
-        public ApiResponse< ListaProdutos > ListarProdutosUsingGETWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public ApiResponse< ListaProdutos > ListarProdutosUsingGETWithHttpInfo (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null)
         {
             
     
@@ -492,7 +492,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ListaProdutos</returns>
-        public async System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ListaProdutos> ListarProdutosUsingGETAsync (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null)
         {
              ApiResponse<ListaProdutos> localVarResponse = await ListarProdutosUsingGETAsyncWithHttpInfo(id, nome, status, page, limit);
              return localVarResponse.Data;
@@ -509,7 +509,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (ListaProdutos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ListaProdutos>> ListarProdutosUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null)
         {
             
     

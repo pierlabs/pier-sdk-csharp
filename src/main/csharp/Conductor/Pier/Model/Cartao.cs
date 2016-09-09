@@ -39,9 +39,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)..</param>
         /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o..</param>
         /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
-        /// <param name="Portador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional..</param>
+        /// <param name="TipoPortador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional..</param>
 
-        public Cartao(string ArquivoImpressao = null, string CodigoDesbloqueio = null, DateTime? DataEstagioCartao = null, DateTime? DataGeracao = null, DateTime? DataImpressao = null, DateTime? DataStatusCartao = null, DateTime? DataValidade = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, long? Id = null, long? IdConta = null, long? IdEstagioCartao = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusCartao = null, string NomeImpresso = null, string NumeroCartao = null, int? Portador = null)
+        public Cartao(string ArquivoImpressao = null, string CodigoDesbloqueio = null, DateTime? DataEstagioCartao = null, DateTime? DataGeracao = null, DateTime? DataImpressao = null, DateTime? DataStatusCartao = null, DateTime? DataValidade = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, long? Id = null, long? IdConta = null, long? IdEstagioCartao = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusCartao = null, string NomeImpresso = null, string NumeroCartao = null, string TipoPortador = null)
         {
             this.ArquivoImpressao = ArquivoImpressao;
             this.CodigoDesbloqueio = CodigoDesbloqueio;
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Model
             this.IdStatusCartao = IdStatusCartao;
             this.NomeImpresso = NomeImpresso;
             this.NumeroCartao = NumeroCartao;
-            this.Portador = Portador;
+            this.TipoPortador = TipoPortador;
             
         }
         
@@ -188,8 +188,8 @@ namespace Conductor.Pier.Model
         /// Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
         /// </summary>
         /// <value>Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.</value>
-        [DataMember(Name="portador", EmitDefaultValue=false)]
-        public int? Portador { get; set; }
+        [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
+        public string TipoPortador { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -216,7 +216,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdStatusCartao: ").Append(IdStatusCartao).Append("\n");
             sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
             sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
-            sb.Append("  Portador: ").Append(Portador).Append("\n");
+            sb.Append("  TipoPortador: ").Append(TipoPortador).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -340,9 +340,9 @@ namespace Conductor.Pier.Model
                     this.NumeroCartao.Equals(other.NumeroCartao)
                 ) && 
                 (
-                    this.Portador == other.Portador ||
-                    this.Portador != null &&
-                    this.Portador.Equals(other.Portador)
+                    this.TipoPortador == other.TipoPortador ||
+                    this.TipoPortador != null &&
+                    this.TipoPortador.Equals(other.TipoPortador)
                 );
         }
 
@@ -409,8 +409,8 @@ namespace Conductor.Pier.Model
                 if (this.NumeroCartao != null)
                     hash = hash * 59 + this.NumeroCartao.GetHashCode();
                 
-                if (this.Portador != null)
-                    hash = hash * 59 + this.Portador.GetHashCode();
+                if (this.TipoPortador != null)
+                    hash = hash * 59 + this.TipoPortador.GetHashCode();
                 
                 return hash;
             }
