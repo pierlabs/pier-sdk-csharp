@@ -26,7 +26,7 @@ namespace Conductor.Pier.Model
         /// <param name="Nome">Nome da origem comercial (required).</param>
         /// <param name="Status">Status da origem comercial (required).</param>
 
-        public OrigemComercial(long? Id = null, string Nome = null, string Status = null)
+        public OrigemComercial(long? Id = null, string Nome = null, int? Status = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -78,7 +78,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Status da origem comercial</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
+        public int? Status { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

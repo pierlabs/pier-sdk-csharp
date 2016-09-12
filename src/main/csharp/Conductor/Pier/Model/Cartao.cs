@@ -28,7 +28,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
         /// <param name="DataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica..</param>
         /// <param name="DataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
-        /// <param name="DataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver..</param>
+        /// <param name="DataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver..</param>
         /// <param name="FlagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial..</param>
         /// <param name="FlagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo..</param>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)..</param>
@@ -108,9 +108,9 @@ namespace Conductor.Pier.Model
         public DateTime? DataStatusCartao { get; set; }
     
         /// <summary>
-        /// Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+        /// Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
         /// </summary>
-        /// <value>Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.</value>
+        /// <value>Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public DateTime? DataValidade { get; set; }
     
