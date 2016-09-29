@@ -39,7 +39,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)..</param>
         /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o..</param>
         /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
-        /// <param name="TipoPortador">Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional..</param>
+        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
 
         public Cartao(string ArquivoImpressao = null, string CodigoDesbloqueio = null, DateTime? DataEstagioCartao = null, DateTime? DataGeracao = null, DateTime? DataImpressao = null, DateTime? DataStatusCartao = null, DateTime? DataValidade = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, long? Id = null, long? IdConta = null, long? IdEstagioCartao = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusCartao = null, string NomeImpresso = null, string NumeroCartao = null, string TipoPortador = null)
         {
@@ -185,9 +185,9 @@ namespace Conductor.Pier.Model
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+        /// Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
         /// </summary>
-        /// <value>Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.</value>
+        /// <value>Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</value>
         [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
         public string TipoPortador { get; set; }
     

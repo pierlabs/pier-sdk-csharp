@@ -30,7 +30,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id)..</param>
         /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)..</param>
         /// <param name="NomeImpresso">Apresenta o nome a ser impresso no cart\u00C3\u00A3o..</param>
-        /// <param name="TipoPortador">TipoPortador.</param>
+        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
 
         public Portador(DateTime? DataCadastroPortador = null, DateTime? DataCancelamentoPortador = null, int? FlagAtivo = null, long? IdConta = null, long? IdParentesco = null, long? IdPessoa = null, long? IdProduto = null, string NomeImpresso = null, string TipoPortador = null)
         {
@@ -104,8 +104,9 @@ namespace Conductor.Pier.Model
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Gets or Sets TipoPortador
+        /// Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
         /// </summary>
+        /// <value>Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</value>
         [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
         public string TipoPortador { get; set; }
     
