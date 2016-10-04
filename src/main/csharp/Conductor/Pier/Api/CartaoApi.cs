@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="idStatusImpressao">Id .</param>
+        /// <returns>HistoricoImpressaoCartao</returns>
+        HistoricoImpressaoCartao AlterarStatusImpressaoUsingPUT (long? idCartao, long? idStatusImpressao);
+  
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="idStatusImpressao">Id .</param>
+        /// <returns>ApiResponse of HistoricoImpressaoCartao</returns>
+        ApiResponse<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? idCartao, long? idStatusImpressao);
+        
+        /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
@@ -168,6 +192,30 @@ namespace Conductor.Pier.Api
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="idStatusImpressao">Id .</param>
+        /// <returns>Task of HistoricoImpressaoCartao</returns>
+        System.Threading.Tasks.Task<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTAsync (long? idCartao, long? idStatusImpressao);
+
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="idStatusImpressao">Id .</param>
+        /// <returns>Task of ApiResponse (HistoricoImpressaoCartao)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartao>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? idCartao, long? idStatusImpressao);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -408,6 +456,189 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="idStatusImpressao">Id .</param> 
+        /// <returns>HistoricoImpressaoCartao</returns>
+        public HistoricoImpressaoCartao AlterarStatusImpressaoUsingPUT (long? idCartao, long? idStatusImpressao)
+        {
+             ApiResponse<HistoricoImpressaoCartao> localVarResponse = AlterarStatusImpressaoUsingPUTWithHttpInfo(idCartao, idStatusImpressao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="idStatusImpressao">Id .</param> 
+        /// <returns>ApiResponse of HistoricoImpressaoCartao</returns>
+        public ApiResponse< HistoricoImpressaoCartao > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? idCartao, long? idStatusImpressao)
+        {
+            
+            // verify the required parameter 'idCartao' is set
+            if (idCartao == null)
+                throw new ApiException(400, "Missing required parameter 'idCartao' when calling CartaoApi->AlterarStatusImpressaoUsingPUT");
+            
+            // verify the required parameter 'idStatusImpressao' is set
+            if (idStatusImpressao == null)
+                throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling CartaoApi->AlterarStatusImpressaoUsingPUT");
+            
+    
+            var localVarPath = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idCartao != null) localVarPathParams.Add("id_cartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
+            if (idStatusImpressao != null) localVarPathParams.Add("id_status_impressao", Configuration.ApiClient.ParameterToString(idStatusImpressao)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarStatusImpressaoUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarStatusImpressaoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<HistoricoImpressaoCartao>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HistoricoImpressaoCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoricoImpressaoCartao)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="idStatusImpressao">Id .</param>
+        /// <returns>Task of HistoricoImpressaoCartao</returns>
+        public async System.Threading.Tasks.Task<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTAsync (long? idCartao, long? idStatusImpressao)
+        {
+             ApiResponse<HistoricoImpressaoCartao> localVarResponse = await AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo(idCartao, idStatusImpressao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="idStatusImpressao">Id .</param>
+        /// <returns>Task of ApiResponse (HistoricoImpressaoCartao)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartao>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? idCartao, long? idStatusImpressao)
+        {
+            // verify the required parameter 'idCartao' is set
+            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling AlterarStatusImpressaoUsingPUT");
+            // verify the required parameter 'idStatusImpressao' is set
+            if (idStatusImpressao == null) throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling AlterarStatusImpressaoUsingPUT");
+            
+    
+            var localVarPath = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idCartao != null) localVarPathParams.Add("id_cartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
+            if (idStatusImpressao != null) localVarPathParams.Add("id_status_impressao", Configuration.ApiClient.ParameterToString(idStatusImpressao)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarStatusImpressaoUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarStatusImpressaoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoricoImpressaoCartao>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HistoricoImpressaoCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoricoImpressaoCartao)));
+            
+        }
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
