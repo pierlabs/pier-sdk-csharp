@@ -18,7 +18,7 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// /tokens/callback
+        /// /api/tokens/callback
         /// </summary>
         /// <remarks>
         /// 
@@ -29,7 +29,7 @@ namespace Conductor.Pier.Api
         BodyAccessToken CallbackUsingPOST (BodyAccessToken bodyAccessToken);
   
         /// <summary>
-        /// /tokens/callback
+        /// /api/tokens/callback
         /// </summary>
         /// <remarks>
         /// 
@@ -40,7 +40,7 @@ namespace Conductor.Pier.Api
         ApiResponse<BodyAccessToken> CallbackUsingPOSTWithHttpInfo (BodyAccessToken bodyAccessToken);
         
         /// <summary>
-        /// /tokens/validar
+        /// /api/tokens/validar
         /// </summary>
         /// <remarks>
         /// 
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         Object ValidarUsingPOST (BodyAccessToken bodyAccessToken);
   
         /// <summary>
-        /// /tokens/validar
+        /// /api/tokens/validar
         /// </summary>
         /// <remarks>
         /// 
@@ -66,7 +66,7 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// /tokens/callback
+        /// /api/tokens/callback
         /// </summary>
         /// <remarks>
         /// 
@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<BodyAccessToken> CallbackUsingPOSTAsync (BodyAccessToken bodyAccessToken);
 
         /// <summary>
-        /// /tokens/callback
+        /// /api/tokens/callback
         /// </summary>
         /// <remarks>
         /// 
@@ -88,7 +88,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<BodyAccessToken>> CallbackUsingPOSTAsyncWithHttpInfo (BodyAccessToken bodyAccessToken);
         
         /// <summary>
-        /// /tokens/validar
+        /// /api/tokens/validar
         /// </summary>
         /// <remarks>
         /// 
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Object> ValidarUsingPOSTAsync (BodyAccessToken bodyAccessToken);
 
         /// <summary>
-        /// /tokens/validar
+        /// /api/tokens/validar
         /// </summary>
         /// <remarks>
         /// 
@@ -202,7 +202,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// /tokens/callback 
+        /// /api/tokens/callback 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param> 
@@ -214,7 +214,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /tokens/callback 
+        /// /api/tokens/callback 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param> 
@@ -294,7 +294,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /tokens/callback 
+        /// /api/tokens/callback 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param>
@@ -307,7 +307,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /tokens/callback 
+        /// /api/tokens/callback 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param>
@@ -385,7 +385,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// /tokens/validar 
+        /// /api/tokens/validar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param> 
@@ -397,7 +397,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /tokens/validar 
+        /// /api/tokens/validar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param> 
@@ -477,7 +477,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /tokens/validar 
+        /// /api/tokens/validar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param>
@@ -490,7 +490,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /tokens/validar 
+        /// /api/tokens/validar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="bodyAccessToken">bodyAccessToken</param>

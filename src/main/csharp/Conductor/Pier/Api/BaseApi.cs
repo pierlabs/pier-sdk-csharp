@@ -18,7 +18,7 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// /bases/clear
+        /// /api/bases/clear
         /// </summary>
         /// <remarks>
         /// 
@@ -28,7 +28,7 @@ namespace Conductor.Pier.Api
         BodyAccessToken ClearUsingGET ();
   
         /// <summary>
-        /// /bases/clear
+        /// /api/bases/clear
         /// </summary>
         /// <remarks>
         /// 
@@ -42,7 +42,7 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// /bases/clear
+        /// /api/bases/clear
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<BodyAccessToken> ClearUsingGETAsync ();
 
         /// <summary>
-        /// /bases/clear
+        /// /api/bases/clear
         /// </summary>
         /// <remarks>
         /// 
@@ -154,7 +154,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// /bases/clear 
+        /// /api/bases/clear 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>BodyAccessToken</returns>
@@ -165,7 +165,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /bases/clear 
+        /// /api/bases/clear 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of BodyAccessToken</returns>
@@ -233,7 +233,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// /bases/clear 
+        /// /api/bases/clear 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of BodyAccessToken</returns>
@@ -245,7 +245,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// /bases/clear 
+        /// /api/bases/clear 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (BodyAccessToken)</returns>
