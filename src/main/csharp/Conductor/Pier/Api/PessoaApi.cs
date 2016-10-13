@@ -18,7 +18,7 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa.
+        /// Apresenta os dados de uma determinada Pessoa
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
@@ -29,7 +29,7 @@ namespace Conductor.Pier.Api
         Pessoa ConsultarUsingGET1 (long? idPessoa);
   
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa.
+        /// Apresenta os dados de uma determinada Pessoa
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
@@ -82,7 +82,7 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa.
+        /// Apresenta os dados de uma determinada Pessoa
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
@@ -93,7 +93,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Pessoa> ConsultarUsingGET1Async (long? idPessoa);
 
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa.
+        /// Apresenta os dados de uma determinada Pessoa
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
@@ -234,7 +234,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+        /// Apresenta os dados de uma determinada Pessoa Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idPessoa">ID da Origem Comercial</param> 
@@ -246,7 +246,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+        /// Apresenta os dados de uma determinada Pessoa Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idPessoa">ID da Origem Comercial</param> 
@@ -320,7 +320,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+        /// Apresenta os dados de uma determinada Pessoa Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idPessoa">ID da Origem Comercial</param>
@@ -333,7 +333,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os dados de uma determinada Pessoa. Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+        /// Apresenta os dados de uma determinada Pessoa Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idPessoa">ID da Origem Comercial</param>

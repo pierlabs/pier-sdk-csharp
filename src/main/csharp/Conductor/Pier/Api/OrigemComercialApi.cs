@@ -18,10 +18,10 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param>
@@ -29,10 +29,10 @@ namespace Conductor.Pier.Api
         OrigemComercial ConsultarOrigemComercialUsingGET (long? idOrigemComercial);
   
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param>
@@ -40,7 +40,7 @@ namespace Conductor.Pier.Api
         ApiResponse<OrigemComercial> ConsultarOrigemComercialUsingGETWithHttpInfo (long? idOrigemComercial);
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
@@ -55,7 +55,7 @@ namespace Conductor.Pier.Api
         PageOrigensComerciais ListarOrigensComerciaisUsingGET (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
@@ -74,10 +74,10 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param>
@@ -85,10 +85,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<OrigemComercial> ConsultarOrigemComercialUsingGETAsync (long? idOrigemComercial);
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param>
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<OrigemComercial>> ConsultarOrigemComercialUsingGETAsyncWithHttpInfo (long? idOrigemComercial);
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
@@ -111,7 +111,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageOrigensComerciais> ListarOrigensComerciaisUsingGETAsync (long? id = null, string nome = null, int? status = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
@@ -218,7 +218,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param> 
@@ -230,7 +230,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param> 
@@ -304,7 +304,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param>
@@ -317,7 +317,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial  Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idOrigemComercial">ID da Origem Comercial</param>
@@ -389,7 +389,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id da origem comercial (optional)</param> 
@@ -405,7 +405,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id da origem comercial (optional)</param> 
@@ -483,7 +483,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id da origem comercial (optional)</param>
@@ -500,7 +500,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais  Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
+        /// Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id da origem comercial (optional)</param>

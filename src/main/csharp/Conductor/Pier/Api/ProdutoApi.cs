@@ -18,7 +18,7 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de um determinado Produto.
+        /// Apresenta os dados de um determinado Produto
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -29,7 +29,7 @@ namespace Conductor.Pier.Api
         Produto ConsultarProdutoUsingGET (long? idProduto);
   
         /// <summary>
-        /// Apresenta os dados de um determinado Produto.
+        /// Apresenta os dados de um determinado Produto
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -43,7 +43,7 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
@@ -58,7 +58,7 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de um determinado Produto.
+        /// Apresenta os dados de um determinado Produto
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Produto> ConsultarProdutoUsingGETAsync (long? idProduto);
 
         /// <summary>
-        /// Apresenta os dados de um determinado Produto.
+        /// Apresenta os dados de um determinado Produto
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
@@ -114,7 +114,7 @@ namespace Conductor.Pier.Api
         /// Lista os Produtos do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
@@ -218,7 +218,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Produto Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param> 
@@ -230,7 +230,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Produto Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param> 
@@ -304,7 +304,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Produto Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
@@ -317,7 +317,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Produto. Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Produto Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)</param>
@@ -389,7 +389,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
@@ -405,7 +405,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
@@ -483,7 +483,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
@@ -500,7 +500,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+        /// Lista os Produtos do Emissor Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>

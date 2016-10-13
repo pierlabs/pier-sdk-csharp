@@ -40,7 +40,7 @@ namespace Conductor.Pier.Api
         ApiResponse<StatusConta> ConsultarUsingGET2WithHttpInfo (long? idStatusConta);
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor 
+        /// Lista os Status Contas cadastrados para o Emissor
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
@@ -56,7 +56,7 @@ namespace Conductor.Pier.Api
         PageStatusContas ListarUsingGET2 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor 
+        /// Lista os Status Contas cadastrados para o Emissor
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
@@ -98,7 +98,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET2AsyncWithHttpInfo (long? idStatusConta);
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor 
+        /// Lista os Status Contas cadastrados para o Emissor
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
@@ -114,7 +114,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET2Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor 
+        /// Lista os Status Contas cadastrados para o Emissor
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
@@ -393,7 +393,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor  Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param> 
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor  Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param> 
@@ -490,7 +490,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor  Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
@@ -508,7 +508,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor  Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
