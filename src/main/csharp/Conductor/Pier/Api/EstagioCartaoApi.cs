@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>EstagioCartao</returns>
-        EstagioCartao ConsultarEstagioCartaoUsingGET (long? idEstagioCartao);
+        EstagioCartao ConsultarEstagioCartaoUsingGET1 (long? idEstagioCartao);
   
         /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of EstagioCartao</returns>
-        ApiResponse<EstagioCartao> ConsultarEstagioCartaoUsingGETWithHttpInfo (long? idEstagioCartao);
+        ApiResponse<EstagioCartao> ConsultarEstagioCartaoUsingGET1WithHttpInfo (long? idEstagioCartao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -80,7 +80,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of EstagioCartao</returns>
-        System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGETAsync (long? idEstagioCartao);
+        System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGET1Async (long? idEstagioCartao);
 
         /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
@@ -91,7 +91,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (EstagioCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo (long? idEstagioCartao);
+        System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGET1AsyncWithHttpInfo (long? idEstagioCartao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -219,9 +219,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>EstagioCartao</returns>
-        public EstagioCartao ConsultarEstagioCartaoUsingGET (long? idEstagioCartao)
+        public EstagioCartao ConsultarEstagioCartaoUsingGET1 (long? idEstagioCartao)
         {
-             ApiResponse<EstagioCartao> localVarResponse = ConsultarEstagioCartaoUsingGETWithHttpInfo(idEstagioCartao);
+             ApiResponse<EstagioCartao> localVarResponse = ConsultarEstagioCartaoUsingGET1WithHttpInfo(idEstagioCartao);
              return localVarResponse.Data;
         }
 
@@ -231,12 +231,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of EstagioCartao</returns>
-        public ApiResponse< EstagioCartao > ConsultarEstagioCartaoUsingGETWithHttpInfo (long? idEstagioCartao)
+        public ApiResponse< EstagioCartao > ConsultarEstagioCartaoUsingGET1WithHttpInfo (long? idEstagioCartao)
         {
             
             // verify the required parameter 'idEstagioCartao' is set
             if (idEstagioCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idEstagioCartao' when calling EstagioCartaoApi->ConsultarEstagioCartaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'idEstagioCartao' when calling EstagioCartaoApi->ConsultarEstagioCartaoUsingGET1");
             
     
             var localVarPath = "/api/estagios-cartoes/{id_estagio_cartao}";
@@ -288,9 +288,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<EstagioCartao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -305,9 +305,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of EstagioCartao</returns>
-        public async System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGETAsync (long? idEstagioCartao)
+        public async System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGET1Async (long? idEstagioCartao)
         {
-             ApiResponse<EstagioCartao> localVarResponse = await ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo(idEstagioCartao);
+             ApiResponse<EstagioCartao> localVarResponse = await ConsultarEstagioCartaoUsingGET1AsyncWithHttpInfo(idEstagioCartao);
              return localVarResponse.Data;
 
         }
@@ -318,10 +318,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (EstagioCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo (long? idEstagioCartao)
+        public async System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGET1AsyncWithHttpInfo (long? idEstagioCartao)
         {
             // verify the required parameter 'idEstagioCartao' is set
-            if (idEstagioCartao == null) throw new ApiException(400, "Missing required parameter 'idEstagioCartao' when calling ConsultarEstagioCartaoUsingGET");
+            if (idEstagioCartao == null) throw new ApiException(400, "Missing required parameter 'idEstagioCartao' when calling ConsultarEstagioCartaoUsingGET1");
             
     
             var localVarPath = "/api/estagios-cartoes/{id_estagio_cartao}";
@@ -374,9 +374,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEstagioCartaoUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EstagioCartao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

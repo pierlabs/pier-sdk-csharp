@@ -25,7 +25,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">Id .</param>
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
         /// <returns>HistoricoImpressaoCartao</returns>
         HistoricoImpressaoCartao AlterarStatusImpressaoUsingPUT (long? idCartao, long? idStatusImpressao);
   
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">Id .</param>
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
         /// <returns>ApiResponse of HistoricoImpressaoCartao</returns>
         ApiResponse<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? idCartao, long? idStatusImpressao);
         
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">Id .</param>
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
         /// <returns>Task of HistoricoImpressaoCartao</returns>
         System.Threading.Tasks.Task<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTAsync (long? idCartao, long? idStatusImpressao);
 
@@ -213,7 +213,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">Id .</param>
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
         /// <returns>Task of ApiResponse (HistoricoImpressaoCartao)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartao>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? idCartao, long? idStatusImpressao);
         
@@ -462,7 +462,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatusImpressao">Id .</param> 
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param> 
         /// <returns>HistoricoImpressaoCartao</returns>
         public HistoricoImpressaoCartao AlterarStatusImpressaoUsingPUT (long? idCartao, long? idStatusImpressao)
         {
@@ -475,7 +475,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatusImpressao">Id .</param> 
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param> 
         /// <returns>ApiResponse of HistoricoImpressaoCartao</returns>
         public ApiResponse< HistoricoImpressaoCartao > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? idCartao, long? idStatusImpressao)
         {
@@ -555,7 +555,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">Id .</param>
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
         /// <returns>Task of HistoricoImpressaoCartao</returns>
         public async System.Threading.Tasks.Task<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTAsync (long? idCartao, long? idStatusImpressao)
         {
@@ -569,7 +569,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">Id .</param>
+        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
         /// <returns>Task of ApiResponse (HistoricoImpressaoCartao)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartao>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? idCartao, long? idStatusImpressao)
         {
