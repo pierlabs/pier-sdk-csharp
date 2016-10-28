@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>StatusImpressao</returns>
-        StatusImpressao ConsultarUsingGET3 (long? idStatusImpressao);
+        StatusImpressao ConsultarUsingGET5 (long? idStatusImpressao);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of StatusImpressao</returns>
-        ApiResponse<StatusImpressao> ConsultarUsingGET3WithHttpInfo (long? idStatusImpressao);
+        ApiResponse<StatusImpressao> ConsultarUsingGET5WithHttpInfo (long? idStatusImpressao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageStatusImpressao</returns>
-        PageStatusImpressao ListarUsingGET4 (long? id = null, string nome = null, int? page = null, int? limit = null);
+        PageStatusImpressao ListarUsingGET5 (long? id = null, string nome = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -65,7 +65,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        ApiResponse<PageStatusImpressao> ListarUsingGET4WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        ApiResponse<PageStatusImpressao> ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -80,7 +80,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressao</returns>
-        System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET3Async (long? idStatusImpressao);
+        System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? idStatusImpressao);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -91,7 +91,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET3AsyncWithHttpInfo (long? idStatusImpressao);
+        System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? idStatusImpressao);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET4Async (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET5Async (long? id = null, string nome = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET4AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -219,9 +219,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>StatusImpressao</returns>
-        public StatusImpressao ConsultarUsingGET3 (long? idStatusImpressao)
+        public StatusImpressao ConsultarUsingGET5 (long? idStatusImpressao)
         {
-             ApiResponse<StatusImpressao> localVarResponse = ConsultarUsingGET3WithHttpInfo(idStatusImpressao);
+             ApiResponse<StatusImpressao> localVarResponse = ConsultarUsingGET5WithHttpInfo(idStatusImpressao);
              return localVarResponse.Data;
         }
 
@@ -231,12 +231,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of StatusImpressao</returns>
-        public ApiResponse< StatusImpressao > ConsultarUsingGET3WithHttpInfo (long? idStatusImpressao)
+        public ApiResponse< StatusImpressao > ConsultarUsingGET5WithHttpInfo (long? idStatusImpressao)
         {
             
             // verify the required parameter 'idStatusImpressao' is set
             if (idStatusImpressao == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling StatusImpressaoApi->ConsultarUsingGET3");
+                throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling StatusImpressaoApi->ConsultarUsingGET5");
             
     
             var localVarPath = "/api/status-impressoes/{id_status_impressao}";
@@ -288,9 +288,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -305,9 +305,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressao</returns>
-        public async System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET3Async (long? idStatusImpressao)
+        public async System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? idStatusImpressao)
         {
-             ApiResponse<StatusImpressao> localVarResponse = await ConsultarUsingGET3AsyncWithHttpInfo(idStatusImpressao);
+             ApiResponse<StatusImpressao> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(idStatusImpressao);
              return localVarResponse.Data;
 
         }
@@ -318,10 +318,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET3AsyncWithHttpInfo (long? idStatusImpressao)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? idStatusImpressao)
         {
             // verify the required parameter 'idStatusImpressao' is set
-            if (idStatusImpressao == null) throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling ConsultarUsingGET3");
+            if (idStatusImpressao == null) throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling ConsultarUsingGET5");
             
     
             var localVarPath = "/api/status-impressoes/{id_status_impressao}";
@@ -374,9 +374,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -393,9 +393,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageStatusImpressao</returns>
-        public PageStatusImpressao ListarUsingGET4 (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public PageStatusImpressao ListarUsingGET5 (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET4WithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET5WithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
         }
 
@@ -408,7 +408,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        public ApiResponse< PageStatusImpressao > ListarUsingGET4WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public ApiResponse< PageStatusImpressao > ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
@@ -464,9 +464,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -484,9 +484,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET4Async (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET5Async (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET4AsyncWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
 
         }
@@ -500,7 +500,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET4AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
@@ -557,9 +557,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

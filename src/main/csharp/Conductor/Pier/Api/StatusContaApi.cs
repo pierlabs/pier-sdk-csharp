@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>StatusConta</returns>
-        StatusConta ConsultarUsingGET2 (long? idStatusConta);
+        StatusConta ConsultarUsingGET4 (long? idStatusConta);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>ApiResponse of StatusConta</returns>
-        ApiResponse<StatusConta> ConsultarUsingGET2WithHttpInfo (long? idStatusConta);
+        ApiResponse<StatusConta> ConsultarUsingGET4WithHttpInfo (long? idStatusConta);
         
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -53,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageStatusContas</returns>
-        PageStatusContas ListarUsingGET3 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        PageStatusContas ListarUsingGET4 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -69,7 +69,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageStatusContas</returns>
-        ApiResponse<PageStatusContas> ListarUsingGET3WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        ApiResponse<PageStatusContas> ListarUsingGET4WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -84,7 +84,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusConta</returns>
-        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET2Async (long? idStatusConta);
+        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? idStatusConta);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -95,7 +95,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusConta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET2AsyncWithHttpInfo (long? idStatusConta);
+        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? idStatusConta);
         
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -111,7 +111,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusContas</returns>
-        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET3Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET4Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -127,7 +127,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET3AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET4AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -227,9 +227,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>StatusConta</returns>
-        public StatusConta ConsultarUsingGET2 (long? idStatusConta)
+        public StatusConta ConsultarUsingGET4 (long? idStatusConta)
         {
-             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET2WithHttpInfo(idStatusConta);
+             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET4WithHttpInfo(idStatusConta);
              return localVarResponse.Data;
         }
 
@@ -239,12 +239,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>ApiResponse of StatusConta</returns>
-        public ApiResponse< StatusConta > ConsultarUsingGET2WithHttpInfo (long? idStatusConta)
+        public ApiResponse< StatusConta > ConsultarUsingGET4WithHttpInfo (long? idStatusConta)
         {
             
             // verify the required parameter 'idStatusConta' is set
             if (idStatusConta == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling StatusContaApi->ConsultarUsingGET2");
+                throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling StatusContaApi->ConsultarUsingGET4");
             
     
             var localVarPath = "/api/status-contas/{id_status_conta}";
@@ -296,9 +296,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusConta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -313,9 +313,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusConta</returns>
-        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET2Async (long? idStatusConta)
+        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? idStatusConta)
         {
-             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET2AsyncWithHttpInfo(idStatusConta);
+             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(idStatusConta);
              return localVarResponse.Data;
 
         }
@@ -326,10 +326,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusConta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET2AsyncWithHttpInfo (long? idStatusConta)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? idStatusConta)
         {
             // verify the required parameter 'idStatusConta' is set
-            if (idStatusConta == null) throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling ConsultarUsingGET2");
+            if (idStatusConta == null) throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling ConsultarUsingGET4");
             
     
             var localVarPath = "/api/status-contas/{id_status_conta}";
@@ -382,9 +382,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusConta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -403,9 +403,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageStatusContas</returns>
-        public PageStatusContas ListarUsingGET3 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public PageStatusContas ListarUsingGET4 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET3WithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
+             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET4WithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
              return localVarResponse.Data;
         }
 
@@ -420,7 +420,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageStatusContas</returns>
-        public ApiResponse< PageStatusContas > ListarUsingGET3WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public ApiResponse< PageStatusContas > ListarUsingGET4WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
         {
             
     
@@ -478,9 +478,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusContas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -500,9 +500,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusContas</returns>
-        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET3Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET4Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET3AsyncWithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
+             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET4AsyncWithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
              return localVarResponse.Data;
 
         }
@@ -518,7 +518,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET3AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET4AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
         {
             
     
@@ -577,9 +577,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusContas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

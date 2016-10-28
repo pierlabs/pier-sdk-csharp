@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="Endereco" />class.
         /// </summary>
         /// <param name="Bairro">Apresenta nome do bairro.</param>
-        /// <param name="Cep">Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).</param>
+        /// <param name="Cep">Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
         /// <param name="Cidade">Apresenta nome da cidade.</param>
         /// <param name="Complemento">Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o.</param>
         /// <param name="DataInclusao">Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="PontoReferencia">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o.</param>
         /// <param name="Uf">Apresenta sigla da Unidade Federativa.</param>
 
-        public Endereco(string Bairro = null, string Cep = null, string Cidade = null, string Complemento = null, DateTime? DataInclusao = null, DateTime? DataUltimaAtualizacao = null, long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Logradouro = null, string Numero = null, string Pais = null, string PontoReferencia = null, string Uf = null)
+        public Endereco(string Bairro = null, string Cep = null, string Cidade = null, string Complemento = null, DateTime? DataInclusao = null, DateTime? DataUltimaAtualizacao = null, long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Logradouro = null, int? Numero = null, string Pais = null, string PontoReferencia = null, string Uf = null)
         {
             this.Bairro = Bairro;
             this.Cep = Cep;
@@ -65,9 +65,9 @@ namespace Conductor.Pier.Model
         public string Bairro { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+        /// Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
         /// </summary>
-        /// <value>Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)</value>
+        /// <value>Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
@@ -132,7 +132,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
-        public string Numero { get; set; }
+        public int? Numero { get; set; }
     
         /// <summary>
         /// Apresenta nome do Pais
