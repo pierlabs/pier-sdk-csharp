@@ -13,121 +13,113 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IStatusContaApi
+    public interface ITipoTelefoneApi
     {
         #region Synchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
+        /// Apresenta os dados de um determinado Tipo de Telefone
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
-        /// <returns>StatusConta</returns>
-        StatusConta ConsultarUsingGET4 (long? idStatusConta);
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param>
+        /// <returns>TipoTelefone</returns>
+        TipoTelefone ConsultarUsingGET8 (long? idTipoTelefone);
   
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
+        /// Apresenta os dados de um determinado Tipo de Telefone
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
-        /// <returns>ApiResponse of StatusConta</returns>
-        ApiResponse<StatusConta> ConsultarUsingGET4WithHttpInfo (long? idStatusConta);
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param>
+        /// <returns>ApiResponse of TipoTelefone</returns>
+        ApiResponse<TipoTelefone> ConsultarUsingGET8WithHttpInfo (long? idTipoTelefone);
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
+        /// Lista os Tipos de Telefones
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param>
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>PageStatusContas</returns>
-        PageStatusContas ListarUsingGET5 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        /// <returns>PageTipoTelefones</returns>
+        PageTipoTelefones ListarUsingGET9 (long? id = null, string nome = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
+        /// Lista os Tipos de Telefones
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param>
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>ApiResponse of PageStatusContas</returns>
-        ApiResponse<PageStatusContas> ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of PageTipoTelefones</returns>
+        ApiResponse<PageTipoTelefones> ListarUsingGET9WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
+        /// Apresenta os dados de um determinado Tipo de Telefone
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
-        /// <returns>Task of StatusConta</returns>
-        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? idStatusConta);
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param>
+        /// <returns>Task of TipoTelefone</returns>
+        System.Threading.Tasks.Task<TipoTelefone> ConsultarUsingGET8Async (long? idTipoTelefone);
 
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
+        /// Apresenta os dados de um determinado Tipo de Telefone
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
-        /// <returns>Task of ApiResponse (StatusConta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? idStatusConta);
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param>
+        /// <returns>Task of ApiResponse (TipoTelefone)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TipoTelefone>> ConsultarUsingGET8AsyncWithHttpInfo (long? idTipoTelefone);
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
+        /// Lista os Tipos de Telefones
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param>
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of PageStatusContas</returns>
-        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        /// <returns>Task of PageTipoTelefones</returns>
+        System.Threading.Tasks.Task<PageTipoTelefones> ListarUsingGET9Async (long? id = null, string nome = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
+        /// Lista os Tipos de Telefones
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param>
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (PageTipoTelefones)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTelefones>> ListarUsingGET9AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -136,13 +128,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class StatusContaApi : IStatusContaApi
+    public class TipoTelefoneApi : ITipoTelefoneApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StatusContaApi"/> class.
+        /// Initializes a new instance of the <see cref="TipoTelefoneApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public StatusContaApi(String basePath)
+        public TipoTelefoneApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -154,12 +146,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="StatusContaApi"/> class
+        /// Initializes a new instance of the <see cref="TipoTelefoneApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public StatusContaApi(Configuration configuration = null)
+        public TipoTelefoneApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -222,32 +214,32 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Tipo de Telefone Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
-        /// <returns>StatusConta</returns>
-        public StatusConta ConsultarUsingGET4 (long? idStatusConta)
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param> 
+        /// <returns>TipoTelefone</returns>
+        public TipoTelefone ConsultarUsingGET8 (long? idTipoTelefone)
         {
-             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET4WithHttpInfo(idStatusConta);
+             ApiResponse<TipoTelefone> localVarResponse = ConsultarUsingGET8WithHttpInfo(idTipoTelefone);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Tipo de Telefone Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
-        /// <returns>ApiResponse of StatusConta</returns>
-        public ApiResponse< StatusConta > ConsultarUsingGET4WithHttpInfo (long? idStatusConta)
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param> 
+        /// <returns>ApiResponse of TipoTelefone</returns>
+        public ApiResponse< TipoTelefone > ConsultarUsingGET8WithHttpInfo (long? idTipoTelefone)
         {
             
-            // verify the required parameter 'idStatusConta' is set
-            if (idStatusConta == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling StatusContaApi->ConsultarUsingGET4");
+            // verify the required parameter 'idTipoTelefone' is set
+            if (idTipoTelefone == null)
+                throw new ApiException(400, "Missing required parameter 'idTipoTelefone' when calling TipoTelefoneApi->ConsultarUsingGET8");
             
     
-            var localVarPath = "/api/status-contas/{id_status_conta}";
+            var localVarPath = "/api/tipos-telefones/{id_tipo_telefone}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -273,7 +265,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusConta != null) localVarPathParams.Add("id_status_conta", Configuration.ApiClient.ParameterToString(idStatusConta)); // path parameter
+            if (idTipoTelefone != null) localVarPathParams.Add("id_tipo_telefone", Configuration.ApiClient.ParameterToString(idTipoTelefone)); // path parameter
             
             
             
@@ -296,43 +288,43 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<StatusConta>(localVarStatusCode,
+            return new ApiResponse<TipoTelefone>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StatusConta) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusConta)));
+                (TipoTelefone) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoTelefone)));
             
         }
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Tipo de Telefone Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
-        /// <returns>Task of StatusConta</returns>
-        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? idStatusConta)
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param>
+        /// <returns>Task of TipoTelefone</returns>
+        public async System.Threading.Tasks.Task<TipoTelefone> ConsultarUsingGET8Async (long? idTipoTelefone)
         {
-             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(idStatusConta);
+             ApiResponse<TipoTelefone> localVarResponse = await ConsultarUsingGET8AsyncWithHttpInfo(idTipoTelefone);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Tipo de Telefone Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
-        /// <returns>Task of ApiResponse (StatusConta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? idStatusConta)
+        /// <param name="idTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)</param>
+        /// <returns>Task of ApiResponse (TipoTelefone)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTelefone>> ConsultarUsingGET8AsyncWithHttpInfo (long? idTipoTelefone)
         {
-            // verify the required parameter 'idStatusConta' is set
-            if (idStatusConta == null) throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling ConsultarUsingGET4");
+            // verify the required parameter 'idTipoTelefone' is set
+            if (idTipoTelefone == null) throw new ApiException(400, "Missing required parameter 'idTipoTelefone' when calling ConsultarUsingGET8");
             
     
-            var localVarPath = "/api/status-contas/{id_status_conta}";
+            var localVarPath = "/api/tipos-telefones/{id_tipo_telefone}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -358,7 +350,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusConta != null) localVarPathParams.Add("id_status_conta", Configuration.ApiClient.ParameterToString(idStatusConta)); // path parameter
+            if (idTipoTelefone != null) localVarPathParams.Add("id_tipo_telefone", Configuration.ApiClient.ParameterToString(idTipoTelefone)); // path parameter
             
             
             
@@ -382,49 +374,45 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<StatusConta>(localVarStatusCode,
+            return new ApiResponse<TipoTelefone>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StatusConta) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusConta)));
+                (TipoTelefone) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoTelefone)));
             
         }
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Tipos de Telefones Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param> 
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param> 
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param> 
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>PageStatusContas</returns>
-        public PageStatusContas ListarUsingGET5 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        /// <returns>PageTipoTelefones</returns>
+        public PageTipoTelefones ListarUsingGET9 (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET5WithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
+             ApiResponse<PageTipoTelefones> localVarResponse = ListarUsingGET9WithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Tipos de Telefones Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param> 
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param> 
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param> 
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <returns>ApiResponse of PageStatusContas</returns>
-        public ApiResponse< PageStatusContas > ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of PageTipoTelefones</returns>
+        public ApiResponse< PageTipoTelefones > ListarUsingGET9WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
-            var localVarPath = "/api/status-contas";
+            var localVarPath = "/api/tipos-telefones";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -453,8 +441,6 @@ namespace Conductor.Pier.Api
             
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (flagAlteraLimite != null) localVarQueryParams.Add("flagAlteraLimite", Configuration.ApiClient.ParameterToString(flagAlteraLimite)); // query parameter
-            if (mensagemConsultaNegada != null) localVarQueryParams.Add("mensagemConsultaNegada", Configuration.ApiClient.ParameterToString(mensagemConsultaNegada)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -478,51 +464,47 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageStatusContas>(localVarStatusCode,
+            return new ApiResponse<PageTipoTelefones>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusContas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContas)));
+                (PageTipoTelefones) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoTelefones)));
             
         }
 
         
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Tipos de Telefones Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param>
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of PageStatusContas</returns>
-        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        /// <returns>Task of PageTipoTelefones</returns>
+        public async System.Threading.Tasks.Task<PageTipoTelefones> ListarUsingGET9Async (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
+             ApiResponse<PageTipoTelefones> localVarResponse = await ListarUsingGET9AsyncWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
+        /// Lista os Tipos de Telefones Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
-        /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
-        /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
-        /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (optional)</param>
+        /// <param name="nome">Nome do Tipo do Telefone (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (PageTipoTelefones)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTelefones>> ListarUsingGET9AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
-            var localVarPath = "/api/status-contas";
+            var localVarPath = "/api/tipos-telefones";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -551,8 +533,6 @@ namespace Conductor.Pier.Api
             
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (flagAlteraLimite != null) localVarQueryParams.Add("flagAlteraLimite", Configuration.ApiClient.ParameterToString(flagAlteraLimite)); // query parameter
-            if (mensagemConsultaNegada != null) localVarQueryParams.Add("mensagemConsultaNegada", Configuration.ApiClient.ParameterToString(mensagemConsultaNegada)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -577,13 +557,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageStatusContas>(localVarStatusCode,
+            return new ApiResponse<PageTipoTelefones>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusContas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContas)));
+                (PageTipoTelefones) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoTelefones)));
             
         }
         

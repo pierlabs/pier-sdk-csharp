@@ -24,6 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
         /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
+        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
         /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id)..</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta..</param>
@@ -32,10 +33,11 @@ namespace Conductor.Pier.Model
         /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id)..</param>
         /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
 
-        public Conta(DateTime? DataCadastro = null, DateTime? DataStatusConta = null, int? DiaVencimento = null, long? Id = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusConta = null, int? MelhorDiaCompra = null)
+        public Conta(DateTime? DataCadastro = null, DateTime? DataStatusConta = null, DateTime? DataUltimaAlteracaoVencimento = null, int? DiaVencimento = null, long? Id = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusConta = null, int? MelhorDiaCompra = null)
         {
             this.DataCadastro = DataCadastro;
             this.DataStatusConta = DataStatusConta;
+            this.DataUltimaAlteracaoVencimento = DataUltimaAlteracaoVencimento;
             this.DiaVencimento = DiaVencimento;
             this.Id = Id;
             this.IdOrigemComercial = IdOrigemComercial;
@@ -60,6 +62,13 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
         public DateTime? DataStatusConta { get; set; }
+    
+        /// <summary>
+        /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+        /// </summary>
+        /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
+        [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
+        public DateTime? DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
         /// Apresenta o dia de vencimento.
@@ -120,6 +129,7 @@ namespace Conductor.Pier.Model
             sb.Append("class Conta {\n");
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  DataStatusConta: ").Append(DataStatusConta).Append("\n");
+            sb.Append("  DataUltimaAlteracaoVencimento: ").Append(DataUltimaAlteracaoVencimento).Append("\n");
             sb.Append("  DiaVencimento: ").Append(DiaVencimento).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
@@ -175,6 +185,11 @@ namespace Conductor.Pier.Model
                     this.DataStatusConta.Equals(other.DataStatusConta)
                 ) && 
                 (
+                    this.DataUltimaAlteracaoVencimento == other.DataUltimaAlteracaoVencimento ||
+                    this.DataUltimaAlteracaoVencimento != null &&
+                    this.DataUltimaAlteracaoVencimento.Equals(other.DataUltimaAlteracaoVencimento)
+                ) && 
+                (
                     this.DiaVencimento == other.DiaVencimento ||
                     this.DiaVencimento != null &&
                     this.DiaVencimento.Equals(other.DiaVencimento)
@@ -228,6 +243,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataStatusConta != null)
                     hash = hash * 59 + this.DataStatusConta.GetHashCode();
+                
+                if (this.DataUltimaAlteracaoVencimento != null)
+                    hash = hash * 59 + this.DataUltimaAlteracaoVencimento.GetHashCode();
                 
                 if (this.DiaVencimento != null)
                     hash = hash * 59 + this.DiaVencimento.GetHashCode();

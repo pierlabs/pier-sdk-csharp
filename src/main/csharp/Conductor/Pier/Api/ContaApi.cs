@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Alterar vencimento
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
+        /// <returns>Conta</returns>
+        Conta AlterarVencimentoUsingPUT (long? idConta, int? novoDiaVencimento);
+  
+        /// <summary>
+        /// Alterar vencimento
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
+        /// <returns>ApiResponse of Conta</returns>
+        ApiResponse<Conta> AlterarVencimentoUsingPUTWithHttpInfo (long? idConta, int? novoDiaVencimento);
+        
+        /// <summary>
         /// Apresenta dados de uma determinada conta
         /// </summary>
         /// <remarks>
@@ -40,10 +64,10 @@ namespace Conductor.Pier.Api
         ApiResponse<Conta> ConsultarUsingGET1WithHttpInfo (long? idConta);
         
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
@@ -55,16 +79,17 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Conta</returns>
-        Conta ListarUsingGET1 (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null);
+        Conta ListarUsingGET1 (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
@@ -76,14 +101,39 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of Conta</returns>
-        ApiResponse<Conta> ListarUsingGET1WithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null);
+        ApiResponse<Conta> ListarUsingGET1WithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Alterar vencimento
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
+        /// <returns>Task of Conta</returns>
+        System.Threading.Tasks.Task<Conta> AlterarVencimentoUsingPUTAsync (long? idConta, int? novoDiaVencimento);
+
+        /// <summary>
+        /// Alterar vencimento
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
+        /// <returns>Task of ApiResponse (Conta)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Conta>> AlterarVencimentoUsingPUTAsyncWithHttpInfo (long? idConta, int? novoDiaVencimento);
         
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -108,10 +158,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Conta>> ConsultarUsingGET1AsyncWithHttpInfo (long? idConta);
         
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
@@ -123,16 +173,17 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of Conta</returns>
-        System.Threading.Tasks.Task<Conta> ListarUsingGET1Async (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<Conta> ListarUsingGET1Async (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
@@ -144,10 +195,11 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (Conta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -240,6 +292,189 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// Alterar vencimento Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param> 
+        /// <returns>Conta</returns>
+        public Conta AlterarVencimentoUsingPUT (long? idConta, int? novoDiaVencimento)
+        {
+             ApiResponse<Conta> localVarResponse = AlterarVencimentoUsingPUTWithHttpInfo(idConta, novoDiaVencimento);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Alterar vencimento Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param> 
+        /// <returns>ApiResponse of Conta</returns>
+        public ApiResponse< Conta > AlterarVencimentoUsingPUTWithHttpInfo (long? idConta, int? novoDiaVencimento)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->AlterarVencimentoUsingPUT");
+            
+            // verify the required parameter 'novoDiaVencimento' is set
+            if (novoDiaVencimento == null)
+                throw new ApiException(400, "Missing required parameter 'novoDiaVencimento' when calling ContaApi->AlterarVencimentoUsingPUT");
+            
+    
+            var localVarPath = "/api/contas/{id_conta}/alterar-vencimento";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("id_conta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            if (novoDiaVencimento != null) localVarQueryParams.Add("novo_dia_vencimento", Configuration.ApiClient.ParameterToString(novoDiaVencimento)); // query parameter
+            
+            
+            
+            
+
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarVencimentoUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarVencimentoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Conta>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conta) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conta)));
+            
+        }
+
+        
+        /// <summary>
+        /// Alterar vencimento Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
+        /// <returns>Task of Conta</returns>
+        public async System.Threading.Tasks.Task<Conta> AlterarVencimentoUsingPUTAsync (long? idConta, int? novoDiaVencimento)
+        {
+             ApiResponse<Conta> localVarResponse = await AlterarVencimentoUsingPUTAsyncWithHttpInfo(idConta, novoDiaVencimento);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Alterar vencimento Esse recurso permite alterar o vencimento de uma conta especifica.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
+        /// <returns>Task of ApiResponse (Conta)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Conta>> AlterarVencimentoUsingPUTAsyncWithHttpInfo (long? idConta, int? novoDiaVencimento)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling AlterarVencimentoUsingPUT");
+            // verify the required parameter 'novoDiaVencimento' is set
+            if (novoDiaVencimento == null) throw new ApiException(400, "Missing required parameter 'novoDiaVencimento' when calling AlterarVencimentoUsingPUT");
+            
+    
+            var localVarPath = "/api/contas/{id_conta}/alterar-vencimento";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("id_conta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            if (novoDiaVencimento != null) localVarQueryParams.Add("novo_dia_vencimento", Configuration.ApiClient.ParameterToString(novoDiaVencimento)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarVencimentoUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarVencimentoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conta>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conta) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conta)));
+            
+        }
         
         /// <summary>
         /// Apresenta dados de uma determinada conta Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
@@ -413,7 +648,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor. Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param> 
@@ -425,17 +660,18 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param> 
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param> 
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>Conta</returns>
-        public Conta ListarUsingGET1 (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null)
+        public Conta ListarUsingGET1 (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null)
         {
-             ApiResponse<Conta> localVarResponse = ListarUsingGET1WithHttpInfo(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, page, limit);
+             ApiResponse<Conta> localVarResponse = ListarUsingGET1WithHttpInfo(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor. Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param> 
@@ -447,10 +683,11 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param> 
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param> 
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of Conta</returns>
-        public ApiResponse< Conta > ListarUsingGET1WithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null)
+        public ApiResponse< Conta > ListarUsingGET1WithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null)
         {
             
     
@@ -490,6 +727,7 @@ namespace Conductor.Pier.Api
             if (melhorDiaCompra != null) localVarQueryParams.Add("melhorDiaCompra", Configuration.ApiClient.ParameterToString(melhorDiaCompra)); // query parameter
             if (dataStatusConta != null) localVarQueryParams.Add("dataStatusConta", Configuration.ApiClient.ParameterToString(dataStatusConta)); // query parameter
             if (dataCadastro != null) localVarQueryParams.Add("dataCadastro", Configuration.ApiClient.ParameterToString(dataCadastro)); // query parameter
+            if (dataUltimaAlteracaoVencimento != null) localVarQueryParams.Add("dataUltimaAlteracaoVencimento", Configuration.ApiClient.ParameterToString(dataUltimaAlteracaoVencimento)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -525,7 +763,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor. Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
@@ -537,18 +775,19 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of Conta</returns>
-        public async System.Threading.Tasks.Task<Conta> ListarUsingGET1Async (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<Conta> ListarUsingGET1Async (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null)
         {
-             ApiResponse<Conta> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, page, limit);
+             ApiResponse<Conta> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista contas existentes na base de dados do Emissor. Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+        /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
@@ -560,10 +799,11 @@ namespace Conductor.Pier.Api
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
         /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (Conta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null, int? page = null, int? limit = null)
         {
             
     
@@ -603,6 +843,7 @@ namespace Conductor.Pier.Api
             if (melhorDiaCompra != null) localVarQueryParams.Add("melhorDiaCompra", Configuration.ApiClient.ParameterToString(melhorDiaCompra)); // query parameter
             if (dataStatusConta != null) localVarQueryParams.Add("dataStatusConta", Configuration.ApiClient.ParameterToString(dataStatusConta)); // query parameter
             if (dataCadastro != null) localVarQueryParams.Add("dataCadastro", Configuration.ApiClient.ParameterToString(dataCadastro)); // query parameter
+            if (dataUltimaAlteracaoVencimento != null) localVarQueryParams.Add("dataUltimaAlteracaoVencimento", Configuration.ApiClient.ParameterToString(dataUltimaAlteracaoVencimento)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             

@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageStatusImpressao</returns>
-        PageStatusImpressao ListarUsingGET5 (long? id = null, string nome = null, int? page = null, int? limit = null);
+        PageStatusImpressao ListarUsingGET6 (long? id = null, string nome = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -65,7 +65,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        ApiResponse<PageStatusImpressao> ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        ApiResponse<PageStatusImpressao> ListarUsingGET6WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET5Async (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (long? id = null, string nome = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -393,9 +393,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageStatusImpressao</returns>
-        public PageStatusImpressao ListarUsingGET5 (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public PageStatusImpressao ListarUsingGET6 (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET5WithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET6WithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
         }
 
@@ -408,7 +408,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        public ApiResponse< PageStatusImpressao > ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public ApiResponse< PageStatusImpressao > ListarUsingGET6WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
@@ -464,9 +464,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -484,9 +484,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET5Async (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(id, nome, page, limit);
              return localVarResponse.Data;
 
         }
@@ -500,7 +500,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
         {
             
     
@@ -557,9 +557,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
