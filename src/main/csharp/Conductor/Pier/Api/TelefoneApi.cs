@@ -90,7 +90,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param>
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
         /// <returns>Telefone</returns>
-        Telefone SalvarUsingPOST1 (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        Telefone SalvarUsingPOST2 (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
   
         /// <summary>
         /// Realiza o cadastro de um novo Telefone
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param>
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
         /// <returns>ApiResponse of Telefone</returns>
-        ApiResponse<Telefone> SalvarUsingPOST1WithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        ApiResponse<Telefone> SalvarUsingPOST2WithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
         
         #endregion Synchronous Operations
         
@@ -184,7 +184,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param>
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
         /// <returns>Task of Telefone</returns>
-        System.Threading.Tasks.Task<Telefone> SalvarUsingPOST1Async (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        System.Threading.Tasks.Task<Telefone> SalvarUsingPOST2Async (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
 
         /// <summary>
         /// Realiza o cadastro de um novo Telefone
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param>
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
         /// <returns>Task of ApiResponse (Telefone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Telefone>> SalvarUsingPOST1AsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        System.Threading.Tasks.Task<ApiResponse<Telefone>> SalvarUsingPOST2AsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
         
         #endregion Asynchronous Operations
         
@@ -687,9 +687,9 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param> 
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param> 
         /// <returns>Telefone</returns>
-        public Telefone SalvarUsingPOST1 (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public Telefone SalvarUsingPOST2 (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
-             ApiResponse<Telefone> localVarResponse = SalvarUsingPOST1WithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
+             ApiResponse<Telefone> localVarResponse = SalvarUsingPOST2WithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
              return localVarResponse.Data;
         }
 
@@ -703,7 +703,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param> 
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param> 
         /// <returns>ApiResponse of Telefone</returns>
-        public ApiResponse< Telefone > SalvarUsingPOST1WithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public ApiResponse< Telefone > SalvarUsingPOST2WithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
             
     
@@ -760,9 +760,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Telefone>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -781,9 +781,9 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param>
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
         /// <returns>Task of Telefone</returns>
-        public async System.Threading.Tasks.Task<Telefone> SalvarUsingPOST1Async (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public async System.Threading.Tasks.Task<Telefone> SalvarUsingPOST2Async (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
-             ApiResponse<Telefone> localVarResponse = await SalvarUsingPOST1AsyncWithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
+             ApiResponse<Telefone> localVarResponse = await SalvarUsingPOST2AsyncWithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
              return localVarResponse.Data;
 
         }
@@ -798,7 +798,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00C3\u00BAmero do telefone. (optional)</param>
         /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
         /// <returns>Task of ApiResponse (Telefone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Telefone>> SalvarUsingPOST1AsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Telefone>> SalvarUsingPOST2AsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
             
     
@@ -856,9 +856,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Telefone>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
