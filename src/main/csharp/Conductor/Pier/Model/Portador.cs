@@ -26,6 +26,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataCancelamentoPortador">Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="FlagAtivo">Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o..</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)..</param>
+        /// <param name="IdImagem">Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o..</param>
         /// <param name="IdParentesco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id).</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id)..</param>
         /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)..</param>
@@ -33,12 +34,13 @@ namespace Conductor.Pier.Model
         /// <param name="NomeImpresso">Apresenta o nome a ser impresso no cart\u00C3\u00A3o..</param>
         /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
 
-        public Portador(DateTime? DataCadastroPortador = null, DateTime? DataCancelamentoPortador = null, int? FlagAtivo = null, long? IdConta = null, long? IdParentesco = null, long? IdPessoa = null, long? IdProduto = null, long? IdTipoCartao = null, string NomeImpresso = null, string TipoPortador = null)
+        public Portador(DateTime? DataCadastroPortador = null, DateTime? DataCancelamentoPortador = null, int? FlagAtivo = null, long? IdConta = null, long? IdImagem = null, long? IdParentesco = null, long? IdPessoa = null, long? IdProduto = null, long? IdTipoCartao = null, string NomeImpresso = null, string TipoPortador = null)
         {
             this.DataCadastroPortador = DataCadastroPortador;
             this.DataCancelamentoPortador = DataCancelamentoPortador;
             this.FlagAtivo = FlagAtivo;
             this.IdConta = IdConta;
+            this.IdImagem = IdImagem;
             this.IdParentesco = IdParentesco;
             this.IdPessoa = IdPessoa;
             this.IdProduto = IdProduto;
@@ -76,6 +78,13 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
+    
+        /// <summary>
+        /// Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+        /// </summary>
+        /// <value>Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.</value>
+        [DataMember(Name="idImagem", EmitDefaultValue=false)]
+        public long? IdImagem { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
@@ -131,6 +140,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataCancelamentoPortador: ").Append(DataCancelamentoPortador).Append("\n");
             sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdImagem: ").Append(IdImagem).Append("\n");
             sb.Append("  IdParentesco: ").Append(IdParentesco).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
@@ -195,6 +205,11 @@ namespace Conductor.Pier.Model
                     this.IdConta.Equals(other.IdConta)
                 ) && 
                 (
+                    this.IdImagem == other.IdImagem ||
+                    this.IdImagem != null &&
+                    this.IdImagem.Equals(other.IdImagem)
+                ) && 
+                (
                     this.IdParentesco == other.IdParentesco ||
                     this.IdParentesco != null &&
                     this.IdParentesco.Equals(other.IdParentesco)
@@ -249,6 +264,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdImagem != null)
+                    hash = hash * 59 + this.IdImagem.GetHashCode();
                 
                 if (this.IdParentesco != null)
                     hash = hash * 59 + this.IdParentesco.GetHashCode();
