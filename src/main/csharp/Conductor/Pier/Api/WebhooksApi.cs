@@ -52,9 +52,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>WebHook</returns>
-        WebHook ConsultarUsingGET9 (long? idWebhook);
+        WebHook ConsultarUsingGET9 (long? id);
   
         /// <summary>
         /// Consultar Webhook
@@ -63,9 +63,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> ConsultarUsingGET9WithHttpInfo (long? idWebhook);
+        ApiResponse<WebHook> ConsultarUsingGET9WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os Webhooks
@@ -164,9 +164,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> ConsultarUsingGET9Async (long? idWebhook);
+        System.Threading.Tasks.Task<WebHook> ConsultarUsingGET9Async (long? id);
 
         /// <summary>
         /// Consultar Webhook
@@ -175,9 +175,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> ConsultarUsingGET9AsyncWithHttpInfo (long? idWebhook);
+        System.Threading.Tasks.Task<ApiResponse<WebHook>> ConsultarUsingGET9AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os Webhooks
@@ -540,11 +540,11 @@ namespace Conductor.Pier.Api
         /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
         /// <returns>WebHook</returns>
-        public WebHook ConsultarUsingGET9 (long? idWebhook)
+        public WebHook ConsultarUsingGET9 (long? id)
         {
-             ApiResponse<WebHook> localVarResponse = ConsultarUsingGET9WithHttpInfo(idWebhook);
+             ApiResponse<WebHook> localVarResponse = ConsultarUsingGET9WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -552,17 +552,17 @@ namespace Conductor.Pier.Api
         /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
         /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > ConsultarUsingGET9WithHttpInfo (long? idWebhook)
+        public ApiResponse< WebHook > ConsultarUsingGET9WithHttpInfo (long? id)
         {
             
-            // verify the required parameter 'idWebhook' is set
-            if (idWebhook == null)
-                throw new ApiException(400, "Missing required parameter 'idWebhook' when calling WebhooksApi->ConsultarUsingGET9");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling WebhooksApi->ConsultarUsingGET9");
             
     
-            var localVarPath = "/api/webhooks/{id_webhook}";
+            var localVarPath = "/api/webhooks/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -588,7 +588,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idWebhook != null) localVarPathParams.Add("id_webhook", Configuration.ApiClient.ParameterToString(idWebhook)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -626,11 +626,11 @@ namespace Conductor.Pier.Api
         /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> ConsultarUsingGET9Async (long? idWebhook)
+        public async System.Threading.Tasks.Task<WebHook> ConsultarUsingGET9Async (long? id)
         {
-             ApiResponse<WebHook> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(idWebhook);
+             ApiResponse<WebHook> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -639,15 +639,15 @@ namespace Conductor.Pier.Api
         /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idWebhook">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> ConsultarUsingGET9AsyncWithHttpInfo (long? idWebhook)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> ConsultarUsingGET9AsyncWithHttpInfo (long? id)
         {
-            // verify the required parameter 'idWebhook' is set
-            if (idWebhook == null) throw new ApiException(400, "Missing required parameter 'idWebhook' when calling ConsultarUsingGET9");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET9");
             
     
-            var localVarPath = "/api/webhooks/{id_webhook}";
+            var localVarPath = "/api/webhooks/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -673,7 +673,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idWebhook != null) localVarPathParams.Add("id_webhook", Configuration.ApiClient.ParameterToString(idWebhook)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
