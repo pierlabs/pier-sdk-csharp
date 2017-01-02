@@ -29,7 +29,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>WebHook</returns>
-        WebHook AlterarUsingPUT2 (long? id, Object evento, Object metodo, string url);
+        WebHook AlterarUsingPUT3 (long? id, Object evento, Object metodo, string url);
   
         /// <summary>
         /// Alterar Webhook
@@ -43,7 +43,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> AlterarUsingPUT2WithHttpInfo (long? id, Object evento, Object metodo, string url);
+        ApiResponse<WebHook> AlterarUsingPUT3WithHttpInfo (long? id, Object evento, Object metodo, string url);
         
         /// <summary>
         /// Consultar Webhook
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> AlterarUsingPUT2Async (long? id, Object evento, Object metodo, string url);
+        System.Threading.Tasks.Task<WebHook> AlterarUsingPUT3Async (long? id, Object evento, Object metodo, string url);
 
         /// <summary>
         /// Alterar Webhook
@@ -155,7 +155,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, Object evento, Object metodo, string url);
+        System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT3AsyncWithHttpInfo (long? id, Object evento, Object metodo, string url);
         
         /// <summary>
         /// Consultar Webhook
@@ -338,9 +338,9 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>WebHook</returns>
-        public WebHook AlterarUsingPUT2 (long? id, Object evento, Object metodo, string url)
+        public WebHook AlterarUsingPUT3 (long? id, Object evento, Object metodo, string url)
         {
-             ApiResponse<WebHook> localVarResponse = AlterarUsingPUT2WithHttpInfo(id, evento, metodo, url);
+             ApiResponse<WebHook> localVarResponse = AlterarUsingPUT3WithHttpInfo(id, evento, metodo, url);
              return localVarResponse.Data;
         }
 
@@ -353,24 +353,24 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > AlterarUsingPUT2WithHttpInfo (long? id, Object evento, Object metodo, string url)
+        public ApiResponse< WebHook > AlterarUsingPUT3WithHttpInfo (long? id, Object evento, Object metodo, string url)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling WebhooksApi->AlterarUsingPUT2");
+                throw new ApiException(400, "Missing required parameter 'id' when calling WebhooksApi->AlterarUsingPUT3");
             
             // verify the required parameter 'evento' is set
             if (evento == null)
-                throw new ApiException(400, "Missing required parameter 'evento' when calling WebhooksApi->AlterarUsingPUT2");
+                throw new ApiException(400, "Missing required parameter 'evento' when calling WebhooksApi->AlterarUsingPUT3");
             
             // verify the required parameter 'metodo' is set
             if (metodo == null)
-                throw new ApiException(400, "Missing required parameter 'metodo' when calling WebhooksApi->AlterarUsingPUT2");
+                throw new ApiException(400, "Missing required parameter 'metodo' when calling WebhooksApi->AlterarUsingPUT3");
             
             // verify the required parameter 'url' is set
             if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhooksApi->AlterarUsingPUT2");
+                throw new ApiException(400, "Missing required parameter 'url' when calling WebhooksApi->AlterarUsingPUT3");
             
     
             var localVarPath = "/api/webhooks";
@@ -425,9 +425,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT3: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WebHook>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -445,9 +445,9 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> AlterarUsingPUT2Async (long? id, Object evento, Object metodo, string url)
+        public async System.Threading.Tasks.Task<WebHook> AlterarUsingPUT3Async (long? id, Object evento, Object metodo, string url)
         {
-             ApiResponse<WebHook> localVarResponse = await AlterarUsingPUT2AsyncWithHttpInfo(id, evento, metodo, url);
+             ApiResponse<WebHook> localVarResponse = await AlterarUsingPUT3AsyncWithHttpInfo(id, evento, metodo, url);
              return localVarResponse.Data;
 
         }
@@ -461,16 +461,16 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, Object evento, Object metodo, string url)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT3AsyncWithHttpInfo (long? id, Object evento, Object metodo, string url)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT2");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT3");
             // verify the required parameter 'evento' is set
-            if (evento == null) throw new ApiException(400, "Missing required parameter 'evento' when calling AlterarUsingPUT2");
+            if (evento == null) throw new ApiException(400, "Missing required parameter 'evento' when calling AlterarUsingPUT3");
             // verify the required parameter 'metodo' is set
-            if (metodo == null) throw new ApiException(400, "Missing required parameter 'metodo' when calling AlterarUsingPUT2");
+            if (metodo == null) throw new ApiException(400, "Missing required parameter 'metodo' when calling AlterarUsingPUT3");
             // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling AlterarUsingPUT2");
+            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling AlterarUsingPUT3");
             
     
             var localVarPath = "/api/webhooks";
@@ -526,9 +526,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT3: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WebHook>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
