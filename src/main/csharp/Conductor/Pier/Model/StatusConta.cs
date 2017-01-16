@@ -22,22 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusConta" /> class.
         /// Initializes a new instance of the <see cref="StatusConta" />class.
         /// </summary>
-        /// <param name="FlagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (required).</param>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (required).</param>
-        /// <param name="MensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades..</param>
         /// <param name="Nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (required).</param>
+        /// <param name="FlagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (required).</param>
+        /// <param name="MensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades..</param>
 
-        public StatusConta(int? FlagAlteraLimite = null, long? Id = null, string MensagemConsultaNegada = null, string Nome = null)
+        public StatusConta(long? Id = null, string Nome = null, int? FlagAlteraLimite = null, string MensagemConsultaNegada = null)
         {
-            // to ensure "FlagAlteraLimite" is required (not null)
-            if (FlagAlteraLimite == null)
-            {
-                throw new InvalidDataException("FlagAlteraLimite is a required property for StatusConta and cannot be null");
-            }
-            else
-            {
-                this.FlagAlteraLimite = FlagAlteraLimite;
-            }
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
@@ -56,17 +47,19 @@ namespace Conductor.Pier.Model
             {
                 this.Nome = Nome;
             }
+            // to ensure "FlagAlteraLimite" is required (not null)
+            if (FlagAlteraLimite == null)
+            {
+                throw new InvalidDataException("FlagAlteraLimite is a required property for StatusConta and cannot be null");
+            }
+            else
+            {
+                this.FlagAlteraLimite = FlagAlteraLimite;
+            }
             this.MensagemConsultaNegada = MensagemConsultaNegada;
             
         }
         
-    
-        /// <summary>
-        /// Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-        /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.</value>
-        [DataMember(Name="flagAlteraLimite", EmitDefaultValue=false)]
-        public int? FlagAlteraLimite { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
@@ -76,18 +69,25 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
-        /// Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-        /// </summary>
-        /// <value>Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.</value>
-        [DataMember(Name="mensagemConsultaNegada", EmitDefaultValue=false)]
-        public string MensagemConsultaNegada { get; set; }
-    
-        /// <summary>
         /// Nome atribu\u00C3\u00ADdo ao Status da Conta.
         /// </summary>
         /// <value>Nome atribu\u00C3\u00ADdo ao Status da Conta.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="flagAlteraLimite", EmitDefaultValue=false)]
+        public int? FlagAlteraLimite { get; set; }
+    
+        /// <summary>
+        /// Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+        /// </summary>
+        /// <value>Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.</value>
+        [DataMember(Name="mensagemConsultaNegada", EmitDefaultValue=false)]
+        public string MensagemConsultaNegada { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -97,10 +97,10 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatusConta {\n");
-            sb.Append("  FlagAlteraLimite: ").Append(FlagAlteraLimite).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  MensagemConsultaNegada: ").Append(MensagemConsultaNegada).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
+            sb.Append("  FlagAlteraLimite: ").Append(FlagAlteraLimite).Append("\n");
+            sb.Append("  MensagemConsultaNegada: ").Append(MensagemConsultaNegada).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -139,24 +139,24 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.FlagAlteraLimite == other.FlagAlteraLimite ||
-                    this.FlagAlteraLimite != null &&
-                    this.FlagAlteraLimite.Equals(other.FlagAlteraLimite)
-                ) && 
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.MensagemConsultaNegada == other.MensagemConsultaNegada ||
-                    this.MensagemConsultaNegada != null &&
-                    this.MensagemConsultaNegada.Equals(other.MensagemConsultaNegada)
-                ) && 
-                (
                     this.Nome == other.Nome ||
                     this.Nome != null &&
                     this.Nome.Equals(other.Nome)
+                ) && 
+                (
+                    this.FlagAlteraLimite == other.FlagAlteraLimite ||
+                    this.FlagAlteraLimite != null &&
+                    this.FlagAlteraLimite.Equals(other.FlagAlteraLimite)
+                ) && 
+                (
+                    this.MensagemConsultaNegada == other.MensagemConsultaNegada ||
+                    this.MensagemConsultaNegada != null &&
+                    this.MensagemConsultaNegada.Equals(other.MensagemConsultaNegada)
                 );
         }
 
@@ -172,17 +172,17 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.FlagAlteraLimite != null)
-                    hash = hash * 59 + this.FlagAlteraLimite.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.MensagemConsultaNegada != null)
-                    hash = hash * 59 + this.MensagemConsultaNegada.GetHashCode();
-                
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
+                
+                if (this.FlagAlteraLimite != null)
+                    hash = hash * 59 + this.FlagAlteraLimite.GetHashCode();
+                
+                if (this.MensagemConsultaNegada != null)
+                    hash = hash * 59 + this.MensagemConsultaNegada.GetHashCode();
                 
                 return hash;
             }

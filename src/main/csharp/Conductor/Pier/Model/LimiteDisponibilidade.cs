@@ -23,28 +23,28 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LimiteDisponibilidade" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id). (required).</param>
-        /// <param name="LimiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required).</param>
-        /// <param name="LimiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (required).</param>
         /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (required).</param>
+        /// <param name="LimiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required).</param>
+        /// <param name="LimiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required).</param>
+        /// <param name="LimiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (required).</param>
+        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
+        /// <param name="LimiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
+        /// <param name="LimiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (required).</param>
         /// <param name="LimiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (required).</param>
         /// <param name="LimiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (required).</param>
         /// <param name="LimiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (required).</param>
         /// <param name="LimiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required).</param>
         /// <param name="LimiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="LimiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required).</param>
-        /// <param name="LimiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (required).</param>
-        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="LimiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="SaldoDisponivelCompra">Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional. (required).</param>
-        /// <param name="SaldoDisponivelCompraInternacional">Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional. (required).</param>
         /// <param name="SaldoDisponivelGlobal">Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es. (required).</param>
+        /// <param name="SaldoDisponivelCompra">Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional. (required).</param>
         /// <param name="SaldoDisponivelParcelado">Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional. (required).</param>
         /// <param name="SaldoDisponivelParcelas">Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento. (required).</param>
         /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="SaldoDisponivelSaqueInternacional">Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required).</param>
         /// <param name="SaldoPontosFidelidade">Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui. (required).</param>
+        /// <param name="SaldoDisponivelCompraInternacional">Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional. (required).</param>
+        /// <param name="SaldoDisponivelSaqueInternacional">Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required).</param>
 
-        public LimiteDisponibilidade(long? Id = null, double? LimiteCompra = null, double? LimiteConsignado = null, double? LimiteGlobal = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null, double? SaldoDisponivelCompra = null, double? SaldoDisponivelCompraInternacional = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelParcelado = null, double? SaldoDisponivelParcelas = null, double? SaldoDisponivelSaque = null, double? SaldoDisponivelSaqueInternacional = null, double? SaldoPontosFidelidade = null)
+        public LimiteDisponibilidade(long? Id = null, double? LimiteGlobal = null, double? LimiteCompra = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null, double? LimiteConsignado = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelCompra = null, double? SaldoDisponivelParcelado = null, double? SaldoDisponivelParcelas = null, double? SaldoDisponivelSaque = null, double? SaldoPontosFidelidade = null, double? SaldoDisponivelCompraInternacional = null, double? SaldoDisponivelSaqueInternacional = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -55,6 +55,15 @@ namespace Conductor.Pier.Model
             {
                 this.Id = Id;
             }
+            // to ensure "LimiteGlobal" is required (not null)
+            if (LimiteGlobal == null)
+            {
+                throw new InvalidDataException("LimiteGlobal is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.LimiteGlobal = LimiteGlobal;
+            }
             // to ensure "LimiteCompra" is required (not null)
             if (LimiteCompra == null)
             {
@@ -64,6 +73,42 @@ namespace Conductor.Pier.Model
             {
                 this.LimiteCompra = LimiteCompra;
             }
+            // to ensure "LimiteParcelado" is required (not null)
+            if (LimiteParcelado == null)
+            {
+                throw new InvalidDataException("LimiteParcelado is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.LimiteParcelado = LimiteParcelado;
+            }
+            // to ensure "LimiteParcelas" is required (not null)
+            if (LimiteParcelas == null)
+            {
+                throw new InvalidDataException("LimiteParcelas is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.LimiteParcelas = LimiteParcelas;
+            }
+            // to ensure "LimiteSaqueGlobal" is required (not null)
+            if (LimiteSaqueGlobal == null)
+            {
+                throw new InvalidDataException("LimiteSaqueGlobal is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.LimiteSaqueGlobal = LimiteSaqueGlobal;
+            }
+            // to ensure "LimiteSaquePeriodo" is required (not null)
+            if (LimiteSaquePeriodo == null)
+            {
+                throw new InvalidDataException("LimiteSaquePeriodo is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.LimiteSaquePeriodo = LimiteSaquePeriodo;
+            }
             // to ensure "LimiteConsignado" is required (not null)
             if (LimiteConsignado == null)
             {
@@ -72,15 +117,6 @@ namespace Conductor.Pier.Model
             else
             {
                 this.LimiteConsignado = LimiteConsignado;
-            }
-            // to ensure "LimiteGlobal" is required (not null)
-            if (LimiteGlobal == null)
-            {
-                throw new InvalidDataException("LimiteGlobal is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.LimiteGlobal = LimiteGlobal;
             }
             // to ensure "LimiteInternacionalCompra" is required (not null)
             if (LimiteInternacionalCompra == null)
@@ -127,41 +163,14 @@ namespace Conductor.Pier.Model
             {
                 this.LimiteInternacionalSaquePeriodo = LimiteInternacionalSaquePeriodo;
             }
-            // to ensure "LimiteParcelado" is required (not null)
-            if (LimiteParcelado == null)
+            // to ensure "SaldoDisponivelGlobal" is required (not null)
+            if (SaldoDisponivelGlobal == null)
             {
-                throw new InvalidDataException("LimiteParcelado is a required property for LimiteDisponibilidade and cannot be null");
+                throw new InvalidDataException("SaldoDisponivelGlobal is a required property for LimiteDisponibilidade and cannot be null");
             }
             else
             {
-                this.LimiteParcelado = LimiteParcelado;
-            }
-            // to ensure "LimiteParcelas" is required (not null)
-            if (LimiteParcelas == null)
-            {
-                throw new InvalidDataException("LimiteParcelas is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.LimiteParcelas = LimiteParcelas;
-            }
-            // to ensure "LimiteSaqueGlobal" is required (not null)
-            if (LimiteSaqueGlobal == null)
-            {
-                throw new InvalidDataException("LimiteSaqueGlobal is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.LimiteSaqueGlobal = LimiteSaqueGlobal;
-            }
-            // to ensure "LimiteSaquePeriodo" is required (not null)
-            if (LimiteSaquePeriodo == null)
-            {
-                throw new InvalidDataException("LimiteSaquePeriodo is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.LimiteSaquePeriodo = LimiteSaquePeriodo;
+                this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
             }
             // to ensure "SaldoDisponivelCompra" is required (not null)
             if (SaldoDisponivelCompra == null)
@@ -171,24 +180,6 @@ namespace Conductor.Pier.Model
             else
             {
                 this.SaldoDisponivelCompra = SaldoDisponivelCompra;
-            }
-            // to ensure "SaldoDisponivelCompraInternacional" is required (not null)
-            if (SaldoDisponivelCompraInternacional == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelCompraInternacional is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelCompraInternacional = SaldoDisponivelCompraInternacional;
-            }
-            // to ensure "SaldoDisponivelGlobal" is required (not null)
-            if (SaldoDisponivelGlobal == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelGlobal is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
             }
             // to ensure "SaldoDisponivelParcelado" is required (not null)
             if (SaldoDisponivelParcelado == null)
@@ -217,15 +208,6 @@ namespace Conductor.Pier.Model
             {
                 this.SaldoDisponivelSaque = SaldoDisponivelSaque;
             }
-            // to ensure "SaldoDisponivelSaqueInternacional" is required (not null)
-            if (SaldoDisponivelSaqueInternacional == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelSaqueInternacional is a required property for LimiteDisponibilidade and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelSaqueInternacional = SaldoDisponivelSaqueInternacional;
-            }
             // to ensure "SaldoPontosFidelidade" is required (not null)
             if (SaldoPontosFidelidade == null)
             {
@@ -234,6 +216,24 @@ namespace Conductor.Pier.Model
             else
             {
                 this.SaldoPontosFidelidade = SaldoPontosFidelidade;
+            }
+            // to ensure "SaldoDisponivelCompraInternacional" is required (not null)
+            if (SaldoDisponivelCompraInternacional == null)
+            {
+                throw new InvalidDataException("SaldoDisponivelCompraInternacional is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.SaldoDisponivelCompraInternacional = SaldoDisponivelCompraInternacional;
+            }
+            // to ensure "SaldoDisponivelSaqueInternacional" is required (not null)
+            if (SaldoDisponivelSaqueInternacional == null)
+            {
+                throw new InvalidDataException("SaldoDisponivelSaqueInternacional is a required property for LimiteDisponibilidade and cannot be null");
+            }
+            else
+            {
+                this.SaldoDisponivelSaqueInternacional = SaldoDisponivelSaqueInternacional;
             }
             
         }
@@ -247,6 +247,13 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
+        /// Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+        /// </summary>
+        /// <value>Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.</value>
+        [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
+        public double? LimiteGlobal { get; set; }
+    
+        /// <summary>
         /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
         /// </summary>
         /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.</value>
@@ -254,18 +261,39 @@ namespace Conductor.Pier.Model
         public double? LimiteCompra { get; set; }
     
         /// <summary>
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.</value>
+        [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
+        public double? LimiteParcelado { get; set; }
+    
+        /// <summary>
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.</value>
+        [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
+        public double? LimiteParcelas { get; set; }
+    
+        /// <summary>
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
+        [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
+        public double? LimiteSaqueGlobal { get; set; }
+    
+        /// <summary>
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
+        [DataMember(Name="limiteSaquePeriodo", EmitDefaultValue=false)]
+        public double? LimiteSaquePeriodo { get; set; }
+    
+        /// <summary>
         /// Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
         /// </summary>
         /// <value>Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.</value>
         [DataMember(Name="limiteConsignado", EmitDefaultValue=false)]
         public double? LimiteConsignado { get; set; }
-    
-        /// <summary>
-        /// Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-        /// </summary>
-        /// <value>Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.</value>
-        [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
-        public double? LimiteGlobal { get; set; }
     
         /// <summary>
         /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
@@ -303,32 +331,11 @@ namespace Conductor.Pier.Model
         public double? LimiteInternacionalSaquePeriodo { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+        /// Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.</value>
-        [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
-        public double? LimiteParcelado { get; set; }
-    
-        /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-        /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.</value>
-        [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
-        public double? LimiteParcelas { get; set; }
-    
-        /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-        /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
-        [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
-        public double? LimiteSaqueGlobal { get; set; }
-    
-        /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-        /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
-        [DataMember(Name="limiteSaquePeriodo", EmitDefaultValue=false)]
-        public double? LimiteSaquePeriodo { get; set; }
+        /// <value>Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.</value>
+        [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
+        public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
         /// Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
@@ -336,20 +343,6 @@ namespace Conductor.Pier.Model
         /// <value>Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.</value>
         [DataMember(Name="saldoDisponivelCompra", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompra { get; set; }
-    
-        /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
-        /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.</value>
-        [DataMember(Name="saldoDisponivelCompraInternacional", EmitDefaultValue=false)]
-        public double? SaldoDisponivelCompraInternacional { get; set; }
-    
-        /// <summary>
-        /// Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-        /// </summary>
-        /// <value>Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.</value>
-        [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
-        public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
         /// Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
@@ -373,18 +366,25 @@ namespace Conductor.Pier.Model
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-        /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</value>
-        [DataMember(Name="saldoDisponivelSaqueInternacional", EmitDefaultValue=false)]
-        public double? SaldoDisponivelSaqueInternacional { get; set; }
-    
-        /// <summary>
         /// Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
         /// </summary>
         /// <value>Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.</value>
         [DataMember(Name="saldoPontosFidelidade", EmitDefaultValue=false)]
         public double? SaldoPontosFidelidade { get; set; }
+    
+        /// <summary>
+        /// Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.</value>
+        [DataMember(Name="saldoDisponivelCompraInternacional", EmitDefaultValue=false)]
+        public double? SaldoDisponivelCompraInternacional { get; set; }
+    
+        /// <summary>
+        /// Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</value>
+        [DataMember(Name="saldoDisponivelSaqueInternacional", EmitDefaultValue=false)]
+        public double? SaldoDisponivelSaqueInternacional { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -395,26 +395,26 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class LimiteDisponibilidade {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  LimiteCompra: ").Append(LimiteCompra).Append("\n");
-            sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
             sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
+            sb.Append("  LimiteCompra: ").Append(LimiteCompra).Append("\n");
+            sb.Append("  LimiteParcelado: ").Append(LimiteParcelado).Append("\n");
+            sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
+            sb.Append("  LimiteSaqueGlobal: ").Append(LimiteSaqueGlobal).Append("\n");
+            sb.Append("  LimiteSaquePeriodo: ").Append(LimiteSaquePeriodo).Append("\n");
+            sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
             sb.Append("  LimiteInternacionalCompra: ").Append(LimiteInternacionalCompra).Append("\n");
             sb.Append("  LimiteInternacionalParcelado: ").Append(LimiteInternacionalParcelado).Append("\n");
             sb.Append("  LimiteInternacionalParcelas: ").Append(LimiteInternacionalParcelas).Append("\n");
             sb.Append("  LimiteInternacionalSaqueGlobal: ").Append(LimiteInternacionalSaqueGlobal).Append("\n");
             sb.Append("  LimiteInternacionalSaquePeriodo: ").Append(LimiteInternacionalSaquePeriodo).Append("\n");
-            sb.Append("  LimiteParcelado: ").Append(LimiteParcelado).Append("\n");
-            sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
-            sb.Append("  LimiteSaqueGlobal: ").Append(LimiteSaqueGlobal).Append("\n");
-            sb.Append("  LimiteSaquePeriodo: ").Append(LimiteSaquePeriodo).Append("\n");
-            sb.Append("  SaldoDisponivelCompra: ").Append(SaldoDisponivelCompra).Append("\n");
-            sb.Append("  SaldoDisponivelCompraInternacional: ").Append(SaldoDisponivelCompraInternacional).Append("\n");
             sb.Append("  SaldoDisponivelGlobal: ").Append(SaldoDisponivelGlobal).Append("\n");
+            sb.Append("  SaldoDisponivelCompra: ").Append(SaldoDisponivelCompra).Append("\n");
             sb.Append("  SaldoDisponivelParcelado: ").Append(SaldoDisponivelParcelado).Append("\n");
             sb.Append("  SaldoDisponivelParcelas: ").Append(SaldoDisponivelParcelas).Append("\n");
             sb.Append("  SaldoDisponivelSaque: ").Append(SaldoDisponivelSaque).Append("\n");
-            sb.Append("  SaldoDisponivelSaqueInternacional: ").Append(SaldoDisponivelSaqueInternacional).Append("\n");
             sb.Append("  SaldoPontosFidelidade: ").Append(SaldoPontosFidelidade).Append("\n");
+            sb.Append("  SaldoDisponivelCompraInternacional: ").Append(SaldoDisponivelCompraInternacional).Append("\n");
+            sb.Append("  SaldoDisponivelSaqueInternacional: ").Append(SaldoDisponivelSaqueInternacional).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -458,19 +458,39 @@ namespace Conductor.Pier.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.LimiteGlobal == other.LimiteGlobal ||
+                    this.LimiteGlobal != null &&
+                    this.LimiteGlobal.Equals(other.LimiteGlobal)
+                ) && 
+                (
                     this.LimiteCompra == other.LimiteCompra ||
                     this.LimiteCompra != null &&
                     this.LimiteCompra.Equals(other.LimiteCompra)
                 ) && 
                 (
+                    this.LimiteParcelado == other.LimiteParcelado ||
+                    this.LimiteParcelado != null &&
+                    this.LimiteParcelado.Equals(other.LimiteParcelado)
+                ) && 
+                (
+                    this.LimiteParcelas == other.LimiteParcelas ||
+                    this.LimiteParcelas != null &&
+                    this.LimiteParcelas.Equals(other.LimiteParcelas)
+                ) && 
+                (
+                    this.LimiteSaqueGlobal == other.LimiteSaqueGlobal ||
+                    this.LimiteSaqueGlobal != null &&
+                    this.LimiteSaqueGlobal.Equals(other.LimiteSaqueGlobal)
+                ) && 
+                (
+                    this.LimiteSaquePeriodo == other.LimiteSaquePeriodo ||
+                    this.LimiteSaquePeriodo != null &&
+                    this.LimiteSaquePeriodo.Equals(other.LimiteSaquePeriodo)
+                ) && 
+                (
                     this.LimiteConsignado == other.LimiteConsignado ||
                     this.LimiteConsignado != null &&
                     this.LimiteConsignado.Equals(other.LimiteConsignado)
-                ) && 
-                (
-                    this.LimiteGlobal == other.LimiteGlobal ||
-                    this.LimiteGlobal != null &&
-                    this.LimiteGlobal.Equals(other.LimiteGlobal)
                 ) && 
                 (
                     this.LimiteInternacionalCompra == other.LimiteInternacionalCompra ||
@@ -498,39 +518,14 @@ namespace Conductor.Pier.Model
                     this.LimiteInternacionalSaquePeriodo.Equals(other.LimiteInternacionalSaquePeriodo)
                 ) && 
                 (
-                    this.LimiteParcelado == other.LimiteParcelado ||
-                    this.LimiteParcelado != null &&
-                    this.LimiteParcelado.Equals(other.LimiteParcelado)
-                ) && 
-                (
-                    this.LimiteParcelas == other.LimiteParcelas ||
-                    this.LimiteParcelas != null &&
-                    this.LimiteParcelas.Equals(other.LimiteParcelas)
-                ) && 
-                (
-                    this.LimiteSaqueGlobal == other.LimiteSaqueGlobal ||
-                    this.LimiteSaqueGlobal != null &&
-                    this.LimiteSaqueGlobal.Equals(other.LimiteSaqueGlobal)
-                ) && 
-                (
-                    this.LimiteSaquePeriodo == other.LimiteSaquePeriodo ||
-                    this.LimiteSaquePeriodo != null &&
-                    this.LimiteSaquePeriodo.Equals(other.LimiteSaquePeriodo)
+                    this.SaldoDisponivelGlobal == other.SaldoDisponivelGlobal ||
+                    this.SaldoDisponivelGlobal != null &&
+                    this.SaldoDisponivelGlobal.Equals(other.SaldoDisponivelGlobal)
                 ) && 
                 (
                     this.SaldoDisponivelCompra == other.SaldoDisponivelCompra ||
                     this.SaldoDisponivelCompra != null &&
                     this.SaldoDisponivelCompra.Equals(other.SaldoDisponivelCompra)
-                ) && 
-                (
-                    this.SaldoDisponivelCompraInternacional == other.SaldoDisponivelCompraInternacional ||
-                    this.SaldoDisponivelCompraInternacional != null &&
-                    this.SaldoDisponivelCompraInternacional.Equals(other.SaldoDisponivelCompraInternacional)
-                ) && 
-                (
-                    this.SaldoDisponivelGlobal == other.SaldoDisponivelGlobal ||
-                    this.SaldoDisponivelGlobal != null &&
-                    this.SaldoDisponivelGlobal.Equals(other.SaldoDisponivelGlobal)
                 ) && 
                 (
                     this.SaldoDisponivelParcelado == other.SaldoDisponivelParcelado ||
@@ -548,14 +543,19 @@ namespace Conductor.Pier.Model
                     this.SaldoDisponivelSaque.Equals(other.SaldoDisponivelSaque)
                 ) && 
                 (
-                    this.SaldoDisponivelSaqueInternacional == other.SaldoDisponivelSaqueInternacional ||
-                    this.SaldoDisponivelSaqueInternacional != null &&
-                    this.SaldoDisponivelSaqueInternacional.Equals(other.SaldoDisponivelSaqueInternacional)
-                ) && 
-                (
                     this.SaldoPontosFidelidade == other.SaldoPontosFidelidade ||
                     this.SaldoPontosFidelidade != null &&
                     this.SaldoPontosFidelidade.Equals(other.SaldoPontosFidelidade)
+                ) && 
+                (
+                    this.SaldoDisponivelCompraInternacional == other.SaldoDisponivelCompraInternacional ||
+                    this.SaldoDisponivelCompraInternacional != null &&
+                    this.SaldoDisponivelCompraInternacional.Equals(other.SaldoDisponivelCompraInternacional)
+                ) && 
+                (
+                    this.SaldoDisponivelSaqueInternacional == other.SaldoDisponivelSaqueInternacional ||
+                    this.SaldoDisponivelSaqueInternacional != null &&
+                    this.SaldoDisponivelSaqueInternacional.Equals(other.SaldoDisponivelSaqueInternacional)
                 );
         }
 
@@ -574,14 +574,26 @@ namespace Conductor.Pier.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
+                if (this.LimiteGlobal != null)
+                    hash = hash * 59 + this.LimiteGlobal.GetHashCode();
+                
                 if (this.LimiteCompra != null)
                     hash = hash * 59 + this.LimiteCompra.GetHashCode();
                 
+                if (this.LimiteParcelado != null)
+                    hash = hash * 59 + this.LimiteParcelado.GetHashCode();
+                
+                if (this.LimiteParcelas != null)
+                    hash = hash * 59 + this.LimiteParcelas.GetHashCode();
+                
+                if (this.LimiteSaqueGlobal != null)
+                    hash = hash * 59 + this.LimiteSaqueGlobal.GetHashCode();
+                
+                if (this.LimiteSaquePeriodo != null)
+                    hash = hash * 59 + this.LimiteSaquePeriodo.GetHashCode();
+                
                 if (this.LimiteConsignado != null)
                     hash = hash * 59 + this.LimiteConsignado.GetHashCode();
-                
-                if (this.LimiteGlobal != null)
-                    hash = hash * 59 + this.LimiteGlobal.GetHashCode();
                 
                 if (this.LimiteInternacionalCompra != null)
                     hash = hash * 59 + this.LimiteInternacionalCompra.GetHashCode();
@@ -598,26 +610,11 @@ namespace Conductor.Pier.Model
                 if (this.LimiteInternacionalSaquePeriodo != null)
                     hash = hash * 59 + this.LimiteInternacionalSaquePeriodo.GetHashCode();
                 
-                if (this.LimiteParcelado != null)
-                    hash = hash * 59 + this.LimiteParcelado.GetHashCode();
-                
-                if (this.LimiteParcelas != null)
-                    hash = hash * 59 + this.LimiteParcelas.GetHashCode();
-                
-                if (this.LimiteSaqueGlobal != null)
-                    hash = hash * 59 + this.LimiteSaqueGlobal.GetHashCode();
-                
-                if (this.LimiteSaquePeriodo != null)
-                    hash = hash * 59 + this.LimiteSaquePeriodo.GetHashCode();
+                if (this.SaldoDisponivelGlobal != null)
+                    hash = hash * 59 + this.SaldoDisponivelGlobal.GetHashCode();
                 
                 if (this.SaldoDisponivelCompra != null)
                     hash = hash * 59 + this.SaldoDisponivelCompra.GetHashCode();
-                
-                if (this.SaldoDisponivelCompraInternacional != null)
-                    hash = hash * 59 + this.SaldoDisponivelCompraInternacional.GetHashCode();
-                
-                if (this.SaldoDisponivelGlobal != null)
-                    hash = hash * 59 + this.SaldoDisponivelGlobal.GetHashCode();
                 
                 if (this.SaldoDisponivelParcelado != null)
                     hash = hash * 59 + this.SaldoDisponivelParcelado.GetHashCode();
@@ -628,11 +625,14 @@ namespace Conductor.Pier.Model
                 if (this.SaldoDisponivelSaque != null)
                     hash = hash * 59 + this.SaldoDisponivelSaque.GetHashCode();
                 
-                if (this.SaldoDisponivelSaqueInternacional != null)
-                    hash = hash * 59 + this.SaldoDisponivelSaqueInternacional.GetHashCode();
-                
                 if (this.SaldoPontosFidelidade != null)
                     hash = hash * 59 + this.SaldoPontosFidelidade.GetHashCode();
+                
+                if (this.SaldoDisponivelCompraInternacional != null)
+                    hash = hash * 59 + this.SaldoDisponivelCompraInternacional.GetHashCode();
+                
+                if (this.SaldoDisponivelSaqueInternacional != null)
+                    hash = hash * 59 + this.SaldoDisponivelSaqueInternacional.GetHashCode();
                 
                 return hash;
             }

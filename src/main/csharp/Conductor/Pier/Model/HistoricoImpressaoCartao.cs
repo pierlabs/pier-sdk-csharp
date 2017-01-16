@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoImpressaoCartao" /> class.
         /// Initializes a new instance of the <see cref="HistoricoImpressaoCartao" />class.
         /// </summary>
-        /// <param name="DataHistorico">Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido..</param>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id). (required).</param>
         /// <param name="IdCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required).</param>
         /// <param name="IdStatusImpressaoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (required).</param>
         /// <param name="MensagemHistorico">Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado..</param>
+        /// <param name="DataHistorico">Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido..</param>
 
-        public HistoricoImpressaoCartao(DateTime? DataHistorico = null, long? Id = null, long? IdCartao = null, long? IdStatusImpressaoCartao = null, string MensagemHistorico = null)
+        public HistoricoImpressaoCartao(long? Id = null, long? IdCartao = null, long? IdStatusImpressaoCartao = null, string MensagemHistorico = null, DateTime? DataHistorico = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -57,18 +57,11 @@ namespace Conductor.Pier.Model
             {
                 this.IdStatusImpressaoCartao = IdStatusImpressaoCartao;
             }
-            this.DataHistorico = DataHistorico;
             this.MensagemHistorico = MensagemHistorico;
+            this.DataHistorico = DataHistorico;
             
         }
         
-    
-        /// <summary>
-        /// Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-        /// </summary>
-        /// <value>Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.</value>
-        [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
-        public DateTime? DataHistorico { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
@@ -99,6 +92,13 @@ namespace Conductor.Pier.Model
         public string MensagemHistorico { get; set; }
     
         /// <summary>
+        /// Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+        /// </summary>
+        /// <value>Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.</value>
+        [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
+        public DateTime? DataHistorico { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -106,11 +106,11 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HistoricoImpressaoCartao {\n");
-            sb.Append("  DataHistorico: ").Append(DataHistorico).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
             sb.Append("  IdStatusImpressaoCartao: ").Append(IdStatusImpressaoCartao).Append("\n");
             sb.Append("  MensagemHistorico: ").Append(MensagemHistorico).Append("\n");
+            sb.Append("  DataHistorico: ").Append(DataHistorico).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -149,11 +149,6 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.DataHistorico == other.DataHistorico ||
-                    this.DataHistorico != null &&
-                    this.DataHistorico.Equals(other.DataHistorico)
-                ) && 
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -172,6 +167,11 @@ namespace Conductor.Pier.Model
                     this.MensagemHistorico == other.MensagemHistorico ||
                     this.MensagemHistorico != null &&
                     this.MensagemHistorico.Equals(other.MensagemHistorico)
+                ) && 
+                (
+                    this.DataHistorico == other.DataHistorico ||
+                    this.DataHistorico != null &&
+                    this.DataHistorico.Equals(other.DataHistorico)
                 );
         }
 
@@ -187,9 +187,6 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.DataHistorico != null)
-                    hash = hash * 59 + this.DataHistorico.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
@@ -201,6 +198,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.MensagemHistorico != null)
                     hash = hash * 59 + this.MensagemHistorico.GetHashCode();
+                
+                if (this.DataHistorico != null)
+                    hash = hash * 59 + this.DataHistorico.GetHashCode();
                 
                 return hash;
             }

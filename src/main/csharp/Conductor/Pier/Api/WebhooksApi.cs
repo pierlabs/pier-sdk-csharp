@@ -29,7 +29,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>WebHook</returns>
-        WebHook AlterarUsingPUT3 (long? id, Object evento, Object metodo, string url);
+        WebHook AlterarUsingPUT3 (long? id, string evento, string metodo, string url);
   
         /// <summary>
         /// Alterar Webhook
@@ -43,7 +43,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> AlterarUsingPUT3WithHttpInfo (long? id, Object evento, Object metodo, string url);
+        ApiResponse<WebHook> AlterarUsingPUT3WithHttpInfo (long? id, string evento, string metodo, string url);
         
         /// <summary>
         /// Consultar Webhook
@@ -74,14 +74,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param>
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageWebHooks</returns>
-        PageWebHooks ListarUsingGET10 (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null);
+        PageWebHooks ListarUsingGET10 (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null);
   
         /// <summary>
         /// Lista os Webhooks
@@ -90,14 +90,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param>
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageWebHooks</returns>
-        ApiResponse<PageWebHooks> ListarUsingGET10WithHttpInfo (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null);
+        ApiResponse<PageWebHooks> ListarUsingGET10WithHttpInfo (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
@@ -110,7 +110,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>WebHook</returns>
-        WebHook SalvarUsingPOST3 (Object evento, Object metodo, string url);
+        WebHook SalvarUsingPOST3 (string evento, string metodo, string url);
   
         /// <summary>
         /// Salvar Webhook
@@ -123,7 +123,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> SalvarUsingPOST3WithHttpInfo (Object evento, Object metodo, string url);
+        ApiResponse<WebHook> SalvarUsingPOST3WithHttpInfo (string evento, string metodo, string url);
         
         #endregion Synchronous Operations
         
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> AlterarUsingPUT3Async (long? id, Object evento, Object metodo, string url);
+        System.Threading.Tasks.Task<WebHook> AlterarUsingPUT3Async (long? id, string evento, string metodo, string url);
 
         /// <summary>
         /// Alterar Webhook
@@ -155,7 +155,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT3AsyncWithHttpInfo (long? id, Object evento, Object metodo, string url);
+        System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT3AsyncWithHttpInfo (long? id, string evento, string metodo, string url);
         
         /// <summary>
         /// Consultar Webhook
@@ -186,14 +186,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param>
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageWebHooks</returns>
-        System.Threading.Tasks.Task<PageWebHooks> ListarUsingGET10Async (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageWebHooks> ListarUsingGET10Async (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null);
 
         /// <summary>
         /// Lista os Webhooks
@@ -202,14 +202,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param>
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHooks)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageWebHooks>> ListarUsingGET10AsyncWithHttpInfo (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageWebHooks>> ListarUsingGET10AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
@@ -222,7 +222,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> SalvarUsingPOST3Async (Object evento, Object metodo, string url);
+        System.Threading.Tasks.Task<WebHook> SalvarUsingPOST3Async (string evento, string metodo, string url);
 
         /// <summary>
         /// Salvar Webhook
@@ -235,7 +235,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> SalvarUsingPOST3AsyncWithHttpInfo (Object evento, Object metodo, string url);
+        System.Threading.Tasks.Task<ApiResponse<WebHook>> SalvarUsingPOST3AsyncWithHttpInfo (string evento, string metodo, string url);
         
         #endregion Asynchronous Operations
         
@@ -338,7 +338,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>WebHook</returns>
-        public WebHook AlterarUsingPUT3 (long? id, Object evento, Object metodo, string url)
+        public WebHook AlterarUsingPUT3 (long? id, string evento, string metodo, string url)
         {
              ApiResponse<WebHook> localVarResponse = AlterarUsingPUT3WithHttpInfo(id, evento, metodo, url);
              return localVarResponse.Data;
@@ -353,7 +353,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > AlterarUsingPUT3WithHttpInfo (long? id, Object evento, Object metodo, string url)
+        public ApiResponse< WebHook > AlterarUsingPUT3WithHttpInfo (long? id, string evento, string metodo, string url)
         {
             
             // verify the required parameter 'id' is set
@@ -445,7 +445,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> AlterarUsingPUT3Async (long? id, Object evento, Object metodo, string url)
+        public async System.Threading.Tasks.Task<WebHook> AlterarUsingPUT3Async (long? id, string evento, string metodo, string url)
         {
              ApiResponse<WebHook> localVarResponse = await AlterarUsingPUT3AsyncWithHttpInfo(id, evento, metodo, url);
              return localVarResponse.Data;
@@ -461,7 +461,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT3AsyncWithHttpInfo (long? id, Object evento, Object metodo, string url)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT3AsyncWithHttpInfo (long? id, string evento, string metodo, string url)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT3");
@@ -711,16 +711,16 @@ namespace Conductor.Pier.Api
         /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">Id do WebHook (optional)</param> 
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param> 
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageWebHooks</returns>
-        public PageWebHooks ListarUsingGET10 (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null)
+        public PageWebHooks ListarUsingGET10 (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHooks> localVarResponse = ListarUsingGET10WithHttpInfo(id, evento, metodo, url, page, limit);
+             ApiResponse<PageWebHooks> localVarResponse = ListarUsingGET10WithHttpInfo(page, limit, id, evento, metodo, url);
              return localVarResponse.Data;
         }
 
@@ -728,14 +728,14 @@ namespace Conductor.Pier.Api
         /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">Id do WebHook (optional)</param> 
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param> 
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageWebHooks</returns>
-        public ApiResponse< PageWebHooks > ListarUsingGET10WithHttpInfo (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null)
+        public ApiResponse< PageWebHooks > ListarUsingGET10WithHttpInfo (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null)
         {
             
     
@@ -766,12 +766,12 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (evento != null) localVarQueryParams.Add("evento", Configuration.ApiClient.ParameterToString(evento)); // query parameter
             if (metodo != null) localVarQueryParams.Add("metodo", Configuration.ApiClient.ParameterToString(metodo)); // query parameter
             if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -808,16 +808,16 @@ namespace Conductor.Pier.Api
         /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param>
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageWebHooks</returns>
-        public async System.Threading.Tasks.Task<PageWebHooks> ListarUsingGET10Async (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageWebHooks> ListarUsingGET10Async (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHooks> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(id, evento, metodo, url, page, limit);
+             ApiResponse<PageWebHooks> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(page, limit, id, evento, metodo, url);
              return localVarResponse.Data;
 
         }
@@ -826,14 +826,14 @@ namespace Conductor.Pier.Api
         /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="evento">Evento a ser chamado pelo WebHook (optional)</param>
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHooks)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageWebHooks>> ListarUsingGET10AsyncWithHttpInfo (long? id = null, Object evento = null, Object metodo = null, string url = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageWebHooks>> ListarUsingGET10AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string evento = null, string metodo = null, string url = null)
         {
             
     
@@ -864,12 +864,12 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (evento != null) localVarQueryParams.Add("evento", Configuration.ApiClient.ParameterToString(evento)); // query parameter
             if (metodo != null) localVarQueryParams.Add("metodo", Configuration.ApiClient.ParameterToString(metodo)); // query parameter
             if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -910,7 +910,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>WebHook</returns>
-        public WebHook SalvarUsingPOST3 (Object evento, Object metodo, string url)
+        public WebHook SalvarUsingPOST3 (string evento, string metodo, string url)
         {
              ApiResponse<WebHook> localVarResponse = SalvarUsingPOST3WithHttpInfo(evento, metodo, url);
              return localVarResponse.Data;
@@ -924,7 +924,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > SalvarUsingPOST3WithHttpInfo (Object evento, Object metodo, string url)
+        public ApiResponse< WebHook > SalvarUsingPOST3WithHttpInfo (string evento, string metodo, string url)
         {
             
             // verify the required parameter 'evento' is set
@@ -1010,7 +1010,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> SalvarUsingPOST3Async (Object evento, Object metodo, string url)
+        public async System.Threading.Tasks.Task<WebHook> SalvarUsingPOST3Async (string evento, string metodo, string url)
         {
              ApiResponse<WebHook> localVarResponse = await SalvarUsingPOST3AsyncWithHttpInfo(evento, metodo, url);
              return localVarResponse.Data;
@@ -1025,7 +1025,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> SalvarUsingPOST3AsyncWithHttpInfo (Object evento, Object metodo, string url)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> SalvarUsingPOST3AsyncWithHttpInfo (string evento, string metodo, string url)
         {
             // verify the required parameter 'evento' is set
             if (evento == null) throw new ApiException(400, "Missing required parameter 'evento' when calling SalvarUsingPOST3");

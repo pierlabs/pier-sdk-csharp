@@ -22,25 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidaCartao" /> class.
         /// Initializes a new instance of the <see cref="ValidaCartao" />class.
         /// </summary>
-        /// <param name="CriptogramaResposta">Criptograma de resposta.</param>
         /// <param name="StatusCartao">Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.</param>
         /// <param name="StatusConta">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta.</param>
+        /// <param name="CriptogramaResposta">Criptograma de resposta.</param>
 
-        public ValidaCartao(string CriptogramaResposta = null, string StatusCartao = null, string StatusConta = null)
+        public ValidaCartao(string StatusCartao = null, string StatusConta = null, string CriptogramaResposta = null)
         {
-            this.CriptogramaResposta = CriptogramaResposta;
             this.StatusCartao = StatusCartao;
             this.StatusConta = StatusConta;
+            this.CriptogramaResposta = CriptogramaResposta;
             
         }
         
-    
-        /// <summary>
-        /// Criptograma de resposta
-        /// </summary>
-        /// <value>Criptograma de resposta</value>
-        [DataMember(Name="criptogramaResposta", EmitDefaultValue=false)]
-        public string CriptogramaResposta { get; set; }
     
         /// <summary>
         /// Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
@@ -57,6 +50,13 @@ namespace Conductor.Pier.Model
         public string StatusConta { get; set; }
     
         /// <summary>
+        /// Criptograma de resposta
+        /// </summary>
+        /// <value>Criptograma de resposta</value>
+        [DataMember(Name="criptogramaResposta", EmitDefaultValue=false)]
+        public string CriptogramaResposta { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -64,9 +64,9 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ValidaCartao {\n");
-            sb.Append("  CriptogramaResposta: ").Append(CriptogramaResposta).Append("\n");
             sb.Append("  StatusCartao: ").Append(StatusCartao).Append("\n");
             sb.Append("  StatusConta: ").Append(StatusConta).Append("\n");
+            sb.Append("  CriptogramaResposta: ").Append(CriptogramaResposta).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -105,11 +105,6 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.CriptogramaResposta == other.CriptogramaResposta ||
-                    this.CriptogramaResposta != null &&
-                    this.CriptogramaResposta.Equals(other.CriptogramaResposta)
-                ) && 
-                (
                     this.StatusCartao == other.StatusCartao ||
                     this.StatusCartao != null &&
                     this.StatusCartao.Equals(other.StatusCartao)
@@ -118,6 +113,11 @@ namespace Conductor.Pier.Model
                     this.StatusConta == other.StatusConta ||
                     this.StatusConta != null &&
                     this.StatusConta.Equals(other.StatusConta)
+                ) && 
+                (
+                    this.CriptogramaResposta == other.CriptogramaResposta ||
+                    this.CriptogramaResposta != null &&
+                    this.CriptogramaResposta.Equals(other.CriptogramaResposta)
                 );
         }
 
@@ -133,14 +133,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.CriptogramaResposta != null)
-                    hash = hash * 59 + this.CriptogramaResposta.GetHashCode();
-                
                 if (this.StatusCartao != null)
                     hash = hash * 59 + this.StatusCartao.GetHashCode();
                 
                 if (this.StatusConta != null)
                     hash = hash * 59 + this.StatusConta.GetHashCode();
+                
+                if (this.CriptogramaResposta != null)
+                    hash = hash * 59 + this.CriptogramaResposta.GetHashCode();
                 
                 return hash;
             }

@@ -22,60 +22,32 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="Conta" /> class.
         /// Initializes a new instance of the <see cref="Conta" />class.
         /// </summary>
-        /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
-        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
-        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
-        /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id)..</param>
+        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta..</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id)..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
         /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id)..</param>
+        /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
+        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
+        /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
+        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
 
-        public Conta(DateTime? DataCadastro = null, DateTime? DataStatusConta = null, DateTime? DataUltimaAlteracaoVencimento = null, int? DiaVencimento = null, long? Id = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdProduto = null, long? IdStatusConta = null, int? MelhorDiaCompra = null)
+        public Conta(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null)
         {
-            this.DataCadastro = DataCadastro;
-            this.DataStatusConta = DataStatusConta;
-            this.DataUltimaAlteracaoVencimento = DataUltimaAlteracaoVencimento;
-            this.DiaVencimento = DiaVencimento;
             this.Id = Id;
+            this.IdProduto = IdProduto;
             this.IdOrigemComercial = IdOrigemComercial;
             this.IdPessoa = IdPessoa;
-            this.IdProduto = IdProduto;
             this.IdStatusConta = IdStatusConta;
+            this.DiaVencimento = DiaVencimento;
             this.MelhorDiaCompra = MelhorDiaCompra;
+            this.DataStatusConta = DataStatusConta;
+            this.DataCadastro = DataCadastro;
+            this.DataUltimaAlteracaoVencimento = DataUltimaAlteracaoVencimento;
             
         }
         
-    
-        /// <summary>
-        /// Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-        /// </summary>
-        /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
-        [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
-        public DateTime? DataCadastro { get; set; }
-    
-        /// <summary>
-        /// Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-        /// </summary>
-        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
-        [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
-        public DateTime? DataStatusConta { get; set; }
-    
-        /// <summary>
-        /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-        /// </summary>
-        /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
-        [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
-        public DateTime? DataUltimaAlteracaoVencimento { get; set; }
-    
-        /// <summary>
-        /// Apresenta o dia de vencimento.
-        /// </summary>
-        /// <value>Apresenta o dia de vencimento.</value>
-        [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
-        public int? DiaVencimento { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
@@ -83,6 +55,13 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).</value>
+        [DataMember(Name="idProduto", EmitDefaultValue=false)]
+        public long? IdProduto { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -99,18 +78,18 @@ namespace Conductor.Pier.Model
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).</value>
-        [DataMember(Name="idProduto", EmitDefaultValue=false)]
-        public long? IdProduto { get; set; }
-    
-        /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
         /// </summary>
         /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
+    
+        /// <summary>
+        /// Apresenta o dia de vencimento.
+        /// </summary>
+        /// <value>Apresenta o dia de vencimento.</value>
+        [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
+        public int? DiaVencimento { get; set; }
     
         /// <summary>
         /// Apresenta o melhor dia de compra.
@@ -120,6 +99,27 @@ namespace Conductor.Pier.Model
         public int? MelhorDiaCompra { get; set; }
     
         /// <summary>
+        /// Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+        /// </summary>
+        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
+        [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
+        public DateTime? DataStatusConta { get; set; }
+    
+        /// <summary>
+        /// Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+        /// </summary>
+        /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
+        [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
+        public DateTime? DataCadastro { get; set; }
+    
+        /// <summary>
+        /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+        /// </summary>
+        /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
+        [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
+        public DateTime? DataUltimaAlteracaoVencimento { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -127,16 +127,16 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Conta {\n");
-            sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
-            sb.Append("  DataStatusConta: ").Append(DataStatusConta).Append("\n");
-            sb.Append("  DataUltimaAlteracaoVencimento: ").Append(DataUltimaAlteracaoVencimento).Append("\n");
-            sb.Append("  DiaVencimento: ").Append(DiaVencimento).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
-            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  IdStatusConta: ").Append(IdStatusConta).Append("\n");
+            sb.Append("  DiaVencimento: ").Append(DiaVencimento).Append("\n");
             sb.Append("  MelhorDiaCompra: ").Append(MelhorDiaCompra).Append("\n");
+            sb.Append("  DataStatusConta: ").Append(DataStatusConta).Append("\n");
+            sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
+            sb.Append("  DataUltimaAlteracaoVencimento: ").Append(DataUltimaAlteracaoVencimento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -175,29 +175,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.DataCadastro == other.DataCadastro ||
-                    this.DataCadastro != null &&
-                    this.DataCadastro.Equals(other.DataCadastro)
-                ) && 
-                (
-                    this.DataStatusConta == other.DataStatusConta ||
-                    this.DataStatusConta != null &&
-                    this.DataStatusConta.Equals(other.DataStatusConta)
-                ) && 
-                (
-                    this.DataUltimaAlteracaoVencimento == other.DataUltimaAlteracaoVencimento ||
-                    this.DataUltimaAlteracaoVencimento != null &&
-                    this.DataUltimaAlteracaoVencimento.Equals(other.DataUltimaAlteracaoVencimento)
-                ) && 
-                (
-                    this.DiaVencimento == other.DiaVencimento ||
-                    this.DiaVencimento != null &&
-                    this.DiaVencimento.Equals(other.DiaVencimento)
-                ) && 
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.IdProduto == other.IdProduto ||
+                    this.IdProduto != null &&
+                    this.IdProduto.Equals(other.IdProduto)
                 ) && 
                 (
                     this.IdOrigemComercial == other.IdOrigemComercial ||
@@ -210,19 +195,34 @@ namespace Conductor.Pier.Model
                     this.IdPessoa.Equals(other.IdPessoa)
                 ) && 
                 (
-                    this.IdProduto == other.IdProduto ||
-                    this.IdProduto != null &&
-                    this.IdProduto.Equals(other.IdProduto)
-                ) && 
-                (
                     this.IdStatusConta == other.IdStatusConta ||
                     this.IdStatusConta != null &&
                     this.IdStatusConta.Equals(other.IdStatusConta)
                 ) && 
                 (
+                    this.DiaVencimento == other.DiaVencimento ||
+                    this.DiaVencimento != null &&
+                    this.DiaVencimento.Equals(other.DiaVencimento)
+                ) && 
+                (
                     this.MelhorDiaCompra == other.MelhorDiaCompra ||
                     this.MelhorDiaCompra != null &&
                     this.MelhorDiaCompra.Equals(other.MelhorDiaCompra)
+                ) && 
+                (
+                    this.DataStatusConta == other.DataStatusConta ||
+                    this.DataStatusConta != null &&
+                    this.DataStatusConta.Equals(other.DataStatusConta)
+                ) && 
+                (
+                    this.DataCadastro == other.DataCadastro ||
+                    this.DataCadastro != null &&
+                    this.DataCadastro.Equals(other.DataCadastro)
+                ) && 
+                (
+                    this.DataUltimaAlteracaoVencimento == other.DataUltimaAlteracaoVencimento ||
+                    this.DataUltimaAlteracaoVencimento != null &&
+                    this.DataUltimaAlteracaoVencimento.Equals(other.DataUltimaAlteracaoVencimento)
                 );
         }
 
@@ -238,20 +238,11 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.DataCadastro != null)
-                    hash = hash * 59 + this.DataCadastro.GetHashCode();
-                
-                if (this.DataStatusConta != null)
-                    hash = hash * 59 + this.DataStatusConta.GetHashCode();
-                
-                if (this.DataUltimaAlteracaoVencimento != null)
-                    hash = hash * 59 + this.DataUltimaAlteracaoVencimento.GetHashCode();
-                
-                if (this.DiaVencimento != null)
-                    hash = hash * 59 + this.DiaVencimento.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.IdProduto != null)
+                    hash = hash * 59 + this.IdProduto.GetHashCode();
                 
                 if (this.IdOrigemComercial != null)
                     hash = hash * 59 + this.IdOrigemComercial.GetHashCode();
@@ -259,14 +250,23 @@ namespace Conductor.Pier.Model
                 if (this.IdPessoa != null)
                     hash = hash * 59 + this.IdPessoa.GetHashCode();
                 
-                if (this.IdProduto != null)
-                    hash = hash * 59 + this.IdProduto.GetHashCode();
-                
                 if (this.IdStatusConta != null)
                     hash = hash * 59 + this.IdStatusConta.GetHashCode();
                 
+                if (this.DiaVencimento != null)
+                    hash = hash * 59 + this.DiaVencimento.GetHashCode();
+                
                 if (this.MelhorDiaCompra != null)
                     hash = hash * 59 + this.MelhorDiaCompra.GetHashCode();
+                
+                if (this.DataStatusConta != null)
+                    hash = hash * 59 + this.DataStatusConta.GetHashCode();
+                
+                if (this.DataCadastro != null)
+                    hash = hash * 59 + this.DataCadastro.GetHashCode();
+                
+                if (this.DataUltimaAlteracaoVencimento != null)
+                    hash = hash * 59 + this.DataUltimaAlteracaoVencimento.GetHashCode();
                 
                 return hash;
             }

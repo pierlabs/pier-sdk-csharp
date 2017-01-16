@@ -24,9 +24,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>EstagioCartao</returns>
-        EstagioCartao ConsultarEstagioCartaoUsingGET (long? idEstagioCartao);
+        EstagioCartao ConsultarEstagioCartaoUsingGET (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
@@ -35,9 +35,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of EstagioCartao</returns>
-        ApiResponse<EstagioCartao> ConsultarEstagioCartaoUsingGETWithHttpInfo (long? idEstagioCartao);
+        ApiResponse<EstagioCartao> ConsultarEstagioCartaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
@@ -46,9 +46,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>StatusCartao</returns>
-        StatusCartao ConsultarStatusCartaoUsingGET (long? idStatusCartao);
+        StatusCartao ConsultarStatusCartaoUsingGET (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
@@ -57,9 +57,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of StatusCartao</returns>
-        ApiResponse<StatusCartao> ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao);
+        ApiResponse<StatusCartao> ConsultarStatusCartaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -68,9 +68,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>StatusConta</returns>
-        StatusConta ConsultarUsingGET4 (long? idStatusConta);
+        StatusConta ConsultarUsingGET4 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -79,9 +79,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>ApiResponse of StatusConta</returns>
-        ApiResponse<StatusConta> ConsultarUsingGET4WithHttpInfo (long? idStatusConta);
+        ApiResponse<StatusConta> ConsultarUsingGET4WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -90,9 +90,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>StatusImpressao</returns>
-        StatusImpressao ConsultarUsingGET5 (long? idStatusImpressao);
+        StatusImpressao ConsultarUsingGET5 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -101,9 +101,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of StatusImpressao</returns>
-        ApiResponse<StatusImpressao> ConsultarUsingGET5WithHttpInfo (long? idStatusImpressao);
+        ApiResponse<StatusImpressao> ConsultarUsingGET5WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -112,12 +112,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <returns>PageEstagiosCartoes</returns>
-        PageEstagiosCartoes ListarEstagiosCartoesUsingGET (long? id = null, string nome = null, int? page = null, int? limit = null);
+        PageEstagiosCartoes ListarEstagiosCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -126,12 +126,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageEstagiosCartoes</returns>
-        ApiResponse<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        ApiResponse<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
@@ -140,6 +140,8 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param>
@@ -147,10 +149,8 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param>
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageStatusCartoes</returns>
-        PageStatusCartoes ListarStatusCartoesUsingGET (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null);
+        PageStatusCartoes ListarStatusCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
@@ -159,6 +159,8 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param>
@@ -166,10 +168,8 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param>
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageStatusCartoes</returns>
-        ApiResponse<PageStatusCartoes> ListarStatusCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null);
+        ApiResponse<PageStatusCartoes> ListarStatusCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null);
         
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -178,14 +178,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageStatusContas</returns>
-        PageStatusContas ListarUsingGET5 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        PageStatusContas ListarUsingGET5 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null);
   
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -194,14 +194,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageStatusContas</returns>
-        ApiResponse<PageStatusContas> ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        ApiResponse<PageStatusContas> ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -210,12 +210,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>PageStatusImpressao</returns>
-        PageStatusImpressao ListarUsingGET6 (long? id = null, string nome = null, int? page = null, int? limit = null);
+        PageStatusImpressao ListarUsingGET6 (int? page = null, int? limit = null, long? id = null, string nome = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -224,12 +224,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        ApiResponse<PageStatusImpressao> ListarUsingGET6WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        ApiResponse<PageStatusImpressao> ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
         
         #endregion Synchronous Operations
         
@@ -242,9 +242,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of EstagioCartao</returns>
-        System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGETAsync (long? idEstagioCartao);
+        System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGETAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
@@ -253,9 +253,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (EstagioCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo (long? idEstagioCartao);
+        System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
@@ -264,9 +264,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusCartao</returns>
-        System.Threading.Tasks.Task<StatusCartao> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao);
+        System.Threading.Tasks.Task<StatusCartao> ConsultarStatusCartaoUsingGETAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
@@ -275,9 +275,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusCartao>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao);
+        System.Threading.Tasks.Task<ApiResponse<StatusCartao>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -286,9 +286,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusConta</returns>
-        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? idStatusConta);
+        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -297,9 +297,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusConta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? idStatusConta);
+        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -308,9 +308,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressao</returns>
-        System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? idStatusImpressao);
+        System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -319,9 +319,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? idStatusImpressao);
+        System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -330,12 +330,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageEstagiosCartoes</returns>
-        System.Threading.Tasks.Task<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -344,12 +344,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageEstagiosCartoes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
@@ -358,6 +358,8 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param>
@@ -365,10 +367,8 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param>
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusCartoes</returns>
-        System.Threading.Tasks.Task<PageStatusCartoes> ListarStatusCartoesUsingGETAsync (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageStatusCartoes> ListarStatusCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
@@ -377,6 +377,8 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param>
@@ -384,10 +386,8 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param>
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusCartoes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusCartoes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusCartoes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null);
         
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -396,14 +396,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusContas</returns>
-        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null);
 
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -412,14 +412,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -428,12 +428,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (int? page = null, int? limit = null, long? id = null, string nome = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -442,12 +442,12 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
         
         #endregion Asynchronous Operations
         
@@ -545,11 +545,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>EstagioCartao</returns>
-        public EstagioCartao ConsultarEstagioCartaoUsingGET (long? idEstagioCartao)
+        public EstagioCartao ConsultarEstagioCartaoUsingGET (long? id)
         {
-             ApiResponse<EstagioCartao> localVarResponse = ConsultarEstagioCartaoUsingGETWithHttpInfo(idEstagioCartao);
+             ApiResponse<EstagioCartao> localVarResponse = ConsultarEstagioCartaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -557,17 +557,17 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of EstagioCartao</returns>
-        public ApiResponse< EstagioCartao > ConsultarEstagioCartaoUsingGETWithHttpInfo (long? idEstagioCartao)
+        public ApiResponse< EstagioCartao > ConsultarEstagioCartaoUsingGETWithHttpInfo (long? id)
         {
             
-            // verify the required parameter 'idEstagioCartao' is set
-            if (idEstagioCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idEstagioCartao' when calling StatusParametrosApi->ConsultarEstagioCartaoUsingGET");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarEstagioCartaoUsingGET");
             
     
-            var localVarPath = "/api/estagios-cartoes/{id_estagio_cartao}";
+            var localVarPath = "/api/estagios-cartoes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -593,7 +593,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idEstagioCartao != null) localVarPathParams.Add("id_estagio_cartao", Configuration.ApiClient.ParameterToString(idEstagioCartao)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -631,11 +631,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of EstagioCartao</returns>
-        public async System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGETAsync (long? idEstagioCartao)
+        public async System.Threading.Tasks.Task<EstagioCartao> ConsultarEstagioCartaoUsingGETAsync (long? id)
         {
-             ApiResponse<EstagioCartao> localVarResponse = await ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo(idEstagioCartao);
+             ApiResponse<EstagioCartao> localVarResponse = await ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -644,15 +644,15 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (EstagioCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo (long? idEstagioCartao)
+        public async System.Threading.Tasks.Task<ApiResponse<EstagioCartao>> ConsultarEstagioCartaoUsingGETAsyncWithHttpInfo (long? id)
         {
-            // verify the required parameter 'idEstagioCartao' is set
-            if (idEstagioCartao == null) throw new ApiException(400, "Missing required parameter 'idEstagioCartao' when calling ConsultarEstagioCartaoUsingGET");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarEstagioCartaoUsingGET");
             
     
-            var localVarPath = "/api/estagios-cartoes/{id_estagio_cartao}";
+            var localVarPath = "/api/estagios-cartoes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -678,7 +678,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idEstagioCartao != null) localVarPathParams.Add("id_estagio_cartao", Configuration.ApiClient.ParameterToString(idEstagioCartao)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -716,11 +716,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>StatusCartao</returns>
-        public StatusCartao ConsultarStatusCartaoUsingGET (long? idStatusCartao)
+        public StatusCartao ConsultarStatusCartaoUsingGET (long? id)
         {
-             ApiResponse<StatusCartao> localVarResponse = ConsultarStatusCartaoUsingGETWithHttpInfo(idStatusCartao);
+             ApiResponse<StatusCartao> localVarResponse = ConsultarStatusCartaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -728,17 +728,17 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of StatusCartao</returns>
-        public ApiResponse< StatusCartao > ConsultarStatusCartaoUsingGETWithHttpInfo (long? idStatusCartao)
+        public ApiResponse< StatusCartao > ConsultarStatusCartaoUsingGETWithHttpInfo (long? id)
         {
             
-            // verify the required parameter 'idStatusCartao' is set
-            if (idStatusCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusCartao' when calling StatusParametrosApi->ConsultarStatusCartaoUsingGET");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarStatusCartaoUsingGET");
             
     
-            var localVarPath = "/api/status-cartoes/{id_status_cartao}";
+            var localVarPath = "/api/status-cartoes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -764,7 +764,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusCartao != null) localVarPathParams.Add("id_status_cartao", Configuration.ApiClient.ParameterToString(idStatusCartao)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -802,11 +802,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusCartao</returns>
-        public async System.Threading.Tasks.Task<StatusCartao> ConsultarStatusCartaoUsingGETAsync (long? idStatusCartao)
+        public async System.Threading.Tasks.Task<StatusCartao> ConsultarStatusCartaoUsingGETAsync (long? id)
         {
-             ApiResponse<StatusCartao> localVarResponse = await ConsultarStatusCartaoUsingGETAsyncWithHttpInfo(idStatusCartao);
+             ApiResponse<StatusCartao> localVarResponse = await ConsultarStatusCartaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -815,15 +815,15 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusCartao>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? idStatusCartao)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusCartao>> ConsultarStatusCartaoUsingGETAsyncWithHttpInfo (long? id)
         {
-            // verify the required parameter 'idStatusCartao' is set
-            if (idStatusCartao == null) throw new ApiException(400, "Missing required parameter 'idStatusCartao' when calling ConsultarStatusCartaoUsingGET");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarStatusCartaoUsingGET");
             
     
-            var localVarPath = "/api/status-cartoes/{id_status_cartao}";
+            var localVarPath = "/api/status-cartoes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -849,7 +849,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusCartao != null) localVarPathParams.Add("id_status_cartao", Configuration.ApiClient.ParameterToString(idStatusCartao)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -887,11 +887,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>StatusConta</returns>
-        public StatusConta ConsultarUsingGET4 (long? idStatusConta)
+        public StatusConta ConsultarUsingGET4 (long? id)
         {
-             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET4WithHttpInfo(idStatusConta);
+             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET4WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -899,17 +899,17 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>ApiResponse of StatusConta</returns>
-        public ApiResponse< StatusConta > ConsultarUsingGET4WithHttpInfo (long? idStatusConta)
+        public ApiResponse< StatusConta > ConsultarUsingGET4WithHttpInfo (long? id)
         {
             
-            // verify the required parameter 'idStatusConta' is set
-            if (idStatusConta == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling StatusParametrosApi->ConsultarUsingGET4");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET4");
             
     
-            var localVarPath = "/api/status-contas/{id_status_conta}";
+            var localVarPath = "/api/status-contas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -935,7 +935,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusConta != null) localVarPathParams.Add("id_status_conta", Configuration.ApiClient.ParameterToString(idStatusConta)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -973,11 +973,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusConta</returns>
-        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? idStatusConta)
+        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? id)
         {
-             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(idStatusConta);
+             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -986,15 +986,15 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Conta Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusConta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? idStatusConta)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? id)
         {
-            // verify the required parameter 'idStatusConta' is set
-            if (idStatusConta == null) throw new ApiException(400, "Missing required parameter 'idStatusConta' when calling ConsultarUsingGET4");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET4");
             
     
-            var localVarPath = "/api/status-contas/{id_status_conta}";
+            var localVarPath = "/api/status-contas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1020,7 +1020,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusConta != null) localVarPathParams.Add("id_status_conta", Configuration.ApiClient.ParameterToString(idStatusConta)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -1058,11 +1058,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>StatusImpressao</returns>
-        public StatusImpressao ConsultarUsingGET5 (long? idStatusImpressao)
+        public StatusImpressao ConsultarUsingGET5 (long? id)
         {
-             ApiResponse<StatusImpressao> localVarResponse = ConsultarUsingGET5WithHttpInfo(idStatusImpressao);
+             ApiResponse<StatusImpressao> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1070,17 +1070,17 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of StatusImpressao</returns>
-        public ApiResponse< StatusImpressao > ConsultarUsingGET5WithHttpInfo (long? idStatusImpressao)
+        public ApiResponse< StatusImpressao > ConsultarUsingGET5WithHttpInfo (long? id)
         {
             
-            // verify the required parameter 'idStatusImpressao' is set
-            if (idStatusImpressao == null)
-                throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling StatusParametrosApi->ConsultarUsingGET5");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET5");
             
     
-            var localVarPath = "/api/status-impressoes/{id_status_impressao}";
+            var localVarPath = "/api/status-impressoes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1106,7 +1106,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusImpressao != null) localVarPathParams.Add("id_status_impressao", Configuration.ApiClient.ParameterToString(idStatusImpressao)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -1144,11 +1144,11 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressao</returns>
-        public async System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? idStatusImpressao)
+        public async System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? id)
         {
-             ApiResponse<StatusImpressao> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(idStatusImpressao);
+             ApiResponse<StatusImpressao> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1157,15 +1157,15 @@ namespace Conductor.Pier.Api
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? idStatusImpressao)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
         {
-            // verify the required parameter 'idStatusImpressao' is set
-            if (idStatusImpressao == null) throw new ApiException(400, "Missing required parameter 'idStatusImpressao' when calling ConsultarUsingGET5");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
             
     
-            var localVarPath = "/api/status-impressoes/{id_status_impressao}";
+            var localVarPath = "/api/status-impressoes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1191,7 +1191,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idStatusImpressao != null) localVarPathParams.Add("id_status_impressao", Configuration.ApiClient.ParameterToString(idStatusImpressao)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -1229,14 +1229,14 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
-        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <returns>PageEstagiosCartoes</returns>
-        public PageEstagiosCartoes ListarEstagiosCartoesUsingGET (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public PageEstagiosCartoes ListarEstagiosCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageEstagiosCartoes> localVarResponse = ListarEstagiosCartoesUsingGETWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageEstagiosCartoes> localVarResponse = ListarEstagiosCartoesUsingGETWithHttpInfo(page, limit, id, nome);
              return localVarResponse.Data;
         }
 
@@ -1244,12 +1244,12 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageEstagiosCartoes</returns>
-        public ApiResponse< PageEstagiosCartoes > ListarEstagiosCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public ApiResponse< PageEstagiosCartoes > ListarEstagiosCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -1280,10 +1280,10 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             
             
             
@@ -1320,14 +1320,14 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageEstagiosCartoes</returns>
-        public async System.Threading.Tasks.Task<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageEstagiosCartoes> ListarEstagiosCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageEstagiosCartoes> localVarResponse = await ListarEstagiosCartoesUsingGETAsyncWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageEstagiosCartoes> localVarResponse = await ListarEstagiosCartoesUsingGETAsyncWithHttpInfo(page, limit, id, nome);
              return localVarResponse.Data;
 
         }
@@ -1336,12 +1336,12 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageEstagiosCartoes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageEstagiosCartoes>> ListarEstagiosCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -1372,10 +1372,10 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             
             
             
@@ -1412,6 +1412,8 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param> 
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param> 
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param> 
@@ -1419,12 +1421,10 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param> 
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param> 
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageStatusCartoes</returns>
-        public PageStatusCartoes ListarStatusCartoesUsingGET (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null)
+        public PageStatusCartoes ListarStatusCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null)
         {
-             ApiResponse<PageStatusCartoes> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, page, limit);
+             ApiResponse<PageStatusCartoes> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(page, limit, id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa);
              return localVarResponse.Data;
         }
 
@@ -1432,6 +1432,8 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param> 
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param> 
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param> 
@@ -1439,10 +1441,8 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param> 
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param> 
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageStatusCartoes</returns>
-        public ApiResponse< PageStatusCartoes > ListarStatusCartoesUsingGETWithHttpInfo (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null)
+        public ApiResponse< PageStatusCartoes > ListarStatusCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null)
         {
             
     
@@ -1473,6 +1473,8 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (flagCancelaCartao != null) localVarQueryParams.Add("flagCancelaCartao", Configuration.ApiClient.ParameterToString(flagCancelaCartao)); // query parameter
@@ -1480,8 +1482,6 @@ namespace Conductor.Pier.Api
             if (idStatusDestinoDesbloqueio != null) localVarQueryParams.Add("idStatusDestinoDesbloqueio", Configuration.ApiClient.ParameterToString(idStatusDestinoDesbloqueio)); // query parameter
             if (idStatusDestinoConta != null) localVarQueryParams.Add("idStatusDestinoConta", Configuration.ApiClient.ParameterToString(idStatusDestinoConta)); // query parameter
             if (flagCobraTarifa != null) localVarQueryParams.Add("flagCobraTarifa", Configuration.ApiClient.ParameterToString(flagCobraTarifa)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -1518,6 +1518,8 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param>
@@ -1525,12 +1527,10 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param>
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusCartoes</returns>
-        public async System.Threading.Tasks.Task<PageStatusCartoes> ListarStatusCartoesUsingGETAsync (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageStatusCartoes> ListarStatusCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null)
         {
-             ApiResponse<PageStatusCartoes> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, page, limit);
+             ApiResponse<PageStatusCartoes> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(page, limit, id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa);
              return localVarResponse.Data;
 
         }
@@ -1539,6 +1539,8 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (optional)</param>
         /// <param name="flagCancelaCartao">Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta. (optional)</param>
@@ -1546,10 +1548,8 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (optional)</param>
         /// <param name="idStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (optional)</param>
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusCartoes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusCartoes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusCartoes>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null)
         {
             
     
@@ -1580,6 +1580,8 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (flagCancelaCartao != null) localVarQueryParams.Add("flagCancelaCartao", Configuration.ApiClient.ParameterToString(flagCancelaCartao)); // query parameter
@@ -1587,8 +1589,6 @@ namespace Conductor.Pier.Api
             if (idStatusDestinoDesbloqueio != null) localVarQueryParams.Add("idStatusDestinoDesbloqueio", Configuration.ApiClient.ParameterToString(idStatusDestinoDesbloqueio)); // query parameter
             if (idStatusDestinoConta != null) localVarQueryParams.Add("idStatusDestinoConta", Configuration.ApiClient.ParameterToString(idStatusDestinoConta)); // query parameter
             if (flagCobraTarifa != null) localVarQueryParams.Add("flagCobraTarifa", Configuration.ApiClient.ParameterToString(flagCobraTarifa)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -1625,16 +1625,16 @@ namespace Conductor.Pier.Api
         /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param> 
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param> 
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageStatusContas</returns>
-        public PageStatusContas ListarUsingGET5 (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public PageStatusContas ListarUsingGET5 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET5WithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
+             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET5WithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada);
              return localVarResponse.Data;
         }
 
@@ -1642,14 +1642,14 @@ namespace Conductor.Pier.Api
         /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param> 
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param> 
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageStatusContas</returns>
-        public ApiResponse< PageStatusContas > ListarUsingGET5WithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public ApiResponse< PageStatusContas > ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null)
         {
             
     
@@ -1680,12 +1680,12 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (flagAlteraLimite != null) localVarQueryParams.Add("flagAlteraLimite", Configuration.ApiClient.ParameterToString(flagAlteraLimite)); // query parameter
             if (mensagemConsultaNegada != null) localVarQueryParams.Add("mensagemConsultaNegada", Configuration.ApiClient.ParameterToString(mensagemConsultaNegada)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -1722,16 +1722,16 @@ namespace Conductor.Pier.Api
         /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageStatusContas</returns>
-        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(id, nome, flagAlteraLimite, mensagemConsultaNegada, page, limit);
+             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada);
              return localVarResponse.Data;
 
         }
@@ -1740,14 +1740,14 @@ namespace Conductor.Pier.Api
         /// Lista os Status Contas cadastrados para o Emissor Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (optional)</param>
         /// <param name="nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (optional)</param>
         /// <param name="flagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null)
         {
             
     
@@ -1778,12 +1778,12 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (flagAlteraLimite != null) localVarQueryParams.Add("flagAlteraLimite", Configuration.ApiClient.ParameterToString(flagAlteraLimite)); // query parameter
             if (mensagemConsultaNegada != null) localVarQueryParams.Add("mensagemConsultaNegada", Configuration.ApiClient.ParameterToString(mensagemConsultaNegada)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
             
             
@@ -1820,14 +1820,14 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param> 
         /// <returns>PageStatusImpressao</returns>
-        public PageStatusImpressao ListarUsingGET6 (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public PageStatusImpressao ListarUsingGET6 (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET6WithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET6WithHttpInfo(page, limit, id, nome);
              return localVarResponse.Data;
         }
 
@@ -1835,12 +1835,12 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        public ApiResponse< PageStatusImpressao > ListarUsingGET6WithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public ApiResponse< PageStatusImpressao > ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -1871,10 +1871,10 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             
             
             
@@ -1911,14 +1911,14 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(id, nome, page, limit);
+             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(page, limit, id, nome);
              return localVarResponse.Data;
 
         }
@@ -1927,12 +1927,12 @@ namespace Conductor.Pier.Api
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
+        /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (long? id = null, string nome = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -1963,10 +1963,10 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             
             
             

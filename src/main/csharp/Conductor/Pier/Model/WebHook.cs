@@ -72,22 +72,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="WebHook" /> class.
         /// Initializes a new instance of the <see cref="WebHook" />class.
         /// </summary>
-        /// <param name="Evento">Evento a ser chamado pelo WebHook (required).</param>
         /// <param name="Id">Id do WebHook (required).</param>
+        /// <param name="Evento">Evento a ser chamado pelo WebHook (required).</param>
         /// <param name="Metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (required).</param>
         /// <param name="Url">URL que a ser consumida pelo WebHook (required).</param>
 
-        public WebHook(EventoEnum? Evento = null, long? Id = null, MetodoEnum? Metodo = null, string Url = null)
+        public WebHook(long? Id = null, EventoEnum? Evento = null, MetodoEnum? Metodo = null, string Url = null)
         {
-            // to ensure "Evento" is required (not null)
-            if (Evento == null)
-            {
-                throw new InvalidDataException("Evento is a required property for WebHook and cannot be null");
-            }
-            else
-            {
-                this.Evento = Evento;
-            }
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
@@ -96,6 +87,15 @@ namespace Conductor.Pier.Model
             else
             {
                 this.Id = Id;
+            }
+            // to ensure "Evento" is required (not null)
+            if (Evento == null)
+            {
+                throw new InvalidDataException("Evento is a required property for WebHook and cannot be null");
+            }
+            else
+            {
+                this.Evento = Evento;
             }
             // to ensure "Metodo" is required (not null)
             if (Metodo == null)
@@ -141,8 +141,8 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WebHook {\n");
-            sb.Append("  Evento: ").Append(Evento).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Evento: ").Append(Evento).Append("\n");
             sb.Append("  Metodo: ").Append(Metodo).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             
@@ -183,14 +183,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Evento == other.Evento ||
-                    this.Evento != null &&
-                    this.Evento.Equals(other.Evento)
-                ) && 
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.Evento == other.Evento ||
+                    this.Evento != null &&
+                    this.Evento.Equals(other.Evento)
                 ) && 
                 (
                     this.Metodo == other.Metodo ||
@@ -216,11 +216,11 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Evento != null)
-                    hash = hash * 59 + this.Evento.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Evento != null)
+                    hash = hash * 59 + this.Evento.GetHashCode();
                 
                 if (this.Metodo != null)
                     hash = hash * 59 + this.Metodo.GetHashCode();
