@@ -156,10 +156,10 @@ namespace Conductor.Pier.Api
         ApiResponse<CartaoImpressao> GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+        /// Listar Faturas da Conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -170,10 +170,10 @@ namespace Conductor.Pier.Api
         Fatura ListarFaturasUsingGET (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null);
   
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+        /// Listar Faturas da Conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -228,10 +228,10 @@ namespace Conductor.Pier.Api
         ApiResponse<Conta> ListarUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
         
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+        /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -241,10 +241,10 @@ namespace Conductor.Pier.Api
         PageTransacaoResponse TransacoesUsingPOST (int? page = null, int? limit = null, long? idConta = null);
   
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+        /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -396,10 +396,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<CartaoImpressao>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+        /// Listar Faturas da Conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -410,10 +410,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null);
 
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+        /// Listar Faturas da Conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -468,10 +468,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
         
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+        /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -481,10 +481,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingPOSTAsync (int? page = null, int? limit = null, long? idConta = null);
 
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+        /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// 
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -1609,7 +1609,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas. 
+        /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -1624,7 +1624,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas. 
+        /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -1700,7 +1700,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas. 
+        /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -1716,7 +1716,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas. 
+        /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -2023,7 +2023,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta 
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -2037,7 +2037,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta 
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -2048,7 +2048,7 @@ namespace Conductor.Pier.Api
         {
             
     
-            var localVarPath = "/api/contas/{id_conta}/transacoes";
+            var localVarPath = "/api/contas/{id_conta}/timeline";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2111,7 +2111,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta 
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -2126,7 +2126,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta 
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -2137,7 +2137,7 @@ namespace Conductor.Pier.Api
         {
             
     
-            var localVarPath = "/api/contas/{id_conta}/transacoes";
+            var localVarPath = "/api/contas/{id_conta}/timeline";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
