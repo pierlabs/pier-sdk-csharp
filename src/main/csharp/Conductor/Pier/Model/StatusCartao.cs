@@ -29,8 +29,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdStatusDestinoDesbloqueio">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o. (required).</param>
         /// <param name="IdStatusDestinoConta">Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. (required).</param>
         /// <param name="FlagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (required).</param>
+        /// <param name="FlagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo..</param>
 
-        public StatusCartao(long? Id = null, string Nome = null, int? FlagCancelaCartao = null, int? FlagCancelaNoDesbloqueio = null, long? IdStatusDestinoDesbloqueio = null, long? IdStatusDestinoConta = null, int? FlagCobraTarifa = null)
+        public StatusCartao(long? Id = null, string Nome = null, int? FlagCancelaCartao = null, int? FlagCancelaNoDesbloqueio = null, long? IdStatusDestinoDesbloqueio = null, long? IdStatusDestinoConta = null, int? FlagCobraTarifa = null, int? FlagPermiteNovaViaCartao = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -87,6 +88,7 @@ namespace Conductor.Pier.Model
                 this.FlagCobraTarifa = FlagCobraTarifa;
             }
             this.FlagCancelaNoDesbloqueio = FlagCancelaNoDesbloqueio;
+            this.FlagPermiteNovaViaCartao = FlagPermiteNovaViaCartao;
             
         }
         
@@ -141,6 +143,13 @@ namespace Conductor.Pier.Model
         public int? FlagCobraTarifa { get; set; }
     
         /// <summary>
+        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="flagPermiteNovaViaCartao", EmitDefaultValue=false)]
+        public int? FlagPermiteNovaViaCartao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -155,6 +164,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdStatusDestinoDesbloqueio: ").Append(IdStatusDestinoDesbloqueio).Append("\n");
             sb.Append("  IdStatusDestinoConta: ").Append(IdStatusDestinoConta).Append("\n");
             sb.Append("  FlagCobraTarifa: ").Append(FlagCobraTarifa).Append("\n");
+            sb.Append("  FlagPermiteNovaViaCartao: ").Append(FlagPermiteNovaViaCartao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -226,6 +236,11 @@ namespace Conductor.Pier.Model
                     this.FlagCobraTarifa == other.FlagCobraTarifa ||
                     this.FlagCobraTarifa != null &&
                     this.FlagCobraTarifa.Equals(other.FlagCobraTarifa)
+                ) && 
+                (
+                    this.FlagPermiteNovaViaCartao == other.FlagPermiteNovaViaCartao ||
+                    this.FlagPermiteNovaViaCartao != null &&
+                    this.FlagPermiteNovaViaCartao.Equals(other.FlagPermiteNovaViaCartao)
                 );
         }
 
@@ -261,6 +276,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagCobraTarifa != null)
                     hash = hash * 59 + this.FlagCobraTarifa.GetHashCode();
+                
+                if (this.FlagPermiteNovaViaCartao != null)
+                    hash = hash * 59 + this.FlagPermiteNovaViaCartao.GetHashCode();
                 
                 return hash;
             }

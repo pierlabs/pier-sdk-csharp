@@ -26,8 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="Nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (required).</param>
         /// <param name="FlagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (required).</param>
         /// <param name="MensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades..</param>
+        /// <param name="FlagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
 
-        public StatusConta(long? Id = null, string Nome = null, int? FlagAlteraLimite = null, string MensagemConsultaNegada = null)
+        public StatusConta(long? Id = null, string Nome = null, int? FlagAlteraLimite = null, string MensagemConsultaNegada = null, int? FlagPermiteNovaViaCartao = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -57,6 +58,7 @@ namespace Conductor.Pier.Model
                 this.FlagAlteraLimite = FlagAlteraLimite;
             }
             this.MensagemConsultaNegada = MensagemConsultaNegada;
+            this.FlagPermiteNovaViaCartao = FlagPermiteNovaViaCartao;
             
         }
         
@@ -90,6 +92,13 @@ namespace Conductor.Pier.Model
         public string MensagemConsultaNegada { get; set; }
     
         /// <summary>
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="flagPermiteNovaViaCartao", EmitDefaultValue=false)]
+        public int? FlagPermiteNovaViaCartao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +110,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  FlagAlteraLimite: ").Append(FlagAlteraLimite).Append("\n");
             sb.Append("  MensagemConsultaNegada: ").Append(MensagemConsultaNegada).Append("\n");
+            sb.Append("  FlagPermiteNovaViaCartao: ").Append(FlagPermiteNovaViaCartao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -157,6 +167,11 @@ namespace Conductor.Pier.Model
                     this.MensagemConsultaNegada == other.MensagemConsultaNegada ||
                     this.MensagemConsultaNegada != null &&
                     this.MensagemConsultaNegada.Equals(other.MensagemConsultaNegada)
+                ) && 
+                (
+                    this.FlagPermiteNovaViaCartao == other.FlagPermiteNovaViaCartao ||
+                    this.FlagPermiteNovaViaCartao != null &&
+                    this.FlagPermiteNovaViaCartao.Equals(other.FlagPermiteNovaViaCartao)
                 );
         }
 
@@ -183,6 +198,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.MensagemConsultaNegada != null)
                     hash = hash * 59 + this.MensagemConsultaNegada.GetHashCode();
+                
+                if (this.FlagPermiteNovaViaCartao != null)
+                    hash = hash * 59 + this.FlagPermiteNovaViaCartao.GetHashCode();
                 
                 return hash;
             }
