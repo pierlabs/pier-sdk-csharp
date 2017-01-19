@@ -162,12 +162,12 @@ namespace Conductor.Pier.Api
         /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
         /// <returns>Fatura</returns>
-        Fatura ListarFaturasUsingGET (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null);
+        Fatura ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
   
         /// <summary>
         /// Listar Faturas da Conta
@@ -176,12 +176,12 @@ namespace Conductor.Pier.Api
         /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
         /// <returns>ApiResponse of Fatura</returns>
-        ApiResponse<Fatura> ListarFaturasUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null);
+        ApiResponse<Fatura> ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -238,7 +238,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param>
         /// <returns>PageTransacaoResponse</returns>
-        PageTransacaoResponse TransacoesUsingPOST (int? page = null, int? limit = null, long? idConta = null);
+        PageTransacaoResponse TransacoesUsingGET (int? page = null, int? limit = null, long? idConta = null);
   
         /// <summary>
         /// Permite listar uma linha do tempo com os eventos da conta
@@ -251,7 +251,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param>
         /// <returns>ApiResponse of PageTransacaoResponse</returns>
-        ApiResponse<PageTransacaoResponse> TransacoesUsingPOSTWithHttpInfo (int? page = null, int? limit = null, long? idConta = null);
+        ApiResponse<PageTransacaoResponse> TransacoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idConta = null);
         
         #endregion Synchronous Operations
         
@@ -402,12 +402,12 @@ namespace Conductor.Pier.Api
         /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
         /// <returns>Task of Fatura</returns>
-        System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null);
+        System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
 
         /// <summary>
         /// Listar Faturas da Conta
@@ -416,12 +416,12 @@ namespace Conductor.Pier.Api
         /// Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
         /// <returns>Task of ApiResponse (Fatura)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Fatura>> ListarFaturasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null);
+        System.Threading.Tasks.Task<ApiResponse<Fatura>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -478,7 +478,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param>
         /// <returns>Task of PageTransacaoResponse</returns>
-        System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingPOSTAsync (int? page = null, int? limit = null, long? idConta = null);
+        System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingGETAsync (int? page = null, int? limit = null, long? idConta = null);
 
         /// <summary>
         /// Permite listar uma linha do tempo com os eventos da conta
@@ -491,7 +491,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesUsingPOSTAsyncWithHttpInfo (int? page = null, int? limit = null, long? idConta = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idConta = null);
         
         #endregion Asynchronous Operations
         
@@ -1612,14 +1612,14 @@ namespace Conductor.Pier.Api
         /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param> 
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param> 
         /// <returns>Fatura</returns>
-        public Fatura ListarFaturasUsingGET (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null)
+        public Fatura ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
-             ApiResponse<Fatura> localVarResponse = ListarFaturasUsingGETWithHttpInfo(page, limit, id, dataVencimento);
+             ApiResponse<Fatura> localVarResponse = ListarFaturasUsingGETWithHttpInfo(id, page, limit, dataVencimento);
              return localVarResponse.Data;
         }
 
@@ -1627,16 +1627,20 @@ namespace Conductor.Pier.Api
         /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param> 
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param> 
         /// <returns>ApiResponse of Fatura</returns>
-        public ApiResponse< Fatura > ListarFaturasUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null)
+        public ApiResponse< Fatura > ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
             
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarFaturasUsingGET");
+            
     
-            var localVarPath = "/api/contas/{id_conta}/faturas";
+            var localVarPath = "/api/contas/{id}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1662,10 +1666,10 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
             
             
@@ -1703,14 +1707,14 @@ namespace Conductor.Pier.Api
         /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
         /// <returns>Task of Fatura</returns>
-        public async System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null)
+        public async System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
-             ApiResponse<Fatura> localVarResponse = await ListarFaturasUsingGETAsyncWithHttpInfo(page, limit, id, dataVencimento);
+             ApiResponse<Fatura> localVarResponse = await ListarFaturasUsingGETAsyncWithHttpInfo(id, page, limit, dataVencimento);
              return localVarResponse.Data;
 
         }
@@ -1719,16 +1723,18 @@ namespace Conductor.Pier.Api
         /// Listar Faturas da Conta Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
         /// <returns>Task of ApiResponse (Fatura)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Fatura>> ListarFaturasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, DateTime? dataVencimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Fatura>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarFaturasUsingGET");
             
     
-            var localVarPath = "/api/contas/{id_conta}/faturas";
+            var localVarPath = "/api/contas/{id}/faturas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1754,10 +1760,10 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
             
             
@@ -2030,9 +2036,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param> 
         /// <returns>PageTransacaoResponse</returns>
-        public PageTransacaoResponse TransacoesUsingPOST (int? page = null, int? limit = null, long? idConta = null)
+        public PageTransacaoResponse TransacoesUsingGET (int? page = null, int? limit = null, long? idConta = null)
         {
-             ApiResponse<PageTransacaoResponse> localVarResponse = TransacoesUsingPOSTWithHttpInfo(page, limit, idConta);
+             ApiResponse<PageTransacaoResponse> localVarResponse = TransacoesUsingGETWithHttpInfo(page, limit, idConta);
              return localVarResponse.Data;
         }
 
@@ -2044,11 +2050,11 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param> 
         /// <returns>ApiResponse of PageTransacaoResponse</returns>
-        public ApiResponse< PageTransacaoResponse > TransacoesUsingPOSTWithHttpInfo (int? page = null, int? limit = null, long? idConta = null)
+        public ApiResponse< PageTransacaoResponse > TransacoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idConta = null)
         {
             
     
-            var localVarPath = "/api/contas/{id_conta}/timeline";
+            var localVarPath = "/api/contas/{id}/timeline";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2093,15 +2099,15 @@ namespace Conductor.Pier.Api
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2118,9 +2124,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param>
         /// <returns>Task of PageTransacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingPOSTAsync (int? page = null, int? limit = null, long? idConta = null)
+        public async System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingGETAsync (int? page = null, int? limit = null, long? idConta = null)
         {
-             ApiResponse<PageTransacaoResponse> localVarResponse = await TransacoesUsingPOSTAsyncWithHttpInfo(page, limit, idConta);
+             ApiResponse<PageTransacaoResponse> localVarResponse = await TransacoesUsingGETAsyncWithHttpInfo(page, limit, idConta);
              return localVarResponse.Data;
 
         }
@@ -2133,11 +2139,11 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesUsingPOSTAsyncWithHttpInfo (int? page = null, int? limit = null, long? idConta = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idConta = null)
         {
             
     
-            var localVarPath = "/api/contas/{id_conta}/timeline";
+            var localVarPath = "/api/contas/{id}/timeline";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2183,15 +2189,15 @@ namespace Conductor.Pier.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling TransacoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
