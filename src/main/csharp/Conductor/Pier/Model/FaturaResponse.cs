@@ -12,30 +12,36 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Fatura
+    /// Fatura
     /// </summary>
     [DataContract]
-    public partial class Fatura :  IEquatable<Fatura>
+    public partial class FaturaResponse :  IEquatable<FaturaResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Fatura" /> class.
-        /// Initializes a new instance of the <see cref="Fatura" />class.
+        /// Initializes a new instance of the <see cref="FaturaResponse" /> class.
+        /// Initializes a new instance of the <see cref="FaturaResponse" />class.
         /// </summary>
-        /// <param name="DataVencimento">Data de Vencimento da Fatura..</param>
-        /// <param name="SaldoFaturaAnterior">Saldo da Fatura Anterior..</param>
+        /// <param name="Id">C\u00C3\u00B3digo identificador da fatura..</param>
+        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta..</param>
+        /// <param name="IdProduto">C\u00C3\u00B3digo identificador do produto..</param>
+        /// <param name="DataVencimento">Data de vencimento da fatura..</param>
+        /// <param name="SaldoFaturaAnterior">Saldo da fatura anterior..</param>
         /// <param name="SaldoMulta">Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual..</param>
-        /// <param name="SaldoCompras">Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual..</param>
-        /// <param name="SaldoPagamentos">Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual..</param>
-        /// <param name="SaldoTarifas">Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual..</param>
-        /// <param name="SaldoDebitos">Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual..</param>
-        /// <param name="SaldoCreditos">Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual..</param>
-        /// <param name="SaldoAtualFinal">Salto total devedor da Fatura atual..</param>
-        /// <param name="ValorMinimoFatura">Valor m\u00C3\u00ADnimo para Pagamento da Fatura..</param>
-        /// <param name="FlagEmiteFatura">Quando ativa, indica que fora emitida uma Fatura..</param>
+        /// <param name="SaldoCompras">Saldo total das compras lan\u00C3\u00A7adas na fatura atual..</param>
+        /// <param name="SaldoPagamentos">Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual..</param>
+        /// <param name="SaldoTarifas">Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual..</param>
+        /// <param name="SaldoDebitos">Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual..</param>
+        /// <param name="SaldoCreditos">Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual..</param>
+        /// <param name="SaldoAtualFinal">Salto total devedor da fatura atual..</param>
+        /// <param name="ValorMinimoFatura">Valor m\u00C3\u00ADnimo para pagamento da fatura..</param>
+        /// <param name="FlagEmiteFatura">Quando ativa, indica que fora emitida uma fatura..</param>
 
-        public Fatura(DateTime? DataVencimento = null, double? SaldoFaturaAnterior = null, double? SaldoMulta = null, double? SaldoCompras = null, double? SaldoPagamentos = null, double? SaldoTarifas = null, double? SaldoDebitos = null, double? SaldoCreditos = null, double? SaldoAtualFinal = null, double? ValorMinimoFatura = null, int? FlagEmiteFatura = null)
+        public FaturaResponse(long? Id = null, long? IdConta = null, long? IdProduto = null, DateTime? DataVencimento = null, double? SaldoFaturaAnterior = null, double? SaldoMulta = null, double? SaldoCompras = null, double? SaldoPagamentos = null, double? SaldoTarifas = null, double? SaldoDebitos = null, double? SaldoCreditos = null, double? SaldoAtualFinal = null, double? ValorMinimoFatura = null, int? FlagEmiteFatura = null)
         {
+            this.Id = Id;
+            this.IdConta = IdConta;
+            this.IdProduto = IdProduto;
             this.DataVencimento = DataVencimento;
             this.SaldoFaturaAnterior = SaldoFaturaAnterior;
             this.SaldoMulta = SaldoMulta;
@@ -52,16 +58,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data de Vencimento da Fatura.
+        /// C\u00C3\u00B3digo identificador da fatura.
         /// </summary>
-        /// <value>Data de Vencimento da Fatura.</value>
+        /// <value>C\u00C3\u00B3digo identificador da fatura.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo identificador da conta.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo identificador da conta.</value>
+        [DataMember(Name="idConta", EmitDefaultValue=false)]
+        public long? IdConta { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo identificador do produto.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo identificador do produto.</value>
+        [DataMember(Name="idProduto", EmitDefaultValue=false)]
+        public long? IdProduto { get; set; }
+    
+        /// <summary>
+        /// Data de vencimento da fatura.
+        /// </summary>
+        /// <value>Data de vencimento da fatura.</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public DateTime? DataVencimento { get; set; }
     
         /// <summary>
-        /// Saldo da Fatura Anterior.
+        /// Saldo da fatura anterior.
         /// </summary>
-        /// <value>Saldo da Fatura Anterior.</value>
+        /// <value>Saldo da fatura anterior.</value>
         [DataMember(Name="saldoFaturaAnterior", EmitDefaultValue=false)]
         public double? SaldoFaturaAnterior { get; set; }
     
@@ -73,58 +100,58 @@ namespace Conductor.Pier.Model
         public double? SaldoMulta { get; set; }
     
         /// <summary>
-        /// Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
+        /// Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
         /// </summary>
-        /// <value>Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.</value>
+        /// <value>Saldo total das compras lan\u00C3\u00A7adas na fatura atual.</value>
         [DataMember(Name="saldoCompras", EmitDefaultValue=false)]
         public double? SaldoCompras { get; set; }
     
         /// <summary>
-        /// Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
+        /// Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
         /// </summary>
-        /// <value>Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.</value>
+        /// <value>Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.</value>
         [DataMember(Name="saldoPagamentos", EmitDefaultValue=false)]
         public double? SaldoPagamentos { get; set; }
     
         /// <summary>
-        /// Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
+        /// Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
         /// </summary>
-        /// <value>Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.</value>
+        /// <value>Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.</value>
         [DataMember(Name="saldoTarifas", EmitDefaultValue=false)]
         public double? SaldoTarifas { get; set; }
     
         /// <summary>
-        /// Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
+        /// Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
         /// </summary>
-        /// <value>Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.</value>
+        /// <value>Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.</value>
         [DataMember(Name="saldoDebitos", EmitDefaultValue=false)]
         public double? SaldoDebitos { get; set; }
     
         /// <summary>
-        /// Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
+        /// Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
         /// </summary>
-        /// <value>Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.</value>
+        /// <value>Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.</value>
         [DataMember(Name="saldoCreditos", EmitDefaultValue=false)]
         public double? SaldoCreditos { get; set; }
     
         /// <summary>
-        /// Salto total devedor da Fatura atual.
+        /// Salto total devedor da fatura atual.
         /// </summary>
-        /// <value>Salto total devedor da Fatura atual.</value>
+        /// <value>Salto total devedor da fatura atual.</value>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
     
         /// <summary>
-        /// Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
+        /// Valor m\u00C3\u00ADnimo para pagamento da fatura.
         /// </summary>
-        /// <value>Valor m\u00C3\u00ADnimo para Pagamento da Fatura.</value>
+        /// <value>Valor m\u00C3\u00ADnimo para pagamento da fatura.</value>
         [DataMember(Name="valorMinimoFatura", EmitDefaultValue=false)]
         public double? ValorMinimoFatura { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que fora emitida uma Fatura.
+        /// Quando ativa, indica que fora emitida uma fatura.
         /// </summary>
-        /// <value>Quando ativa, indica que fora emitida uma Fatura.</value>
+        /// <value>Quando ativa, indica que fora emitida uma fatura.</value>
         [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
         public int? FlagEmiteFatura { get; set; }
     
@@ -135,7 +162,10 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Fatura {\n");
+            sb.Append("class FaturaResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  DataVencimento: ").Append(DataVencimento).Append("\n");
             sb.Append("  SaldoFaturaAnterior: ").Append(SaldoFaturaAnterior).Append("\n");
             sb.Append("  SaldoMulta: ").Append(SaldoMulta).Append("\n");
@@ -169,21 +199,36 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Fatura);
+            return this.Equals(obj as FaturaResponse);
         }
 
         /// <summary>
-        /// Returns true if Fatura instances are equal
+        /// Returns true if FaturaResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of Fatura to be compared</param>
+        /// <param name="other">Instance of FaturaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Fatura other)
+        public bool Equals(FaturaResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.IdConta == other.IdConta ||
+                    this.IdConta != null &&
+                    this.IdConta.Equals(other.IdConta)
+                ) && 
+                (
+                    this.IdProduto == other.IdProduto ||
+                    this.IdProduto != null &&
+                    this.IdProduto.Equals(other.IdProduto)
+                ) && 
                 (
                     this.DataVencimento == other.DataVencimento ||
                     this.DataVencimento != null &&
@@ -252,6 +297,15 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.IdConta != null)
+                    hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdProduto != null)
+                    hash = hash * 59 + this.IdProduto.GetHashCode();
                 
                 if (this.DataVencimento != null)
                     hash = hash * 59 + this.DataVencimento.GetHashCode();

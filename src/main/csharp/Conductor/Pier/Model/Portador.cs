@@ -28,13 +28,12 @@ namespace Conductor.Pier.Model
         /// <param name="IdParentesco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id).</param>
         /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
         /// <param name="NomeImpresso">Apresenta o nome a ser impresso no cart\u00C3\u00A3o..</param>
-        /// <param name="IdImagem">Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o..</param>
         /// <param name="IdTipoCartao">Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta..</param>
         /// <param name="FlagAtivo">Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o..</param>
         /// <param name="DataCadastroPortador">Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="DataCancelamentoPortador">Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public Portador(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdImagem = null, long? IdTipoCartao = null, int? FlagAtivo = null, DateTime? DataCadastroPortador = null, DateTime? DataCancelamentoPortador = null)
+        public Portador(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdTipoCartao = null, int? FlagAtivo = null, DateTime? DataCadastroPortador = null, DateTime? DataCancelamentoPortador = null)
         {
             this.IdConta = IdConta;
             this.IdProduto = IdProduto;
@@ -42,7 +41,6 @@ namespace Conductor.Pier.Model
             this.IdParentesco = IdParentesco;
             this.TipoPortador = TipoPortador;
             this.NomeImpresso = NomeImpresso;
-            this.IdImagem = IdImagem;
             this.IdTipoCartao = IdTipoCartao;
             this.FlagAtivo = FlagAtivo;
             this.DataCadastroPortador = DataCadastroPortador;
@@ -94,13 +92,6 @@ namespace Conductor.Pier.Model
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-        /// </summary>
-        /// <value>Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.</value>
-        [DataMember(Name="idImagem", EmitDefaultValue=false)]
-        public long? IdImagem { get; set; }
-    
-        /// <summary>
         /// Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
         /// </summary>
         /// <value>Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.</value>
@@ -142,7 +133,6 @@ namespace Conductor.Pier.Model
             sb.Append("  IdParentesco: ").Append(IdParentesco).Append("\n");
             sb.Append("  TipoPortador: ").Append(TipoPortador).Append("\n");
             sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
-            sb.Append("  IdImagem: ").Append(IdImagem).Append("\n");
             sb.Append("  IdTipoCartao: ").Append(IdTipoCartao).Append("\n");
             sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             sb.Append("  DataCadastroPortador: ").Append(DataCadastroPortador).Append("\n");
@@ -215,11 +205,6 @@ namespace Conductor.Pier.Model
                     this.NomeImpresso.Equals(other.NomeImpresso)
                 ) && 
                 (
-                    this.IdImagem == other.IdImagem ||
-                    this.IdImagem != null &&
-                    this.IdImagem.Equals(other.IdImagem)
-                ) && 
-                (
                     this.IdTipoCartao == other.IdTipoCartao ||
                     this.IdTipoCartao != null &&
                     this.IdTipoCartao.Equals(other.IdTipoCartao)
@@ -270,9 +255,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeImpresso != null)
                     hash = hash * 59 + this.NomeImpresso.GetHashCode();
-                
-                if (this.IdImagem != null)
-                    hash = hash * 59 + this.IdImagem.GetHashCode();
                 
                 if (this.IdTipoCartao != null)
                     hash = hash * 59 + this.IdTipoCartao.GetHashCode();

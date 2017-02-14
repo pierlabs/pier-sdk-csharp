@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Conta</returns>
-        Conta ConsultarUsingGET1 (long? id);
+        Conta ConsultarUsingGET2 (long? id);
   
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -129,31 +129,33 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>ApiResponse of Conta</returns>
-        ApiResponse<Conta> ConsultarUsingGET1WithHttpInfo (long? id);
+        ApiResponse<Conta> ConsultarUsingGET2WithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
         /// </summary>
         /// <remarks>
-        /// 
+        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
         /// <returns>CartaoImpressao</returns>
-        CartaoImpressao GerarCartaoUsingPOST (long? id, long? idPessoa);
+        CartaoImpressao GerarCartaoUsingPOST (long? id, long? idPessoa, long? idTipoPlastico = null);
   
         /// <summary>
         /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
         /// </summary>
         /// <remarks>
-        /// 
+        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
         /// <returns>ApiResponse of CartaoImpressao</returns>
-        ApiResponse<CartaoImpressao> GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa);
+        ApiResponse<CartaoImpressao> GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
         
         /// <summary>
         /// Listar Faturas da Conta
@@ -166,8 +168,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Fatura</returns>
-        Fatura ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>FaturaResponse</returns>
+        FaturaResponse ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
   
         /// <summary>
         /// Listar Faturas da Conta
@@ -180,8 +182,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>ApiResponse of Fatura</returns>
-        ApiResponse<Fatura> ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>ApiResponse of FaturaResponse</returns>
+        ApiResponse<FaturaResponse> ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -203,7 +205,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <returns>Conta</returns>
-        Conta ListarUsingGET1 (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
+        Conta ListarUsingGET2 (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
   
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -225,7 +227,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <returns>ApiResponse of Conta</returns>
-        ApiResponse<Conta> ListarUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
+        ApiResponse<Conta> ListarUsingGET2WithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
         
         /// <summary>
         /// Permite listar uma linha do tempo com os eventos da conta
@@ -358,7 +360,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of Conta</returns>
-        System.Threading.Tasks.Task<Conta> ConsultarUsingGET1Async (long? id);
+        System.Threading.Tasks.Task<Conta> ConsultarUsingGET2Async (long? id);
 
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -369,31 +371,33 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Conta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Conta>> ConsultarUsingGET1AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<Conta>> ConsultarUsingGET2AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
         /// </summary>
         /// <remarks>
-        /// 
+        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of CartaoImpressao</returns>
-        System.Threading.Tasks.Task<CartaoImpressao> GerarCartaoUsingPOSTAsync (long? id, long? idPessoa);
+        System.Threading.Tasks.Task<CartaoImpressao> GerarCartaoUsingPOSTAsync (long? id, long? idPessoa, long? idTipoPlastico = null);
 
         /// <summary>
         /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
         /// </summary>
         /// <remarks>
-        /// 
+        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoImpressao>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa);
+        System.Threading.Tasks.Task<ApiResponse<CartaoImpressao>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
         
         /// <summary>
         /// Listar Faturas da Conta
@@ -406,8 +410,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of Fatura</returns>
-        System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>Task of FaturaResponse</returns>
+        System.Threading.Tasks.Task<FaturaResponse> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
 
         /// <summary>
         /// Listar Faturas da Conta
@@ -420,8 +424,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of ApiResponse (Fatura)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Fatura>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>Task of ApiResponse (FaturaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaturaResponse>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -443,7 +447,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <returns>Task of Conta</returns>
-        System.Threading.Tasks.Task<Conta> ListarUsingGET1Async (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
+        System.Threading.Tasks.Task<Conta> ListarUsingGET2Async (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
 
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -465,7 +469,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <returns>Task of ApiResponse (Conta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
+        System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET2AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null);
         
         /// <summary>
         /// Permite listar uma linha do tempo com os eventos da conta
@@ -1260,9 +1264,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <returns>Conta</returns>
-        public Conta ConsultarUsingGET1 (long? id)
+        public Conta ConsultarUsingGET2 (long? id)
         {
-             ApiResponse<Conta> localVarResponse = ConsultarUsingGET1WithHttpInfo(id);
+             ApiResponse<Conta> localVarResponse = ConsultarUsingGET2WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1272,12 +1276,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <returns>ApiResponse of Conta</returns>
-        public ApiResponse< Conta > ConsultarUsingGET1WithHttpInfo (long? id)
+        public ApiResponse< Conta > ConsultarUsingGET2WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET2");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -1329,9 +1333,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Conta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1346,9 +1350,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of Conta</returns>
-        public async System.Threading.Tasks.Task<Conta> ConsultarUsingGET1Async (long? id)
+        public async System.Threading.Tasks.Task<Conta> ConsultarUsingGET2Async (long? id)
         {
-             ApiResponse<Conta> localVarResponse = await ConsultarUsingGET1AsyncWithHttpInfo(id);
+             ApiResponse<Conta> localVarResponse = await ConsultarUsingGET2AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1359,10 +1363,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Conta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conta>> ConsultarUsingGET1AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Conta>> ConsultarUsingGET2AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET2");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -1415,9 +1419,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Conta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1426,26 +1430,28 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa 
+        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param> 
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param> 
         /// <returns>CartaoImpressao</returns>
-        public CartaoImpressao GerarCartaoUsingPOST (long? id, long? idPessoa)
+        public CartaoImpressao GerarCartaoUsingPOST (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
-             ApiResponse<CartaoImpressao> localVarResponse = GerarCartaoUsingPOSTWithHttpInfo(id, idPessoa);
+             ApiResponse<CartaoImpressao> localVarResponse = GerarCartaoUsingPOSTWithHttpInfo(id, idPessoa, idTipoPlastico);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa 
+        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param> 
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param> 
         /// <returns>ApiResponse of CartaoImpressao</returns>
-        public ApiResponse< CartaoImpressao > GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa)
+        public ApiResponse< CartaoImpressao > GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
             
             // verify the required parameter 'id' is set
@@ -1486,6 +1492,7 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (idPessoa != null) localVarPathParams.Add("id_pessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
             
+            if (idTipoPlastico != null) localVarQueryParams.Add("id_tipo_plastico", Configuration.ApiClient.ParameterToString(idTipoPlastico)); // query parameter
             
             
             
@@ -1519,27 +1526,29 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa 
+        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of CartaoImpressao</returns>
-        public async System.Threading.Tasks.Task<CartaoImpressao> GerarCartaoUsingPOSTAsync (long? id, long? idPessoa)
+        public async System.Threading.Tasks.Task<CartaoImpressao> GerarCartaoUsingPOSTAsync (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
-             ApiResponse<CartaoImpressao> localVarResponse = await GerarCartaoUsingPOSTAsyncWithHttpInfo(id, idPessoa);
+             ApiResponse<CartaoImpressao> localVarResponse = await GerarCartaoUsingPOSTAsyncWithHttpInfo(id, idPessoa, idTipoPlastico);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa 
+        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressao>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressao>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoUsingPOST");
@@ -1576,6 +1585,7 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (idPessoa != null) localVarPathParams.Add("id_pessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
             
+            if (idTipoPlastico != null) localVarQueryParams.Add("id_tipo_plastico", Configuration.ApiClient.ParameterToString(idTipoPlastico)); // query parameter
             
             
             
@@ -1616,10 +1626,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param> 
-        /// <returns>Fatura</returns>
-        public Fatura ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>FaturaResponse</returns>
+        public FaturaResponse ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
-             ApiResponse<Fatura> localVarResponse = ListarFaturasUsingGETWithHttpInfo(id, page, limit, dataVencimento);
+             ApiResponse<FaturaResponse> localVarResponse = ListarFaturasUsingGETWithHttpInfo(id, page, limit, dataVencimento);
              return localVarResponse.Data;
         }
 
@@ -1631,8 +1641,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param> 
-        /// <returns>ApiResponse of Fatura</returns>
-        public ApiResponse< Fatura > ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>ApiResponse of FaturaResponse</returns>
+        public ApiResponse< FaturaResponse > ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
             
             // verify the required parameter 'id' is set
@@ -1696,9 +1706,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Fatura>(localVarStatusCode,
+            return new ApiResponse<FaturaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Fatura) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fatura)));
+                (FaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaturaResponse)));
             
         }
 
@@ -1711,10 +1721,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of Fatura</returns>
-        public async System.Threading.Tasks.Task<Fatura> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>Task of FaturaResponse</returns>
+        public async System.Threading.Tasks.Task<FaturaResponse> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
-             ApiResponse<Fatura> localVarResponse = await ListarFaturasUsingGETAsyncWithHttpInfo(id, page, limit, dataVencimento);
+             ApiResponse<FaturaResponse> localVarResponse = await ListarFaturasUsingGETAsyncWithHttpInfo(id, page, limit, dataVencimento);
              return localVarResponse.Data;
 
         }
@@ -1727,8 +1737,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of ApiResponse (Fatura)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Fatura>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>Task of ApiResponse (FaturaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaturaResponse>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarFaturasUsingGET");
@@ -1791,9 +1801,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Fatura>(localVarStatusCode,
+            return new ApiResponse<FaturaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Fatura) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Fatura)));
+                (FaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaturaResponse)));
             
         }
         
@@ -1814,9 +1824,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param> 
         /// <returns>Conta</returns>
-        public Conta ListarUsingGET1 (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
+        public Conta ListarUsingGET2 (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
         {
-             ApiResponse<Conta> localVarResponse = ListarUsingGET1WithHttpInfo(page, limit, id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
+             ApiResponse<Conta> localVarResponse = ListarUsingGET2WithHttpInfo(page, limit, id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
              return localVarResponse.Data;
         }
 
@@ -1837,7 +1847,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param> 
         /// <returns>ApiResponse of Conta</returns>
-        public ApiResponse< Conta > ListarUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
+        public ApiResponse< Conta > ListarUsingGET2WithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
         {
             
     
@@ -1901,9 +1911,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Conta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1929,9 +1939,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <returns>Task of Conta</returns>
-        public async System.Threading.Tasks.Task<Conta> ListarUsingGET1Async (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
+        public async System.Threading.Tasks.Task<Conta> ListarUsingGET2Async (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
         {
-             ApiResponse<Conta> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(page, limit, id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
+             ApiResponse<Conta> localVarResponse = await ListarUsingGET2AsyncWithHttpInfo(page, limit, id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
              return localVarResponse.Data;
 
         }
@@ -1953,7 +1963,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
         /// <returns>Task of ApiResponse (Conta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Conta>> ListarUsingGET2AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, DateTime? dataStatusConta = null, DateTime? dataCadastro = null, DateTime? dataUltimaAlteracaoVencimento = null)
         {
             
     
@@ -2018,9 +2028,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Conta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

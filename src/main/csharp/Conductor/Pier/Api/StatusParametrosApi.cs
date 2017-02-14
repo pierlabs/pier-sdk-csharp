@@ -70,7 +70,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>StatusConta</returns>
-        StatusConta ConsultarUsingGET4 (long? id);
+        StatusConta ConsultarUsingGET5 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>ApiResponse of StatusConta</returns>
-        ApiResponse<StatusConta> ConsultarUsingGET4WithHttpInfo (long? id);
+        ApiResponse<StatusConta> ConsultarUsingGET5WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>StatusImpressao</returns>
-        StatusImpressao ConsultarUsingGET5 (long? id);
+        StatusImpressao ConsultarUsingGET6 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of StatusImpressao</returns>
-        ApiResponse<StatusImpressao> ConsultarUsingGET5WithHttpInfo (long? id);
+        ApiResponse<StatusImpressao> ConsultarUsingGET6WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -188,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>PageStatusContas</returns>
-        PageStatusContas ListarUsingGET5 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
+        PageStatusContas ListarUsingGET6 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
   
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -205,7 +205,7 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>ApiResponse of PageStatusContas</returns>
-        ApiResponse<PageStatusContas> ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
+        ApiResponse<PageStatusContas> ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -219,7 +219,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>PageStatusImpressao</returns>
-        PageStatusImpressao ListarUsingGET6 (int? page = null, int? limit = null, long? id = null, string nome = null);
+        PageStatusImpressao ListarUsingGET7 (int? page = null, int? limit = null, long? id = null, string nome = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -233,7 +233,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        ApiResponse<PageStatusImpressao> ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
+        ApiResponse<PageStatusImpressao> ListarUsingGET7WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
         
         #endregion Synchronous Operations
         
@@ -292,7 +292,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusConta</returns>
-        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? id);
+        System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET5Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -303,7 +303,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusConta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -314,7 +314,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressao</returns>
-        System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? id);
+        System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET6Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -325,7 +325,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET6AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of PageStatusContas</returns>
-        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
+        System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET6Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
 
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -427,7 +427,7 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -441,7 +441,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET7Async (int? page = null, int? limit = null, long? id = null, string nome = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -455,7 +455,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET7AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null);
         
         #endregion Asynchronous Operations
         
@@ -897,9 +897,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>StatusConta</returns>
-        public StatusConta ConsultarUsingGET4 (long? id)
+        public StatusConta ConsultarUsingGET5 (long? id)
         {
-             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET4WithHttpInfo(id);
+             ApiResponse<StatusConta> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -909,12 +909,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>ApiResponse of StatusConta</returns>
-        public ApiResponse< StatusConta > ConsultarUsingGET4WithHttpInfo (long? id)
+        public ApiResponse< StatusConta > ConsultarUsingGET5WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET4");
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET5");
             
     
             var localVarPath = "/api/status-contas/{id}";
@@ -966,9 +966,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusConta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -983,9 +983,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusConta</returns>
-        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET4Async (long? id)
+        public async System.Threading.Tasks.Task<StatusConta> ConsultarUsingGET5Async (long? id)
         {
-             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(id);
+             ApiResponse<StatusConta> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -996,10 +996,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusConta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET4AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusConta>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET4");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
             
     
             var localVarPath = "/api/status-contas/{id}";
@@ -1052,9 +1052,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusConta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1068,9 +1068,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>StatusImpressao</returns>
-        public StatusImpressao ConsultarUsingGET5 (long? id)
+        public StatusImpressao ConsultarUsingGET6 (long? id)
         {
-             ApiResponse<StatusImpressao> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
+             ApiResponse<StatusImpressao> localVarResponse = ConsultarUsingGET6WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1080,12 +1080,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of StatusImpressao</returns>
-        public ApiResponse< StatusImpressao > ConsultarUsingGET5WithHttpInfo (long? id)
+        public ApiResponse< StatusImpressao > ConsultarUsingGET6WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET6");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1137,9 +1137,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1154,9 +1154,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressao</returns>
-        public async System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET5Async (long? id)
+        public async System.Threading.Tasks.Task<StatusImpressao> ConsultarUsingGET6Async (long? id)
         {
-             ApiResponse<StatusImpressao> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
+             ApiResponse<StatusImpressao> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1167,10 +1167,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressao>> ConsultarUsingGET6AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1223,9 +1223,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1647,9 +1647,9 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param> 
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <returns>PageStatusContas</returns>
-        public PageStatusContas ListarUsingGET5 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
+        public PageStatusContas ListarUsingGET6 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET5WithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao);
+             ApiResponse<PageStatusContas> localVarResponse = ListarUsingGET6WithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao);
              return localVarResponse.Data;
         }
 
@@ -1665,7 +1665,7 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param> 
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <returns>ApiResponse of PageStatusContas</returns>
-        public ApiResponse< PageStatusContas > ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
+        public ApiResponse< PageStatusContas > ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
         {
             
     
@@ -1724,9 +1724,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusContas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1747,9 +1747,9 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of PageStatusContas</returns>
-        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET5Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
+        public async System.Threading.Tasks.Task<PageStatusContas> ListarUsingGET6Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
         {
-             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao);
+             ApiResponse<PageStatusContas> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao);
              return localVarResponse.Data;
 
         }
@@ -1766,7 +1766,7 @@ namespace Conductor.Pier.Api
         /// <param name="mensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContas)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContas>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null)
         {
             
     
@@ -1826,9 +1826,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusContas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1845,9 +1845,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param> 
         /// <returns>PageStatusImpressao</returns>
-        public PageStatusImpressao ListarUsingGET6 (int? page = null, int? limit = null, long? id = null, string nome = null)
+        public PageStatusImpressao ListarUsingGET7 (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET6WithHttpInfo(page, limit, id, nome);
+             ApiResponse<PageStatusImpressao> localVarResponse = ListarUsingGET7WithHttpInfo(page, limit, id, nome);
              return localVarResponse.Data;
         }
 
@@ -1860,7 +1860,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param> 
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PageStatusImpressao</returns>
-        public ApiResponse< PageStatusImpressao > ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
+        public ApiResponse< PageStatusImpressao > ListarUsingGET7WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -1916,9 +1916,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1936,9 +1936,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageStatusImpressao</returns>
-        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET6Async (int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<PageStatusImpressao> ListarUsingGET7Async (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(page, limit, id, nome);
+             ApiResponse<PageStatusImpressao> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(page, limit, id, nome);
              return localVarResponse.Data;
 
         }
@@ -1952,7 +1952,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00C3\u00A1gio cart\u00C3\u00A3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressao>> ListarUsingGET7AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -2009,9 +2009,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusImpressao>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
