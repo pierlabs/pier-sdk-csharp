@@ -168,8 +168,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>FaturaResponse</returns>
-        FaturaResponse ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>PageFaturas</returns>
+        PageFaturas ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
   
         /// <summary>
         /// Listar Faturas da Conta
@@ -182,8 +182,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>ApiResponse of FaturaResponse</returns>
-        ApiResponse<FaturaResponse> ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>ApiResponse of PageFaturas</returns>
+        ApiResponse<PageFaturas> ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -410,8 +410,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of FaturaResponse</returns>
-        System.Threading.Tasks.Task<FaturaResponse> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>Task of PageFaturas</returns>
+        System.Threading.Tasks.Task<PageFaturas> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
 
         /// <summary>
         /// Listar Faturas da Conta
@@ -424,8 +424,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of ApiResponse (FaturaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaturaResponse>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
+        /// <returns>Task of ApiResponse (PageFaturas)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageFaturas>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -1626,10 +1626,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param> 
-        /// <returns>FaturaResponse</returns>
-        public FaturaResponse ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>PageFaturas</returns>
+        public PageFaturas ListarFaturasUsingGET (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
-             ApiResponse<FaturaResponse> localVarResponse = ListarFaturasUsingGETWithHttpInfo(id, page, limit, dataVencimento);
+             ApiResponse<PageFaturas> localVarResponse = ListarFaturasUsingGETWithHttpInfo(id, page, limit, dataVencimento);
              return localVarResponse.Data;
         }
 
@@ -1641,8 +1641,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param> 
-        /// <returns>ApiResponse of FaturaResponse</returns>
-        public ApiResponse< FaturaResponse > ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>ApiResponse of PageFaturas</returns>
+        public ApiResponse< PageFaturas > ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
             
             // verify the required parameter 'id' is set
@@ -1706,9 +1706,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<FaturaResponse>(localVarStatusCode,
+            return new ApiResponse<PageFaturas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaturaResponse)));
+                (PageFaturas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaturas)));
             
         }
 
@@ -1721,10 +1721,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of FaturaResponse</returns>
-        public async System.Threading.Tasks.Task<FaturaResponse> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>Task of PageFaturas</returns>
+        public async System.Threading.Tasks.Task<PageFaturas> ListarFaturasUsingGETAsync (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
-             ApiResponse<FaturaResponse> localVarResponse = await ListarFaturasUsingGETAsyncWithHttpInfo(id, page, limit, dataVencimento);
+             ApiResponse<PageFaturas> localVarResponse = await ListarFaturasUsingGETAsyncWithHttpInfo(id, page, limit, dataVencimento);
              return localVarResponse.Data;
 
         }
@@ -1737,8 +1737,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <param name="dataVencimento">Data de Vencimento da Fatura. (optional)</param>
-        /// <returns>Task of ApiResponse (FaturaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaturaResponse>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
+        /// <returns>Task of ApiResponse (PageFaturas)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageFaturas>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarFaturasUsingGET");
@@ -1801,9 +1801,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<FaturaResponse>(localVarStatusCode,
+            return new ApiResponse<PageFaturas>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaturaResponse)));
+                (PageFaturas) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaturas)));
             
         }
         
