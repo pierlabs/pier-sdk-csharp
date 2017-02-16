@@ -53,8 +53,8 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
-        /// <returns>AtendimentoCliente</returns>
-        AtendimentoCliente ListarUsingGET (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        /// <returns>PageAtendimentoClientes</returns>
+        PageAtendimentoClientes ListarUsingGET (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
   
         /// <summary>
         /// Lista todos os atendimentos
@@ -70,8 +70,8 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
-        /// <returns>ApiResponse of AtendimentoCliente</returns>
-        ApiResponse<AtendimentoCliente> ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        /// <returns>ApiResponse of PageAtendimentoClientes</returns>
+        ApiResponse<PageAtendimentoClientes> ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
         
         /// <summary>
         /// Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -149,8 +149,8 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
-        /// <returns>Task of AtendimentoCliente</returns>
-        System.Threading.Tasks.Task<AtendimentoCliente> ListarUsingGETAsync (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        /// <returns>Task of PageAtendimentoClientes</returns>
+        System.Threading.Tasks.Task<PageAtendimentoClientes> ListarUsingGETAsync (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
 
         /// <summary>
         /// Lista todos os atendimentos
@@ -166,8 +166,8 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
-        /// <returns>Task of ApiResponse (AtendimentoCliente)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AtendimentoCliente>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        /// <returns>Task of ApiResponse (PageAtendimentoClientes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClientes>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
         
         /// <summary>
         /// Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -479,10 +479,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param> 
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param> 
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param> 
-        /// <returns>AtendimentoCliente</returns>
-        public AtendimentoCliente ListarUsingGET (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        /// <returns>PageAtendimentoClientes</returns>
+        public PageAtendimentoClientes ListarUsingGET (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
-             ApiResponse<AtendimentoCliente> localVarResponse = ListarUsingGETWithHttpInfo(page, limit, idAtendimento, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
+             ApiResponse<PageAtendimentoClientes> localVarResponse = ListarUsingGETWithHttpInfo(page, limit, idAtendimento, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
              return localVarResponse.Data;
         }
 
@@ -497,8 +497,8 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param> 
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param> 
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param> 
-        /// <returns>ApiResponse of AtendimentoCliente</returns>
-        public ApiResponse< AtendimentoCliente > ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        /// <returns>ApiResponse of PageAtendimentoClientes</returns>
+        public ApiResponse< PageAtendimentoClientes > ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
             
     
@@ -561,9 +561,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<AtendimentoCliente>(localVarStatusCode,
+            return new ApiResponse<PageAtendimentoClientes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AtendimentoCliente) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AtendimentoCliente)));
+                (PageAtendimentoClientes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageAtendimentoClientes)));
             
         }
 
@@ -579,10 +579,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
-        /// <returns>Task of AtendimentoCliente</returns>
-        public async System.Threading.Tasks.Task<AtendimentoCliente> ListarUsingGETAsync (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        /// <returns>Task of PageAtendimentoClientes</returns>
+        public async System.Threading.Tasks.Task<PageAtendimentoClientes> ListarUsingGETAsync (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
-             ApiResponse<AtendimentoCliente> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(page, limit, idAtendimento, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
+             ApiResponse<PageAtendimentoClientes> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(page, limit, idAtendimento, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
              return localVarResponse.Data;
 
         }
@@ -598,8 +598,8 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). (optional)</param>
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
-        /// <returns>Task of ApiResponse (AtendimentoCliente)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AtendimentoCliente>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        /// <returns>Task of ApiResponse (PageAtendimentoClientes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClientes>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idAtendimento = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
             
     
@@ -663,9 +663,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AtendimentoCliente>(localVarStatusCode,
+            return new ApiResponse<PageAtendimentoClientes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AtendimentoCliente) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AtendimentoCliente)));
+                (PageAtendimentoClientes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageAtendimentoClientes)));
             
         }
         

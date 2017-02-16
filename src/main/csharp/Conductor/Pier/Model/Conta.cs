@@ -32,8 +32,10 @@ namespace Conductor.Pier.Model
         /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
         /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
         /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
+        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
+        /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
 
-        public Conta(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null)
+        public Conta(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, int? NumeroAgencia = null, string NumeroContaCorrente = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -45,6 +47,8 @@ namespace Conductor.Pier.Model
             this.DataStatusConta = DataStatusConta;
             this.DataCadastro = DataCadastro;
             this.DataUltimaAlteracaoVencimento = DataUltimaAlteracaoVencimento;
+            this.NumeroAgencia = NumeroAgencia;
+            this.NumeroContaCorrente = NumeroContaCorrente;
             
         }
         
@@ -120,6 +124,20 @@ namespace Conductor.Pier.Model
         public DateTime? DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
+        [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
+        public int? NumeroAgencia { get; set; }
+    
+        /// <summary>
+        /// N\u00C3\u00BAmero da conta corrente.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero da conta corrente.</value>
+        [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
+        public string NumeroContaCorrente { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -137,6 +155,8 @@ namespace Conductor.Pier.Model
             sb.Append("  DataStatusConta: ").Append(DataStatusConta).Append("\n");
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  DataUltimaAlteracaoVencimento: ").Append(DataUltimaAlteracaoVencimento).Append("\n");
+            sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
+            sb.Append("  NumeroContaCorrente: ").Append(NumeroContaCorrente).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -223,6 +243,16 @@ namespace Conductor.Pier.Model
                     this.DataUltimaAlteracaoVencimento == other.DataUltimaAlteracaoVencimento ||
                     this.DataUltimaAlteracaoVencimento != null &&
                     this.DataUltimaAlteracaoVencimento.Equals(other.DataUltimaAlteracaoVencimento)
+                ) && 
+                (
+                    this.NumeroAgencia == other.NumeroAgencia ||
+                    this.NumeroAgencia != null &&
+                    this.NumeroAgencia.Equals(other.NumeroAgencia)
+                ) && 
+                (
+                    this.NumeroContaCorrente == other.NumeroContaCorrente ||
+                    this.NumeroContaCorrente != null &&
+                    this.NumeroContaCorrente.Equals(other.NumeroContaCorrente)
                 );
         }
 
@@ -267,6 +297,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataUltimaAlteracaoVencimento != null)
                     hash = hash * 59 + this.DataUltimaAlteracaoVencimento.GetHashCode();
+                
+                if (this.NumeroAgencia != null)
+                    hash = hash * 59 + this.NumeroAgencia.GetHashCode();
+                
+                if (this.NumeroContaCorrente != null)
+                    hash = hash * 59 + this.NumeroContaCorrente.GetHashCode();
                 
                 return hash;
             }

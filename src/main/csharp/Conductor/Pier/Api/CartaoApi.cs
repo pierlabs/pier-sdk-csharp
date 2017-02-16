@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
+        /// <returns>string</returns>
+        string AlterarAlterarSenhaUsingPUT (long? id, string senha);
+  
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha);
+        
+        /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
@@ -92,7 +116,7 @@ namespace Conductor.Pier.Api
         ApiResponse<Cartao> BloquearUsingPUTWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
         /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
@@ -101,10 +125,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>string</returns>
-        string CadastrarAlterarSenhaUsingPUT (long? id, string senha);
+        string CadastrarAlterarSenhaUsingPOST (long? id, string senha);
   
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
         /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
@@ -113,7 +137,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> CadastrarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha);
+        ApiResponse<string> CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -496,6 +520,30 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha);
+
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha);
+        
+        /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
@@ -570,7 +618,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Cartao>> BloquearUsingPUTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
         /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
@@ -579,10 +627,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPUTAsync (long? id, string senha);
+        System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha);
 
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
         /// </summary>
         /// <remarks>
         /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
@@ -591,7 +639,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha);
+        System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -1060,6 +1108,189 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
+        /// <returns>string</returns>
+        public string AlterarAlterarSenhaUsingPUT (long? id, string senha)
+        {
+             ApiResponse<string> localVarResponse = AlterarAlterarSenhaUsingPUTWithHttpInfo(id, senha);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->AlterarAlterarSenhaUsingPUT");
+            
+            // verify the required parameter 'senha' is set
+            if (senha == null)
+                throw new ApiException(400, "Missing required parameter 'senha' when calling CartaoApi->AlterarAlterarSenhaUsingPUT");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/alterar-senha";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
+            
+            
+            
+
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAlterarSenhaUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAlterarSenhaUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha)
+        {
+             ApiResponse<string> localVarResponse = await AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo(id, senha);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarAlterarSenhaUsingPUT");
+            // verify the required parameter 'senha' is set
+            if (senha == null) throw new ApiException(400, "Missing required parameter 'senha' when calling AlterarAlterarSenhaUsingPUT");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/alterar-senha";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
+            
+            
+            
+
+            
+            // authentication (access_token) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
+            {
+                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAlterarSenhaUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAlterarSenhaUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
         
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
@@ -1623,38 +1854,38 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
         /// <returns>string</returns>
-        public string CadastrarAlterarSenhaUsingPUT (long? id, string senha)
+        public string CadastrarAlterarSenhaUsingPOST (long? id, string senha)
         {
-             ApiResponse<string> localVarResponse = CadastrarAlterarSenhaUsingPUTWithHttpInfo(id, senha);
+             ApiResponse<string> localVarResponse = CadastrarAlterarSenhaUsingPOSTWithHttpInfo(id, senha);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > CadastrarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha)
+        public ApiResponse< string > CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->CadastrarAlterarSenhaUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->CadastrarAlterarSenhaUsingPOST");
             
             // verify the required parameter 'senha' is set
             if (senha == null)
-                throw new ApiException(400, "Missing required parameter 'senha' when calling CartaoApi->CadastrarAlterarSenhaUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'senha' when calling CartaoApi->CadastrarAlterarSenhaUsingPOST");
             
     
-            var localVarPath = "/api/cartoes/{id}/alterar-senha";
+            var localVarPath = "/api/cartoes/{id}/cadastrar-senha";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1698,15 +1929,15 @@ namespace Conductor.Pier.Api
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1716,35 +1947,35 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPUTAsync (long? id, string senha)
+        public async System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha)
         {
-             ApiResponse<string> localVarResponse = await CadastrarAlterarSenhaUsingPUTAsyncWithHttpInfo(id, senha);
+             ApiResponse<string> localVarResponse = await CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo(id, senha);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarAlterarSenhaUsingPUT");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarAlterarSenhaUsingPOST");
             // verify the required parameter 'senha' is set
-            if (senha == null) throw new ApiException(400, "Missing required parameter 'senha' when calling CadastrarAlterarSenhaUsingPUT");
+            if (senha == null) throw new ApiException(400, "Missing required parameter 'senha' when calling CadastrarAlterarSenhaUsingPOST");
             
     
-            var localVarPath = "/api/cartoes/{id}/alterar-senha";
+            var localVarPath = "/api/cartoes/{id}/cadastrar-senha";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1789,15 +2020,15 @@ namespace Conductor.Pier.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarAlterarSenhaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

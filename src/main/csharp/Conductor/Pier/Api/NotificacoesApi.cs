@@ -24,13 +24,13 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="status">Status</param>
-        /// <param name="data">Data</param>
-        /// <param name="textoStatus">TextoStatus</param>
-        /// <param name="operadora">Operadora</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="status">Status (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="textoStatus">TextoStatus (optional)</param>
+        /// <param name="operadora">Operadora (optional)</param>
         /// <returns>SMS</returns>
-        SMS AtualizarSMSUsingPOST (string nsu, string status, string data, string textoStatus, string operadora);
+        SMS AtualizarSMSUsingPOST (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
   
         /// <summary>
         /// Atualizar SMS
@@ -39,33 +39,13 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="status">Status</param>
-        /// <param name="data">Data</param>
-        /// <param name="textoStatus">TextoStatus</param>
-        /// <param name="operadora">Operadora</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="status">Status (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="textoStatus">TextoStatus (optional)</param>
+        /// <param name="operadora">Operadora (optional)</param>
         /// <returns>ApiResponse of SMS</returns>
-        ApiResponse<SMS> AtualizarSMSUsingPOSTWithHttpInfo (string nsu, string status, string data, string textoStatus, string operadora);
-        
-        /// <summary>
-        /// Limpar Acessos
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string LimparAcessoTWWUsingGET ();
-  
-        /// <summary>
-        /// Limpar Acessos
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> LimparAcessoTWWUsingGETWithHttpInfo ();
+        ApiResponse<SMS> AtualizarSMSUsingPOSTWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
         
         /// <summary>
         /// Listar Push
@@ -142,11 +122,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="data">Data</param>
-        /// <param name="resposta">TextoStatus</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>SMS</returns>
-        SMS ResponderSMSUsingPOST (string nsu, string data, string resposta);
+        SMS ResponderSMSUsingPOST (string nsu = null, string data = null, string resposta = null);
   
         /// <summary>
         /// Responder SMS
@@ -155,11 +135,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="data">Data</param>
-        /// <param name="resposta">TextoStatus</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>ApiResponse of SMS</returns>
-        ApiResponse<SMS> ResponderSMSUsingPOSTWithHttpInfo (string nsu, string data, string resposta);
+        ApiResponse<SMS> ResponderSMSUsingPOSTWithHttpInfo (string nsu = null, string data = null, string resposta = null);
         
         /// <summary>
         /// Enviar Push FCM
@@ -260,13 +240,13 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="status">Status</param>
-        /// <param name="data">Data</param>
-        /// <param name="textoStatus">TextoStatus</param>
-        /// <param name="operadora">Operadora</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="status">Status (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="textoStatus">TextoStatus (optional)</param>
+        /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of SMS</returns>
-        System.Threading.Tasks.Task<SMS> AtualizarSMSUsingPOSTAsync (string nsu, string status, string data, string textoStatus, string operadora);
+        System.Threading.Tasks.Task<SMS> AtualizarSMSUsingPOSTAsync (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
 
         /// <summary>
         /// Atualizar SMS
@@ -275,33 +255,13 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="status">Status</param>
-        /// <param name="data">Data</param>
-        /// <param name="textoStatus">TextoStatus</param>
-        /// <param name="operadora">Operadora</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="status">Status (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="textoStatus">TextoStatus (optional)</param>
+        /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of ApiResponse (SMS)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SMS>> AtualizarSMSUsingPOSTAsyncWithHttpInfo (string nsu, string status, string data, string textoStatus, string operadora);
-        
-        /// <summary>
-        /// Limpar Acessos
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> LimparAcessoTWWUsingGETAsync ();
-
-        /// <summary>
-        /// Limpar Acessos
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> LimparAcessoTWWUsingGETAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<SMS>> AtualizarSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
         
         /// <summary>
         /// Listar Push
@@ -378,11 +338,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="data">Data</param>
-        /// <param name="resposta">TextoStatus</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of SMS</returns>
-        System.Threading.Tasks.Task<SMS> ResponderSMSUsingPOSTAsync (string nsu, string data, string resposta);
+        System.Threading.Tasks.Task<SMS> ResponderSMSUsingPOSTAsync (string nsu = null, string data = null, string resposta = null);
 
         /// <summary>
         /// Responder SMS
@@ -391,11 +351,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="data">Data</param>
-        /// <param name="resposta">TextoStatus</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (SMS)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SMS>> ResponderSMSUsingPOSTAsyncWithHttpInfo (string nsu, string data, string resposta);
+        System.Threading.Tasks.Task<ApiResponse<SMS>> ResponderSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null);
         
         /// <summary>
         /// Enviar Push FCM
@@ -581,13 +541,13 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param> 
-        /// <param name="status">Status</param> 
-        /// <param name="data">Data</param> 
-        /// <param name="textoStatus">TextoStatus</param> 
-        /// <param name="operadora">Operadora</param> 
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="status">Status (optional)</param> 
+        /// <param name="data">Data (optional)</param> 
+        /// <param name="textoStatus">TextoStatus (optional)</param> 
+        /// <param name="operadora">Operadora (optional)</param> 
         /// <returns>SMS</returns>
-        public SMS AtualizarSMSUsingPOST (string nsu, string status, string data, string textoStatus, string operadora)
+        public SMS AtualizarSMSUsingPOST (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
              ApiResponse<SMS> localVarResponse = AtualizarSMSUsingPOSTWithHttpInfo(nsu, status, data, textoStatus, operadora);
              return localVarResponse.Data;
@@ -597,34 +557,14 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param> 
-        /// <param name="status">Status</param> 
-        /// <param name="data">Data</param> 
-        /// <param name="textoStatus">TextoStatus</param> 
-        /// <param name="operadora">Operadora</param> 
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="status">Status (optional)</param> 
+        /// <param name="data">Data (optional)</param> 
+        /// <param name="textoStatus">TextoStatus (optional)</param> 
+        /// <param name="operadora">Operadora (optional)</param> 
         /// <returns>ApiResponse of SMS</returns>
-        public ApiResponse< SMS > AtualizarSMSUsingPOSTWithHttpInfo (string nsu, string status, string data, string textoStatus, string operadora)
+        public ApiResponse< SMS > AtualizarSMSUsingPOSTWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
-            
-            // verify the required parameter 'nsu' is set
-            if (nsu == null)
-                throw new ApiException(400, "Missing required parameter 'nsu' when calling NotificacoesApi->AtualizarSMSUsingPOST");
-            
-            // verify the required parameter 'status' is set
-            if (status == null)
-                throw new ApiException(400, "Missing required parameter 'status' when calling NotificacoesApi->AtualizarSMSUsingPOST");
-            
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling NotificacoesApi->AtualizarSMSUsingPOST");
-            
-            // verify the required parameter 'textoStatus' is set
-            if (textoStatus == null)
-                throw new ApiException(400, "Missing required parameter 'textoStatus' when calling NotificacoesApi->AtualizarSMSUsingPOST");
-            
-            // verify the required parameter 'operadora' is set
-            if (operadora == null)
-                throw new ApiException(400, "Missing required parameter 'operadora' when calling NotificacoesApi->AtualizarSMSUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/sms/atualizar-status";
@@ -695,13 +635,13 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="status">Status</param>
-        /// <param name="data">Data</param>
-        /// <param name="textoStatus">TextoStatus</param>
-        /// <param name="operadora">Operadora</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="status">Status (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="textoStatus">TextoStatus (optional)</param>
+        /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of SMS</returns>
-        public async System.Threading.Tasks.Task<SMS> AtualizarSMSUsingPOSTAsync (string nsu, string status, string data, string textoStatus, string operadora)
+        public async System.Threading.Tasks.Task<SMS> AtualizarSMSUsingPOSTAsync (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
              ApiResponse<SMS> localVarResponse = await AtualizarSMSUsingPOSTAsyncWithHttpInfo(nsu, status, data, textoStatus, operadora);
              return localVarResponse.Data;
@@ -712,24 +652,14 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="status">Status</param>
-        /// <param name="data">Data</param>
-        /// <param name="textoStatus">TextoStatus</param>
-        /// <param name="operadora">Operadora</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="status">Status (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="textoStatus">TextoStatus (optional)</param>
+        /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of ApiResponse (SMS)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SMS>> AtualizarSMSUsingPOSTAsyncWithHttpInfo (string nsu, string status, string data, string textoStatus, string operadora)
+        public async System.Threading.Tasks.Task<ApiResponse<SMS>> AtualizarSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
-            // verify the required parameter 'nsu' is set
-            if (nsu == null) throw new ApiException(400, "Missing required parameter 'nsu' when calling AtualizarSMSUsingPOST");
-            // verify the required parameter 'status' is set
-            if (status == null) throw new ApiException(400, "Missing required parameter 'status' when calling AtualizarSMSUsingPOST");
-            // verify the required parameter 'data' is set
-            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling AtualizarSMSUsingPOST");
-            // verify the required parameter 'textoStatus' is set
-            if (textoStatus == null) throw new ApiException(400, "Missing required parameter 'textoStatus' when calling AtualizarSMSUsingPOST");
-            // verify the required parameter 'operadora' is set
-            if (operadora == null) throw new ApiException(400, "Missing required parameter 'operadora' when calling AtualizarSMSUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/sms/atualizar-status";
@@ -793,165 +723,6 @@ namespace Conductor.Pier.Api
             return new ApiResponse<SMS>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SMS) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SMS)));
-            
-        }
-        
-        /// <summary>
-        /// Limpar Acessos Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string LimparAcessoTWWUsingGET ()
-        {
-             ApiResponse<string> localVarResponse = LimparAcessoTWWUsingGETWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Limpar Acessos Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > LimparAcessoTWWUsingGETWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/notificacoes/sms/limpar";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling LimparAcessoTWWUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling LimparAcessoTWWUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Limpar Acessos Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> LimparAcessoTWWUsingGETAsync ()
-        {
-             ApiResponse<string> localVarResponse = await LimparAcessoTWWUsingGETAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Limpar Acessos Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> LimparAcessoTWWUsingGETAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/notificacoes/sms/limpar";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling LimparAcessoTWWUsingGET: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling LimparAcessoTWWUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
         
@@ -1361,11 +1132,11 @@ namespace Conductor.Pier.Api
         /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param> 
-        /// <param name="data">Data</param> 
-        /// <param name="resposta">TextoStatus</param> 
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="data">Data (optional)</param> 
+        /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>SMS</returns>
-        public SMS ResponderSMSUsingPOST (string nsu, string data, string resposta)
+        public SMS ResponderSMSUsingPOST (string nsu = null, string data = null, string resposta = null)
         {
              ApiResponse<SMS> localVarResponse = ResponderSMSUsingPOSTWithHttpInfo(nsu, data, resposta);
              return localVarResponse.Data;
@@ -1375,24 +1146,12 @@ namespace Conductor.Pier.Api
         /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param> 
-        /// <param name="data">Data</param> 
-        /// <param name="resposta">TextoStatus</param> 
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="data">Data (optional)</param> 
+        /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>ApiResponse of SMS</returns>
-        public ApiResponse< SMS > ResponderSMSUsingPOSTWithHttpInfo (string nsu, string data, string resposta)
+        public ApiResponse< SMS > ResponderSMSUsingPOSTWithHttpInfo (string nsu = null, string data = null, string resposta = null)
         {
-            
-            // verify the required parameter 'nsu' is set
-            if (nsu == null)
-                throw new ApiException(400, "Missing required parameter 'nsu' when calling NotificacoesApi->ResponderSMSUsingPOST");
-            
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling NotificacoesApi->ResponderSMSUsingPOST");
-            
-            // verify the required parameter 'resposta' is set
-            if (resposta == null)
-                throw new ApiException(400, "Missing required parameter 'resposta' when calling NotificacoesApi->ResponderSMSUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/sms/responder";
@@ -1461,11 +1220,11 @@ namespace Conductor.Pier.Api
         /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="data">Data</param>
-        /// <param name="resposta">TextoStatus</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of SMS</returns>
-        public async System.Threading.Tasks.Task<SMS> ResponderSMSUsingPOSTAsync (string nsu, string data, string resposta)
+        public async System.Threading.Tasks.Task<SMS> ResponderSMSUsingPOSTAsync (string nsu = null, string data = null, string resposta = null)
         {
              ApiResponse<SMS> localVarResponse = await ResponderSMSUsingPOSTAsyncWithHttpInfo(nsu, data, resposta);
              return localVarResponse.Data;
@@ -1476,18 +1235,12 @@ namespace Conductor.Pier.Api
         /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero</param>
-        /// <param name="data">Data</param>
-        /// <param name="resposta">TextoStatus</param>
+        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="data">Data (optional)</param>
+        /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (SMS)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SMS>> ResponderSMSUsingPOSTAsyncWithHttpInfo (string nsu, string data, string resposta)
+        public async System.Threading.Tasks.Task<ApiResponse<SMS>> ResponderSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null)
         {
-            // verify the required parameter 'nsu' is set
-            if (nsu == null) throw new ApiException(400, "Missing required parameter 'nsu' when calling ResponderSMSUsingPOST");
-            // verify the required parameter 'data' is set
-            if (data == null) throw new ApiException(400, "Missing required parameter 'data' when calling ResponderSMSUsingPOST");
-            // verify the required parameter 'resposta' is set
-            if (resposta == null) throw new ApiException(400, "Missing required parameter 'resposta' when calling ResponderSMSUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/sms/responder";

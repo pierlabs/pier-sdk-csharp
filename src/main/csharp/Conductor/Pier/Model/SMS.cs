@@ -78,21 +78,25 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SMS" /> class.
         /// Initializes a new instance of the <see cref="SMS" />class.
         /// </summary>
+        /// <param name="Id">C\u00C3\u00B3digo Identificador..</param>
         /// <param name="Nsu">N\u00C3\u00BAmero sequencial \u00C3\u00BAnico..</param>
         /// <param name="IdEmissor">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id)..</param>
         /// <param name="Evento">Evento de notifica\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="Status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
+        /// <param name="DescricaoStatus">Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
         /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
         /// <param name="Celular">Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999 (required).</param>
+        /// <param name="Operadora">Apresenta a operadora do celular a ser eviado o SMS (required).</param>
         /// <param name="Conteudo">Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado (required).</param>
+        /// <param name="Resposta">Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada (required).</param>
         /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
         /// <param name="QuantidadeTentativasEnvio">Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
         /// <param name="DataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (required).</param>
         /// <param name="DataAlteracaoStatus">Apresenta a data e em que o Stattjus do registro foi modificado (required).</param>
         /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
 
-        public SMS(long? Nsu = null, long? IdEmissor = null, EventoEnum? Evento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, DateTime? DataAgendamento = null, int? QuantidadeTentativasEnvio = null, DateTime? DataInclusao = null, DateTime? DataAlteracaoStatus = null, string Protocolo = null)
+        public SMS(long? Id = null, long? Nsu = null, long? IdEmissor = null, EventoEnum? Evento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, DateTime? DataAgendamento = null, int? QuantidadeTentativasEnvio = null, DateTime? DataInclusao = null, DateTime? DataAlteracaoStatus = null, string Protocolo = null)
         {
             // to ensure "Status" is required (not null)
             if (Status == null)
@@ -102,6 +106,15 @@ namespace Conductor.Pier.Model
             else
             {
                 this.Status = Status;
+            }
+            // to ensure "DescricaoStatus" is required (not null)
+            if (DescricaoStatus == null)
+            {
+                throw new InvalidDataException("DescricaoStatus is a required property for SMS and cannot be null");
+            }
+            else
+            {
+                this.DescricaoStatus = DescricaoStatus;
             }
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
@@ -130,6 +143,15 @@ namespace Conductor.Pier.Model
             {
                 this.Celular = Celular;
             }
+            // to ensure "Operadora" is required (not null)
+            if (Operadora == null)
+            {
+                throw new InvalidDataException("Operadora is a required property for SMS and cannot be null");
+            }
+            else
+            {
+                this.Operadora = Operadora;
+            }
             // to ensure "Conteudo" is required (not null)
             if (Conteudo == null)
             {
@@ -138,6 +160,15 @@ namespace Conductor.Pier.Model
             else
             {
                 this.Conteudo = Conteudo;
+            }
+            // to ensure "Resposta" is required (not null)
+            if (Resposta == null)
+            {
+                throw new InvalidDataException("Resposta is a required property for SMS and cannot be null");
+            }
+            else
+            {
+                this.Resposta = Resposta;
             }
             // to ensure "DataAgendamento" is required (not null)
             if (DataAgendamento == null)
@@ -175,6 +206,7 @@ namespace Conductor.Pier.Model
             {
                 this.DataAlteracaoStatus = DataAlteracaoStatus;
             }
+            this.Id = Id;
             this.Nsu = Nsu;
             this.IdEmissor = IdEmissor;
             this.Evento = Evento;
@@ -182,6 +214,13 @@ namespace Conductor.Pier.Model
             
         }
         
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo Identificador.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo Identificador.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
@@ -196,6 +235,13 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
+    
+        /// <summary>
+        /// Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// </summary>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
+        public string DescricaoStatus { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo identificado da pessoa
@@ -219,11 +265,25 @@ namespace Conductor.Pier.Model
         public string Celular { get; set; }
     
         /// <summary>
+        /// Apresenta a operadora do celular a ser eviado o SMS
+        /// </summary>
+        /// <value>Apresenta a operadora do celular a ser eviado o SMS</value>
+        [DataMember(Name="operadora", EmitDefaultValue=false)]
+        public string Operadora { get; set; }
+    
+        /// <summary>
         /// Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
         /// </summary>
         /// <value>Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
+    
+        /// <summary>
+        /// Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+        /// </summary>
+        /// <value>Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada</value>
+        [DataMember(Name="resposta", EmitDefaultValue=false)]
+        public string Resposta { get; set; }
     
         /// <summary>
         /// Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
@@ -268,14 +328,18 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SMS {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nsu: ").Append(Nsu).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  Evento: ").Append(Evento).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  DescricaoStatus: ").Append(DescricaoStatus).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  Celular: ").Append(Celular).Append("\n");
+            sb.Append("  Operadora: ").Append(Operadora).Append("\n");
             sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
+            sb.Append("  Resposta: ").Append(Resposta).Append("\n");
             sb.Append("  DataAgendamento: ").Append(DataAgendamento).Append("\n");
             sb.Append("  QuantidadeTentativasEnvio: ").Append(QuantidadeTentativasEnvio).Append("\n");
             sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
@@ -319,6 +383,11 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
                     this.Nsu == other.Nsu ||
                     this.Nsu != null &&
                     this.Nsu.Equals(other.Nsu)
@@ -339,6 +408,11 @@ namespace Conductor.Pier.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
+                    this.DescricaoStatus == other.DescricaoStatus ||
+                    this.DescricaoStatus != null &&
+                    this.DescricaoStatus.Equals(other.DescricaoStatus)
+                ) && 
+                (
                     this.IdPessoa == other.IdPessoa ||
                     this.IdPessoa != null &&
                     this.IdPessoa.Equals(other.IdPessoa)
@@ -354,9 +428,19 @@ namespace Conductor.Pier.Model
                     this.Celular.Equals(other.Celular)
                 ) && 
                 (
+                    this.Operadora == other.Operadora ||
+                    this.Operadora != null &&
+                    this.Operadora.Equals(other.Operadora)
+                ) && 
+                (
                     this.Conteudo == other.Conteudo ||
                     this.Conteudo != null &&
                     this.Conteudo.Equals(other.Conteudo)
+                ) && 
+                (
+                    this.Resposta == other.Resposta ||
+                    this.Resposta != null &&
+                    this.Resposta.Equals(other.Resposta)
                 ) && 
                 (
                     this.DataAgendamento == other.DataAgendamento ||
@@ -397,6 +481,9 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Nsu != null)
                     hash = hash * 59 + this.Nsu.GetHashCode();
                 
@@ -409,6 +496,9 @@ namespace Conductor.Pier.Model
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
+                if (this.DescricaoStatus != null)
+                    hash = hash * 59 + this.DescricaoStatus.GetHashCode();
+                
                 if (this.IdPessoa != null)
                     hash = hash * 59 + this.IdPessoa.GetHashCode();
                 
@@ -418,8 +508,14 @@ namespace Conductor.Pier.Model
                 if (this.Celular != null)
                     hash = hash * 59 + this.Celular.GetHashCode();
                 
+                if (this.Operadora != null)
+                    hash = hash * 59 + this.Operadora.GetHashCode();
+                
                 if (this.Conteudo != null)
                     hash = hash * 59 + this.Conteudo.GetHashCode();
+                
+                if (this.Resposta != null)
+                    hash = hash * 59 + this.Resposta.GetHashCode();
                 
                 if (this.DataAgendamento != null)
                     hash = hash * 59 + this.DataAgendamento.GetHashCode();
