@@ -44,7 +44,7 @@ namespace Conductor.Pier.Api
         ApiResponse<string> AlterarSenhaUsingPUTWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Alterar os usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -56,7 +56,7 @@ namespace Conductor.Pier.Api
         Usuario AlterarUsingPUT6 (long? id, Usuario update);
   
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Alterar os usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -90,7 +90,7 @@ namespace Conductor.Pier.Api
         ApiResponse<Usuario> ConsultarUsingGET16WithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Lista os Usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
@@ -107,7 +107,7 @@ namespace Conductor.Pier.Api
         PageUsuarios ListarUsingGET16 (int? page = null, int? limit = null, long? id = null, string nome = null, string cpf = null, string email = null, string status = null);
   
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Lista os Usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
@@ -146,10 +146,10 @@ namespace Conductor.Pier.Api
         ApiResponse<string> RecuperarSenhaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER
+        /// Cadastrar Usu\u00C3\u00A1rio
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -157,10 +157,10 @@ namespace Conductor.Pier.Api
         Usuario SalvarUsingPOST6 (Usuario persist);
   
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER
+        /// Cadastrar Usu\u00C3\u00A1rio
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -222,7 +222,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Alterar os usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -234,7 +234,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Usuario> AlterarUsingPUT6Async (long? id, Usuario update);
 
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Alterar os usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -268,7 +268,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Usuario>> ConsultarUsingGET16AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Lista os Usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
@@ -285,7 +285,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageUsuarios> ListarUsingGET16Async (int? page = null, int? limit = null, long? id = null, string nome = null, string cpf = null, string email = null, string status = null);
 
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+        /// Lista os Usu\u00C3\u00A1rios cadastrados
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
@@ -324,10 +324,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> RecuperarSenhaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER
+        /// Cadastrar Usu\u00C3\u00A1rio
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -335,10 +335,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Usuario> SalvarUsingPOST6Async (Usuario persist);
 
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER
+        /// Cadastrar Usu\u00C3\u00A1rio
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -657,7 +657,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Alterar os usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
@@ -670,7 +670,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Alterar os usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
@@ -756,7 +756,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Alterar os usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
@@ -770,7 +770,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Alterar os usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
@@ -1023,7 +1023,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -1041,7 +1041,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -1123,7 +1123,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -1142,7 +1142,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00C3\u00A1rios cadastrados Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -1395,7 +1395,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Cadastrar Usu\u00C3\u00A1rio Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -1407,7 +1407,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Cadastrar Usu\u00C3\u00A1rio Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -1487,7 +1487,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Cadastrar Usu\u00C3\u00A1rio Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -1500,7 +1500,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastrar Usu\u00C3\u00A1rio na base do PIER Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+        /// Cadastrar Usu\u00C3\u00A1rio Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>

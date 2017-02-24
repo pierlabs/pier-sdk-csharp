@@ -292,10 +292,10 @@ namespace Conductor.Pier.Api
         ApiResponse<PageFaturas> ListarFaturasUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
@@ -310,10 +310,10 @@ namespace Conductor.Pier.Api
         PageTransferencias ListarUsingGET15 (long? id, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, DateTime? dataTransferencia = null);
   
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
@@ -702,10 +702,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageFaturas>> ListarFaturasUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, DateTime? dataVencimento = null);
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
@@ -720,10 +720,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageTransferencias> ListarUsingGET15Async (long? id, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, DateTime? dataTransferencia = null);
 
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
@@ -2888,7 +2888,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
@@ -2907,7 +2907,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
@@ -2995,7 +2995,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
@@ -3015,7 +3015,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>

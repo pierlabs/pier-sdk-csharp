@@ -18,10 +18,10 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor.
+        /// Adiciona uma nova FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Adiciona uma nova FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param>
@@ -34,10 +34,10 @@ namespace Conductor.Pier.Api
         FAQ AdicionarUsingPOST (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor.
+        /// Adiciona uma nova FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Adiciona uma nova FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param>
@@ -50,10 +50,10 @@ namespace Conductor.Pier.Api
         ApiResponse<FAQ> AdicionarUsingPOSTWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente.
+        /// Alterar FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Alterar FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -67,10 +67,10 @@ namespace Conductor.Pier.Api
         FAQ AlterarUsingPUT2 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente.
+        /// Alterar FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Alterar FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -84,10 +84,10 @@ namespace Conductor.Pier.Api
         ApiResponse<FAQ> AlterarUsingPUT2WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+        /// Consultar FAQ por id
         /// </summary>
         /// <remarks>
-        /// 
+        /// Consulta os detalhes de uma determinada FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -95,10 +95,10 @@ namespace Conductor.Pier.Api
         FAQ ConsultarUsingGET5 (long? id);
   
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+        /// Consultar FAQ por id
         /// </summary>
         /// <remarks>
-        /// 
+        /// Consulta os detalhes de uma determinada FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -106,10 +106,10 @@ namespace Conductor.Pier.Api
         ApiResponse<FAQ> ConsultarUsingGET5WithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor.
+        /// Lista FAQs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Lista todas as FAQs
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -125,10 +125,10 @@ namespace Conductor.Pier.Api
         PageFaqs ListarUsingGET5 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor.
+        /// Lista FAQs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Lista todas as FAQs
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -148,10 +148,10 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor.
+        /// Adiciona uma nova FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Adiciona uma nova FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param>
@@ -164,10 +164,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<FAQ> AdicionarUsingPOSTAsync (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor.
+        /// Adiciona uma nova FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Adiciona uma nova FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param>
@@ -180,10 +180,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<FAQ>> AdicionarUsingPOSTAsyncWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente.
+        /// Alterar FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Alterar FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -197,10 +197,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<FAQ> AlterarUsingPUT2Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente.
+        /// Alterar FAQ
         /// </summary>
         /// <remarks>
-        /// 
+        /// Alterar FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -214,10 +214,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<FAQ>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+        /// Consultar FAQ por id
         /// </summary>
         /// <remarks>
-        /// 
+        /// Consulta os detalhes de uma determinada FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -225,10 +225,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<FAQ> ConsultarUsingGET5Async (long? id);
 
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+        /// Consultar FAQ por id
         /// </summary>
         /// <remarks>
-        /// 
+        /// Consulta os detalhes de uma determinada FAQ
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -236,10 +236,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor.
+        /// Lista FAQs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Lista todas as FAQs
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -255,10 +255,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageFaqs> ListarUsingGET5Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor.
+        /// Lista FAQs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Lista todas as FAQs
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -366,7 +366,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor. 
+        /// Adiciona uma nova FAQ Adiciona uma nova FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param> 
@@ -383,7 +383,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor. 
+        /// Adiciona uma nova FAQ Adiciona uma nova FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param> 
@@ -471,7 +471,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor. 
+        /// Adiciona uma nova FAQ Adiciona uma nova FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param>
@@ -489,7 +489,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona uma nova FAQ para um determinado Emissor. 
+        /// Adiciona uma nova FAQ Adiciona uma nova FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pergunta">Conte\u00C3\u00BAdo da pergunta.</param>
@@ -573,7 +573,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente. 
+        /// Alterar FAQ Alterar FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -591,7 +591,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente. 
+        /// Alterar FAQ Alterar FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -685,7 +685,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente. 
+        /// Alterar FAQ Alterar FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -704,7 +704,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera os par\u00C3\u00A2metros de uma FAQ existente. 
+        /// Alterar FAQ Alterar FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -792,7 +792,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor. 
+        /// Consultar FAQ por id Consulta os detalhes de uma determinada FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -804,7 +804,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor. 
+        /// Consultar FAQ por id Consulta os detalhes de uma determinada FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -878,7 +878,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor. 
+        /// Consultar FAQ por id Consulta os detalhes de uma determinada FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -891,7 +891,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta os detalhes de uma determinada FAQ relacionada a um Emissor. 
+        /// Consultar FAQ por id Consulta os detalhes de uma determinada FAQ
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -963,7 +963,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor. 
+        /// Lista FAQs Lista todas as FAQs
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -983,7 +983,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor. 
+        /// Lista FAQs Lista todas as FAQs
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
@@ -1069,7 +1069,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor. 
+        /// Lista FAQs Lista todas as FAQs
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
@@ -1090,7 +1090,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista todas as FAQs de um determinado emissor. 
+        /// Lista FAQs Lista todas as FAQs
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
