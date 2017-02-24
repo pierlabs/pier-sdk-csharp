@@ -19,11 +19,11 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Evento a ser chamado pelo WebHook
+        /// TipoEvento a ser chamado pelo WebHook
         /// </summary>
-        /// <value>Evento a ser chamado pelo WebHook</value>
+        /// <value>TipoEvento a ser chamado pelo WebHook</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EventoEnum {
+        public enum TipoEventoEnum {
             
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
@@ -55,11 +55,11 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Evento a ser chamado pelo WebHook
+        /// TipoEvento a ser chamado pelo WebHook
         /// </summary>
-        /// <value>Evento a ser chamado pelo WebHook</value>
-        [DataMember(Name="evento", EmitDefaultValue=false)]
-        public EventoEnum? Evento { get; set; }
+        /// <value>TipoEvento a ser chamado pelo WebHook</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
         /// M\u00C3\u00A9todo que a ser chamado pelo WebHook
@@ -73,11 +73,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="WebHook" />class.
         /// </summary>
         /// <param name="Id">Id do WebHook (required).</param>
-        /// <param name="Evento">Evento a ser chamado pelo WebHook (required).</param>
+        /// <param name="TipoEvento">TipoEvento a ser chamado pelo WebHook (required).</param>
         /// <param name="Metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (required).</param>
         /// <param name="Url">URL que a ser consumida pelo WebHook (required).</param>
 
-        public WebHook(long? Id = null, EventoEnum? Evento = null, MetodoEnum? Metodo = null, string Url = null)
+        public WebHook(long? Id = null, TipoEventoEnum? TipoEvento = null, MetodoEnum? Metodo = null, string Url = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -88,14 +88,14 @@ namespace Conductor.Pier.Model
             {
                 this.Id = Id;
             }
-            // to ensure "Evento" is required (not null)
-            if (Evento == null)
+            // to ensure "TipoEvento" is required (not null)
+            if (TipoEvento == null)
             {
-                throw new InvalidDataException("Evento is a required property for WebHook and cannot be null");
+                throw new InvalidDataException("TipoEvento is a required property for WebHook and cannot be null");
             }
             else
             {
-                this.Evento = Evento;
+                this.TipoEvento = TipoEvento;
             }
             // to ensure "Metodo" is required (not null)
             if (Metodo == null)
@@ -142,7 +142,7 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class WebHook {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Evento: ").Append(Evento).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             sb.Append("  Metodo: ").Append(Metodo).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             
@@ -188,9 +188,9 @@ namespace Conductor.Pier.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.Evento == other.Evento ||
-                    this.Evento != null &&
-                    this.Evento.Equals(other.Evento)
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 ) && 
                 (
                     this.Metodo == other.Metodo ||
@@ -219,8 +219,8 @@ namespace Conductor.Pier.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Evento != null)
-                    hash = hash * 59 + this.Evento.GetHashCode();
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 if (this.Metodo != null)
                     hash = hash * 59 + this.Metodo.GetHashCode();

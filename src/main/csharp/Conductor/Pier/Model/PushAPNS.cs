@@ -19,11 +19,11 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EventoEnum {
+        public enum TipoEventoEnum {
             
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
@@ -34,11 +34,11 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
-        [DataMember(Name="evento", EmitDefaultValue=false)]
-        public EventoEnum? Evento { get; set; }
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PushAPNS" /> class.
@@ -51,11 +51,11 @@ namespace Conductor.Pier.Model
         /// <param name="Senha">Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. (required).</param>
         /// <param name="Titulo">Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o. (required).</param>
         /// <param name="Conteudo">Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado. (required).</param>
-        /// <param name="Evento">Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
+        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
         /// <param name="Icone">Apresenta o nome do icone a ser apresentado no push..</param>
         /// <param name="Som">Apresenta o cor do icone a ser apresentado no push.</param>
 
-        public PushAPNS(long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Certificado = null, string Senha = null, string Titulo = null, string Conteudo = null, EventoEnum? Evento = null, string Icone = null, string Som = null)
+        public PushAPNS(long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Certificado = null, string Senha = null, string Titulo = null, string Conteudo = null, TipoEventoEnum? TipoEvento = null, string Icone = null, string Som = null)
         {
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
@@ -120,14 +120,14 @@ namespace Conductor.Pier.Model
             {
                 this.Conteudo = Conteudo;
             }
-            // to ensure "Evento" is required (not null)
-            if (Evento == null)
+            // to ensure "TipoEvento" is required (not null)
+            if (TipoEvento == null)
             {
-                throw new InvalidDataException("Evento is a required property for PushAPNS and cannot be null");
+                throw new InvalidDataException("TipoEvento is a required property for PushAPNS and cannot be null");
             }
             else
             {
-                this.Evento = Evento;
+                this.TipoEvento = TipoEvento;
             }
             this.Icone = Icone;
             this.Som = Som;
@@ -213,7 +213,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Senha: ").Append(Senha).Append("\n");
             sb.Append("  Titulo: ").Append(Titulo).Append("\n");
             sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
-            sb.Append("  Evento: ").Append(Evento).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             sb.Append("  Icone: ").Append(Icone).Append("\n");
             sb.Append("  Som: ").Append(Som).Append("\n");
             
@@ -289,9 +289,9 @@ namespace Conductor.Pier.Model
                     this.Conteudo.Equals(other.Conteudo)
                 ) && 
                 (
-                    this.Evento == other.Evento ||
-                    this.Evento != null &&
-                    this.Evento.Equals(other.Evento)
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 ) && 
                 (
                     this.Icone == other.Icone ||
@@ -338,8 +338,8 @@ namespace Conductor.Pier.Model
                 if (this.Conteudo != null)
                     hash = hash * 59 + this.Conteudo.GetHashCode();
                 
-                if (this.Evento != null)
-                    hash = hash * 59 + this.Evento.GetHashCode();
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 if (this.Icone != null)
                     hash = hash * 59 + this.Icone.GetHashCode();

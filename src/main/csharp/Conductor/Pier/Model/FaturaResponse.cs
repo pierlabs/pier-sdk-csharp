@@ -22,138 +22,84 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador da fatura..</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo identificador do produto..</param>
-        /// <param name="DataVencimento">Data de vencimento da fatura..</param>
-        /// <param name="SaldoFaturaAnterior">Saldo da fatura anterior..</param>
-        /// <param name="SaldoMulta">Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual..</param>
-        /// <param name="SaldoCompras">Saldo total das compras lan\u00C3\u00A7adas na fatura atual..</param>
-        /// <param name="SaldoPagamentos">Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual..</param>
-        /// <param name="SaldoTarifas">Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual..</param>
-        /// <param name="SaldoDebitos">Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual..</param>
-        /// <param name="SaldoCreditos">Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual..</param>
-        /// <param name="SaldoAtualFinal">Salto total devedor da fatura atual..</param>
-        /// <param name="ValorMinimoFatura">Valor m\u00C3\u00ADnimo para pagamento da fatura..</param>
-        /// <param name="FlagEmiteFatura">Quando ativa, indica que fora emitida uma fatura..</param>
+        /// <param name="Id">C\u00C3\u00B3digo identificador do tipo de boleto..</param>
+        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto..</param>
+        /// <param name="Banco">C\u00C3\u00B3digo identificador do banco..</param>
+        /// <param name="FaixaNossoNumero">Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero..</param>
+        /// <param name="MinNossoNumero">N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero..</param>
+        /// <param name="MaxNossoNumero">N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero..</param>
+        /// <param name="TamNossoNumero">Tamanho do nosso n\u00C3\u00BAmero..</param>
+        /// <param name="UltimoNossoNumero">\u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado..</param>
 
-        public FaturaResponse(long? Id = null, long? IdConta = null, long? IdProduto = null, DateTime? DataVencimento = null, double? SaldoFaturaAnterior = null, double? SaldoMulta = null, double? SaldoCompras = null, double? SaldoPagamentos = null, double? SaldoTarifas = null, double? SaldoDebitos = null, double? SaldoCreditos = null, double? SaldoAtualFinal = null, double? ValorMinimoFatura = null, int? FlagEmiteFatura = null)
+        public FaturaResponse(long? Id = null, string Descricao = null, long? Banco = null, int? FaixaNossoNumero = null, double? MinNossoNumero = null, double? MaxNossoNumero = null, int? TamNossoNumero = null, double? UltimoNossoNumero = null)
         {
             this.Id = Id;
-            this.IdConta = IdConta;
-            this.IdProduto = IdProduto;
-            this.DataVencimento = DataVencimento;
-            this.SaldoFaturaAnterior = SaldoFaturaAnterior;
-            this.SaldoMulta = SaldoMulta;
-            this.SaldoCompras = SaldoCompras;
-            this.SaldoPagamentos = SaldoPagamentos;
-            this.SaldoTarifas = SaldoTarifas;
-            this.SaldoDebitos = SaldoDebitos;
-            this.SaldoCreditos = SaldoCreditos;
-            this.SaldoAtualFinal = SaldoAtualFinal;
-            this.ValorMinimoFatura = ValorMinimoFatura;
-            this.FlagEmiteFatura = FlagEmiteFatura;
+            this.Descricao = Descricao;
+            this.Banco = Banco;
+            this.FaixaNossoNumero = FaixaNossoNumero;
+            this.MinNossoNumero = MinNossoNumero;
+            this.MaxNossoNumero = MaxNossoNumero;
+            this.TamNossoNumero = TamNossoNumero;
+            this.UltimoNossoNumero = UltimoNossoNumero;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da fatura.
+        /// C\u00C3\u00B3digo identificador do tipo de boleto.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da fatura.</value>
+        /// <value>C\u00C3\u00B3digo identificador do tipo de boleto.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta.
+        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta.</value>
-        [DataMember(Name="idConta", EmitDefaultValue=false)]
-        public long? IdConta { get; set; }
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.</value>
+        [DataMember(Name="descricao", EmitDefaultValue=false)]
+        public string Descricao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do produto.
+        /// C\u00C3\u00B3digo identificador do banco.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do produto.</value>
-        [DataMember(Name="idProduto", EmitDefaultValue=false)]
-        public long? IdProduto { get; set; }
+        /// <value>C\u00C3\u00B3digo identificador do banco.</value>
+        [DataMember(Name="banco", EmitDefaultValue=false)]
+        public long? Banco { get; set; }
     
         /// <summary>
-        /// Data de vencimento da fatura.
+        /// Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
         /// </summary>
-        /// <value>Data de vencimento da fatura.</value>
-        [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
-        public DateTime? DataVencimento { get; set; }
+        /// <value>Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.</value>
+        [DataMember(Name="faixaNossoNumero", EmitDefaultValue=false)]
+        public int? FaixaNossoNumero { get; set; }
     
         /// <summary>
-        /// Saldo da fatura anterior.
+        /// N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
         /// </summary>
-        /// <value>Saldo da fatura anterior.</value>
-        [DataMember(Name="saldoFaturaAnterior", EmitDefaultValue=false)]
-        public double? SaldoFaturaAnterior { get; set; }
+        /// <value>N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.</value>
+        [DataMember(Name="minNossoNumero", EmitDefaultValue=false)]
+        public double? MinNossoNumero { get; set; }
     
         /// <summary>
-        /// Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+        /// N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
         /// </summary>
-        /// <value>Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.</value>
-        [DataMember(Name="saldoMulta", EmitDefaultValue=false)]
-        public double? SaldoMulta { get; set; }
+        /// <value>N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.</value>
+        [DataMember(Name="maxNossoNumero", EmitDefaultValue=false)]
+        public double? MaxNossoNumero { get; set; }
     
         /// <summary>
-        /// Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
+        /// Tamanho do nosso n\u00C3\u00BAmero.
         /// </summary>
-        /// <value>Saldo total das compras lan\u00C3\u00A7adas na fatura atual.</value>
-        [DataMember(Name="saldoCompras", EmitDefaultValue=false)]
-        public double? SaldoCompras { get; set; }
+        /// <value>Tamanho do nosso n\u00C3\u00BAmero.</value>
+        [DataMember(Name="tamNossoNumero", EmitDefaultValue=false)]
+        public int? TamNossoNumero { get; set; }
     
         /// <summary>
-        /// Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
+        /// \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
         /// </summary>
-        /// <value>Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.</value>
-        [DataMember(Name="saldoPagamentos", EmitDefaultValue=false)]
-        public double? SaldoPagamentos { get; set; }
-    
-        /// <summary>
-        /// Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
-        /// </summary>
-        /// <value>Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.</value>
-        [DataMember(Name="saldoTarifas", EmitDefaultValue=false)]
-        public double? SaldoTarifas { get; set; }
-    
-        /// <summary>
-        /// Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
-        /// </summary>
-        /// <value>Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.</value>
-        [DataMember(Name="saldoDebitos", EmitDefaultValue=false)]
-        public double? SaldoDebitos { get; set; }
-    
-        /// <summary>
-        /// Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
-        /// </summary>
-        /// <value>Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.</value>
-        [DataMember(Name="saldoCreditos", EmitDefaultValue=false)]
-        public double? SaldoCreditos { get; set; }
-    
-        /// <summary>
-        /// Salto total devedor da fatura atual.
-        /// </summary>
-        /// <value>Salto total devedor da fatura atual.</value>
-        [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
-        public double? SaldoAtualFinal { get; set; }
-    
-        /// <summary>
-        /// Valor m\u00C3\u00ADnimo para pagamento da fatura.
-        /// </summary>
-        /// <value>Valor m\u00C3\u00ADnimo para pagamento da fatura.</value>
-        [DataMember(Name="valorMinimoFatura", EmitDefaultValue=false)]
-        public double? ValorMinimoFatura { get; set; }
-    
-        /// <summary>
-        /// Quando ativa, indica que fora emitida uma fatura.
-        /// </summary>
-        /// <value>Quando ativa, indica que fora emitida uma fatura.</value>
-        [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
-        public int? FlagEmiteFatura { get; set; }
+        /// <value>\u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.</value>
+        [DataMember(Name="ultimoNossoNumero", EmitDefaultValue=false)]
+        public double? UltimoNossoNumero { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -164,19 +110,13 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class FaturaResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
-            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
-            sb.Append("  DataVencimento: ").Append(DataVencimento).Append("\n");
-            sb.Append("  SaldoFaturaAnterior: ").Append(SaldoFaturaAnterior).Append("\n");
-            sb.Append("  SaldoMulta: ").Append(SaldoMulta).Append("\n");
-            sb.Append("  SaldoCompras: ").Append(SaldoCompras).Append("\n");
-            sb.Append("  SaldoPagamentos: ").Append(SaldoPagamentos).Append("\n");
-            sb.Append("  SaldoTarifas: ").Append(SaldoTarifas).Append("\n");
-            sb.Append("  SaldoDebitos: ").Append(SaldoDebitos).Append("\n");
-            sb.Append("  SaldoCreditos: ").Append(SaldoCreditos).Append("\n");
-            sb.Append("  SaldoAtualFinal: ").Append(SaldoAtualFinal).Append("\n");
-            sb.Append("  ValorMinimoFatura: ").Append(ValorMinimoFatura).Append("\n");
-            sb.Append("  FlagEmiteFatura: ").Append(FlagEmiteFatura).Append("\n");
+            sb.Append("  Descricao: ").Append(Descricao).Append("\n");
+            sb.Append("  Banco: ").Append(Banco).Append("\n");
+            sb.Append("  FaixaNossoNumero: ").Append(FaixaNossoNumero).Append("\n");
+            sb.Append("  MinNossoNumero: ").Append(MinNossoNumero).Append("\n");
+            sb.Append("  MaxNossoNumero: ").Append(MaxNossoNumero).Append("\n");
+            sb.Append("  TamNossoNumero: ").Append(TamNossoNumero).Append("\n");
+            sb.Append("  UltimoNossoNumero: ").Append(UltimoNossoNumero).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -220,69 +160,39 @@ namespace Conductor.Pier.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.IdConta == other.IdConta ||
-                    this.IdConta != null &&
-                    this.IdConta.Equals(other.IdConta)
+                    this.Descricao == other.Descricao ||
+                    this.Descricao != null &&
+                    this.Descricao.Equals(other.Descricao)
                 ) && 
                 (
-                    this.IdProduto == other.IdProduto ||
-                    this.IdProduto != null &&
-                    this.IdProduto.Equals(other.IdProduto)
+                    this.Banco == other.Banco ||
+                    this.Banco != null &&
+                    this.Banco.Equals(other.Banco)
                 ) && 
                 (
-                    this.DataVencimento == other.DataVencimento ||
-                    this.DataVencimento != null &&
-                    this.DataVencimento.Equals(other.DataVencimento)
+                    this.FaixaNossoNumero == other.FaixaNossoNumero ||
+                    this.FaixaNossoNumero != null &&
+                    this.FaixaNossoNumero.Equals(other.FaixaNossoNumero)
                 ) && 
                 (
-                    this.SaldoFaturaAnterior == other.SaldoFaturaAnterior ||
-                    this.SaldoFaturaAnterior != null &&
-                    this.SaldoFaturaAnterior.Equals(other.SaldoFaturaAnterior)
+                    this.MinNossoNumero == other.MinNossoNumero ||
+                    this.MinNossoNumero != null &&
+                    this.MinNossoNumero.Equals(other.MinNossoNumero)
                 ) && 
                 (
-                    this.SaldoMulta == other.SaldoMulta ||
-                    this.SaldoMulta != null &&
-                    this.SaldoMulta.Equals(other.SaldoMulta)
+                    this.MaxNossoNumero == other.MaxNossoNumero ||
+                    this.MaxNossoNumero != null &&
+                    this.MaxNossoNumero.Equals(other.MaxNossoNumero)
                 ) && 
                 (
-                    this.SaldoCompras == other.SaldoCompras ||
-                    this.SaldoCompras != null &&
-                    this.SaldoCompras.Equals(other.SaldoCompras)
+                    this.TamNossoNumero == other.TamNossoNumero ||
+                    this.TamNossoNumero != null &&
+                    this.TamNossoNumero.Equals(other.TamNossoNumero)
                 ) && 
                 (
-                    this.SaldoPagamentos == other.SaldoPagamentos ||
-                    this.SaldoPagamentos != null &&
-                    this.SaldoPagamentos.Equals(other.SaldoPagamentos)
-                ) && 
-                (
-                    this.SaldoTarifas == other.SaldoTarifas ||
-                    this.SaldoTarifas != null &&
-                    this.SaldoTarifas.Equals(other.SaldoTarifas)
-                ) && 
-                (
-                    this.SaldoDebitos == other.SaldoDebitos ||
-                    this.SaldoDebitos != null &&
-                    this.SaldoDebitos.Equals(other.SaldoDebitos)
-                ) && 
-                (
-                    this.SaldoCreditos == other.SaldoCreditos ||
-                    this.SaldoCreditos != null &&
-                    this.SaldoCreditos.Equals(other.SaldoCreditos)
-                ) && 
-                (
-                    this.SaldoAtualFinal == other.SaldoAtualFinal ||
-                    this.SaldoAtualFinal != null &&
-                    this.SaldoAtualFinal.Equals(other.SaldoAtualFinal)
-                ) && 
-                (
-                    this.ValorMinimoFatura == other.ValorMinimoFatura ||
-                    this.ValorMinimoFatura != null &&
-                    this.ValorMinimoFatura.Equals(other.ValorMinimoFatura)
-                ) && 
-                (
-                    this.FlagEmiteFatura == other.FlagEmiteFatura ||
-                    this.FlagEmiteFatura != null &&
-                    this.FlagEmiteFatura.Equals(other.FlagEmiteFatura)
+                    this.UltimoNossoNumero == other.UltimoNossoNumero ||
+                    this.UltimoNossoNumero != null &&
+                    this.UltimoNossoNumero.Equals(other.UltimoNossoNumero)
                 );
         }
 
@@ -301,44 +211,26 @@ namespace Conductor.Pier.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.IdConta != null)
-                    hash = hash * 59 + this.IdConta.GetHashCode();
+                if (this.Descricao != null)
+                    hash = hash * 59 + this.Descricao.GetHashCode();
                 
-                if (this.IdProduto != null)
-                    hash = hash * 59 + this.IdProduto.GetHashCode();
+                if (this.Banco != null)
+                    hash = hash * 59 + this.Banco.GetHashCode();
                 
-                if (this.DataVencimento != null)
-                    hash = hash * 59 + this.DataVencimento.GetHashCode();
+                if (this.FaixaNossoNumero != null)
+                    hash = hash * 59 + this.FaixaNossoNumero.GetHashCode();
                 
-                if (this.SaldoFaturaAnterior != null)
-                    hash = hash * 59 + this.SaldoFaturaAnterior.GetHashCode();
+                if (this.MinNossoNumero != null)
+                    hash = hash * 59 + this.MinNossoNumero.GetHashCode();
                 
-                if (this.SaldoMulta != null)
-                    hash = hash * 59 + this.SaldoMulta.GetHashCode();
+                if (this.MaxNossoNumero != null)
+                    hash = hash * 59 + this.MaxNossoNumero.GetHashCode();
                 
-                if (this.SaldoCompras != null)
-                    hash = hash * 59 + this.SaldoCompras.GetHashCode();
+                if (this.TamNossoNumero != null)
+                    hash = hash * 59 + this.TamNossoNumero.GetHashCode();
                 
-                if (this.SaldoPagamentos != null)
-                    hash = hash * 59 + this.SaldoPagamentos.GetHashCode();
-                
-                if (this.SaldoTarifas != null)
-                    hash = hash * 59 + this.SaldoTarifas.GetHashCode();
-                
-                if (this.SaldoDebitos != null)
-                    hash = hash * 59 + this.SaldoDebitos.GetHashCode();
-                
-                if (this.SaldoCreditos != null)
-                    hash = hash * 59 + this.SaldoCreditos.GetHashCode();
-                
-                if (this.SaldoAtualFinal != null)
-                    hash = hash * 59 + this.SaldoAtualFinal.GetHashCode();
-                
-                if (this.ValorMinimoFatura != null)
-                    hash = hash * 59 + this.ValorMinimoFatura.GetHashCode();
-                
-                if (this.FlagEmiteFatura != null)
-                    hash = hash * 59 + this.FlagEmiteFatura.GetHashCode();
+                if (this.UltimoNossoNumero != null)
+                    hash = hash * 59 + this.UltimoNossoNumero.GetHashCode();
                 
                 return hash;
             }

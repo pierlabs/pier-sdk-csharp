@@ -19,11 +19,11 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EventoEnum {
+        public enum TipoEventoEnum {
             
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
@@ -79,11 +79,11 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o</value>
-        [DataMember(Name="evento", EmitDefaultValue=false)]
-        public EventoEnum? Evento { get; set; }
+        /// <value>Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
         /// Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="DataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo..</param>
         /// <param name="IdEmissor">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id)..</param>
-        /// <param name="Evento">Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="TipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="Status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
         /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Model
         /// <param name="Plataforma">Nome do Sistema Operacional a qual foi enviado o Push..</param>
         /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
 
-        public NotificacaoPushResponse(DateTime? DataEnvio = null, long? IdEmissor = null, EventoEnum? Evento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
+        public NotificacaoPushResponse(DateTime? DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
         {
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
@@ -164,7 +164,7 @@ namespace Conductor.Pier.Model
             }
             this.DataEnvio = DataEnvio;
             this.IdEmissor = IdEmissor;
-            this.Evento = Evento;
+            this.TipoEvento = TipoEvento;
             this.Status = Status;
             this.Plataforma = Plataforma;
             this.Protocolo = Protocolo;
@@ -238,7 +238,7 @@ namespace Conductor.Pier.Model
             sb.Append("class NotificacaoPushResponse {\n");
             sb.Append("  DataEnvio: ").Append(DataEnvio).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
-            sb.Append("  Evento: ").Append(Evento).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
@@ -295,9 +295,9 @@ namespace Conductor.Pier.Model
                     this.IdEmissor.Equals(other.IdEmissor)
                 ) && 
                 (
-                    this.Evento == other.Evento ||
-                    this.Evento != null &&
-                    this.Evento.Equals(other.Evento)
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 ) && 
                 (
                     this.Status == other.Status ||
@@ -359,8 +359,8 @@ namespace Conductor.Pier.Model
                 if (this.IdEmissor != null)
                     hash = hash * 59 + this.IdEmissor.GetHashCode();
                 
-                if (this.Evento != null)
-                    hash = hash * 59 + this.Evento.GetHashCode();
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

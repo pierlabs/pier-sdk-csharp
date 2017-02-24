@@ -39,12 +39,10 @@ namespace Conductor.Pier.Model
         /// <param name="Estabelecimento">Estabelecimento.</param>
         /// <param name="FlagCredito">FlagCredito.</param>
         /// <param name="TipoEstabelecimento">TipoEstabelecimento.</param>
-        /// <param name="Latitude">Latitude.</param>
-        /// <param name="Longetude">Longetude.</param>
         /// <param name="IdGrupoMCC">IdGrupoMCC.</param>
         /// <param name="FlagSolicitouContestacao">FlagSolicitouContestacao.</param>
 
-        public TransacaoResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, long? Ordem = null, long? IdTransacao = null, string Descricao = null, long? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, string Latitude = null, string Longetude = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
+        public TransacaoResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, long? Ordem = null, long? IdTransacao = null, string Descricao = null, long? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
             this.Id = Id;
@@ -63,8 +61,6 @@ namespace Conductor.Pier.Model
             this.Estabelecimento = Estabelecimento;
             this.FlagCredito = FlagCredito;
             this.TipoEstabelecimento = TipoEstabelecimento;
-            this.Latitude = Latitude;
-            this.Longetude = Longetude;
             this.IdGrupoMCC = IdGrupoMCC;
             this.FlagSolicitouContestacao = FlagSolicitouContestacao;
             
@@ -179,18 +175,6 @@ namespace Conductor.Pier.Model
         public string TipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// Gets or Sets Latitude
-        /// </summary>
-        [DataMember(Name="latitude", EmitDefaultValue=false)]
-        public string Latitude { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Longetude
-        /// </summary>
-        [DataMember(Name="longetude", EmitDefaultValue=false)]
-        public string Longetude { get; set; }
-    
-        /// <summary>
         /// Gets or Sets IdGrupoMCC
         /// </summary>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
@@ -227,8 +211,6 @@ namespace Conductor.Pier.Model
             sb.Append("  Estabelecimento: ").Append(Estabelecimento).Append("\n");
             sb.Append("  FlagCredito: ").Append(FlagCredito).Append("\n");
             sb.Append("  TipoEstabelecimento: ").Append(TipoEstabelecimento).Append("\n");
-            sb.Append("  Latitude: ").Append(Latitude).Append("\n");
-            sb.Append("  Longetude: ").Append(Longetude).Append("\n");
             sb.Append("  IdGrupoMCC: ").Append(IdGrupoMCC).Append("\n");
             sb.Append("  FlagSolicitouContestacao: ").Append(FlagSolicitouContestacao).Append("\n");
             
@@ -354,16 +336,6 @@ namespace Conductor.Pier.Model
                     this.TipoEstabelecimento.Equals(other.TipoEstabelecimento)
                 ) && 
                 (
-                    this.Latitude == other.Latitude ||
-                    this.Latitude != null &&
-                    this.Latitude.Equals(other.Latitude)
-                ) && 
-                (
-                    this.Longetude == other.Longetude ||
-                    this.Longetude != null &&
-                    this.Longetude.Equals(other.Longetude)
-                ) && 
-                (
                     this.IdGrupoMCC == other.IdGrupoMCC ||
                     this.IdGrupoMCC != null &&
                     this.IdGrupoMCC.Equals(other.IdGrupoMCC)
@@ -437,12 +409,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.TipoEstabelecimento != null)
                     hash = hash * 59 + this.TipoEstabelecimento.GetHashCode();
-                
-                if (this.Latitude != null)
-                    hash = hash * 59 + this.Latitude.GetHashCode();
-                
-                if (this.Longetude != null)
-                    hash = hash * 59 + this.Longetude.GetHashCode();
                 
                 if (this.IdGrupoMCC != null)
                     hash = hash * 59 + this.IdGrupoMCC.GetHashCode();

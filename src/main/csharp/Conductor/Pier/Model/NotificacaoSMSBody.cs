@@ -19,11 +19,11 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EventoEnum {
+        public enum TipoEventoEnum {
             
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
@@ -34,11 +34,11 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
-        [DataMember(Name="evento", EmitDefaultValue=false)]
-        public EventoEnum? Evento { get; set; }
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificacaoSMSBody" /> class.
@@ -50,9 +50,9 @@ namespace Conductor.Pier.Model
         /// <param name="Celular">Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999. (required).</param>
         /// <param name="Conteudo">Apresenta o texto do SMS a ser enviado (required).</param>
         /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="Evento">Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
+        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
 
-        public NotificacaoSMSBody(long? Nsu = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, DateTime? DataAgendamento = null, EventoEnum? Evento = null)
+        public NotificacaoSMSBody(long? Nsu = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, DateTime? DataAgendamento = null, TipoEventoEnum? TipoEvento = null)
         {
             // to ensure "Nsu" is required (not null)
             if (Nsu == null)
@@ -99,14 +99,14 @@ namespace Conductor.Pier.Model
             {
                 this.Conteudo = Conteudo;
             }
-            // to ensure "Evento" is required (not null)
-            if (Evento == null)
+            // to ensure "TipoEvento" is required (not null)
+            if (TipoEvento == null)
             {
-                throw new InvalidDataException("Evento is a required property for NotificacaoSMSBody and cannot be null");
+                throw new InvalidDataException("TipoEvento is a required property for NotificacaoSMSBody and cannot be null");
             }
             else
             {
-                this.Evento = Evento;
+                this.TipoEvento = TipoEvento;
             }
             this.DataAgendamento = DataAgendamento;
             
@@ -169,7 +169,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Celular: ").Append(Celular).Append("\n");
             sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
             sb.Append("  DataAgendamento: ").Append(DataAgendamento).Append("\n");
-            sb.Append("  Evento: ").Append(Evento).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -238,9 +238,9 @@ namespace Conductor.Pier.Model
                     this.DataAgendamento.Equals(other.DataAgendamento)
                 ) && 
                 (
-                    this.Evento == other.Evento ||
-                    this.Evento != null &&
-                    this.Evento.Equals(other.Evento)
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 );
         }
 
@@ -274,8 +274,8 @@ namespace Conductor.Pier.Model
                 if (this.DataAgendamento != null)
                     hash = hash * 59 + this.DataAgendamento.GetHashCode();
                 
-                if (this.Evento != null)
-                    hash = hash * 59 + this.Evento.GetHashCode();
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 return hash;
             }

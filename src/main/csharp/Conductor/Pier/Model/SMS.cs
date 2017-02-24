@@ -19,11 +19,11 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Evento de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Evento de notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EventoEnum {
+        public enum TipoEventoEnum {
             
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
@@ -61,11 +61,11 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Evento de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>Evento de notifica\u00C3\u00A7\u00C3\u00A3o</value>
-        [DataMember(Name="evento", EmitDefaultValue=false)]
-        public EventoEnum? Evento { get; set; }
+        /// <value>TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
         /// Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Model
         /// <param name="Id">C\u00C3\u00B3digo Identificador..</param>
         /// <param name="Nsu">N\u00C3\u00BAmero sequencial \u00C3\u00BAnico..</param>
         /// <param name="IdEmissor">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id)..</param>
-        /// <param name="Evento">Evento de notifica\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="TipoEvento">TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="Status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
         /// <param name="DescricaoStatus">Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataAlteracaoStatus">Apresenta a data e em que o Stattjus do registro foi modificado (required).</param>
         /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
 
-        public SMS(long? Id = null, long? Nsu = null, long? IdEmissor = null, EventoEnum? Evento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, DateTime? DataAgendamento = null, int? QuantidadeTentativasEnvio = null, DateTime? DataInclusao = null, DateTime? DataAlteracaoStatus = null, string Protocolo = null)
+        public SMS(long? Id = null, long? Nsu = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, DateTime? DataAgendamento = null, int? QuantidadeTentativasEnvio = null, DateTime? DataInclusao = null, DateTime? DataAlteracaoStatus = null, string Protocolo = null)
         {
             // to ensure "Status" is required (not null)
             if (Status == null)
@@ -209,7 +209,7 @@ namespace Conductor.Pier.Model
             this.Id = Id;
             this.Nsu = Nsu;
             this.IdEmissor = IdEmissor;
-            this.Evento = Evento;
+            this.TipoEvento = TipoEvento;
             this.Protocolo = Protocolo;
             
         }
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nsu: ").Append(Nsu).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
-            sb.Append("  Evento: ").Append(Evento).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DescricaoStatus: ").Append(DescricaoStatus).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
@@ -398,9 +398,9 @@ namespace Conductor.Pier.Model
                     this.IdEmissor.Equals(other.IdEmissor)
                 ) && 
                 (
-                    this.Evento == other.Evento ||
-                    this.Evento != null &&
-                    this.Evento.Equals(other.Evento)
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 ) && 
                 (
                     this.Status == other.Status ||
@@ -490,8 +490,8 @@ namespace Conductor.Pier.Model
                 if (this.IdEmissor != null)
                     hash = hash * 59 + this.IdEmissor.GetHashCode();
                 
-                if (this.Evento != null)
-                    hash = hash * 59 + this.Evento.GetHashCode();
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
