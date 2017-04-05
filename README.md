@@ -23,15 +23,15 @@ Then include the DLL (under the `bin` folder) in the C# project
 
 ## On Visual Studio
 
-Open your VS, within the project where you will use the SDK methods, click with right button on references and select add reference.
+Open your VS, within the project where you will use the SDK methods, click with right button on "References" and select "Add Reference...
 
 ![Step 1](https://lh4.googleusercontent.com/qW0HC9JRhWDjfhTt9_r3TR4K0U3ysJxejK8zIHrY8ihFwccBjwQZx03pOrw_QMTSTtWSam-lckLz0kQ=w1920-h948)
 
-Select Browser on the left sidebar and click on the button Browser.
+Select "Browser" on the left sidebar and click on the button "Browser".
 
 ![Step 2](https://lh3.googleusercontent.com/A-q1jhYs231Wtcipt5W7tpFMb3kcmg5yNCyapBkfAjltg6RCO8ZLIsccm7R472ChhJQerFWQkTDl3A0=w1920-h948)
 
-After that, select a generated dll after running the "compile.bat" file.
+After that, select a generated DLL after running the "compile.bat" file.
 
 ![Step 3](https://lh3.googleusercontent.com/jThRdkg4-WsYoDt0BIG_02-AofafpFNY3VMnFkq_U2Abpp_HuQDZSrTdf7rNBlLzVSopmEjlasu_mJM=w1920-h948)
 
