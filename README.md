@@ -23,7 +23,7 @@ Then include the DLL (under the `bin` folder) in the C# project
 
 ## On Visual Studio
 
-Open your VS, within the project where you will use the sdk methods, click with right button on references and select add reference.
+Open your VS, within the project where you will use the SDK methods, click with right button on references and select add reference.
 
 ![Step 1](https://lh4.googleusercontent.com/qW0HC9JRhWDjfhTt9_r3TR4K0U3ysJxejK8zIHrY8ihFwccBjwQZx03pOrw_QMTSTtWSam-lckLz0kQ=w1920-h948)
 
