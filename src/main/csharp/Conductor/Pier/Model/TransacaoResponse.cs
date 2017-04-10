@@ -42,7 +42,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdGrupoMCC">IdGrupoMCC.</param>
         /// <param name="FlagSolicitouContestacao">FlagSolicitouContestacao.</param>
 
-        public TransacaoResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, long? Ordem = null, long? IdTransacao = null, string Descricao = null, long? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
+        public TransacaoResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
             this.Id = Id;
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).</value>
         [DataMember(Name="ordem", EmitDefaultValue=false)]
-        public long? Ordem { get; set; }
+        public int? Ordem { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public long? Status { get; set; }
+        public int? Status { get; set; }
     
         /// <summary>
         /// Gets or Sets DescricaoStatus

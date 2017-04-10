@@ -28,9 +28,13 @@ namespace Conductor.Pier.Model
         /// <param name="Cpf">N\u00C3\u00BAmero do CPF, quando PF..</param>
         /// <param name="Cnpj">N\u00C3\u00BAmero do CNPJ, quando PJ..</param>
         /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ..</param>
+        /// <param name="NumeroIdentidade">N\u00C3\u00BAmero da Identidade.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Org\u00C3\u00A3o expedidor do RG..</param>
         /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado)..</param>
+        /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
+        /// <param name="DataEmissaoIdentidade">Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd.</param>
 
-        public Pessoa(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, DateTime? DataNascimento = null, string Sexo = null)
+        public Pessoa(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, DateTime? DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, DateTime? DataEmissaoIdentidade = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -62,7 +66,11 @@ namespace Conductor.Pier.Model
             this.Cpf = Cpf;
             this.Cnpj = Cnpj;
             this.DataNascimento = DataNascimento;
+            this.NumeroIdentidade = NumeroIdentidade;
+            this.OrgaoExpedidorIdentidade = OrgaoExpedidorIdentidade;
             this.Sexo = Sexo;
+            this.UnidadeFederativaIdentidade = UnidadeFederativaIdentidade;
+            this.DataEmissaoIdentidade = DataEmissaoIdentidade;
             
         }
         
@@ -110,11 +118,39 @@ namespace Conductor.Pier.Model
         public DateTime? DataNascimento { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero da Identidade
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero da Identidade</value>
+        [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
+        public string NumeroIdentidade { get; set; }
+    
+        /// <summary>
+        /// Org\u00C3\u00A3o expedidor do RG.
+        /// </summary>
+        /// <value>Org\u00C3\u00A3o expedidor do RG.</value>
+        [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
+        public string OrgaoExpedidorIdentidade { get; set; }
+    
+        /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
         /// </summary>
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
+    
+        /// <summary>
+        /// Sigla da Unidade Federativa de onde foi expedido a Identidade
+        /// </summary>
+        /// <value>Sigla da Unidade Federativa de onde foi expedido a Identidade</value>
+        [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
+        public string UnidadeFederativaIdentidade { get; set; }
+    
+        /// <summary>
+        /// Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+        /// </summary>
+        /// <value>Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd</value>
+        [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
+        public DateTime? DataEmissaoIdentidade { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -130,7 +166,11 @@ namespace Conductor.Pier.Model
             sb.Append("  Cpf: ").Append(Cpf).Append("\n");
             sb.Append("  Cnpj: ").Append(Cnpj).Append("\n");
             sb.Append("  DataNascimento: ").Append(DataNascimento).Append("\n");
+            sb.Append("  NumeroIdentidade: ").Append(NumeroIdentidade).Append("\n");
+            sb.Append("  OrgaoExpedidorIdentidade: ").Append(OrgaoExpedidorIdentidade).Append("\n");
             sb.Append("  Sexo: ").Append(Sexo).Append("\n");
+            sb.Append("  UnidadeFederativaIdentidade: ").Append(UnidadeFederativaIdentidade).Append("\n");
+            sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -199,9 +239,29 @@ namespace Conductor.Pier.Model
                     this.DataNascimento.Equals(other.DataNascimento)
                 ) && 
                 (
+                    this.NumeroIdentidade == other.NumeroIdentidade ||
+                    this.NumeroIdentidade != null &&
+                    this.NumeroIdentidade.Equals(other.NumeroIdentidade)
+                ) && 
+                (
+                    this.OrgaoExpedidorIdentidade == other.OrgaoExpedidorIdentidade ||
+                    this.OrgaoExpedidorIdentidade != null &&
+                    this.OrgaoExpedidorIdentidade.Equals(other.OrgaoExpedidorIdentidade)
+                ) && 
+                (
                     this.Sexo == other.Sexo ||
                     this.Sexo != null &&
                     this.Sexo.Equals(other.Sexo)
+                ) && 
+                (
+                    this.UnidadeFederativaIdentidade == other.UnidadeFederativaIdentidade ||
+                    this.UnidadeFederativaIdentidade != null &&
+                    this.UnidadeFederativaIdentidade.Equals(other.UnidadeFederativaIdentidade)
+                ) && 
+                (
+                    this.DataEmissaoIdentidade == other.DataEmissaoIdentidade ||
+                    this.DataEmissaoIdentidade != null &&
+                    this.DataEmissaoIdentidade.Equals(other.DataEmissaoIdentidade)
                 );
         }
 
@@ -235,8 +295,20 @@ namespace Conductor.Pier.Model
                 if (this.DataNascimento != null)
                     hash = hash * 59 + this.DataNascimento.GetHashCode();
                 
+                if (this.NumeroIdentidade != null)
+                    hash = hash * 59 + this.NumeroIdentidade.GetHashCode();
+                
+                if (this.OrgaoExpedidorIdentidade != null)
+                    hash = hash * 59 + this.OrgaoExpedidorIdentidade.GetHashCode();
+                
                 if (this.Sexo != null)
                     hash = hash * 59 + this.Sexo.GetHashCode();
+                
+                if (this.UnidadeFederativaIdentidade != null)
+                    hash = hash * 59 + this.UnidadeFederativaIdentidade.GetHashCode();
+                
+                if (this.DataEmissaoIdentidade != null)
+                    hash = hash * 59 + this.DataEmissaoIdentidade.GetHashCode();
                 
                 return hash;
             }

@@ -15,7 +15,7 @@ namespace Conductor.Pier.Model
     /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
     /// </summary>
     [DataContract]
-    public partial class Usuario :  IEquatable<Usuario>
+    public partial class UsuarioResponse :  IEquatable<UsuarioResponse>
     { 
     
         /// <summary>
@@ -41,36 +41,26 @@ namespace Conductor.Pier.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Usuario" /> class.
-        /// Initializes a new instance of the <see cref="Usuario" />class.
+        /// Initializes a new instance of the <see cref="UsuarioResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsuarioResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do Usu\u00C3\u00A1rio (required).</param>
+        /// <param name="Id">Id do Usu\u00C3\u00A1rio.</param>
         /// <param name="Nome">Nome do Usu\u00C3\u00A1rio.</param>
         /// <param name="Login">Login do Usu\u00C3\u00A1rio (required).</param>
         /// <param name="IdEmissor">Id do emissor do usu\u00C3\u00A1rio.</param>
         /// <param name="Cpf">CPF do Usu\u00C3\u00A1rio.</param>
         /// <param name="Email">Email do Usu\u00C3\u00A1rio (required).</param>
-        /// <param name="Senha">Apresenta a senha do usu\u00C3\u00A1rio..</param>
         /// <param name="Status">Status do Usu\u00C3\u00A1rio.</param>
         /// <param name="DataCriacao">Status do Usu\u00C3\u00A1rio.</param>
         /// <param name="DataModificacao">Status do Usu\u00C3\u00A1rio.</param>
         /// <param name="TentativasIncorretas">N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas.</param>
 
-        public Usuario(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, string Senha = null, StatusEnum? Status = null, DateTime? DataCriacao = null, DateTime? DataModificacao = null, long? TentativasIncorretas = null)
+        public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, DateTime? DataCriacao = null, DateTime? DataModificacao = null, long? TentativasIncorretas = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for Usuario and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
             // to ensure "Login" is required (not null)
             if (Login == null)
             {
-                throw new InvalidDataException("Login is a required property for Usuario and cannot be null");
+                throw new InvalidDataException("Login is a required property for UsuarioResponse and cannot be null");
             }
             else
             {
@@ -79,16 +69,16 @@ namespace Conductor.Pier.Model
             // to ensure "Email" is required (not null)
             if (Email == null)
             {
-                throw new InvalidDataException("Email is a required property for Usuario and cannot be null");
+                throw new InvalidDataException("Email is a required property for UsuarioResponse and cannot be null");
             }
             else
             {
                 this.Email = Email;
             }
+            this.Id = Id;
             this.Nome = Nome;
             this.IdEmissor = IdEmissor;
             this.Cpf = Cpf;
-            this.Senha = Senha;
             this.Status = Status;
             this.DataCriacao = DataCriacao;
             this.DataModificacao = DataModificacao;
@@ -140,13 +130,6 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Apresenta a senha do usu\u00C3\u00A1rio.
-        /// </summary>
-        /// <value>Apresenta a senha do usu\u00C3\u00A1rio.</value>
-        [DataMember(Name="senha", EmitDefaultValue=false)]
-        public string Senha { get; set; }
-    
-        /// <summary>
         /// Status do Usu\u00C3\u00A1rio
         /// </summary>
         /// <value>Status do Usu\u00C3\u00A1rio</value>
@@ -174,14 +157,13 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Usuario {\n");
+            sb.Append("class UsuarioResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Login: ").Append(Login).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  Cpf: ").Append(Cpf).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  Senha: ").Append(Senha).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DataCriacao: ").Append(DataCriacao).Append("\n");
             sb.Append("  DataModificacao: ").Append(DataModificacao).Append("\n");
@@ -208,15 +190,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Usuario);
+            return this.Equals(obj as UsuarioResponse);
         }
 
         /// <summary>
-        /// Returns true if Usuario instances are equal
+        /// Returns true if UsuarioResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of Usuario to be compared</param>
+        /// <param name="other">Instance of UsuarioResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Usuario other)
+        public bool Equals(UsuarioResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -252,11 +234,6 @@ namespace Conductor.Pier.Model
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
-                (
-                    this.Senha == other.Senha ||
-                    this.Senha != null &&
-                    this.Senha.Equals(other.Senha)
                 ) && 
                 (
                     this.Status == other.Status ||
@@ -309,9 +286,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
-                if (this.Senha != null)
-                    hash = hash * 59 + this.Senha.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

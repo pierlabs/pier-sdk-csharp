@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         /// <param name="NomeSistema">Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento..</param>
         /// <param name="DataHoraInicioAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos..</param>
         /// <param name="DataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos..</param>
-        /// <param name="DataAtendimento">Apresenta a data em que o Atendimento foi realizado..</param>
-        /// <param name="DataAgendamento">Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento..</param>
-        /// <param name="DataProcessamento">Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada..</param>
+        /// <param name="DataAtendimento">Apresenta a data e hora em que o Atendimento foi realizado..</param>
+        /// <param name="DataAgendamento">Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento..</param>
+        /// <param name="DataProcessamento">Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada..</param>
         /// <param name="FlagProcessamento">Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado..</param>
 
         public AtendimentoCliente(long? IdAtendimento = null, long? IdConta = null, long? IdTipoAtendimento = null, string DescricaoTipoAtendimento = null, string ConteudoAtendimento = null, string DetalhesAtendimento = null, string NomeAtendente = null, string NomeSistema = null, DateTime? DataHoraInicioAtendimento = null, DateTime? DataHoraFimAtendimento = null, DateTime? DataAtendimento = null, DateTime? DataAgendamento = null, DateTime? DataProcessamento = null, int? FlagProcessamento = null)
@@ -128,23 +128,23 @@ namespace Conductor.Pier.Model
         public DateTime? DataHoraFimAtendimento { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o Atendimento foi realizado.
+        /// Apresenta a data e hora em que o Atendimento foi realizado.
         /// </summary>
-        /// <value>Apresenta a data em que o Atendimento foi realizado.</value>
+        /// <value>Apresenta a data e hora em que o Atendimento foi realizado.</value>
         [DataMember(Name="dataAtendimento", EmitDefaultValue=false)]
         public DateTime? DataAtendimento { get; set; }
     
         /// <summary>
-        /// Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
+        /// Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
         /// </summary>
-        /// <value>Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.</value>
+        /// <value>Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
         public DateTime? DataAgendamento { get; set; }
     
         /// <summary>
-        /// Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+        /// Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
         /// </summary>
-        /// <value>Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.</value>
+        /// <value>Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
         public DateTime? DataProcessamento { get; set; }
     

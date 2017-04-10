@@ -28,12 +28,12 @@ namespace Conductor.Pier.Model
         /// <param name="IdTipoCartao">C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o. (required).</param>
         /// <param name="IdImagem">C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o. (required).</param>
         /// <param name="IdEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o. (required).</param>
-        /// <param name="QuantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (required).</param>
+        /// <param name="Quantidade">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (required).</param>
         /// <param name="DataCadastro">Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos. (required).</param>
         /// <param name="UsuarioCadastro">Nome do usu\u00C3\u00A1rio que criou o lote. (required).</param>
         /// <param name="StatusProcessamento">Indica o status de processamento do lote. (required).</param>
 
-        public LoteCartoesPrePagos(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? QuantidadeCartoes = null, DateTime? DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null)
+        public LoteCartoesPrePagos(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, DateTime? DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -89,14 +89,14 @@ namespace Conductor.Pier.Model
             {
                 this.IdEndereco = IdEndereco;
             }
-            // to ensure "QuantidadeCartoes" is required (not null)
-            if (QuantidadeCartoes == null)
+            // to ensure "Quantidade" is required (not null)
+            if (Quantidade == null)
             {
-                throw new InvalidDataException("QuantidadeCartoes is a required property for LoteCartoesPrePagos and cannot be null");
+                throw new InvalidDataException("Quantidade is a required property for LoteCartoesPrePagos and cannot be null");
             }
             else
             {
-                this.QuantidadeCartoes = QuantidadeCartoes;
+                this.Quantidade = Quantidade;
             }
             // to ensure "DataCadastro" is required (not null)
             if (DataCadastro == null)
@@ -175,8 +175,8 @@ namespace Conductor.Pier.Model
         /// N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
         /// </summary>
         /// <value>N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.</value>
-        [DataMember(Name="quantidadeCartoes", EmitDefaultValue=false)]
-        public int? QuantidadeCartoes { get; set; }
+        [DataMember(Name="quantidade", EmitDefaultValue=false)]
+        public int? Quantidade { get; set; }
     
         /// <summary>
         /// Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
@@ -213,7 +213,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdTipoCartao: ").Append(IdTipoCartao).Append("\n");
             sb.Append("  IdImagem: ").Append(IdImagem).Append("\n");
             sb.Append("  IdEndereco: ").Append(IdEndereco).Append("\n");
-            sb.Append("  QuantidadeCartoes: ").Append(QuantidadeCartoes).Append("\n");
+            sb.Append("  Quantidade: ").Append(Quantidade).Append("\n");
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  UsuarioCadastro: ").Append(UsuarioCadastro).Append("\n");
             sb.Append("  StatusProcessamento: ").Append(StatusProcessamento).Append("\n");
@@ -285,9 +285,9 @@ namespace Conductor.Pier.Model
                     this.IdEndereco.Equals(other.IdEndereco)
                 ) && 
                 (
-                    this.QuantidadeCartoes == other.QuantidadeCartoes ||
-                    this.QuantidadeCartoes != null &&
-                    this.QuantidadeCartoes.Equals(other.QuantidadeCartoes)
+                    this.Quantidade == other.Quantidade ||
+                    this.Quantidade != null &&
+                    this.Quantidade.Equals(other.Quantidade)
                 ) && 
                 (
                     this.DataCadastro == other.DataCadastro ||
@@ -336,8 +336,8 @@ namespace Conductor.Pier.Model
                 if (this.IdEndereco != null)
                     hash = hash * 59 + this.IdEndereco.GetHashCode();
                 
-                if (this.QuantidadeCartoes != null)
-                    hash = hash * 59 + this.QuantidadeCartoes.GetHashCode();
+                if (this.Quantidade != null)
+                    hash = hash * 59 + this.Quantidade.GetHashCode();
                 
                 if (this.DataCadastro != null)
                     hash = hash * 59 + this.DataCadastro.GetHashCode();

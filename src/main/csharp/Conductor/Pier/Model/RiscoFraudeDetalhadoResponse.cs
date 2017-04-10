@@ -45,8 +45,12 @@ namespace Conductor.Pier.Model
         /// <param name="OrigemTransacao">Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc).</param>
         /// <param name="CodigoModoEntradaTerminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="DescricaoModoEntradaTerminal">Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="Cpf">N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica.</param>
+        /// <param name="Cnpj">N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica.</param>
+        /// <param name="Email">Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o.</param>
+        /// <param name="Tefefones">Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o.</param>
 
-        public RiscoFraudeDetalhadoResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdProduto = null, long? IdTransacao = null, DateTime? DataTransacao = null, double? ValorTransacao = null, string CodigoMoedaOrigem = null, double? ValorOrigem = null, string CodigoMoedaDestino = null, double? ValorDestino = null, string NomeEstabelecimento = null, string IdPais = null, string CodigoRespostaAutorizador = null, string DescricaoRespostaAutorizador = null, string CodigoRespostaFraude = null, string DescricaoRespostaFraude = null, string OrigemTransacao = null, string CodigoModoEntradaTerminal = null, string DescricaoModoEntradaTerminal = null)
+        public RiscoFraudeDetalhadoResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdProduto = null, long? IdTransacao = null, DateTime? DataTransacao = null, double? ValorTransacao = null, string CodigoMoedaOrigem = null, double? ValorOrigem = null, string CodigoMoedaDestino = null, double? ValorDestino = null, string NomeEstabelecimento = null, string IdPais = null, string CodigoRespostaAutorizador = null, string DescricaoRespostaAutorizador = null, string CodigoRespostaFraude = null, string DescricaoRespostaFraude = null, string OrigemTransacao = null, string CodigoModoEntradaTerminal = null, string DescricaoModoEntradaTerminal = null, string Cpf = null, string Cnpj = null, string Email = null, List<Telefone> Tefefones = null)
         {
             this.Id = Id;
             this.IdTipoResolucao = IdTipoResolucao;
@@ -71,6 +75,10 @@ namespace Conductor.Pier.Model
             this.OrigemTransacao = OrigemTransacao;
             this.CodigoModoEntradaTerminal = CodigoModoEntradaTerminal;
             this.DescricaoModoEntradaTerminal = DescricaoModoEntradaTerminal;
+            this.Cpf = Cpf;
+            this.Cnpj = Cnpj;
+            this.Email = Email;
+            this.Tefefones = Tefefones;
             
         }
         
@@ -237,6 +245,34 @@ namespace Conductor.Pier.Model
         public string DescricaoModoEntradaTerminal { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica</value>
+        [DataMember(Name="cpf", EmitDefaultValue=false)]
+        public string Cpf { get; set; }
+    
+        /// <summary>
+        /// N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica</value>
+        [DataMember(Name="cnpj", EmitDefaultValue=false)]
+        public string Cnpj { get; set; }
+    
+        /// <summary>
+        /// Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+        /// </summary>
+        /// <value>Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o</value>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
+    
+        /// <summary>
+        /// Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+        /// </summary>
+        /// <value>Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o</value>
+        [DataMember(Name="tefefones", EmitDefaultValue=false)]
+        public List<Telefone> Tefefones { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -267,6 +303,10 @@ namespace Conductor.Pier.Model
             sb.Append("  OrigemTransacao: ").Append(OrigemTransacao).Append("\n");
             sb.Append("  CodigoModoEntradaTerminal: ").Append(CodigoModoEntradaTerminal).Append("\n");
             sb.Append("  DescricaoModoEntradaTerminal: ").Append(DescricaoModoEntradaTerminal).Append("\n");
+            sb.Append("  Cpf: ").Append(Cpf).Append("\n");
+            sb.Append("  Cnpj: ").Append(Cnpj).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  Tefefones: ").Append(Tefefones).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -418,6 +458,26 @@ namespace Conductor.Pier.Model
                     this.DescricaoModoEntradaTerminal == other.DescricaoModoEntradaTerminal ||
                     this.DescricaoModoEntradaTerminal != null &&
                     this.DescricaoModoEntradaTerminal.Equals(other.DescricaoModoEntradaTerminal)
+                ) && 
+                (
+                    this.Cpf == other.Cpf ||
+                    this.Cpf != null &&
+                    this.Cpf.Equals(other.Cpf)
+                ) && 
+                (
+                    this.Cnpj == other.Cnpj ||
+                    this.Cnpj != null &&
+                    this.Cnpj.Equals(other.Cnpj)
+                ) && 
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) && 
+                (
+                    this.Tefefones == other.Tefefones ||
+                    this.Tefefones != null &&
+                    this.Tefefones.SequenceEqual(other.Tefefones)
                 );
         }
 
@@ -501,6 +561,18 @@ namespace Conductor.Pier.Model
                 
                 if (this.DescricaoModoEntradaTerminal != null)
                     hash = hash * 59 + this.DescricaoModoEntradaTerminal.GetHashCode();
+                
+                if (this.Cpf != null)
+                    hash = hash * 59 + this.Cpf.GetHashCode();
+                
+                if (this.Cnpj != null)
+                    hash = hash * 59 + this.Cnpj.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.Tefefones != null)
+                    hash = hash * 59 + this.Tefefones.GetHashCode();
                 
                 return hash;
             }

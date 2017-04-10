@@ -15,23 +15,24 @@ namespace Conductor.Pier.Model
     /// Produto
     /// </summary>
     [DataContract]
-    public partial class Produto :  IEquatable<Produto>
+    public partial class ProdutoResponse :  IEquatable<ProdutoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Produto" /> class.
-        /// Initializes a new instance of the <see cref="Produto" />class.
+        /// Initializes a new instance of the <see cref="ProdutoResponse" /> class.
+        /// Initializes a new instance of the <see cref="ProdutoResponse" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (required).</param>
         /// <param name="Nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (required).</param>
         /// <param name="Status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (required).</param>
+        /// <param name="IdFantasiaBasica">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence..</param>
 
-        public Produto(long? Id = null, string Nome = null, int? Status = null)
+        public ProdutoResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
-                throw new InvalidDataException("Id is a required property for Produto and cannot be null");
+                throw new InvalidDataException("Id is a required property for ProdutoResponse and cannot be null");
             }
             else
             {
@@ -40,7 +41,7 @@ namespace Conductor.Pier.Model
             // to ensure "Nome" is required (not null)
             if (Nome == null)
             {
-                throw new InvalidDataException("Nome is a required property for Produto and cannot be null");
+                throw new InvalidDataException("Nome is a required property for ProdutoResponse and cannot be null");
             }
             else
             {
@@ -49,12 +50,13 @@ namespace Conductor.Pier.Model
             // to ensure "Status" is required (not null)
             if (Status == null)
             {
-                throw new InvalidDataException("Status is a required property for Produto and cannot be null");
+                throw new InvalidDataException("Status is a required property for ProdutoResponse and cannot be null");
             }
             else
             {
                 this.Status = Status;
             }
+            this.IdFantasiaBasica = IdFantasiaBasica;
             
         }
         
@@ -81,16 +83,24 @@ namespace Conductor.Pier.Model
         public int? Status { get; set; }
     
         /// <summary>
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.</value>
+        [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
+        public long? IdFantasiaBasica { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Produto {\n");
+            sb.Append("class ProdutoResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  IdFantasiaBasica: ").Append(IdFantasiaBasica).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -113,15 +123,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Produto);
+            return this.Equals(obj as ProdutoResponse);
         }
 
         /// <summary>
-        /// Returns true if Produto instances are equal
+        /// Returns true if ProdutoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of Produto to be compared</param>
+        /// <param name="other">Instance of ProdutoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Produto other)
+        public bool Equals(ProdutoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -142,6 +152,11 @@ namespace Conductor.Pier.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) && 
+                (
+                    this.IdFantasiaBasica == other.IdFantasiaBasica ||
+                    this.IdFantasiaBasica != null &&
+                    this.IdFantasiaBasica.Equals(other.IdFantasiaBasica)
                 );
         }
 
@@ -165,6 +180,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.IdFantasiaBasica != null)
+                    hash = hash * 59 + this.IdFantasiaBasica.GetHashCode();
                 
                 return hash;
             }

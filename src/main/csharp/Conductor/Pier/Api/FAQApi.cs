@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>FAQ</returns>
-        FAQ ConsultarUsingGET5 (long? id);
+        FAQ ConsultarUsingGET6 (long? id);
   
         /// <summary>
         /// Consultar FAQ por id
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>ApiResponse of FAQ</returns>
-        ApiResponse<FAQ> ConsultarUsingGET5WithHttpInfo (long? id);
+        ApiResponse<FAQ> ConsultarUsingGET6WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista FAQs
@@ -122,7 +122,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>PageFaqs</returns>
-        PageFaqs ListarUsingGET5 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        PageFaqs ListarUsingGET6 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// Lista FAQs
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>ApiResponse of PageFaqs</returns>
-        ApiResponse<PageFaqs> ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        ApiResponse<PageFaqs> ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Synchronous Operations
         
@@ -222,7 +222,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of FAQ</returns>
-        System.Threading.Tasks.Task<FAQ> ConsultarUsingGET5Async (long? id);
+        System.Threading.Tasks.Task<FAQ> ConsultarUsingGET6Async (long? id);
 
         /// <summary>
         /// Consultar FAQ por id
@@ -233,7 +233,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse (FAQ)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET6AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista FAQs
@@ -252,7 +252,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of PageFaqs</returns>
-        System.Threading.Tasks.Task<PageFaqs> ListarUsingGET5Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<PageFaqs> ListarUsingGET6Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// Lista FAQs
@@ -271,7 +271,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of ApiResponse (PageFaqs)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageFaqs>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageFaqs>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Asynchronous Operations
         
@@ -797,9 +797,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
         /// <returns>FAQ</returns>
-        public FAQ ConsultarUsingGET5 (long? id)
+        public FAQ ConsultarUsingGET6 (long? id)
         {
-             ApiResponse<FAQ> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
+             ApiResponse<FAQ> localVarResponse = ConsultarUsingGET6WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -809,12 +809,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
         /// <returns>ApiResponse of FAQ</returns>
-        public ApiResponse< FAQ > ConsultarUsingGET5WithHttpInfo (long? id)
+        public ApiResponse< FAQ > ConsultarUsingGET6WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling FAQApi->ConsultarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'id' when calling FAQApi->ConsultarUsingGET6");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -866,9 +866,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<FAQ>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -883,9 +883,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of FAQ</returns>
-        public async System.Threading.Tasks.Task<FAQ> ConsultarUsingGET5Async (long? id)
+        public async System.Threading.Tasks.Task<FAQ> ConsultarUsingGET6Async (long? id)
         {
-             ApiResponse<FAQ> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
+             ApiResponse<FAQ> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -896,10 +896,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse (FAQ)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET6AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -952,9 +952,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<FAQ>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -976,9 +976,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
         /// <returns>PageFaqs</returns>
-        public PageFaqs ListarUsingGET5 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public PageFaqs ListarUsingGET6 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqs> localVarResponse = ListarUsingGET5WithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqs> localVarResponse = ListarUsingGET6WithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -996,7 +996,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
         /// <returns>ApiResponse of PageFaqs</returns>
-        public ApiResponse< PageFaqs > ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public ApiResponse< PageFaqs > ListarUsingGET6WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1057,9 +1057,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageFaqs>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1082,9 +1082,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of PageFaqs</returns>
-        public async System.Threading.Tasks.Task<PageFaqs> ListarUsingGET5Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<PageFaqs> ListarUsingGET6Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqs> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqs> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -1103,7 +1103,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of ApiResponse (PageFaqs)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageFaqs>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageFaqs>> ListarUsingGET6AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1165,9 +1165,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageFaqs>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
