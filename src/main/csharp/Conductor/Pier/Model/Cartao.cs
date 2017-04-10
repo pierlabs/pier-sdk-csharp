@@ -40,8 +40,9 @@ namespace Conductor.Pier.Model
         /// <param name="FlagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial..</param>
         /// <param name="FlagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo..</param>
         /// <param name="CodigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade..</param>
+        /// <param name="SequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o.</param>
 
-        public Cartao(long? Id = null, long? IdStatusCartao = null, long? IdEstagioCartao = null, long? IdConta = null, long? IdPessoa = null, long? IdProduto = null, string TipoPortador = null, string NumeroCartao = null, string NomeImpresso = null, DateTime? DataGeracao = null, DateTime? DataStatusCartao = null, DateTime? DataEstagioCartao = null, DateTime? DataValidade = null, DateTime? DataImpressao = null, string ArquivoImpressao = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, string CodigoDesbloqueio = null)
+        public Cartao(long? Id = null, long? IdStatusCartao = null, long? IdEstagioCartao = null, long? IdConta = null, long? IdPessoa = null, long? IdProduto = null, string TipoPortador = null, string NumeroCartao = null, string NomeImpresso = null, DateTime? DataGeracao = null, DateTime? DataStatusCartao = null, DateTime? DataEstagioCartao = null, DateTime? DataValidade = null, DateTime? DataImpressao = null, string ArquivoImpressao = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, string CodigoDesbloqueio = null, int? SequencialCartao = null)
         {
             this.Id = Id;
             this.IdStatusCartao = IdStatusCartao;
@@ -61,6 +62,7 @@ namespace Conductor.Pier.Model
             this.FlagImpressaoOrigemComercial = FlagImpressaoOrigemComercial;
             this.FlagProvisorio = FlagProvisorio;
             this.CodigoDesbloqueio = CodigoDesbloqueio;
+            this.SequencialCartao = SequencialCartao;
             
         }
         
@@ -192,6 +194,13 @@ namespace Conductor.Pier.Model
         public string CodigoDesbloqueio { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o</value>
+        [DataMember(Name="sequencialCartao", EmitDefaultValue=false)]
+        public int? SequencialCartao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -217,6 +226,7 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagImpressaoOrigemComercial: ").Append(FlagImpressaoOrigemComercial).Append("\n");
             sb.Append("  FlagProvisorio: ").Append(FlagProvisorio).Append("\n");
             sb.Append("  CodigoDesbloqueio: ").Append(CodigoDesbloqueio).Append("\n");
+            sb.Append("  SequencialCartao: ").Append(SequencialCartao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -343,6 +353,11 @@ namespace Conductor.Pier.Model
                     this.CodigoDesbloqueio == other.CodigoDesbloqueio ||
                     this.CodigoDesbloqueio != null &&
                     this.CodigoDesbloqueio.Equals(other.CodigoDesbloqueio)
+                ) && 
+                (
+                    this.SequencialCartao == other.SequencialCartao ||
+                    this.SequencialCartao != null &&
+                    this.SequencialCartao.Equals(other.SequencialCartao)
                 );
         }
 
@@ -411,6 +426,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.CodigoDesbloqueio != null)
                     hash = hash * 59 + this.CodigoDesbloqueio.GetHashCode();
+                
+                if (this.SequencialCartao != null)
+                    hash = hash * 59 + this.SequencialCartao.GetHashCode();
                 
                 return hash;
             }

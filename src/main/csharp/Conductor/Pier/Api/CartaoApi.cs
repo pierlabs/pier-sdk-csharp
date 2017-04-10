@@ -425,8 +425,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
         /// <returns>PageCartoes</returns>
-        PageCartoes ListarUsingGET2 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null);
+        PageCartoes ListarUsingGET2 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
   
         /// <summary>
         /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -454,8 +455,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PageCartoes</returns>
-        ApiResponse<PageCartoes> ListarUsingGET2WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null);
+        ApiResponse<PageCartoes> ListarUsingGET2WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
         
         /// <summary>
         /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
@@ -1049,8 +1051,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageCartoes</returns>
-        System.Threading.Tasks.Task<PageCartoes> ListarUsingGET2Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null);
+        System.Threading.Tasks.Task<PageCartoes> ListarUsingGET2Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
 
         /// <summary>
         /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -1078,8 +1081,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageCartoes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartoes>> ListarUsingGET2AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartoes>> ListarUsingGET2AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
         
         /// <summary>
         /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
@@ -4127,10 +4131,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param> 
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param> 
         /// <returns>PageCartoes</returns>
-        public PageCartoes ListarUsingGET2 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null)
+        public PageCartoes ListarUsingGET2 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
-             ApiResponse<PageCartoes> localVarResponse = ListarUsingGET2WithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio);
+             ApiResponse<PageCartoes> localVarResponse = ListarUsingGET2WithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
              return localVarResponse.Data;
         }
 
@@ -4157,8 +4162,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param> 
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PageCartoes</returns>
-        public ApiResponse< PageCartoes > ListarUsingGET2WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null)
+        public ApiResponse< PageCartoes > ListarUsingGET2WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
             
     
@@ -4208,6 +4214,7 @@ namespace Conductor.Pier.Api
             if (flagImpressaoOrigemComercial != null) localVarQueryParams.Add("flagImpressaoOrigemComercial", Configuration.ApiClient.ParameterToString(flagImpressaoOrigemComercial)); // query parameter
             if (flagProvisorio != null) localVarQueryParams.Add("flagProvisorio", Configuration.ApiClient.ParameterToString(flagProvisorio)); // query parameter
             if (codigoDesbloqueio != null) localVarQueryParams.Add("codigoDesbloqueio", Configuration.ApiClient.ParameterToString(codigoDesbloqueio)); // query parameter
+            if (sequencialCartao != null) localVarQueryParams.Add("sequencialCartao", Configuration.ApiClient.ParameterToString(sequencialCartao)); // query parameter
             
             
             
@@ -4263,10 +4270,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageCartoes</returns>
-        public async System.Threading.Tasks.Task<PageCartoes> ListarUsingGET2Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null)
+        public async System.Threading.Tasks.Task<PageCartoes> ListarUsingGET2Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
-             ApiResponse<PageCartoes> localVarResponse = await ListarUsingGET2AsyncWithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio);
+             ApiResponse<PageCartoes> localVarResponse = await ListarUsingGET2AsyncWithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
              return localVarResponse.Data;
 
         }
@@ -4294,8 +4302,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageCartoes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartoes>> ListarUsingGET2AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartoes>> ListarUsingGET2AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, DateTime? dataGeracao = null, DateTime? dataStatusCartao = null, DateTime? dataEstagioCartao = null, string dataValidade = null, DateTime? dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
             
     
@@ -4345,6 +4354,7 @@ namespace Conductor.Pier.Api
             if (flagImpressaoOrigemComercial != null) localVarQueryParams.Add("flagImpressaoOrigemComercial", Configuration.ApiClient.ParameterToString(flagImpressaoOrigemComercial)); // query parameter
             if (flagProvisorio != null) localVarQueryParams.Add("flagProvisorio", Configuration.ApiClient.ParameterToString(flagProvisorio)); // query parameter
             if (codigoDesbloqueio != null) localVarQueryParams.Add("codigoDesbloqueio", Configuration.ApiClient.ParameterToString(codigoDesbloqueio)); // query parameter
+            if (sequencialCartao != null) localVarQueryParams.Add("sequencialCartao", Configuration.ApiClient.ParameterToString(sequencialCartao)); // query parameter
             
             
             
