@@ -22,20 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalheOportunidadePersist" /> class.
         /// Initializes a new instance of the <see cref="DetalheOportunidadePersist" />class.
         /// </summary>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo do detalhe (required).</param>
         /// <param name="NomeCampo">Nome do conte\u00C3\u00BAdo (required).</param>
+        /// <param name="Conteudo">Conte\u00C3\u00BAdo do detalhe (required).</param>
 
-        public DetalheOportunidadePersist(string Conteudo = null, string NomeCampo = null)
+        public DetalheOportunidadePersist(string NomeCampo = null, string Conteudo = null)
         {
-            // to ensure "Conteudo" is required (not null)
-            if (Conteudo == null)
-            {
-                throw new InvalidDataException("Conteudo is a required property for DetalheOportunidadePersist and cannot be null");
-            }
-            else
-            {
-                this.Conteudo = Conteudo;
-            }
             // to ensure "NomeCampo" is required (not null)
             if (NomeCampo == null)
             {
@@ -45,16 +36,18 @@ namespace Conductor.Pier.Model
             {
                 this.NomeCampo = NomeCampo;
             }
+            // to ensure "Conteudo" is required (not null)
+            if (Conteudo == null)
+            {
+                throw new InvalidDataException("Conteudo is a required property for DetalheOportunidadePersist and cannot be null");
+            }
+            else
+            {
+                this.Conteudo = Conteudo;
+            }
             
         }
         
-    
-        /// <summary>
-        /// Conte\u00C3\u00BAdo do detalhe
-        /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do detalhe</value>
-        [DataMember(Name="conteudo", EmitDefaultValue=false)]
-        public string Conteudo { get; set; }
     
         /// <summary>
         /// Nome do conte\u00C3\u00BAdo
@@ -64,6 +57,13 @@ namespace Conductor.Pier.Model
         public string NomeCampo { get; set; }
     
         /// <summary>
+        /// Conte\u00C3\u00BAdo do detalhe
+        /// </summary>
+        /// <value>Conte\u00C3\u00BAdo do detalhe</value>
+        [DataMember(Name="conteudo", EmitDefaultValue=false)]
+        public string Conteudo { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,8 +71,8 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DetalheOportunidadePersist {\n");
-            sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
             sb.Append("  NomeCampo: ").Append(NomeCampo).Append("\n");
+            sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -111,14 +111,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Conteudo == other.Conteudo ||
-                    this.Conteudo != null &&
-                    this.Conteudo.Equals(other.Conteudo)
-                ) && 
-                (
                     this.NomeCampo == other.NomeCampo ||
                     this.NomeCampo != null &&
                     this.NomeCampo.Equals(other.NomeCampo)
+                ) && 
+                (
+                    this.Conteudo == other.Conteudo ||
+                    this.Conteudo != null &&
+                    this.Conteudo.Equals(other.Conteudo)
                 );
         }
 
@@ -134,11 +134,11 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Conteudo != null)
-                    hash = hash * 59 + this.Conteudo.GetHashCode();
-                
                 if (this.NomeCampo != null)
                     hash = hash * 59 + this.NomeCampo.GetHashCode();
+                
+                if (this.Conteudo != null)
+                    hash = hash * 59 + this.Conteudo.GetHashCode();
                 
                 return hash;
             }

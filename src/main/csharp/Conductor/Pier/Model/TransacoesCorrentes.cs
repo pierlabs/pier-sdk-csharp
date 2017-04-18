@@ -37,8 +37,8 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTaxaEmbarque">Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas..</param>
         /// <param name="ValorEntrada">Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada..</param>
         /// <param name="ValorBRL">Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL)..</param>
-        /// <param name="CotacaoUSD">Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL)..</param>
         /// <param name="ValorUSD">Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD)..</param>
+        /// <param name="CotacaoUSD">Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL)..</param>
         /// <param name="DataCotacaoUSD">Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD)..</param>
         /// <param name="CodigoMoedaOrigem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217..</param>
         /// <param name="CodigoMoedaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217..</param>
@@ -57,7 +57,7 @@ namespace Conductor.Pier.Model
         /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada..</param>
         /// <param name="IdTransacaoEstorno">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno..</param>
 
-        public TransacoesCorrentes(long? Id = null, string TipoTransacao = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacaoUTC = null, DateTime? DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? CotacaoUSD = null, double? ValorUSD = null, DateTime? DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
+        public TransacoesCorrentes(long? Id = null, string TipoTransacao = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, DateTime? DataTransacaoUTC = null, DateTime? DataFaturamento = null, DateTime? DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, DateTime? DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
         {
             this.Id = Id;
             this.TipoTransacao = TipoTransacao;
@@ -74,8 +74,8 @@ namespace Conductor.Pier.Model
             this.ValorTaxaEmbarque = ValorTaxaEmbarque;
             this.ValorEntrada = ValorEntrada;
             this.ValorBRL = ValorBRL;
-            this.CotacaoUSD = CotacaoUSD;
             this.ValorUSD = ValorUSD;
+            this.CotacaoUSD = CotacaoUSD;
             this.DataCotacaoUSD = DataCotacaoUSD;
             this.CodigoMoedaOrigem = CodigoMoedaOrigem;
             this.CodigoMoedaDestino = CodigoMoedaDestino;
@@ -158,7 +158,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).</value>
         [DataMember(Name="dataTransacaoUTC", EmitDefaultValue=false)]
-        public string DataTransacaoUTC { get; set; }
+        public DateTime? DataTransacaoUTC { get; set; }
     
         /// <summary>
         /// Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de Vencimento da Fatura.</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
-        public string DataVencimento { get; set; }
+        public DateTime? DataVencimento { get; set; }
     
         /// <summary>
         /// Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -203,18 +203,18 @@ namespace Conductor.Pier.Model
         public double? ValorBRL { get; set; }
     
         /// <summary>
-        /// Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-        /// </summary>
-        /// <value>Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).</value>
-        [DataMember(Name="cotacaoUSD", EmitDefaultValue=false)]
-        public double? CotacaoUSD { get; set; }
-    
-        /// <summary>
         /// Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
         /// </summary>
         /// <value>Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).</value>
         [DataMember(Name="valorUSD", EmitDefaultValue=false)]
         public double? ValorUSD { get; set; }
+    
+        /// <summary>
+        /// Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+        /// </summary>
+        /// <value>Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).</value>
+        [DataMember(Name="cotacaoUSD", EmitDefaultValue=false)]
+        public double? CotacaoUSD { get; set; }
     
         /// <summary>
         /// Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
@@ -358,8 +358,8 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorTaxaEmbarque: ").Append(ValorTaxaEmbarque).Append("\n");
             sb.Append("  ValorEntrada: ").Append(ValorEntrada).Append("\n");
             sb.Append("  ValorBRL: ").Append(ValorBRL).Append("\n");
-            sb.Append("  CotacaoUSD: ").Append(CotacaoUSD).Append("\n");
             sb.Append("  ValorUSD: ").Append(ValorUSD).Append("\n");
+            sb.Append("  CotacaoUSD: ").Append(CotacaoUSD).Append("\n");
             sb.Append("  DataCotacaoUSD: ").Append(DataCotacaoUSD).Append("\n");
             sb.Append("  CodigoMoedaOrigem: ").Append(CodigoMoedaOrigem).Append("\n");
             sb.Append("  CodigoMoedaDestino: ").Append(CodigoMoedaDestino).Append("\n");
@@ -490,14 +490,14 @@ namespace Conductor.Pier.Model
                     this.ValorBRL.Equals(other.ValorBRL)
                 ) && 
                 (
-                    this.CotacaoUSD == other.CotacaoUSD ||
-                    this.CotacaoUSD != null &&
-                    this.CotacaoUSD.Equals(other.CotacaoUSD)
-                ) && 
-                (
                     this.ValorUSD == other.ValorUSD ||
                     this.ValorUSD != null &&
                     this.ValorUSD.Equals(other.ValorUSD)
+                ) && 
+                (
+                    this.CotacaoUSD == other.CotacaoUSD ||
+                    this.CotacaoUSD != null &&
+                    this.CotacaoUSD.Equals(other.CotacaoUSD)
                 ) && 
                 (
                     this.DataCotacaoUSD == other.DataCotacaoUSD ||
@@ -643,11 +643,11 @@ namespace Conductor.Pier.Model
                 if (this.ValorBRL != null)
                     hash = hash * 59 + this.ValorBRL.GetHashCode();
                 
-                if (this.CotacaoUSD != null)
-                    hash = hash * 59 + this.CotacaoUSD.GetHashCode();
-                
                 if (this.ValorUSD != null)
                     hash = hash * 59 + this.ValorUSD.GetHashCode();
+                
+                if (this.CotacaoUSD != null)
+                    hash = hash * 59 + this.CotacaoUSD.GetHashCode();
                 
                 if (this.DataCotacaoUSD != null)
                     hash = hash * 59 + this.DataCotacaoUSD.GetHashCode();

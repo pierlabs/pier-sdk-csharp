@@ -25,7 +25,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>BodyAccessToken</returns>
-        BodyAccessToken ClearUsingPOST ();
+        BodyAccessToken LimparUsingPOST ();
   
         /// <summary>
         /// Limpar mapa de bases
@@ -35,7 +35,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of BodyAccessToken</returns>
-        ApiResponse<BodyAccessToken> ClearUsingPOSTWithHttpInfo ();
+        ApiResponse<BodyAccessToken> LimparUsingPOSTWithHttpInfo ();
         
         #endregion Synchronous Operations
         
@@ -49,7 +49,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of BodyAccessToken</returns>
-        System.Threading.Tasks.Task<BodyAccessToken> ClearUsingPOSTAsync ();
+        System.Threading.Tasks.Task<BodyAccessToken> LimparUsingPOSTAsync ();
 
         /// <summary>
         /// Limpar mapa de bases
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (BodyAccessToken)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BodyAccessToken>> ClearUsingPOSTAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<BodyAccessToken>> LimparUsingPOSTAsyncWithHttpInfo ();
         
         #endregion Asynchronous Operations
         
@@ -158,9 +158,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>BodyAccessToken</returns>
-        public BodyAccessToken ClearUsingPOST ()
+        public BodyAccessToken LimparUsingPOST ()
         {
-             ApiResponse<BodyAccessToken> localVarResponse = ClearUsingPOSTWithHttpInfo();
+             ApiResponse<BodyAccessToken> localVarResponse = LimparUsingPOSTWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -169,7 +169,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of BodyAccessToken</returns>
-        public ApiResponse< BodyAccessToken > ClearUsingPOSTWithHttpInfo ()
+        public ApiResponse< BodyAccessToken > LimparUsingPOSTWithHttpInfo ()
         {
             
     
@@ -221,9 +221,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ClearUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling LimparUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ClearUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling LimparUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BodyAccessToken>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -237,9 +237,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of BodyAccessToken</returns>
-        public async System.Threading.Tasks.Task<BodyAccessToken> ClearUsingPOSTAsync ()
+        public async System.Threading.Tasks.Task<BodyAccessToken> LimparUsingPOSTAsync ()
         {
-             ApiResponse<BodyAccessToken> localVarResponse = await ClearUsingPOSTAsyncWithHttpInfo();
+             ApiResponse<BodyAccessToken> localVarResponse = await LimparUsingPOSTAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -249,7 +249,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (BodyAccessToken)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BodyAccessToken>> ClearUsingPOSTAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<BodyAccessToken>> LimparUsingPOSTAsyncWithHttpInfo ()
         {
             
     
@@ -302,9 +302,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ClearUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling LimparUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ClearUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling LimparUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BodyAccessToken>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

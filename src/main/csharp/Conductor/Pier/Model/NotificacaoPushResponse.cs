@@ -56,7 +56,10 @@ namespace Conductor.Pier.Model
             Erro,
             
             [EnumMember(Value = "ERRO_RESPOSTA")]
-            ErroResposta
+            ErroResposta,
+            
+            [EnumMember(Value = "SUCESSO_RESPOSTA")]
+            SucessoResposta
         }
 
     
