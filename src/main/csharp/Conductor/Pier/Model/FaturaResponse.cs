@@ -48,8 +48,10 @@ namespace Conductor.Pier.Model
         /// <param name="TaxaSaque">Valor percentual da taxa de saque..</param>
         /// <param name="TaxaMaximaProximoPeriodo">Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo..</param>
         /// <param name="TotalServicos">Apresenta a soma de todos os seguros cobrados na fatura do cliente. (required).</param>
+        /// <param name="TotalParceladoNacionais">Apresenta a soma de todos os valores parcelados + compras nacionais. (required).</param>
+        /// <param name="TotalParceladoInternacionais">Apresenta a soma de todos os valores parcelados + compras internacionais. (required).</param>
 
-        public FaturaResponse(long? Id = null, long? IdConta = null, int? FlagEmiteFatura = null, string DataVencimentoFatura = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? TotalComprasNacionais = null, double? TotalComprasInternacionas = null, double? TotalSaquesNacionais = null, double? TotalSaquesInternacionais = null, double? TotalDebitosNacionais = null, double? TotalDebitosRecorrentes = null, double? TotalDebitosInternacionais = null, double? TotalDebitosDiversosNacionais = null, double? TotalDebitosOpcionais = null, double? TotalPagamentos = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? TotalJuros = null, double? TaxaRotativo = null, double? TaxaSaque = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null)
+        public FaturaResponse(long? Id = null, long? IdConta = null, int? FlagEmiteFatura = null, string DataVencimentoFatura = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? TotalComprasNacionais = null, double? TotalComprasInternacionas = null, double? TotalSaquesNacionais = null, double? TotalSaquesInternacionais = null, double? TotalDebitosNacionais = null, double? TotalDebitosRecorrentes = null, double? TotalDebitosInternacionais = null, double? TotalDebitosDiversosNacionais = null, double? TotalDebitosOpcionais = null, double? TotalPagamentos = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? TotalJuros = null, double? TaxaRotativo = null, double? TaxaSaque = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null, double? TotalParceladoNacionais = null, double? TotalParceladoInternacionais = null)
         {
             // to ensure "TotalServicos" is required (not null)
             if (TotalServicos == null)
@@ -59,6 +61,24 @@ namespace Conductor.Pier.Model
             else
             {
                 this.TotalServicos = TotalServicos;
+            }
+            // to ensure "TotalParceladoNacionais" is required (not null)
+            if (TotalParceladoNacionais == null)
+            {
+                throw new InvalidDataException("TotalParceladoNacionais is a required property for FaturaResponse and cannot be null");
+            }
+            else
+            {
+                this.TotalParceladoNacionais = TotalParceladoNacionais;
+            }
+            // to ensure "TotalParceladoInternacionais" is required (not null)
+            if (TotalParceladoInternacionais == null)
+            {
+                throw new InvalidDataException("TotalParceladoInternacionais is a required property for FaturaResponse and cannot be null");
+            }
+            else
+            {
+                this.TotalParceladoInternacionais = TotalParceladoInternacionais;
             }
             this.Id = Id;
             this.IdConta = IdConta;
@@ -272,6 +292,20 @@ namespace Conductor.Pier.Model
         public double? TotalServicos { get; set; }
     
         /// <summary>
+        /// Apresenta a soma de todos os valores parcelados + compras nacionais.
+        /// </summary>
+        /// <value>Apresenta a soma de todos os valores parcelados + compras nacionais.</value>
+        [DataMember(Name="totalParceladoNacionais", EmitDefaultValue=false)]
+        public double? TotalParceladoNacionais { get; set; }
+    
+        /// <summary>
+        /// Apresenta a soma de todos os valores parcelados + compras internacionais.
+        /// </summary>
+        /// <value>Apresenta a soma de todos os valores parcelados + compras internacionais.</value>
+        [DataMember(Name="totalParceladoInternacionais", EmitDefaultValue=false)]
+        public double? TotalParceladoInternacionais { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -305,6 +339,8 @@ namespace Conductor.Pier.Model
             sb.Append("  TaxaSaque: ").Append(TaxaSaque).Append("\n");
             sb.Append("  TaxaMaximaProximoPeriodo: ").Append(TaxaMaximaProximoPeriodo).Append("\n");
             sb.Append("  TotalServicos: ").Append(TotalServicos).Append("\n");
+            sb.Append("  TotalParceladoNacionais: ").Append(TotalParceladoNacionais).Append("\n");
+            sb.Append("  TotalParceladoInternacionais: ").Append(TotalParceladoInternacionais).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -471,6 +507,16 @@ namespace Conductor.Pier.Model
                     this.TotalServicos == other.TotalServicos ||
                     this.TotalServicos != null &&
                     this.TotalServicos.Equals(other.TotalServicos)
+                ) && 
+                (
+                    this.TotalParceladoNacionais == other.TotalParceladoNacionais ||
+                    this.TotalParceladoNacionais != null &&
+                    this.TotalParceladoNacionais.Equals(other.TotalParceladoNacionais)
+                ) && 
+                (
+                    this.TotalParceladoInternacionais == other.TotalParceladoInternacionais ||
+                    this.TotalParceladoInternacionais != null &&
+                    this.TotalParceladoInternacionais.Equals(other.TotalParceladoInternacionais)
                 );
         }
 
@@ -563,6 +609,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.TotalServicos != null)
                     hash = hash * 59 + this.TotalServicos.GetHashCode();
+                
+                if (this.TotalParceladoNacionais != null)
+                    hash = hash * 59 + this.TotalParceladoNacionais.GetHashCode();
+                
+                if (this.TotalParceladoInternacionais != null)
+                    hash = hash * 59 + this.TotalParceladoInternacionais.GetHashCode();
                 
                 return hash;
             }

@@ -51,8 +51,8 @@ namespace Conductor.Pier.Model
         /// <param name="Cpf">CPF do Usu\u00C3\u00A1rio.</param>
         /// <param name="Email">Email do Usu\u00C3\u00A1rio (required).</param>
         /// <param name="Status">Status do Usu\u00C3\u00A1rio.</param>
-        /// <param name="DataCriacao">Status do Usu\u00C3\u00A1rio.</param>
-        /// <param name="DataModificacao">Status do Usu\u00C3\u00A1rio.</param>
+        /// <param name="DataCriacao">Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio.</param>
+        /// <param name="DataModificacao">Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio.</param>
         /// <param name="TentativasIncorretas">N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas.</param>
 
         public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, DateTime? DataCriacao = null, DateTime? DataModificacao = null, long? TentativasIncorretas = null)
@@ -130,16 +130,16 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Status do Usu\u00C3\u00A1rio
+        /// Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
         /// </summary>
-        /// <value>Status do Usu\u00C3\u00A1rio</value>
+        /// <value>Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public DateTime? DataCriacao { get; set; }
     
         /// <summary>
-        /// Status do Usu\u00C3\u00A1rio
+        /// Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
         /// </summary>
-        /// <value>Status do Usu\u00C3\u00A1rio</value>
+        /// <value>Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
         public DateTime? DataModificacao { get; set; }
     

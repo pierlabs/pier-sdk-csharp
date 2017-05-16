@@ -205,12 +205,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -285,13 +279,6 @@ namespace Conductor.Pier.Api
             
             
 
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
 
             // make the HTTP request

@@ -13,221 +13,213 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IWebhooksApi
+    public interface IDispositivosApi
     {
         #region Synchronous Operations
         
         /// <summary>
-        /// Alterar Webhook
+        /// Ativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Esse recurso permite ativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>WebHook</returns>
-        WebHook AlterarUsingPUT10 (long? id, string tipoEvento, string url);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Dispositivo</returns>
+        Dispositivo AtivarUsingPOST (long? id);
   
         /// <summary>
-        /// Alterar Webhook
+        /// Ativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Esse recurso permite ativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> AlterarUsingPUT10WithHttpInfo (long? id, string tipoEvento, string url);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>ApiResponse of Dispositivo</returns>
+        ApiResponse<Dispositivo> AtivarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar Webhook
+        /// Desativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Esse recurso permite desativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
-        /// <returns>WebHook</returns>
-        WebHook ConsultarUsingGET23 (long? id);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Dispositivo</returns>
+        Dispositivo DesativarUsingPOST (long? id);
   
         /// <summary>
-        /// Consultar Webhook
+        /// Desativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Esse recurso permite desativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
-        /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> ConsultarUsingGET23WithHttpInfo (long? id);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>ApiResponse of Dispositivo</returns>
+        ApiResponse<Dispositivo> DesativarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os Webhooks
+        /// Lista os dispositivos cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">Id do WebHook (optional)</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <returns>PageWebHooks</returns>
-        PageWebHooks ListarUsingGET25 (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        /// <param name="token">Token do Dispositivo (optional)</param>
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
+        /// <returns>PageDispositivos</returns>
+        PageDispositivos ListarUsingGET5 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
   
         /// <summary>
-        /// Lista os Webhooks
+        /// Lista os dispositivos cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">Id do WebHook (optional)</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <returns>ApiResponse of PageWebHooks</returns>
-        ApiResponse<PageWebHooks> ListarUsingGET25WithHttpInfo (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        /// <param name="token">Token do Dispositivo (optional)</param>
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
+        /// <returns>ApiResponse of PageDispositivos</returns>
+        ApiResponse<PageDispositivos> ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
         
         /// <summary>
-        /// Salvar Webhook
+        /// Cadastra Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Esse recurso permite cadastrar dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>WebHook</returns>
-        WebHook SalvarUsingPOST13 (string tipoEvento, string url);
+        /// <param name="persist">persist</param>
+        /// <returns>Dispositivo</returns>
+        Dispositivo SalvarUsingPOST3 (DispositivoPersist persist);
   
         /// <summary>
-        /// Salvar Webhook
+        /// Cadastra Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Esse recurso permite cadastrar dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>ApiResponse of WebHook</returns>
-        ApiResponse<WebHook> SalvarUsingPOST13WithHttpInfo (string tipoEvento, string url);
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of Dispositivo</returns>
+        ApiResponse<Dispositivo> SalvarUsingPOST3WithHttpInfo (DispositivoPersist persist);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Alterar Webhook
+        /// Ativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Esse recurso permite ativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> AlterarUsingPUT10Async (long? id, string tipoEvento, string url);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of Dispositivo</returns>
+        System.Threading.Tasks.Task<Dispositivo> AtivarUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Alterar Webhook
+        /// Ativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Esse recurso permite ativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, string tipoEvento, string url);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of ApiResponse (Dispositivo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dispositivo>> AtivarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar Webhook
+        /// Desativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Esse recurso permite desativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
-        /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> ConsultarUsingGET23Async (long? id);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of Dispositivo</returns>
+        System.Threading.Tasks.Task<Dispositivo> DesativarUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Consultar Webhook
+        /// Desativa Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Esse recurso permite desativar dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
-        /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> ConsultarUsingGET23AsyncWithHttpInfo (long? id);
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of ApiResponse (Dispositivo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dispositivo>> DesativarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os Webhooks
+        /// Lista os dispositivos cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">Id do WebHook (optional)</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <returns>Task of PageWebHooks</returns>
-        System.Threading.Tasks.Task<PageWebHooks> ListarUsingGET25Async (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        /// <param name="token">Token do Dispositivo (optional)</param>
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
+        /// <returns>Task of PageDispositivos</returns>
+        System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET5Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
 
         /// <summary>
-        /// Lista os Webhooks
+        /// Lista os dispositivos cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">Id do WebHook (optional)</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <returns>Task of ApiResponse (PageWebHooks)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageWebHooks>> ListarUsingGET25AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        /// <param name="token">Token do Dispositivo (optional)</param>
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
+        /// <returns>Task of ApiResponse (PageDispositivos)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
         
         /// <summary>
-        /// Salvar Webhook
+        /// Cadastra Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Esse recurso permite cadastrar dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of WebHook</returns>
-        System.Threading.Tasks.Task<WebHook> SalvarUsingPOST13Async (string tipoEvento, string url);
+        /// <param name="persist">persist</param>
+        /// <returns>Task of Dispositivo</returns>
+        System.Threading.Tasks.Task<Dispositivo> SalvarUsingPOST3Async (DispositivoPersist persist);
 
         /// <summary>
-        /// Salvar Webhook
+        /// Cadastra Dispositivo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Esse recurso permite cadastrar dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of ApiResponse (WebHook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHook>> SalvarUsingPOST13AsyncWithHttpInfo (string tipoEvento, string url);
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (Dispositivo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dispositivo>> SalvarUsingPOST3AsyncWithHttpInfo (DispositivoPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -236,13 +228,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class WebhooksApi : IWebhooksApi
+    public class DispositivosApi : IDispositivosApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebhooksApi"/> class.
+        /// Initializes a new instance of the <see cref="DispositivosApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public WebhooksApi(String basePath)
+        public DispositivosApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -254,12 +246,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebhooksApi"/> class
+        /// Initializes a new instance of the <see cref="DispositivosApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public WebhooksApi(Configuration configuration = null)
+        public DispositivosApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -322,44 +314,32 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Ativa Dispositivo Esse recurso permite ativar dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param> 
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
-        /// <returns>WebHook</returns>
-        public WebHook AlterarUsingPUT10 (long? id, string tipoEvento, string url)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
+        /// <returns>Dispositivo</returns>
+        public Dispositivo AtivarUsingPOST (long? id)
         {
-             ApiResponse<WebHook> localVarResponse = AlterarUsingPUT10WithHttpInfo(id, tipoEvento, url);
+             ApiResponse<Dispositivo> localVarResponse = AtivarUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Ativa Dispositivo Esse recurso permite ativar dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param> 
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
-        /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > AlterarUsingPUT10WithHttpInfo (long? id, string tipoEvento, string url)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
+        /// <returns>ApiResponse of Dispositivo</returns>
+        public ApiResponse< Dispositivo > AtivarUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling WebhooksApi->AlterarUsingPUT10");
-            
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null)
-                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhooksApi->AlterarUsingPUT10");
-            
-            // verify the required parameter 'url' is set
-            if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhooksApi->AlterarUsingPUT10");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DispositivosApi->AtivarUsingPOST");
             
     
-            var localVarPath = "/api/webhooks/{id}";
+            var localVarPath = "/api/dispositivos/{id}/ativar-dispositivo";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -387,523 +367,6 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<WebHook>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WebHook) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebHook)));
-            
-        }
-
-        
-        /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> AlterarUsingPUT10Async (long? id, string tipoEvento, string url)
-        {
-             ApiResponse<WebHook> localVarResponse = await AlterarUsingPUT10AsyncWithHttpInfo(id, tipoEvento, url);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, string tipoEvento, string url)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT10");
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling AlterarUsingPUT10");
-            // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling AlterarUsingPUT10");
-            
-    
-            var localVarPath = "/api/webhooks/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<WebHook>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WebHook) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebHook)));
-            
-        }
-        
-        /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
-        /// <returns>WebHook</returns>
-        public WebHook ConsultarUsingGET23 (long? id)
-        {
-             ApiResponse<WebHook> localVarResponse = ConsultarUsingGET23WithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
-        /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > ConsultarUsingGET23WithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling WebhooksApi->ConsultarUsingGET23");
-            
-    
-            var localVarPath = "/api/webhooks/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<WebHook>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WebHook) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebHook)));
-            
-        }
-
-        
-        /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
-        /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> ConsultarUsingGET23Async (long? id)
-        {
-             ApiResponse<WebHook> localVarResponse = await ConsultarUsingGET23AsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
-        /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> ConsultarUsingGET23AsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET23");
-            
-    
-            var localVarPath = "/api/webhooks/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<WebHook>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WebHook) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebHook)));
-            
-        }
-        
-        /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <param name="id">Id do WebHook (optional)</param> 
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param> 
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
-        /// <returns>PageWebHooks</returns>
-        public PageWebHooks ListarUsingGET25 (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
-        {
-             ApiResponse<PageWebHooks> localVarResponse = ListarUsingGET25WithHttpInfo(page, limit, id, tipoEvento, metodo, url);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
-        /// <param name="id">Id do WebHook (optional)</param> 
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param> 
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
-        /// <returns>ApiResponse of PageWebHooks</returns>
-        public ApiResponse< PageWebHooks > ListarUsingGET25WithHttpInfo (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
-        {
-            
-    
-            var localVarPath = "/api/webhooks";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (metodo != null) localVarQueryParams.Add("metodo", Configuration.ApiClient.ParameterToString(metodo)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageWebHooks>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageWebHooks) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageWebHooks)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">Id do WebHook (optional)</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <returns>Task of PageWebHooks</returns>
-        public async System.Threading.Tasks.Task<PageWebHooks> ListarUsingGET25Async (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
-        {
-             ApiResponse<PageWebHooks> localVarResponse = await ListarUsingGET25AsyncWithHttpInfo(page, limit, id, tipoEvento, metodo, url);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
-        /// <param name="id">Id do WebHook (optional)</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
-        /// <returns>Task of ApiResponse (PageWebHooks)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageWebHooks>> ListarUsingGET25AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
-        {
-            
-    
-            var localVarPath = "/api/webhooks";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (metodo != null) localVarQueryParams.Add("metodo", Configuration.ApiClient.ParameterToString(metodo)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageWebHooks>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageWebHooks) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageWebHooks)));
-            
-        }
-        
-        /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
-        /// <returns>WebHook</returns>
-        public WebHook SalvarUsingPOST13 (string tipoEvento, string url)
-        {
-             ApiResponse<WebHook> localVarResponse = SalvarUsingPOST13WithHttpInfo(tipoEvento, url);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
-        /// <returns>ApiResponse of WebHook</returns>
-        public ApiResponse< WebHook > SalvarUsingPOST13WithHttpInfo (string tipoEvento, string url)
-        {
-            
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null)
-                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhooksApi->SalvarUsingPOST13");
-            
-            // verify the required parameter 'url' is set
-            if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhooksApi->SalvarUsingPOST13");
-            
-    
-            var localVarPath = "/api/webhooks";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
             
             
             
@@ -919,47 +382,288 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<WebHook>(localVarStatusCode,
+            return new ApiResponse<Dispositivo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WebHook) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebHook)));
+                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
             
         }
 
         
         /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Ativa Dispositivo Esse recurso permite ativar dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of WebHook</returns>
-        public async System.Threading.Tasks.Task<WebHook> SalvarUsingPOST13Async (string tipoEvento, string url)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of Dispositivo</returns>
+        public async System.Threading.Tasks.Task<Dispositivo> AtivarUsingPOSTAsync (long? id)
         {
-             ApiResponse<WebHook> localVarResponse = await SalvarUsingPOST13AsyncWithHttpInfo(tipoEvento, url);
+             ApiResponse<Dispositivo> localVarResponse = await AtivarUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Ativa Dispositivo Esse recurso permite ativar dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
-        /// <returns>Task of ApiResponse (WebHook)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHook>> SalvarUsingPOST13AsyncWithHttpInfo (string tipoEvento, string url)
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of ApiResponse (Dispositivo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dispositivo>> AtivarUsingPOSTAsyncWithHttpInfo (long? id)
         {
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling SalvarUsingPOST13");
-            // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling SalvarUsingPOST13");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarUsingPOST");
             
     
-            var localVarPath = "/api/webhooks";
+            var localVarPath = "/api/dispositivos/{id}/ativar-dispositivo";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dispositivo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+            
+        }
+        
+        /// <summary>
+        /// Desativa Dispositivo Esse recurso permite desativar dispositivo.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
+        /// <returns>Dispositivo</returns>
+        public Dispositivo DesativarUsingPOST (long? id)
+        {
+             ApiResponse<Dispositivo> localVarResponse = DesativarUsingPOSTWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Desativa Dispositivo Esse recurso permite desativar dispositivo.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
+        /// <returns>ApiResponse of Dispositivo</returns>
+        public ApiResponse< Dispositivo > DesativarUsingPOSTWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DispositivosApi->DesativarUsingPOST");
+            
+    
+            var localVarPath = "/api/dispositivos/{id}/desativar-dispositivo";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Dispositivo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+            
+        }
+
+        
+        /// <summary>
+        /// Desativa Dispositivo Esse recurso permite desativar dispositivo.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of Dispositivo</returns>
+        public async System.Threading.Tasks.Task<Dispositivo> DesativarUsingPOSTAsync (long? id)
+        {
+             ApiResponse<Dispositivo> localVarResponse = await DesativarUsingPOSTAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Desativa Dispositivo Esse recurso permite desativar dispositivo.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <returns>Task of ApiResponse (Dispositivo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dispositivo>> DesativarUsingPOSTAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarUsingPOST");
+            
+    
+            var localVarPath = "/api/dispositivos/{id}/desativar-dispositivo";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dispositivo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os dispositivos cadastrados Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="token">Token do Dispositivo (optional)</param> 
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param> 
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
+        /// <returns>PageDispositivos</returns>
+        public PageDispositivos ListarUsingGET5 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        {
+             ApiResponse<PageDispositivos> localVarResponse = ListarUsingGET5WithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os dispositivos cadastrados Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="token">Token do Dispositivo (optional)</param> 
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param> 
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
+        /// <returns>ApiResponse of PageDispositivos</returns>
+        public ApiResponse< PageDispositivos > ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        {
+            
+    
+            var localVarPath = "/api/dispositivos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -986,12 +690,282 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (token != null) localVarQueryParams.Add("token", Configuration.ApiClient.ParameterToString(token)); // query parameter
+            if (idUsuario != null) localVarQueryParams.Add("idUsuario", Configuration.ApiClient.ParameterToString(idUsuario)); // query parameter
+            if (idAplicacaoMobile != null) localVarQueryParams.Add("idAplicacaoMobile", Configuration.ApiClient.ParameterToString(idAplicacaoMobile)); // query parameter
+            if (dataCriacao != null) localVarQueryParams.Add("dataCriacao", Configuration.ApiClient.ParameterToString(dataCriacao)); // query parameter
+            if (dataDesativacao != null) localVarQueryParams.Add("dataDesativacao", Configuration.ApiClient.ParameterToString(dataDesativacao)); // query parameter
             
             
             
             
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageDispositivos>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageDispositivos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageDispositivos)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os dispositivos cadastrados Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="token">Token do Dispositivo (optional)</param>
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
+        /// <returns>Task of PageDispositivos</returns>
+        public async System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET5Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        {
+             ApiResponse<PageDispositivos> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os dispositivos cadastrados Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="token">Token do Dispositivo (optional)</param>
+        /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
+        /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
+        /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
+        /// <returns>Task of ApiResponse (PageDispositivos)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        {
+            
+    
+            var localVarPath = "/api/dispositivos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (token != null) localVarQueryParams.Add("token", Configuration.ApiClient.ParameterToString(token)); // query parameter
+            if (idUsuario != null) localVarQueryParams.Add("idUsuario", Configuration.ApiClient.ParameterToString(idUsuario)); // query parameter
+            if (idAplicacaoMobile != null) localVarQueryParams.Add("idAplicacaoMobile", Configuration.ApiClient.ParameterToString(idAplicacaoMobile)); // query parameter
+            if (dataCriacao != null) localVarQueryParams.Add("dataCriacao", Configuration.ApiClient.ParameterToString(dataCriacao)); // query parameter
+            if (dataDesativacao != null) localVarQueryParams.Add("dataDesativacao", Configuration.ApiClient.ParameterToString(dataDesativacao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageDispositivos>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageDispositivos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageDispositivos)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastra Dispositivo Esse recurso permite cadastrar dispositivos.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>Dispositivo</returns>
+        public Dispositivo SalvarUsingPOST3 (DispositivoPersist persist)
+        {
+             ApiResponse<Dispositivo> localVarResponse = SalvarUsingPOST3WithHttpInfo(persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra Dispositivo Esse recurso permite cadastrar dispositivos.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of Dispositivo</returns>
+        public ApiResponse< Dispositivo > SalvarUsingPOST3WithHttpInfo (DispositivoPersist persist)
+        {
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DispositivosApi->SalvarUsingPOST3");
+            
+    
+            var localVarPath = "/api/dispositivos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST3: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Dispositivo>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra Dispositivo Esse recurso permite cadastrar dispositivos.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of Dispositivo</returns>
+        public async System.Threading.Tasks.Task<Dispositivo> SalvarUsingPOST3Async (DispositivoPersist persist)
+        {
+             ApiResponse<Dispositivo> localVarResponse = await SalvarUsingPOST3AsyncWithHttpInfo(persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra Dispositivo Esse recurso permite cadastrar dispositivos.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (Dispositivo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dispositivo>> SalvarUsingPOST3AsyncWithHttpInfo (DispositivoPersist persist)
+        {
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST3");
+            
+    
+            var localVarPath = "/api/dispositivos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
 
             
 
@@ -1003,13 +977,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST3: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WebHook>(localVarStatusCode,
+            return new ApiResponse<Dispositivo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WebHook) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebHook)));
+                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
             
         }
         

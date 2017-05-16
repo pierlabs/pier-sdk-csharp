@@ -97,7 +97,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
         /// <returns>PageAtendimentoClientes</returns>
-        PageAtendimentoClientes ListarUsingGET (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        PageAtendimentoClientes ListarUsingGET1 (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
   
         /// <summary>
         /// Lista todos os atendimentos
@@ -113,7 +113,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
         /// <returns>ApiResponse of PageAtendimentoClientes</returns>
-        ApiResponse<PageAtendimentoClientes> ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        ApiResponse<PageAtendimentoClientes> ListarUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
         
         /// <summary>
         /// Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
@@ -127,7 +127,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>RiscoFraudeResponsePage</returns>
-        RiscoFraudeResponsePage ListarUsingGET11 (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
+        RiscoFraudeResponsePage ListarUsingGET14 (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of RiscoFraudeResponsePage</returns>
-        ApiResponse<RiscoFraudeResponsePage> ListarUsingGET11WithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
+        ApiResponse<RiscoFraudeResponsePage> ListarUsingGET14WithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
         
         /// <summary>
         /// Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -152,7 +152,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse NegarUsingGET (long? id);
+        RiscoFraudeDetalhadoResponse NegarUsingPOST (long? id);
   
         /// <summary>
         /// Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -163,7 +163,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> NegarUsingGETWithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> NegarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -174,7 +174,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse ReconhecerUsingGET (long? id);
+        RiscoFraudeDetalhadoResponse ReconhecerUsingPOST (long? id);
   
         /// <summary>
         /// Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -185,7 +185,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> ReconhecerUsingGETWithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> ReconhecerUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -204,7 +204,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param>
         /// <returns>AtendimentoCliente</returns>
-        AtendimentoCliente SalvarUsingPOST (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
+        AtendimentoCliente SalvarUsingPOST1 (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
   
         /// <summary>
         /// Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -223,7 +223,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param>
         /// <returns>ApiResponse of AtendimentoCliente</returns>
-        ApiResponse<AtendimentoCliente> SalvarUsingPOSTWithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
+        ApiResponse<AtendimentoCliente> SalvarUsingPOST1WithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
         
         #endregion Synchronous Operations
         
@@ -309,7 +309,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
         /// <returns>Task of PageAtendimentoClientes</returns>
-        System.Threading.Tasks.Task<PageAtendimentoClientes> ListarUsingGETAsync (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        System.Threading.Tasks.Task<PageAtendimentoClientes> ListarUsingGET1Async (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
 
         /// <summary>
         /// Lista todos os atendimentos
@@ -325,7 +325,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
         /// <returns>Task of ApiResponse (PageAtendimentoClientes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClientes>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClientes>> ListarUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null);
         
         /// <summary>
         /// Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
@@ -339,7 +339,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of RiscoFraudeResponsePage</returns>
-        System.Threading.Tasks.Task<RiscoFraudeResponsePage> ListarUsingGET11Async (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<RiscoFraudeResponsePage> ListarUsingGET14Async (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
@@ -353,7 +353,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (RiscoFraudeResponsePage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeResponsePage>> ListarUsingGET11AsyncWithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeResponsePage>> ListarUsingGET14AsyncWithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null);
         
         /// <summary>
         /// Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -364,7 +364,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> NegarUsingGETAsync (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> NegarUsingPOSTAsync (long? id);
 
         /// <summary>
         /// Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -375,7 +375,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> NegarUsingGETAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> NegarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -386,7 +386,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ReconhecerUsingGETAsync (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ReconhecerUsingPOSTAsync (long? id);
 
         /// <summary>
         /// Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
@@ -397,7 +397,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ReconhecerUsingGETAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ReconhecerUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -416,7 +416,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param>
         /// <returns>Task of AtendimentoCliente</returns>
-        System.Threading.Tasks.Task<AtendimentoCliente> SalvarUsingPOSTAsync (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
+        System.Threading.Tasks.Task<AtendimentoCliente> SalvarUsingPOST1Async (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
 
         /// <summary>
         /// Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
@@ -435,7 +435,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param>
         /// <returns>Task of ApiResponse (AtendimentoCliente)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AtendimentoCliente>> SalvarUsingPOSTAsyncWithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
+        System.Threading.Tasks.Task<ApiResponse<AtendimentoCliente>> SalvarUsingPOST1AsyncWithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null);
         
         #endregion Asynchronous Operations
         
@@ -588,12 +588,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -674,13 +668,6 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -759,12 +746,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -844,13 +825,6 @@ namespace Conductor.Pier.Api
             
             
 
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
 
             // make the HTTP request
@@ -936,12 +910,6 @@ namespace Conductor.Pier.Api
                 localVarPostBody = detalhadoResponses; // byte array
             }
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1028,13 +996,6 @@ namespace Conductor.Pier.Api
             }
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1065,9 +1026,9 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param> 
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param> 
         /// <returns>PageAtendimentoClientes</returns>
-        public PageAtendimentoClientes ListarUsingGET (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        public PageAtendimentoClientes ListarUsingGET1 (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
-             ApiResponse<PageAtendimentoClientes> localVarResponse = ListarUsingGETWithHttpInfo(page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
+             ApiResponse<PageAtendimentoClientes> localVarResponse = ListarUsingGET1WithHttpInfo(page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
              return localVarResponse.Data;
         }
 
@@ -1082,7 +1043,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param> 
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param> 
         /// <returns>ApiResponse of PageAtendimentoClientes</returns>
-        public ApiResponse< PageAtendimentoClientes > ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        public ApiResponse< PageAtendimentoClientes > ListarUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
             
     
@@ -1124,12 +1085,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1140,9 +1095,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAtendimentoClientes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1162,9 +1117,9 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
         /// <returns>Task of PageAtendimentoClientes</returns>
-        public async System.Threading.Tasks.Task<PageAtendimentoClientes> ListarUsingGETAsync (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        public async System.Threading.Tasks.Task<PageAtendimentoClientes> ListarUsingGET1Async (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
-             ApiResponse<PageAtendimentoClientes> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
+             ApiResponse<PageAtendimentoClientes> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
              return localVarResponse.Data;
 
         }
@@ -1180,7 +1135,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento. (optional)</param>
         /// <param name="dataAtendimento">Apresenta a data em que o Atendimento foi realizado. (optional)</param>
         /// <returns>Task of ApiResponse (PageAtendimentoClientes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClientes>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClientes>> ListarUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, DateTime? dataAtendimento = null)
         {
             
     
@@ -1223,13 +1178,6 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1239,9 +1187,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAtendimentoClientes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1258,9 +1206,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>RiscoFraudeResponsePage</returns>
-        public RiscoFraudeResponsePage ListarUsingGET11 (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
+        public RiscoFraudeResponsePage ListarUsingGET14 (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
         {
-             ApiResponse<RiscoFraudeResponsePage> localVarResponse = ListarUsingGET11WithHttpInfo(idConta, confirmacaoFraude, page, limit);
+             ApiResponse<RiscoFraudeResponsePage> localVarResponse = ListarUsingGET14WithHttpInfo(idConta, confirmacaoFraude, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1273,16 +1221,16 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of RiscoFraudeResponsePage</returns>
-        public ApiResponse< RiscoFraudeResponsePage > ListarUsingGET11WithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
+        public ApiResponse< RiscoFraudeResponsePage > ListarUsingGET14WithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling RiscoFraudeApi->ListarUsingGET11");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling RiscoFraudeApi->ListarUsingGET14");
             
             // verify the required parameter 'confirmacaoFraude' is set
             if (confirmacaoFraude == null)
-                throw new ApiException(400, "Missing required parameter 'confirmacaoFraude' when calling RiscoFraudeApi->ListarUsingGET11");
+                throw new ApiException(400, "Missing required parameter 'confirmacaoFraude' when calling RiscoFraudeApi->ListarUsingGET14");
             
     
             var localVarPath = "/api/riscos-fraudes";
@@ -1321,12 +1269,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1337,9 +1279,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeResponsePage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1357,9 +1299,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of RiscoFraudeResponsePage</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeResponsePage> ListarUsingGET11Async (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<RiscoFraudeResponsePage> ListarUsingGET14Async (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
         {
-             ApiResponse<RiscoFraudeResponsePage> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(idConta, confirmacaoFraude, page, limit);
+             ApiResponse<RiscoFraudeResponsePage> localVarResponse = await ListarUsingGET14AsyncWithHttpInfo(idConta, confirmacaoFraude, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1373,12 +1315,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (RiscoFraudeResponsePage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeResponsePage>> ListarUsingGET11AsyncWithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeResponsePage>> ListarUsingGET14AsyncWithHttpInfo (long? idConta, string confirmacaoFraude, int? page = null, int? limit = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET11");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET14");
             // verify the required parameter 'confirmacaoFraude' is set
-            if (confirmacaoFraude == null) throw new ApiException(400, "Missing required parameter 'confirmacaoFraude' when calling ListarUsingGET11");
+            if (confirmacaoFraude == null) throw new ApiException(400, "Missing required parameter 'confirmacaoFraude' when calling ListarUsingGET14");
             
     
             var localVarPath = "/api/riscos-fraudes";
@@ -1418,13 +1360,6 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1434,9 +1369,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeResponsePage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1450,9 +1385,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse NegarUsingGET (long? id)
+        public RiscoFraudeDetalhadoResponse NegarUsingPOST (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = NegarUsingGETWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = NegarUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1462,12 +1397,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > NegarUsingGETWithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > NegarUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->NegarUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->NegarUsingPOST");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/negar";
@@ -1503,25 +1438,19 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling NegarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling NegarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling NegarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling NegarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1536,9 +1465,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> NegarUsingGETAsync (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> NegarUsingPOSTAsync (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await NegarUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await NegarUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1549,10 +1478,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> NegarUsingGETAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> NegarUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling NegarUsingGET");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling NegarUsingPOST");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/negar";
@@ -1589,25 +1518,18 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling NegarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling NegarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling NegarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling NegarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1621,9 +1543,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse ReconhecerUsingGET (long? id)
+        public RiscoFraudeDetalhadoResponse ReconhecerUsingPOST (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ReconhecerUsingGETWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ReconhecerUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1633,12 +1555,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > ReconhecerUsingGETWithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > ReconhecerUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ReconhecerUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ReconhecerUsingPOST");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/reconhecer";
@@ -1674,25 +1596,19 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1707,9 +1623,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ReconhecerUsingGETAsync (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ReconhecerUsingPOSTAsync (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ReconhecerUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ReconhecerUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1720,10 +1636,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ReconhecerUsingGETAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ReconhecerUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReconhecerUsingGET");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReconhecerUsingPOST");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/reconhecer";
@@ -1760,25 +1676,18 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1800,9 +1709,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param> 
         /// <returns>AtendimentoCliente</returns>
-        public AtendimentoCliente SalvarUsingPOST (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
+        public AtendimentoCliente SalvarUsingPOST1 (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
         {
-             ApiResponse<AtendimentoCliente> localVarResponse = SalvarUsingPOSTWithHttpInfo(idConta, conteudoAtendimento, detalhesAtendimento, nomeAtendente, dataAtendimento, dataAgendamento, dataHoraInicioAtendimento, dataHoraFimAtendimento, flagFilaFraude);
+             ApiResponse<AtendimentoCliente> localVarResponse = SalvarUsingPOST1WithHttpInfo(idConta, conteudoAtendimento, detalhesAtendimento, nomeAtendente, dataAtendimento, dataAgendamento, dataHoraInicioAtendimento, dataHoraFimAtendimento, flagFilaFraude);
              return localVarResponse.Data;
         }
 
@@ -1820,7 +1729,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param> 
         /// <returns>ApiResponse of AtendimentoCliente</returns>
-        public ApiResponse< AtendimentoCliente > SalvarUsingPOSTWithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
+        public ApiResponse< AtendimentoCliente > SalvarUsingPOST1WithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
         {
             
     
@@ -1865,12 +1774,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1881,9 +1784,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AtendimentoCliente>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1906,9 +1809,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param>
         /// <returns>Task of AtendimentoCliente</returns>
-        public async System.Threading.Tasks.Task<AtendimentoCliente> SalvarUsingPOSTAsync (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
+        public async System.Threading.Tasks.Task<AtendimentoCliente> SalvarUsingPOST1Async (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
         {
-             ApiResponse<AtendimentoCliente> localVarResponse = await SalvarUsingPOSTAsyncWithHttpInfo(idConta, conteudoAtendimento, detalhesAtendimento, nomeAtendente, dataAtendimento, dataAgendamento, dataHoraInicioAtendimento, dataHoraFimAtendimento, flagFilaFraude);
+             ApiResponse<AtendimentoCliente> localVarResponse = await SalvarUsingPOST1AsyncWithHttpInfo(idConta, conteudoAtendimento, detalhesAtendimento, nomeAtendente, dataAtendimento, dataAgendamento, dataHoraInicioAtendimento, dataHoraFimAtendimento, flagFilaFraude);
              return localVarResponse.Data;
 
         }
@@ -1927,7 +1830,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
         /// <param name="flagFilaFraude">Flag fila fraude (optional)</param>
         /// <returns>Task of ApiResponse (AtendimentoCliente)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AtendimentoCliente>> SalvarUsingPOSTAsyncWithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AtendimentoCliente>> SalvarUsingPOST1AsyncWithHttpInfo (long? idConta = null, string conteudoAtendimento = null, string detalhesAtendimento = null, string nomeAtendente = null, DateTime? dataAtendimento = null, DateTime? dataAgendamento = null, DateTime? dataHoraInicioAtendimento = null, DateTime? dataHoraFimAtendimento = null, int? flagFilaFraude = null)
         {
             
     
@@ -1973,13 +1876,6 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1989,9 +1885,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AtendimentoCliente>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

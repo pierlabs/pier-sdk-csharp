@@ -15,12 +15,12 @@ namespace Conductor.Pier.Model
     /// Objeto conta
     /// </summary>
     [DataContract]
-    public partial class Conta :  IEquatable<Conta>
+    public partial class ContaResponse :  IEquatable<ContaResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Conta" /> class.
-        /// Initializes a new instance of the <see cref="Conta" />class.
+        /// Initializes a new instance of the <see cref="ContaResponse" /> class.
+        /// Initializes a new instance of the <see cref="ContaResponse" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id)..</param>
         /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
@@ -32,12 +32,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
         /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
         /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
         /// <param name="ValorRenda">Apresenta o valor da renda comprovada.</param>
-        /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
-        /// <param name="FormaEnvioFatura">Forma de envio da fatura..</param>
 
-        public Conta(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, int? NumeroAgencia = null, double? ValorRenda = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null)
+        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, double? ValorRenda = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -49,10 +46,7 @@ namespace Conductor.Pier.Model
             this.DataStatusConta = DataStatusConta;
             this.DataCadastro = DataCadastro;
             this.DataUltimaAlteracaoVencimento = DataUltimaAlteracaoVencimento;
-            this.NumeroAgencia = NumeroAgencia;
             this.ValorRenda = ValorRenda;
-            this.NumeroContaCorrente = NumeroContaCorrente;
-            this.FormaEnvioFatura = FormaEnvioFatura;
             
         }
         
@@ -128,32 +122,11 @@ namespace Conductor.Pier.Model
         public DateTime? DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
-        [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
-        public int? NumeroAgencia { get; set; }
-    
-        /// <summary>
         /// Apresenta o valor da renda comprovada
         /// </summary>
         /// <value>Apresenta o valor da renda comprovada</value>
         [DataMember(Name="valorRenda", EmitDefaultValue=false)]
         public double? ValorRenda { get; set; }
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero da conta corrente.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta corrente.</value>
-        [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
-        public string NumeroContaCorrente { get; set; }
-    
-        /// <summary>
-        /// Forma de envio da fatura.
-        /// </summary>
-        /// <value>Forma de envio da fatura.</value>
-        [DataMember(Name="formaEnvioFatura", EmitDefaultValue=false)]
-        public string FormaEnvioFatura { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -162,7 +135,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Conta {\n");
+            sb.Append("class ContaResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
@@ -173,10 +146,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataStatusConta: ").Append(DataStatusConta).Append("\n");
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  DataUltimaAlteracaoVencimento: ").Append(DataUltimaAlteracaoVencimento).Append("\n");
-            sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
             sb.Append("  ValorRenda: ").Append(ValorRenda).Append("\n");
-            sb.Append("  NumeroContaCorrente: ").Append(NumeroContaCorrente).Append("\n");
-            sb.Append("  FormaEnvioFatura: ").Append(FormaEnvioFatura).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -199,15 +169,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Conta);
+            return this.Equals(obj as ContaResponse);
         }
 
         /// <summary>
-        /// Returns true if Conta instances are equal
+        /// Returns true if ContaResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of Conta to be compared</param>
+        /// <param name="other">Instance of ContaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Conta other)
+        public bool Equals(ContaResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -265,24 +235,9 @@ namespace Conductor.Pier.Model
                     this.DataUltimaAlteracaoVencimento.Equals(other.DataUltimaAlteracaoVencimento)
                 ) && 
                 (
-                    this.NumeroAgencia == other.NumeroAgencia ||
-                    this.NumeroAgencia != null &&
-                    this.NumeroAgencia.Equals(other.NumeroAgencia)
-                ) && 
-                (
                     this.ValorRenda == other.ValorRenda ||
                     this.ValorRenda != null &&
                     this.ValorRenda.Equals(other.ValorRenda)
-                ) && 
-                (
-                    this.NumeroContaCorrente == other.NumeroContaCorrente ||
-                    this.NumeroContaCorrente != null &&
-                    this.NumeroContaCorrente.Equals(other.NumeroContaCorrente)
-                ) && 
-                (
-                    this.FormaEnvioFatura == other.FormaEnvioFatura ||
-                    this.FormaEnvioFatura != null &&
-                    this.FormaEnvioFatura.Equals(other.FormaEnvioFatura)
                 );
         }
 
@@ -328,17 +283,8 @@ namespace Conductor.Pier.Model
                 if (this.DataUltimaAlteracaoVencimento != null)
                     hash = hash * 59 + this.DataUltimaAlteracaoVencimento.GetHashCode();
                 
-                if (this.NumeroAgencia != null)
-                    hash = hash * 59 + this.NumeroAgencia.GetHashCode();
-                
                 if (this.ValorRenda != null)
                     hash = hash * 59 + this.ValorRenda.GetHashCode();
-                
-                if (this.NumeroContaCorrente != null)
-                    hash = hash * 59 + this.NumeroContaCorrente.GetHashCode();
-                
-                if (this.FormaEnvioFatura != null)
-                    hash = hash * 59 + this.FormaEnvioFatura.GetHashCode();
                 
                 return hash;
             }

@@ -15,12 +15,12 @@ namespace Conductor.Pier.Model
     /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
     /// </summary>
     [DataContract]
-    public partial class TransacaoResponse :  IEquatable<TransacaoResponse>
+    public partial class TransacaoCorrenteResponse :  IEquatable<TransacaoCorrenteResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransacaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="TransacaoResponse" />class.
+        /// Initializes a new instance of the <see cref="TransacaoCorrenteResponse" /> class.
+        /// Initializes a new instance of the <see cref="TransacaoCorrenteResponse" />class.
         /// </summary>
         /// <param name="UltimaParcelaLancada">UltimaParcelaLancada.</param>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id)..</param>
@@ -42,7 +42,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdGrupoMCC">IdGrupoMCC.</param>
         /// <param name="FlagSolicitouContestacao">FlagSolicitouContestacao.</param>
 
-        public TransacaoResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
+        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
             this.Id = Id;
@@ -193,7 +193,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TransacaoResponse {\n");
+            sb.Append("class TransacaoCorrenteResponse {\n");
             sb.Append("  UltimaParcelaLancada: ").Append(UltimaParcelaLancada).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
@@ -235,15 +235,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TransacaoResponse);
+            return this.Equals(obj as TransacaoCorrenteResponse);
         }
 
         /// <summary>
-        /// Returns true if TransacaoResponse instances are equal
+        /// Returns true if TransacaoCorrenteResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TransacaoResponse to be compared</param>
+        /// <param name="other">Instance of TransacaoCorrenteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TransacaoResponse other)
+        public bool Equals(TransacaoCorrenteResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

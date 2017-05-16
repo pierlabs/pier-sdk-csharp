@@ -24,13 +24,15 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo identificador do StatusOportunidade.</param>
         /// <param name="IdTipoOportunidade">C\u00C3\u00B3digo identificador do TipoOportunidade.</param>
+        /// <param name="Nome">Nome do status oportunidade.</param>
         /// <param name="Descricao">Descricao do StatusOportunidade.</param>
         /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo.</param>
 
-        public StatusOportunidadeResponse(long? Id = null, long? IdTipoOportunidade = null, string Descricao = null, bool? FlagAtivo = null)
+        public StatusOportunidadeResponse(long? Id = null, long? IdTipoOportunidade = null, string Nome = null, string Descricao = null, bool? FlagAtivo = null)
         {
             this.Id = Id;
             this.IdTipoOportunidade = IdTipoOportunidade;
+            this.Nome = Nome;
             this.Descricao = Descricao;
             this.FlagAtivo = FlagAtivo;
             
@@ -50,6 +52,13 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo identificador do TipoOportunidade</value>
         [DataMember(Name="idTipoOportunidade", EmitDefaultValue=false)]
         public long? IdTipoOportunidade { get; set; }
+    
+        /// <summary>
+        /// Nome do status oportunidade
+        /// </summary>
+        /// <value>Nome do status oportunidade</value>
+        [DataMember(Name="nome", EmitDefaultValue=false)]
+        public string Nome { get; set; }
     
         /// <summary>
         /// Descricao do StatusOportunidade
@@ -75,6 +84,7 @@ namespace Conductor.Pier.Model
             sb.Append("class StatusOportunidadeResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdTipoOportunidade: ").Append(IdTipoOportunidade).Append("\n");
+            sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             
@@ -125,6 +135,11 @@ namespace Conductor.Pier.Model
                     this.IdTipoOportunidade.Equals(other.IdTipoOportunidade)
                 ) && 
                 (
+                    this.Nome == other.Nome ||
+                    this.Nome != null &&
+                    this.Nome.Equals(other.Nome)
+                ) && 
+                (
                     this.Descricao == other.Descricao ||
                     this.Descricao != null &&
                     this.Descricao.Equals(other.Descricao)
@@ -153,6 +168,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdTipoOportunidade != null)
                     hash = hash * 59 + this.IdTipoOportunidade.GetHashCode();
+                
+                if (this.Nome != null)
+                    hash = hash * 59 + this.Nome.GetHashCode();
                 
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();

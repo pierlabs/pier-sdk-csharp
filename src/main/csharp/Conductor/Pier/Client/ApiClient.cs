@@ -20,17 +20,17 @@ namespace Conductor.Pier.Client
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default configuration and base path (https://localhost/).
+        /// with default configuration and base path (http://localhost/).
         /// </summary>
         public ApiClient()
         {
             Configuration = Configuration.Default;
-            RestClient = new RestClient("https://localhost/");
+            RestClient = new RestClient("http://localhost/");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (https://localhost/).
+        /// with default base path (http://localhost/).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config = null)
@@ -40,7 +40,7 @@ namespace Conductor.Pier.Client
             else
                 Configuration = config;
 
-            RestClient = new RestClient("https://localhost/");
+            RestClient = new RestClient("http://localhost/");
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Conductor.Pier.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://localhost/")
+        public ApiClient(String basePath = "http://localhost/")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

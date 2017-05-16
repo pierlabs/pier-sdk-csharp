@@ -95,8 +95,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>PageSMS</returns>
-        PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null);
+        PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
   
         /// <summary>
         /// Listar SMS
@@ -112,8 +113,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PageSMS</returns>
-        ApiResponse<PageSMS> ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null);
+        ApiResponse<PageSMS> ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
         /// Responder SMS
@@ -311,8 +313,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageSMS</returns>
-        System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null);
+        System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
 
         /// <summary>
         /// Listar SMS
@@ -328,8 +331,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMS)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
         /// Responder SMS
@@ -604,12 +608,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -699,13 +697,6 @@ namespace Conductor.Pier.Api
             
             
 
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
 
             // make the HTTP request
@@ -799,12 +790,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -901,13 +886,6 @@ namespace Conductor.Pier.Api
             
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -938,10 +916,11 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param> 
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <returns>PageSMS</returns>
-        public PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null)
+        public PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
-             ApiResponse<PageSMS> localVarResponse = ListarSMSUsingGETWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo);
+             ApiResponse<PageSMS> localVarResponse = ListarSMSUsingGETWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
              return localVarResponse.Data;
         }
 
@@ -956,8 +935,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param> 
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PageSMS</returns>
-        public ApiResponse< PageSMS > ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null)
+        public ApiResponse< PageSMS > ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
             
     
@@ -995,17 +975,12 @@ namespace Conductor.Pier.Api
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             if (operadora != null) localVarQueryParams.Add("operadora", Configuration.ApiClient.ParameterToString(operadora)); // query parameter
             if (protocolo != null) localVarQueryParams.Add("protocolo", Configuration.ApiClient.ParameterToString(protocolo)); // query parameter
+            if (nsu != null) localVarQueryParams.Add("nsu", Configuration.ApiClient.ParameterToString(nsu)); // query parameter
             
             
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1038,10 +1013,11 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageSMS</returns>
-        public async System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null)
+        public async System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
-             ApiResponse<PageSMS> localVarResponse = await ListarSMSUsingGETAsyncWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo);
+             ApiResponse<PageSMS> localVarResponse = await ListarSMSUsingGETAsyncWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
              return localVarResponse.Data;
 
         }
@@ -1057,8 +1033,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMS)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
             
     
@@ -1096,18 +1073,12 @@ namespace Conductor.Pier.Api
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             if (operadora != null) localVarQueryParams.Add("operadora", Configuration.ApiClient.ParameterToString(operadora)); // query parameter
             if (protocolo != null) localVarQueryParams.Add("protocolo", Configuration.ApiClient.ParameterToString(protocolo)); // query parameter
+            if (nsu != null) localVarQueryParams.Add("nsu", Configuration.ApiClient.ParameterToString(nsu)); // query parameter
             
             
             
             
 
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
 
             // make the HTTP request
@@ -1189,12 +1160,6 @@ namespace Conductor.Pier.Api
             
             
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1278,13 +1243,6 @@ namespace Conductor.Pier.Api
             
             
 
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
 
             // make the HTTP request
@@ -1370,12 +1328,6 @@ namespace Conductor.Pier.Api
                 localVarPostBody = pushPersists; // byte array
             }
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1462,13 +1414,6 @@ namespace Conductor.Pier.Api
             }
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1553,12 +1498,6 @@ namespace Conductor.Pier.Api
                 localVarPostBody = pushPersists; // byte array
             }
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1645,13 +1584,6 @@ namespace Conductor.Pier.Api
             }
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1736,12 +1668,6 @@ namespace Conductor.Pier.Api
                 localVarPostBody = pushPersists; // byte array
             }
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -1828,13 +1754,6 @@ namespace Conductor.Pier.Api
             }
 
             
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1919,12 +1838,6 @@ namespace Conductor.Pier.Api
                 localVarPostBody = listaSMS; // byte array
             }
 
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
     
             // make the HTTP request
@@ -2010,13 +1923,6 @@ namespace Conductor.Pier.Api
                 localVarPostBody = listaSMS; // byte array
             }
 
-            
-            // authentication (access_token) required
-            
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access_token")))
-            {
-                localVarHeaderParams["access_token"] = Configuration.GetApiKeyWithPrefix("access_token");
-            }
             
 
             // make the HTTP request

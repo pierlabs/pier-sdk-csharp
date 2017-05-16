@@ -30,8 +30,9 @@ namespace Conductor.Pier.Model
         /// <param name="RevDate">RevDate.</param>
         /// <param name="RevOportunidade">RevOportunidade.</param>
         /// <param name="RevType">RevType.</param>
+        /// <param name="RevUser">RevUser.</param>
 
-        public CdtDetalheOportunidadeAUD(string Conteudo = null, long? Id = null, long? IdOportunidade = null, string NomeCampo = null, long? Rev = null, DateTime? RevDate = null, long? RevOportunidade = null, long? RevType = null)
+        public CdtDetalheOportunidadeAUD(string Conteudo = null, long? Id = null, long? IdOportunidade = null, string NomeCampo = null, long? Rev = null, DateTime? RevDate = null, long? RevOportunidade = null, long? RevType = null, string RevUser = null)
         {
             this.Conteudo = Conteudo;
             this.Id = Id;
@@ -41,6 +42,7 @@ namespace Conductor.Pier.Model
             this.RevDate = RevDate;
             this.RevOportunidade = RevOportunidade;
             this.RevType = RevType;
+            this.RevUser = RevUser;
             
         }
         
@@ -94,6 +96,12 @@ namespace Conductor.Pier.Model
         public long? RevType { get; set; }
     
         /// <summary>
+        /// Gets or Sets RevUser
+        /// </summary>
+        [DataMember(Name="revUser", EmitDefaultValue=false)]
+        public string RevUser { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -109,6 +117,7 @@ namespace Conductor.Pier.Model
             sb.Append("  RevDate: ").Append(RevDate).Append("\n");
             sb.Append("  RevOportunidade: ").Append(RevOportunidade).Append("\n");
             sb.Append("  RevType: ").Append(RevType).Append("\n");
+            sb.Append("  RevUser: ").Append(RevUser).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -185,6 +194,11 @@ namespace Conductor.Pier.Model
                     this.RevType == other.RevType ||
                     this.RevType != null &&
                     this.RevType.Equals(other.RevType)
+                ) && 
+                (
+                    this.RevUser == other.RevUser ||
+                    this.RevUser != null &&
+                    this.RevUser.Equals(other.RevUser)
                 );
         }
 
@@ -223,6 +237,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.RevType != null)
                     hash = hash * 59 + this.RevType.GetHashCode();
+                
+                if (this.RevUser != null)
+                    hash = hash * 59 + this.RevUser.GetHashCode();
                 
                 return hash;
             }

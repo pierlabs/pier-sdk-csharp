@@ -22,10 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusOportunidade" /> class.
         /// Initializes a new instance of the <see cref="StatusOportunidade" />class.
         /// </summary>
+        /// <param name="Nome">Nome do status oportunidade.</param>
         /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (required).</param>
         /// <param name="FlagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (required).</param>
 
-        public StatusOportunidade(string Descricao = null, bool? FlagAtivo = null)
+        public StatusOportunidade(string Nome = null, string Descricao = null, bool? FlagAtivo = null)
         {
             // to ensure "Descricao" is required (not null)
             if (Descricao == null)
@@ -45,9 +46,17 @@ namespace Conductor.Pier.Model
             {
                 this.FlagAtivo = FlagAtivo;
             }
+            this.Nome = Nome;
             
         }
         
+    
+        /// <summary>
+        /// Nome do status oportunidade
+        /// </summary>
+        /// <value>Nome do status oportunidade</value>
+        [DataMember(Name="nome", EmitDefaultValue=false)]
+        public string Nome { get; set; }
     
         /// <summary>
         /// Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
@@ -71,6 +80,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StatusOportunidade {\n");
+            sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             
@@ -111,6 +121,11 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.Nome == other.Nome ||
+                    this.Nome != null &&
+                    this.Nome.Equals(other.Nome)
+                ) && 
+                (
                     this.Descricao == other.Descricao ||
                     this.Descricao != null &&
                     this.Descricao.Equals(other.Descricao)
@@ -133,6 +148,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Nome != null)
+                    hash = hash * 59 + this.Nome.GetHashCode();
                 
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();
