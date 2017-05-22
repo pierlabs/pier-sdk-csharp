@@ -147,8 +147,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse ConsultarDadosCartaoUsingGET (long? id);
+        /// <returns>DadosCarto</returns>
+        DadosCarto ConsultarDadosCartaoUsingGET (long? id);
   
         /// <summary>
         /// Consultar Detalhes do Cart\u00C3\u00A3o
@@ -158,8 +158,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> ConsultarDadosCartaoUsingGETWithHttpInfo (long? id);
+        /// <returns>ApiResponse of DadosCarto</returns>
+        ApiResponse<DadosCarto> ConsultarDadosCartaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -713,8 +713,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> ConsultarDadosCartaoUsingGETAsync (long? id);
+        /// <returns>Task of DadosCarto</returns>
+        System.Threading.Tasks.Task<DadosCarto> ConsultarDadosCartaoUsingGETAsync (long? id);
 
         /// <summary>
         /// Consultar Detalhes do Cart\u00C3\u00A3o
@@ -724,8 +724,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> ConsultarDadosCartaoUsingGETAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (DadosCarto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DadosCarto>> ConsultarDadosCartaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -2104,10 +2104,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
-        /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse ConsultarDadosCartaoUsingGET (long? id)
+        /// <returns>DadosCarto</returns>
+        public DadosCarto ConsultarDadosCartaoUsingGET (long? id)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = ConsultarDadosCartaoUsingGETWithHttpInfo(id);
+             ApiResponse<DadosCarto> localVarResponse = ConsultarDadosCartaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2116,8 +2116,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > ConsultarDadosCartaoUsingGETWithHttpInfo (long? id)
+        /// <returns>ApiResponse of DadosCarto</returns>
+        public ApiResponse< DadosCarto > ConsultarDadosCartaoUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2172,9 +2172,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+            return new ApiResponse<DadosCarto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+                (DadosCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCarto)));
             
         }
 
@@ -2184,10 +2184,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> ConsultarDadosCartaoUsingGETAsync (long? id)
+        /// <returns>Task of DadosCarto</returns>
+        public async System.Threading.Tasks.Task<DadosCarto> ConsultarDadosCartaoUsingGETAsync (long? id)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await ConsultarDadosCartaoUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<DadosCarto> localVarResponse = await ConsultarDadosCartaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2197,8 +2197,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> ConsultarDadosCartaoUsingGETAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (DadosCarto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DadosCarto>> ConsultarDadosCartaoUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDadosCartaoUsingGET");
@@ -2251,9 +2251,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+            return new ApiResponse<DadosCarto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+                (DadosCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCarto)));
             
         }
         

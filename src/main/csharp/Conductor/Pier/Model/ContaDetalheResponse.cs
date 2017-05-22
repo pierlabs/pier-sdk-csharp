@@ -47,9 +47,9 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
         /// <param name="SaldoDisponivelGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required).</param>
         /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="DataInicioAtraso">Apresenta a data da ultima cobran\u00C3\u00A7a..</param>
+        /// <param name="DiasAtraso">Apresenta a quantidade de dias que a conta esta em atraso.</param>
 
-        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, double? ValorRenda = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, DateTime? DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, DateTime? DataInicioAtraso = null)
+        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, double? ValorRenda = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, DateTime? DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -132,7 +132,7 @@ namespace Conductor.Pier.Model
             this.NumeroContaCorrente = NumeroContaCorrente;
             this.FormaEnvioFatura = FormaEnvioFatura;
             this.Titular = Titular;
-            this.DataInicioAtraso = DataInicioAtraso;
+            this.DiasAtraso = DiasAtraso;
             
         }
         
@@ -313,11 +313,11 @@ namespace Conductor.Pier.Model
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// Apresenta a data da ultima cobran\u00C3\u00A7a.
+        /// Apresenta a quantidade de dias que a conta esta em atraso
         /// </summary>
-        /// <value>Apresenta a data da ultima cobran\u00C3\u00A7a.</value>
-        [DataMember(Name="dataInicioAtraso", EmitDefaultValue=false)]
-        public DateTime? DataInicioAtraso { get; set; }
+        /// <value>Apresenta a quantidade de dias que a conta esta em atraso</value>
+        [DataMember(Name="diasAtraso", EmitDefaultValue=false)]
+        public long? DiasAtraso { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -352,7 +352,7 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteSaqueGlobal: ").Append(LimiteSaqueGlobal).Append("\n");
             sb.Append("  SaldoDisponivelGlobal: ").Append(SaldoDisponivelGlobal).Append("\n");
             sb.Append("  SaldoDisponivelSaque: ").Append(SaldoDisponivelSaque).Append("\n");
-            sb.Append("  DataInicioAtraso: ").Append(DataInicioAtraso).Append("\n");
+            sb.Append("  DiasAtraso: ").Append(DiasAtraso).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -516,9 +516,9 @@ namespace Conductor.Pier.Model
                     this.SaldoDisponivelSaque.Equals(other.SaldoDisponivelSaque)
                 ) && 
                 (
-                    this.DataInicioAtraso == other.DataInicioAtraso ||
-                    this.DataInicioAtraso != null &&
-                    this.DataInicioAtraso.Equals(other.DataInicioAtraso)
+                    this.DiasAtraso == other.DiasAtraso ||
+                    this.DiasAtraso != null &&
+                    this.DiasAtraso.Equals(other.DiasAtraso)
                 );
         }
 
@@ -609,8 +609,8 @@ namespace Conductor.Pier.Model
                 if (this.SaldoDisponivelSaque != null)
                     hash = hash * 59 + this.SaldoDisponivelSaque.GetHashCode();
                 
-                if (this.DataInicioAtraso != null)
-                    hash = hash * 59 + this.DataInicioAtraso.GetHashCode();
+                if (this.DiasAtraso != null)
+                    hash = hash * 59 + this.DiasAtraso.GetHashCode();
                 
                 return hash;
             }

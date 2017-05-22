@@ -436,7 +436,7 @@ namespace Conductor.Pier.Api
         /// Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param>
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>PageContasDetalhe</returns>
@@ -449,7 +449,7 @@ namespace Conductor.Pier.Api
         /// Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param>
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>ApiResponse of PageContasDetalhe</returns>
@@ -1596,7 +1596,7 @@ namespace Conductor.Pier.Api
         /// Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param>
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageContasDetalhe</returns>
@@ -1609,7 +1609,7 @@ namespace Conductor.Pier.Api
         /// Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param>
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageContasDetalhe)</returns>
@@ -5045,7 +5045,7 @@ namespace Conductor.Pier.Api
         /// Lista as contas da pessoa Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param> 
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>PageContasDetalhe</returns>
@@ -5059,7 +5059,7 @@ namespace Conductor.Pier.Api
         /// Lista as contas da pessoa Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param> 
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
         /// <returns>ApiResponse of PageContasDetalhe</returns>
@@ -5131,7 +5131,7 @@ namespace Conductor.Pier.Api
         /// Lista as contas da pessoa Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param>
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of PageContasDetalhe</returns>
@@ -5146,7 +5146,7 @@ namespace Conductor.Pier.Api
         /// Lista as contas da pessoa Permite listar as contas de um pessoa a partir do seu numero na receita federal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroReceitaFederal">Id Conta</param>
+        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
         /// <returns>Task of ApiResponse (PageContasDetalhe)</returns>
