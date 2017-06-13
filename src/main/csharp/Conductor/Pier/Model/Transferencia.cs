@@ -31,7 +31,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTransferencia">Valor estabelecido para ser transferido..</param>
         /// <param name="ValorTarifa">Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia..</param>
 
-        public Transferencia(long? Id = null, DateTime? DataTransferencia = null, long? IdContaOrigem = null, string NomePessoaOrigem = null, long? IdContaDestino = null, string NomePessoaDestino = null, double? ValorTransferencia = null, double? ValorTarifa = null)
+        public Transferencia(long? Id = null, string DataTransferencia = null, long? IdContaOrigem = null, string NomePessoaOrigem = null, long? IdContaDestino = null, string NomePessoaDestino = null, double? ValorTransferencia = null, double? ValorTarifa = null)
         {
             this.Id = Id;
             this.DataTransferencia = DataTransferencia;
@@ -57,7 +57,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.</value>
         [DataMember(Name="dataTransferencia", EmitDefaultValue=false)]
-        public DateTime? DataTransferencia { get; set; }
+        public string DataTransferencia { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).

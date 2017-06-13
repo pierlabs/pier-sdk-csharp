@@ -31,7 +31,7 @@ namespace Conductor.Pier.Model
         /// <param name="Descricao">Descricao do StatusOportunidade.</param>
         /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo.</param>
 
-        public StatusOportunidadeAUDResponse(long? Rev = null, long? RevType = null, DateTime? RevDate = null, long? Id = null, long? IdTipoOportunidade = null, string Nome = null, string Descricao = null, bool? FlagAtivo = null)
+        public StatusOportunidadeAUDResponse(long? Rev = null, long? RevType = null, string RevDate = null, long? Id = null, long? IdTipoOportunidade = null, string Nome = null, string Descricao = null, bool? FlagAtivo = null)
         {
             this.Rev = Rev;
             this.RevType = RevType;
@@ -64,7 +64,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
-        public DateTime? RevDate { get; set; }
+        public string RevDate { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo identificador do StatusOportunidade

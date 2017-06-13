@@ -35,7 +35,7 @@ namespace Conductor.Pier.Model
         /// <param name="RevDate">Data da auditoria.</param>
         /// <param name="RevType">Tipo da auditoria.</param>
 
-        public OportunidadeAUDResponse(long? Id = null, long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, DateTime? DataCadastro = null, DateTime? DataAtualizacao = null, string NumeroReceitaFederal = null, DateTime? DataInicioVigencia = null, DateTime? DataFimVigencia = null, bool? FlagAtivo = null, List<CdtDetalheOportunidadeAUD> Detalhes = null, DateTime? RevDate = null, long? RevType = null)
+        public OportunidadeAUDResponse(long? Id = null, long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, string DataCadastro = null, string DataAtualizacao = null, string NumeroReceitaFederal = null, string DataInicioVigencia = null, string DataFimVigencia = null, bool? FlagAtivo = null, List<CdtDetalheOportunidadeAUD> Detalhes = null, string RevDate = null, long? RevType = null)
         {
             this.Id = Id;
             this.IdTipoOportunidade = IdTipoOportunidade;
@@ -79,14 +79,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data cadastro da oportunidade.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
-        public DateTime? DataCadastro { get; set; }
+        public string DataCadastro { get; set; }
     
         /// <summary>
         /// Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
         /// </summary>
         /// <value>Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.</value>
         [DataMember(Name="dataAtualizacao", EmitDefaultValue=false)]
-        public DateTime? DataAtualizacao { get; set; }
+        public string DataAtualizacao { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
@@ -100,14 +100,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade</value>
         [DataMember(Name="dataInicioVigencia", EmitDefaultValue=false)]
-        public DateTime? DataInicioVigencia { get; set; }
+        public string DataInicioVigencia { get; set; }
     
         /// <summary>
         /// fim da vig\u00C3\u00AAncia da oportunidade
         /// </summary>
         /// <value>fim da vig\u00C3\u00AAncia da oportunidade</value>
         [DataMember(Name="dataFimVigencia", EmitDefaultValue=false)]
-        public DateTime? DataFimVigencia { get; set; }
+        public string DataFimVigencia { get; set; }
     
         /// <summary>
         /// Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
@@ -128,7 +128,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data da auditoria</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
-        public DateTime? RevDate { get; set; }
+        public string RevDate { get; set; }
     
         /// <summary>
         /// Tipo da auditoria

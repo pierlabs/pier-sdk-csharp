@@ -22,31 +22,109 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DesfazimentoTransacaoOnURequest" /> class.
         /// Initializes a new instance of the <see cref="DesfazimentoTransacaoOnURequest" />class.
         /// </summary>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou..</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos..</param>
-        /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM.</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV)..</param>
-        /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00.</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.</param>
-        /// <param name="NsuOrigemTransacaoCancelada">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada..</param>
-        /// <param name="DataHoraTransacaoCancelada">Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00.</param>
-        /// <param name="CodigoTransacaoCancelada">C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada..</param>
+        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
+        /// <param name="NsuOrigemTransacaoCancelada">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada. (required).</param>
+        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
+        /// <param name="DataHoraTransacaoCancelada">Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
+        /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o. (required).</param>
+        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM (required).</param>
+        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV). (required).</param>
+        /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
 
-        public DesfazimentoTransacaoOnURequest(string NsuOrigem = null, string CodigoProcessamento = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, DateTime? DataHoraTerminal = null, string TerminalRequisitante = null, string NsuOrigemTransacaoCancelada = null, DateTime? DataHoraTransacaoCancelada = null, string CodigoTransacaoCancelada = null)
+        public DesfazimentoTransacaoOnURequest(string NsuOrigem = null, string NsuOrigemTransacaoCancelada = null, string CodigoProcessamento = null, string DataHoraTransacaoCancelada = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
         {
-            this.NsuOrigem = NsuOrigem;
-            this.CodigoProcessamento = CodigoProcessamento;
-            this.ValorTransacao = ValorTransacao;
-            this.NumeroRealCartao = NumeroRealCartao;
-            this.DataValidadeCartao = DataValidadeCartao;
-            this.NumeroEstabelecimento = NumeroEstabelecimento;
-            this.DataHoraTerminal = DataHoraTerminal;
-            this.TerminalRequisitante = TerminalRequisitante;
-            this.NsuOrigemTransacaoCancelada = NsuOrigemTransacaoCancelada;
-            this.DataHoraTransacaoCancelada = DataHoraTransacaoCancelada;
-            this.CodigoTransacaoCancelada = CodigoTransacaoCancelada;
+            // to ensure "NsuOrigem" is required (not null)
+            if (NsuOrigem == null)
+            {
+                throw new InvalidDataException("NsuOrigem is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.NsuOrigem = NsuOrigem;
+            }
+            // to ensure "NsuOrigemTransacaoCancelada" is required (not null)
+            if (NsuOrigemTransacaoCancelada == null)
+            {
+                throw new InvalidDataException("NsuOrigemTransacaoCancelada is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.NsuOrigemTransacaoCancelada = NsuOrigemTransacaoCancelada;
+            }
+            // to ensure "CodigoProcessamento" is required (not null)
+            if (CodigoProcessamento == null)
+            {
+                throw new InvalidDataException("CodigoProcessamento is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.CodigoProcessamento = CodigoProcessamento;
+            }
+            // to ensure "DataHoraTransacaoCancelada" is required (not null)
+            if (DataHoraTransacaoCancelada == null)
+            {
+                throw new InvalidDataException("DataHoraTransacaoCancelada is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.DataHoraTransacaoCancelada = DataHoraTransacaoCancelada;
+            }
+            // to ensure "ValorTransacao" is required (not null)
+            if (ValorTransacao == null)
+            {
+                throw new InvalidDataException("ValorTransacao is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.ValorTransacao = ValorTransacao;
+            }
+            // to ensure "NumeroRealCartao" is required (not null)
+            if (NumeroRealCartao == null)
+            {
+                throw new InvalidDataException("NumeroRealCartao is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.NumeroRealCartao = NumeroRealCartao;
+            }
+            // to ensure "DataValidadeCartao" is required (not null)
+            if (DataValidadeCartao == null)
+            {
+                throw new InvalidDataException("DataValidadeCartao is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.DataValidadeCartao = DataValidadeCartao;
+            }
+            // to ensure "NumeroEstabelecimento" is required (not null)
+            if (NumeroEstabelecimento == null)
+            {
+                throw new InvalidDataException("NumeroEstabelecimento is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.NumeroEstabelecimento = NumeroEstabelecimento;
+            }
+            // to ensure "DataHoraTerminal" is required (not null)
+            if (DataHoraTerminal == null)
+            {
+                throw new InvalidDataException("DataHoraTerminal is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.DataHoraTerminal = DataHoraTerminal;
+            }
+            // to ensure "TerminalRequisitante" is required (not null)
+            if (TerminalRequisitante == null)
+            {
+                throw new InvalidDataException("TerminalRequisitante is a required property for DesfazimentoTransacaoOnURequest and cannot be null");
+            }
+            else
+            {
+                this.TerminalRequisitante = TerminalRequisitante;
+            }
             
         }
         
@@ -59,11 +137,25 @@ namespace Conductor.Pier.Model
         public string NsuOrigem { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.</value>
+        [DataMember(Name="nsuOrigemTransacaoCancelada", EmitDefaultValue=false)]
+        public string NsuOrigemTransacaoCancelada { get; set; }
+    
+        /// <summary>
         /// C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <value>C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
+    
+        /// <summary>
+        /// Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+        /// </summary>
+        /// <value>Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
+        [DataMember(Name="dataHoraTransacaoCancelada", EmitDefaultValue=false)]
+        public string DataHoraTransacaoCancelada { get; set; }
     
         /// <summary>
         /// Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
@@ -98,7 +190,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTerminal", EmitDefaultValue=false)]
-        public DateTime? DataHoraTerminal { get; set; }
+        public string DataHoraTerminal { get; set; }
     
         /// <summary>
         /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
@@ -106,27 +198,6 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.</value>
-        [DataMember(Name="nsuOrigemTransacaoCancelada", EmitDefaultValue=false)]
-        public string NsuOrigemTransacaoCancelada { get; set; }
-    
-        /// <summary>
-        /// Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-        /// </summary>
-        /// <value>Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
-        [DataMember(Name="dataHoraTransacaoCancelada", EmitDefaultValue=false)]
-        public DateTime? DataHoraTransacaoCancelada { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.</value>
-        [DataMember(Name="codigoTransacaoCancelada", EmitDefaultValue=false)]
-        public string CodigoTransacaoCancelada { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -137,16 +208,15 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class DesfazimentoTransacaoOnURequest {\n");
             sb.Append("  NsuOrigem: ").Append(NsuOrigem).Append("\n");
+            sb.Append("  NsuOrigemTransacaoCancelada: ").Append(NsuOrigemTransacaoCancelada).Append("\n");
             sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
+            sb.Append("  DataHoraTransacaoCancelada: ").Append(DataHoraTransacaoCancelada).Append("\n");
             sb.Append("  ValorTransacao: ").Append(ValorTransacao).Append("\n");
             sb.Append("  NumeroRealCartao: ").Append(NumeroRealCartao).Append("\n");
             sb.Append("  DataValidadeCartao: ").Append(DataValidadeCartao).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
             sb.Append("  DataHoraTerminal: ").Append(DataHoraTerminal).Append("\n");
             sb.Append("  TerminalRequisitante: ").Append(TerminalRequisitante).Append("\n");
-            sb.Append("  NsuOrigemTransacaoCancelada: ").Append(NsuOrigemTransacaoCancelada).Append("\n");
-            sb.Append("  DataHoraTransacaoCancelada: ").Append(DataHoraTransacaoCancelada).Append("\n");
-            sb.Append("  CodigoTransacaoCancelada: ").Append(CodigoTransacaoCancelada).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -190,9 +260,19 @@ namespace Conductor.Pier.Model
                     this.NsuOrigem.Equals(other.NsuOrigem)
                 ) && 
                 (
+                    this.NsuOrigemTransacaoCancelada == other.NsuOrigemTransacaoCancelada ||
+                    this.NsuOrigemTransacaoCancelada != null &&
+                    this.NsuOrigemTransacaoCancelada.Equals(other.NsuOrigemTransacaoCancelada)
+                ) && 
+                (
                     this.CodigoProcessamento == other.CodigoProcessamento ||
                     this.CodigoProcessamento != null &&
                     this.CodigoProcessamento.Equals(other.CodigoProcessamento)
+                ) && 
+                (
+                    this.DataHoraTransacaoCancelada == other.DataHoraTransacaoCancelada ||
+                    this.DataHoraTransacaoCancelada != null &&
+                    this.DataHoraTransacaoCancelada.Equals(other.DataHoraTransacaoCancelada)
                 ) && 
                 (
                     this.ValorTransacao == other.ValorTransacao ||
@@ -223,21 +303,6 @@ namespace Conductor.Pier.Model
                     this.TerminalRequisitante == other.TerminalRequisitante ||
                     this.TerminalRequisitante != null &&
                     this.TerminalRequisitante.Equals(other.TerminalRequisitante)
-                ) && 
-                (
-                    this.NsuOrigemTransacaoCancelada == other.NsuOrigemTransacaoCancelada ||
-                    this.NsuOrigemTransacaoCancelada != null &&
-                    this.NsuOrigemTransacaoCancelada.Equals(other.NsuOrigemTransacaoCancelada)
-                ) && 
-                (
-                    this.DataHoraTransacaoCancelada == other.DataHoraTransacaoCancelada ||
-                    this.DataHoraTransacaoCancelada != null &&
-                    this.DataHoraTransacaoCancelada.Equals(other.DataHoraTransacaoCancelada)
-                ) && 
-                (
-                    this.CodigoTransacaoCancelada == other.CodigoTransacaoCancelada ||
-                    this.CodigoTransacaoCancelada != null &&
-                    this.CodigoTransacaoCancelada.Equals(other.CodigoTransacaoCancelada)
                 );
         }
 
@@ -256,8 +321,14 @@ namespace Conductor.Pier.Model
                 if (this.NsuOrigem != null)
                     hash = hash * 59 + this.NsuOrigem.GetHashCode();
                 
+                if (this.NsuOrigemTransacaoCancelada != null)
+                    hash = hash * 59 + this.NsuOrigemTransacaoCancelada.GetHashCode();
+                
                 if (this.CodigoProcessamento != null)
                     hash = hash * 59 + this.CodigoProcessamento.GetHashCode();
+                
+                if (this.DataHoraTransacaoCancelada != null)
+                    hash = hash * 59 + this.DataHoraTransacaoCancelada.GetHashCode();
                 
                 if (this.ValorTransacao != null)
                     hash = hash * 59 + this.ValorTransacao.GetHashCode();
@@ -276,15 +347,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.TerminalRequisitante != null)
                     hash = hash * 59 + this.TerminalRequisitante.GetHashCode();
-                
-                if (this.NsuOrigemTransacaoCancelada != null)
-                    hash = hash * 59 + this.NsuOrigemTransacaoCancelada.GetHashCode();
-                
-                if (this.DataHoraTransacaoCancelada != null)
-                    hash = hash * 59 + this.DataHoraTransacaoCancelada.GetHashCode();
-                
-                if (this.CodigoTransacaoCancelada != null)
-                    hash = hash * 59 + this.CodigoTransacaoCancelada.GetHashCode();
                 
                 return hash;
             }

@@ -33,7 +33,7 @@ namespace Conductor.Pier.Model
         /// <param name="UsuarioCadastro">Nome do usu\u00C3\u00A1rio que criou o lote. (required).</param>
         /// <param name="StatusProcessamento">Indica o status de processamento do lote. (required).</param>
 
-        public LoteCartoesPrePagos(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, DateTime? DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null)
+        public LoteCartoesPrePagos(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, string DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
-        public DateTime? DataCadastro { get; set; }
+        public string DataCadastro { get; set; }
     
         /// <summary>
         /// Nome do usu\u00C3\u00A1rio que criou o lote.

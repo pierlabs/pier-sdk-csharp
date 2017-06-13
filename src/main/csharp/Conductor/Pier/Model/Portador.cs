@@ -33,7 +33,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataCadastroPortador">Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="DataCancelamentoPortador">Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public Portador(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdTipoCartao = null, int? FlagAtivo = null, DateTime? DataCadastroPortador = null, DateTime? DataCancelamentoPortador = null)
+        public Portador(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdTipoCartao = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null)
         {
             this.IdConta = IdConta;
             this.IdProduto = IdProduto;
@@ -110,14 +110,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="dataCadastroPortador", EmitDefaultValue=false)]
-        public DateTime? DataCadastroPortador { get; set; }
+        public string DataCadastroPortador { get; set; }
     
         /// <summary>
         /// Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <value>Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="dataCancelamentoPortador", EmitDefaultValue=false)]
-        public DateTime? DataCancelamentoPortador { get; set; }
+        public string DataCancelamentoPortador { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

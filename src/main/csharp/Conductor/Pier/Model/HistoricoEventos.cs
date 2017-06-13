@@ -28,7 +28,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorAnterior">Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="ValorAtribuido">Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
 
-        public HistoricoEventos(long? IdHistorico = null, DateTime? DataHistorico = null, string TipoHistorico = null, string ValorAnterior = null, string ValorAtribuido = null)
+        public HistoricoEventos(long? IdHistorico = null, string DataHistorico = null, string TipoHistorico = null, string ValorAnterior = null, string ValorAtribuido = null)
         {
             // to ensure "IdHistorico" is required (not null)
             if (IdHistorico == null)
@@ -83,7 +83,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data do evento</value>
         [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
-        public DateTime? DataHistorico { get; set; }
+        public string DataHistorico { get; set; }
     
         /// <summary>
         /// Nome do campo alterado

@@ -25,10 +25,10 @@ namespace Conductor.Pier.Model
         /// <param name="DataProcessamento">Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto.</param>
         /// <param name="DataDocumento">Data do documento (impress\u00C3\u00A3o).</param>
         /// <param name="DataVencimento">Data do vencimento.</param>
-        /// <param name="ValorBoleto">ValorBoleto.</param>
+        /// <param name="ValorBoleto">Valor do Boleto..</param>
         /// <param name="NumeroDoDocumento">N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente.</param>
         /// <param name="NomeBeneficiario">Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto.</param>
-        /// <param name="Agencia">Ag\u00C3\u00AAncia.</param>
+        /// <param name="Agencia">Ag\u00C3\u00AAncia..</param>
         /// <param name="CodigoBeneficiario">C\u00C3\u00B3digo do benefici\u00C3\u00A1rio.</param>
         /// <param name="DigitoCodigoBeneficiario">D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio.</param>
         /// <param name="NumeroConvenio">N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos..</param>
@@ -42,7 +42,7 @@ namespace Conductor.Pier.Model
         /// <param name="Instrucoes">Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio.</param>
         /// <param name="LocaisDePagamento">Locais de pagamento.</param>
         /// <param name="NomePagador">Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto.</param>
-        /// <param name="DocumentoBeneficiario">DocumentoBeneficiario.</param>
+        /// <param name="DocumentoBeneficiario">Documento do Beneficiario..</param>
         /// <param name="DocumentoPagador">Documento do pagador (CPF ou CNPJ).</param>
         /// <param name="LogradouroPagador">Logradouro do pagador.</param>
         /// <param name="BairroPagador">Bairro do pagador.</param>
@@ -52,7 +52,7 @@ namespace Conductor.Pier.Model
         /// <param name="CodigoDeBarras">Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras.</param>
         /// <param name="LinhaDigitavel">Linha digit\u00C3\u00A1vel formatada.</param>
 
-        public BoletoDeFatura(DateTime? DataProcessamento = null, DateTime? DataDocumento = null, DateTime? DataVencimento = null, double? ValorBoleto = null, string NumeroDoDocumento = null, string NomeBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string DigitoCodigoBeneficiario = null, string NumeroConvenio = null, string Carteira = null, string NossoNumero = null, string Banco = null, string DigitoNossoNumero = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoBeneficiario = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null)
+        public BoletoDeFatura(string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, double? ValorBoleto = null, string NumeroDoDocumento = null, string NomeBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string DigitoCodigoBeneficiario = null, string NumeroConvenio = null, string Carteira = null, string NossoNumero = null, string Banco = null, string DigitoNossoNumero = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoBeneficiario = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null)
         {
             this.DataProcessamento = DataProcessamento;
             this.DataDocumento = DataDocumento;
@@ -92,25 +92,26 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
-        public DateTime? DataProcessamento { get; set; }
+        public string DataProcessamento { get; set; }
     
         /// <summary>
         /// Data do documento (impress\u00C3\u00A3o)
         /// </summary>
         /// <value>Data do documento (impress\u00C3\u00A3o)</value>
         [DataMember(Name="dataDocumento", EmitDefaultValue=false)]
-        public DateTime? DataDocumento { get; set; }
+        public string DataDocumento { get; set; }
     
         /// <summary>
         /// Data do vencimento
         /// </summary>
         /// <value>Data do vencimento</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
-        public DateTime? DataVencimento { get; set; }
+        public string DataVencimento { get; set; }
     
         /// <summary>
-        /// Gets or Sets ValorBoleto
+        /// Valor do Boleto.
         /// </summary>
+        /// <value>Valor do Boleto.</value>
         [DataMember(Name="valorBoleto", EmitDefaultValue=false)]
         public double? ValorBoleto { get; set; }
     
@@ -129,9 +130,9 @@ namespace Conductor.Pier.Model
         public string NomeBeneficiario { get; set; }
     
         /// <summary>
-        /// Ag\u00C3\u00AAncia
+        /// Ag\u00C3\u00AAncia.
         /// </summary>
-        /// <value>Ag\u00C3\u00AAncia</value>
+        /// <value>Ag\u00C3\u00AAncia.</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public string Agencia { get; set; }
     
@@ -227,8 +228,9 @@ namespace Conductor.Pier.Model
         public string NomePagador { get; set; }
     
         /// <summary>
-        /// Gets or Sets DocumentoBeneficiario
+        /// Documento do Beneficiario.
         /// </summary>
+        /// <value>Documento do Beneficiario.</value>
         [DataMember(Name="documentoBeneficiario", EmitDefaultValue=false)]
         public string DocumentoBeneficiario { get; set; }
     

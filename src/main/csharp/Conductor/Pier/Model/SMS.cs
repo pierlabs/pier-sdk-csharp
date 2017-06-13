@@ -99,7 +99,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataAlteracaoStatus">Apresenta a data e em que o Stattjus do registro foi modificado (required).</param>
         /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
 
-        public SMS(long? Id = null, long? Nsu = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, DateTime? DataAgendamento = null, int? QuantidadeTentativasEnvio = null, DateTime? DataInclusao = null, DateTime? DataAlteracaoStatus = null, string Protocolo = null)
+        public SMS(long? Id = null, long? Nsu = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, string DataAgendamento = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null, string DataAlteracaoStatus = null, string Protocolo = null)
         {
             // to ensure "Status" is required (not null)
             if (Status == null)
@@ -293,7 +293,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
-        public DateTime? DataAgendamento { get; set; }
+        public string DataAgendamento { get; set; }
     
         /// <summary>
         /// Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -307,14 +307,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
-        public DateTime? DataInclusao { get; set; }
+        public string DataInclusao { get; set; }
     
         /// <summary>
         /// Apresenta a data e em que o Stattjus do registro foi modificado
         /// </summary>
         /// <value>Apresenta a data e em que o Stattjus do registro foi modificado</value>
         [DataMember(Name="dataAlteracaoStatus", EmitDefaultValue=false)]
-        public DateTime? DataAlteracaoStatus { get; set; }
+        public string DataAlteracaoStatus { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es

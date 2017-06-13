@@ -47,7 +47,7 @@ namespace Conductor.Pier.Model
         /// <param name="Telefones">Apresenta os telefones da empresa.</param>
         /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros (required).</param>
 
-        public PessoaFisicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, DateTime? DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, DateTime? DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string Profissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null)
+        public PessoaFisicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string Profissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
-        public DateTime? DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).
@@ -193,7 +193,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
-        public DateTime? DataEmissaoIdentidade { get; set; }
+        public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
         /// Id Estado civil da pessoa fisica

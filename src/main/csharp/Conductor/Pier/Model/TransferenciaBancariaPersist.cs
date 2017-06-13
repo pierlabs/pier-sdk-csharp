@@ -35,7 +35,7 @@ namespace Conductor.Pier.Model
         /// <param name="DigitoConta">D\u00C3\u00ADgito da conta.</param>
         /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) (required).</param>
 
-        public TransferenciaBancariaPersist(DateTime? DataCompra = null, DateTime? ProximoVencimentoPadrao = null, DateTime? ProximoVencimentoReal = null, double? ValorCompra = null, string NomeFavorecido = null, string DocumentoFavorecido = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagContaPoupanca = null)
+        public TransferenciaBancariaPersist(string DataCompra = null, string ProximoVencimentoPadrao = null, string ProximoVencimentoReal = null, double? ValorCompra = null, string NomeFavorecido = null, string DocumentoFavorecido = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagContaPoupanca = null)
         {
             // to ensure "DataCompra" is required (not null)
             if (DataCompra == null)
@@ -138,21 +138,21 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data da transfer\u00C3\u00AAncia</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
-        public DateTime? DataCompra { get; set; }
+        public string DataCompra { get; set; }
     
         /// <summary>
         /// Dia do vencimento padr\u00C3\u00A3o da fatura
         /// </summary>
         /// <value>Dia do vencimento padr\u00C3\u00A3o da fatura</value>
         [DataMember(Name="proximoVencimentoPadrao", EmitDefaultValue=false)]
-        public DateTime? ProximoVencimentoPadrao { get; set; }
+        public string ProximoVencimentoPadrao { get; set; }
     
         /// <summary>
         /// Data do vencimento real da fatura
         /// </summary>
         /// <value>Data do vencimento real da fatura</value>
         [DataMember(Name="proximoVencimentoReal", EmitDefaultValue=false)]
-        public DateTime? ProximoVencimentoReal { get; set; }
+        public string ProximoVencimentoReal { get; set; }
     
         /// <summary>
         /// Valor da transfer\u00C3\u00AAncia

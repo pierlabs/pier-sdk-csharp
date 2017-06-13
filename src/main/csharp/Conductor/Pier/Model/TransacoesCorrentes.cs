@@ -46,6 +46,8 @@ namespace Conductor.Pier.Model
         /// <param name="CodigoReferencia">C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado..</param>
         /// <param name="CodigoTerminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="CodigoMCC">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento..</param>
+        /// <param name="GrupoMCC">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento..</param>
+        /// <param name="GrupoDescricaoMCC">Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento..</param>
         /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id)..</param>
         /// <param name="NomeEstabelecimento">Nome do Estabelecimento..</param>
         /// <param name="LocalidadeEstabelecimento">Localidade do Estabelecimento..</param>
@@ -57,7 +59,7 @@ namespace Conductor.Pier.Model
         /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada..</param>
         /// <param name="IdTransacaoEstorno">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno..</param>
 
-        public TransacoesCorrentes(long? Id = null, string TipoTransacao = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, DateTime? DataTransacaoUTC = null, DateTime? DataFaturamento = null, DateTime? DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, DateTime? DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
+        public TransacoesCorrentes(long? Id = null, string TipoTransacao = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacaoUTC = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
         {
             this.Id = Id;
             this.TipoTransacao = TipoTransacao;
@@ -83,6 +85,8 @@ namespace Conductor.Pier.Model
             this.CodigoReferencia = CodigoReferencia;
             this.CodigoTerminal = CodigoTerminal;
             this.CodigoMCC = CodigoMCC;
+            this.GrupoMCC = GrupoMCC;
+            this.GrupoDescricaoMCC = GrupoDescricaoMCC;
             this.IdEstabelecimento = IdEstabelecimento;
             this.NomeEstabelecimento = NomeEstabelecimento;
             this.LocalidadeEstabelecimento = LocalidadeEstabelecimento;
@@ -158,21 +162,21 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).</value>
         [DataMember(Name="dataTransacaoUTC", EmitDefaultValue=false)]
-        public DateTime? DataTransacaoUTC { get; set; }
+        public string DataTransacaoUTC { get; set; }
     
         /// <summary>
         /// Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <value>Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="dataFaturamento", EmitDefaultValue=false)]
-        public DateTime? DataFaturamento { get; set; }
+        public string DataFaturamento { get; set; }
     
         /// <summary>
         /// Data de Vencimento da Fatura.
         /// </summary>
         /// <value>Data de Vencimento da Fatura.</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
-        public DateTime? DataVencimento { get; set; }
+        public string DataVencimento { get; set; }
     
         /// <summary>
         /// Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -221,7 +225,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).</value>
         [DataMember(Name="dataCotacaoUSD", EmitDefaultValue=false)]
-        public DateTime? DataCotacaoUSD { get; set; }
+        public string DataCotacaoUSD { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
@@ -264,6 +268,20 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public long? CodigoMCC { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.</value>
+        [DataMember(Name="grupoMCC", EmitDefaultValue=false)]
+        public long? GrupoMCC { get; set; }
+    
+        /// <summary>
+        /// Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+        /// </summary>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.</value>
+        [DataMember(Name="grupoDescricaoMCC", EmitDefaultValue=false)]
+        public string GrupoDescricaoMCC { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
@@ -367,6 +385,8 @@ namespace Conductor.Pier.Model
             sb.Append("  CodigoReferencia: ").Append(CodigoReferencia).Append("\n");
             sb.Append("  CodigoTerminal: ").Append(CodigoTerminal).Append("\n");
             sb.Append("  CodigoMCC: ").Append(CodigoMCC).Append("\n");
+            sb.Append("  GrupoMCC: ").Append(GrupoMCC).Append("\n");
+            sb.Append("  GrupoDescricaoMCC: ").Append(GrupoDescricaoMCC).Append("\n");
             sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
             sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
             sb.Append("  LocalidadeEstabelecimento: ").Append(LocalidadeEstabelecimento).Append("\n");
@@ -535,6 +555,16 @@ namespace Conductor.Pier.Model
                     this.CodigoMCC.Equals(other.CodigoMCC)
                 ) && 
                 (
+                    this.GrupoMCC == other.GrupoMCC ||
+                    this.GrupoMCC != null &&
+                    this.GrupoMCC.Equals(other.GrupoMCC)
+                ) && 
+                (
+                    this.GrupoDescricaoMCC == other.GrupoDescricaoMCC ||
+                    this.GrupoDescricaoMCC != null &&
+                    this.GrupoDescricaoMCC.Equals(other.GrupoDescricaoMCC)
+                ) && 
+                (
                     this.IdEstabelecimento == other.IdEstabelecimento ||
                     this.IdEstabelecimento != null &&
                     this.IdEstabelecimento.Equals(other.IdEstabelecimento)
@@ -669,6 +699,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.CodigoMCC != null)
                     hash = hash * 59 + this.CodigoMCC.GetHashCode();
+                
+                if (this.GrupoMCC != null)
+                    hash = hash * 59 + this.GrupoMCC.GetHashCode();
+                
+                if (this.GrupoDescricaoMCC != null)
+                    hash = hash * 59 + this.GrupoDescricaoMCC.GetHashCode();
                 
                 if (this.IdEstabelecimento != null)
                     hash = hash * 59 + this.IdEstabelecimento.GetHashCode();

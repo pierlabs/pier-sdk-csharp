@@ -36,7 +36,7 @@ namespace Conductor.Pier.Model
         /// <param name="Telefones">Informa os telefones do s\u00C3\u00B3cio.</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
 
-        public PessoaPersist(string Cpf = null, DateTime? DataEmissaoIdentidade = null, DateTime? DataNascimento = null, string Email = null, string EstadoCivil = null, string Nacionalidade = null, string Nome = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Profissao = null, string Sexo = null, List<TelefonePessoaAprovadaPersist> Telefones = null, string UnidadeFederativaIdentidade = null)
+        public PessoaPersist(string Cpf = null, string DataEmissaoIdentidade = null, string DataNascimento = null, string Email = null, string EstadoCivil = null, string Nacionalidade = null, string Nome = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Profissao = null, string Sexo = null, List<TelefonePessoaAprovadaPersist> Telefones = null, string UnidadeFederativaIdentidade = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -75,14 +75,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data emiss\u00C3\u00A3o da Identidade</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
-        public DateTime? DataEmissaoIdentidade { get; set; }
+        public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
         /// Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
         /// </summary>
         /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
-        public DateTime? DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
     
         /// <summary>
         /// Email do s\u00C3\u00B3cio

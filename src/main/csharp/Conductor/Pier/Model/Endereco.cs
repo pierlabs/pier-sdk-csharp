@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataInclusao">Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o.</param>
         /// <param name="DataUltimaAtualizacao">Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao.</param>
 
-        public Endereco(long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, DateTime? DataInclusao = null, DateTime? DataUltimaAtualizacao = null)
+        public Endereco(long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null)
         {
             this.Id = Id;
             this.IdPessoa = IdPessoa;
@@ -146,14 +146,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
-        public DateTime? DataInclusao { get; set; }
+        public string DataInclusao { get; set; }
     
         /// <summary>
         /// Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
         /// </summary>
         /// <value>Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao</value>
         [DataMember(Name="dataUltimaAtualizacao", EmitDefaultValue=false)]
-        public DateTime? DataUltimaAtualizacao { get; set; }
+        public string DataUltimaAtualizacao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

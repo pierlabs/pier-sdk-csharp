@@ -55,14 +55,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>PagePush</returns>
-        PagePush ListarPushUsingGET (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        PagePush ListarPushUsingGET (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
   
         /// <summary>
         /// Listar Push
@@ -72,14 +72,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>ApiResponse of PagePush</returns>
-        ApiResponse<PagePush> ListarPushUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        ApiResponse<PagePush> ListarPushUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
         
         /// <summary>
         /// Listar SMS
@@ -89,7 +89,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
@@ -97,7 +97,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>PageSMS</returns>
-        PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
   
         /// <summary>
         /// Listar SMS
@@ -107,7 +107,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PageSMS</returns>
-        ApiResponse<PageSMS> ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        ApiResponse<PageSMS> ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
         /// Responder SMS
@@ -273,14 +273,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of PagePush</returns>
-        System.Threading.Tasks.Task<PagePush> ListarPushUsingGETAsync (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        System.Threading.Tasks.Task<PagePush> ListarPushUsingGETAsync (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
 
         /// <summary>
         /// Listar Push
@@ -290,14 +290,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of ApiResponse (PagePush)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePush>> ListarPushUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePush>> ListarPushUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
         
         /// <summary>
         /// Listar SMS
@@ -307,7 +307,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
@@ -315,7 +315,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageSMS</returns>
-        System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
 
         /// <summary>
         /// Listar SMS
@@ -325,7 +325,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
@@ -333,7 +333,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMS)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
         /// Responder SMS
@@ -722,14 +722,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param> 
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param> 
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <returns>PagePush</returns>
-        public PagePush ListarPushUsingGET (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public PagePush ListarPushUsingGET (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
              ApiResponse<PagePush> localVarResponse = ListarPushUsingGETWithHttpInfo(page, limit, dataEnvio, tipoEvento, status, plataforma, protocolo);
              return localVarResponse.Data;
@@ -740,14 +740,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param> 
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param> 
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <returns>ApiResponse of PagePush</returns>
-        public ApiResponse< PagePush > ListarPushUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public ApiResponse< PagePush > ListarPushUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
             
     
@@ -816,14 +816,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of PagePush</returns>
-        public async System.Threading.Tasks.Task<PagePush> ListarPushUsingGETAsync (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public async System.Threading.Tasks.Task<PagePush> ListarPushUsingGETAsync (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
              ApiResponse<PagePush> localVarResponse = await ListarPushUsingGETAsyncWithHttpInfo(page, limit, dataEnvio, tipoEvento, status, plataforma, protocolo);
              return localVarResponse.Data;
@@ -835,14 +835,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of ApiResponse (PagePush)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePush>> ListarPushUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePush>> ListarPushUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
             
     
@@ -910,7 +910,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param> 
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
@@ -918,7 +918,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <returns>PageSMS</returns>
-        public PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public PageSMS ListarSMSUsingGET (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
              ApiResponse<PageSMS> localVarResponse = ListarSMSUsingGETWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
              return localVarResponse.Data;
@@ -929,7 +929,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param> 
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
@@ -937,7 +937,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PageSMS</returns>
-        public ApiResponse< PageSMS > ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public ApiResponse< PageSMS > ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
             
     
@@ -1007,7 +1007,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
@@ -1015,7 +1015,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageSMS</returns>
-        public async System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public async System.Threading.Tasks.Task<PageSMS> ListarSMSUsingGETAsync (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
              ApiResponse<PageSMS> localVarResponse = await ListarSMSUsingGETAsyncWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
              return localVarResponse.Data;
@@ -1027,7 +1027,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
         /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
@@ -1035,7 +1035,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMS)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, DateTime? dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageSMS>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
             
     

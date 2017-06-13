@@ -47,9 +47,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataVencimentoReal">Data do vencimento real da fatura.</param>
         /// <param name="DataVencimentoPadrao">Dia do vencimento padr\u00C3\u00A3o da fatura.</param>
         /// <param name="IdContaPortador">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id).</param>
-        /// <param name="NumeroEstabelecimento">NumeroEstabelecimento.</param>
+        /// <param name="NumeroEstabelecimento">Atributo que representa o numero do estabelecimento..</param>
 
-        public LinkTransferenciaBancariaResponse(long? Nsuorigem = null, long? IdAutorizacao = null, long? IdTransferencia = null, string CodigoAutorizacao = null, DateTime? DataAutorizacao = null, string Origem = null, double? Valor = null, long? IdOperacao = null, string Terminal = null, long? IdCartao = null, DateTime? DataCompra = null, double? ValorCompra = null, int? NumeroParcelas = null, double? ValorParcela = null, long? IdEstabelecimento = null, DateTime? DataMovimento = null, double? ValorContrato = null, double? TaxaJuros = null, double? ValorIOF = null, double? ValorTAC = null, long? IdConta = null, double? ValorEntrada = null, DateTime? DataVencimentoReal = null, string DataVencimentoPadrao = null, long? IdContaPortador = null, long? NumeroEstabelecimento = null)
+        public LinkTransferenciaBancariaResponse(long? Nsuorigem = null, long? IdAutorizacao = null, long? IdTransferencia = null, string CodigoAutorizacao = null, string DataAutorizacao = null, string Origem = null, double? Valor = null, long? IdOperacao = null, string Terminal = null, long? IdCartao = null, string DataCompra = null, double? ValorCompra = null, int? NumeroParcelas = null, double? ValorParcela = null, long? IdEstabelecimento = null, string DataMovimento = null, double? ValorContrato = null, double? TaxaJuros = null, double? ValorIOF = null, double? ValorTAC = null, long? IdConta = null, double? ValorEntrada = null, string DataVencimentoReal = null, string DataVencimentoPadrao = null, long? IdContaPortador = null, long? NumeroEstabelecimento = null)
         {
             this.Nsuorigem = Nsuorigem;
             this.IdAutorizacao = IdAutorizacao;
@@ -113,7 +113,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data da autoriza\u00C3\u00A7\u00C3\u00A3o</value>
         [DataMember(Name="dataAutorizacao", EmitDefaultValue=false)]
-        public DateTime? DataAutorizacao { get; set; }
+        public string DataAutorizacao { get; set; }
     
         /// <summary>
         /// Origem
@@ -155,7 +155,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data da transfer\u00C3\u00AAncia</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
-        public DateTime? DataCompra { get; set; }
+        public string DataCompra { get; set; }
     
         /// <summary>
         /// Valor da transfer\u00C3\u00AAncia
@@ -190,7 +190,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data do movimento</value>
         [DataMember(Name="dataMovimento", EmitDefaultValue=false)]
-        public DateTime? DataMovimento { get; set; }
+        public string DataMovimento { get; set; }
     
         /// <summary>
         /// Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque
@@ -239,7 +239,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data do vencimento real da fatura</value>
         [DataMember(Name="dataVencimentoReal", EmitDefaultValue=false)]
-        public DateTime? DataVencimentoReal { get; set; }
+        public string DataVencimentoReal { get; set; }
     
         /// <summary>
         /// Dia do vencimento padr\u00C3\u00A3o da fatura
@@ -256,8 +256,9 @@ namespace Conductor.Pier.Model
         public long? IdContaPortador { get; set; }
     
         /// <summary>
-        /// Gets or Sets NumeroEstabelecimento
+        /// Atributo que representa o numero do estabelecimento.
         /// </summary>
+        /// <value>Atributo que representa o numero do estabelecimento.</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     

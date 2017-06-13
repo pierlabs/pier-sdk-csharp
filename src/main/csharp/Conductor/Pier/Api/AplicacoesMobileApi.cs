@@ -49,12 +49,11 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param>
         /// <returns>PageAplicacoesMobile</returns>
-        PageAplicacoesMobile ListarUsingGET (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null);
+        PageAplicacoesMobile ListarUsingGET (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
   
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -64,12 +63,11 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param>
         /// <returns>ApiResponse of PageAplicacoesMobile</returns>
-        ApiResponse<PageAplicacoesMobile> ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null);
+        ApiResponse<PageAplicacoesMobile> ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -129,12 +127,11 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param>
         /// <returns>Task of PageAplicacoesMobile</returns>
-        System.Threading.Tasks.Task<PageAplicacoesMobile> ListarUsingGETAsync (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null);
+        System.Threading.Tasks.Task<PageAplicacoesMobile> ListarUsingGETAsync (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
 
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -144,12 +141,11 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacoesMobile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAplicacoesMobile>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAplicacoesMobile>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -452,14 +448,13 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param> 
         /// <returns>PageAplicacoesMobile</returns>
-        public PageAplicacoesMobile ListarUsingGET (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null)
+        public PageAplicacoesMobile ListarUsingGET (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacoesMobile> localVarResponse = ListarUsingGETWithHttpInfo(page, limit, id, idPlataformaMobile, idEmissor);
+             ApiResponse<PageAplicacoesMobile> localVarResponse = ListarUsingGETWithHttpInfo(page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
         }
 
@@ -468,12 +463,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param> 
         /// <returns>ApiResponse of PageAplicacoesMobile</returns>
-        public ApiResponse< PageAplicacoesMobile > ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null)
+        public ApiResponse< PageAplicacoesMobile > ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -508,7 +502,6 @@ namespace Conductor.Pier.Api
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (idPlataformaMobile != null) localVarQueryParams.Add("idPlataformaMobile", Configuration.ApiClient.ParameterToString(idPlataformaMobile)); // query parameter
-            if (idEmissor != null) localVarQueryParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // query parameter
             
             
             
@@ -540,14 +533,13 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param>
         /// <returns>Task of PageAplicacoesMobile</returns>
-        public async System.Threading.Tasks.Task<PageAplicacoesMobile> ListarUsingGETAsync (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null)
+        public async System.Threading.Tasks.Task<PageAplicacoesMobile> ListarUsingGETAsync (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacoesMobile> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(page, limit, id, idPlataformaMobile, idEmissor);
+             ApiResponse<PageAplicacoesMobile> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
 
         }
@@ -557,12 +549,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
-        /// <param name="idEmissor">Identificador do Emissor (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacoesMobile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacoesMobile>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null, long? idEmissor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacoesMobile>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -597,7 +588,6 @@ namespace Conductor.Pier.Api
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (idPlataformaMobile != null) localVarQueryParams.Add("idPlataformaMobile", Configuration.ApiClient.ParameterToString(idPlataformaMobile)); // query parameter
-            if (idEmissor != null) localVarQueryParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // query parameter
             
             
             

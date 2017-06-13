@@ -28,7 +28,7 @@ namespace Conductor.Pier.Model
         /// <param name="MensagemHistorico">Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado..</param>
         /// <param name="DataHistorico">Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido..</param>
 
-        public HistoricoImpressaoCartao(long? Id = null, long? IdCartao = null, long? IdStatusImpressaoCartao = null, string MensagemHistorico = null, DateTime? DataHistorico = null)
+        public HistoricoImpressaoCartao(long? Id = null, long? IdCartao = null, long? IdStatusImpressaoCartao = null, string MensagemHistorico = null, string DataHistorico = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.</value>
         [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
-        public DateTime? DataHistorico { get; set; }
+        public string DataHistorico { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

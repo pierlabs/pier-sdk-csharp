@@ -45,7 +45,6 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FAQ" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id)..</param>
-        /// <param name="IdEmissor">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id)..</param>
         /// <param name="Pergunta">Conte\u00C3\u00BAdo da pergunta..</param>
         /// <param name="Resposta">Conte\u00C3\u00BAdo da resposta..</param>
         /// <param name="Relevancia">N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta..</param>
@@ -53,10 +52,9 @@ namespace Conductor.Pier.Model
         /// <param name="Categoria">Categoria de assunto do qual a FAQ se trata..</param>
         /// <param name="Status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ..</param>
 
-        public FAQ(long? Id = null, long? IdEmissor = null, string Pergunta = null, string Resposta = null, int? Relevancia = null, string Plataforma = null, string Categoria = null, StatusEnum? Status = null)
+        public FAQ(long? Id = null, string Pergunta = null, string Resposta = null, int? Relevancia = null, string Plataforma = null, string Categoria = null, StatusEnum? Status = null)
         {
             this.Id = Id;
-            this.IdEmissor = IdEmissor;
             this.Pergunta = Pergunta;
             this.Resposta = Resposta;
             this.Relevancia = Relevancia;
@@ -73,13 +71,6 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).</value>
-        [DataMember(Name="idEmissor", EmitDefaultValue=false)]
-        public long? IdEmissor { get; set; }
     
         /// <summary>
         /// Conte\u00C3\u00BAdo da pergunta.
@@ -125,7 +116,6 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class FAQ {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  Pergunta: ").Append(Pergunta).Append("\n");
             sb.Append("  Resposta: ").Append(Resposta).Append("\n");
             sb.Append("  Relevancia: ").Append(Relevancia).Append("\n");
@@ -175,11 +165,6 @@ namespace Conductor.Pier.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.IdEmissor == other.IdEmissor ||
-                    this.IdEmissor != null &&
-                    this.IdEmissor.Equals(other.IdEmissor)
-                ) && 
-                (
                     this.Pergunta == other.Pergunta ||
                     this.Pergunta != null &&
                     this.Pergunta.Equals(other.Pergunta)
@@ -225,9 +210,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.IdEmissor != null)
-                    hash = hash * 59 + this.IdEmissor.GetHashCode();
                 
                 if (this.Pergunta != null)
                     hash = hash * 59 + this.Pergunta.GetHashCode();

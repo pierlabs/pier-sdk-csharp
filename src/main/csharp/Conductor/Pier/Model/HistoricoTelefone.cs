@@ -28,7 +28,7 @@ namespace Conductor.Pier.Model
         /// <param name="TipoTelefone">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone..</param>
         /// <param name="DataModificacao">Apresenta a data que o telefone fora alterado..</param>
 
-        public HistoricoTelefone(long? Id = null, string Telefone = null, long? IdTipoTelefone = null, string TipoTelefone = null, DateTime? DataModificacao = null)
+        public HistoricoTelefone(long? Id = null, string Telefone = null, long? IdTipoTelefone = null, string TipoTelefone = null, string DataModificacao = null)
         {
             this.Id = Id;
             this.Telefone = Telefone;
@@ -72,7 +72,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data que o telefone fora alterado.</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
-        public DateTime? DataModificacao { get; set; }
+        public string DataModificacao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

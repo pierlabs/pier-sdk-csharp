@@ -30,7 +30,7 @@ namespace Conductor.Pier.Model
         /// <param name="FlagAtivo">Atributo que indica se a oportunidade est\u00C3\u00A1 ativa (required).</param>
         /// <param name="Detalhes">Lista de detalhes (required).</param>
 
-        public OportunidadeUpdate(long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, string NumeroReceitaFederal = null, DateTime? DataInicioVigencia = null, DateTime? DataFimVigencia = null, bool? FlagAtivo = null, List<DetalheOportunidadeUpdate> Detalhes = null)
+        public OportunidadeUpdate(long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, string NumeroReceitaFederal = null, string DataInicioVigencia = null, string DataFimVigencia = null, bool? FlagAtivo = null, List<DetalheOportunidadeUpdate> Detalhes = null)
         {
             // to ensure "IdTipoOportunidade" is required (not null)
             if (IdTipoOportunidade == null)
@@ -125,14 +125,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade</value>
         [DataMember(Name="dataInicioVigencia", EmitDefaultValue=false)]
-        public DateTime? DataInicioVigencia { get; set; }
+        public string DataInicioVigencia { get; set; }
     
         /// <summary>
         /// Fim da vig\u00C3\u00AAncia da oportunidade
         /// </summary>
         /// <value>Fim da vig\u00C3\u00AAncia da oportunidade</value>
         [DataMember(Name="dataFimVigencia", EmitDefaultValue=false)]
-        public DateTime? DataFimVigencia { get; set; }
+        public string DataFimVigencia { get; set; }
     
         /// <summary>
         /// Atributo que indica se a oportunidade est\u00C3\u00A1 ativa

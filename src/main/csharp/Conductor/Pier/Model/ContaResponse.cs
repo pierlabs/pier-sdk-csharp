@@ -34,7 +34,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
         /// <param name="ValorRenda">Apresenta o valor da renda comprovada.</param>
 
-        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, double? ValorRenda = null)
+        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -105,21 +105,21 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
-        public DateTime? DataStatusConta { get; set; }
+        public string DataStatusConta { get; set; }
     
         /// <summary>
         /// Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
         /// </summary>
         /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
-        public DateTime? DataCadastro { get; set; }
+        public string DataCadastro { get; set; }
     
         /// <summary>
         /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
         /// </summary>
         /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
-        public DateTime? DataUltimaAlteracaoVencimento { get; set; }
+        public string DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
         /// Apresenta o valor da renda comprovada

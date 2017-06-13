@@ -22,6 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoImpressao" /> class.
         /// Initializes a new instance of the <see cref="CartaoImpressao" />class.
         /// </summary>
+        /// <param name="FlagVirtual">FlagVirtual.</param>
         /// <param name="IdConta">Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence..</param>
         /// <param name="IdPessoa">Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado..</param>
         /// <param name="IdCartao">Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado..</param>
@@ -45,8 +46,9 @@ namespace Conductor.Pier.Model
         /// <param name="TrilhaCVV1">Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor..</param>
         /// <param name="TrilhaCVV2">Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor..</param>
 
-        public CartaoImpressao(long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string NumeroCartao = null, string NomePlastico = null, string Cvv2 = null, DateTime? DataGeracao = null, DateTime? DataValidade = null, string NomeOrigemComercial = null, string NomeEmpresa = null, int? NumeroAgencia = null, string NumeroContaCorente = null, string NomeEmpresaBeneficio = null, string Cpf = null, string TipoPortador = null, string NomeEmpregador = null, string Trilha1 = null, string Trilha2 = null, string TrilhaCVV1 = null, string TrilhaCVV2 = null)
+        public CartaoImpressao(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string NumeroCartao = null, string NomePlastico = null, string Cvv2 = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string NomeEmpresa = null, int? NumeroAgencia = null, string NumeroContaCorente = null, string NomeEmpresaBeneficio = null, string Cpf = null, string TipoPortador = null, string NomeEmpregador = null, string Trilha1 = null, string Trilha2 = null, string TrilhaCVV1 = null, string TrilhaCVV2 = null)
         {
+            this.FlagVirtual = FlagVirtual;
             this.IdConta = IdConta;
             this.IdPessoa = IdPessoa;
             this.IdCartao = IdCartao;
@@ -72,6 +74,12 @@ namespace Conductor.Pier.Model
             
         }
         
+    
+        /// <summary>
+        /// Gets or Sets FlagVirtual
+        /// </summary>
+        [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
+        public int? FlagVirtual { get; set; }
     
         /// <summary>
         /// Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
@@ -134,14 +142,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.</value>
         [DataMember(Name="dataGeracao", EmitDefaultValue=false)]
-        public DateTime? DataGeracao { get; set; }
+        public string DataGeracao { get; set; }
     
         /// <summary>
         /// Apresenta a data de Validade do Cart\u00C3\u00A3o.
         /// </summary>
         /// <value>Apresenta a data de Validade do Cart\u00C3\u00A3o.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
-        public DateTime? DataValidade { get; set; }
+        public string DataValidade { get; set; }
     
         /// <summary>
         /// Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
@@ -235,6 +243,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CartaoImpressao {\n");
+            sb.Append("  FlagVirtual: ").Append(FlagVirtual).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
@@ -294,6 +303,11 @@ namespace Conductor.Pier.Model
                 return false;
 
             return 
+                (
+                    this.FlagVirtual == other.FlagVirtual ||
+                    this.FlagVirtual != null &&
+                    this.FlagVirtual.Equals(other.FlagVirtual)
+                ) && 
                 (
                     this.IdConta == other.IdConta ||
                     this.IdConta != null &&
@@ -417,6 +431,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.FlagVirtual != null)
+                    hash = hash * 59 + this.FlagVirtual.GetHashCode();
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();

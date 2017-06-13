@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataProcessamento">Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada..</param>
         /// <param name="FlagProcessamento">Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado..</param>
 
-        public AtendimentoCliente(long? IdAtendimento = null, long? IdConta = null, long? IdTipoAtendimento = null, string DescricaoTipoAtendimento = null, string ConteudoAtendimento = null, string DetalhesAtendimento = null, string NomeAtendente = null, string NomeSistema = null, DateTime? DataHoraInicioAtendimento = null, DateTime? DataHoraFimAtendimento = null, DateTime? DataAtendimento = null, DateTime? DataAgendamento = null, DateTime? DataProcessamento = null, int? FlagProcessamento = null)
+        public AtendimentoCliente(long? IdAtendimento = null, long? IdConta = null, long? IdTipoAtendimento = null, string DescricaoTipoAtendimento = null, string ConteudoAtendimento = null, string DetalhesAtendimento = null, string NomeAtendente = null, string NomeSistema = null, string DataHoraInicioAtendimento = null, string DataHoraFimAtendimento = null, string DataAtendimento = null, string DataAgendamento = null, string DataProcessamento = null, int? FlagProcessamento = null)
         {
             this.IdAtendimento = IdAtendimento;
             this.IdConta = IdConta;
@@ -118,35 +118,35 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.</value>
         [DataMember(Name="dataHoraInicioAtendimento", EmitDefaultValue=false)]
-        public DateTime? DataHoraInicioAtendimento { get; set; }
+        public string DataHoraInicioAtendimento { get; set; }
     
         /// <summary>
         /// Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
         /// </summary>
         /// <value>Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.</value>
         [DataMember(Name="dataHoraFimAtendimento", EmitDefaultValue=false)]
-        public DateTime? DataHoraFimAtendimento { get; set; }
+        public string DataHoraFimAtendimento { get; set; }
     
         /// <summary>
         /// Apresenta a data e hora em que o Atendimento foi realizado.
         /// </summary>
         /// <value>Apresenta a data e hora em que o Atendimento foi realizado.</value>
         [DataMember(Name="dataAtendimento", EmitDefaultValue=false)]
-        public DateTime? DataAtendimento { get; set; }
+        public string DataAtendimento { get; set; }
     
         /// <summary>
         /// Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
         /// </summary>
         /// <value>Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
-        public DateTime? DataAgendamento { get; set; }
+        public string DataAgendamento { get; set; }
     
         /// <summary>
         /// Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
         /// </summary>
         /// <value>Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
-        public DateTime? DataProcessamento { get; set; }
+        public string DataProcessamento { get; set; }
     
         /// <summary>
         /// Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.

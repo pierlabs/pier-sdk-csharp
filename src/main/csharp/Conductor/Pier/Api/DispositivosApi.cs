@@ -69,14 +69,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="token">Token do Dispositivo (optional)</param>
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>PageDispositivos</returns>
-        PageDispositivos ListarUsingGET5 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
+        PageDispositivos ListarUsingGET7 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
   
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -86,14 +86,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="token">Token do Dispositivo (optional)</param>
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>ApiResponse of PageDispositivos</returns>
-        ApiResponse<PageDispositivos> ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
+        ApiResponse<PageDispositivos> ListarUsingGET7WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// Cadastra Dispositivo
@@ -173,14 +173,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="token">Token do Dispositivo (optional)</param>
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of PageDispositivos</returns>
-        System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET5Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
+        System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET7Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
 
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -190,14 +190,14 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="token">Token do Dispositivo (optional)</param>
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of ApiResponse (PageDispositivos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET7AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// Cadastra Dispositivo
@@ -634,16 +634,16 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="token">Token do Dispositivo (optional)</param> 
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param> 
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
         /// <returns>PageDispositivos</returns>
-        public PageDispositivos ListarUsingGET5 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        public PageDispositivos ListarUsingGET7 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivos> localVarResponse = ListarUsingGET5WithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivos> localVarResponse = ListarUsingGET7WithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
         }
 
@@ -652,14 +652,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="token">Token do Dispositivo (optional)</param> 
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param> 
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
         /// <returns>ApiResponse of PageDispositivos</returns>
-        public ApiResponse< PageDispositivos > ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        public ApiResponse< PageDispositivos > ListarUsingGET7WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -712,9 +712,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDispositivos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -728,16 +728,16 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="token">Token do Dispositivo (optional)</param>
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of PageDispositivos</returns>
-        public async System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET5Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        public async System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET7Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivos> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivos> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
 
         }
@@ -747,14 +747,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="token">Token do Dispositivo (optional)</param>
         /// <param name="idUsuario">Identificador do Usu\u00C3\u00A1rio (optional)</param>
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of ApiResponse (PageDispositivos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, DateTime? dataCriacao = null, DateTime? dataDesativacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET7AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -807,9 +807,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDispositivos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

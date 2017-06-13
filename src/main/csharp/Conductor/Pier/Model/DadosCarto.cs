@@ -22,30 +22,44 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosCarto" /> class.
         /// Initializes a new instance of the <see cref="DadosCarto" />class.
         /// </summary>
+        /// <param name="FlagVirtual">FlagVirtual.</param>
         /// <param name="NumeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
         /// <param name="DataValidade">Data de validade..</param>
         /// <param name="Cvv2">CVV2 do cart\u00C3\u00A3o..</param>
         /// <param name="NomePlastico">Nome do portador..</param>
         /// <param name="IdConta">Identificador da conta do portador..</param>
         /// <param name="IdCartao">Identificador da cart\u00C3\u00A3o do portador..</param>
-        /// <param name="Status">Status da conta do portador..</param>
-        /// <param name="StatusDescricao">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador..</param>
-        /// <param name="FlagProvisorio">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio..</param>
+        /// <param name="NumeroAgencia">Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel..</param>
+        /// <param name="NumeroContaCorente">Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel..</param>
+        /// <param name="IdStatusConta">Status da conta do portador..</param>
+        /// <param name="StatusConta">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador..</param>
+        /// <param name="IdStatusCartao">Status do cart\u00C3\u00A3o..</param>
+        /// <param name="StatusCartao">Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o..</param>
 
-        public DadosCarto(string NumeroCartao = null, DateTime? DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, long? Status = null, string StatusDescricao = null, int? FlagProvisorio = null)
+        public DadosCarto(int? FlagVirtual = null, string NumeroCartao = null, string DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, int? NumeroAgencia = null, string NumeroContaCorente = null, long? IdStatusConta = null, string StatusConta = null, long? IdStatusCartao = null, string StatusCartao = null)
         {
+            this.FlagVirtual = FlagVirtual;
             this.NumeroCartao = NumeroCartao;
             this.DataValidade = DataValidade;
             this.Cvv2 = Cvv2;
             this.NomePlastico = NomePlastico;
             this.IdConta = IdConta;
             this.IdCartao = IdCartao;
-            this.Status = Status;
-            this.StatusDescricao = StatusDescricao;
-            this.FlagProvisorio = FlagProvisorio;
+            this.NumeroAgencia = NumeroAgencia;
+            this.NumeroContaCorente = NumeroContaCorente;
+            this.IdStatusConta = IdStatusConta;
+            this.StatusConta = StatusConta;
+            this.IdStatusCartao = IdStatusCartao;
+            this.StatusCartao = StatusCartao;
             
         }
         
+    
+        /// <summary>
+        /// Gets or Sets FlagVirtual
+        /// </summary>
+        [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
+        public int? FlagVirtual { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero do cart\u00C3\u00A3o.
@@ -59,7 +73,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de validade.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
-        public DateTime? DataValidade { get; set; }
+        public string DataValidade { get; set; }
     
         /// <summary>
         /// CVV2 do cart\u00C3\u00A3o.
@@ -90,25 +104,46 @@ namespace Conductor.Pier.Model
         public long? IdCartao { get; set; }
     
         /// <summary>
+        /// Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+        /// </summary>
+        /// <value>Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.</value>
+        [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
+        public int? NumeroAgencia { get; set; }
+    
+        /// <summary>
+        /// Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+        /// </summary>
+        /// <value>Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.</value>
+        [DataMember(Name="numeroContaCorente", EmitDefaultValue=false)]
+        public string NumeroContaCorente { get; set; }
+    
+        /// <summary>
         /// Status da conta do portador.
         /// </summary>
         /// <value>Status da conta do portador.</value>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public long? Status { get; set; }
+        [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
+        public long? IdStatusConta { get; set; }
     
         /// <summary>
         /// Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
         /// </summary>
         /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.</value>
-        [DataMember(Name="statusDescricao", EmitDefaultValue=false)]
-        public string StatusDescricao { get; set; }
+        [DataMember(Name="statusConta", EmitDefaultValue=false)]
+        public string StatusConta { get; set; }
     
         /// <summary>
-        /// Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
+        /// Status do cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.</value>
-        [DataMember(Name="flagProvisorio", EmitDefaultValue=false)]
-        public int? FlagProvisorio { get; set; }
+        /// <value>Status do cart\u00C3\u00A3o.</value>
+        [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
+        public long? IdStatusCartao { get; set; }
+    
+        /// <summary>
+        /// Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+        /// </summary>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.</value>
+        [DataMember(Name="statusCartao", EmitDefaultValue=false)]
+        public string StatusCartao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -118,15 +153,19 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DadosCarto {\n");
+            sb.Append("  FlagVirtual: ").Append(FlagVirtual).Append("\n");
             sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
             sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
             sb.Append("  Cvv2: ").Append(Cvv2).Append("\n");
             sb.Append("  NomePlastico: ").Append(NomePlastico).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  StatusDescricao: ").Append(StatusDescricao).Append("\n");
-            sb.Append("  FlagProvisorio: ").Append(FlagProvisorio).Append("\n");
+            sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
+            sb.Append("  NumeroContaCorente: ").Append(NumeroContaCorente).Append("\n");
+            sb.Append("  IdStatusConta: ").Append(IdStatusConta).Append("\n");
+            sb.Append("  StatusConta: ").Append(StatusConta).Append("\n");
+            sb.Append("  IdStatusCartao: ").Append(IdStatusCartao).Append("\n");
+            sb.Append("  StatusCartao: ").Append(StatusCartao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -165,6 +204,11 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.FlagVirtual == other.FlagVirtual ||
+                    this.FlagVirtual != null &&
+                    this.FlagVirtual.Equals(other.FlagVirtual)
+                ) && 
+                (
                     this.NumeroCartao == other.NumeroCartao ||
                     this.NumeroCartao != null &&
                     this.NumeroCartao.Equals(other.NumeroCartao)
@@ -195,19 +239,34 @@ namespace Conductor.Pier.Model
                     this.IdCartao.Equals(other.IdCartao)
                 ) && 
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
+                    this.NumeroAgencia == other.NumeroAgencia ||
+                    this.NumeroAgencia != null &&
+                    this.NumeroAgencia.Equals(other.NumeroAgencia)
                 ) && 
                 (
-                    this.StatusDescricao == other.StatusDescricao ||
-                    this.StatusDescricao != null &&
-                    this.StatusDescricao.Equals(other.StatusDescricao)
+                    this.NumeroContaCorente == other.NumeroContaCorente ||
+                    this.NumeroContaCorente != null &&
+                    this.NumeroContaCorente.Equals(other.NumeroContaCorente)
                 ) && 
                 (
-                    this.FlagProvisorio == other.FlagProvisorio ||
-                    this.FlagProvisorio != null &&
-                    this.FlagProvisorio.Equals(other.FlagProvisorio)
+                    this.IdStatusConta == other.IdStatusConta ||
+                    this.IdStatusConta != null &&
+                    this.IdStatusConta.Equals(other.IdStatusConta)
+                ) && 
+                (
+                    this.StatusConta == other.StatusConta ||
+                    this.StatusConta != null &&
+                    this.StatusConta.Equals(other.StatusConta)
+                ) && 
+                (
+                    this.IdStatusCartao == other.IdStatusCartao ||
+                    this.IdStatusCartao != null &&
+                    this.IdStatusCartao.Equals(other.IdStatusCartao)
+                ) && 
+                (
+                    this.StatusCartao == other.StatusCartao ||
+                    this.StatusCartao != null &&
+                    this.StatusCartao.Equals(other.StatusCartao)
                 );
         }
 
@@ -222,6 +281,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.FlagVirtual != null)
+                    hash = hash * 59 + this.FlagVirtual.GetHashCode();
                 
                 if (this.NumeroCartao != null)
                     hash = hash * 59 + this.NumeroCartao.GetHashCode();
@@ -241,14 +303,23 @@ namespace Conductor.Pier.Model
                 if (this.IdCartao != null)
                     hash = hash * 59 + this.IdCartao.GetHashCode();
                 
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
+                if (this.NumeroAgencia != null)
+                    hash = hash * 59 + this.NumeroAgencia.GetHashCode();
                 
-                if (this.StatusDescricao != null)
-                    hash = hash * 59 + this.StatusDescricao.GetHashCode();
+                if (this.NumeroContaCorente != null)
+                    hash = hash * 59 + this.NumeroContaCorente.GetHashCode();
                 
-                if (this.FlagProvisorio != null)
-                    hash = hash * 59 + this.FlagProvisorio.GetHashCode();
+                if (this.IdStatusConta != null)
+                    hash = hash * 59 + this.IdStatusConta.GetHashCode();
+                
+                if (this.StatusConta != null)
+                    hash = hash * 59 + this.StatusConta.GetHashCode();
+                
+                if (this.IdStatusCartao != null)
+                    hash = hash * 59 + this.IdStatusCartao.GetHashCode();
+                
+                if (this.StatusCartao != null)
+                    hash = hash * 59 + this.StatusCartao.GetHashCode();
                 
                 return hash;
             }

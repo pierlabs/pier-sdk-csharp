@@ -18,7 +18,29 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
+        /// <returns>TransacaoOnUsResponse</returns>
+        TransacaoOnUsResponse AutorizarUsingPOST (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+  
+        /// <summary>
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        ApiResponse<TransacaoOnUsResponse> AutorizarUsingPOSTWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
@@ -29,7 +51,7 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse CancelarUsingPOST (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
   
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
@@ -40,54 +62,30 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> CancelarUsingPOSTWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
-        /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse DesfazerUsingPOST (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        /// <returns>List&lt;Object&gt;</returns>
+        List<Object> ListarCodigosProcessamentoAutorizacaoUsingGET ();
   
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> DesfazerUsingPOSTWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        ApiResponse<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
+        /// Simula planos de pagamento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param>
-        /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse DesfazerUsingPOST1 (DesfazimentoTransacaoOnURequest desfazimentoRequest);
-  
-        /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param>
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> DesfazerUsingPOST1WithHttpInfo (DesfazimentoTransacaoOnURequest desfazimentoRequest);
-        
-        /// <summary>
-        /// Simula Compra Parcelada
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -95,10 +93,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse SimularUsingPOST (TransacaoOnUsRequest transacoesRequest);
   
         /// <summary>
-        /// Simula Compra Parcelada
+        /// Simula planos de pagamento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -110,7 +108,29 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarUsingPOSTAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+
+        /// <summary>
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOSTAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
@@ -121,7 +141,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOSTAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
 
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
@@ -132,54 +152,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOSTAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> DesfazerUsingPOSTAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        System.Threading.Tasks.Task<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETAsync ();
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> DesfazerUsingPOSTAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
+        /// Simula planos de pagamento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> DesfazerUsingPOST1Async (DesfazimentoTransacaoOnURequest desfazimentoRequest);
-
-        /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> DesfazerUsingPOST1AsyncWithHttpInfo (DesfazimentoTransacaoOnURequest desfazimentoRequest);
-        
-        /// <summary>
-        /// Simula Compra Parcelada
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -187,10 +183,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularUsingPOSTAsync (TransacaoOnUsRequest transacoesRequest);
 
         /// <summary>
-        /// Simula Compra Parcelada
+        /// Simula planos de pagamento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -290,7 +286,177 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
+        /// <returns>TransacaoOnUsResponse</returns>
+        public TransacaoOnUsResponse AutorizarUsingPOST (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = AutorizarUsingPOSTWithHttpInfo(autorizacaoOnUsRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        public ApiResponse< TransacaoOnUsResponse > AutorizarUsingPOSTWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        {
+            
+            // verify the required parameter 'autorizacaoOnUsRequest' is set
+            if (autorizacaoOnUsRequest == null)
+                throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling AutorizacoesApi->AutorizarUsingPOST");
+            
+    
+            var localVarPath = "/api/autorizar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (autorizacaoOnUsRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(autorizacaoOnUsRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = autorizacaoOnUsRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarUsingPOSTAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await AutorizarUsingPOSTAsyncWithHttpInfo(autorizacaoOnUsRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOSTAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        {
+            // verify the required parameter 'autorizacaoOnUsRequest' is set
+            if (autorizacaoOnUsRequest == null) throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling AutorizarUsingPOST");
+            
+    
+            var localVarPath = "/api/autorizar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (autorizacaoOnUsRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(autorizacaoOnUsRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = autorizacaoOnUsRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
@@ -302,7 +468,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
@@ -376,7 +542,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -389,7 +555,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -460,32 +626,26 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
-        /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse DesfazerUsingPOST (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        /// <returns>List&lt;Object&gt;</returns>
+        public List<Object> ListarCodigosProcessamentoAutorizacaoUsingGET ()
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = DesfazerUsingPOSTWithHttpInfo(autorizacaoOnUsRequest);
+             ApiResponse<List<Object>> localVarResponse = ListarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > DesfazerUsingPOSTWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        public ApiResponse< List<Object> > ListarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo ()
         {
             
-            // verify the required parameter 'autorizacaoOnUsRequest' is set
-            if (autorizacaoOnUsRequest == null)
-                throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling AutorizacoesApi->DesfazerUsingPOST");
-            
     
-            var localVarPath = "/api/autorizar-transacao";
+            var localVarPath = "/api/consultar-codigos-processamento-autorizacao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -515,62 +675,51 @@ namespace Conductor.Pier.Api
             
             
             
-            if (autorizacaoOnUsRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(autorizacaoOnUsRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = autorizacaoOnUsRequest; // byte array
-            }
+            
 
             
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+            return new ApiResponse<List<Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+                (List<Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)));
             
         }
 
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> DesfazerUsingPOSTAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETAsync ()
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await DesfazerUsingPOSTAsyncWithHttpInfo(autorizacaoOnUsRequest);
+             ApiResponse<List<Object>> localVarResponse = await ListarCodigosProcessamentoAutorizacaoUsingGETAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> DesfazerUsingPOSTAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoUsingGETAsyncWithHttpInfo ()
         {
-            // verify the required parameter 'autorizacaoOnUsRequest' is set
-            if (autorizacaoOnUsRequest == null) throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling DesfazerUsingPOST");
             
     
-            var localVarPath = "/api/autorizar-transacao";
+            var localVarPath = "/api/consultar-codigos-processamento-autorizacao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -600,207 +749,30 @@ namespace Conductor.Pier.Api
             
             
             
-            if (autorizacaoOnUsRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(autorizacaoOnUsRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = autorizacaoOnUsRequest; // byte array
-            }
+            
 
             
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+            return new ApiResponse<List<Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+                (List<Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)));
             
         }
         
         /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param> 
-        /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse DesfazerUsingPOST1 (DesfazimentoTransacaoOnURequest desfazimentoRequest)
-        {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = DesfazerUsingPOST1WithHttpInfo(desfazimentoRequest);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param> 
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > DesfazerUsingPOST1WithHttpInfo (DesfazimentoTransacaoOnURequest desfazimentoRequest)
-        {
-            
-            // verify the required parameter 'desfazimentoRequest' is set
-            if (desfazimentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'desfazimentoRequest' when calling AutorizacoesApi->DesfazerUsingPOST1");
-            
-    
-            var localVarPath = "/api/desfazer-transacao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (desfazimentoRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(desfazimentoRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = desfazimentoRequest; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> DesfazerUsingPOST1Async (DesfazimentoTransacaoOnURequest desfazimentoRequest)
-        {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await DesfazerUsingPOST1AsyncWithHttpInfo(desfazimentoRequest);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="desfazimentoRequest">desfazimentoRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> DesfazerUsingPOST1AsyncWithHttpInfo (DesfazimentoTransacaoOnURequest desfazimentoRequest)
-        {
-            // verify the required parameter 'desfazimentoRequest' is set
-            if (desfazimentoRequest == null) throw new ApiException(400, "Missing required parameter 'desfazimentoRequest' when calling DesfazerUsingPOST1");
-            
-    
-            var localVarPath = "/api/desfazer-transacao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (desfazimentoRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(desfazimentoRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = desfazimentoRequest; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesfazerUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Simula Compra Parcelada Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
@@ -812,7 +784,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula Compra Parcelada Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
@@ -886,7 +858,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simula Compra Parcelada Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -899,7 +871,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula Compra Parcelada Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>

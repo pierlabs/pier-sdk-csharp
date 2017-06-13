@@ -33,7 +33,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
         /// <param name="NomeEstabelecimento">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
 
-        public RiscoFraudeResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdTransacao = null, DateTime? DataTransacao = null, double? ValorTransacao = null, string NomeEstabelecimento = null)
+        public RiscoFraudeResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdTransacao = null, string DataTransacao = null, double? ValorTransacao = null, string NomeEstabelecimento = null)
         {
             this.Id = Id;
             this.IdTipoResolucao = IdTipoResolucao;
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada</value>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
-        public DateTime? DataTransacao { get; set; }
+        public string DataTransacao { get; set; }
     
         /// <summary>
         /// Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude

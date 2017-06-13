@@ -24,7 +24,6 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">Apresenta o identificador da aplicacao..</param>
         /// <param name="IdPlataformaMobile">Apresenta o identificador da plataforma..</param>
-        /// <param name="IdEmissor">Apresenta o identificador do emissor..</param>
         /// <param name="Token">Apresenta o token da aplicacao..</param>
         /// <param name="Cor">Apresenta a cor da mensagem da aplicacao..</param>
         /// <param name="Som">Apresenta o som da mensagem da aplicacao.</param>
@@ -32,11 +31,10 @@ namespace Conductor.Pier.Model
         /// <param name="CertificadoBase64">Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="Senha">Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public AplicacaoMobile(long? Id = null, long? IdPlataformaMobile = null, long? IdEmissor = null, string Token = null, string Cor = null, string Som = null, string Icone = null, string CertificadoBase64 = null, string Senha = null)
+        public AplicacaoMobile(long? Id = null, long? IdPlataformaMobile = null, string Token = null, string Cor = null, string Som = null, string Icone = null, string CertificadoBase64 = null, string Senha = null)
         {
             this.Id = Id;
             this.IdPlataformaMobile = IdPlataformaMobile;
-            this.IdEmissor = IdEmissor;
             this.Token = Token;
             this.Cor = Cor;
             this.Som = Som;
@@ -60,13 +58,6 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta o identificador da plataforma.</value>
         [DataMember(Name="idPlataformaMobile", EmitDefaultValue=false)]
         public long? IdPlataformaMobile { get; set; }
-    
-        /// <summary>
-        /// Apresenta o identificador do emissor.
-        /// </summary>
-        /// <value>Apresenta o identificador do emissor.</value>
-        [DataMember(Name="idEmissor", EmitDefaultValue=false)]
-        public long? IdEmissor { get; set; }
     
         /// <summary>
         /// Apresenta o token da aplicacao.
@@ -120,7 +111,6 @@ namespace Conductor.Pier.Model
             sb.Append("class AplicacaoMobile {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdPlataformaMobile: ").Append(IdPlataformaMobile).Append("\n");
-            sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("  Cor: ").Append(Cor).Append("\n");
             sb.Append("  Som: ").Append(Som).Append("\n");
@@ -175,11 +165,6 @@ namespace Conductor.Pier.Model
                     this.IdPlataformaMobile.Equals(other.IdPlataformaMobile)
                 ) && 
                 (
-                    this.IdEmissor == other.IdEmissor ||
-                    this.IdEmissor != null &&
-                    this.IdEmissor.Equals(other.IdEmissor)
-                ) && 
-                (
                     this.Token == other.Token ||
                     this.Token != null &&
                     this.Token.Equals(other.Token)
@@ -228,9 +213,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdPlataformaMobile != null)
                     hash = hash * 59 + this.IdPlataformaMobile.GetHashCode();
-                
-                if (this.IdEmissor != null)
-                    hash = hash * 59 + this.IdEmissor.GetHashCode();
                 
                 if (this.Token != null)
                     hash = hash * 59 + this.Token.GetHashCode();

@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="Estabelecimento" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)..</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos..</param>
+        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor..</param>
         /// <param name="NumeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal..</param>
         /// <param name="Nome">Nome do Estabelecimento..</param>
         /// <param name="Descricao">Raz\u00C3\u00A3o Social do Estabelecimento..</param>
@@ -44,7 +44,7 @@ namespace Conductor.Pier.Model
         /// <param name="FlagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o..</param>
         /// <param name="Inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo..</param>
 
-        public Estabelecimento(long? Id = null, string NumeroEstabelecimento = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Complemento = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, DateTime? DataCadastramento = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null)
+        public Estabelecimento(long? Id = null, string NumeroEstabelecimento = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Complemento = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataCadastramento = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null)
         {
             this.Id = Id;
             this.NumeroEstabelecimento = NumeroEstabelecimento;
@@ -79,9 +79,9 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.</value>
+        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public string NumeroEstabelecimento { get; set; }
     
@@ -174,7 +174,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de Cadastro do Estabelecimento.</value>
         [DataMember(Name="dataCadastramento", EmitDefaultValue=false)]
-        public DateTime? DataCadastramento { get; set; }
+        public string DataCadastramento { get; set; }
     
         /// <summary>
         /// Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.

@@ -39,7 +39,7 @@ namespace Conductor.Pier.Model
         /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros.</param>
         /// <param name="Socios">Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista.</param>
 
-        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, DateTime? DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, List<SocioAprovadoResponse> Socios = null)
+        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, List<SocioAprovadoResponse> Socios = null)
         {
             this.Id = Id;
             this.RazaoSocial = RazaoSocial;
@@ -101,7 +101,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.</value>
         [DataMember(Name="dataAberturaEmpresa", EmitDefaultValue=false)]
-        public DateTime? DataAberturaEmpresa { get; set; }
+        public string DataAberturaEmpresa { get; set; }
     
         /// <summary>
         /// Id da origem comercial

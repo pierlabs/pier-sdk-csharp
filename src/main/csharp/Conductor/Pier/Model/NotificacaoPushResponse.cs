@@ -118,7 +118,7 @@ namespace Conductor.Pier.Model
         /// <param name="Plataforma">Nome do Sistema Operacional a qual foi enviado o Push..</param>
         /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
 
-        public NotificacaoPushResponse(DateTime? DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
+        public NotificacaoPushResponse(string DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
         {
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
@@ -180,7 +180,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e em que o registro foi enviado para o dispositivo.</value>
         [DataMember(Name="dataEnvio", EmitDefaultValue=false)]
-        public DateTime? DataEnvio { get; set; }
+        public string DataEnvio { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).

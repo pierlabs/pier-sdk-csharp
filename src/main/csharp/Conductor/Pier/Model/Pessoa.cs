@@ -34,7 +34,7 @@ namespace Conductor.Pier.Model
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
         /// <param name="DataEmissaoIdentidade">Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd.</param>
 
-        public Pessoa(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, DateTime? DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, DateTime? DataEmissaoIdentidade = null)
+        public Pessoa(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, string DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
-        public DateTime? DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero da Identidade
@@ -150,7 +150,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
-        public DateTime? DataEmissaoIdentidade { get; set; }
+        public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

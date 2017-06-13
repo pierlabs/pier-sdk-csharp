@@ -26,7 +26,7 @@ namespace Conductor.Pier.Model
         /// <param name="TipoHistorico">Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA.</param>
         /// <param name="NomeAssessoria">Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico.</param>
 
-        public LinkHistoricoAssessoriaResponse(DateTime? DataHoraHistorico = null, string TipoHistorico = null, string NomeAssessoria = null)
+        public LinkHistoricoAssessoriaResponse(string DataHoraHistorico = null, string TipoHistorico = null, string NomeAssessoria = null)
         {
             this.DataHoraHistorico = DataHoraHistorico;
             this.TipoHistorico = TipoHistorico;
@@ -40,7 +40,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e hora do hist\u00C3\u00B3rico</value>
         [DataMember(Name="dataHoraHistorico", EmitDefaultValue=false)]
-        public DateTime? DataHoraHistorico { get; set; }
+        public string DataHoraHistorico { get; set; }
     
         /// <summary>
         /// Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA

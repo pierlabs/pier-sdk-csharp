@@ -38,11 +38,11 @@ namespace Conductor.Pier.Model
         /// <param name="DataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica..</param>
         /// <param name="ArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver..</param>
         /// <param name="FlagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial..</param>
-        /// <param name="FlagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo..</param>
+        /// <param name="FlagVirtual">Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual..</param>
         /// <param name="CodigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade..</param>
         /// <param name="SequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o.</param>
 
-        public Cartao(long? Id = null, long? IdStatusCartao = null, long? IdEstagioCartao = null, long? IdConta = null, long? IdPessoa = null, long? IdProduto = null, string TipoPortador = null, string NumeroCartao = null, string NomeImpresso = null, DateTime? DataGeracao = null, DateTime? DataStatusCartao = null, DateTime? DataEstagioCartao = null, DateTime? DataValidade = null, DateTime? DataImpressao = null, string ArquivoImpressao = null, int? FlagImpressaoOrigemComercial = null, int? FlagProvisorio = null, string CodigoDesbloqueio = null, int? SequencialCartao = null)
+        public Cartao(long? Id = null, long? IdStatusCartao = null, long? IdEstagioCartao = null, long? IdConta = null, long? IdPessoa = null, long? IdProduto = null, string TipoPortador = null, string NumeroCartao = null, string NomeImpresso = null, string DataGeracao = null, string DataStatusCartao = null, string DataEstagioCartao = null, string DataValidade = null, string DataImpressao = null, string ArquivoImpressao = null, int? FlagImpressaoOrigemComercial = null, int? FlagVirtual = null, string CodigoDesbloqueio = null, int? SequencialCartao = null)
         {
             this.Id = Id;
             this.IdStatusCartao = IdStatusCartao;
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Model
             this.DataImpressao = DataImpressao;
             this.ArquivoImpressao = ArquivoImpressao;
             this.FlagImpressaoOrigemComercial = FlagImpressaoOrigemComercial;
-            this.FlagProvisorio = FlagProvisorio;
+            this.FlagVirtual = FlagVirtual;
             this.CodigoDesbloqueio = CodigoDesbloqueio;
             this.SequencialCartao = SequencialCartao;
             
@@ -135,35 +135,35 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
         [DataMember(Name="dataGeracao", EmitDefaultValue=false)]
-        public DateTime? DataGeracao { get; set; }
+        public string DataGeracao { get; set; }
     
         /// <summary>
         /// Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
         /// </summary>
         /// <value>Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
         [DataMember(Name="dataStatusCartao", EmitDefaultValue=false)]
-        public DateTime? DataStatusCartao { get; set; }
+        public string DataStatusCartao { get; set; }
     
         /// <summary>
         /// Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
         /// </summary>
         /// <value>Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
         [DataMember(Name="dataEstagioCartao", EmitDefaultValue=false)]
-        public DateTime? DataEstagioCartao { get; set; }
+        public string DataEstagioCartao { get; set; }
     
         /// <summary>
         /// Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
         /// </summary>
         /// <value>Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
-        public DateTime? DataValidade { get; set; }
+        public string DataValidade { get; set; }
     
         /// <summary>
         /// Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
         /// </summary>
         /// <value>Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.</value>
         [DataMember(Name="dataImpressao", EmitDefaultValue=false)]
-        public DateTime? DataImpressao { get; set; }
+        public string DataImpressao { get; set; }
     
         /// <summary>
         /// Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
@@ -180,11 +180,11 @@ namespace Conductor.Pier.Model
         public int? FlagImpressaoOrigemComercial { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+        /// Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
         /// </summary>
-        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.</value>
-        [DataMember(Name="flagProvisorio", EmitDefaultValue=false)]
-        public int? FlagProvisorio { get; set; }
+        /// <value>Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.</value>
+        [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
+        public int? FlagVirtual { get; set; }
     
         /// <summary>
         /// Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataImpressao: ").Append(DataImpressao).Append("\n");
             sb.Append("  ArquivoImpressao: ").Append(ArquivoImpressao).Append("\n");
             sb.Append("  FlagImpressaoOrigemComercial: ").Append(FlagImpressaoOrigemComercial).Append("\n");
-            sb.Append("  FlagProvisorio: ").Append(FlagProvisorio).Append("\n");
+            sb.Append("  FlagVirtual: ").Append(FlagVirtual).Append("\n");
             sb.Append("  CodigoDesbloqueio: ").Append(CodigoDesbloqueio).Append("\n");
             sb.Append("  SequencialCartao: ").Append(SequencialCartao).Append("\n");
             
@@ -345,9 +345,9 @@ namespace Conductor.Pier.Model
                     this.FlagImpressaoOrigemComercial.Equals(other.FlagImpressaoOrigemComercial)
                 ) && 
                 (
-                    this.FlagProvisorio == other.FlagProvisorio ||
-                    this.FlagProvisorio != null &&
-                    this.FlagProvisorio.Equals(other.FlagProvisorio)
+                    this.FlagVirtual == other.FlagVirtual ||
+                    this.FlagVirtual != null &&
+                    this.FlagVirtual.Equals(other.FlagVirtual)
                 ) && 
                 (
                     this.CodigoDesbloqueio == other.CodigoDesbloqueio ||
@@ -421,8 +421,8 @@ namespace Conductor.Pier.Model
                 if (this.FlagImpressaoOrigemComercial != null)
                     hash = hash * 59 + this.FlagImpressaoOrigemComercial.GetHashCode();
                 
-                if (this.FlagProvisorio != null)
-                    hash = hash * 59 + this.FlagProvisorio.GetHashCode();
+                if (this.FlagVirtual != null)
+                    hash = hash * 59 + this.FlagVirtual.GetHashCode();
                 
                 if (this.CodigoDesbloqueio != null)
                     hash = hash * 59 + this.CodigoDesbloqueio.GetHashCode();
