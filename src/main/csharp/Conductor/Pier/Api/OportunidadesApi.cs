@@ -176,8 +176,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>PageStatusOprtunidadesAUD</returns>
-        PageStatusOprtunidadesAUD ListarAuditoriasStatusUsingGET (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>PageStatusOportunidadeAUDResponse</returns>
+        PageStatusOportunidadeAUDResponse ListarAuditoriasStatusUsingGET (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
   
         /// <summary>
         /// Lista as auditorias dos status oportunidades
@@ -196,8 +196,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>ApiResponse of PageStatusOprtunidadesAUD</returns>
-        ApiResponse<PageStatusOprtunidadesAUD> ListarAuditoriasStatusUsingGETWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>ApiResponse of PageStatusOportunidadeAUDResponse</returns>
+        ApiResponse<PageStatusOportunidadeAUDResponse> ListarAuditoriasStatusUsingGETWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
         
         /// <summary>
         /// Lista as auditorias das oportunidades
@@ -218,8 +218,8 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param>
         /// <param name="revType">Tipo da auditoria (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>PageOprtunidadeAUD</returns>
-        PageOprtunidadeAUD ListarAuditoriasUsingGET (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
+        /// <returns>PageOportunidadeAUDResponse</returns>
+        PageOportunidadeAUDResponse ListarAuditoriasUsingGET (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
   
         /// <summary>
         /// Lista as auditorias das oportunidades
@@ -240,8 +240,8 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param>
         /// <param name="revType">Tipo da auditoria (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>ApiResponse of PageOprtunidadeAUD</returns>
-        ApiResponse<PageOprtunidadeAUD> ListarAuditoriasUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
+        /// <returns>ApiResponse of PageOportunidadeAUDResponse</returns>
+        ApiResponse<PageOportunidadeAUDResponse> ListarAuditoriasUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
         
         /// <summary>
         /// Lista as auditorias dos tipos oportunidades
@@ -258,8 +258,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>PageTipoOprtunidadesAUD</returns>
-        PageTipoOprtunidadesAUD ListarAuditoriasUsingGET1 (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>PageTipoOportunidadeAUDResponse</returns>
+        PageTipoOportunidadeAUDResponse ListarAuditoriasUsingGET1 (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
   
         /// <summary>
         /// Lista as auditorias dos tipos oportunidades
@@ -276,8 +276,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>ApiResponse of PageTipoOprtunidadesAUD</returns>
-        ApiResponse<PageTipoOprtunidadesAUD> ListarAuditoriasUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>ApiResponse of PageTipoOportunidadeAUDResponse</returns>
+        ApiResponse<PageTipoOportunidadeAUDResponse> ListarAuditoriasUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
         
         /// <summary>
         /// Lista os status do tipo oportunidades
@@ -292,8 +292,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>PageStatusOprtunidades</returns>
-        PageStatusOprtunidades ListarStatusUsingGET (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>PageStatusOportunidadeResponse</returns>
+        PageStatusOportunidadeResponse ListarStatusUsingGET (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista os status do tipo oportunidades
@@ -308,8 +308,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>ApiResponse of PageStatusOprtunidades</returns>
-        ApiResponse<PageStatusOprtunidades> ListarStatusUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>ApiResponse of PageStatusOportunidadeResponse</returns>
+        ApiResponse<PageStatusOportunidadeResponse> ListarStatusUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista as oportunidades
@@ -327,8 +327,8 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
-        /// <returns>PageOprtunidadesResponse</returns>
-        PageOprtunidadesResponse ListarUsingGET12 (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        /// <returns>PageOportunidadeResponse</returns>
+        PageOportunidadeResponse ListarUsingGET13 (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista as oportunidades
@@ -346,8 +346,8 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
-        /// <returns>ApiResponse of PageOprtunidadesResponse</returns>
-        ApiResponse<PageOprtunidadesResponse> ListarUsingGET12WithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        /// <returns>ApiResponse of PageOportunidadeResponse</returns>
+        ApiResponse<PageOportunidadeResponse> ListarUsingGET13WithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista os tipos oportunidades
@@ -360,8 +360,8 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>PageTipoOprtunidades</returns>
-        PageTipoOprtunidades ListarUsingGET24 (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>PageTipoOportunidadeResponse</returns>
+        PageTipoOportunidadeResponse ListarUsingGET25 (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista os tipos oportunidades
@@ -374,8 +374,8 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>ApiResponse of PageTipoOprtunidades</returns>
-        ApiResponse<PageTipoOprtunidades> ListarUsingGET24WithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>ApiResponse of PageTipoOportunidadeResponse</returns>
+        ApiResponse<PageTipoOportunidadeResponse> ListarUsingGET25WithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Cadastra status para o tipo oportunidade
@@ -608,8 +608,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of PageStatusOprtunidadesAUD</returns>
-        System.Threading.Tasks.Task<PageStatusOprtunidadesAUD> ListarAuditoriasStatusUsingGETAsync (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>Task of PageStatusOportunidadeAUDResponse</returns>
+        System.Threading.Tasks.Task<PageStatusOportunidadeAUDResponse> ListarAuditoriasStatusUsingGETAsync (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
 
         /// <summary>
         /// Lista as auditorias dos status oportunidades
@@ -628,8 +628,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusOprtunidadesAUD)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusOprtunidadesAUD>> ListarAuditoriasStatusUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>Task of ApiResponse (PageStatusOportunidadeAUDResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageStatusOportunidadeAUDResponse>> ListarAuditoriasStatusUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
         
         /// <summary>
         /// Lista as auditorias das oportunidades
@@ -650,8 +650,8 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param>
         /// <param name="revType">Tipo da auditoria (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of PageOprtunidadeAUD</returns>
-        System.Threading.Tasks.Task<PageOprtunidadeAUD> ListarAuditoriasUsingGETAsync (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
+        /// <returns>Task of PageOportunidadeAUDResponse</returns>
+        System.Threading.Tasks.Task<PageOportunidadeAUDResponse> ListarAuditoriasUsingGETAsync (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
 
         /// <summary>
         /// Lista as auditorias das oportunidades
@@ -672,8 +672,8 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param>
         /// <param name="revType">Tipo da auditoria (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of ApiResponse (PageOprtunidadeAUD)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOprtunidadeAUD>> ListarAuditoriasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
+        /// <returns>Task of ApiResponse (PageOportunidadeAUDResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageOportunidadeAUDResponse>> ListarAuditoriasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null);
         
         /// <summary>
         /// Lista as auditorias dos tipos oportunidades
@@ -690,8 +690,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of PageTipoOprtunidadesAUD</returns>
-        System.Threading.Tasks.Task<PageTipoOprtunidadesAUD> ListarAuditoriasUsingGET1Async (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>Task of PageTipoOportunidadeAUDResponse</returns>
+        System.Threading.Tasks.Task<PageTipoOportunidadeAUDResponse> ListarAuditoriasUsingGET1Async (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
 
         /// <summary>
         /// Lista as auditorias dos tipos oportunidades
@@ -708,8 +708,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of ApiResponse (PageTipoOprtunidadesAUD)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoOprtunidadesAUD>> ListarAuditoriasUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
+        /// <returns>Task of ApiResponse (PageTipoOportunidadeAUDResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeAUDResponse>> ListarAuditoriasUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null);
         
         /// <summary>
         /// Lista os status do tipo oportunidades
@@ -724,8 +724,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of PageStatusOprtunidades</returns>
-        System.Threading.Tasks.Task<PageStatusOprtunidades> ListarStatusUsingGETAsync (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>Task of PageStatusOportunidadeResponse</returns>
+        System.Threading.Tasks.Task<PageStatusOportunidadeResponse> ListarStatusUsingGETAsync (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista os status do tipo oportunidades
@@ -740,8 +740,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusOprtunidades)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusOprtunidades>> ListarStatusUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>Task of ApiResponse (PageStatusOportunidadeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageStatusOportunidadeResponse>> ListarStatusUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista as oportunidades
@@ -759,8 +759,8 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
-        /// <returns>Task of PageOprtunidadesResponse</returns>
-        System.Threading.Tasks.Task<PageOprtunidadesResponse> ListarUsingGET12Async (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        /// <returns>Task of PageOportunidadeResponse</returns>
+        System.Threading.Tasks.Task<PageOportunidadeResponse> ListarUsingGET13Async (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista as oportunidades
@@ -778,8 +778,8 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
-        /// <returns>Task of ApiResponse (PageOprtunidadesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOprtunidadesResponse>> ListarUsingGET12AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        /// <returns>Task of ApiResponse (PageOportunidadeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageOportunidadeResponse>> ListarUsingGET13AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista os tipos oportunidades
@@ -792,8 +792,8 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of PageTipoOprtunidades</returns>
-        System.Threading.Tasks.Task<PageTipoOprtunidades> ListarUsingGET24Async (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>Task of PageTipoOportunidadeResponse</returns>
+        System.Threading.Tasks.Task<PageTipoOportunidadeResponse> ListarUsingGET25Async (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista os tipos oportunidades
@@ -806,8 +806,8 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of ApiResponse (PageTipoOprtunidades)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoOprtunidades>> ListarUsingGET24AsyncWithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        /// <returns>Task of ApiResponse (PageTipoOportunidadeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeResponse>> ListarUsingGET25AsyncWithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Cadastra status para o tipo oportunidade
@@ -2027,10 +2027,10 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param> 
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param> 
-        /// <returns>PageStatusOprtunidadesAUD</returns>
-        public PageStatusOprtunidadesAUD ListarAuditoriasStatusUsingGET (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>PageStatusOportunidadeAUDResponse</returns>
+        public PageStatusOportunidadeAUDResponse ListarAuditoriasStatusUsingGET (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
-             ApiResponse<PageStatusOprtunidadesAUD> localVarResponse = ListarAuditoriasStatusUsingGETWithHttpInfo(page, limit, revType, revDate, id, idTipoOportunidade, nome, descricao, flagAtivo, revUser);
+             ApiResponse<PageStatusOportunidadeAUDResponse> localVarResponse = ListarAuditoriasStatusUsingGETWithHttpInfo(page, limit, revType, revDate, id, idTipoOportunidade, nome, descricao, flagAtivo, revUser);
              return localVarResponse.Data;
         }
 
@@ -2048,8 +2048,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param> 
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param> 
-        /// <returns>ApiResponse of PageStatusOprtunidadesAUD</returns>
-        public ApiResponse< PageStatusOprtunidadesAUD > ListarAuditoriasStatusUsingGETWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>ApiResponse of PageStatusOportunidadeAUDResponse</returns>
+        public ApiResponse< PageStatusOportunidadeAUDResponse > ListarAuditoriasStatusUsingGETWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
             
     
@@ -2109,9 +2109,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarAuditoriasStatusUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageStatusOprtunidadesAUD>(localVarStatusCode,
+            return new ApiResponse<PageStatusOportunidadeAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusOprtunidadesAUD) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOprtunidadesAUD)));
+                (PageStatusOportunidadeAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOportunidadeAUDResponse)));
             
         }
 
@@ -2130,10 +2130,10 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of PageStatusOprtunidadesAUD</returns>
-        public async System.Threading.Tasks.Task<PageStatusOprtunidadesAUD> ListarAuditoriasStatusUsingGETAsync (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>Task of PageStatusOportunidadeAUDResponse</returns>
+        public async System.Threading.Tasks.Task<PageStatusOportunidadeAUDResponse> ListarAuditoriasStatusUsingGETAsync (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
-             ApiResponse<PageStatusOprtunidadesAUD> localVarResponse = await ListarAuditoriasStatusUsingGETAsyncWithHttpInfo(page, limit, revType, revDate, id, idTipoOportunidade, nome, descricao, flagAtivo, revUser);
+             ApiResponse<PageStatusOportunidadeAUDResponse> localVarResponse = await ListarAuditoriasStatusUsingGETAsyncWithHttpInfo(page, limit, revType, revDate, id, idTipoOportunidade, nome, descricao, flagAtivo, revUser);
              return localVarResponse.Data;
 
         }
@@ -2152,8 +2152,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusOprtunidadesAUD)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusOprtunidadesAUD>> ListarAuditoriasStatusUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>Task of ApiResponse (PageStatusOportunidadeAUDResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusOportunidadeAUDResponse>> ListarAuditoriasStatusUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, long? idTipoOportunidade = null, string nome = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
             
     
@@ -2213,9 +2213,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarAuditoriasStatusUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageStatusOprtunidadesAUD>(localVarStatusCode,
+            return new ApiResponse<PageStatusOportunidadeAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusOprtunidadesAUD) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOprtunidadesAUD)));
+                (PageStatusOportunidadeAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOportunidadeAUDResponse)));
             
         }
         
@@ -2235,10 +2235,10 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param> 
         /// <param name="revType">Tipo da auditoria (optional)</param> 
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param> 
-        /// <returns>PageOprtunidadeAUD</returns>
-        public PageOprtunidadeAUD ListarAuditoriasUsingGET (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
+        /// <returns>PageOportunidadeAUDResponse</returns>
+        public PageOportunidadeAUDResponse ListarAuditoriasUsingGET (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
         {
-             ApiResponse<PageOprtunidadeAUD> localVarResponse = ListarAuditoriasUsingGETWithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, datatFimVigencia, flagAtivo, revDate, revType, revUser);
+             ApiResponse<PageOportunidadeAUDResponse> localVarResponse = ListarAuditoriasUsingGETWithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, datatFimVigencia, flagAtivo, revDate, revType, revUser);
              return localVarResponse.Data;
         }
 
@@ -2258,8 +2258,8 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param> 
         /// <param name="revType">Tipo da auditoria (optional)</param> 
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param> 
-        /// <returns>ApiResponse of PageOprtunidadeAUD</returns>
-        public ApiResponse< PageOprtunidadeAUD > ListarAuditoriasUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
+        /// <returns>ApiResponse of PageOportunidadeAUDResponse</returns>
+        public ApiResponse< PageOportunidadeAUDResponse > ListarAuditoriasUsingGETWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
         {
             
     
@@ -2321,9 +2321,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarAuditoriasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageOprtunidadeAUD>(localVarStatusCode,
+            return new ApiResponse<PageOportunidadeAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageOprtunidadeAUD) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOprtunidadeAUD)));
+                (PageOportunidadeAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOportunidadeAUDResponse)));
             
         }
 
@@ -2344,10 +2344,10 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param>
         /// <param name="revType">Tipo da auditoria (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of PageOprtunidadeAUD</returns>
-        public async System.Threading.Tasks.Task<PageOprtunidadeAUD> ListarAuditoriasUsingGETAsync (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
+        /// <returns>Task of PageOportunidadeAUDResponse</returns>
+        public async System.Threading.Tasks.Task<PageOportunidadeAUDResponse> ListarAuditoriasUsingGETAsync (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
         {
-             ApiResponse<PageOprtunidadeAUD> localVarResponse = await ListarAuditoriasUsingGETAsyncWithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, datatFimVigencia, flagAtivo, revDate, revType, revUser);
+             ApiResponse<PageOportunidadeAUDResponse> localVarResponse = await ListarAuditoriasUsingGETAsyncWithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, datatFimVigencia, flagAtivo, revDate, revType, revUser);
              return localVarResponse.Data;
 
         }
@@ -2368,8 +2368,8 @@ namespace Conductor.Pier.Api
         /// <param name="revDate">Data da auditoria (optional)</param>
         /// <param name="revType">Tipo da auditoria (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of ApiResponse (PageOprtunidadeAUD)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOprtunidadeAUD>> ListarAuditoriasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
+        /// <returns>Task of ApiResponse (PageOportunidadeAUDResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageOportunidadeAUDResponse>> ListarAuditoriasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string datatFimVigencia = null, bool? flagAtivo = null, string revDate = null, string revType = null, string revUser = null)
         {
             
     
@@ -2431,9 +2431,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarAuditoriasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageOprtunidadeAUD>(localVarStatusCode,
+            return new ApiResponse<PageOportunidadeAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageOprtunidadeAUD) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOprtunidadeAUD)));
+                (PageOportunidadeAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOportunidadeAUDResponse)));
             
         }
         
@@ -2449,10 +2449,10 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param> 
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param> 
-        /// <returns>PageTipoOprtunidadesAUD</returns>
-        public PageTipoOprtunidadesAUD ListarAuditoriasUsingGET1 (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>PageTipoOportunidadeAUDResponse</returns>
+        public PageTipoOportunidadeAUDResponse ListarAuditoriasUsingGET1 (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
-             ApiResponse<PageTipoOprtunidadesAUD> localVarResponse = ListarAuditoriasUsingGET1WithHttpInfo(page, limit, revType, revDate, id, descricao, flagAtivo, revUser);
+             ApiResponse<PageTipoOportunidadeAUDResponse> localVarResponse = ListarAuditoriasUsingGET1WithHttpInfo(page, limit, revType, revDate, id, descricao, flagAtivo, revUser);
              return localVarResponse.Data;
         }
 
@@ -2468,8 +2468,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param> 
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param> 
-        /// <returns>ApiResponse of PageTipoOprtunidadesAUD</returns>
-        public ApiResponse< PageTipoOprtunidadesAUD > ListarAuditoriasUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>ApiResponse of PageTipoOportunidadeAUDResponse</returns>
+        public ApiResponse< PageTipoOportunidadeAUDResponse > ListarAuditoriasUsingGET1WithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
             
     
@@ -2527,9 +2527,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarAuditoriasUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageTipoOprtunidadesAUD>(localVarStatusCode,
+            return new ApiResponse<PageTipoOportunidadeAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTipoOprtunidadesAUD) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOprtunidadesAUD)));
+                (PageTipoOportunidadeAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOportunidadeAUDResponse)));
             
         }
 
@@ -2546,10 +2546,10 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of PageTipoOprtunidadesAUD</returns>
-        public async System.Threading.Tasks.Task<PageTipoOprtunidadesAUD> ListarAuditoriasUsingGET1Async (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>Task of PageTipoOportunidadeAUDResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoOportunidadeAUDResponse> ListarAuditoriasUsingGET1Async (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
-             ApiResponse<PageTipoOprtunidadesAUD> localVarResponse = await ListarAuditoriasUsingGET1AsyncWithHttpInfo(page, limit, revType, revDate, id, descricao, flagAtivo, revUser);
+             ApiResponse<PageTipoOportunidadeAUDResponse> localVarResponse = await ListarAuditoriasUsingGET1AsyncWithHttpInfo(page, limit, revType, revDate, id, descricao, flagAtivo, revUser);
              return localVarResponse.Data;
 
         }
@@ -2566,8 +2566,8 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <param name="revUser">Usu\u00C3\u00A1rio da auditoria (optional)</param>
-        /// <returns>Task of ApiResponse (PageTipoOprtunidadesAUD)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOprtunidadesAUD>> ListarAuditoriasUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
+        /// <returns>Task of ApiResponse (PageTipoOportunidadeAUDResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeAUDResponse>> ListarAuditoriasUsingGET1AsyncWithHttpInfo (int? page = null, int? limit = null, long? revType = null, string revDate = null, long? id = null, string descricao = null, bool? flagAtivo = null, string revUser = null)
         {
             
     
@@ -2625,9 +2625,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarAuditoriasUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageTipoOprtunidadesAUD>(localVarStatusCode,
+            return new ApiResponse<PageTipoOportunidadeAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTipoOprtunidadesAUD) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOprtunidadesAUD)));
+                (PageTipoOportunidadeAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOportunidadeAUDResponse)));
             
         }
         
@@ -2641,10 +2641,10 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param> 
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param> 
-        /// <returns>PageStatusOprtunidades</returns>
-        public PageStatusOprtunidades ListarStatusUsingGET (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>PageStatusOportunidadeResponse</returns>
+        public PageStatusOportunidadeResponse ListarStatusUsingGET (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageStatusOprtunidades> localVarResponse = ListarStatusUsingGETWithHttpInfo(id, page, limit, nome, descricao, flagAtivo);
+             ApiResponse<PageStatusOportunidadeResponse> localVarResponse = ListarStatusUsingGETWithHttpInfo(id, page, limit, nome, descricao, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -2658,8 +2658,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param> 
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param> 
-        /// <returns>ApiResponse of PageStatusOprtunidades</returns>
-        public ApiResponse< PageStatusOprtunidades > ListarStatusUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>ApiResponse of PageStatusOportunidadeResponse</returns>
+        public ApiResponse< PageStatusOportunidadeResponse > ListarStatusUsingGETWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
         {
             
             // verify the required parameter 'id' is set
@@ -2719,9 +2719,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarStatusUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageStatusOprtunidades>(localVarStatusCode,
+            return new ApiResponse<PageStatusOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusOprtunidades) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOprtunidades)));
+                (PageStatusOportunidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOportunidadeResponse)));
             
         }
 
@@ -2736,10 +2736,10 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of PageStatusOprtunidades</returns>
-        public async System.Threading.Tasks.Task<PageStatusOprtunidades> ListarStatusUsingGETAsync (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>Task of PageStatusOportunidadeResponse</returns>
+        public async System.Threading.Tasks.Task<PageStatusOportunidadeResponse> ListarStatusUsingGETAsync (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageStatusOprtunidades> localVarResponse = await ListarStatusUsingGETAsyncWithHttpInfo(id, page, limit, nome, descricao, flagAtivo);
+             ApiResponse<PageStatusOportunidadeResponse> localVarResponse = await ListarStatusUsingGETAsyncWithHttpInfo(id, page, limit, nome, descricao, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -2754,8 +2754,8 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do status oportunidade (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusOprtunidades)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusOprtunidades>> ListarStatusUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>Task of ApiResponse (PageStatusOportunidadeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusOportunidadeResponse>> ListarStatusUsingGETAsyncWithHttpInfo (long? id, int? page = null, int? limit = null, string nome = null, string descricao = null, bool? flagAtivo = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarStatusUsingGET");
@@ -2813,9 +2813,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarStatusUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageStatusOprtunidades>(localVarStatusCode,
+            return new ApiResponse<PageStatusOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusOprtunidades) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOprtunidades)));
+                (PageStatusOportunidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusOportunidadeResponse)));
             
         }
         
@@ -2832,10 +2832,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param> 
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param> 
-        /// <returns>PageOprtunidadesResponse</returns>
-        public PageOprtunidadesResponse ListarUsingGET12 (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        /// <returns>PageOportunidadeResponse</returns>
+        public PageOportunidadeResponse ListarUsingGET13 (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageOprtunidadesResponse> localVarResponse = ListarUsingGET12WithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
+             ApiResponse<PageOportunidadeResponse> localVarResponse = ListarUsingGET13WithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -2852,8 +2852,8 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param> 
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param> 
-        /// <returns>ApiResponse of PageOprtunidadesResponse</returns>
-        public ApiResponse< PageOprtunidadesResponse > ListarUsingGET12WithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        /// <returns>ApiResponse of PageOportunidadeResponse</returns>
+        public ApiResponse< PageOportunidadeResponse > ListarUsingGET13WithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
             
     
@@ -2908,13 +2908,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageOprtunidadesResponse>(localVarStatusCode,
+            return new ApiResponse<PageOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageOprtunidadesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOprtunidadesResponse)));
+                (PageOportunidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOportunidadeResponse)));
             
         }
 
@@ -2932,10 +2932,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
-        /// <returns>Task of PageOprtunidadesResponse</returns>
-        public async System.Threading.Tasks.Task<PageOprtunidadesResponse> ListarUsingGET12Async (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        /// <returns>Task of PageOportunidadeResponse</returns>
+        public async System.Threading.Tasks.Task<PageOportunidadeResponse> ListarUsingGET13Async (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageOprtunidadesResponse> localVarResponse = await ListarUsingGET12AsyncWithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
+             ApiResponse<PageOportunidadeResponse> localVarResponse = await ListarUsingGET13AsyncWithHttpInfo(page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -2953,8 +2953,8 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicioVigencia">Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
-        /// <returns>Task of ApiResponse (PageOprtunidadesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOprtunidadesResponse>> ListarUsingGET12AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        /// <returns>Task of ApiResponse (PageOportunidadeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageOportunidadeResponse>> ListarUsingGET13AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
             
     
@@ -3009,13 +3009,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageOprtunidadesResponse>(localVarStatusCode,
+            return new ApiResponse<PageOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageOprtunidadesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOprtunidadesResponse)));
+                (PageOportunidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOportunidadeResponse)));
             
         }
         
@@ -3027,10 +3027,10 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param> 
-        /// <returns>PageTipoOprtunidades</returns>
-        public PageTipoOprtunidades ListarUsingGET24 (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>PageTipoOportunidadeResponse</returns>
+        public PageTipoOportunidadeResponse ListarUsingGET25 (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoOprtunidades> localVarResponse = ListarUsingGET24WithHttpInfo(page, limit, descricao, flagAtivo);
+             ApiResponse<PageTipoOportunidadeResponse> localVarResponse = ListarUsingGET25WithHttpInfo(page, limit, descricao, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -3042,8 +3042,8 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param> 
-        /// <returns>ApiResponse of PageTipoOprtunidades</returns>
-        public ApiResponse< PageTipoOprtunidades > ListarUsingGET24WithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>ApiResponse of PageTipoOportunidadeResponse</returns>
+        public ApiResponse< PageTipoOportunidadeResponse > ListarUsingGET25WithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
             
     
@@ -3093,13 +3093,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageTipoOprtunidades>(localVarStatusCode,
+            return new ApiResponse<PageTipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTipoOprtunidades) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOprtunidades)));
+                (PageTipoOportunidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOportunidadeResponse)));
             
         }
 
@@ -3112,10 +3112,10 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of PageTipoOprtunidades</returns>
-        public async System.Threading.Tasks.Task<PageTipoOprtunidades> ListarUsingGET24Async (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>Task of PageTipoOportunidadeResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoOportunidadeResponse> ListarUsingGET25Async (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoOprtunidades> localVarResponse = await ListarUsingGET24AsyncWithHttpInfo(page, limit, descricao, flagAtivo);
+             ApiResponse<PageTipoOportunidadeResponse> localVarResponse = await ListarUsingGET25AsyncWithHttpInfo(page, limit, descricao, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -3128,8 +3128,8 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
-        /// <returns>Task of ApiResponse (PageTipoOprtunidades)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOprtunidades>> ListarUsingGET24AsyncWithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        /// <returns>Task of ApiResponse (PageTipoOportunidadeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeResponse>> ListarUsingGET25AsyncWithHttpInfo (int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
             
     
@@ -3179,13 +3179,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageTipoOprtunidades>(localVarStatusCode,
+            return new ApiResponse<PageTipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTipoOprtunidades) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOprtunidades)));
+                (PageTipoOportunidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOportunidadeResponse)));
             
         }
         

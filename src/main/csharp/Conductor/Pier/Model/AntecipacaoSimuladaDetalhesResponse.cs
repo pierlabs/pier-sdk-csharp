@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
     /// </summary>
     [DataContract]
     public partial class AntecipacaoSimuladaDetalhesResponse :  IEquatable<AntecipacaoSimuladaDetalhesResponse>
@@ -22,15 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaDetalhesResponse" /> class.
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaDetalhesResponse" />class.
         /// </summary>
-        /// <param name="IdSimulacaoDetalhe">C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="QuantidadeParcelas">Quantidade de parcelas do plano de parcelamento simulado..</param>
         /// <param name="ValorParcelas">Valor total das parcelas do plano de parcelamento..</param>
         /// <param name="ValorDesconto">Valor do desconto para o plano de parcelamento..</param>
         /// <param name="ValorParcelasDesconto">Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto..</param>
 
-        public AntecipacaoSimuladaDetalhesResponse(long? IdSimulacaoDetalhe = null, int? QuantidadeParcelas = null, double? ValorParcelas = null, double? ValorDesconto = null, double? ValorParcelasDesconto = null)
+        public AntecipacaoSimuladaDetalhesResponse(int? QuantidadeParcelas = null, double? ValorParcelas = null, double? ValorDesconto = null, double? ValorParcelasDesconto = null)
         {
-            this.IdSimulacaoDetalhe = IdSimulacaoDetalhe;
             this.QuantidadeParcelas = QuantidadeParcelas;
             this.ValorParcelas = ValorParcelas;
             this.ValorDesconto = ValorDesconto;
@@ -38,13 +36,6 @@ namespace Conductor.Pier.Model
             
         }
         
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.</value>
-        [DataMember(Name="idSimulacaoDetalhe", EmitDefaultValue=false)]
-        public long? IdSimulacaoDetalhe { get; set; }
     
         /// <summary>
         /// Quantidade de parcelas do plano de parcelamento simulado.
@@ -82,7 +73,6 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AntecipacaoSimuladaDetalhesResponse {\n");
-            sb.Append("  IdSimulacaoDetalhe: ").Append(IdSimulacaoDetalhe).Append("\n");
             sb.Append("  QuantidadeParcelas: ").Append(QuantidadeParcelas).Append("\n");
             sb.Append("  ValorParcelas: ").Append(ValorParcelas).Append("\n");
             sb.Append("  ValorDesconto: ").Append(ValorDesconto).Append("\n");
@@ -125,11 +115,6 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdSimulacaoDetalhe == other.IdSimulacaoDetalhe ||
-                    this.IdSimulacaoDetalhe != null &&
-                    this.IdSimulacaoDetalhe.Equals(other.IdSimulacaoDetalhe)
-                ) && 
-                (
                     this.QuantidadeParcelas == other.QuantidadeParcelas ||
                     this.QuantidadeParcelas != null &&
                     this.QuantidadeParcelas.Equals(other.QuantidadeParcelas)
@@ -162,9 +147,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.IdSimulacaoDetalhe != null)
-                    hash = hash * 59 + this.IdSimulacaoDetalhe.GetHashCode();
                 
                 if (this.QuantidadeParcelas != null)
                     hash = hash * 59 + this.QuantidadeParcelas.GetHashCode();

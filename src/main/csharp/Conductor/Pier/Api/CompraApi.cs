@@ -25,8 +25,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
         /// <returns>AntecipacaoResponse</returns>
         AntecipacaoResponse EfetivarAntecipacaoUsingPOST (long? idConta, long? id, long? quantidadeParcelas);
   
@@ -38,8 +38,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
         ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas);
         
@@ -56,9 +56,9 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
-        /// <returns>PageCompras</returns>
-        PageCompras ListarUsingGET5 (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null);
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <returns>PageCompraResponse</returns>
+        PageCompraResponse ListarUsingGET6 (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
   
         /// <summary>
         /// Listar compras
@@ -73,19 +73,19 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
-        /// <returns>ApiResponse of PageCompras</returns>
-        ApiResponse<PageCompras> ListarUsingGET5WithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null);
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <returns>ApiResponse of PageCompraResponse</returns>
+        ApiResponse<PageCompraResponse> ListarUsingGET6WithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
         /// <returns>AntecipacaoSimuladaResponse</returns>
         AntecipacaoSimuladaResponse SimularAntecipacaoUsingGET (long? idConta, long? id);
   
@@ -93,11 +93,11 @@ namespace Conductor.Pier.Api
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
         ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoUsingGETWithHttpInfo (long? idConta, long? id);
         
@@ -113,8 +113,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
         /// <returns>Task of AntecipacaoResponse</returns>
         System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTAsync (long? idConta, long? id, long? quantidadeParcelas);
 
@@ -126,8 +126,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoUsingPOSTAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas);
         
@@ -144,9 +144,9 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
-        /// <returns>Task of PageCompras</returns>
-        System.Threading.Tasks.Task<PageCompras> ListarUsingGET5Async (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null);
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <returns>Task of PageCompraResponse</returns>
+        System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET6Async (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
 
         /// <summary>
         /// Listar compras
@@ -161,19 +161,19 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
-        /// <returns>Task of ApiResponse (PageCompras)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCompras>> ListarUsingGET5AsyncWithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null);
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET6AsyncWithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
         System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoUsingGETAsync (long? idConta, long? id);
 
@@ -181,11 +181,11 @@ namespace Conductor.Pier.Api
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoUsingGETAsyncWithHttpInfo (long? idConta, long? id);
         
@@ -286,8 +286,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param> 
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param> 
         /// <returns>AntecipacaoResponse</returns>
         public AntecipacaoResponse EfetivarAntecipacaoUsingPOST (long? idConta, long? id, long? quantidadeParcelas)
         {
@@ -300,8 +300,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param> 
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
         public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoUsingPOSTWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas)
         {
@@ -380,8 +380,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
         /// <returns>Task of AntecipacaoResponse</returns>
         public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTAsync (long? idConta, long? id, long? quantidadeParcelas)
         {
@@ -395,8 +395,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas (quantidadeParcelas).</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoUsingPOSTAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas)
         {
@@ -473,11 +473,11 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param> 
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param> 
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param> 
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param> 
-        /// <returns>PageCompras</returns>
-        public PageCompras ListarUsingGET5 (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null)
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param> 
+        /// <returns>PageCompraResponse</returns>
+        public PageCompraResponse ListarUsingGET6 (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompras> localVarResponse = ListarUsingGET5WithHttpInfo(idConta, page, limit, idCompra, parcelada, juros, tipoTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = ListarUsingGET6WithHttpInfo(idConta, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
         }
 
@@ -491,14 +491,14 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param> 
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param> 
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param> 
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param> 
-        /// <returns>ApiResponse of PageCompras</returns>
-        public ApiResponse< PageCompras > ListarUsingGET5WithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null)
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param> 
+        /// <returns>ApiResponse of PageCompraResponse</returns>
+        public ApiResponse< PageCompraResponse > ListarUsingGET6WithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CompraApi->ListarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling CompraApi->ListarUsingGET6");
             
     
             var localVarPath = "/api/compras";
@@ -534,7 +534,7 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (parcelada != null) localVarQueryParams.Add("parcelada", Configuration.ApiClient.ParameterToString(parcelada)); // query parameter
             if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
-            if (tipoTransacao != null) localVarQueryParams.Add("tipoTransacao", Configuration.ApiClient.ParameterToString(tipoTransacao)); // query parameter
+            if (tipoOrigemTransacao != null) localVarQueryParams.Add("tipoOrigemTransacao", Configuration.ApiClient.ParameterToString(tipoOrigemTransacao)); // query parameter
             
             
             
@@ -550,13 +550,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageCompras>(localVarStatusCode,
+            return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCompras) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCompras)));
+                (PageCompraResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCompraResponse)));
             
         }
 
@@ -571,11 +571,11 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
-        /// <returns>Task of PageCompras</returns>
-        public async System.Threading.Tasks.Task<PageCompras> ListarUsingGET5Async (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null)
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <returns>Task of PageCompraResponse</returns>
+        public async System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET6Async (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompras> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(idConta, page, limit, idCompra, parcelada, juros, tipoTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(idConta, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
 
         }
@@ -590,12 +590,12 @@ namespace Conductor.Pier.Api
         /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
         /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
         /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
-        /// <returns>Task of ApiResponse (PageCompras)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCompras>> ListarUsingGET5AsyncWithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoTransacao = null)
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET6AsyncWithHttpInfo (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET5");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET6");
             
     
             var localVarPath = "/api/compras";
@@ -631,7 +631,7 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (parcelada != null) localVarQueryParams.Add("parcelada", Configuration.ApiClient.ParameterToString(parcelada)); // query parameter
             if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
-            if (tipoTransacao != null) localVarQueryParams.Add("tipoTransacao", Configuration.ApiClient.ParameterToString(tipoTransacao)); // query parameter
+            if (tipoOrigemTransacao != null) localVarQueryParams.Add("tipoOrigemTransacao", Configuration.ApiClient.ParameterToString(tipoOrigemTransacao)); // query parameter
             
             
             
@@ -647,22 +647,22 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageCompras>(localVarStatusCode,
+            return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCompras) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCompras)));
+                (PageCompraResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCompraResponse)));
             
         }
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param> 
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
         /// <returns>AntecipacaoSimuladaResponse</returns>
         public AntecipacaoSimuladaResponse SimularAntecipacaoUsingGET (long? idConta, long? id)
         {
@@ -671,11 +671,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param> 
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
         public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoUsingGETWithHttpInfo (long? idConta, long? id)
         {
@@ -745,11 +745,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
         public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoUsingGETAsync (long? idConta, long? id)
         {
@@ -759,11 +759,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoUsingGETAsyncWithHttpInfo (long? idConta, long? id)
         {

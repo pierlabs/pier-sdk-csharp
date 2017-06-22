@@ -30,8 +30,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>FAQ</returns>
-        FAQ AdicionarUsingPOST (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>FaqResponse</returns>
+        FaqResponse AdicionarUsingPOST (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// Adiciona uma nova FAQ
@@ -46,8 +46,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>ApiResponse of FAQ</returns>
-        ApiResponse<FAQ> AdicionarUsingPOSTWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>ApiResponse of FaqResponse</returns>
+        ApiResponse<FaqResponse> AdicionarUsingPOSTWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
         /// Alterar FAQ
@@ -63,8 +63,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>FAQ</returns>
-        FAQ AlterarUsingPUT2 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>FaqResponse</returns>
+        FaqResponse AlterarUsingPUT2 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// Alterar FAQ
@@ -80,8 +80,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>ApiResponse of FAQ</returns>
-        ApiResponse<FAQ> AlterarUsingPUT2WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>ApiResponse of FaqResponse</returns>
+        ApiResponse<FaqResponse> AlterarUsingPUT2WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
         /// Consultar FAQ por id
@@ -91,8 +91,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
-        /// <returns>FAQ</returns>
-        FAQ ConsultarUsingGET7 (long? id);
+        /// <returns>FaqResponse</returns>
+        FaqResponse ConsultarUsingGET7 (long? id);
   
         /// <summary>
         /// Consultar FAQ por id
@@ -102,8 +102,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
-        /// <returns>ApiResponse of FAQ</returns>
-        ApiResponse<FAQ> ConsultarUsingGET7WithHttpInfo (long? id);
+        /// <returns>ApiResponse of FaqResponse</returns>
+        ApiResponse<FaqResponse> ConsultarUsingGET7WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista FAQs
@@ -121,8 +121,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>PageFaqs</returns>
-        PageFaqs ListarUsingGET10 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>PageFaqResponse</returns>
+        PageFaqResponse ListarUsingGET11 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// Lista FAQs
@@ -140,8 +140,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>ApiResponse of PageFaqs</returns>
-        ApiResponse<PageFaqs> ListarUsingGET10WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>ApiResponse of PageFaqResponse</returns>
+        ApiResponse<PageFaqResponse> ListarUsingGET11WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Synchronous Operations
         
@@ -160,8 +160,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of FAQ</returns>
-        System.Threading.Tasks.Task<FAQ> AdicionarUsingPOSTAsync (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>Task of FaqResponse</returns>
+        System.Threading.Tasks.Task<FaqResponse> AdicionarUsingPOSTAsync (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// Adiciona uma nova FAQ
@@ -176,8 +176,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of ApiResponse (FAQ)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FAQ>> AdicionarUsingPOSTAsyncWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>Task of ApiResponse (FaqResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AdicionarUsingPOSTAsyncWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
         /// Alterar FAQ
@@ -193,8 +193,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of FAQ</returns>
-        System.Threading.Tasks.Task<FAQ> AlterarUsingPUT2Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>Task of FaqResponse</returns>
+        System.Threading.Tasks.Task<FaqResponse> AlterarUsingPUT2Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// Alterar FAQ
@@ -210,8 +210,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of ApiResponse (FAQ)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FAQ>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>Task of ApiResponse (FaqResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
         /// Consultar FAQ por id
@@ -221,8 +221,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
-        /// <returns>Task of FAQ</returns>
-        System.Threading.Tasks.Task<FAQ> ConsultarUsingGET7Async (long? id);
+        /// <returns>Task of FaqResponse</returns>
+        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET7Async (long? id);
 
         /// <summary>
         /// Consultar FAQ por id
@@ -232,8 +232,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
-        /// <returns>Task of ApiResponse (FAQ)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET7AsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (FaqResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista FAQs
@@ -251,8 +251,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of PageFaqs</returns>
-        System.Threading.Tasks.Task<PageFaqs> ListarUsingGET10Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>Task of PageFaqResponse</returns>
+        System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET11Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// Lista FAQs
@@ -270,8 +270,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of ApiResponse (PageFaqs)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageFaqs>> ListarUsingGET10AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        /// <returns>Task of ApiResponse (PageFaqResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET11AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Asynchronous Operations
         
@@ -375,10 +375,10 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param> 
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
-        /// <returns>FAQ</returns>
-        public FAQ AdicionarUsingPOST (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>FaqResponse</returns>
+        public FaqResponse AdicionarUsingPOST (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<FAQ> localVarResponse = AdicionarUsingPOSTWithHttpInfo(pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<FaqResponse> localVarResponse = AdicionarUsingPOSTWithHttpInfo(pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -392,8 +392,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param> 
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
-        /// <returns>ApiResponse of FAQ</returns>
-        public ApiResponse< FAQ > AdicionarUsingPOSTWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>ApiResponse of FaqResponse</returns>
+        public ApiResponse< FaqResponse > AdicionarUsingPOSTWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
             // verify the required parameter 'pergunta' is set
@@ -457,9 +457,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AdicionarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<FAQ>(localVarStatusCode,
+            return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FAQ) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FAQ)));
+                (FaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaqResponse)));
             
         }
 
@@ -474,10 +474,10 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of FAQ</returns>
-        public async System.Threading.Tasks.Task<FAQ> AdicionarUsingPOSTAsync (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>Task of FaqResponse</returns>
+        public async System.Threading.Tasks.Task<FaqResponse> AdicionarUsingPOSTAsync (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<FAQ> localVarResponse = await AdicionarUsingPOSTAsyncWithHttpInfo(pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<FaqResponse> localVarResponse = await AdicionarUsingPOSTAsyncWithHttpInfo(pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -492,8 +492,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of ApiResponse (FAQ)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FAQ>> AdicionarUsingPOSTAsyncWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>Task of ApiResponse (FaqResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AdicionarUsingPOSTAsyncWithHttpInfo (string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             // verify the required parameter 'pergunta' is set
             if (pergunta == null) throw new ApiException(400, "Missing required parameter 'pergunta' when calling AdicionarUsingPOST");
@@ -553,9 +553,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AdicionarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<FAQ>(localVarStatusCode,
+            return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FAQ) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FAQ)));
+                (FaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaqResponse)));
             
         }
         
@@ -570,10 +570,10 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param> 
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
-        /// <returns>FAQ</returns>
-        public FAQ AlterarUsingPUT2 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>FaqResponse</returns>
+        public FaqResponse AlterarUsingPUT2 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<FAQ> localVarResponse = AlterarUsingPUT2WithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<FaqResponse> localVarResponse = AlterarUsingPUT2WithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -588,8 +588,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param> 
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
-        /// <returns>ApiResponse of FAQ</returns>
-        public ApiResponse< FAQ > AlterarUsingPUT2WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>ApiResponse of FaqResponse</returns>
+        public ApiResponse< FaqResponse > AlterarUsingPUT2WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
             // verify the required parameter 'id' is set
@@ -658,9 +658,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<FAQ>(localVarStatusCode,
+            return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FAQ) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FAQ)));
+                (FaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaqResponse)));
             
         }
 
@@ -676,10 +676,10 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of FAQ</returns>
-        public async System.Threading.Tasks.Task<FAQ> AlterarUsingPUT2Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>Task of FaqResponse</returns>
+        public async System.Threading.Tasks.Task<FaqResponse> AlterarUsingPUT2Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<FAQ> localVarResponse = await AlterarUsingPUT2AsyncWithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<FaqResponse> localVarResponse = await AlterarUsingPUT2AsyncWithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -695,8 +695,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of ApiResponse (FAQ)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FAQ>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>Task of ApiResponse (FaqResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AlterarUsingPUT2AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT2");
@@ -759,9 +759,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<FAQ>(localVarStatusCode,
+            return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FAQ) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FAQ)));
+                (FaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaqResponse)));
             
         }
         
@@ -770,10 +770,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
-        /// <returns>FAQ</returns>
-        public FAQ ConsultarUsingGET7 (long? id)
+        /// <returns>FaqResponse</returns>
+        public FaqResponse ConsultarUsingGET7 (long? id)
         {
-             ApiResponse<FAQ> localVarResponse = ConsultarUsingGET7WithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET7WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -782,8 +782,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
-        /// <returns>ApiResponse of FAQ</returns>
-        public ApiResponse< FAQ > ConsultarUsingGET7WithHttpInfo (long? id)
+        /// <returns>ApiResponse of FaqResponse</returns>
+        public ApiResponse< FaqResponse > ConsultarUsingGET7WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -838,9 +838,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<FAQ>(localVarStatusCode,
+            return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FAQ) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FAQ)));
+                (FaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaqResponse)));
             
         }
 
@@ -850,10 +850,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
-        /// <returns>Task of FAQ</returns>
-        public async System.Threading.Tasks.Task<FAQ> ConsultarUsingGET7Async (long? id)
+        /// <returns>Task of FaqResponse</returns>
+        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET7Async (long? id)
         {
-             ApiResponse<FAQ> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -863,8 +863,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
-        /// <returns>Task of ApiResponse (FAQ)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FAQ>> ConsultarUsingGET7AsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (FaqResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET7");
@@ -917,9 +917,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<FAQ>(localVarStatusCode,
+            return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FAQ) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FAQ)));
+                (FaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaqResponse)));
             
         }
         
@@ -936,10 +936,10 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param> 
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
-        /// <returns>PageFaqs</returns>
-        public PageFaqs ListarUsingGET10 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>PageFaqResponse</returns>
+        public PageFaqResponse ListarUsingGET11 (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqs> localVarResponse = ListarUsingGET10WithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqResponse> localVarResponse = ListarUsingGET11WithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -956,8 +956,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param> 
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
-        /// <returns>ApiResponse of PageFaqs</returns>
-        public ApiResponse< PageFaqs > ListarUsingGET10WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>ApiResponse of PageFaqResponse</returns>
+        public ApiResponse< PageFaqResponse > ListarUsingGET11WithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1012,13 +1012,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageFaqs>(localVarStatusCode,
+            return new ApiResponse<PageFaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageFaqs) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaqs)));
+                (PageFaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaqResponse)));
             
         }
 
@@ -1036,10 +1036,10 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of PageFaqs</returns>
-        public async System.Threading.Tasks.Task<PageFaqs> ListarUsingGET10Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>Task of PageFaqResponse</returns>
+        public async System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET11Async (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqs> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -1057,8 +1057,8 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma em que a FAQ se encaixa. (optional)</param>
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
-        /// <returns>Task of ApiResponse (PageFaqs)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageFaqs>> ListarUsingGET10AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        /// <returns>Task of ApiResponse (PageFaqResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET11AsyncWithHttpInfo (int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1113,13 +1113,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageFaqs>(localVarStatusCode,
+            return new ApiResponse<PageFaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageFaqs) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaqs)));
+                (PageFaqResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaqResponse)));
             
         }
         

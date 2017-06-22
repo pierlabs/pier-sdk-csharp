@@ -50,8 +50,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
-        /// <returns>HistoricoImpressaoCartao</returns>
-        HistoricoImpressaoCartao AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao);
+        /// <returns>HistoricoImpressaoCartaoResponse</returns>
+        HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao);
   
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
@@ -62,8 +62,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
-        /// <returns>ApiResponse of HistoricoImpressaoCartao</returns>
-        ApiResponse<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao);
+        /// <returns>ApiResponse of HistoricoImpressaoCartaoResponse</returns>
+        ApiResponse<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao);
         
         /// <summary>
         /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
@@ -74,8 +74,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
-        /// <returns>Cartao</returns>
-        Cartao AtribuirPessoaUsingPUT (long? id, long? idPessoa);
+        /// <returns>CartaoResponse</returns>
+        CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa);
   
         /// <summary>
         /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
@@ -86,8 +86,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
-        /// <returns>ApiResponse of Cartao</returns>
-        ApiResponse<Cartao> AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa);
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        ApiResponse<CartaoResponse> AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
@@ -99,8 +99,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
-        /// <returns>Cartao</returns>
-        Cartao BloquearUsingPUT (long? id, long? idStatus, string observacao);
+        /// <returns>CartaoResponse</returns>
+        CartaoResponse BloquearUsingPUT (long? id, long? idStatus, string observacao);
   
         /// <summary>
         /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
@@ -112,8 +112,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
-        /// <returns>ApiResponse of Cartao</returns>
-        ApiResponse<Cartao> BloquearUsingPUTWithHttpInfo (long? id, long? idStatus, string observacao);
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        ApiResponse<CartaoResponse> BloquearUsingPUTWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
         /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
@@ -147,8 +147,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>DadosCarto</returns>
-        DadosCarto ConsultarDadosReaisCartaoUsingGET (long? id);
+        /// <returns>DadosCartaoResponse</returns>
+        DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id);
   
         /// <summary>
         /// Consultar Detalhes do Cart\u00C3\u00A3o
@@ -158,8 +158,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>ApiResponse of DadosCarto</returns>
-        ApiResponse<DadosCarto> ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id);
+        /// <returns>ApiResponse of DadosCartaoResponse</returns>
+        ApiResponse<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -169,8 +169,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>LimiteDisponibilidade</returns>
-        LimiteDisponibilidade ConsultarLimiteDisponibilidadeUsingGET (long? id);
+        /// <returns>LimiteDisponibilidadeResponse</returns>
+        LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id);
   
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -180,8 +180,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of LimiteDisponibilidade</returns>
-        ApiResponse<LimiteDisponibilidade> ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id);
+        /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
+        ApiResponse<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -191,8 +191,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
-        /// <returns>LoteCartoesPrePagos</returns>
-        LoteCartoesPrePagos ConsultarLotesCartoesPrePagosUsingGET (long? id);
+        /// <returns>LoteCartoesPrePagosResponse</returns>
+        LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id);
   
         /// <summary>
         /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -202,8 +202,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
-        /// <returns>ApiResponse of LoteCartoesPrePagos</returns>
-        ApiResponse<LoteCartoesPrePagos> ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id);
+        /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
+        ApiResponse<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
@@ -213,8 +213,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Portador</returns>
-        Portador ConsultarPortadorUsingGET (long? id);
+        /// <returns>PortadorResponse</returns>
+        PortadorResponse ConsultarPortadorUsingGET (long? id);
   
         /// <summary>
         /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
@@ -224,8 +224,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of Portador</returns>
-        ApiResponse<Portador> ConsultarPortadorUsingGETWithHttpInfo (long? id);
+        /// <returns>ApiResponse of PortadorResponse</returns>
+        ApiResponse<PortadorResponse> ConsultarPortadorUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -235,8 +235,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>CartaoDetalhado</returns>
-        CartaoDetalhado ConsultarUsingGET3 (long? id);
+        /// <returns>CartaoDetalheResponse</returns>
+        CartaoDetalheResponse ConsultarUsingGET3 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -246,8 +246,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of CartaoDetalhado</returns>
-        ApiResponse<CartaoDetalhado> ConsultarUsingGET3WithHttpInfo (long? id);
+        /// <returns>ApiResponse of CartaoDetalheResponse</returns>
+        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET3WithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
@@ -257,8 +257,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Cartao</returns>
-        Cartao DesbloquearSenhaIncorretaUsingPOST (long? id);
+        /// <returns>CartaoResponse</returns>
+        CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id);
   
         /// <summary>
         /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
@@ -268,8 +268,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of Cartao</returns>
-        ApiResponse<Cartao> DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id);
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        ApiResponse<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
@@ -279,8 +279,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Cartao</returns>
-        Cartao DesbloquearUsingPUT (long? id);
+        /// <returns>CartaoResponse</returns>
+        CartaoResponse DesbloquearUsingPUT (long? id);
   
         /// <summary>
         /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
@@ -290,8 +290,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of Cartao</returns>
-        ApiResponse<Cartao> DesbloquearUsingPUTWithHttpInfo (long? id);
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        ApiResponse<CartaoResponse> DesbloquearUsingPUTWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -306,8 +306,8 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <returns>LoteCartoesPrePagos</returns>
-        LoteCartoesPrePagos GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        /// <returns>LoteCartoesPrePagosResponse</returns>
+        LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
   
         /// <summary>
         /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -322,8 +322,8 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <returns>ApiResponse of LoteCartoesPrePagos</returns>
-        ApiResponse<LoteCartoesPrePagos> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
+        ApiResponse<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
         
         /// <summary>
         /// Gerar uma nova via de Cart\u00C3\u00A3o
@@ -333,8 +333,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <returns>Cartao</returns>
-        Cartao GerarNovaViaUsingPOST (long? id);
+        /// <returns>CartaoResponse</returns>
+        CartaoResponse GerarNovaViaUsingPOST (long? id);
   
         /// <summary>
         /// Gerar uma nova via de Cart\u00C3\u00A3o
@@ -344,8 +344,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <returns>ApiResponse of Cartao</returns>
-        ApiResponse<Cartao> GerarNovaViaUsingPOSTWithHttpInfo (long? id);
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        ApiResponse<CartaoResponse> GerarNovaViaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -416,8 +416,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>PageCartoes</returns>
-        PageCartoes ListarUsingGET4 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        /// <returns>PageCartaoResponse</returns>
+        PageCartaoResponse ListarUsingGET5 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
   
         /// <summary>
         /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -446,8 +446,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>ApiResponse of PageCartoes</returns>
-        ApiResponse<PageCartoes> ListarUsingGET4WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        /// <returns>ApiResponse of PageCartaoResponse</returns>
+        ApiResponse<PageCartaoResponse> ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
         
         /// <summary>
         /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
@@ -460,8 +460,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>ValidaCartao</returns>
-        ValidaCartao ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>ValidaCartaoResponse</returns>
+        ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
   
         /// <summary>
         /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
@@ -474,8 +474,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        ApiResponse<ValidaCartao> ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
@@ -488,8 +488,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>ValidaCartao</returns>
-        ValidaCartao ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>ValidaCartaoResponse</returns>
+        ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
   
         /// <summary>
         /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
@@ -502,8 +502,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        ApiResponse<ValidaCartao> ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -514,8 +514,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
-        /// <returns>ValidaCartao</returns>
-        ValidaCartao ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma);
+        /// <returns>ValidaCartaoResponse</returns>
+        ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma);
   
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -526,8 +526,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        ApiResponse<ValidaCartao> ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma);
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        ApiResponse<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma);
         
         /// <summary>
         /// Permite validar a senha de um Cart\u00C3\u00A3o
@@ -538,8 +538,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
-        /// <returns>ValidaSenhaCartao</returns>
-        ValidaSenhaCartao ValidarSenhaUsingGET (long? id, string senha);
+        /// <returns>ValidaSenhaCartaoResponse</returns>
+        ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha);
   
         /// <summary>
         /// Permite validar a senha de um Cart\u00C3\u00A3o
@@ -550,8 +550,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
-        /// <returns>ApiResponse of ValidaSenhaCartao</returns>
-        ApiResponse<ValidaSenhaCartao> ValidarSenhaUsingGETWithHttpInfo (long? id, string senha);
+        /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
+        ApiResponse<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
@@ -563,8 +563,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
-        /// <returns>ValidaCartao</returns>
-        ValidaCartao ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2);
+        /// <returns>ValidaCartaoResponse</returns>
+        ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2);
   
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
@@ -576,8 +576,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        ApiResponse<ValidaCartao> ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        ApiResponse<ValidaCartaoResponse> ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
         
         #endregion Synchronous Operations
         
@@ -616,8 +616,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
-        /// <returns>Task of HistoricoImpressaoCartao</returns>
-        System.Threading.Tasks.Task<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao);
+        /// <returns>Task of HistoricoImpressaoCartaoResponse</returns>
+        System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao);
 
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
@@ -628,8 +628,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
-        /// <returns>Task of ApiResponse (HistoricoImpressaoCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartao>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao);
+        /// <returns>Task of ApiResponse (HistoricoImpressaoCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao);
         
         /// <summary>
         /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
@@ -640,8 +640,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
-        /// <returns>Task of Cartao</returns>
-        System.Threading.Tasks.Task<Cartao> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa);
+        /// <returns>Task of CartaoResponse</returns>
+        System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa);
 
         /// <summary>
         /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
@@ -652,8 +652,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cartao>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa);
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
@@ -665,8 +665,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
-        /// <returns>Task of Cartao</returns>
-        System.Threading.Tasks.Task<Cartao> BloquearUsingPUTAsync (long? id, long? idStatus, string observacao);
+        /// <returns>Task of CartaoResponse</returns>
+        System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPUTAsync (long? id, long? idStatus, string observacao);
 
         /// <summary>
         /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
@@ -678,8 +678,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cartao>> BloquearUsingPUTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPUTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
         /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
@@ -713,8 +713,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of DadosCarto</returns>
-        System.Threading.Tasks.Task<DadosCarto> ConsultarDadosReaisCartaoUsingGETAsync (long? id);
+        /// <returns>Task of DadosCartaoResponse</returns>
+        System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id);
 
         /// <summary>
         /// Consultar Detalhes do Cart\u00C3\u00A3o
@@ -724,8 +724,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (DadosCarto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosCarto>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (DadosCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -735,8 +735,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of LimiteDisponibilidade</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidade> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id);
+        /// <returns>Task of LimiteDisponibilidadeResponse</returns>
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id);
 
         /// <summary>
         /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
@@ -746,8 +746,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (LimiteDisponibilidade)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidade>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -757,8 +757,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
-        /// <returns>Task of LoteCartoesPrePagos</returns>
-        System.Threading.Tasks.Task<LoteCartoesPrePagos> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id);
+        /// <returns>Task of LoteCartoesPrePagosResponse</returns>
+        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id);
 
         /// <summary>
         /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -768,8 +768,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
-        /// <returns>Task of ApiResponse (LoteCartoesPrePagos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagos>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
@@ -779,8 +779,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Portador</returns>
-        System.Threading.Tasks.Task<Portador> ConsultarPortadorUsingGETAsync (long? id);
+        /// <returns>Task of PortadorResponse</returns>
+        System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
@@ -790,8 +790,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Portador)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Portador>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (PortadorResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -801,8 +801,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of CartaoDetalhado</returns>
-        System.Threading.Tasks.Task<CartaoDetalhado> ConsultarUsingGET3Async (long? id);
+        /// <returns>Task of CartaoDetalheResponse</returns>
+        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET3Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -812,8 +812,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (CartaoDetalhado)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoDetalhado>> ConsultarUsingGET3AsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET3AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
@@ -823,8 +823,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Cartao</returns>
-        System.Threading.Tasks.Task<Cartao> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id);
+        /// <returns>Task of CartaoResponse</returns>
+        System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id);
 
         /// <summary>
         /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
@@ -834,8 +834,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cartao>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
@@ -845,8 +845,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Cartao</returns>
-        System.Threading.Tasks.Task<Cartao> DesbloquearUsingPUTAsync (long? id);
+        /// <returns>Task of CartaoResponse</returns>
+        System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPUTAsync (long? id);
 
         /// <summary>
         /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
@@ -856,8 +856,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cartao>> DesbloquearUsingPUTAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPUTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -872,8 +872,8 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <returns>Task of LoteCartoesPrePagos</returns>
-        System.Threading.Tasks.Task<LoteCartoesPrePagos> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        /// <returns>Task of LoteCartoesPrePagosResponse</returns>
+        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
 
         /// <summary>
         /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -888,8 +888,8 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <returns>Task of ApiResponse (LoteCartoesPrePagos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagos>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
         
         /// <summary>
         /// Gerar uma nova via de Cart\u00C3\u00A3o
@@ -899,8 +899,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <returns>Task of Cartao</returns>
-        System.Threading.Tasks.Task<Cartao> GerarNovaViaUsingPOSTAsync (long? id);
+        /// <returns>Task of CartaoResponse</returns>
+        System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id);
 
         /// <summary>
         /// Gerar uma nova via de Cart\u00C3\u00A3o
@@ -910,8 +910,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cartao>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -982,8 +982,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of PageCartoes</returns>
-        System.Threading.Tasks.Task<PageCartoes> ListarUsingGET4Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        /// <returns>Task of PageCartaoResponse</returns>
+        System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET5Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
 
         /// <summary>
         /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -1012,8 +1012,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageCartoes)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartoes>> ListarUsingGET4AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        /// <returns>Task of ApiResponse (PageCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
         
         /// <summary>
         /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
@@ -1026,8 +1026,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ValidaCartao</returns>
-        System.Threading.Tasks.Task<ValidaCartao> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
 
         /// <summary>
         /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
@@ -1040,8 +1040,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
@@ -1054,8 +1054,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ValidaCartao</returns>
-        System.Threading.Tasks.Task<ValidaCartao> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
 
         /// <summary>
         /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
@@ -1068,8 +1068,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -1080,8 +1080,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
-        /// <returns>Task of ValidaCartao</returns>
-        System.Threading.Tasks.Task<ValidaCartao> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma);
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma);
 
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -1092,8 +1092,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma);
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma);
         
         /// <summary>
         /// Permite validar a senha de um Cart\u00C3\u00A3o
@@ -1104,8 +1104,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
-        /// <returns>Task of ValidaSenhaCartao</returns>
-        System.Threading.Tasks.Task<ValidaSenhaCartao> ValidarSenhaUsingGETAsync (long? id, string senha);
+        /// <returns>Task of ValidaSenhaCartaoResponse</returns>
+        System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha);
 
         /// <summary>
         /// Permite validar a senha de um Cart\u00C3\u00A3o
@@ -1116,8 +1116,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
-        /// <returns>Task of ApiResponse (ValidaSenhaCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartao>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha);
+        /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
@@ -1129,8 +1129,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
-        /// <returns>Task of ValidaCartao</returns>
-        System.Threading.Tasks.Task<ValidaCartao> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2);
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2);
 
         /// <summary>
         /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
@@ -1142,8 +1142,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
         
         #endregion Asynchronous Operations
         
@@ -1413,10 +1413,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param> 
-        /// <returns>HistoricoImpressaoCartao</returns>
-        public HistoricoImpressaoCartao AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao)
+        /// <returns>HistoricoImpressaoCartaoResponse</returns>
+        public HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao)
         {
-             ApiResponse<HistoricoImpressaoCartao> localVarResponse = AlterarStatusImpressaoUsingPUTWithHttpInfo(id, idStatusImpressao);
+             ApiResponse<HistoricoImpressaoCartaoResponse> localVarResponse = AlterarStatusImpressaoUsingPUTWithHttpInfo(id, idStatusImpressao);
              return localVarResponse.Data;
         }
 
@@ -1426,8 +1426,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param> 
-        /// <returns>ApiResponse of HistoricoImpressaoCartao</returns>
-        public ApiResponse< HistoricoImpressaoCartao > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao)
+        /// <returns>ApiResponse of HistoricoImpressaoCartaoResponse</returns>
+        public ApiResponse< HistoricoImpressaoCartaoResponse > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao)
         {
             
             // verify the required parameter 'id' is set
@@ -1487,9 +1487,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AlterarStatusImpressaoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<HistoricoImpressaoCartao>(localVarStatusCode,
+            return new ApiResponse<HistoricoImpressaoCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (HistoricoImpressaoCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoricoImpressaoCartao)));
+                (HistoricoImpressaoCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoricoImpressaoCartaoResponse)));
             
         }
 
@@ -1500,10 +1500,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
-        /// <returns>Task of HistoricoImpressaoCartao</returns>
-        public async System.Threading.Tasks.Task<HistoricoImpressaoCartao> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao)
+        /// <returns>Task of HistoricoImpressaoCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao)
         {
-             ApiResponse<HistoricoImpressaoCartao> localVarResponse = await AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo(id, idStatusImpressao);
+             ApiResponse<HistoricoImpressaoCartaoResponse> localVarResponse = await AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo(id, idStatusImpressao);
              return localVarResponse.Data;
 
         }
@@ -1514,8 +1514,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
-        /// <returns>Task of ApiResponse (HistoricoImpressaoCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartao>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao)
+        /// <returns>Task of ApiResponse (HistoricoImpressaoCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarStatusImpressaoUsingPUT");
@@ -1571,9 +1571,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AlterarStatusImpressaoUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<HistoricoImpressaoCartao>(localVarStatusCode,
+            return new ApiResponse<HistoricoImpressaoCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (HistoricoImpressaoCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoricoImpressaoCartao)));
+                (HistoricoImpressaoCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoricoImpressaoCartaoResponse)));
             
         }
         
@@ -1583,10 +1583,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param> 
-        /// <returns>Cartao</returns>
-        public Cartao AtribuirPessoaUsingPUT (long? id, long? idPessoa)
+        /// <returns>CartaoResponse</returns>
+        public CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa)
         {
-             ApiResponse<Cartao> localVarResponse = AtribuirPessoaUsingPUTWithHttpInfo(id, idPessoa);
+             ApiResponse<CartaoResponse> localVarResponse = AtribuirPessoaUsingPUTWithHttpInfo(id, idPessoa);
              return localVarResponse.Data;
         }
 
@@ -1596,8 +1596,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param> 
-        /// <returns>ApiResponse of Cartao</returns>
-        public ApiResponse< Cartao > AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa)
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        public ApiResponse< CartaoResponse > AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa)
         {
             
             // verify the required parameter 'id' is set
@@ -1657,9 +1657,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtribuirPessoaUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
 
@@ -1670,10 +1670,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
-        /// <returns>Task of Cartao</returns>
-        public async System.Threading.Tasks.Task<Cartao> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa)
+        /// <returns>Task of CartaoResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa)
         {
-             ApiResponse<Cartao> localVarResponse = await AtribuirPessoaUsingPUTAsyncWithHttpInfo(id, idPessoa);
+             ApiResponse<CartaoResponse> localVarResponse = await AtribuirPessoaUsingPUTAsyncWithHttpInfo(id, idPessoa);
              return localVarResponse.Data;
 
         }
@@ -1684,8 +1684,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
         /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Cartao>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa)
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirPessoaUsingPUT");
@@ -1741,9 +1741,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtribuirPessoaUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
         
@@ -1754,10 +1754,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param> 
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param> 
-        /// <returns>Cartao</returns>
-        public Cartao BloquearUsingPUT (long? id, long? idStatus, string observacao)
+        /// <returns>CartaoResponse</returns>
+        public CartaoResponse BloquearUsingPUT (long? id, long? idStatus, string observacao)
         {
-             ApiResponse<Cartao> localVarResponse = BloquearUsingPUTWithHttpInfo(id, idStatus, observacao);
+             ApiResponse<CartaoResponse> localVarResponse = BloquearUsingPUTWithHttpInfo(id, idStatus, observacao);
              return localVarResponse.Data;
         }
 
@@ -1768,8 +1768,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param> 
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param> 
-        /// <returns>ApiResponse of Cartao</returns>
-        public ApiResponse< Cartao > BloquearUsingPUTWithHttpInfo (long? id, long? idStatus, string observacao)
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        public ApiResponse< CartaoResponse > BloquearUsingPUTWithHttpInfo (long? id, long? idStatus, string observacao)
         {
             
             // verify the required parameter 'id' is set
@@ -1834,9 +1834,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling BloquearUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
 
@@ -1848,10 +1848,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
-        /// <returns>Task of Cartao</returns>
-        public async System.Threading.Tasks.Task<Cartao> BloquearUsingPUTAsync (long? id, long? idStatus, string observacao)
+        /// <returns>Task of CartaoResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPUTAsync (long? id, long? idStatus, string observacao)
         {
-             ApiResponse<Cartao> localVarResponse = await BloquearUsingPUTAsyncWithHttpInfo(id, idStatus, observacao);
+             ApiResponse<CartaoResponse> localVarResponse = await BloquearUsingPUTAsyncWithHttpInfo(id, idStatus, observacao);
              return localVarResponse.Data;
 
         }
@@ -1863,8 +1863,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
         /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Cartao>> BloquearUsingPUTAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPUTAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling BloquearUsingPUT");
@@ -1923,9 +1923,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling BloquearUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
         
@@ -2104,10 +2104,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
-        /// <returns>DadosCarto</returns>
-        public DadosCarto ConsultarDadosReaisCartaoUsingGET (long? id)
+        /// <returns>DadosCartaoResponse</returns>
+        public DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id)
         {
-             ApiResponse<DadosCarto> localVarResponse = ConsultarDadosReaisCartaoUsingGETWithHttpInfo(id);
+             ApiResponse<DadosCartaoResponse> localVarResponse = ConsultarDadosReaisCartaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2116,8 +2116,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
-        /// <returns>ApiResponse of DadosCarto</returns>
-        public ApiResponse< DadosCarto > ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id)
+        /// <returns>ApiResponse of DadosCartaoResponse</returns>
+        public ApiResponse< DadosCartaoResponse > ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2172,9 +2172,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosReaisCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<DadosCarto>(localVarStatusCode,
+            return new ApiResponse<DadosCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DadosCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCarto)));
+                (DadosCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCartaoResponse)));
             
         }
 
@@ -2184,10 +2184,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of DadosCarto</returns>
-        public async System.Threading.Tasks.Task<DadosCarto> ConsultarDadosReaisCartaoUsingGETAsync (long? id)
+        /// <returns>Task of DadosCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id)
         {
-             ApiResponse<DadosCarto> localVarResponse = await ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<DadosCartaoResponse> localVarResponse = await ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2197,8 +2197,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (DadosCarto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosCarto>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (DadosCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDadosReaisCartaoUsingGET");
@@ -2251,9 +2251,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosReaisCartaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DadosCarto>(localVarStatusCode,
+            return new ApiResponse<DadosCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DadosCarto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCarto)));
+                (DadosCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCartaoResponse)));
             
         }
         
@@ -2262,10 +2262,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>LimiteDisponibilidade</returns>
-        public LimiteDisponibilidade ConsultarLimiteDisponibilidadeUsingGET (long? id)
+        /// <returns>LimiteDisponibilidadeResponse</returns>
+        public LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id)
         {
-             ApiResponse<LimiteDisponibilidade> localVarResponse = ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo(id);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2274,8 +2274,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of LimiteDisponibilidade</returns>
-        public ApiResponse< LimiteDisponibilidade > ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id)
+        /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
+        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2330,9 +2330,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarLimiteDisponibilidadeUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<LimiteDisponibilidade>(localVarStatusCode,
+            return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LimiteDisponibilidade) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimiteDisponibilidade)));
+                (LimiteDisponibilidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimiteDisponibilidadeResponse)));
             
         }
 
@@ -2342,10 +2342,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of LimiteDisponibilidade</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidade> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id)
+        /// <returns>Task of LimiteDisponibilidadeResponse</returns>
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id)
         {
-             ApiResponse<LimiteDisponibilidade> localVarResponse = await ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2355,8 +2355,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (LimiteDisponibilidade)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidade>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarLimiteDisponibilidadeUsingGET");
@@ -2409,9 +2409,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarLimiteDisponibilidadeUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LimiteDisponibilidade>(localVarStatusCode,
+            return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LimiteDisponibilidade) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimiteDisponibilidade)));
+                (LimiteDisponibilidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimiteDisponibilidadeResponse)));
             
         }
         
@@ -2420,10 +2420,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param> 
-        /// <returns>LoteCartoesPrePagos</returns>
-        public LoteCartoesPrePagos ConsultarLotesCartoesPrePagosUsingGET (long? id)
+        /// <returns>LoteCartoesPrePagosResponse</returns>
+        public LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id)
         {
-             ApiResponse<LoteCartoesPrePagos> localVarResponse = ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo(id);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2432,8 +2432,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param> 
-        /// <returns>ApiResponse of LoteCartoesPrePagos</returns>
-        public ApiResponse< LoteCartoesPrePagos > ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id)
+        /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
+        public ApiResponse< LoteCartoesPrePagosResponse > ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2488,9 +2488,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarLotesCartoesPrePagosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<LoteCartoesPrePagos>(localVarStatusCode,
+            return new ApiResponse<LoteCartoesPrePagosResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LoteCartoesPrePagos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagos)));
+                (LoteCartoesPrePagosResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagosResponse)));
             
         }
 
@@ -2500,10 +2500,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
-        /// <returns>Task of LoteCartoesPrePagos</returns>
-        public async System.Threading.Tasks.Task<LoteCartoesPrePagos> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id)
+        /// <returns>Task of LoteCartoesPrePagosResponse</returns>
+        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id)
         {
-             ApiResponse<LoteCartoesPrePagos> localVarResponse = await ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2513,8 +2513,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
-        /// <returns>Task of ApiResponse (LoteCartoesPrePagos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagos>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarLotesCartoesPrePagosUsingGET");
@@ -2567,9 +2567,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarLotesCartoesPrePagosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LoteCartoesPrePagos>(localVarStatusCode,
+            return new ApiResponse<LoteCartoesPrePagosResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LoteCartoesPrePagos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagos)));
+                (LoteCartoesPrePagosResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagosResponse)));
             
         }
         
@@ -2578,10 +2578,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>Portador</returns>
-        public Portador ConsultarPortadorUsingGET (long? id)
+        /// <returns>PortadorResponse</returns>
+        public PortadorResponse ConsultarPortadorUsingGET (long? id)
         {
-             ApiResponse<Portador> localVarResponse = ConsultarPortadorUsingGETWithHttpInfo(id);
+             ApiResponse<PortadorResponse> localVarResponse = ConsultarPortadorUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2590,8 +2590,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of Portador</returns>
-        public ApiResponse< Portador > ConsultarPortadorUsingGETWithHttpInfo (long? id)
+        /// <returns>ApiResponse of PortadorResponse</returns>
+        public ApiResponse< PortadorResponse > ConsultarPortadorUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2646,9 +2646,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarPortadorUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Portador>(localVarStatusCode,
+            return new ApiResponse<PortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Portador) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Portador)));
+                (PortadorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorResponse)));
             
         }
 
@@ -2658,10 +2658,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Portador</returns>
-        public async System.Threading.Tasks.Task<Portador> ConsultarPortadorUsingGETAsync (long? id)
+        /// <returns>Task of PortadorResponse</returns>
+        public async System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id)
         {
-             ApiResponse<Portador> localVarResponse = await ConsultarPortadorUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<PortadorResponse> localVarResponse = await ConsultarPortadorUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2671,8 +2671,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Portador)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Portador>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (PortadorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPortadorUsingGET");
@@ -2725,9 +2725,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarPortadorUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Portador>(localVarStatusCode,
+            return new ApiResponse<PortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Portador) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Portador)));
+                (PortadorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorResponse)));
             
         }
         
@@ -2736,10 +2736,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>CartaoDetalhado</returns>
-        public CartaoDetalhado ConsultarUsingGET3 (long? id)
+        /// <returns>CartaoDetalheResponse</returns>
+        public CartaoDetalheResponse ConsultarUsingGET3 (long? id)
         {
-             ApiResponse<CartaoDetalhado> localVarResponse = ConsultarUsingGET3WithHttpInfo(id);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET3WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2748,8 +2748,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of CartaoDetalhado</returns>
-        public ApiResponse< CartaoDetalhado > ConsultarUsingGET3WithHttpInfo (long? id)
+        /// <returns>ApiResponse of CartaoDetalheResponse</returns>
+        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET3WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2804,9 +2804,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<CartaoDetalhado>(localVarStatusCode,
+            return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CartaoDetalhado) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoDetalhado)));
+                (CartaoDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoDetalheResponse)));
             
         }
 
@@ -2816,10 +2816,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of CartaoDetalhado</returns>
-        public async System.Threading.Tasks.Task<CartaoDetalhado> ConsultarUsingGET3Async (long? id)
+        /// <returns>Task of CartaoDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET3Async (long? id)
         {
-             ApiResponse<CartaoDetalhado> localVarResponse = await ConsultarUsingGET3AsyncWithHttpInfo(id);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET3AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2829,8 +2829,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (CartaoDetalhado)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalhado>> ConsultarUsingGET3AsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET3AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET3");
@@ -2883,9 +2883,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CartaoDetalhado>(localVarStatusCode,
+            return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CartaoDetalhado) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoDetalhado)));
+                (CartaoDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoDetalheResponse)));
             
         }
         
@@ -2894,10 +2894,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>Cartao</returns>
-        public Cartao DesbloquearSenhaIncorretaUsingPOST (long? id)
+        /// <returns>CartaoResponse</returns>
+        public CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id)
         {
-             ApiResponse<Cartao> localVarResponse = DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo(id);
+             ApiResponse<CartaoResponse> localVarResponse = DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2906,8 +2906,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of Cartao</returns>
-        public ApiResponse< Cartao > DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id)
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        public ApiResponse< CartaoResponse > DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2962,9 +2962,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesbloquearSenhaIncorretaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
 
@@ -2974,10 +2974,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Cartao</returns>
-        public async System.Threading.Tasks.Task<Cartao> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id)
+        /// <returns>Task of CartaoResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id)
         {
-             ApiResponse<Cartao> localVarResponse = await DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo(id);
+             ApiResponse<CartaoResponse> localVarResponse = await DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2987,8 +2987,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Cartao>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesbloquearSenhaIncorretaUsingPOST");
@@ -3041,9 +3041,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesbloquearSenhaIncorretaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
         
@@ -3052,10 +3052,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>Cartao</returns>
-        public Cartao DesbloquearUsingPUT (long? id)
+        /// <returns>CartaoResponse</returns>
+        public CartaoResponse DesbloquearUsingPUT (long? id)
         {
-             ApiResponse<Cartao> localVarResponse = DesbloquearUsingPUTWithHttpInfo(id);
+             ApiResponse<CartaoResponse> localVarResponse = DesbloquearUsingPUTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3064,8 +3064,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of Cartao</returns>
-        public ApiResponse< Cartao > DesbloquearUsingPUTWithHttpInfo (long? id)
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        public ApiResponse< CartaoResponse > DesbloquearUsingPUTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3120,9 +3120,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesbloquearUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
 
@@ -3132,10 +3132,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Cartao</returns>
-        public async System.Threading.Tasks.Task<Cartao> DesbloquearUsingPUTAsync (long? id)
+        /// <returns>Task of CartaoResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPUTAsync (long? id)
         {
-             ApiResponse<Cartao> localVarResponse = await DesbloquearUsingPUTAsyncWithHttpInfo(id);
+             ApiResponse<CartaoResponse> localVarResponse = await DesbloquearUsingPUTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3145,8 +3145,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Cartao>> DesbloquearUsingPUTAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPUTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesbloquearUsingPUT");
@@ -3199,9 +3199,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesbloquearUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
         
@@ -3215,10 +3215,10 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
-        /// <returns>LoteCartoesPrePagos</returns>
-        public LoteCartoesPrePagos GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        /// <returns>LoteCartoesPrePagosResponse</returns>
+        public LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
         {
-             ApiResponse<LoteCartoesPrePagos> localVarResponse = GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes);
              return localVarResponse.Data;
         }
 
@@ -3232,8 +3232,8 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
-        /// <returns>ApiResponse of LoteCartoesPrePagos</returns>
-        public ApiResponse< LoteCartoesPrePagos > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
+        public ApiResponse< LoteCartoesPrePagosResponse > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
         {
             
     
@@ -3289,9 +3289,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarLotesCartoesPrePagosUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<LoteCartoesPrePagos>(localVarStatusCode,
+            return new ApiResponse<LoteCartoesPrePagosResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LoteCartoesPrePagos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagos)));
+                (LoteCartoesPrePagosResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagosResponse)));
             
         }
 
@@ -3306,10 +3306,10 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <returns>Task of LoteCartoesPrePagos</returns>
-        public async System.Threading.Tasks.Task<LoteCartoesPrePagos> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        /// <returns>Task of LoteCartoesPrePagosResponse</returns>
+        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
         {
-             ApiResponse<LoteCartoesPrePagos> localVarResponse = await GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes);
              return localVarResponse.Data;
 
         }
@@ -3324,8 +3324,8 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <returns>Task of ApiResponse (LoteCartoesPrePagos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagos>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
         {
             
     
@@ -3381,9 +3381,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarLotesCartoesPrePagosUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LoteCartoesPrePagos>(localVarStatusCode,
+            return new ApiResponse<LoteCartoesPrePagosResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (LoteCartoesPrePagos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagos)));
+                (LoteCartoesPrePagosResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoteCartoesPrePagosResponse)));
             
         }
         
@@ -3392,10 +3392,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
-        /// <returns>Cartao</returns>
-        public Cartao GerarNovaViaUsingPOST (long? id)
+        /// <returns>CartaoResponse</returns>
+        public CartaoResponse GerarNovaViaUsingPOST (long? id)
         {
-             ApiResponse<Cartao> localVarResponse = GerarNovaViaUsingPOSTWithHttpInfo(id);
+             ApiResponse<CartaoResponse> localVarResponse = GerarNovaViaUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3404,8 +3404,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
-        /// <returns>ApiResponse of Cartao</returns>
-        public ApiResponse< Cartao > GerarNovaViaUsingPOSTWithHttpInfo (long? id)
+        /// <returns>ApiResponse of CartaoResponse</returns>
+        public ApiResponse< CartaoResponse > GerarNovaViaUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3460,9 +3460,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarNovaViaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
 
@@ -3472,10 +3472,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <returns>Task of Cartao</returns>
-        public async System.Threading.Tasks.Task<Cartao> GerarNovaViaUsingPOSTAsync (long? id)
+        /// <returns>Task of CartaoResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id)
         {
-             ApiResponse<Cartao> localVarResponse = await GerarNovaViaUsingPOSTAsyncWithHttpInfo(id);
+             ApiResponse<CartaoResponse> localVarResponse = await GerarNovaViaUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3485,8 +3485,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <returns>Task of ApiResponse (Cartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Cartao>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarNovaViaUsingPOST");
@@ -3539,9 +3539,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarNovaViaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Cartao>(localVarStatusCode,
+            return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Cartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cartao)));
+                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
             
         }
         
@@ -3781,10 +3781,10 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param> 
-        /// <returns>PageCartoes</returns>
-        public PageCartoes ListarUsingGET4 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        /// <returns>PageCartaoResponse</returns>
+        public PageCartaoResponse ListarUsingGET5 (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
-             ApiResponse<PageCartoes> localVarResponse = ListarUsingGET4WithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
+             ApiResponse<PageCartaoResponse> localVarResponse = ListarUsingGET5WithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
              return localVarResponse.Data;
         }
 
@@ -3812,8 +3812,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param> 
-        /// <returns>ApiResponse of PageCartoes</returns>
-        public ApiResponse< PageCartoes > ListarUsingGET4WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        /// <returns>ApiResponse of PageCartaoResponse</returns>
+        public ApiResponse< PageCartaoResponse > ListarUsingGET5WithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
             
     
@@ -3879,13 +3879,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageCartoes>(localVarStatusCode,
+            return new ApiResponse<PageCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCartoes)));
+                (PageCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCartaoResponse)));
             
         }
 
@@ -3914,10 +3914,10 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of PageCartoes</returns>
-        public async System.Threading.Tasks.Task<PageCartoes> ListarUsingGET4Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        /// <returns>Task of PageCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET5Async (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
-             ApiResponse<PageCartoes> localVarResponse = await ListarUsingGET4AsyncWithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
+             ApiResponse<PageCartaoResponse> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
              return localVarResponse.Data;
 
         }
@@ -3946,8 +3946,8 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
         /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
         /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageCartoes)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartoes>> ListarUsingGET4AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        /// <returns>Task of ApiResponse (PageCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET5AsyncWithHttpInfo (int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
             
     
@@ -4013,13 +4013,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageCartoes>(localVarStatusCode,
+            return new ApiResponse<PageCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCartoes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCartoes)));
+                (PageCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCartaoResponse)));
             
         }
         
@@ -4031,10 +4031,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
-        /// <returns>ValidaCartao</returns>
-        public ValidaCartao ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>ValidaCartaoResponse</returns>
+        public ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartao> localVarResponse = ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
         }
 
@@ -4046,8 +4046,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        public ApiResponse< ValidaCartao > ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -4117,9 +4117,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarDadosImpressosBandeiradoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
 
@@ -4132,10 +4132,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ValidaCartao</returns>
-        public async System.Threading.Tasks.Task<ValidaCartao> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartao> localVarResponse = await ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
 
         }
@@ -4148,8 +4148,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarDadosImpressosBandeiradoUsingGET");
@@ -4211,9 +4211,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarDadosImpressosBandeiradoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
         
@@ -4225,10 +4225,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
-        /// <returns>ValidaCartao</returns>
-        public ValidaCartao ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>ValidaCartaoResponse</returns>
+        public ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartao> localVarResponse = ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
         }
 
@@ -4240,8 +4240,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        public ApiResponse< ValidaCartao > ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -4311,9 +4311,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarDadosImpressosNaoBandeiradoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
 
@@ -4326,10 +4326,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ValidaCartao</returns>
-        public async System.Threading.Tasks.Task<ValidaCartao> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartao> localVarResponse = await ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
 
         }
@@ -4342,8 +4342,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
         /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
         /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarDadosImpressosNaoBandeiradoUsingGET");
@@ -4405,9 +4405,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarDadosImpressosNaoBandeiradoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
         
@@ -4417,10 +4417,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param> 
-        /// <returns>ValidaCartao</returns>
-        public ValidaCartao ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma)
+        /// <returns>ValidaCartaoResponse</returns>
+        public ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma)
         {
-             ApiResponse<ValidaCartao> localVarResponse = ValidarDe55CartaoMastercardUsingGETWithHttpInfo(numeroCartao, criptograma);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDe55CartaoMastercardUsingGETWithHttpInfo(numeroCartao, criptograma);
              return localVarResponse.Data;
         }
 
@@ -4430,8 +4430,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param> 
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        public ApiResponse< ValidaCartao > ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma)
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        public ApiResponse< ValidaCartaoResponse > ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -4491,9 +4491,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarDe55CartaoMastercardUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
 
@@ -4504,10 +4504,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
-        /// <returns>Task of ValidaCartao</returns>
-        public async System.Threading.Tasks.Task<ValidaCartao> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma)
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma)
         {
-             ApiResponse<ValidaCartao> localVarResponse = await ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo(numeroCartao, criptograma);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo(numeroCartao, criptograma);
              return localVarResponse.Data;
 
         }
@@ -4518,8 +4518,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma)
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarDe55CartaoMastercardUsingGET");
@@ -4575,9 +4575,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarDe55CartaoMastercardUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
         
@@ -4587,10 +4587,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="senha">Senha para ser validada.</param> 
-        /// <returns>ValidaSenhaCartao</returns>
-        public ValidaSenhaCartao ValidarSenhaUsingGET (long? id, string senha)
+        /// <returns>ValidaSenhaCartaoResponse</returns>
+        public ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha)
         {
-             ApiResponse<ValidaSenhaCartao> localVarResponse = ValidarSenhaUsingGETWithHttpInfo(id, senha);
+             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = ValidarSenhaUsingGETWithHttpInfo(id, senha);
              return localVarResponse.Data;
         }
 
@@ -4600,8 +4600,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <param name="senha">Senha para ser validada.</param> 
-        /// <returns>ApiResponse of ValidaSenhaCartao</returns>
-        public ApiResponse< ValidaSenhaCartao > ValidarSenhaUsingGETWithHttpInfo (long? id, string senha)
+        /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
+        public ApiResponse< ValidaSenhaCartaoResponse > ValidarSenhaUsingGETWithHttpInfo (long? id, string senha)
         {
             
             // verify the required parameter 'id' is set
@@ -4661,9 +4661,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarSenhaUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ValidaSenhaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaSenhaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaSenhaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaSenhaCartao)));
+                (ValidaSenhaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaSenhaCartaoResponse)));
             
         }
 
@@ -4674,10 +4674,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
-        /// <returns>Task of ValidaSenhaCartao</returns>
-        public async System.Threading.Tasks.Task<ValidaSenhaCartao> ValidarSenhaUsingGETAsync (long? id, string senha)
+        /// <returns>Task of ValidaSenhaCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha)
         {
-             ApiResponse<ValidaSenhaCartao> localVarResponse = await ValidarSenhaUsingGETAsyncWithHttpInfo(id, senha);
+             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = await ValidarSenhaUsingGETAsyncWithHttpInfo(id, senha);
              return localVarResponse.Data;
 
         }
@@ -4688,8 +4688,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
-        /// <returns>Task of ApiResponse (ValidaSenhaCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartao>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha)
+        /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ValidarSenhaUsingGET");
@@ -4745,9 +4745,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarSenhaUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ValidaSenhaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaSenhaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaSenhaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaSenhaCartao)));
+                (ValidaSenhaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaSenhaCartaoResponse)));
             
         }
         
@@ -4758,10 +4758,10 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param> 
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param> 
-        /// <returns>ValidaCartao</returns>
-        public ValidaCartao ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2)
+        /// <returns>ValidaCartaoResponse</returns>
+        public ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2)
         {
-             ApiResponse<ValidaCartao> localVarResponse = ValidarTarjaUsingGETWithHttpInfo(numeroCartao, trilha1, trilha2);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarTarjaUsingGETWithHttpInfo(numeroCartao, trilha1, trilha2);
              return localVarResponse.Data;
         }
 
@@ -4772,8 +4772,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param> 
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param> 
-        /// <returns>ApiResponse of ValidaCartao</returns>
-        public ApiResponse< ValidaCartao > ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
+        /// <returns>ApiResponse of ValidaCartaoResponse</returns>
+        public ApiResponse< ValidaCartaoResponse > ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -4838,9 +4838,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarTarjaUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
 
@@ -4852,10 +4852,10 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
-        /// <returns>Task of ValidaCartao</returns>
-        public async System.Threading.Tasks.Task<ValidaCartao> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2)
+        /// <returns>Task of ValidaCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2)
         {
-             ApiResponse<ValidaCartao> localVarResponse = await ValidarTarjaUsingGETAsyncWithHttpInfo(numeroCartao, trilha1, trilha2);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarTarjaUsingGETAsyncWithHttpInfo(numeroCartao, trilha1, trilha2);
              return localVarResponse.Data;
 
         }
@@ -4867,8 +4867,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
         /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
         /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
-        /// <returns>Task of ApiResponse (ValidaCartao)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartao>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
+        /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarTarjaUsingGET");
@@ -4927,9 +4927,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarTarjaUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ValidaCartao>(localVarStatusCode,
+            return new ApiResponse<ValidaCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ValidaCartao) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartao)));
+                (ValidaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidaCartaoResponse)));
             
         }
         

@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TipoTransacaoEnum {
+        public enum TipoOrigemTransacaoEnum {
             
             [EnumMember(Value = "ON_US")]
             OnUs,
@@ -37,20 +37,20 @@ namespace Conductor.Pier.Model
         /// Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
         /// </summary>
         /// <value>Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).</value>
-        [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
-        public TipoTransacaoEnum? TipoTransacao { get; set; }
+        [DataMember(Name="tipoOrigemTransacao", EmitDefaultValue=false)]
+        public TipoOrigemTransacaoEnum? TipoOrigemTransacao { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" />class.
         /// </summary>
         /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (required).</param>
-        /// <param name="TipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US). (required).</param>
+        /// <param name="TipoOrigemTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US). (required).</param>
         /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
         /// <param name="ValorParametro">Valor do Par\u00C3\u00A2metro. (required).</param>
         /// <param name="DataValidade">Data de Validade do Par\u00C3\u00A2metro do Produto. (required).</param>
 
-        public ParametroProdutoResponse(long? IdProduto = null, TipoTransacaoEnum? TipoTransacao = null, string Descricao = null, double? ValorParametro = null, string DataValidade = null)
+        public ParametroProdutoResponse(long? IdProduto = null, TipoOrigemTransacaoEnum? TipoOrigemTransacao = null, string Descricao = null, double? ValorParametro = null, string DataValidade = null)
         {
             // to ensure "IdProduto" is required (not null)
             if (IdProduto == null)
@@ -61,14 +61,14 @@ namespace Conductor.Pier.Model
             {
                 this.IdProduto = IdProduto;
             }
-            // to ensure "TipoTransacao" is required (not null)
-            if (TipoTransacao == null)
+            // to ensure "TipoOrigemTransacao" is required (not null)
+            if (TipoOrigemTransacao == null)
             {
-                throw new InvalidDataException("TipoTransacao is a required property for ParametroProdutoResponse and cannot be null");
+                throw new InvalidDataException("TipoOrigemTransacao is a required property for ParametroProdutoResponse and cannot be null");
             }
             else
             {
-                this.TipoTransacao = TipoTransacao;
+                this.TipoOrigemTransacao = TipoOrigemTransacao;
             }
             // to ensure "Descricao" is required (not null)
             if (Descricao == null)
@@ -138,7 +138,7 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class ParametroProdutoResponse {\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
-            sb.Append("  TipoTransacao: ").Append(TipoTransacao).Append("\n");
+            sb.Append("  TipoOrigemTransacao: ").Append(TipoOrigemTransacao).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  ValorParametro: ").Append(ValorParametro).Append("\n");
             sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
@@ -185,9 +185,9 @@ namespace Conductor.Pier.Model
                     this.IdProduto.Equals(other.IdProduto)
                 ) && 
                 (
-                    this.TipoTransacao == other.TipoTransacao ||
-                    this.TipoTransacao != null &&
-                    this.TipoTransacao.Equals(other.TipoTransacao)
+                    this.TipoOrigemTransacao == other.TipoOrigemTransacao ||
+                    this.TipoOrigemTransacao != null &&
+                    this.TipoOrigemTransacao.Equals(other.TipoOrigemTransacao)
                 ) && 
                 (
                     this.Descricao == other.Descricao ||
@@ -221,8 +221,8 @@ namespace Conductor.Pier.Model
                 if (this.IdProduto != null)
                     hash = hash * 59 + this.IdProduto.GetHashCode();
                 
-                if (this.TipoTransacao != null)
-                    hash = hash * 59 + this.TipoTransacao.GetHashCode();
+                if (this.TipoOrigemTransacao != null)
+                    hash = hash * 59 + this.TipoOrigemTransacao.GetHashCode();
                 
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();

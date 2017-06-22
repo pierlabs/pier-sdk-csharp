@@ -33,7 +33,7 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroParcelas">N\u00C3\u00BAmero de parcelas da compra..</param>
         /// <param name="NumeroParcelasAntecipaveis">N\u00C3\u00BAmero de parcelas antecip\u00C3\u00A1veis da compra..</param>
         /// <param name="NomeEstabelecimento">Nome do estabelecimento da compra..</param>
-        /// <param name="TipoTransacao">Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra..</param>
+        /// <param name="TipoOrigemTransacao">Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra..</param>
         /// <param name="Cidade">Cidade onde a compra foi realizada..</param>
         /// <param name="Pais">Pa\u00C3\u00ADs onde a compra foi realizada..</param>
         /// <param name="Latitude">Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra..</param>
@@ -46,7 +46,7 @@ namespace Conductor.Pier.Model
         /// <param name="Cartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o da compra..</param>
         /// <param name="NomePortadorCartao">Nome do portador do cart\u00C3\u00A3o da compra..</param>
 
-        public CompraResponse(long? Mcc = null, string Uf = null, long? IdCompra = null, string Status = null, string DataCompra = null, double? ValorTotalCompra = null, double? ValorParcela = null, double? PrimeiraParcela = null, int? NumeroParcelas = null, int? NumeroParcelasAntecipaveis = null, string NomeEstabelecimento = null, string TipoTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdConta = null, long? IdProduto = null, string DescricaoProduto = null, string Cartao = null, string NomePortadorCartao = null)
+        public CompraResponse(long? Mcc = null, string Uf = null, long? IdCompra = null, string Status = null, string DataCompra = null, double? ValorTotalCompra = null, double? ValorParcela = null, double? PrimeiraParcela = null, int? NumeroParcelas = null, int? NumeroParcelasAntecipaveis = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdConta = null, long? IdProduto = null, string DescricaoProduto = null, string Cartao = null, string NomePortadorCartao = null)
         {
             this.Mcc = Mcc;
             this.Uf = Uf;
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Model
             this.NumeroParcelas = NumeroParcelas;
             this.NumeroParcelasAntecipaveis = NumeroParcelasAntecipaveis;
             this.NomeEstabelecimento = NomeEstabelecimento;
-            this.TipoTransacao = TipoTransacao;
+            this.TipoOrigemTransacao = TipoOrigemTransacao;
             this.Cidade = Cidade;
             this.Pais = Pais;
             this.Latitude = Latitude;
@@ -154,8 +154,8 @@ namespace Conductor.Pier.Model
         /// Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
         /// </summary>
         /// <value>Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.</value>
-        [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
-        public string TipoTransacao { get; set; }
+        [DataMember(Name="tipoOrigemTransacao", EmitDefaultValue=false)]
+        public string TipoOrigemTransacao { get; set; }
     
         /// <summary>
         /// Cidade onde a compra foi realizada.
@@ -253,7 +253,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
             sb.Append("  NumeroParcelasAntecipaveis: ").Append(NumeroParcelasAntecipaveis).Append("\n");
             sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
-            sb.Append("  TipoTransacao: ").Append(TipoTransacao).Append("\n");
+            sb.Append("  TipoOrigemTransacao: ").Append(TipoOrigemTransacao).Append("\n");
             sb.Append("  Cidade: ").Append(Cidade).Append("\n");
             sb.Append("  Pais: ").Append(Pais).Append("\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
@@ -358,9 +358,9 @@ namespace Conductor.Pier.Model
                     this.NomeEstabelecimento.Equals(other.NomeEstabelecimento)
                 ) && 
                 (
-                    this.TipoTransacao == other.TipoTransacao ||
-                    this.TipoTransacao != null &&
-                    this.TipoTransacao.Equals(other.TipoTransacao)
+                    this.TipoOrigemTransacao == other.TipoOrigemTransacao ||
+                    this.TipoOrigemTransacao != null &&
+                    this.TipoOrigemTransacao.Equals(other.TipoOrigemTransacao)
                 ) && 
                 (
                     this.Cidade == other.Cidade ||
@@ -464,8 +464,8 @@ namespace Conductor.Pier.Model
                 if (this.NomeEstabelecimento != null)
                     hash = hash * 59 + this.NomeEstabelecimento.GetHashCode();
                 
-                if (this.TipoTransacao != null)
-                    hash = hash * 59 + this.TipoTransacao.GetHashCode();
+                if (this.TipoOrigemTransacao != null)
+                    hash = hash * 59 + this.TipoOrigemTransacao.GetHashCode();
                 
                 if (this.Cidade != null)
                     hash = hash * 59 + this.Cidade.GetHashCode();

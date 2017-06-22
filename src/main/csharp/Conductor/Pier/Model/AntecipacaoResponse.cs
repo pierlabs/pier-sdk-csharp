@@ -25,18 +25,24 @@ namespace Conductor.Pier.Model
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
         /// <param name="IdCompra">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
-        /// <param name="QuantidadeParcelasTotal">Apresenta o numero total de parcelas da comprae.</param>
+        /// <param name="QuantidadeParcelasTotal">Apresenta o numero total de parcelas da compra.</param>
         /// <param name="QuantidadeParcelasAntecipadas">Apresenta o numero de parcelas antecipadas.</param>
-        /// <param name="ValorParcelas">Apresenta o valor das parcelas efetivadas.</param>
+        /// <param name="ValorParcela">Apresenta o valor de cada parcela antecipadas.</param>
+        /// <param name="ValorDescontoTotal">Apresenta o valor total do desconto.</param>
+        /// <param name="ValorTotalComDesconto">Apresenta o valor total com desconto.</param>
+        /// <param name="TaxaDesconto">Apresenta a taxa de desconto.</param>
 
-        public AntecipacaoResponse(long? Id = null, long? IdConta = null, long? IdCompra = null, long? QuantidadeParcelasTotal = null, long? QuantidadeParcelasAntecipadas = null, double? ValorParcelas = null)
+        public AntecipacaoResponse(long? Id = null, long? IdConta = null, long? IdCompra = null, long? QuantidadeParcelasTotal = null, long? QuantidadeParcelasAntecipadas = null, double? ValorParcela = null, double? ValorDescontoTotal = null, double? ValorTotalComDesconto = null, double? TaxaDesconto = null)
         {
             this.Id = Id;
             this.IdConta = IdConta;
             this.IdCompra = IdCompra;
             this.QuantidadeParcelasTotal = QuantidadeParcelasTotal;
             this.QuantidadeParcelasAntecipadas = QuantidadeParcelasAntecipadas;
-            this.ValorParcelas = ValorParcelas;
+            this.ValorParcela = ValorParcela;
+            this.ValorDescontoTotal = ValorDescontoTotal;
+            this.ValorTotalComDesconto = ValorTotalComDesconto;
+            this.TaxaDesconto = TaxaDesconto;
             
         }
         
@@ -63,9 +69,9 @@ namespace Conductor.Pier.Model
         public long? IdCompra { get; set; }
     
         /// <summary>
-        /// Apresenta o numero total de parcelas da comprae
+        /// Apresenta o numero total de parcelas da compra
         /// </summary>
-        /// <value>Apresenta o numero total de parcelas da comprae</value>
+        /// <value>Apresenta o numero total de parcelas da compra</value>
         [DataMember(Name="quantidadeParcelasTotal", EmitDefaultValue=false)]
         public long? QuantidadeParcelasTotal { get; set; }
     
@@ -77,11 +83,32 @@ namespace Conductor.Pier.Model
         public long? QuantidadeParcelasAntecipadas { get; set; }
     
         /// <summary>
-        /// Apresenta o valor das parcelas efetivadas
+        /// Apresenta o valor de cada parcela antecipadas
         /// </summary>
-        /// <value>Apresenta o valor das parcelas efetivadas</value>
-        [DataMember(Name="valorParcelas", EmitDefaultValue=false)]
-        public double? ValorParcelas { get; set; }
+        /// <value>Apresenta o valor de cada parcela antecipadas</value>
+        [DataMember(Name="valorParcela", EmitDefaultValue=false)]
+        public double? ValorParcela { get; set; }
+    
+        /// <summary>
+        /// Apresenta o valor total do desconto
+        /// </summary>
+        /// <value>Apresenta o valor total do desconto</value>
+        [DataMember(Name="valorDescontoTotal", EmitDefaultValue=false)]
+        public double? ValorDescontoTotal { get; set; }
+    
+        /// <summary>
+        /// Apresenta o valor total com desconto
+        /// </summary>
+        /// <value>Apresenta o valor total com desconto</value>
+        [DataMember(Name="valorTotalComDesconto", EmitDefaultValue=false)]
+        public double? ValorTotalComDesconto { get; set; }
+    
+        /// <summary>
+        /// Apresenta a taxa de desconto
+        /// </summary>
+        /// <value>Apresenta a taxa de desconto</value>
+        [DataMember(Name="taxaDesconto", EmitDefaultValue=false)]
+        public double? TaxaDesconto { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -96,7 +123,10 @@ namespace Conductor.Pier.Model
             sb.Append("  IdCompra: ").Append(IdCompra).Append("\n");
             sb.Append("  QuantidadeParcelasTotal: ").Append(QuantidadeParcelasTotal).Append("\n");
             sb.Append("  QuantidadeParcelasAntecipadas: ").Append(QuantidadeParcelasAntecipadas).Append("\n");
-            sb.Append("  ValorParcelas: ").Append(ValorParcelas).Append("\n");
+            sb.Append("  ValorParcela: ").Append(ValorParcela).Append("\n");
+            sb.Append("  ValorDescontoTotal: ").Append(ValorDescontoTotal).Append("\n");
+            sb.Append("  ValorTotalComDesconto: ").Append(ValorTotalComDesconto).Append("\n");
+            sb.Append("  TaxaDesconto: ").Append(TaxaDesconto).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -160,9 +190,24 @@ namespace Conductor.Pier.Model
                     this.QuantidadeParcelasAntecipadas.Equals(other.QuantidadeParcelasAntecipadas)
                 ) && 
                 (
-                    this.ValorParcelas == other.ValorParcelas ||
-                    this.ValorParcelas != null &&
-                    this.ValorParcelas.Equals(other.ValorParcelas)
+                    this.ValorParcela == other.ValorParcela ||
+                    this.ValorParcela != null &&
+                    this.ValorParcela.Equals(other.ValorParcela)
+                ) && 
+                (
+                    this.ValorDescontoTotal == other.ValorDescontoTotal ||
+                    this.ValorDescontoTotal != null &&
+                    this.ValorDescontoTotal.Equals(other.ValorDescontoTotal)
+                ) && 
+                (
+                    this.ValorTotalComDesconto == other.ValorTotalComDesconto ||
+                    this.ValorTotalComDesconto != null &&
+                    this.ValorTotalComDesconto.Equals(other.ValorTotalComDesconto)
+                ) && 
+                (
+                    this.TaxaDesconto == other.TaxaDesconto ||
+                    this.TaxaDesconto != null &&
+                    this.TaxaDesconto.Equals(other.TaxaDesconto)
                 );
         }
 
@@ -193,8 +238,17 @@ namespace Conductor.Pier.Model
                 if (this.QuantidadeParcelasAntecipadas != null)
                     hash = hash * 59 + this.QuantidadeParcelasAntecipadas.GetHashCode();
                 
-                if (this.ValorParcelas != null)
-                    hash = hash * 59 + this.ValorParcelas.GetHashCode();
+                if (this.ValorParcela != null)
+                    hash = hash * 59 + this.ValorParcela.GetHashCode();
+                
+                if (this.ValorDescontoTotal != null)
+                    hash = hash * 59 + this.ValorDescontoTotal.GetHashCode();
+                
+                if (this.ValorTotalComDesconto != null)
+                    hash = hash * 59 + this.ValorTotalComDesconto.GetHashCode();
+                
+                if (this.TaxaDesconto != null)
+                    hash = hash * 59 + this.TaxaDesconto.GetHashCode();
                 
                 return hash;
             }

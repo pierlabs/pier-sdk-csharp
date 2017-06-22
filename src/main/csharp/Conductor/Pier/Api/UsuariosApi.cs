@@ -146,8 +146,8 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
-        /// <returns>PageUsuarios</returns>
-        PageUsuarios ListarUsingGET29 (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        /// <returns>PageUsuarioResponse</returns>
+        PageUsuarioResponse ListarUsingGET30 (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
   
         /// <summary>
         /// Lista os Usu\u00C3\u00A1rios cadastrados
@@ -162,8 +162,8 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
-        /// <returns>ApiResponse of PageUsuarios</returns>
-        ApiResponse<PageUsuarios> ListarUsingGET29WithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        /// <returns>ApiResponse of PageUsuarioResponse</returns>
+        ApiResponse<PageUsuarioResponse> ListarUsingGET30WithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// Recuperar senha do usu\u00C3\u00A1rio
@@ -366,8 +366,8 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
-        /// <returns>Task of PageUsuarios</returns>
-        System.Threading.Tasks.Task<PageUsuarios> ListarUsingGET29Async (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        /// <returns>Task of PageUsuarioResponse</returns>
+        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET30Async (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
 
         /// <summary>
         /// Lista os Usu\u00C3\u00A1rios cadastrados
@@ -382,8 +382,8 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
-        /// <returns>Task of ApiResponse (PageUsuarios)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageUsuarios>> ListarUsingGET29AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET30AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// Recuperar senha do usu\u00C3\u00A1rio
@@ -1393,10 +1393,10 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param> 
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
-        /// <returns>PageUsuarios</returns>
-        public PageUsuarios ListarUsingGET29 (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        /// <returns>PageUsuarioResponse</returns>
+        public PageUsuarioResponse ListarUsingGET30 (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarios> localVarResponse = ListarUsingGET29WithHttpInfo(page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET30WithHttpInfo(page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
         }
 
@@ -1410,8 +1410,8 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param> 
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
-        /// <returns>ApiResponse of PageUsuarios</returns>
-        public ApiResponse< PageUsuarios > ListarUsingGET29WithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        /// <returns>ApiResponse of PageUsuarioResponse</returns>
+        public ApiResponse< PageUsuarioResponse > ListarUsingGET30WithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1463,13 +1463,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageUsuarios>(localVarStatusCode,
+            return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageUsuarios) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageUsuarios)));
+                (PageUsuarioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageUsuarioResponse)));
             
         }
 
@@ -1484,10 +1484,10 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
-        /// <returns>Task of PageUsuarios</returns>
-        public async System.Threading.Tasks.Task<PageUsuarios> ListarUsingGET29Async (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        /// <returns>Task of PageUsuarioResponse</returns>
+        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET30Async (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarios> localVarResponse = await ListarUsingGET29AsyncWithHttpInfo(page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET30AsyncWithHttpInfo(page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
 
         }
@@ -1502,8 +1502,8 @@ namespace Conductor.Pier.Api
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
-        /// <returns>Task of ApiResponse (PageUsuarios)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarios>> ListarUsingGET29AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET30AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1555,13 +1555,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageUsuarios>(localVarStatusCode,
+            return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageUsuarios) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageUsuarios)));
+                (PageUsuarioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageUsuarioResponse)));
             
         }
         

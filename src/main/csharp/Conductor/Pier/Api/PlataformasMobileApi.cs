@@ -26,8 +26,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
         /// <param name="update">update</param>
-        /// <returns>PlataformaMobile</returns>
-        PlataformaMobile AtualizarUsingPUT1 (long? id, PlataformaMobileUpdate update);
+        /// <returns>PlataformaMobileResponse</returns>
+        PlataformaMobileResponse AtualizarUsingPUT1 (long? id, PlataformaMobileUpdate update);
   
         /// <summary>
         /// Atualiza Plataforma Mobile
@@ -38,8 +38,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
         /// <param name="update">update</param>
-        /// <returns>ApiResponse of PlataformaMobile</returns>
-        ApiResponse<PlataformaMobile> AtualizarUsingPUT1WithHttpInfo (long? id, PlataformaMobileUpdate update);
+        /// <returns>ApiResponse of PlataformaMobileResponse</returns>
+        ApiResponse<PlataformaMobileResponse> AtualizarUsingPUT1WithHttpInfo (long? id, PlataformaMobileUpdate update);
         
         /// <summary>
         /// Lista as plataformas mobile cadastradas
@@ -51,8 +51,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
-        /// <returns>PagePlataformasMobile</returns>
-        PagePlataformasMobile ListarUsingGET15 (int? page = null, int? limit = null, string nome = null);
+        /// <returns>PagePlataformaMobileResponse</returns>
+        PagePlataformaMobileResponse ListarUsingGET16 (int? page = null, int? limit = null, string nome = null);
   
         /// <summary>
         /// Lista as plataformas mobile cadastradas
@@ -64,8 +64,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
-        /// <returns>ApiResponse of PagePlataformasMobile</returns>
-        ApiResponse<PagePlataformasMobile> ListarUsingGET15WithHttpInfo (int? page = null, int? limit = null, string nome = null);
+        /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
+        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET16WithHttpInfo (int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -75,8 +75,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>PlataformaMobile</returns>
-        PlataformaMobile SalvarUsingPOST9 (PlataformaMobilePersist persist);
+        /// <returns>PlataformaMobileResponse</returns>
+        PlataformaMobileResponse SalvarUsingPOST9 (PlataformaMobilePersist persist);
   
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -86,8 +86,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>ApiResponse of PlataformaMobile</returns>
-        ApiResponse<PlataformaMobile> SalvarUsingPOST9WithHttpInfo (PlataformaMobilePersist persist);
+        /// <returns>ApiResponse of PlataformaMobileResponse</returns>
+        ApiResponse<PlataformaMobileResponse> SalvarUsingPOST9WithHttpInfo (PlataformaMobilePersist persist);
         
         #endregion Synchronous Operations
         
@@ -102,8 +102,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
         /// <param name="update">update</param>
-        /// <returns>Task of PlataformaMobile</returns>
-        System.Threading.Tasks.Task<PlataformaMobile> AtualizarUsingPUT1Async (long? id, PlataformaMobileUpdate update);
+        /// <returns>Task of PlataformaMobileResponse</returns>
+        System.Threading.Tasks.Task<PlataformaMobileResponse> AtualizarUsingPUT1Async (long? id, PlataformaMobileUpdate update);
 
         /// <summary>
         /// Atualiza Plataforma Mobile
@@ -114,8 +114,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
         /// <param name="update">update</param>
-        /// <returns>Task of ApiResponse (PlataformaMobile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PlataformaMobile>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, PlataformaMobileUpdate update);
+        /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, PlataformaMobileUpdate update);
         
         /// <summary>
         /// Lista as plataformas mobile cadastradas
@@ -127,8 +127,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
-        /// <returns>Task of PagePlataformasMobile</returns>
-        System.Threading.Tasks.Task<PagePlataformasMobile> ListarUsingGET15Async (int? page = null, int? limit = null, string nome = null);
+        /// <returns>Task of PagePlataformaMobileResponse</returns>
+        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET16Async (int? page = null, int? limit = null, string nome = null);
 
         /// <summary>
         /// Lista as plataformas mobile cadastradas
@@ -140,8 +140,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
-        /// <returns>Task of ApiResponse (PagePlataformasMobile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePlataformasMobile>> ListarUsingGET15AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null);
+        /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET16AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -151,8 +151,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of PlataformaMobile</returns>
-        System.Threading.Tasks.Task<PlataformaMobile> SalvarUsingPOST9Async (PlataformaMobilePersist persist);
+        /// <returns>Task of PlataformaMobileResponse</returns>
+        System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST9Async (PlataformaMobilePersist persist);
 
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -162,8 +162,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (PlataformaMobile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PlataformaMobile>> SalvarUsingPOST9AsyncWithHttpInfo (PlataformaMobilePersist persist);
+        /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST9AsyncWithHttpInfo (PlataformaMobilePersist persist);
         
         #endregion Asynchronous Operations
         
@@ -263,10 +263,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
         /// <param name="update">update</param> 
-        /// <returns>PlataformaMobile</returns>
-        public PlataformaMobile AtualizarUsingPUT1 (long? id, PlataformaMobileUpdate update)
+        /// <returns>PlataformaMobileResponse</returns>
+        public PlataformaMobileResponse AtualizarUsingPUT1 (long? id, PlataformaMobileUpdate update)
         {
-             ApiResponse<PlataformaMobile> localVarResponse = AtualizarUsingPUT1WithHttpInfo(id, update);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = AtualizarUsingPUT1WithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -276,8 +276,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
         /// <param name="update">update</param> 
-        /// <returns>ApiResponse of PlataformaMobile</returns>
-        public ApiResponse< PlataformaMobile > AtualizarUsingPUT1WithHttpInfo (long? id, PlataformaMobileUpdate update)
+        /// <returns>ApiResponse of PlataformaMobileResponse</returns>
+        public ApiResponse< PlataformaMobileResponse > AtualizarUsingPUT1WithHttpInfo (long? id, PlataformaMobileUpdate update)
         {
             
             // verify the required parameter 'id' is set
@@ -343,9 +343,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PlataformaMobile>(localVarStatusCode,
+            return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PlataformaMobile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobile)));
+                (PlataformaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobileResponse)));
             
         }
 
@@ -356,10 +356,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
         /// <param name="update">update</param>
-        /// <returns>Task of PlataformaMobile</returns>
-        public async System.Threading.Tasks.Task<PlataformaMobile> AtualizarUsingPUT1Async (long? id, PlataformaMobileUpdate update)
+        /// <returns>Task of PlataformaMobileResponse</returns>
+        public async System.Threading.Tasks.Task<PlataformaMobileResponse> AtualizarUsingPUT1Async (long? id, PlataformaMobileUpdate update)
         {
-             ApiResponse<PlataformaMobile> localVarResponse = await AtualizarUsingPUT1AsyncWithHttpInfo(id, update);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = await AtualizarUsingPUT1AsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -370,8 +370,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
         /// <param name="update">update</param>
-        /// <returns>Task of ApiResponse (PlataformaMobile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobile>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, PlataformaMobileUpdate update)
+        /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, PlataformaMobileUpdate update)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT1");
@@ -433,9 +433,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PlataformaMobile>(localVarStatusCode,
+            return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PlataformaMobile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobile)));
+                (PlataformaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobileResponse)));
             
         }
         
@@ -446,10 +446,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param> 
-        /// <returns>PagePlataformasMobile</returns>
-        public PagePlataformasMobile ListarUsingGET15 (int? page = null, int? limit = null, string nome = null)
+        /// <returns>PagePlataformaMobileResponse</returns>
+        public PagePlataformaMobileResponse ListarUsingGET16 (int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformasMobile> localVarResponse = ListarUsingGET15WithHttpInfo(page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET16WithHttpInfo(page, limit, nome);
              return localVarResponse.Data;
         }
 
@@ -460,8 +460,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param> 
-        /// <returns>ApiResponse of PagePlataformasMobile</returns>
-        public ApiResponse< PagePlataformasMobile > ListarUsingGET15WithHttpInfo (int? page = null, int? limit = null, string nome = null)
+        /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
+        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET16WithHttpInfo (int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -510,13 +510,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PagePlataformasMobile>(localVarStatusCode,
+            return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PagePlataformasMobile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePlataformasMobile)));
+                (PagePlataformaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePlataformaMobileResponse)));
             
         }
 
@@ -528,10 +528,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
-        /// <returns>Task of PagePlataformasMobile</returns>
-        public async System.Threading.Tasks.Task<PagePlataformasMobile> ListarUsingGET15Async (int? page = null, int? limit = null, string nome = null)
+        /// <returns>Task of PagePlataformaMobileResponse</returns>
+        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET16Async (int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformasMobile> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(page, limit, nome);
              return localVarResponse.Data;
 
         }
@@ -543,8 +543,8 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
-        /// <returns>Task of ApiResponse (PagePlataformasMobile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformasMobile>> ListarUsingGET15AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null)
+        /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET16AsyncWithHttpInfo (int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -593,13 +593,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PagePlataformasMobile>(localVarStatusCode,
+            return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PagePlataformasMobile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePlataformasMobile)));
+                (PagePlataformaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePlataformaMobileResponse)));
             
         }
         
@@ -608,10 +608,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
-        /// <returns>PlataformaMobile</returns>
-        public PlataformaMobile SalvarUsingPOST9 (PlataformaMobilePersist persist)
+        /// <returns>PlataformaMobileResponse</returns>
+        public PlataformaMobileResponse SalvarUsingPOST9 (PlataformaMobilePersist persist)
         {
-             ApiResponse<PlataformaMobile> localVarResponse = SalvarUsingPOST9WithHttpInfo(persist);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = SalvarUsingPOST9WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -620,8 +620,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
-        /// <returns>ApiResponse of PlataformaMobile</returns>
-        public ApiResponse< PlataformaMobile > SalvarUsingPOST9WithHttpInfo (PlataformaMobilePersist persist)
+        /// <returns>ApiResponse of PlataformaMobileResponse</returns>
+        public ApiResponse< PlataformaMobileResponse > SalvarUsingPOST9WithHttpInfo (PlataformaMobilePersist persist)
         {
             
             // verify the required parameter 'persist' is set
@@ -682,9 +682,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PlataformaMobile>(localVarStatusCode,
+            return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PlataformaMobile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobile)));
+                (PlataformaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobileResponse)));
             
         }
 
@@ -694,10 +694,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of PlataformaMobile</returns>
-        public async System.Threading.Tasks.Task<PlataformaMobile> SalvarUsingPOST9Async (PlataformaMobilePersist persist)
+        /// <returns>Task of PlataformaMobileResponse</returns>
+        public async System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST9Async (PlataformaMobilePersist persist)
         {
-             ApiResponse<PlataformaMobile> localVarResponse = await SalvarUsingPOST9AsyncWithHttpInfo(persist);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = await SalvarUsingPOST9AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -707,8 +707,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (PlataformaMobile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobile>> SalvarUsingPOST9AsyncWithHttpInfo (PlataformaMobilePersist persist)
+        /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST9AsyncWithHttpInfo (PlataformaMobilePersist persist)
         {
             // verify the required parameter 'persist' is set
             if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST9");
@@ -767,9 +767,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PlataformaMobile>(localVarStatusCode,
+            return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PlataformaMobile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobile)));
+                (PlataformaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlataformaMobileResponse)));
             
         }
         

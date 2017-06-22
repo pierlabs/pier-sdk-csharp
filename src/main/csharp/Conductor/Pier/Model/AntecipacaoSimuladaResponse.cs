@@ -22,18 +22,26 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaResponse" /> class.
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaResponse" />class.
         /// </summary>
-        /// <param name="IdSimulacao">C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="IdCompra">C\u00C3\u00B3digo identificador da compra..</param>
+        /// <param name="IdAntecipacaoSimulada">C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta..</param>
+        /// <param name="IdEventoExterno">C\u00C3\u00B3digo identificador do evento..</param>
+        /// <param name="IdTipoTransacao">C\u00C3\u00B3digo identificador do tipo do evento..</param>
+        /// <param name="QtdeParcelasAntecipaveis">Quantidade de parcelas antecip\u00C3\u00A1veis..</param>
+        /// <param name="ValorParcela">Valor da parcela..</param>
         /// <param name="DataHoraSimulacao">Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita..</param>
+        /// <param name="TaxaAntecipacaoAno">Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano)..</param>
         /// <param name="Detalhes">Detalhes da simula\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public AntecipacaoSimuladaResponse(long? IdSimulacao = null, long? IdCompra = null, long? IdConta = null, string DataHoraSimulacao = null, List<AntecipacaoSimuladaDetalhesResponse> Detalhes = null)
+        public AntecipacaoSimuladaResponse(long? IdAntecipacaoSimulada = null, long? IdConta = null, long? IdEventoExterno = null, long? IdTipoTransacao = null, int? QtdeParcelasAntecipaveis = null, double? ValorParcela = null, string DataHoraSimulacao = null, double? TaxaAntecipacaoAno = null, List<AntecipacaoSimuladaDetalhesResponse> Detalhes = null)
         {
-            this.IdSimulacao = IdSimulacao;
-            this.IdCompra = IdCompra;
+            this.IdAntecipacaoSimulada = IdAntecipacaoSimulada;
             this.IdConta = IdConta;
+            this.IdEventoExterno = IdEventoExterno;
+            this.IdTipoTransacao = IdTipoTransacao;
+            this.QtdeParcelasAntecipaveis = QtdeParcelasAntecipaveis;
+            this.ValorParcela = ValorParcela;
             this.DataHoraSimulacao = DataHoraSimulacao;
+            this.TaxaAntecipacaoAno = TaxaAntecipacaoAno;
             this.Detalhes = Detalhes;
             
         }
@@ -43,15 +51,8 @@ namespace Conductor.Pier.Model
         /// C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <value>C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.</value>
-        [DataMember(Name="idSimulacao", EmitDefaultValue=false)]
-        public long? IdSimulacao { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo identificador da compra.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da compra.</value>
-        [DataMember(Name="idCompra", EmitDefaultValue=false)]
-        public long? IdCompra { get; set; }
+        [DataMember(Name="idAntecipacaoSimulada", EmitDefaultValue=false)]
+        public long? IdAntecipacaoSimulada { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo identificador da conta.
@@ -61,11 +62,46 @@ namespace Conductor.Pier.Model
         public long? IdConta { get; set; }
     
         /// <summary>
+        /// C\u00C3\u00B3digo identificador do evento.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo identificador do evento.</value>
+        [DataMember(Name="idEventoExterno", EmitDefaultValue=false)]
+        public long? IdEventoExterno { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo identificador do tipo do evento.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo identificador do tipo do evento.</value>
+        [DataMember(Name="idTipoTransacao", EmitDefaultValue=false)]
+        public long? IdTipoTransacao { get; set; }
+    
+        /// <summary>
+        /// Quantidade de parcelas antecip\u00C3\u00A1veis.
+        /// </summary>
+        /// <value>Quantidade de parcelas antecip\u00C3\u00A1veis.</value>
+        [DataMember(Name="qtdeParcelasAntecipaveis", EmitDefaultValue=false)]
+        public int? QtdeParcelasAntecipaveis { get; set; }
+    
+        /// <summary>
+        /// Valor da parcela.
+        /// </summary>
+        /// <value>Valor da parcela.</value>
+        [DataMember(Name="valorParcela", EmitDefaultValue=false)]
+        public double? ValorParcela { get; set; }
+    
+        /// <summary>
         /// Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
         /// </summary>
         /// <value>Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.</value>
         [DataMember(Name="dataHoraSimulacao", EmitDefaultValue=false)]
         public string DataHoraSimulacao { get; set; }
+    
+        /// <summary>
+        /// Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+        /// </summary>
+        /// <value>Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).</value>
+        [DataMember(Name="taxaAntecipacaoAno", EmitDefaultValue=false)]
+        public double? TaxaAntecipacaoAno { get; set; }
     
         /// <summary>
         /// Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
@@ -82,10 +118,14 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AntecipacaoSimuladaResponse {\n");
-            sb.Append("  IdSimulacao: ").Append(IdSimulacao).Append("\n");
-            sb.Append("  IdCompra: ").Append(IdCompra).Append("\n");
+            sb.Append("  IdAntecipacaoSimulada: ").Append(IdAntecipacaoSimulada).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdEventoExterno: ").Append(IdEventoExterno).Append("\n");
+            sb.Append("  IdTipoTransacao: ").Append(IdTipoTransacao).Append("\n");
+            sb.Append("  QtdeParcelasAntecipaveis: ").Append(QtdeParcelasAntecipaveis).Append("\n");
+            sb.Append("  ValorParcela: ").Append(ValorParcela).Append("\n");
             sb.Append("  DataHoraSimulacao: ").Append(DataHoraSimulacao).Append("\n");
+            sb.Append("  TaxaAntecipacaoAno: ").Append(TaxaAntecipacaoAno).Append("\n");
             sb.Append("  Detalhes: ").Append(Detalhes).Append("\n");
             
             sb.Append("}\n");
@@ -125,14 +165,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdSimulacao == other.IdSimulacao ||
-                    this.IdSimulacao != null &&
-                    this.IdSimulacao.Equals(other.IdSimulacao)
-                ) && 
-                (
-                    this.IdCompra == other.IdCompra ||
-                    this.IdCompra != null &&
-                    this.IdCompra.Equals(other.IdCompra)
+                    this.IdAntecipacaoSimulada == other.IdAntecipacaoSimulada ||
+                    this.IdAntecipacaoSimulada != null &&
+                    this.IdAntecipacaoSimulada.Equals(other.IdAntecipacaoSimulada)
                 ) && 
                 (
                     this.IdConta == other.IdConta ||
@@ -140,9 +175,34 @@ namespace Conductor.Pier.Model
                     this.IdConta.Equals(other.IdConta)
                 ) && 
                 (
+                    this.IdEventoExterno == other.IdEventoExterno ||
+                    this.IdEventoExterno != null &&
+                    this.IdEventoExterno.Equals(other.IdEventoExterno)
+                ) && 
+                (
+                    this.IdTipoTransacao == other.IdTipoTransacao ||
+                    this.IdTipoTransacao != null &&
+                    this.IdTipoTransacao.Equals(other.IdTipoTransacao)
+                ) && 
+                (
+                    this.QtdeParcelasAntecipaveis == other.QtdeParcelasAntecipaveis ||
+                    this.QtdeParcelasAntecipaveis != null &&
+                    this.QtdeParcelasAntecipaveis.Equals(other.QtdeParcelasAntecipaveis)
+                ) && 
+                (
+                    this.ValorParcela == other.ValorParcela ||
+                    this.ValorParcela != null &&
+                    this.ValorParcela.Equals(other.ValorParcela)
+                ) && 
+                (
                     this.DataHoraSimulacao == other.DataHoraSimulacao ||
                     this.DataHoraSimulacao != null &&
                     this.DataHoraSimulacao.Equals(other.DataHoraSimulacao)
+                ) && 
+                (
+                    this.TaxaAntecipacaoAno == other.TaxaAntecipacaoAno ||
+                    this.TaxaAntecipacaoAno != null &&
+                    this.TaxaAntecipacaoAno.Equals(other.TaxaAntecipacaoAno)
                 ) && 
                 (
                     this.Detalhes == other.Detalhes ||
@@ -163,17 +223,29 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdSimulacao != null)
-                    hash = hash * 59 + this.IdSimulacao.GetHashCode();
-                
-                if (this.IdCompra != null)
-                    hash = hash * 59 + this.IdCompra.GetHashCode();
+                if (this.IdAntecipacaoSimulada != null)
+                    hash = hash * 59 + this.IdAntecipacaoSimulada.GetHashCode();
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
                 
+                if (this.IdEventoExterno != null)
+                    hash = hash * 59 + this.IdEventoExterno.GetHashCode();
+                
+                if (this.IdTipoTransacao != null)
+                    hash = hash * 59 + this.IdTipoTransacao.GetHashCode();
+                
+                if (this.QtdeParcelasAntecipaveis != null)
+                    hash = hash * 59 + this.QtdeParcelasAntecipaveis.GetHashCode();
+                
+                if (this.ValorParcela != null)
+                    hash = hash * 59 + this.ValorParcela.GetHashCode();
+                
                 if (this.DataHoraSimulacao != null)
                     hash = hash * 59 + this.DataHoraSimulacao.GetHashCode();
+                
+                if (this.TaxaAntecipacaoAno != null)
+                    hash = hash * 59 + this.TaxaAntecipacaoAno.GetHashCode();
                 
                 if (this.Detalhes != null)
                     hash = hash * 59 + this.Detalhes.GetHashCode();

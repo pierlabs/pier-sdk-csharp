@@ -25,8 +25,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Dispositivo</returns>
-        Dispositivo AtivarUsingPOST (long? id);
+        /// <returns>DispositivoResponse</returns>
+        DispositivoResponse AtivarUsingPOST (long? id);
   
         /// <summary>
         /// Ativa Dispositivo
@@ -36,8 +36,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>ApiResponse of Dispositivo</returns>
-        ApiResponse<Dispositivo> AtivarUsingPOSTWithHttpInfo (long? id);
+        /// <returns>ApiResponse of DispositivoResponse</returns>
+        ApiResponse<DispositivoResponse> AtivarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa Dispositivo
@@ -47,8 +47,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Dispositivo</returns>
-        Dispositivo DesativarUsingPOST (long? id);
+        /// <returns>DispositivoResponse</returns>
+        DispositivoResponse DesativarUsingPOST (long? id);
   
         /// <summary>
         /// Desativa Dispositivo
@@ -58,8 +58,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>ApiResponse of Dispositivo</returns>
-        ApiResponse<Dispositivo> DesativarUsingPOSTWithHttpInfo (long? id);
+        /// <returns>ApiResponse of DispositivoResponse</returns>
+        ApiResponse<DispositivoResponse> DesativarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -75,8 +75,8 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
-        /// <returns>PageDispositivos</returns>
-        PageDispositivos ListarUsingGET7 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        /// <returns>PageDispositivoResponse</returns>
+        PageDispositivoResponse ListarUsingGET8 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
   
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -92,8 +92,8 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
-        /// <returns>ApiResponse of PageDispositivos</returns>
-        ApiResponse<PageDispositivos> ListarUsingGET7WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        /// <returns>ApiResponse of PageDispositivoResponse</returns>
+        ApiResponse<PageDispositivoResponse> ListarUsingGET8WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// Cadastra Dispositivo
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Dispositivo</returns>
-        Dispositivo SalvarUsingPOST3 (DispositivoPersist persist);
+        /// <returns>DispositivoResponse</returns>
+        DispositivoResponse SalvarUsingPOST3 (DispositivoPersist persist);
   
         /// <summary>
         /// Cadastra Dispositivo
@@ -114,8 +114,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>ApiResponse of Dispositivo</returns>
-        ApiResponse<Dispositivo> SalvarUsingPOST3WithHttpInfo (DispositivoPersist persist);
+        /// <returns>ApiResponse of DispositivoResponse</returns>
+        ApiResponse<DispositivoResponse> SalvarUsingPOST3WithHttpInfo (DispositivoPersist persist);
         
         #endregion Synchronous Operations
         
@@ -129,8 +129,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of Dispositivo</returns>
-        System.Threading.Tasks.Task<Dispositivo> AtivarUsingPOSTAsync (long? id);
+        /// <returns>Task of DispositivoResponse</returns>
+        System.Threading.Tasks.Task<DispositivoResponse> AtivarUsingPOSTAsync (long? id);
 
         /// <summary>
         /// Ativa Dispositivo
@@ -140,8 +140,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of ApiResponse (Dispositivo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dispositivo>> AtivarUsingPOSTAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> AtivarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa Dispositivo
@@ -151,8 +151,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of Dispositivo</returns>
-        System.Threading.Tasks.Task<Dispositivo> DesativarUsingPOSTAsync (long? id);
+        /// <returns>Task of DispositivoResponse</returns>
+        System.Threading.Tasks.Task<DispositivoResponse> DesativarUsingPOSTAsync (long? id);
 
         /// <summary>
         /// Desativa Dispositivo
@@ -162,8 +162,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of ApiResponse (Dispositivo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dispositivo>> DesativarUsingPOSTAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> DesativarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -179,8 +179,8 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
-        /// <returns>Task of PageDispositivos</returns>
-        System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET7Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        /// <returns>Task of PageDispositivoResponse</returns>
+        System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET8Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
 
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -196,8 +196,8 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
-        /// <returns>Task of ApiResponse (PageDispositivos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET7AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        /// <returns>Task of ApiResponse (PageDispositivoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET8AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// Cadastra Dispositivo
@@ -207,8 +207,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of Dispositivo</returns>
-        System.Threading.Tasks.Task<Dispositivo> SalvarUsingPOST3Async (DispositivoPersist persist);
+        /// <returns>Task of DispositivoResponse</returns>
+        System.Threading.Tasks.Task<DispositivoResponse> SalvarUsingPOST3Async (DispositivoPersist persist);
 
         /// <summary>
         /// Cadastra Dispositivo
@@ -218,8 +218,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (Dispositivo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dispositivo>> SalvarUsingPOST3AsyncWithHttpInfo (DispositivoPersist persist);
+        /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> SalvarUsingPOST3AsyncWithHttpInfo (DispositivoPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -318,10 +318,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
-        /// <returns>Dispositivo</returns>
-        public Dispositivo AtivarUsingPOST (long? id)
+        /// <returns>DispositivoResponse</returns>
+        public DispositivoResponse AtivarUsingPOST (long? id)
         {
-             ApiResponse<Dispositivo> localVarResponse = AtivarUsingPOSTWithHttpInfo(id);
+             ApiResponse<DispositivoResponse> localVarResponse = AtivarUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -330,8 +330,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
-        /// <returns>ApiResponse of Dispositivo</returns>
-        public ApiResponse< Dispositivo > AtivarUsingPOSTWithHttpInfo (long? id)
+        /// <returns>ApiResponse of DispositivoResponse</returns>
+        public ApiResponse< DispositivoResponse > AtivarUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -386,9 +386,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtivarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Dispositivo>(localVarStatusCode,
+            return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+                (DispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DispositivoResponse)));
             
         }
 
@@ -398,10 +398,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of Dispositivo</returns>
-        public async System.Threading.Tasks.Task<Dispositivo> AtivarUsingPOSTAsync (long? id)
+        /// <returns>Task of DispositivoResponse</returns>
+        public async System.Threading.Tasks.Task<DispositivoResponse> AtivarUsingPOSTAsync (long? id)
         {
-             ApiResponse<Dispositivo> localVarResponse = await AtivarUsingPOSTAsyncWithHttpInfo(id);
+             ApiResponse<DispositivoResponse> localVarResponse = await AtivarUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -411,8 +411,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of ApiResponse (Dispositivo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Dispositivo>> AtivarUsingPOSTAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> AtivarUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarUsingPOST");
@@ -465,9 +465,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtivarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Dispositivo>(localVarStatusCode,
+            return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+                (DispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DispositivoResponse)));
             
         }
         
@@ -476,10 +476,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
-        /// <returns>Dispositivo</returns>
-        public Dispositivo DesativarUsingPOST (long? id)
+        /// <returns>DispositivoResponse</returns>
+        public DispositivoResponse DesativarUsingPOST (long? id)
         {
-             ApiResponse<Dispositivo> localVarResponse = DesativarUsingPOSTWithHttpInfo(id);
+             ApiResponse<DispositivoResponse> localVarResponse = DesativarUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -488,8 +488,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
-        /// <returns>ApiResponse of Dispositivo</returns>
-        public ApiResponse< Dispositivo > DesativarUsingPOSTWithHttpInfo (long? id)
+        /// <returns>ApiResponse of DispositivoResponse</returns>
+        public ApiResponse< DispositivoResponse > DesativarUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -544,9 +544,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesativarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Dispositivo>(localVarStatusCode,
+            return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+                (DispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DispositivoResponse)));
             
         }
 
@@ -556,10 +556,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of Dispositivo</returns>
-        public async System.Threading.Tasks.Task<Dispositivo> DesativarUsingPOSTAsync (long? id)
+        /// <returns>Task of DispositivoResponse</returns>
+        public async System.Threading.Tasks.Task<DispositivoResponse> DesativarUsingPOSTAsync (long? id)
         {
-             ApiResponse<Dispositivo> localVarResponse = await DesativarUsingPOSTAsyncWithHttpInfo(id);
+             ApiResponse<DispositivoResponse> localVarResponse = await DesativarUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -569,8 +569,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
-        /// <returns>Task of ApiResponse (Dispositivo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Dispositivo>> DesativarUsingPOSTAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> DesativarUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarUsingPOST");
@@ -623,9 +623,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesativarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Dispositivo>(localVarStatusCode,
+            return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+                (DispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DispositivoResponse)));
             
         }
         
@@ -640,10 +640,10 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
-        /// <returns>PageDispositivos</returns>
-        public PageDispositivos ListarUsingGET7 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        /// <returns>PageDispositivoResponse</returns>
+        public PageDispositivoResponse ListarUsingGET8 (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivos> localVarResponse = ListarUsingGET7WithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivoResponse> localVarResponse = ListarUsingGET8WithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
         }
 
@@ -658,8 +658,8 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
-        /// <returns>ApiResponse of PageDispositivos</returns>
-        public ApiResponse< PageDispositivos > ListarUsingGET7WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        /// <returns>ApiResponse of PageDispositivoResponse</returns>
+        public ApiResponse< PageDispositivoResponse > ListarUsingGET8WithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -712,13 +712,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageDispositivos>(localVarStatusCode,
+            return new ApiResponse<PageDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageDispositivos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageDispositivos)));
+                (PageDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageDispositivoResponse)));
             
         }
 
@@ -734,10 +734,10 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
-        /// <returns>Task of PageDispositivos</returns>
-        public async System.Threading.Tasks.Task<PageDispositivos> ListarUsingGET7Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        /// <returns>Task of PageDispositivoResponse</returns>
+        public async System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET8Async (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivos> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivoResponse> localVarResponse = await ListarUsingGET8AsyncWithHttpInfo(page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
 
         }
@@ -753,8 +753,8 @@ namespace Conductor.Pier.Api
         /// <param name="idAplicacaoMobile">Identificador da aplica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
-        /// <returns>Task of ApiResponse (PageDispositivos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivos>> ListarUsingGET7AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        /// <returns>Task of ApiResponse (PageDispositivoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET8AsyncWithHttpInfo (int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -807,13 +807,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageDispositivos>(localVarStatusCode,
+            return new ApiResponse<PageDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageDispositivos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageDispositivos)));
+                (PageDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageDispositivoResponse)));
             
         }
         
@@ -822,10 +822,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
-        /// <returns>Dispositivo</returns>
-        public Dispositivo SalvarUsingPOST3 (DispositivoPersist persist)
+        /// <returns>DispositivoResponse</returns>
+        public DispositivoResponse SalvarUsingPOST3 (DispositivoPersist persist)
         {
-             ApiResponse<Dispositivo> localVarResponse = SalvarUsingPOST3WithHttpInfo(persist);
+             ApiResponse<DispositivoResponse> localVarResponse = SalvarUsingPOST3WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -834,8 +834,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
-        /// <returns>ApiResponse of Dispositivo</returns>
-        public ApiResponse< Dispositivo > SalvarUsingPOST3WithHttpInfo (DispositivoPersist persist)
+        /// <returns>ApiResponse of DispositivoResponse</returns>
+        public ApiResponse< DispositivoResponse > SalvarUsingPOST3WithHttpInfo (DispositivoPersist persist)
         {
             
             // verify the required parameter 'persist' is set
@@ -896,9 +896,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Dispositivo>(localVarStatusCode,
+            return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+                (DispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DispositivoResponse)));
             
         }
 
@@ -908,10 +908,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of Dispositivo</returns>
-        public async System.Threading.Tasks.Task<Dispositivo> SalvarUsingPOST3Async (DispositivoPersist persist)
+        /// <returns>Task of DispositivoResponse</returns>
+        public async System.Threading.Tasks.Task<DispositivoResponse> SalvarUsingPOST3Async (DispositivoPersist persist)
         {
-             ApiResponse<Dispositivo> localVarResponse = await SalvarUsingPOST3AsyncWithHttpInfo(persist);
+             ApiResponse<DispositivoResponse> localVarResponse = await SalvarUsingPOST3AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -921,8 +921,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (Dispositivo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Dispositivo>> SalvarUsingPOST3AsyncWithHttpInfo (DispositivoPersist persist)
+        /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> SalvarUsingPOST3AsyncWithHttpInfo (DispositivoPersist persist)
         {
             // verify the required parameter 'persist' is set
             if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST3");
@@ -981,9 +981,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Dispositivo>(localVarStatusCode,
+            return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dispositivo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dispositivo)));
+                (DispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DispositivoResponse)));
             
         }
         
