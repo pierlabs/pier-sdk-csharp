@@ -26,7 +26,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta..</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id)..</param>
-        /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id)..</param>
+        /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta..</param>
         /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
         /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
@@ -80,9 +80,9 @@ namespace Conductor.Pier.Model
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     

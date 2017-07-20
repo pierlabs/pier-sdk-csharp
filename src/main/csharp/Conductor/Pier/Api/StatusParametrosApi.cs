@@ -70,7 +70,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>StatusContaResponse</returns>
-        StatusContaResponse ConsultarUsingGET13 (long? id);
+        StatusContaResponse ConsultarUsingGET14 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>ApiResponse of StatusContaResponse</returns>
-        ApiResponse<StatusContaResponse> ConsultarUsingGET13WithHttpInfo (long? id);
+        ApiResponse<StatusContaResponse> ConsultarUsingGET14WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>StatusImpressaoResponse</returns>
-        StatusImpressaoResponse ConsultarUsingGET14 (long? id);
+        StatusImpressaoResponse ConsultarUsingGET15 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of StatusImpressaoResponse</returns>
-        ApiResponse<StatusImpressaoResponse> ConsultarUsingGET14WithHttpInfo (long? id);
+        ApiResponse<StatusImpressaoResponse> ConsultarUsingGET15WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -151,8 +151,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>PageStatusCartaoResponse</returns>
-        PageStatusCartaoResponse ListarStatusCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null);
+        PageStatusCartaoResponse ListarStatusCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null);
   
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
@@ -172,8 +175,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>ApiResponse of PageStatusCartaoResponse</returns>
-        ApiResponse<PageStatusCartaoResponse> ListarStatusCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null);
+        ApiResponse<PageStatusCartaoResponse> ListarStatusCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null);
         
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -191,8 +197,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>PageStatusContaResponse</returns>
-        PageStatusContaResponse ListarUsingGET20 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null);
+        PageStatusContaResponse ListarUsingGET20 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null);
   
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -210,8 +219,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>ApiResponse of PageStatusContaResponse</returns>
-        ApiResponse<PageStatusContaResponse> ListarUsingGET20WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null);
+        ApiResponse<PageStatusContaResponse> ListarUsingGET20WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -298,7 +310,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusContaResponse</returns>
-        System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET13Async (long? id);
+        System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET14Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Conta
@@ -309,7 +321,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -320,7 +332,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressaoResponse</returns>
-        System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET14Async (long? id);
+        System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET15Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
@@ -331,7 +343,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
@@ -379,8 +391,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of PageStatusCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageStatusCartaoResponse> ListarStatusCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null);
+        System.Threading.Tasks.Task<PageStatusCartaoResponse> ListarStatusCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null);
 
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
@@ -400,8 +415,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusCartaoResponse>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusCartaoResponse>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null);
         
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -419,8 +437,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of PageStatusContaResponse</returns>
-        System.Threading.Tasks.Task<PageStatusContaResponse> ListarUsingGET20Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null);
+        System.Threading.Tasks.Task<PageStatusContaResponse> ListarUsingGET20Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null);
 
         /// <summary>
         /// Lista os Status Contas cadastrados para o Emissor
@@ -438,8 +459,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarUsingGET20AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarUsingGET20AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null);
         
         /// <summary>
         /// Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
@@ -883,9 +907,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>StatusContaResponse</returns>
-        public StatusContaResponse ConsultarUsingGET13 (long? id)
+        public StatusContaResponse ConsultarUsingGET14 (long? id)
         {
-             ApiResponse<StatusContaResponse> localVarResponse = ConsultarUsingGET13WithHttpInfo(id);
+             ApiResponse<StatusContaResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -895,12 +919,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param> 
         /// <returns>ApiResponse of StatusContaResponse</returns>
-        public ApiResponse< StatusContaResponse > ConsultarUsingGET13WithHttpInfo (long? id)
+        public ApiResponse< StatusContaResponse > ConsultarUsingGET14WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET13");
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET14");
             
     
             var localVarPath = "/api/status-contas/{id}";
@@ -946,9 +970,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -963,9 +987,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of StatusContaResponse</returns>
-        public async System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET13Async (long? id)
+        public async System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET14Async (long? id)
         {
-             ApiResponse<StatusContaResponse> localVarResponse = await ConsultarUsingGET13AsyncWithHttpInfo(id);
+             ApiResponse<StatusContaResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -976,10 +1000,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).</param>
         /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET13");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET14");
             
     
             var localVarPath = "/api/status-contas/{id}";
@@ -1025,9 +1049,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1041,9 +1065,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>StatusImpressaoResponse</returns>
-        public StatusImpressaoResponse ConsultarUsingGET14 (long? id)
+        public StatusImpressaoResponse ConsultarUsingGET15 (long? id)
         {
-             ApiResponse<StatusImpressaoResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(id);
+             ApiResponse<StatusImpressaoResponse> localVarResponse = ConsultarUsingGET15WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1053,12 +1077,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of StatusImpressaoResponse</returns>
-        public ApiResponse< StatusImpressaoResponse > ConsultarUsingGET14WithHttpInfo (long? id)
+        public ApiResponse< StatusImpressaoResponse > ConsultarUsingGET15WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET14");
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametrosApi->ConsultarUsingGET15");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1104,9 +1128,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1121,9 +1145,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of StatusImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET14Async (long? id)
+        public async System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET15Async (long? id)
         {
-             ApiResponse<StatusImpressaoResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(id);
+             ApiResponse<StatusImpressaoResponse> localVarResponse = await ConsultarUsingGET15AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1134,10 +1158,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (StatusImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET14");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET15");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1183,9 +1207,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1378,10 +1402,13 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param> 
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <returns>PageStatusCartaoResponse</returns>
-        public PageStatusCartaoResponse ListarStatusCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null)
+        public PageStatusCartaoResponse ListarStatusCartoesUsingGET (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null)
         {
-             ApiResponse<PageStatusCartaoResponse> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(page, limit, id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao, flagPermiteDesbloqueio);
+             ApiResponse<PageStatusCartaoResponse> localVarResponse = ListarStatusCartoesUsingGETWithHttpInfo(page, limit, id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao, flagPermiteDesbloqueio, flagCancelamento, flagPermiteBloqueio, flagReativar);
              return localVarResponse.Data;
         }
 
@@ -1400,8 +1427,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param> 
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <returns>ApiResponse of PageStatusCartaoResponse</returns>
-        public ApiResponse< PageStatusCartaoResponse > ListarStatusCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null)
+        public ApiResponse< PageStatusCartaoResponse > ListarStatusCartoesUsingGETWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null)
         {
             
     
@@ -1443,6 +1473,9 @@ namespace Conductor.Pier.Api
             if (flagCobraTarifa != null) localVarQueryParams.Add("flagCobraTarifa", Configuration.ApiClient.ParameterToString(flagCobraTarifa)); // query parameter
             if (flagPermiteNovaViaCartao != null) localVarQueryParams.Add("flagPermiteNovaViaCartao", Configuration.ApiClient.ParameterToString(flagPermiteNovaViaCartao)); // query parameter
             if (flagPermiteDesbloqueio != null) localVarQueryParams.Add("flagPermiteDesbloqueio", Configuration.ApiClient.ParameterToString(flagPermiteDesbloqueio)); // query parameter
+            if (flagCancelamento != null) localVarQueryParams.Add("flagCancelamento", Configuration.ApiClient.ParameterToString(flagCancelamento)); // query parameter
+            if (flagPermiteBloqueio != null) localVarQueryParams.Add("flagPermiteBloqueio", Configuration.ApiClient.ParameterToString(flagPermiteBloqueio)); // query parameter
+            if (flagReativar != null) localVarQueryParams.Add("flagReativar", Configuration.ApiClient.ParameterToString(flagReativar)); // query parameter
             
             
             
@@ -1484,10 +1517,13 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of PageStatusCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageStatusCartaoResponse> ListarStatusCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null)
+        public async System.Threading.Tasks.Task<PageStatusCartaoResponse> ListarStatusCartoesUsingGETAsync (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null)
         {
-             ApiResponse<PageStatusCartaoResponse> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(page, limit, id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao, flagPermiteDesbloqueio);
+             ApiResponse<PageStatusCartaoResponse> localVarResponse = await ListarStatusCartoesUsingGETAsyncWithHttpInfo(page, limit, id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao, flagPermiteDesbloqueio, flagCancelamento, flagPermiteBloqueio, flagReativar);
              return localVarResponse.Data;
 
         }
@@ -1507,8 +1543,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (optional)</param>
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusCartaoResponse>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusCartaoResponse>> ListarStatusCartoesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagCancelaCartao = null, int? flagCancelaNoDesbloqueio = null, long? idStatusDestinoDesbloqueio = null, long? idStatusDestinoConta = null, int? flagCobraTarifa = null, int? flagPermiteNovaViaCartao = null, int? flagPermiteDesbloqueio = null, int? flagCancelamento = null, int? flagPermiteBloqueio = null, int? flagReativar = null)
         {
             
     
@@ -1550,6 +1589,9 @@ namespace Conductor.Pier.Api
             if (flagCobraTarifa != null) localVarQueryParams.Add("flagCobraTarifa", Configuration.ApiClient.ParameterToString(flagCobraTarifa)); // query parameter
             if (flagPermiteNovaViaCartao != null) localVarQueryParams.Add("flagPermiteNovaViaCartao", Configuration.ApiClient.ParameterToString(flagPermiteNovaViaCartao)); // query parameter
             if (flagPermiteDesbloqueio != null) localVarQueryParams.Add("flagPermiteDesbloqueio", Configuration.ApiClient.ParameterToString(flagPermiteDesbloqueio)); // query parameter
+            if (flagCancelamento != null) localVarQueryParams.Add("flagCancelamento", Configuration.ApiClient.ParameterToString(flagCancelamento)); // query parameter
+            if (flagPermiteBloqueio != null) localVarQueryParams.Add("flagPermiteBloqueio", Configuration.ApiClient.ParameterToString(flagPermiteBloqueio)); // query parameter
+            if (flagReativar != null) localVarQueryParams.Add("flagReativar", Configuration.ApiClient.ParameterToString(flagReativar)); // query parameter
             
             
             
@@ -1588,10 +1630,13 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <returns>PageStatusContaResponse</returns>
-        public PageStatusContaResponse ListarUsingGET20 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null)
+        public PageStatusContaResponse ListarUsingGET20 (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null)
         {
-             ApiResponse<PageStatusContaResponse> localVarResponse = ListarUsingGET20WithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao, flagFazTransferencia, flagRecebeTransferencia);
+             ApiResponse<PageStatusContaResponse> localVarResponse = ListarUsingGET20WithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao, flagFazTransferencia, flagRecebeTransferencia, flagPermiteBloqueio, flagPermiteDesbloqueio, flagCancelaConta);
              return localVarResponse.Data;
         }
 
@@ -1608,8 +1653,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param> 
         /// <returns>ApiResponse of PageStatusContaResponse</returns>
-        public ApiResponse< PageStatusContaResponse > ListarUsingGET20WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null)
+        public ApiResponse< PageStatusContaResponse > ListarUsingGET20WithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null)
         {
             
     
@@ -1649,6 +1697,9 @@ namespace Conductor.Pier.Api
             if (flagPermiteNovaViaCartao != null) localVarQueryParams.Add("flagPermiteNovaViaCartao", Configuration.ApiClient.ParameterToString(flagPermiteNovaViaCartao)); // query parameter
             if (flagFazTransferencia != null) localVarQueryParams.Add("flagFazTransferencia", Configuration.ApiClient.ParameterToString(flagFazTransferencia)); // query parameter
             if (flagRecebeTransferencia != null) localVarQueryParams.Add("flagRecebeTransferencia", Configuration.ApiClient.ParameterToString(flagRecebeTransferencia)); // query parameter
+            if (flagPermiteBloqueio != null) localVarQueryParams.Add("flagPermiteBloqueio", Configuration.ApiClient.ParameterToString(flagPermiteBloqueio)); // query parameter
+            if (flagPermiteDesbloqueio != null) localVarQueryParams.Add("flagPermiteDesbloqueio", Configuration.ApiClient.ParameterToString(flagPermiteDesbloqueio)); // query parameter
+            if (flagCancelaConta != null) localVarQueryParams.Add("flagCancelaConta", Configuration.ApiClient.ParameterToString(flagCancelaConta)); // query parameter
             
             
             
@@ -1688,10 +1739,13 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of PageStatusContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageStatusContaResponse> ListarUsingGET20Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null)
+        public async System.Threading.Tasks.Task<PageStatusContaResponse> ListarUsingGET20Async (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null)
         {
-             ApiResponse<PageStatusContaResponse> localVarResponse = await ListarUsingGET20AsyncWithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao, flagFazTransferencia, flagRecebeTransferencia);
+             ApiResponse<PageStatusContaResponse> localVarResponse = await ListarUsingGET20AsyncWithHttpInfo(page, limit, id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao, flagFazTransferencia, flagRecebeTransferencia, flagPermiteBloqueio, flagPermiteDesbloqueio, flagCancelaConta);
              return localVarResponse.Data;
 
         }
@@ -1709,8 +1763,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <param name="flagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. (optional)</param>
+        /// <param name="flagCancelaConta">Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarUsingGET20AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarUsingGET20AsyncWithHttpInfo (int? page = null, int? limit = null, long? id = null, string nome = null, int? flagAlteraLimite = null, string mensagemConsultaNegada = null, int? flagPermiteNovaViaCartao = null, int? flagFazTransferencia = null, int? flagRecebeTransferencia = null, int? flagPermiteBloqueio = null, int? flagPermiteDesbloqueio = null, int? flagCancelaConta = null)
         {
             
     
@@ -1750,6 +1807,9 @@ namespace Conductor.Pier.Api
             if (flagPermiteNovaViaCartao != null) localVarQueryParams.Add("flagPermiteNovaViaCartao", Configuration.ApiClient.ParameterToString(flagPermiteNovaViaCartao)); // query parameter
             if (flagFazTransferencia != null) localVarQueryParams.Add("flagFazTransferencia", Configuration.ApiClient.ParameterToString(flagFazTransferencia)); // query parameter
             if (flagRecebeTransferencia != null) localVarQueryParams.Add("flagRecebeTransferencia", Configuration.ApiClient.ParameterToString(flagRecebeTransferencia)); // query parameter
+            if (flagPermiteBloqueio != null) localVarQueryParams.Add("flagPermiteBloqueio", Configuration.ApiClient.ParameterToString(flagPermiteBloqueio)); // query parameter
+            if (flagPermiteDesbloqueio != null) localVarQueryParams.Add("flagPermiteDesbloqueio", Configuration.ApiClient.ParameterToString(flagPermiteDesbloqueio)); // query parameter
+            if (flagCancelaConta != null) localVarQueryParams.Add("flagCancelaConta", Configuration.ApiClient.ParameterToString(flagCancelaConta)); // query parameter
             
             
             

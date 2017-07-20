@@ -28,6 +28,9 @@ namespace Conductor.Pier.Model
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
             
+            [EnumMember(Value = "TOKEN_SMS")]
+            TokenSms,
+            
             [EnumMember(Value = "OUTROS")]
             Outros
         }

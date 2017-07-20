@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
         /// <returns>TerminalResponse</returns>
-        TerminalResponse ConsultarUsingGET16 (long? id);
+        TerminalResponse ConsultarUsingGET17 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Terminal
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
         /// <returns>ApiResponse of TerminalResponse</returns>
-        ApiResponse<TerminalResponse> ConsultarUsingGET16WithHttpInfo (long? id);
+        ApiResponse<TerminalResponse> ConsultarUsingGET17WithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar estabelecimento por id
@@ -48,7 +48,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>EstabelecimentoResponse</returns>
-        EstabelecimentoResponse ConsultarUsingGET6 (long? id);
+        EstabelecimentoResponse ConsultarUsingGET7 (long? id);
   
         /// <summary>
         /// Consultar estabelecimento por id
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>ApiResponse of EstabelecimentoResponse</returns>
-        ApiResponse<EstabelecimentoResponse> ConsultarUsingGET6WithHttpInfo (long? id);
+        ApiResponse<EstabelecimentoResponse> ConsultarUsingGET7WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista Estabelecimentos
@@ -168,7 +168,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
         /// <returns>Task of TerminalResponse</returns>
-        System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET16Async (long? id);
+        System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET17Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Terminal
@@ -179,7 +179,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar estabelecimento por id
@@ -190,7 +190,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of EstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET6Async (long? id);
+        System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET7Async (long? id);
 
         /// <summary>
         /// Consultar estabelecimento por id
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse (EstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista Estabelecimentos
@@ -395,9 +395,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param> 
         /// <returns>TerminalResponse</returns>
-        public TerminalResponse ConsultarUsingGET16 (long? id)
+        public TerminalResponse ConsultarUsingGET17 (long? id)
         {
-             ApiResponse<TerminalResponse> localVarResponse = ConsultarUsingGET16WithHttpInfo(id);
+             ApiResponse<TerminalResponse> localVarResponse = ConsultarUsingGET17WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -407,12 +407,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param> 
         /// <returns>ApiResponse of TerminalResponse</returns>
-        public ApiResponse< TerminalResponse > ConsultarUsingGET16WithHttpInfo (long? id)
+        public ApiResponse< TerminalResponse > ConsultarUsingGET17WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentosApi->ConsultarUsingGET16");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentosApi->ConsultarUsingGET17");
             
     
             var localVarPath = "/api/terminais/{id}";
@@ -458,9 +458,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -475,9 +475,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
         /// <returns>Task of TerminalResponse</returns>
-        public async System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET16Async (long? id)
+        public async System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET17Async (long? id)
         {
-             ApiResponse<TerminalResponse> localVarResponse = await ConsultarUsingGET16AsyncWithHttpInfo(id);
+             ApiResponse<TerminalResponse> localVarResponse = await ConsultarUsingGET17AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -488,10 +488,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET16");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET17");
             
     
             var localVarPath = "/api/terminais/{id}";
@@ -537,9 +537,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -553,9 +553,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
         /// <returns>EstabelecimentoResponse</returns>
-        public EstabelecimentoResponse ConsultarUsingGET6 (long? id)
+        public EstabelecimentoResponse ConsultarUsingGET7 (long? id)
         {
-             ApiResponse<EstabelecimentoResponse> localVarResponse = ConsultarUsingGET6WithHttpInfo(id);
+             ApiResponse<EstabelecimentoResponse> localVarResponse = ConsultarUsingGET7WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -565,12 +565,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
         /// <returns>ApiResponse of EstabelecimentoResponse</returns>
-        public ApiResponse< EstabelecimentoResponse > ConsultarUsingGET6WithHttpInfo (long? id)
+        public ApiResponse< EstabelecimentoResponse > ConsultarUsingGET7WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentosApi->ConsultarUsingGET6");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentosApi->ConsultarUsingGET7");
             
     
             var localVarPath = "/api/estabelecimentos/{id}";
@@ -616,9 +616,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<EstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -633,9 +633,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of EstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET6Async (long? id)
+        public async System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET7Async (long? id)
         {
-             ApiResponse<EstabelecimentoResponse> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(id);
+             ApiResponse<EstabelecimentoResponse> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -646,10 +646,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse (EstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET7");
             
     
             var localVarPath = "/api/estabelecimentos/{id}";
@@ -695,9 +695,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

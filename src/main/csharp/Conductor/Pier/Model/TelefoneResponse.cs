@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// ObjetoTelefone
+    /// Objeto de Resposta de Telefone
     /// </summary>
     [DataContract]
     public partial class TelefoneResponse :  IEquatable<TelefoneResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneResponse" /> class.
         /// Initializes a new instance of the <see cref="TelefoneResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id)..</param>
-        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence..</param>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id)..</param>
+        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone..</param>
+        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone..</param>
+        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence..</param>
+        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone..</param>
         /// <param name="Telefone">N\u00C3\u00BAmero do telefone..</param>
         /// <param name="Ramal">N\u00C3\u00BAmero do ramal..</param>
         /// <param name="Status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo.</param>
@@ -44,30 +44,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo DDD do telefone (id).
+        /// C\u00C3\u00B3digo DDD do telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo DDD do telefone (id).</value>
+        /// <value>C\u00C3\u00B3digo DDD do telefone.</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     

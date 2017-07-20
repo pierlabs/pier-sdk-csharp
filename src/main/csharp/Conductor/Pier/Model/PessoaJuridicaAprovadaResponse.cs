@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaJuridicaAprovadaResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaJuridicaAprovadaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id).</param>
         /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)&#39;..</param>
         /// <param name="NomeFantasia">Apresenta o nome fantasia da empresa..</param>
         /// <param name="Cnpj">N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ).</param>
@@ -35,11 +35,14 @@ namespace Conductor.Pier.Model
         /// <param name="Email">Email da empresa.</param>
         /// <param name="DiaVencimento">Dia vencimento.</param>
         /// <param name="NomeImpresso">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
+        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada.</param>
+        /// <param name="IdProposta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta.</param>
+        /// <param name="CanalEntrada">Indica o canal pelo qual o cadastro do cliente foi realizado.</param>
         /// <param name="Telefones">Apresenta os telefones da empresa.</param>
         /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros.</param>
         /// <param name="Socios">Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista.</param>
 
-        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, List<SocioAprovadoResponse> Socios = null)
+        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, List<SocioAprovadoResponse> Socios = null)
         {
             this.Id = Id;
             this.RazaoSocial = RazaoSocial;
@@ -54,6 +57,9 @@ namespace Conductor.Pier.Model
             this.Email = Email;
             this.DiaVencimento = DiaVencimento;
             this.NomeImpresso = NomeImpresso;
+            this.IdConta = IdConta;
+            this.IdProposta = IdProposta;
+            this.CanalEntrada = CanalEntrada;
             this.Telefones = Telefones;
             this.Enderecos = Enderecos;
             this.Socios = Socios;
@@ -62,9 +68,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -153,6 +159,27 @@ namespace Conductor.Pier.Model
         public string NomeImpresso { get; set; }
     
         /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada</value>
+        [DataMember(Name="idConta", EmitDefaultValue=false)]
+        public long? IdConta { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta</value>
+        [DataMember(Name="idProposta", EmitDefaultValue=false)]
+        public long? IdProposta { get; set; }
+    
+        /// <summary>
+        /// Indica o canal pelo qual o cadastro do cliente foi realizado
+        /// </summary>
+        /// <value>Indica o canal pelo qual o cadastro do cliente foi realizado</value>
+        [DataMember(Name="canalEntrada", EmitDefaultValue=false)]
+        public string CanalEntrada { get; set; }
+    
+        /// <summary>
         /// Apresenta os telefones da empresa
         /// </summary>
         /// <value>Apresenta os telefones da empresa</value>
@@ -194,6 +221,9 @@ namespace Conductor.Pier.Model
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  DiaVencimento: ").Append(DiaVencimento).Append("\n");
             sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
+            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdProposta: ").Append(IdProposta).Append("\n");
+            sb.Append("  CanalEntrada: ").Append(CanalEntrada).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             sb.Append("  Enderecos: ").Append(Enderecos).Append("\n");
             sb.Append("  Socios: ").Append(Socios).Append("\n");
@@ -300,6 +330,21 @@ namespace Conductor.Pier.Model
                     this.NomeImpresso.Equals(other.NomeImpresso)
                 ) && 
                 (
+                    this.IdConta == other.IdConta ||
+                    this.IdConta != null &&
+                    this.IdConta.Equals(other.IdConta)
+                ) && 
+                (
+                    this.IdProposta == other.IdProposta ||
+                    this.IdProposta != null &&
+                    this.IdProposta.Equals(other.IdProposta)
+                ) && 
+                (
+                    this.CanalEntrada == other.CanalEntrada ||
+                    this.CanalEntrada != null &&
+                    this.CanalEntrada.Equals(other.CanalEntrada)
+                ) && 
+                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -366,6 +411,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeImpresso != null)
                     hash = hash * 59 + this.NomeImpresso.GetHashCode();
+                
+                if (this.IdConta != null)
+                    hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdProposta != null)
+                    hash = hash * 59 + this.IdProposta.GetHashCode();
+                
+                if (this.CanalEntrada != null)
+                    hash = hash * 59 + this.CanalEntrada.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();

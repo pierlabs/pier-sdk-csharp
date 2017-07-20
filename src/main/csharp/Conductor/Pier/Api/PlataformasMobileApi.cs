@@ -76,7 +76,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>PlataformaMobileResponse</returns>
-        PlataformaMobileResponse SalvarUsingPOST9 (PlataformaMobilePersist persist);
+        PlataformaMobileResponse SalvarUsingPOST11 (PlataformaMobilePersist persist);
   
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -87,7 +87,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of PlataformaMobileResponse</returns>
-        ApiResponse<PlataformaMobileResponse> SalvarUsingPOST9WithHttpInfo (PlataformaMobilePersist persist);
+        ApiResponse<PlataformaMobileResponse> SalvarUsingPOST11WithHttpInfo (PlataformaMobilePersist persist);
         
         #endregion Synchronous Operations
         
@@ -152,7 +152,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of PlataformaMobileResponse</returns>
-        System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST9Async (PlataformaMobilePersist persist);
+        System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST11Async (PlataformaMobilePersist persist);
 
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -163,7 +163,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST9AsyncWithHttpInfo (PlataformaMobilePersist persist);
+        System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST11AsyncWithHttpInfo (PlataformaMobilePersist persist);
         
         #endregion Asynchronous Operations
         
@@ -609,9 +609,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>PlataformaMobileResponse</returns>
-        public PlataformaMobileResponse SalvarUsingPOST9 (PlataformaMobilePersist persist)
+        public PlataformaMobileResponse SalvarUsingPOST11 (PlataformaMobilePersist persist)
         {
-             ApiResponse<PlataformaMobileResponse> localVarResponse = SalvarUsingPOST9WithHttpInfo(persist);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = SalvarUsingPOST11WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -621,12 +621,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of PlataformaMobileResponse</returns>
-        public ApiResponse< PlataformaMobileResponse > SalvarUsingPOST9WithHttpInfo (PlataformaMobilePersist persist)
+        public ApiResponse< PlataformaMobileResponse > SalvarUsingPOST11WithHttpInfo (PlataformaMobilePersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling PlataformasMobileApi->SalvarUsingPOST9");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling PlataformasMobileApi->SalvarUsingPOST11");
             
     
             var localVarPath = "/api/plataformas-mobile";
@@ -678,9 +678,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -695,9 +695,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of PlataformaMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST9Async (PlataformaMobilePersist persist)
+        public async System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST11Async (PlataformaMobilePersist persist)
         {
-             ApiResponse<PlataformaMobileResponse> localVarResponse = await SalvarUsingPOST9AsyncWithHttpInfo(persist);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = await SalvarUsingPOST11AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -708,10 +708,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST9AsyncWithHttpInfo (PlataformaMobilePersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST11AsyncWithHttpInfo (PlataformaMobilePersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST9");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST11");
             
     
             var localVarPath = "/api/plataformas-mobile";
@@ -763,9 +763,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

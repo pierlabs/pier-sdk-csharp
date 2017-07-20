@@ -48,7 +48,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse CancelarUsingPOST (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        TransacaoOnUsResponse CancelarUsingPOST2 (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
   
         /// <summary>
         /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> CancelarUsingPOSTWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        ApiResponse<TransacaoOnUsResponse> CancelarUsingPOST2WithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
         /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
@@ -82,10 +82,10 @@ namespace Conductor.Pier.Api
         ApiResponse<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Simula planos de pagamento
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -93,10 +93,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse SimularUsingPOST (TransacaoOnUsRequest transacoesRequest);
   
         /// <summary>
-        /// Simula planos de pagamento
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -138,7 +138,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOSTAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOST2Async (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
 
         /// <summary>
         /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
@@ -149,7 +149,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOSTAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST2AsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
         /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
@@ -172,10 +172,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Simula planos de pagamento
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -183,10 +183,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularUsingPOSTAsync (TransacaoOnUsRequest transacoesRequest);
 
         /// <summary>
-        /// Simula planos de pagamento
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -461,9 +461,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse CancelarUsingPOST (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public TransacaoOnUsResponse CancelarUsingPOST2 (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarUsingPOSTWithHttpInfo(cancelamentoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarUsingPOST2WithHttpInfo(cancelamentoRequest);
              return localVarResponse.Data;
         }
 
@@ -473,12 +473,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > CancelarUsingPOSTWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public ApiResponse< TransacaoOnUsResponse > CancelarUsingPOST2WithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
             
             // verify the required parameter 'cancelamentoRequest' is set
             if (cancelamentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacoesApi->CancelarUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacoesApi->CancelarUsingPOST2");
             
     
             var localVarPath = "/api/cancelar-transacao";
@@ -530,9 +530,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -547,9 +547,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOSTAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOST2Async (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarUsingPOSTAsyncWithHttpInfo(cancelamentoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarUsingPOST2AsyncWithHttpInfo(cancelamentoRequest);
              return localVarResponse.Data;
 
         }
@@ -560,10 +560,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOSTAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST2AsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
             // verify the required parameter 'cancelamentoRequest' is set
-            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarUsingPOST");
+            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarUsingPOST2");
             
     
             var localVarPath = "/api/cancelar-transacao";
@@ -615,9 +615,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -772,7 +772,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
@@ -784,7 +784,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
@@ -858,7 +858,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -871,7 +871,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula planos de pagamento Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>

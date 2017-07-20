@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="RiscoFraudeResponse" /> class.
         /// Initializes a new instance of the <see cref="RiscoFraudeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id).</param>
-        /// <param name="IdTipoResolucao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude.</param>
+        /// <param name="IdTipoResolucao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
         /// <param name="DescricaoTipoResolucao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
-        /// <param name="FlagAltoRisco">Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id).</param>
-        /// <param name="DataTransacao">Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada.</param>
+        /// <param name="FlagAltoRisco">Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas.</param>
+        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.</param>
+        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="DataTransacao">Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada.</param>
         /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
         /// <param name="NomeEstabelecimento">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
 
@@ -50,16 +50,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro</value>
         [DataMember(Name="idTipoResolucao", EmitDefaultValue=false)]
         public long? IdTipoResolucao { get; set; }
     
@@ -71,37 +71,37 @@ namespace Conductor.Pier.Model
         public string DescricaoTipoResolucao { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+        /// Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
         /// </summary>
-        /// <value>Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas</value>
+        /// <value>Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas</value>
         [DataMember(Name="flagAltoRisco", EmitDefaultValue=false)]
         public bool? FlagAltoRisco { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+        /// Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
         /// </summary>
-        /// <value>Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada</value>
+        /// <value>Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada</value>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
         public string DataTransacao { get; set; }
     

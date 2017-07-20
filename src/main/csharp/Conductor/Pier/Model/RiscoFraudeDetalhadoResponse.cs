@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00C3\u00A2metros de resposta de risco de fraude detalhado
+    /// Objeto de resposta de Risco de Fraude Detalhado
     /// </summary>
     [DataContract]
     public partial class RiscoFraudeDetalhadoResponse :  IEquatable<RiscoFraudeDetalhadoResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="RiscoFraudeDetalhadoResponse" /> class.
         /// Initializes a new instance of the <see cref="RiscoFraudeDetalhadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id).</param>
-        /// <param name="IdTipoResolucao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude.</param>
+        /// <param name="IdTipoResolucao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
         /// <param name="DescricaoTipoResolucao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
-        /// <param name="FlagAltoRisco">Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id).</param>
-        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="FlagAltoRisco">Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas.</param>
+        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
+        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.</param>
+        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto.</param>
+        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="DataTransacao">Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada.</param>
         /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
         /// <param name="CodigoMoedaOrigem">C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="ValorOrigem">Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem.</param>
         /// <param name="CodigoMoedaDestino">C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="ValorDestino">Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem.</param>
+        /// <param name="ValorDestino">Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino.</param>
         /// <param name="NomeEstabelecimento">Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada.</param>
         /// <param name="IdPais">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs.</param>
         /// <param name="CodigoRespostaAutorizador">C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
@@ -48,7 +48,7 @@ namespace Conductor.Pier.Model
         /// <param name="Cpf">N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica.</param>
         /// <param name="Cnpj">N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica.</param>
         /// <param name="Email">Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o.</param>
-        /// <param name="Tefefones">Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o.</param>
+        /// <param name="Tefefones">Lista de telefones associados ao portador do Cart\u00C3\u00A3o.</param>
 
         public RiscoFraudeDetalhadoResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdProduto = null, long? IdTransacao = null, string DataTransacao = null, double? ValorTransacao = null, string CodigoMoedaOrigem = null, double? ValorOrigem = null, string CodigoMoedaDestino = null, double? ValorDestino = null, string NomeEstabelecimento = null, string IdPais = null, string CodigoRespostaAutorizador = null, string DescricaoRespostaAutorizador = null, string CodigoRespostaFraude = null, string DescricaoRespostaFraude = null, string OrigemTransacao = null, string CodigoModoEntradaTerminal = null, string DescricaoModoEntradaTerminal = null, string Cpf = null, string Cnpj = null, string Email = null, List<TelefoneResponse> Tefefones = null)
         {
@@ -84,16 +84,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro</value>
         [DataMember(Name="idTipoResolucao", EmitDefaultValue=false)]
         public long? IdTipoResolucao { get; set; }
     
@@ -105,37 +105,37 @@ namespace Conductor.Pier.Model
         public string DescricaoTipoResolucao { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+        /// Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
         /// </summary>
-        /// <value>Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas</value>
+        /// <value>Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas</value>
         [DataMember(Name="flagAltoRisco", EmitDefaultValue=false)]
         public bool? FlagAltoRisco { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
@@ -175,9 +175,9 @@ namespace Conductor.Pier.Model
         public string CodigoMoedaDestino { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem</value>
+        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino</value>
         [DataMember(Name="valorDestino", EmitDefaultValue=false)]
         public double? ValorDestino { get; set; }
     
@@ -266,9 +266,9 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+        /// Lista de telefones associados ao portador do Cart\u00C3\u00A3o
         /// </summary>
-        /// <value>Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o</value>
+        /// <value>Lista de telefones associados ao portador do Cart\u00C3\u00A3o</value>
         [DataMember(Name="tefefones", EmitDefaultValue=false)]
         public List<TelefoneResponse> Tefefones { get; set; }
     

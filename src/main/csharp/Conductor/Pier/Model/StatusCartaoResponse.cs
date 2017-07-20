@@ -31,8 +31,11 @@ namespace Conductor.Pier.Model
         /// <param name="FlagCobraTarifa">Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. (required).</param>
         /// <param name="FlagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo..</param>
         /// <param name="FlagPermiteDesbloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="FlagCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="FlagPermiteBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="FlagReativar">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
 
-        public StatusCartaoResponse(long? Id = null, string Nome = null, int? FlagCancelaCartao = null, int? FlagCancelaNoDesbloqueio = null, long? IdStatusDestinoDesbloqueio = null, long? IdStatusDestinoConta = null, int? FlagCobraTarifa = null, int? FlagPermiteNovaViaCartao = null, int? FlagPermiteDesbloqueio = null)
+        public StatusCartaoResponse(long? Id = null, string Nome = null, int? FlagCancelaCartao = null, int? FlagCancelaNoDesbloqueio = null, long? IdStatusDestinoDesbloqueio = null, long? IdStatusDestinoConta = null, int? FlagCobraTarifa = null, int? FlagPermiteNovaViaCartao = null, int? FlagPermiteDesbloqueio = null, int? FlagCancelamento = null, int? FlagPermiteBloqueio = null, int? FlagReativar = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -91,6 +94,9 @@ namespace Conductor.Pier.Model
             this.FlagCancelaNoDesbloqueio = FlagCancelaNoDesbloqueio;
             this.FlagPermiteNovaViaCartao = FlagPermiteNovaViaCartao;
             this.FlagPermiteDesbloqueio = FlagPermiteDesbloqueio;
+            this.FlagCancelamento = FlagCancelamento;
+            this.FlagPermiteBloqueio = FlagPermiteBloqueio;
+            this.FlagReativar = FlagReativar;
             
         }
         
@@ -159,6 +165,27 @@ namespace Conductor.Pier.Model
         public int? FlagPermiteDesbloqueio { get; set; }
     
         /// <summary>
+        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="flagCancelamento", EmitDefaultValue=false)]
+        public int? FlagCancelamento { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="flagPermiteBloqueio", EmitDefaultValue=false)]
+        public int? FlagPermiteBloqueio { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="flagReativar", EmitDefaultValue=false)]
+        public int? FlagReativar { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -175,6 +202,9 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagCobraTarifa: ").Append(FlagCobraTarifa).Append("\n");
             sb.Append("  FlagPermiteNovaViaCartao: ").Append(FlagPermiteNovaViaCartao).Append("\n");
             sb.Append("  FlagPermiteDesbloqueio: ").Append(FlagPermiteDesbloqueio).Append("\n");
+            sb.Append("  FlagCancelamento: ").Append(FlagCancelamento).Append("\n");
+            sb.Append("  FlagPermiteBloqueio: ").Append(FlagPermiteBloqueio).Append("\n");
+            sb.Append("  FlagReativar: ").Append(FlagReativar).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -256,6 +286,21 @@ namespace Conductor.Pier.Model
                     this.FlagPermiteDesbloqueio == other.FlagPermiteDesbloqueio ||
                     this.FlagPermiteDesbloqueio != null &&
                     this.FlagPermiteDesbloqueio.Equals(other.FlagPermiteDesbloqueio)
+                ) && 
+                (
+                    this.FlagCancelamento == other.FlagCancelamento ||
+                    this.FlagCancelamento != null &&
+                    this.FlagCancelamento.Equals(other.FlagCancelamento)
+                ) && 
+                (
+                    this.FlagPermiteBloqueio == other.FlagPermiteBloqueio ||
+                    this.FlagPermiteBloqueio != null &&
+                    this.FlagPermiteBloqueio.Equals(other.FlagPermiteBloqueio)
+                ) && 
+                (
+                    this.FlagReativar == other.FlagReativar ||
+                    this.FlagReativar != null &&
+                    this.FlagReativar.Equals(other.FlagReativar)
                 );
         }
 
@@ -297,6 +342,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagPermiteDesbloqueio != null)
                     hash = hash * 59 + this.FlagPermiteDesbloqueio.GetHashCode();
+                
+                if (this.FlagCancelamento != null)
+                    hash = hash * 59 + this.FlagCancelamento.GetHashCode();
+                
+                if (this.FlagPermiteBloqueio != null)
+                    hash = hash * 59 + this.FlagPermiteBloqueio.GetHashCode();
+                
+                if (this.FlagReativar != null)
+                    hash = hash * 59 + this.FlagReativar.GetHashCode();
                 
                 return hash;
             }

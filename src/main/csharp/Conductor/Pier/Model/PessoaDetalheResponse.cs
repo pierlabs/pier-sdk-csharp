@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdPessoa">C\u00C3\u00B3digo identificador da pessoa.</param>
         /// <param name="NomeMae">Apresenta o nome da m\u00C3\u00A3e da pessoa fisica.</param>
         /// <param name="IdEstadoCivil">Id Estado civil da pessoa fisica.</param>
-        /// <param name="Profissao">Profiss\u00C3\u00A3o da pessoa fisica.</param>
+        /// <param name="IdProfissao">Profiss\u00C3\u00A3o da pessoa fisica.</param>
         /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica.</param>
         /// <param name="IdNacionalidade">Id Nacionalidade da pessoa fisica.</param>
         /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
@@ -33,12 +33,12 @@ namespace Conductor.Pier.Model
         /// <param name="Email">Email da pessoa fisica.</param>
         /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string Profissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, int? IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
             this.IdEstadoCivil = IdEstadoCivil;
-            this.Profissao = Profissao;
+            this.IdProfissao = IdProfissao;
             this.IdNaturezaOcupacao = IdNaturezaOcupacao;
             this.IdNacionalidade = IdNacionalidade;
             this.NumeroAgencia = NumeroAgencia;
@@ -74,8 +74,8 @@ namespace Conductor.Pier.Model
         /// Profiss\u00C3\u00A3o da pessoa fisica
         /// </summary>
         /// <value>Profiss\u00C3\u00A3o da pessoa fisica</value>
-        [DataMember(Name="profissao", EmitDefaultValue=false)]
-        public string Profissao { get; set; }
+        [DataMember(Name="idProfissao", EmitDefaultValue=false)]
+        public int? IdProfissao { get; set; }
     
         /// <summary>
         /// Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -130,7 +130,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  NomeMae: ").Append(NomeMae).Append("\n");
             sb.Append("  IdEstadoCivil: ").Append(IdEstadoCivil).Append("\n");
-            sb.Append("  Profissao: ").Append(Profissao).Append("\n");
+            sb.Append("  IdProfissao: ").Append(IdProfissao).Append("\n");
             sb.Append("  IdNaturezaOcupacao: ").Append(IdNaturezaOcupacao).Append("\n");
             sb.Append("  IdNacionalidade: ").Append(IdNacionalidade).Append("\n");
             sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
@@ -190,9 +190,9 @@ namespace Conductor.Pier.Model
                     this.IdEstadoCivil.Equals(other.IdEstadoCivil)
                 ) && 
                 (
-                    this.Profissao == other.Profissao ||
-                    this.Profissao != null &&
-                    this.Profissao.Equals(other.Profissao)
+                    this.IdProfissao == other.IdProfissao ||
+                    this.IdProfissao != null &&
+                    this.IdProfissao.Equals(other.IdProfissao)
                 ) && 
                 (
                     this.IdNaturezaOcupacao == other.IdNaturezaOcupacao ||
@@ -247,8 +247,8 @@ namespace Conductor.Pier.Model
                 if (this.IdEstadoCivil != null)
                     hash = hash * 59 + this.IdEstadoCivil.GetHashCode();
                 
-                if (this.Profissao != null)
-                    hash = hash * 59 + this.Profissao.GetHashCode();
+                if (this.IdProfissao != null)
+                    hash = hash * 59 + this.IdProfissao.GetHashCode();
                 
                 if (this.IdNaturezaOcupacao != null)
                     hash = hash * 59 + this.IdNaturezaOcupacao.GetHashCode();

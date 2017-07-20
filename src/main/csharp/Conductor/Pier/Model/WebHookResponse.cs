@@ -28,6 +28,9 @@ namespace Conductor.Pier.Model
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
             
+            [EnumMember(Value = "TOKEN_SMS")]
+            TokenSms,
+            
             [EnumMember(Value = "OUTROS")]
             Outros
         }
@@ -55,6 +58,21 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
+        /// Status do WebHook
+        /// </summary>
+        /// <value>Status do WebHook</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "INATIVO")]
+            Inativo,
+            
+            [EnumMember(Value = "ATIVO")]
+            Ativo
+        }
+
+    
+        /// <summary>
         /// TipoEvento a ser chamado pelo WebHook
         /// </summary>
         /// <value>TipoEvento a ser chamado pelo WebHook</value>
@@ -69,6 +87,13 @@ namespace Conductor.Pier.Model
         public MetodoEnum? Metodo { get; set; }
     
         /// <summary>
+        /// Status do WebHook
+        /// </summary>
+        /// <value>Status do WebHook</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
         /// Initializes a new instance of the <see cref="WebHookResponse" /> class.
         /// Initializes a new instance of the <see cref="WebHookResponse" />class.
         /// </summary>
@@ -76,8 +101,9 @@ namespace Conductor.Pier.Model
         /// <param name="TipoEvento">TipoEvento a ser chamado pelo WebHook (required).</param>
         /// <param name="Metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (required).</param>
         /// <param name="Url">URL que a ser consumida pelo WebHook (required).</param>
+        /// <param name="Status">Status do WebHook (required).</param>
 
-        public WebHookResponse(long? Id = null, TipoEventoEnum? TipoEvento = null, MetodoEnum? Metodo = null, string Url = null)
+        public WebHookResponse(long? Id = null, TipoEventoEnum? TipoEvento = null, MetodoEnum? Metodo = null, string Url = null, StatusEnum? Status = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -115,6 +141,15 @@ namespace Conductor.Pier.Model
             {
                 this.Url = Url;
             }
+            // to ensure "Status" is required (not null)
+            if (Status == null)
+            {
+                throw new InvalidDataException("Status is a required property for WebHookResponse and cannot be null");
+            }
+            else
+            {
+                this.Status = Status;
+            }
             
         }
         
@@ -145,6 +180,7 @@ namespace Conductor.Pier.Model
             sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             sb.Append("  Metodo: ").Append(Metodo).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -201,6 +237,11 @@ namespace Conductor.Pier.Model
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
+                ) && 
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 );
         }
 
@@ -227,6 +268,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 return hash;
             }

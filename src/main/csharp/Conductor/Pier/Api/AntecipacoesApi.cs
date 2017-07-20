@@ -13,15 +13,63 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ICompraApi
+    public interface IAntecipacoesApi
     {
         #region Synchronous Operations
+        
+        /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
+        /// <returns>ParametroProdutoResponse</returns>
+        ParametroProdutoResponse ConfigurarTaxaAntecipacaoUsingPOST (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+  
+        /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
+        /// <returns>ApiResponse of ParametroProdutoResponse</returns>
+        ApiResponse<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoUsingPOSTWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+        
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <returns>ParametroProdutoResponse</returns>
+        ParametroProdutoResponse ConsultarTaxaAntecipacaoUsingGET (long? id, string tipoTransacao);
+  
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <returns>ApiResponse of ParametroProdutoResponse</returns>
+        ApiResponse<ParametroProdutoResponse> ConsultarTaxaAntecipacaoUsingGETWithHttpInfo (long? id, string tipoTransacao);
         
         /// <summary>
         /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
@@ -34,7 +82,7 @@ namespace Conductor.Pier.Api
         /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
@@ -44,10 +92,10 @@ namespace Conductor.Pier.Api
         ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas);
         
         /// <summary>
-        /// Listar compras
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras de uma conta.
+        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
@@ -61,10 +109,10 @@ namespace Conductor.Pier.Api
         PageCompraResponse ListarUsingGET6 (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
   
         /// <summary>
-        /// Listar compras
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras de uma conta.
+        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
@@ -81,7 +129,7 @@ namespace Conductor.Pier.Api
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
@@ -93,7 +141,7 @@ namespace Conductor.Pier.Api
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
@@ -106,10 +154,58 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
+        /// <returns>Task of ParametroProdutoResponse</returns>
+        System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoUsingPOSTAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+
+        /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
+        /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoUsingPOSTAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+        
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <returns>Task of ParametroProdutoResponse</returns>
+        System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoUsingGETAsync (long? id, string tipoTransacao);
+
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoUsingGETAsyncWithHttpInfo (long? id, string tipoTransacao);
+        
+        /// <summary>
         /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
@@ -122,7 +218,7 @@ namespace Conductor.Pier.Api
         /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
-        /// Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
@@ -132,10 +228,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoUsingPOSTAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas);
         
         /// <summary>
-        /// Listar compras
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras de uma conta.
+        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
@@ -149,10 +245,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET6Async (long? idConta, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
 
         /// <summary>
-        /// Listar compras
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras de uma conta.
+        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
@@ -169,7 +265,7 @@ namespace Conductor.Pier.Api
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
@@ -181,7 +277,7 @@ namespace Conductor.Pier.Api
         /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
@@ -196,13 +292,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class CompraApi : ICompraApi
+    public class AntecipacoesApi : IAntecipacoesApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CompraApi"/> class.
+        /// Initializes a new instance of the <see cref="AntecipacoesApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public CompraApi(String basePath)
+        public AntecipacoesApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -214,12 +310,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="CompraApi"/> class
+        /// Initializes a new instance of the <see cref="AntecipacoesApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public CompraApi(Configuration configuration = null)
+        public AntecipacoesApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -282,7 +378,359 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param> 
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param> 
+        /// <returns>ParametroProdutoResponse</returns>
+        public ParametroProdutoResponse ConfigurarTaxaAntecipacaoUsingPOST (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        {
+             ApiResponse<ParametroProdutoResponse> localVarResponse = ConfigurarTaxaAntecipacaoUsingPOSTWithHttpInfo(id, taxaAntecipacaoRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param> 
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param> 
+        /// <returns>ApiResponse of ParametroProdutoResponse</returns>
+        public ApiResponse< ParametroProdutoResponse > ConfigurarTaxaAntecipacaoUsingPOSTWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->ConfigurarTaxaAntecipacaoUsingPOST");
+            
+            // verify the required parameter 'taxaAntecipacaoRequest' is set
+            if (taxaAntecipacaoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling AntecipacoesApi->ConfigurarTaxaAntecipacaoUsingPOST");
+            
+    
+            var localVarPath = "/api/produtos/{id}/configurar-taxa-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (taxaAntecipacaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(taxaAntecipacaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taxaAntecipacaoRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroProdutoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
+        /// <returns>Task of ParametroProdutoResponse</returns>
+        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoUsingPOSTAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        {
+             ApiResponse<ParametroProdutoResponse> localVarResponse = await ConfigurarTaxaAntecipacaoUsingPOSTAsyncWithHttpInfo(id, taxaAntecipacaoRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
+        /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoUsingPOSTAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConfigurarTaxaAntecipacaoUsingPOST");
+            // verify the required parameter 'taxaAntecipacaoRequest' is set
+            if (taxaAntecipacaoRequest == null) throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling ConfigurarTaxaAntecipacaoUsingPOST");
+            
+    
+            var localVarPath = "/api/produtos/{id}/configurar-taxa-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (taxaAntecipacaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(taxaAntecipacaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taxaAntecipacaoRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroProdutoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param> 
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param> 
+        /// <returns>ParametroProdutoResponse</returns>
+        public ParametroProdutoResponse ConsultarTaxaAntecipacaoUsingGET (long? id, string tipoTransacao)
+        {
+             ApiResponse<ParametroProdutoResponse> localVarResponse = ConsultarTaxaAntecipacaoUsingGETWithHttpInfo(id, tipoTransacao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param> 
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param> 
+        /// <returns>ApiResponse of ParametroProdutoResponse</returns>
+        public ApiResponse< ParametroProdutoResponse > ConsultarTaxaAntecipacaoUsingGETWithHttpInfo (long? id, string tipoTransacao)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->ConsultarTaxaAntecipacaoUsingGET");
+            
+            // verify the required parameter 'tipoTransacao' is set
+            if (tipoTransacao == null)
+                throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling AntecipacoesApi->ConsultarTaxaAntecipacaoUsingGET");
+            
+    
+            var localVarPath = "/api/produtos/{id}/consultar-taxa-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (tipoTransacao != null) localVarQueryParams.Add("tipoTransacao", Configuration.ApiClient.ParameterToString(tipoTransacao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroProdutoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <returns>Task of ParametroProdutoResponse</returns>
+        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoUsingGETAsync (long? id, string tipoTransacao)
+        {
+             ApiResponse<ParametroProdutoResponse> localVarResponse = await ConsultarTaxaAntecipacaoUsingGETAsyncWithHttpInfo(id, tipoTransacao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Produto</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoUsingGETAsyncWithHttpInfo (long? id, string tipoTransacao)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTaxaAntecipacaoUsingGET");
+            // verify the required parameter 'tipoTransacao' is set
+            if (tipoTransacao == null) throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling ConsultarTaxaAntecipacaoUsingGET");
+            
+    
+            var localVarPath = "/api/produtos/{id}/consultar-taxa-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (tipoTransacao != null) localVarQueryParams.Add("tipoTransacao", Configuration.ApiClient.ParameterToString(tipoTransacao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroProdutoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
@@ -296,7 +744,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
@@ -308,18 +756,18 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CompraApi->EfetivarAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacoesApi->EfetivarAntecipacaoUsingPOST");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CompraApi->EfetivarAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->EfetivarAntecipacaoUsingPOST");
             
             // verify the required parameter 'quantidadeParcelas' is set
             if (quantidadeParcelas == null)
-                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling CompraApi->EfetivarAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling AntecipacoesApi->EfetivarAntecipacaoUsingPOST");
             
     
-            var localVarPath = "/api/compras/{id}/efetivar-antecipacao";
+            var localVarPath = "/api/compras-antecipaveis/{id}/efetivar-antecipacao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -376,7 +824,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
@@ -391,7 +839,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
@@ -408,7 +856,7 @@ namespace Conductor.Pier.Api
             if (quantidadeParcelas == null) throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling EfetivarAntecipacaoUsingPOST");
             
     
-            var localVarPath = "/api/compras/{id}/efetivar-antecipacao";
+            var localVarPath = "/api/compras-antecipaveis/{id}/efetivar-antecipacao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -464,7 +912,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Listar compras Lista as compras de uma conta.
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param> 
@@ -482,7 +930,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Listar compras Lista as compras de uma conta.
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param> 
@@ -498,10 +946,10 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CompraApi->ListarUsingGET6");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacoesApi->ListarUsingGET6");
             
     
-            var localVarPath = "/api/compras";
+            var localVarPath = "/api/compras-antecipaveis";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -562,7 +1010,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Listar compras Lista as compras de uma conta.
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
@@ -581,7 +1029,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Listar compras Lista as compras de uma conta.
+        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
@@ -598,7 +1046,7 @@ namespace Conductor.Pier.Api
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET6");
             
     
-            var localVarPath = "/api/compras";
+            var localVarPath = "/api/compras-antecipaveis";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -658,7 +1106,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
@@ -671,7 +1119,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
@@ -682,14 +1130,14 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CompraApi->SimularAntecipacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacoesApi->SimularAntecipacaoUsingGET");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CompraApi->SimularAntecipacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->SimularAntecipacaoUsingGET");
             
     
-            var localVarPath = "/api/compras/{id}/simular-antecipacao";
+            var localVarPath = "/api/compras-antecipaveis/{id}/simular-antecipacao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -745,7 +1193,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
@@ -759,7 +1207,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
@@ -773,7 +1221,7 @@ namespace Conductor.Pier.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SimularAntecipacaoUsingGET");
             
     
-            var localVarPath = "/api/compras/{id}/simular-antecipacao";
+            var localVarPath = "/api/compras-antecipaveis/{id}/simular-antecipacao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

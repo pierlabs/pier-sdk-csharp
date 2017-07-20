@@ -25,11 +25,11 @@ namespace Conductor.Pier.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
-            [EnumMember(Value = "ATIVO")]
-            Ativo,
-            
             [EnumMember(Value = "INATIVO")]
-            Inativo
+            Inativo,
+            
+            [EnumMember(Value = "ATIVO")]
+            Ativo
         }
 
     

@@ -22,11 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OrigemComercialResponse" /> class.
         /// Initializes a new instance of the <see cref="OrigemComercialResponse" />class.
         /// </summary>
-        /// <param name="Id">Id da origem comercial (required).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (required).</param>
         /// <param name="Nome">Nome da origem comercial (required).</param>
+        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial (required).</param>
+        /// <param name="ProdutosOrigem">Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial (required).</param>
+        /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (required).</param>
+        /// <param name="IdTipoOrigemComercial">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial (required).</param>
+        /// <param name="NomeTipoOrigemComercial">Nome do Tipo da Origem Comercial (required).</param>
+        /// <param name="IdGrupoOrigemComercial">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence (required).</param>
+        /// <param name="NomeGrupoOrigemComercial">Nome do Grupo a qual a Origem Comercial pertence (required).</param>
         /// <param name="Status">Status da origem comercial (required).</param>
 
-        public OrigemComercialResponse(long? Id = null, string Nome = null, int? Status = null)
+        public OrigemComercialResponse(long? Id = null, string Nome = null, string Descricao = null, List<ProdutoOrigemResponse> ProdutosOrigem = null, long? IdEstabelecimento = null, long? IdTipoOrigemComercial = null, string NomeTipoOrigemComercial = null, long? IdGrupoOrigemComercial = null, string NomeGrupoOrigemComercial = null, bool? Status = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -46,6 +53,69 @@ namespace Conductor.Pier.Model
             {
                 this.Nome = Nome;
             }
+            // to ensure "Descricao" is required (not null)
+            if (Descricao == null)
+            {
+                throw new InvalidDataException("Descricao is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.Descricao = Descricao;
+            }
+            // to ensure "ProdutosOrigem" is required (not null)
+            if (ProdutosOrigem == null)
+            {
+                throw new InvalidDataException("ProdutosOrigem is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.ProdutosOrigem = ProdutosOrigem;
+            }
+            // to ensure "IdEstabelecimento" is required (not null)
+            if (IdEstabelecimento == null)
+            {
+                throw new InvalidDataException("IdEstabelecimento is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.IdEstabelecimento = IdEstabelecimento;
+            }
+            // to ensure "IdTipoOrigemComercial" is required (not null)
+            if (IdTipoOrigemComercial == null)
+            {
+                throw new InvalidDataException("IdTipoOrigemComercial is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.IdTipoOrigemComercial = IdTipoOrigemComercial;
+            }
+            // to ensure "NomeTipoOrigemComercial" is required (not null)
+            if (NomeTipoOrigemComercial == null)
+            {
+                throw new InvalidDataException("NomeTipoOrigemComercial is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.NomeTipoOrigemComercial = NomeTipoOrigemComercial;
+            }
+            // to ensure "IdGrupoOrigemComercial" is required (not null)
+            if (IdGrupoOrigemComercial == null)
+            {
+                throw new InvalidDataException("IdGrupoOrigemComercial is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.IdGrupoOrigemComercial = IdGrupoOrigemComercial;
+            }
+            // to ensure "NomeGrupoOrigemComercial" is required (not null)
+            if (NomeGrupoOrigemComercial == null)
+            {
+                throw new InvalidDataException("NomeGrupoOrigemComercial is a required property for OrigemComercialResponse and cannot be null");
+            }
+            else
+            {
+                this.NomeGrupoOrigemComercial = NomeGrupoOrigemComercial;
+            }
             // to ensure "Status" is required (not null)
             if (Status == null)
             {
@@ -60,9 +130,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id da origem comercial
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
         /// </summary>
-        /// <value>Id da origem comercial</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -74,11 +144,60 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
+        /// Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+        /// </summary>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial</value>
+        [DataMember(Name="descricao", EmitDefaultValue=false)]
+        public string Descricao { get; set; }
+    
+        /// <summary>
+        /// Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+        /// </summary>
+        /// <value>Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial</value>
+        [DataMember(Name="produtosOrigem", EmitDefaultValue=false)]
+        public List<ProdutoOrigemResponse> ProdutosOrigem { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento</value>
+        [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
+        public long? IdEstabelecimento { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial</value>
+        [DataMember(Name="idTipoOrigemComercial", EmitDefaultValue=false)]
+        public long? IdTipoOrigemComercial { get; set; }
+    
+        /// <summary>
+        /// Nome do Tipo da Origem Comercial
+        /// </summary>
+        /// <value>Nome do Tipo da Origem Comercial</value>
+        [DataMember(Name="nomeTipoOrigemComercial", EmitDefaultValue=false)]
+        public string NomeTipoOrigemComercial { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence</value>
+        [DataMember(Name="idGrupoOrigemComercial", EmitDefaultValue=false)]
+        public long? IdGrupoOrigemComercial { get; set; }
+    
+        /// <summary>
+        /// Nome do Grupo a qual a Origem Comercial pertence
+        /// </summary>
+        /// <value>Nome do Grupo a qual a Origem Comercial pertence</value>
+        [DataMember(Name="nomeGrupoOrigemComercial", EmitDefaultValue=false)]
+        public string NomeGrupoOrigemComercial { get; set; }
+    
+        /// <summary>
         /// Status da origem comercial
         /// </summary>
         /// <value>Status da origem comercial</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public int? Status { get; set; }
+        public bool? Status { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,6 +209,13 @@ namespace Conductor.Pier.Model
             sb.Append("class OrigemComercialResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
+            sb.Append("  Descricao: ").Append(Descricao).Append("\n");
+            sb.Append("  ProdutosOrigem: ").Append(ProdutosOrigem).Append("\n");
+            sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
+            sb.Append("  IdTipoOrigemComercial: ").Append(IdTipoOrigemComercial).Append("\n");
+            sb.Append("  NomeTipoOrigemComercial: ").Append(NomeTipoOrigemComercial).Append("\n");
+            sb.Append("  IdGrupoOrigemComercial: ").Append(IdGrupoOrigemComercial).Append("\n");
+            sb.Append("  NomeGrupoOrigemComercial: ").Append(NomeGrupoOrigemComercial).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             
             sb.Append("}\n");
@@ -139,6 +265,41 @@ namespace Conductor.Pier.Model
                     this.Nome.Equals(other.Nome)
                 ) && 
                 (
+                    this.Descricao == other.Descricao ||
+                    this.Descricao != null &&
+                    this.Descricao.Equals(other.Descricao)
+                ) && 
+                (
+                    this.ProdutosOrigem == other.ProdutosOrigem ||
+                    this.ProdutosOrigem != null &&
+                    this.ProdutosOrigem.SequenceEqual(other.ProdutosOrigem)
+                ) && 
+                (
+                    this.IdEstabelecimento == other.IdEstabelecimento ||
+                    this.IdEstabelecimento != null &&
+                    this.IdEstabelecimento.Equals(other.IdEstabelecimento)
+                ) && 
+                (
+                    this.IdTipoOrigemComercial == other.IdTipoOrigemComercial ||
+                    this.IdTipoOrigemComercial != null &&
+                    this.IdTipoOrigemComercial.Equals(other.IdTipoOrigemComercial)
+                ) && 
+                (
+                    this.NomeTipoOrigemComercial == other.NomeTipoOrigemComercial ||
+                    this.NomeTipoOrigemComercial != null &&
+                    this.NomeTipoOrigemComercial.Equals(other.NomeTipoOrigemComercial)
+                ) && 
+                (
+                    this.IdGrupoOrigemComercial == other.IdGrupoOrigemComercial ||
+                    this.IdGrupoOrigemComercial != null &&
+                    this.IdGrupoOrigemComercial.Equals(other.IdGrupoOrigemComercial)
+                ) && 
+                (
+                    this.NomeGrupoOrigemComercial == other.NomeGrupoOrigemComercial ||
+                    this.NomeGrupoOrigemComercial != null &&
+                    this.NomeGrupoOrigemComercial.Equals(other.NomeGrupoOrigemComercial)
+                ) && 
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -162,6 +323,27 @@ namespace Conductor.Pier.Model
                 
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
+                
+                if (this.Descricao != null)
+                    hash = hash * 59 + this.Descricao.GetHashCode();
+                
+                if (this.ProdutosOrigem != null)
+                    hash = hash * 59 + this.ProdutosOrigem.GetHashCode();
+                
+                if (this.IdEstabelecimento != null)
+                    hash = hash * 59 + this.IdEstabelecimento.GetHashCode();
+                
+                if (this.IdTipoOrigemComercial != null)
+                    hash = hash * 59 + this.IdTipoOrigemComercial.GetHashCode();
+                
+                if (this.NomeTipoOrigemComercial != null)
+                    hash = hash * 59 + this.NomeTipoOrigemComercial.GetHashCode();
+                
+                if (this.IdGrupoOrigemComercial != null)
+                    hash = hash * 59 + this.IdGrupoOrigemComercial.GetHashCode();
+                
+                if (this.NomeGrupoOrigemComercial != null)
+                    hash = hash * 59 + this.NomeGrupoOrigemComercial.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

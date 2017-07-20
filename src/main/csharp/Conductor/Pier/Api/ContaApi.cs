@@ -65,8 +65,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param>
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param>
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param>
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse AlterarLimiteUsingPUT (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo);
+        LimiteDisponibilidadeResponse AlterarLimiteUsingPUT (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo);
   
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
@@ -88,8 +89,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param>
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param>
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param>
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> AlterarLimiteUsingPUTWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo);
+        ApiResponse<LimiteDisponibilidadeResponse> AlterarLimiteUsingPUTWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo);
         
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
@@ -140,6 +142,42 @@ namespace Conductor.Pier.Api
         ApiResponse<ContaResponse> AlterarVencimentoUsingPUTWithHttpInfo (long? id, int? novoDiaVencimento);
         
         /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <returns>Object</returns>
+        Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+  
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        
+        /// <summary>
         ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -160,6 +198,54 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>ContaResponse</returns>
+        ContaResponse BloquearUsingPOST1 (long? id, long? idStatus);
+  
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>ApiResponse of ContaResponse</returns>
+        ApiResponse<ContaResponse> BloquearUsingPOST1WithHttpInfo (long? id, long? idStatus);
+        
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>ContaResponse</returns>
+        ContaResponse CancelarUsingPOST1 (long? id, long? idStatus);
+  
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>ApiResponse of ContaResponse</returns>
+        ApiResponse<ContaResponse> CancelarUsingPOST1WithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
         /// Consulta os dados de um determinado boleto da fatura
@@ -368,7 +454,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>TransferenciaBancariaResponse</returns>
-        TransferenciaBancariaResponse ConsultarUsingGET23 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        TransferenciaBancariaResponse ConsultarUsingGET24 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
   
         /// <summary>
         /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
@@ -381,7 +467,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET23WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET24WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -393,7 +479,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
         /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse ConsultarUsingGET24 (long? id, long? idTransferencia);
+        PageTransferenciaResponse ConsultarUsingGET25 (long? id, long? idTransferencia);
   
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -405,7 +491,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> ConsultarUsingGET24WithHttpInfo (long? id, long? idTransferencia);
+        ApiResponse<PageTransferenciaResponse> ConsultarUsingGET25WithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -416,7 +502,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>ContaDetalheResponse</returns>
-        ContaDetalheResponse ConsultarUsingGET4 (long? id);
+        ContaDetalheResponse ConsultarUsingGET5 (long? id);
   
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -427,7 +513,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        ApiResponse<ContaDetalheResponse> ConsultarUsingGET4WithHttpInfo (long? id);
+        ApiResponse<ContaDetalheResponse> ConsultarUsingGET5WithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
@@ -834,7 +920,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Object</returns>
-        Object ReativarUsingPOST (long? id);
+        Object ReativarUsingPOST1 (long? id);
   
         /// <summary>
         /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
@@ -845,7 +931,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ReativarUsingPOSTWithHttpInfo (long? id);
+        ApiResponse<Object> ReativarUsingPOST1WithHttpInfo (long? id);
         
         /// <summary>
         /// Permite listar uma linha do tempo com os eventos da conta
@@ -975,8 +1061,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param>
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param>
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param>
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarLimiteUsingPUTAsync (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarLimiteUsingPUTAsync (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo);
 
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
@@ -998,8 +1085,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param>
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param>
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param>
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarLimiteUsingPUTAsyncWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarLimiteUsingPUTAsyncWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo);
         
         /// <summary>
         /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
@@ -1050,6 +1138,42 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AlterarVencimentoUsingPUTAsyncWithHttpInfo (long? id, int? novoDiaVencimento);
         
         /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        
+        /// <summary>
         ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -1070,6 +1194,54 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ContaResponse</returns>
+        System.Threading.Tasks.Task<ContaResponse> BloquearUsingPOST1Async (long? id, long? idStatus);
+
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ApiResponse (ContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus);
+        
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ContaResponse</returns>
+        System.Threading.Tasks.Task<ContaResponse> CancelarUsingPOST1Async (long? id, long? idStatus);
+
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ApiResponse (ContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
         /// Consulta os dados de um determinado boleto da fatura
@@ -1278,7 +1450,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET23Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET24Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
 
         /// <summary>
         /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
@@ -1291,7 +1463,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET24AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -1303,7 +1475,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> ConsultarUsingGET24Async (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<PageTransferenciaResponse> ConsultarUsingGET25Async (long? id, long? idTransferencia);
 
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -1315,7 +1487,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ConsultarUsingGET24AsyncWithHttpInfo (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -1326,7 +1498,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ContaDetalheResponse</returns>
-        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET4Async (long? id);
+        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET5Async (long? id);
 
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -1337,7 +1509,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET4AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
@@ -1744,7 +1916,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReativarUsingPOSTAsync (long? id);
+        System.Threading.Tasks.Task<Object> ReativarUsingPOST1Async (long? id);
 
         /// <summary>
         /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
@@ -1755,7 +1927,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReativarUsingPOSTAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReativarUsingPOST1AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite listar uma linha do tempo com os eventos da conta
@@ -2136,10 +2308,11 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param> 
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param> 
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param> 
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse AlterarLimiteUsingPUT (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo)
+        public LimiteDisponibilidadeResponse AlterarLimiteUsingPUT (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = AlterarLimiteUsingPUTWithHttpInfo(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = AlterarLimiteUsingPUTWithHttpInfo(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo);
              return localVarResponse.Data;
         }
 
@@ -2160,8 +2333,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param> 
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param> 
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param> 
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > AlterarLimiteUsingPUTWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo)
+        public ApiResponse< LimiteDisponibilidadeResponse > AlterarLimiteUsingPUTWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo)
         {
             
             // verify the required parameter 'id' is set
@@ -2216,6 +2390,10 @@ namespace Conductor.Pier.Api
             if (limiteInternacionalSaquePeriodo == null)
                 throw new ApiException(400, "Missing required parameter 'limiteInternacionalSaquePeriodo' when calling ContaApi->AlterarLimiteUsingPUT");
             
+            // verify the required parameter 'limiteMaximo' is set
+            if (limiteMaximo == null)
+                throw new ApiException(400, "Missing required parameter 'limiteMaximo' when calling ContaApi->AlterarLimiteUsingPUT");
+            
     
             var localVarPath = "/api/contas/{id}/alterar-limites";
     
@@ -2257,6 +2435,7 @@ namespace Conductor.Pier.Api
             if (limiteInternacionalParcelas != null) localVarQueryParams.Add("limiteInternacionalParcelas", Configuration.ApiClient.ParameterToString(limiteInternacionalParcelas)); // query parameter
             if (limiteInternacionalSaqueGlobal != null) localVarQueryParams.Add("limiteInternacionalSaqueGlobal", Configuration.ApiClient.ParameterToString(limiteInternacionalSaqueGlobal)); // query parameter
             if (limiteInternacionalSaquePeriodo != null) localVarQueryParams.Add("limiteInternacionalSaquePeriodo", Configuration.ApiClient.ParameterToString(limiteInternacionalSaquePeriodo)); // query parameter
+            if (limiteMaximo != null) localVarQueryParams.Add("limiteMaximo", Configuration.ApiClient.ParameterToString(limiteMaximo)); // query parameter
             
             
             
@@ -2300,10 +2479,11 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param>
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param>
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param>
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarLimiteUsingPUTAsync (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarLimiteUsingPUTAsync (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await AlterarLimiteUsingPUTAsyncWithHttpInfo(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await AlterarLimiteUsingPUTAsyncWithHttpInfo(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo);
              return localVarResponse.Data;
 
         }
@@ -2325,8 +2505,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</param>
         /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</param>
         /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</param>
+        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarLimiteUsingPUTAsyncWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarLimiteUsingPUTAsyncWithHttpInfo (long? id, double? limiteGlobal, double? limiteCompra, double? limiteParcelado, double? limiteParcelas, double? limiteSaqueGlobal, double? limiteSaquePeriodo, double? limiteConsignado, double? limiteInternacionalCompra, double? limiteInternacionalParcelado, double? limiteInternacionalParcelas, double? limiteInternacionalSaqueGlobal, double? limiteInternacionalSaquePeriodo, double? limiteMaximo)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarLimiteUsingPUT");
@@ -2354,6 +2535,8 @@ namespace Conductor.Pier.Api
             if (limiteInternacionalSaqueGlobal == null) throw new ApiException(400, "Missing required parameter 'limiteInternacionalSaqueGlobal' when calling AlterarLimiteUsingPUT");
             // verify the required parameter 'limiteInternacionalSaquePeriodo' is set
             if (limiteInternacionalSaquePeriodo == null) throw new ApiException(400, "Missing required parameter 'limiteInternacionalSaquePeriodo' when calling AlterarLimiteUsingPUT");
+            // verify the required parameter 'limiteMaximo' is set
+            if (limiteMaximo == null) throw new ApiException(400, "Missing required parameter 'limiteMaximo' when calling AlterarLimiteUsingPUT");
             
     
             var localVarPath = "/api/contas/{id}/alterar-limites";
@@ -2396,6 +2579,7 @@ namespace Conductor.Pier.Api
             if (limiteInternacionalParcelas != null) localVarQueryParams.Add("limiteInternacionalParcelas", Configuration.ApiClient.ParameterToString(limiteInternacionalParcelas)); // query parameter
             if (limiteInternacionalSaqueGlobal != null) localVarQueryParams.Add("limiteInternacionalSaqueGlobal", Configuration.ApiClient.ParameterToString(limiteInternacionalSaqueGlobal)); // query parameter
             if (limiteInternacionalSaquePeriodo != null) localVarQueryParams.Add("limiteInternacionalSaquePeriodo", Configuration.ApiClient.ParameterToString(limiteInternacionalSaquePeriodo)); // query parameter
+            if (limiteMaximo != null) localVarQueryParams.Add("limiteMaximo", Configuration.ApiClient.ParameterToString(limiteMaximo)); // query parameter
             
             
             
@@ -2762,6 +2946,212 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="DDD">DDD do celular (optional)</param> 
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param> 
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <returns>Object</returns>
+        public Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        {
+             ApiResponse<Object> localVarResponse = AtivarAnuidadeUsingPOSTWithHttpInfo(id, idAnuidade, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="DDD">DDD do celular (optional)</param> 
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param> 
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtivarAnuidadeUsingPOST");
+            
+            // verify the required parameter 'idAnuidade' is set
+            if (idAnuidade == null)
+                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ContaApi->AtivarAnuidadeUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
+            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
+            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
+            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
+            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidadeUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidadeUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        {
+             ApiResponse<Object> localVarResponse = await AtivarAnuidadeUsingPOSTAsyncWithHttpInfo(id, idAnuidade, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidadeUsingPOST");
+            // verify the required parameter 'idAnuidade' is set
+            if (idAnuidade == null) throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling AtivarAnuidadeUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
+            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
+            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
+            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
+            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidadeUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidadeUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
         ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2916,6 +3306,346 @@ namespace Conductor.Pier.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <returns>ContaResponse</returns>
+        public ContaResponse BloquearUsingPOST1 (long? id, long? idStatus)
+        {
+             ApiResponse<ContaResponse> localVarResponse = BloquearUsingPOST1WithHttpInfo(id, idStatus);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <returns>ApiResponse of ContaResponse</returns>
+        public ApiResponse< ContaResponse > BloquearUsingPOST1WithHttpInfo (long? id, long? idStatus)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->BloquearUsingPOST1");
+            
+            // verify the required parameter 'idStatus' is set
+            if (idStatus == null)
+                throw new ApiException(400, "Missing required parameter 'idStatus' when calling ContaApi->BloquearUsingPOST1");
+            
+    
+            var localVarPath = "/api/contas/{id}/bloquear";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling BloquearUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling BloquearUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ContaResponse</returns>
+        public async System.Threading.Tasks.Task<ContaResponse> BloquearUsingPOST1Async (long? id, long? idStatus)
+        {
+             ApiResponse<ContaResponse> localVarResponse = await BloquearUsingPOST1AsyncWithHttpInfo(id, idStatus);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ApiResponse (ContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling BloquearUsingPOST1");
+            // verify the required parameter 'idStatus' is set
+            if (idStatus == null) throw new ApiException(400, "Missing required parameter 'idStatus' when calling BloquearUsingPOST1");
+            
+    
+            var localVarPath = "/api/contas/{id}/bloquear";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling BloquearUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling BloquearUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <returns>ContaResponse</returns>
+        public ContaResponse CancelarUsingPOST1 (long? id, long? idStatus)
+        {
+             ApiResponse<ContaResponse> localVarResponse = CancelarUsingPOST1WithHttpInfo(id, idStatus);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <returns>ApiResponse of ContaResponse</returns>
+        public ApiResponse< ContaResponse > CancelarUsingPOST1WithHttpInfo (long? id, long? idStatus)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->CancelarUsingPOST1");
+            
+            // verify the required parameter 'idStatus' is set
+            if (idStatus == null)
+                throw new ApiException(400, "Missing required parameter 'idStatus' when calling ContaApi->CancelarUsingPOST1");
+            
+    
+            var localVarPath = "/api/contas/{id}/cancelar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ContaResponse</returns>
+        public async System.Threading.Tasks.Task<ContaResponse> CancelarUsingPOST1Async (long? id, long? idStatus)
+        {
+             ApiResponse<ContaResponse> localVarResponse = await CancelarUsingPOST1AsyncWithHttpInfo(id, idStatus);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <returns>Task of ApiResponse (ContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarUsingPOST1");
+            // verify the required parameter 'idStatus' is set
+            if (idStatus == null) throw new ApiException(400, "Missing required parameter 'idStatus' when calling CancelarUsingPOST1");
+            
+    
+            var localVarPath = "/api/contas/{id}/cancelar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
             
         }
         
@@ -4263,9 +4993,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
         /// <returns>TransferenciaBancariaResponse</returns>
-        public TransferenciaBancariaResponse ConsultarUsingGET23 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public TransferenciaBancariaResponse ConsultarUsingGET24 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET23WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET24WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
         }
 
@@ -4277,16 +5007,16 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET23WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET24WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET23");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET24");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET23");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET24");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -4334,9 +5064,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4353,9 +5083,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET23Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET24Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET23AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET24AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
 
         }
@@ -4368,12 +5098,12 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET24AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET23");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET24");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET23");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET24");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -4421,9 +5151,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4438,9 +5168,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param> 
         /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse ConsultarUsingGET24 (long? id, long? idTransferencia)
+        public PageTransferenciaResponse ConsultarUsingGET25 (long? id, long? idTransferencia)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = ConsultarUsingGET24WithHttpInfo(id, idTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
         }
 
@@ -4451,16 +5181,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param> 
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > ConsultarUsingGET24WithHttpInfo (long? id, long? idTransferencia)
+        public ApiResponse< PageTransferenciaResponse > ConsultarUsingGET25WithHttpInfo (long? id, long? idTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET24");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET25");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET24");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET25");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -4507,9 +5237,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4525,9 +5255,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ConsultarUsingGET24Async (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ConsultarUsingGET25Async (long? id, long? idTransferencia)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await ConsultarUsingGET24AsyncWithHttpInfo(id, idTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
 
         }
@@ -4539,12 +5269,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ConsultarUsingGET24AsyncWithHttpInfo (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? id, long? idTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET24");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET25");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET24");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET25");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -4591,9 +5321,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4607,9 +5337,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <returns>ContaDetalheResponse</returns>
-        public ContaDetalheResponse ConsultarUsingGET4 (long? id)
+        public ContaDetalheResponse ConsultarUsingGET5 (long? id)
         {
-             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarUsingGET4WithHttpInfo(id);
+             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4619,12 +5349,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        public ApiResponse< ContaDetalheResponse > ConsultarUsingGET4WithHttpInfo (long? id)
+        public ApiResponse< ContaDetalheResponse > ConsultarUsingGET5WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET4");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET5");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -4670,9 +5400,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4687,9 +5417,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ContaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET4Async (long? id)
+        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET5Async (long? id)
         {
-             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(id);
+             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4700,10 +5430,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET4AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET4");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -4749,9 +5479,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7259,9 +7989,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
         /// <returns>Object</returns>
-        public Object ReativarUsingPOST (long? id)
+        public Object ReativarUsingPOST1 (long? id)
         {
-             ApiResponse<Object> localVarResponse = ReativarUsingPOSTWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = ReativarUsingPOST1WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -7271,12 +8001,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ReativarUsingPOSTWithHttpInfo (long? id)
+        public ApiResponse< Object > ReativarUsingPOST1WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ReativarUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ReativarUsingPOST1");
             
     
             var localVarPath = "/api/contas/{id}/reativar";
@@ -7322,9 +8052,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7339,9 +8069,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReativarUsingPOSTAsync (long? id)
+        public async System.Threading.Tasks.Task<Object> ReativarUsingPOST1Async (long? id)
         {
-             ApiResponse<Object> localVarResponse = await ReativarUsingPOSTAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await ReativarUsingPOST1AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -7352,10 +8082,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReativarUsingPOSTAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReativarUsingPOST1AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReativarUsingPOST");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReativarUsingPOST1");
             
     
             var localVarPath = "/api/contas/{id}/reativar";
@@ -7401,9 +8131,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

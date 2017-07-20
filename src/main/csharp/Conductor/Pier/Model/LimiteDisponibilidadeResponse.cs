@@ -23,28 +23,29 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LimiteDisponibilidadeResponse" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id). (required).</param>
-        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (required).</param>
-        /// <param name="LimiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required).</param>
-        /// <param name="LimiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required).</param>
-        /// <param name="LimiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (required).</param>
-        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="LimiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="LimiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (required).</param>
-        /// <param name="LimiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (required).</param>
-        /// <param name="LimiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (required).</param>
-        /// <param name="LimiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (required).</param>
-        /// <param name="LimiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required).</param>
-        /// <param name="LimiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="SaldoDisponivelGlobal">Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es. (required).</param>
-        /// <param name="SaldoDisponivelCompra">Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional. (required).</param>
-        /// <param name="SaldoDisponivelParcelado">Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional. (required).</param>
-        /// <param name="SaldoDisponivelParcelas">Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento. (required).</param>
-        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="SaldoPontosFidelidade">Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui. (required).</param>
-        /// <param name="SaldoDisponivelCompraInternacional">Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional. (required).</param>
-        /// <param name="SaldoDisponivelSaqueInternacional">Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (required).</param>
+        /// <param name="LimiteGlobal">Valor do limite de cr\u00C3\u00A9dito. (required).</param>
+        /// <param name="LimiteCompra">Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais. (required).</param>
+        /// <param name="LimiteParcelado">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required).</param>
+        /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade. (required).</param>
+        /// <param name="LimiteSaqueGlobal">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
+        /// <param name="LimiteSaquePeriodo">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
+        /// <param name="LimiteConsignado">Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha). (required).</param>
+        /// <param name="LimiteInternacionalCompra">Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais. (required).</param>
+        /// <param name="LimiteInternacionalParcelado">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas. (required).</param>
+        /// <param name="LimiteInternacionalParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (required).</param>
+        /// <param name="LimiteInternacionalSaqueGlobal">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional. (required).</param>
+        /// <param name="LimiteInternacionalSaquePeriodo">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento. (required).</param>
+        /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (required).</param>
+        /// <param name="SaldoDisponivelGlobal">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es. (required).</param>
+        /// <param name="SaldoDisponivelCompra">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional. (required).</param>
+        /// <param name="SaldoDisponivelParcelado">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada. (required).</param>
+        /// <param name="SaldoDisponivelParcelas">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento. (required).</param>
+        /// <param name="SaldoDisponivelSaque">Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
+        /// <param name="SaldoPontosFidelidade">Saldo atual de pontos do programa de fidelidade. (required).</param>
+        /// <param name="SaldoDisponivelCompraInternacional">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional. (required).</param>
+        /// <param name="SaldoDisponivelSaqueInternacional">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional. (required).</param>
 
-        public LimiteDisponibilidadeResponse(long? Id = null, double? LimiteGlobal = null, double? LimiteCompra = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null, double? LimiteConsignado = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelCompra = null, double? SaldoDisponivelParcelado = null, double? SaldoDisponivelParcelas = null, double? SaldoDisponivelSaque = null, double? SaldoPontosFidelidade = null, double? SaldoDisponivelCompraInternacional = null, double? SaldoDisponivelSaqueInternacional = null)
+        public LimiteDisponibilidadeResponse(long? Id = null, double? LimiteGlobal = null, double? LimiteCompra = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null, double? LimiteConsignado = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? LimiteMaximo = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelCompra = null, double? SaldoDisponivelParcelado = null, double? SaldoDisponivelParcelas = null, double? SaldoDisponivelSaque = null, double? SaldoPontosFidelidade = null, double? SaldoDisponivelCompraInternacional = null, double? SaldoDisponivelSaqueInternacional = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -163,6 +164,15 @@ namespace Conductor.Pier.Model
             {
                 this.LimiteInternacionalSaquePeriodo = LimiteInternacionalSaquePeriodo;
             }
+            // to ensure "LimiteMaximo" is required (not null)
+            if (LimiteMaximo == null)
+            {
+                throw new InvalidDataException("LimiteMaximo is a required property for LimiteDisponibilidadeResponse and cannot be null");
+            }
+            else
+            {
+                this.LimiteMaximo = LimiteMaximo;
+            }
             // to ensure "SaldoDisponivelGlobal" is required (not null)
             if (SaldoDisponivelGlobal == null)
             {
@@ -247,142 +257,149 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
-        /// Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+        /// Valor do limite de cr\u00C3\u00A9dito.
         /// </summary>
-        /// <value>Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito.</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+        /// Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.</value>
         [DataMember(Name="limiteCompra", EmitDefaultValue=false)]
         public double? LimiteCompra { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+        /// Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.</value>
         [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
         public double? LimiteParcelado { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+        /// Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+        /// Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+        /// Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
         [DataMember(Name="limiteSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteSaquePeriodo { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+        /// Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.</value>
+        /// <value>Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).</value>
         [DataMember(Name="limiteConsignado", EmitDefaultValue=false)]
         public double? LimiteConsignado { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+        /// Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.</value>
         [DataMember(Name="limiteInternacionalCompra", EmitDefaultValue=false)]
         public double? LimiteInternacionalCompra { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+        /// Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.</value>
         [DataMember(Name="limiteInternacionalParcelado", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelado { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+        /// Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.</value>
         [DataMember(Name="limiteInternacionalParcelas", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelas { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+        /// Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.</value>
         [DataMember(Name="limiteInternacionalSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaqueGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+        /// Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.</value>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.</value>
         [DataMember(Name="limiteInternacionalSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaquePeriodo { get; set; }
     
         /// <summary>
-        /// Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
-        /// <value>Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.</value>
+        /// <value>Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.</value>
+        [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
+        public double? LimiteMaximo { get; set; }
+    
+        /// <summary>
+        /// Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.
+        /// </summary>
+        /// <value>Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+        /// Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.</value>
+        /// <value>Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.</value>
         [DataMember(Name="saldoDisponivelCompra", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompra { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+        /// Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.</value>
+        /// <value>Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.</value>
         [DataMember(Name="saldoDisponivelParcelado", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelado { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+        /// Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.</value>
+        /// <value>Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.</value>
         [DataMember(Name="saldoDisponivelParcelas", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelas { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+        /// Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
+        /// <value>Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
+        /// Saldo atual de pontos do programa de fidelidade.
         /// </summary>
-        /// <value>Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.</value>
+        /// <value>Saldo atual de pontos do programa de fidelidade.</value>
         [DataMember(Name="saldoPontosFidelidade", EmitDefaultValue=false)]
         public double? SaldoPontosFidelidade { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+        /// Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.</value>
+        /// <value>Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.</value>
         [DataMember(Name="saldoDisponivelCompraInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompraInternacional { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+        /// Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.</value>
+        /// <value>Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.</value>
         [DataMember(Name="saldoDisponivelSaqueInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaqueInternacional { get; set; }
     
@@ -407,6 +424,7 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteInternacionalParcelas: ").Append(LimiteInternacionalParcelas).Append("\n");
             sb.Append("  LimiteInternacionalSaqueGlobal: ").Append(LimiteInternacionalSaqueGlobal).Append("\n");
             sb.Append("  LimiteInternacionalSaquePeriodo: ").Append(LimiteInternacionalSaquePeriodo).Append("\n");
+            sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
             sb.Append("  SaldoDisponivelGlobal: ").Append(SaldoDisponivelGlobal).Append("\n");
             sb.Append("  SaldoDisponivelCompra: ").Append(SaldoDisponivelCompra).Append("\n");
             sb.Append("  SaldoDisponivelParcelado: ").Append(SaldoDisponivelParcelado).Append("\n");
@@ -518,6 +536,11 @@ namespace Conductor.Pier.Model
                     this.LimiteInternacionalSaquePeriodo.Equals(other.LimiteInternacionalSaquePeriodo)
                 ) && 
                 (
+                    this.LimiteMaximo == other.LimiteMaximo ||
+                    this.LimiteMaximo != null &&
+                    this.LimiteMaximo.Equals(other.LimiteMaximo)
+                ) && 
+                (
                     this.SaldoDisponivelGlobal == other.SaldoDisponivelGlobal ||
                     this.SaldoDisponivelGlobal != null &&
                     this.SaldoDisponivelGlobal.Equals(other.SaldoDisponivelGlobal)
@@ -609,6 +632,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.LimiteInternacionalSaquePeriodo != null)
                     hash = hash * 59 + this.LimiteInternacionalSaquePeriodo.GetHashCode();
+                
+                if (this.LimiteMaximo != null)
+                    hash = hash * 59 + this.LimiteMaximo.GetHashCode();
                 
                 if (this.SaldoDisponivelGlobal != null)
                     hash = hash * 59 + this.SaldoDisponivelGlobal.GetHashCode();
