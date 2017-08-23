@@ -22,99 +22,126 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)..</param>
-        /// <param name="IdStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)..</param>
-        /// <param name="IdEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id)..</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id)..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id).</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id)..</param>
-        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
-        /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
-        /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o..</param>
-        /// <param name="DataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
-        /// <param name="DataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
-        /// <param name="DataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
-        /// <param name="DataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver..</param>
-        /// <param name="DataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica..</param>
-        /// <param name="ArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver..</param>
-        /// <param name="FlagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial..</param>
-        /// <param name="FlagVirtual">Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual..</param>
-        /// <param name="CodigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade..</param>
+        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o..</param>
+        /// <param name="FlagTitular">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional)..</param>
+        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence.</param>
         /// <param name="SequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o.</param>
+        /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence..</param>
+        /// <param name="IdStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o..</param>
+        /// <param name="DataStatus">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
+        /// <param name="IdEstagio">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o..</param>
+        /// <param name="DataEstagio">Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
+        /// <param name="NumeroBin">N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o..</param>
+        /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
+        /// <param name="NumeroCartaoHash">N\u00C3\u00BAmero do cart\u00C3\u00A3o hash..</param>
+        /// <param name="NumeroCartaoCriptografado">N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado..</param>
+        /// <param name="DataEmissao">Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o..</param>
+        /// <param name="DataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver..</param>
+        /// <param name="CartaoVirtual">Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False)..</param>
+        /// <param name="ImpressaoAvulsa">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial..</param>
+        /// <param name="DataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica..</param>
+        /// <param name="NomeArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver..</param>
+        /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence..</param>
+        /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o..</param>
+        /// <param name="CodigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade..</param>
 
-        public CartaoResponse(long? Id = null, long? IdStatusCartao = null, long? IdEstagioCartao = null, long? IdConta = null, long? IdPessoa = null, long? IdProduto = null, string TipoPortador = null, string NumeroCartao = null, string NomeImpresso = null, string DataGeracao = null, string DataStatusCartao = null, string DataEstagioCartao = null, string DataValidade = null, string DataImpressao = null, string ArquivoImpressao = null, int? FlagImpressaoOrigemComercial = null, int? FlagVirtual = null, string CodigoDesbloqueio = null, int? SequencialCartao = null)
+        public CartaoResponse(long? Id = null, int? FlagTitular = null, long? IdPessoa = null, int? SequencialCartao = null, long? IdConta = null, long? IdStatus = null, string DataStatus = null, long? IdEstagio = null, string DataEstagio = null, long? NumeroBin = null, string NumeroCartao = null, long? NumeroCartaoHash = null, string NumeroCartaoCriptografado = null, string DataEmissao = null, string DataValidade = null, int? CartaoVirtual = null, int? ImpressaoAvulsa = null, string DataImpressao = null, string NomeArquivoImpressao = null, long? IdProduto = null, string NomeImpresso = null, string CodigoDesbloqueio = null)
         {
             this.Id = Id;
-            this.IdStatusCartao = IdStatusCartao;
-            this.IdEstagioCartao = IdEstagioCartao;
-            this.IdConta = IdConta;
+            this.FlagTitular = FlagTitular;
             this.IdPessoa = IdPessoa;
-            this.IdProduto = IdProduto;
-            this.TipoPortador = TipoPortador;
-            this.NumeroCartao = NumeroCartao;
-            this.NomeImpresso = NomeImpresso;
-            this.DataGeracao = DataGeracao;
-            this.DataStatusCartao = DataStatusCartao;
-            this.DataEstagioCartao = DataEstagioCartao;
-            this.DataValidade = DataValidade;
-            this.DataImpressao = DataImpressao;
-            this.ArquivoImpressao = ArquivoImpressao;
-            this.FlagImpressaoOrigemComercial = FlagImpressaoOrigemComercial;
-            this.FlagVirtual = FlagVirtual;
-            this.CodigoDesbloqueio = CodigoDesbloqueio;
             this.SequencialCartao = SequencialCartao;
+            this.IdConta = IdConta;
+            this.IdStatus = IdStatus;
+            this.DataStatus = DataStatus;
+            this.IdEstagio = IdEstagio;
+            this.DataEstagio = DataEstagio;
+            this.NumeroBin = NumeroBin;
+            this.NumeroCartao = NumeroCartao;
+            this.NumeroCartaoHash = NumeroCartaoHash;
+            this.NumeroCartaoCriptografado = NumeroCartaoCriptografado;
+            this.DataEmissao = DataEmissao;
+            this.DataValidade = DataValidade;
+            this.CartaoVirtual = CartaoVirtual;
+            this.ImpressaoAvulsa = ImpressaoAvulsa;
+            this.DataImpressao = DataImpressao;
+            this.NomeArquivoImpressao = NomeArquivoImpressao;
+            this.IdProduto = IdProduto;
+            this.NomeImpresso = NomeImpresso;
+            this.CodigoDesbloqueio = CodigoDesbloqueio;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+        /// Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).</value>
-        [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
-        public long? IdStatusCartao { get; set; }
+        /// <value>Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional).</value>
+        [DataMember(Name="flagTitular", EmitDefaultValue=false)]
+        public int? FlagTitular { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</value>
-        [DataMember(Name="idEstagioCartao", EmitDefaultValue=false)]
-        public long? IdEstagioCartao { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).</value>
-        [DataMember(Name="idConta", EmitDefaultValue=false)]
-        public long? IdConta { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+        /// N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).</value>
-        [DataMember(Name="idProduto", EmitDefaultValue=false)]
-        public long? IdProduto { get; set; }
+        /// <value>N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o</value>
+        [DataMember(Name="sequencialCartao", EmitDefaultValue=false)]
+        public int? SequencialCartao { get; set; }
     
         /// <summary>
-        /// Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence.
         /// </summary>
-        /// <value>Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</value>
-        [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
-        public string TipoPortador { get; set; }
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence.</value>
+        [DataMember(Name="idConta", EmitDefaultValue=false)]
+        public long? IdConta { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o.</value>
+        [DataMember(Name="idStatus", EmitDefaultValue=false)]
+        public long? IdStatus { get; set; }
+    
+        /// <summary>
+        /// Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+        /// </summary>
+        /// <value>Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
+        [DataMember(Name="dataStatus", EmitDefaultValue=false)]
+        public string DataStatus { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.</value>
+        [DataMember(Name="idEstagio", EmitDefaultValue=false)]
+        public long? IdEstagio { get; set; }
+    
+        /// <summary>
+        /// Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+        /// </summary>
+        /// <value>Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
+        [DataMember(Name="dataEstagio", EmitDefaultValue=false)]
+        public string DataEstagio { get; set; }
+    
+        /// <summary>
+        /// N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o.</value>
+        [DataMember(Name="numeroBin", EmitDefaultValue=false)]
+        public long? NumeroBin { get; set; }
     
         /// <summary>
         /// Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
@@ -124,32 +151,25 @@ namespace Conductor.Pier.Model
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Apresenta o nome impresso no cart\u00C3\u00A3o.
+        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o hash.
         /// </summary>
-        /// <value>Apresenta o nome impresso no cart\u00C3\u00A3o.</value>
-        [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
-        public string NomeImpresso { get; set; }
+        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o hash.</value>
+        [DataMember(Name="numeroCartaoHash", EmitDefaultValue=false)]
+        public long? NumeroCartaoHash { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado.
         /// </summary>
-        /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
-        [DataMember(Name="dataGeracao", EmitDefaultValue=false)]
-        public string DataGeracao { get; set; }
+        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado.</value>
+        [DataMember(Name="numeroCartaoCriptografado", EmitDefaultValue=false)]
+        public string NumeroCartaoCriptografado { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+        /// Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
-        [DataMember(Name="dataStatusCartao", EmitDefaultValue=false)]
-        public string DataStatusCartao { get; set; }
-    
-        /// <summary>
-        /// Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-        /// </summary>
-        /// <value>Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
-        [DataMember(Name="dataEstagioCartao", EmitDefaultValue=false)]
-        public string DataEstagioCartao { get; set; }
+        /// <value>Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o.</value>
+        [DataMember(Name="dataEmissao", EmitDefaultValue=false)]
+        public string DataEmissao { get; set; }
     
         /// <summary>
         /// Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
@@ -157,6 +177,20 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
+    
+        /// <summary>
+        /// Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False).
+        /// </summary>
+        /// <value>Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False).</value>
+        [DataMember(Name="cartaoVirtual", EmitDefaultValue=false)]
+        public int? CartaoVirtual { get; set; }
+    
+        /// <summary>
+        /// Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+        /// </summary>
+        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.</value>
+        [DataMember(Name="impressaoAvulsa", EmitDefaultValue=false)]
+        public int? ImpressaoAvulsa { get; set; }
     
         /// <summary>
         /// Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
@@ -169,22 +203,22 @@ namespace Conductor.Pier.Model
         /// Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
         /// </summary>
         /// <value>Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.</value>
-        [DataMember(Name="arquivoImpressao", EmitDefaultValue=false)]
-        public string ArquivoImpressao { get; set; }
+        [DataMember(Name="nomeArquivoImpressao", EmitDefaultValue=false)]
+        public string NomeArquivoImpressao { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence.
         /// </summary>
-        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.</value>
-        [DataMember(Name="flagImpressaoOrigemComercial", EmitDefaultValue=false)]
-        public int? FlagImpressaoOrigemComercial { get; set; }
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence.</value>
+        [DataMember(Name="idProduto", EmitDefaultValue=false)]
+        public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
+        /// Apresenta o nome impresso no cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.</value>
-        [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
-        public int? FlagVirtual { get; set; }
+        /// <value>Apresenta o nome impresso no cart\u00C3\u00A3o.</value>
+        [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
+        public string NomeImpresso { get; set; }
     
         /// <summary>
         /// Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
@@ -192,13 +226,6 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.</value>
         [DataMember(Name="codigoDesbloqueio", EmitDefaultValue=false)]
         public string CodigoDesbloqueio { get; set; }
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o</value>
-        [DataMember(Name="sequencialCartao", EmitDefaultValue=false)]
-        public int? SequencialCartao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -209,24 +236,27 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class CartaoResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  IdStatusCartao: ").Append(IdStatusCartao).Append("\n");
-            sb.Append("  IdEstagioCartao: ").Append(IdEstagioCartao).Append("\n");
-            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  FlagTitular: ").Append(FlagTitular).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
-            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
-            sb.Append("  TipoPortador: ").Append(TipoPortador).Append("\n");
-            sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
-            sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
-            sb.Append("  DataGeracao: ").Append(DataGeracao).Append("\n");
-            sb.Append("  DataStatusCartao: ").Append(DataStatusCartao).Append("\n");
-            sb.Append("  DataEstagioCartao: ").Append(DataEstagioCartao).Append("\n");
-            sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
-            sb.Append("  DataImpressao: ").Append(DataImpressao).Append("\n");
-            sb.Append("  ArquivoImpressao: ").Append(ArquivoImpressao).Append("\n");
-            sb.Append("  FlagImpressaoOrigemComercial: ").Append(FlagImpressaoOrigemComercial).Append("\n");
-            sb.Append("  FlagVirtual: ").Append(FlagVirtual).Append("\n");
-            sb.Append("  CodigoDesbloqueio: ").Append(CodigoDesbloqueio).Append("\n");
             sb.Append("  SequencialCartao: ").Append(SequencialCartao).Append("\n");
+            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdStatus: ").Append(IdStatus).Append("\n");
+            sb.Append("  DataStatus: ").Append(DataStatus).Append("\n");
+            sb.Append("  IdEstagio: ").Append(IdEstagio).Append("\n");
+            sb.Append("  DataEstagio: ").Append(DataEstagio).Append("\n");
+            sb.Append("  NumeroBin: ").Append(NumeroBin).Append("\n");
+            sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
+            sb.Append("  NumeroCartaoHash: ").Append(NumeroCartaoHash).Append("\n");
+            sb.Append("  NumeroCartaoCriptografado: ").Append(NumeroCartaoCriptografado).Append("\n");
+            sb.Append("  DataEmissao: ").Append(DataEmissao).Append("\n");
+            sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
+            sb.Append("  CartaoVirtual: ").Append(CartaoVirtual).Append("\n");
+            sb.Append("  ImpressaoAvulsa: ").Append(ImpressaoAvulsa).Append("\n");
+            sb.Append("  DataImpressao: ").Append(DataImpressao).Append("\n");
+            sb.Append("  NomeArquivoImpressao: ").Append(NomeArquivoImpressao).Append("\n");
+            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
+            sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
+            sb.Append("  CodigoDesbloqueio: ").Append(CodigoDesbloqueio).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -270,19 +300,9 @@ namespace Conductor.Pier.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.IdStatusCartao == other.IdStatusCartao ||
-                    this.IdStatusCartao != null &&
-                    this.IdStatusCartao.Equals(other.IdStatusCartao)
-                ) && 
-                (
-                    this.IdEstagioCartao == other.IdEstagioCartao ||
-                    this.IdEstagioCartao != null &&
-                    this.IdEstagioCartao.Equals(other.IdEstagioCartao)
-                ) && 
-                (
-                    this.IdConta == other.IdConta ||
-                    this.IdConta != null &&
-                    this.IdConta.Equals(other.IdConta)
+                    this.FlagTitular == other.FlagTitular ||
+                    this.FlagTitular != null &&
+                    this.FlagTitular.Equals(other.FlagTitular)
                 ) && 
                 (
                     this.IdPessoa == other.IdPessoa ||
@@ -290,14 +310,39 @@ namespace Conductor.Pier.Model
                     this.IdPessoa.Equals(other.IdPessoa)
                 ) && 
                 (
-                    this.IdProduto == other.IdProduto ||
-                    this.IdProduto != null &&
-                    this.IdProduto.Equals(other.IdProduto)
+                    this.SequencialCartao == other.SequencialCartao ||
+                    this.SequencialCartao != null &&
+                    this.SequencialCartao.Equals(other.SequencialCartao)
                 ) && 
                 (
-                    this.TipoPortador == other.TipoPortador ||
-                    this.TipoPortador != null &&
-                    this.TipoPortador.Equals(other.TipoPortador)
+                    this.IdConta == other.IdConta ||
+                    this.IdConta != null &&
+                    this.IdConta.Equals(other.IdConta)
+                ) && 
+                (
+                    this.IdStatus == other.IdStatus ||
+                    this.IdStatus != null &&
+                    this.IdStatus.Equals(other.IdStatus)
+                ) && 
+                (
+                    this.DataStatus == other.DataStatus ||
+                    this.DataStatus != null &&
+                    this.DataStatus.Equals(other.DataStatus)
+                ) && 
+                (
+                    this.IdEstagio == other.IdEstagio ||
+                    this.IdEstagio != null &&
+                    this.IdEstagio.Equals(other.IdEstagio)
+                ) && 
+                (
+                    this.DataEstagio == other.DataEstagio ||
+                    this.DataEstagio != null &&
+                    this.DataEstagio.Equals(other.DataEstagio)
+                ) && 
+                (
+                    this.NumeroBin == other.NumeroBin ||
+                    this.NumeroBin != null &&
+                    this.NumeroBin.Equals(other.NumeroBin)
                 ) && 
                 (
                     this.NumeroCartao == other.NumeroCartao ||
@@ -305,24 +350,19 @@ namespace Conductor.Pier.Model
                     this.NumeroCartao.Equals(other.NumeroCartao)
                 ) && 
                 (
-                    this.NomeImpresso == other.NomeImpresso ||
-                    this.NomeImpresso != null &&
-                    this.NomeImpresso.Equals(other.NomeImpresso)
+                    this.NumeroCartaoHash == other.NumeroCartaoHash ||
+                    this.NumeroCartaoHash != null &&
+                    this.NumeroCartaoHash.Equals(other.NumeroCartaoHash)
                 ) && 
                 (
-                    this.DataGeracao == other.DataGeracao ||
-                    this.DataGeracao != null &&
-                    this.DataGeracao.Equals(other.DataGeracao)
+                    this.NumeroCartaoCriptografado == other.NumeroCartaoCriptografado ||
+                    this.NumeroCartaoCriptografado != null &&
+                    this.NumeroCartaoCriptografado.Equals(other.NumeroCartaoCriptografado)
                 ) && 
                 (
-                    this.DataStatusCartao == other.DataStatusCartao ||
-                    this.DataStatusCartao != null &&
-                    this.DataStatusCartao.Equals(other.DataStatusCartao)
-                ) && 
-                (
-                    this.DataEstagioCartao == other.DataEstagioCartao ||
-                    this.DataEstagioCartao != null &&
-                    this.DataEstagioCartao.Equals(other.DataEstagioCartao)
+                    this.DataEmissao == other.DataEmissao ||
+                    this.DataEmissao != null &&
+                    this.DataEmissao.Equals(other.DataEmissao)
                 ) && 
                 (
                     this.DataValidade == other.DataValidade ||
@@ -330,34 +370,39 @@ namespace Conductor.Pier.Model
                     this.DataValidade.Equals(other.DataValidade)
                 ) && 
                 (
+                    this.CartaoVirtual == other.CartaoVirtual ||
+                    this.CartaoVirtual != null &&
+                    this.CartaoVirtual.Equals(other.CartaoVirtual)
+                ) && 
+                (
+                    this.ImpressaoAvulsa == other.ImpressaoAvulsa ||
+                    this.ImpressaoAvulsa != null &&
+                    this.ImpressaoAvulsa.Equals(other.ImpressaoAvulsa)
+                ) && 
+                (
                     this.DataImpressao == other.DataImpressao ||
                     this.DataImpressao != null &&
                     this.DataImpressao.Equals(other.DataImpressao)
                 ) && 
                 (
-                    this.ArquivoImpressao == other.ArquivoImpressao ||
-                    this.ArquivoImpressao != null &&
-                    this.ArquivoImpressao.Equals(other.ArquivoImpressao)
+                    this.NomeArquivoImpressao == other.NomeArquivoImpressao ||
+                    this.NomeArquivoImpressao != null &&
+                    this.NomeArquivoImpressao.Equals(other.NomeArquivoImpressao)
                 ) && 
                 (
-                    this.FlagImpressaoOrigemComercial == other.FlagImpressaoOrigemComercial ||
-                    this.FlagImpressaoOrigemComercial != null &&
-                    this.FlagImpressaoOrigemComercial.Equals(other.FlagImpressaoOrigemComercial)
+                    this.IdProduto == other.IdProduto ||
+                    this.IdProduto != null &&
+                    this.IdProduto.Equals(other.IdProduto)
                 ) && 
                 (
-                    this.FlagVirtual == other.FlagVirtual ||
-                    this.FlagVirtual != null &&
-                    this.FlagVirtual.Equals(other.FlagVirtual)
+                    this.NomeImpresso == other.NomeImpresso ||
+                    this.NomeImpresso != null &&
+                    this.NomeImpresso.Equals(other.NomeImpresso)
                 ) && 
                 (
                     this.CodigoDesbloqueio == other.CodigoDesbloqueio ||
                     this.CodigoDesbloqueio != null &&
                     this.CodigoDesbloqueio.Equals(other.CodigoDesbloqueio)
-                ) && 
-                (
-                    this.SequencialCartao == other.SequencialCartao ||
-                    this.SequencialCartao != null &&
-                    this.SequencialCartao.Equals(other.SequencialCartao)
                 );
         }
 
@@ -376,59 +421,68 @@ namespace Conductor.Pier.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.IdStatusCartao != null)
-                    hash = hash * 59 + this.IdStatusCartao.GetHashCode();
-                
-                if (this.IdEstagioCartao != null)
-                    hash = hash * 59 + this.IdEstagioCartao.GetHashCode();
-                
-                if (this.IdConta != null)
-                    hash = hash * 59 + this.IdConta.GetHashCode();
+                if (this.FlagTitular != null)
+                    hash = hash * 59 + this.FlagTitular.GetHashCode();
                 
                 if (this.IdPessoa != null)
                     hash = hash * 59 + this.IdPessoa.GetHashCode();
                 
-                if (this.IdProduto != null)
-                    hash = hash * 59 + this.IdProduto.GetHashCode();
+                if (this.SequencialCartao != null)
+                    hash = hash * 59 + this.SequencialCartao.GetHashCode();
                 
-                if (this.TipoPortador != null)
-                    hash = hash * 59 + this.TipoPortador.GetHashCode();
+                if (this.IdConta != null)
+                    hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdStatus != null)
+                    hash = hash * 59 + this.IdStatus.GetHashCode();
+                
+                if (this.DataStatus != null)
+                    hash = hash * 59 + this.DataStatus.GetHashCode();
+                
+                if (this.IdEstagio != null)
+                    hash = hash * 59 + this.IdEstagio.GetHashCode();
+                
+                if (this.DataEstagio != null)
+                    hash = hash * 59 + this.DataEstagio.GetHashCode();
+                
+                if (this.NumeroBin != null)
+                    hash = hash * 59 + this.NumeroBin.GetHashCode();
                 
                 if (this.NumeroCartao != null)
                     hash = hash * 59 + this.NumeroCartao.GetHashCode();
                 
-                if (this.NomeImpresso != null)
-                    hash = hash * 59 + this.NomeImpresso.GetHashCode();
+                if (this.NumeroCartaoHash != null)
+                    hash = hash * 59 + this.NumeroCartaoHash.GetHashCode();
                 
-                if (this.DataGeracao != null)
-                    hash = hash * 59 + this.DataGeracao.GetHashCode();
+                if (this.NumeroCartaoCriptografado != null)
+                    hash = hash * 59 + this.NumeroCartaoCriptografado.GetHashCode();
                 
-                if (this.DataStatusCartao != null)
-                    hash = hash * 59 + this.DataStatusCartao.GetHashCode();
-                
-                if (this.DataEstagioCartao != null)
-                    hash = hash * 59 + this.DataEstagioCartao.GetHashCode();
+                if (this.DataEmissao != null)
+                    hash = hash * 59 + this.DataEmissao.GetHashCode();
                 
                 if (this.DataValidade != null)
                     hash = hash * 59 + this.DataValidade.GetHashCode();
                 
+                if (this.CartaoVirtual != null)
+                    hash = hash * 59 + this.CartaoVirtual.GetHashCode();
+                
+                if (this.ImpressaoAvulsa != null)
+                    hash = hash * 59 + this.ImpressaoAvulsa.GetHashCode();
+                
                 if (this.DataImpressao != null)
                     hash = hash * 59 + this.DataImpressao.GetHashCode();
                 
-                if (this.ArquivoImpressao != null)
-                    hash = hash * 59 + this.ArquivoImpressao.GetHashCode();
+                if (this.NomeArquivoImpressao != null)
+                    hash = hash * 59 + this.NomeArquivoImpressao.GetHashCode();
                 
-                if (this.FlagImpressaoOrigemComercial != null)
-                    hash = hash * 59 + this.FlagImpressaoOrigemComercial.GetHashCode();
+                if (this.IdProduto != null)
+                    hash = hash * 59 + this.IdProduto.GetHashCode();
                 
-                if (this.FlagVirtual != null)
-                    hash = hash * 59 + this.FlagVirtual.GetHashCode();
+                if (this.NomeImpresso != null)
+                    hash = hash * 59 + this.NomeImpresso.GetHashCode();
                 
                 if (this.CodigoDesbloqueio != null)
                     hash = hash * 59 + this.CodigoDesbloqueio.GetHashCode();
-                
-                if (this.SequencialCartao != null)
-                    hash = hash * 59 + this.SequencialCartao.GetHashCode();
                 
                 return hash;
             }

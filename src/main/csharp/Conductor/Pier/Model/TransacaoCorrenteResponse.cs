@@ -23,7 +23,6 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoCorrenteResponse" />class.
         /// </summary>
         /// <param name="UltimaParcelaLancada">UltimaParcelaLancada.</param>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline)..</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)..</param>
         /// <param name="IdTipoRegistro">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id)..</param>
         /// <param name="Ordem">Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id)..</param>
@@ -42,10 +41,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdGrupoMCC">Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="FlagSolicitouContestacao">Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
+        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
-            this.Id = Id;
             this.IdConta = IdConta;
             this.IdTipoRegistro = IdTipoRegistro;
             this.Ordem = Ordem;
@@ -72,13 +70,6 @@ namespace Conductor.Pier.Model
         /// </summary>
         [DataMember(Name="ultimaParcelaLancada", EmitDefaultValue=false)]
         public int? UltimaParcelaLancada { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -208,7 +199,6 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class TransacaoCorrenteResponse {\n");
             sb.Append("  UltimaParcelaLancada: ").Append(UltimaParcelaLancada).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdTipoRegistro: ").Append(IdTipoRegistro).Append("\n");
             sb.Append("  Ordem: ").Append(Ordem).Append("\n");
@@ -267,11 +257,6 @@ namespace Conductor.Pier.Model
                     this.UltimaParcelaLancada == other.UltimaParcelaLancada ||
                     this.UltimaParcelaLancada != null &&
                     this.UltimaParcelaLancada.Equals(other.UltimaParcelaLancada)
-                ) && 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
                 ) && 
                 (
                     this.IdConta == other.IdConta ||
@@ -374,9 +359,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.UltimaParcelaLancada != null)
                     hash = hash * 59 + this.UltimaParcelaLancada.GetHashCode();
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();

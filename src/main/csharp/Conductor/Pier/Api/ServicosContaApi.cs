@@ -26,6 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
@@ -33,7 +34,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Object</returns>
-        Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
   
         /// <summary>
         /// Atribuir Anuidade
@@ -44,6 +45,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
@@ -51,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
         ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
@@ -104,10 +106,11 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageAnuidadeResponse</returns>
-        PageAnuidadeResponse ListarAnuidadesUsingGET (int? page = null, int? limit = null);
+        PageAnuidadeResponse ListarAnuidadesUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar Anuidades
@@ -116,10 +119,11 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageAnuidadeResponse</returns>
-        ApiResponse<PageAnuidadeResponse> ListarAnuidadesUsingGETWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<PageAnuidadeResponse> ListarAnuidadesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Listar Operadoras
@@ -128,10 +132,11 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageOperadoraResponse</returns>
-        PageOperadoraResponse ListarOperadorasTelefonicasUsingGET (int? page = null, int? limit = null);
+        PageOperadoraResponse ListarOperadorasTelefonicasUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar Operadoras
@@ -140,10 +145,11 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageOperadoraResponse</returns>
-        ApiResponse<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -158,6 +164,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
@@ -165,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
 
         /// <summary>
         /// Atribuir Anuidade
@@ -176,6 +183,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
@@ -183,7 +191,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
         ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
@@ -236,10 +244,11 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageAnuidadeResponse</returns>
-        System.Threading.Tasks.Task<PageAnuidadeResponse> ListarAnuidadesUsingGETAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageAnuidadeResponse> ListarAnuidadesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar Anuidades
@@ -248,10 +257,11 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageAnuidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAnuidadeResponse>> ListarAnuidadesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAnuidadeResponse>> ListarAnuidadesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Listar Operadoras
@@ -260,10 +270,11 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageOperadoraResponse</returns>
-        System.Threading.Tasks.Task<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar Operadoras
@@ -272,10 +283,11 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageOperadoraResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -375,6 +387,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="DDD">DDD do celular (optional)</param> 
@@ -382,9 +395,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
         /// <returns>Object</returns>
-        public Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
-             ApiResponse<Object> localVarResponse = AtivarAnuidadeUsingPOSTWithHttpInfo(id, idAnuidade, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = AtivarAnuidadeUsingPOSTWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
              return localVarResponse.Data;
         }
 
@@ -394,6 +407,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="DDD">DDD do celular (optional)</param> 
@@ -401,7 +415,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public ApiResponse< Object > AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
             
             // verify the required parameter 'id' is set
@@ -441,6 +455,7 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
@@ -480,6 +495,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
@@ -487,9 +503,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
-             ApiResponse<Object> localVarResponse = await AtivarAnuidadeUsingPOSTAsyncWithHttpInfo(id, idAnuidade, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = await AtivarAnuidadeUsingPOSTAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
              return localVarResponse.Data;
 
         }
@@ -500,6 +516,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
@@ -507,7 +524,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidadeUsingPOST");
@@ -543,6 +560,7 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
@@ -895,12 +913,13 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageAnuidadeResponse</returns>
-        public PageAnuidadeResponse ListarAnuidadesUsingGET (int? page = null, int? limit = null)
+        public PageAnuidadeResponse ListarAnuidadesUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageAnuidadeResponse> localVarResponse = ListarAnuidadesUsingGETWithHttpInfo(page, limit);
+             ApiResponse<PageAnuidadeResponse> localVarResponse = ListarAnuidadesUsingGETWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -908,14 +927,15 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageAnuidadeResponse</returns>
-        public ApiResponse< PageAnuidadeResponse > ListarAnuidadesUsingGETWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< PageAnuidadeResponse > ListarAnuidadesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
-            var localVarPath = "/api/api/anuidades";
+            var localVarPath = "/api/anuidades";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -942,6 +962,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -974,12 +995,13 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageAnuidadeResponse</returns>
-        public async System.Threading.Tasks.Task<PageAnuidadeResponse> ListarAnuidadesUsingGETAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageAnuidadeResponse> ListarAnuidadesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageAnuidadeResponse> localVarResponse = await ListarAnuidadesUsingGETAsyncWithHttpInfo(page, limit);
+             ApiResponse<PageAnuidadeResponse> localVarResponse = await ListarAnuidadesUsingGETAsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -988,14 +1010,15 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageAnuidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAnuidadeResponse>> ListarAnuidadesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAnuidadeResponse>> ListarAnuidadesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
-            var localVarPath = "/api/api/anuidades";
+            var localVarPath = "/api/anuidades";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1022,6 +1045,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -1053,12 +1077,13 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageOperadoraResponse</returns>
-        public PageOperadoraResponse ListarOperadorasTelefonicasUsingGET (int? page = null, int? limit = null)
+        public PageOperadoraResponse ListarOperadorasTelefonicasUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageOperadoraResponse> localVarResponse = ListarOperadorasTelefonicasUsingGETWithHttpInfo(page, limit);
+             ApiResponse<PageOperadoraResponse> localVarResponse = ListarOperadorasTelefonicasUsingGETWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1066,10 +1091,11 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageOperadoraResponse</returns>
-        public ApiResponse< PageOperadoraResponse > ListarOperadorasTelefonicasUsingGETWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< PageOperadoraResponse > ListarOperadorasTelefonicasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -1100,6 +1126,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -1132,12 +1159,13 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageOperadoraResponse</returns>
-        public async System.Threading.Tasks.Task<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageOperadoraResponse> localVarResponse = await ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo(page, limit);
+             ApiResponse<PageOperadoraResponse> localVarResponse = await ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1146,10 +1174,11 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageOperadoraResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -1180,6 +1209,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             

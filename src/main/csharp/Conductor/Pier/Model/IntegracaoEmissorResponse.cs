@@ -24,15 +24,19 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor..</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta..</param>
+        /// <param name="IdArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo..</param>
         /// <param name="Status">Status do registro..</param>
-        /// <param name="DataEvento">Data de inclus\u00C3\u00A3o do registro..</param>
+        /// <param name="DataInclusao">Data de inclus\u00C3\u00A3o do registro..</param>
+        /// <param name="DataAlteracao">Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro..</param>
 
-        public IntegracaoEmissorResponse(long? Id = null, long? IdConta = null, int? Status = null, string DataEvento = null)
+        public IntegracaoEmissorResponse(long? Id = null, long? IdConta = null, long? IdArquivo = null, string Status = null, string DataInclusao = null, string DataAlteracao = null)
         {
             this.Id = Id;
             this.IdConta = IdConta;
+            this.IdArquivo = IdArquivo;
             this.Status = Status;
-            this.DataEvento = DataEvento;
+            this.DataInclusao = DataInclusao;
+            this.DataAlteracao = DataAlteracao;
             
         }
         
@@ -52,18 +56,32 @@ namespace Conductor.Pier.Model
         public long? IdConta { get; set; }
     
         /// <summary>
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.</value>
+        [DataMember(Name="idArquivo", EmitDefaultValue=false)]
+        public long? IdArquivo { get; set; }
+    
+        /// <summary>
         /// Status do registro.
         /// </summary>
         /// <value>Status do registro.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public int? Status { get; set; }
+        public string Status { get; set; }
     
         /// <summary>
         /// Data de inclus\u00C3\u00A3o do registro.
         /// </summary>
         /// <value>Data de inclus\u00C3\u00A3o do registro.</value>
-        [DataMember(Name="dataEvento", EmitDefaultValue=false)]
-        public string DataEvento { get; set; }
+        [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
+        public string DataInclusao { get; set; }
+    
+        /// <summary>
+        /// Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+        /// </summary>
+        /// <value>Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.</value>
+        [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
+        public string DataAlteracao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,8 +93,10 @@ namespace Conductor.Pier.Model
             sb.Append("class IntegracaoEmissorResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdArquivo: ").Append(IdArquivo).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  DataEvento: ").Append(DataEvento).Append("\n");
+            sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
+            sb.Append("  DataAlteracao: ").Append(DataAlteracao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -125,14 +145,24 @@ namespace Conductor.Pier.Model
                     this.IdConta.Equals(other.IdConta)
                 ) && 
                 (
+                    this.IdArquivo == other.IdArquivo ||
+                    this.IdArquivo != null &&
+                    this.IdArquivo.Equals(other.IdArquivo)
+                ) && 
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.DataEvento == other.DataEvento ||
-                    this.DataEvento != null &&
-                    this.DataEvento.Equals(other.DataEvento)
+                    this.DataInclusao == other.DataInclusao ||
+                    this.DataInclusao != null &&
+                    this.DataInclusao.Equals(other.DataInclusao)
+                ) && 
+                (
+                    this.DataAlteracao == other.DataAlteracao ||
+                    this.DataAlteracao != null &&
+                    this.DataAlteracao.Equals(other.DataAlteracao)
                 );
         }
 
@@ -154,11 +184,17 @@ namespace Conductor.Pier.Model
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
                 
+                if (this.IdArquivo != null)
+                    hash = hash * 59 + this.IdArquivo.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
-                if (this.DataEvento != null)
-                    hash = hash * 59 + this.DataEvento.GetHashCode();
+                if (this.DataInclusao != null)
+                    hash = hash * 59 + this.DataInclusao.GetHashCode();
+                
+                if (this.DataAlteracao != null)
+                    hash = hash * 59 + this.DataAlteracao.GetHashCode();
                 
                 return hash;
             }

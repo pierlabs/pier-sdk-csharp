@@ -22,11 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaBancariaPersist" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaBancariaPersist" />class.
         /// </summary>
-        /// <param name="DataCompra">Data da transfer\u00C3\u00AAncia (required).</param>
-        /// <param name="ProximoVencimentoPadrao">Dia do vencimento padr\u00C3\u00A3o da fatura (required).</param>
-        /// <param name="ProximoVencimentoReal">Data do vencimento real da fatura (required).</param>
         /// <param name="ValorCompra">Valor da transfer\u00C3\u00AAncia (required).</param>
-        /// <param name="NomeFavorecido">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required).</param>
+        /// <param name="Valor">Valor da transfer\u00C3\u00AAncia (required).</param>
         /// <param name="DocumentoFavorecido">N\u00C3\u00BAmero do CPF ou CNPJ. (required).</param>
         /// <param name="Banco">C\u00C3\u00B3digo do banco (required).</param>
         /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (required).</param>
@@ -34,36 +31,10 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroConta">N\u00C3\u00BAmero da conta (required).</param>
         /// <param name="DigitoConta">D\u00C3\u00ADgito da conta.</param>
         /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) (required).</param>
+        /// <param name="NomeFavorecido">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required).</param>
 
-        public TransferenciaBancariaPersist(string DataCompra = null, string ProximoVencimentoPadrao = null, string ProximoVencimentoReal = null, double? ValorCompra = null, string NomeFavorecido = null, string DocumentoFavorecido = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagContaPoupanca = null)
+        public TransferenciaBancariaPersist(double? ValorCompra = null, double? Valor = null, string DocumentoFavorecido = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagContaPoupanca = null, string NomeFavorecido = null)
         {
-            // to ensure "DataCompra" is required (not null)
-            if (DataCompra == null)
-            {
-                throw new InvalidDataException("DataCompra is a required property for TransferenciaBancariaPersist and cannot be null");
-            }
-            else
-            {
-                this.DataCompra = DataCompra;
-            }
-            // to ensure "ProximoVencimentoPadrao" is required (not null)
-            if (ProximoVencimentoPadrao == null)
-            {
-                throw new InvalidDataException("ProximoVencimentoPadrao is a required property for TransferenciaBancariaPersist and cannot be null");
-            }
-            else
-            {
-                this.ProximoVencimentoPadrao = ProximoVencimentoPadrao;
-            }
-            // to ensure "ProximoVencimentoReal" is required (not null)
-            if (ProximoVencimentoReal == null)
-            {
-                throw new InvalidDataException("ProximoVencimentoReal is a required property for TransferenciaBancariaPersist and cannot be null");
-            }
-            else
-            {
-                this.ProximoVencimentoReal = ProximoVencimentoReal;
-            }
             // to ensure "ValorCompra" is required (not null)
             if (ValorCompra == null)
             {
@@ -73,14 +44,14 @@ namespace Conductor.Pier.Model
             {
                 this.ValorCompra = ValorCompra;
             }
-            // to ensure "NomeFavorecido" is required (not null)
-            if (NomeFavorecido == null)
+            // to ensure "Valor" is required (not null)
+            if (Valor == null)
             {
-                throw new InvalidDataException("NomeFavorecido is a required property for TransferenciaBancariaPersist and cannot be null");
+                throw new InvalidDataException("Valor is a required property for TransferenciaBancariaPersist and cannot be null");
             }
             else
             {
-                this.NomeFavorecido = NomeFavorecido;
+                this.Valor = Valor;
             }
             // to ensure "DocumentoFavorecido" is required (not null)
             if (DocumentoFavorecido == null)
@@ -127,32 +98,20 @@ namespace Conductor.Pier.Model
             {
                 this.FlagContaPoupanca = FlagContaPoupanca;
             }
+            // to ensure "NomeFavorecido" is required (not null)
+            if (NomeFavorecido == null)
+            {
+                throw new InvalidDataException("NomeFavorecido is a required property for TransferenciaBancariaPersist and cannot be null");
+            }
+            else
+            {
+                this.NomeFavorecido = NomeFavorecido;
+            }
             this.DigitoAgencia = DigitoAgencia;
             this.DigitoConta = DigitoConta;
             
         }
         
-    
-        /// <summary>
-        /// Data da transfer\u00C3\u00AAncia
-        /// </summary>
-        /// <value>Data da transfer\u00C3\u00AAncia</value>
-        [DataMember(Name="dataCompra", EmitDefaultValue=false)]
-        public string DataCompra { get; set; }
-    
-        /// <summary>
-        /// Dia do vencimento padr\u00C3\u00A3o da fatura
-        /// </summary>
-        /// <value>Dia do vencimento padr\u00C3\u00A3o da fatura</value>
-        [DataMember(Name="proximoVencimentoPadrao", EmitDefaultValue=false)]
-        public string ProximoVencimentoPadrao { get; set; }
-    
-        /// <summary>
-        /// Data do vencimento real da fatura
-        /// </summary>
-        /// <value>Data do vencimento real da fatura</value>
-        [DataMember(Name="proximoVencimentoReal", EmitDefaultValue=false)]
-        public string ProximoVencimentoReal { get; set; }
     
         /// <summary>
         /// Valor da transfer\u00C3\u00AAncia
@@ -162,11 +121,11 @@ namespace Conductor.Pier.Model
         public double? ValorCompra { get; set; }
     
         /// <summary>
-        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+        /// Valor da transfer\u00C3\u00AAncia
         /// </summary>
-        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.</value>
-        [DataMember(Name="nomeFavorecido", EmitDefaultValue=false)]
-        public string NomeFavorecido { get; set; }
+        /// <value>Valor da transfer\u00C3\u00AAncia</value>
+        [DataMember(Name="valor", EmitDefaultValue=false)]
+        public double? Valor { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero do CPF ou CNPJ.
@@ -218,6 +177,13 @@ namespace Conductor.Pier.Model
         public int? FlagContaPoupanca { get; set; }
     
         /// <summary>
+        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+        /// </summary>
+        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.</value>
+        [DataMember(Name="nomeFavorecido", EmitDefaultValue=false)]
+        public string NomeFavorecido { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -225,11 +191,8 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TransferenciaBancariaPersist {\n");
-            sb.Append("  DataCompra: ").Append(DataCompra).Append("\n");
-            sb.Append("  ProximoVencimentoPadrao: ").Append(ProximoVencimentoPadrao).Append("\n");
-            sb.Append("  ProximoVencimentoReal: ").Append(ProximoVencimentoReal).Append("\n");
             sb.Append("  ValorCompra: ").Append(ValorCompra).Append("\n");
-            sb.Append("  NomeFavorecido: ").Append(NomeFavorecido).Append("\n");
+            sb.Append("  Valor: ").Append(Valor).Append("\n");
             sb.Append("  DocumentoFavorecido: ").Append(DocumentoFavorecido).Append("\n");
             sb.Append("  Banco: ").Append(Banco).Append("\n");
             sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
@@ -237,6 +200,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroConta: ").Append(NumeroConta).Append("\n");
             sb.Append("  DigitoConta: ").Append(DigitoConta).Append("\n");
             sb.Append("  FlagContaPoupanca: ").Append(FlagContaPoupanca).Append("\n");
+            sb.Append("  NomeFavorecido: ").Append(NomeFavorecido).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -275,29 +239,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.DataCompra == other.DataCompra ||
-                    this.DataCompra != null &&
-                    this.DataCompra.Equals(other.DataCompra)
-                ) && 
-                (
-                    this.ProximoVencimentoPadrao == other.ProximoVencimentoPadrao ||
-                    this.ProximoVencimentoPadrao != null &&
-                    this.ProximoVencimentoPadrao.Equals(other.ProximoVencimentoPadrao)
-                ) && 
-                (
-                    this.ProximoVencimentoReal == other.ProximoVencimentoReal ||
-                    this.ProximoVencimentoReal != null &&
-                    this.ProximoVencimentoReal.Equals(other.ProximoVencimentoReal)
-                ) && 
-                (
                     this.ValorCompra == other.ValorCompra ||
                     this.ValorCompra != null &&
                     this.ValorCompra.Equals(other.ValorCompra)
                 ) && 
                 (
-                    this.NomeFavorecido == other.NomeFavorecido ||
-                    this.NomeFavorecido != null &&
-                    this.NomeFavorecido.Equals(other.NomeFavorecido)
+                    this.Valor == other.Valor ||
+                    this.Valor != null &&
+                    this.Valor.Equals(other.Valor)
                 ) && 
                 (
                     this.DocumentoFavorecido == other.DocumentoFavorecido ||
@@ -333,6 +282,11 @@ namespace Conductor.Pier.Model
                     this.FlagContaPoupanca == other.FlagContaPoupanca ||
                     this.FlagContaPoupanca != null &&
                     this.FlagContaPoupanca.Equals(other.FlagContaPoupanca)
+                ) && 
+                (
+                    this.NomeFavorecido == other.NomeFavorecido ||
+                    this.NomeFavorecido != null &&
+                    this.NomeFavorecido.Equals(other.NomeFavorecido)
                 );
         }
 
@@ -348,20 +302,11 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.DataCompra != null)
-                    hash = hash * 59 + this.DataCompra.GetHashCode();
-                
-                if (this.ProximoVencimentoPadrao != null)
-                    hash = hash * 59 + this.ProximoVencimentoPadrao.GetHashCode();
-                
-                if (this.ProximoVencimentoReal != null)
-                    hash = hash * 59 + this.ProximoVencimentoReal.GetHashCode();
-                
                 if (this.ValorCompra != null)
                     hash = hash * 59 + this.ValorCompra.GetHashCode();
                 
-                if (this.NomeFavorecido != null)
-                    hash = hash * 59 + this.NomeFavorecido.GetHashCode();
+                if (this.Valor != null)
+                    hash = hash * 59 + this.Valor.GetHashCode();
                 
                 if (this.DocumentoFavorecido != null)
                     hash = hash * 59 + this.DocumentoFavorecido.GetHashCode();
@@ -383,6 +328,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagContaPoupanca != null)
                     hash = hash * 59 + this.FlagContaPoupanca.GetHashCode();
+                
+                if (this.NomeFavorecido != null)
+                    hash = hash * 59 + this.NomeFavorecido.GetHashCode();
                 
                 return hash;
             }

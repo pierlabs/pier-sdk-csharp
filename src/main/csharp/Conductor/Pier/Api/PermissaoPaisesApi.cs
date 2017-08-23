@@ -66,6 +66,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar os pa\u00C3\u00ADses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
@@ -74,7 +75,7 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>PagePaisResponse</returns>
-        PagePaisResponse ListarPaisesUsingGET (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+        PagePaisResponse ListarPaisesUsingGET (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista os pa\u00C3\u00ADses
@@ -83,6 +84,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar os pa\u00C3\u00ADses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
@@ -91,7 +93,7 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>ApiResponse of PagePaisResponse</returns>
-        ApiResponse<PagePaisResponse> ListarPaisesUsingGETWithHttpInfo (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+        ApiResponse<PagePaisResponse> ListarPaisesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
         
         #endregion Synchronous Operations
         
@@ -146,6 +148,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar os pa\u00C3\u00ADses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
@@ -154,7 +157,7 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of PagePaisResponse</returns>
-        System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista os pa\u00C3\u00ADses
@@ -163,6 +166,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar os pa\u00C3\u00ADses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
@@ -171,7 +175,7 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PagePaisResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
         
         #endregion Asynchronous Operations
         
@@ -573,6 +577,7 @@ namespace Conductor.Pier.Api
         /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param> 
@@ -581,9 +586,9 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param> 
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param> 
         /// <returns>PagePaisResponse</returns>
-        public PagePaisResponse ListarPaisesUsingGET (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        public PagePaisResponse ListarPaisesUsingGET (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
-             ApiResponse<PagePaisResponse> localVarResponse = ListarPaisesUsingGETWithHttpInfo(page, limit, codigo, sigla, descricao, continente, flagAtivo);
+             ApiResponse<PagePaisResponse> localVarResponse = ListarPaisesUsingGETWithHttpInfo(sort, page, limit, codigo, sigla, descricao, continente, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -591,6 +596,7 @@ namespace Conductor.Pier.Api
         /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param> 
@@ -599,7 +605,7 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param> 
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param> 
         /// <returns>ApiResponse of PagePaisResponse</returns>
-        public ApiResponse< PagePaisResponse > ListarPaisesUsingGETWithHttpInfo (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        public ApiResponse< PagePaisResponse > ListarPaisesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
             
     
@@ -630,6 +636,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
@@ -667,6 +674,7 @@ namespace Conductor.Pier.Api
         /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
@@ -675,9 +683,9 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of PagePaisResponse</returns>
-        public async System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
-             ApiResponse<PagePaisResponse> localVarResponse = await ListarPaisesUsingGETAsyncWithHttpInfo(page, limit, codigo, sigla, descricao, continente, flagAtivo);
+             ApiResponse<PagePaisResponse> localVarResponse = await ListarPaisesUsingGETAsyncWithHttpInfo(sort, page, limit, codigo, sigla, descricao, continente, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -686,6 +694,7 @@ namespace Conductor.Pier.Api
         /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
@@ -694,7 +703,7 @@ namespace Conductor.Pier.Api
         /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
         /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PagePaisResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
             
     
@@ -725,6 +734,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter

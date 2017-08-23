@@ -15,28 +15,28 @@ namespace Conductor.Pier.Model
     /// Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente
     /// </summary>
     [DataContract]
-    public partial class AtribuirAssinaturaClienteRequest :  IEquatable<AtribuirAssinaturaClienteRequest>
+    public partial class AtribuirAssinaturaClientePersist :  IEquatable<AtribuirAssinaturaClientePersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AtribuirAssinaturaClienteRequest" /> class.
-        /// Initializes a new instance of the <see cref="AtribuirAssinaturaClienteRequest" />class.
+        /// Initializes a new instance of the <see cref="AtribuirAssinaturaClientePersist" /> class.
+        /// Initializes a new instance of the <see cref="AtribuirAssinaturaClientePersist" />class.
         /// </summary>
-        /// <param name="IdImagem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem.</param>
+        /// <param name="IdArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo.</param>
 
-        public AtribuirAssinaturaClienteRequest(long? IdImagem = null)
+        public AtribuirAssinaturaClientePersist(long? IdArquivo = null)
         {
-            this.IdImagem = IdImagem;
+            this.IdArquivo = IdArquivo;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem</value>
-        [DataMember(Name="idImagem", EmitDefaultValue=false)]
-        public long? IdImagem { get; set; }
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo</value>
+        [DataMember(Name="idArquivo", EmitDefaultValue=false)]
+        public long? IdArquivo { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,8 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AtribuirAssinaturaClienteRequest {\n");
-            sb.Append("  IdImagem: ").Append(IdImagem).Append("\n");
+            sb.Append("class AtribuirAssinaturaClientePersist {\n");
+            sb.Append("  IdArquivo: ").Append(IdArquivo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -69,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AtribuirAssinaturaClienteRequest);
+            return this.Equals(obj as AtribuirAssinaturaClientePersist);
         }
 
         /// <summary>
-        /// Returns true if AtribuirAssinaturaClienteRequest instances are equal
+        /// Returns true if AtribuirAssinaturaClientePersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of AtribuirAssinaturaClienteRequest to be compared</param>
+        /// <param name="other">Instance of AtribuirAssinaturaClientePersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AtribuirAssinaturaClienteRequest other)
+        public bool Equals(AtribuirAssinaturaClientePersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -85,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdImagem == other.IdImagem ||
-                    this.IdImagem != null &&
-                    this.IdImagem.Equals(other.IdImagem)
+                    this.IdArquivo == other.IdArquivo ||
+                    this.IdArquivo != null &&
+                    this.IdArquivo.Equals(other.IdArquivo)
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdImagem != null)
-                    hash = hash * 59 + this.IdImagem.GetHashCode();
+                if (this.IdArquivo != null)
+                    hash = hash * 59 + this.IdArquivo.GetHashCode();
                 
                 return hash;
             }

@@ -31,7 +31,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)..</param>
         /// <param name="CartaoMascarado">N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000..</param>
         /// <param name="NomePortador">Nome completo do Portador do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataTransacaoUTC">Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC)..</param>
+        /// <param name="DataTransacao">Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada..</param>
         /// <param name="DataFaturamento">Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="DataVencimento">Data de Vencimento da Fatura..</param>
         /// <param name="ModoEntradaTransacao">Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o..</param>
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Model
         /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada..</param>
         /// <param name="IdTransacaoEstorno">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno..</param>
 
-        public TransacoesCorrentesResponse(long? Id = null, long? IdTipoTransacao = null, string DescricaoAbreviada = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacaoUTC = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
+        public TransacoesCorrentesResponse(long? Id = null, long? IdTipoTransacao = null, string DescricaoAbreviada = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacao = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
         {
             this.Id = Id;
             this.IdTipoTransacao = IdTipoTransacao;
@@ -71,7 +71,7 @@ namespace Conductor.Pier.Model
             this.IdConta = IdConta;
             this.CartaoMascarado = CartaoMascarado;
             this.NomePortador = NomePortador;
-            this.DataTransacaoUTC = DataTransacaoUTC;
+            this.DataTransacao = DataTransacao;
             this.DataFaturamento = DataFaturamento;
             this.DataVencimento = DataVencimento;
             this.ModoEntradaTransacao = ModoEntradaTransacao;
@@ -167,11 +167,11 @@ namespace Conductor.Pier.Model
         public string NomePortador { get; set; }
     
         /// <summary>
-        /// Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+        /// Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
         /// </summary>
-        /// <value>Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).</value>
-        [DataMember(Name="dataTransacaoUTC", EmitDefaultValue=false)]
-        public string DataTransacaoUTC { get; set; }
+        /// <value>Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.</value>
+        [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
+        public string DataTransacao { get; set; }
     
         /// <summary>
         /// Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -379,7 +379,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  CartaoMascarado: ").Append(CartaoMascarado).Append("\n");
             sb.Append("  NomePortador: ").Append(NomePortador).Append("\n");
-            sb.Append("  DataTransacaoUTC: ").Append(DataTransacaoUTC).Append("\n");
+            sb.Append("  DataTransacao: ").Append(DataTransacao).Append("\n");
             sb.Append("  DataFaturamento: ").Append(DataFaturamento).Append("\n");
             sb.Append("  DataVencimento: ").Append(DataVencimento).Append("\n");
             sb.Append("  ModoEntradaTransacao: ").Append(ModoEntradaTransacao).Append("\n");
@@ -490,9 +490,9 @@ namespace Conductor.Pier.Model
                     this.NomePortador.Equals(other.NomePortador)
                 ) && 
                 (
-                    this.DataTransacaoUTC == other.DataTransacaoUTC ||
-                    this.DataTransacaoUTC != null &&
-                    this.DataTransacaoUTC.Equals(other.DataTransacaoUTC)
+                    this.DataTransacao == other.DataTransacao ||
+                    this.DataTransacao != null &&
+                    this.DataTransacao.Equals(other.DataTransacao)
                 ) && 
                 (
                     this.DataFaturamento == other.DataFaturamento ||
@@ -670,8 +670,8 @@ namespace Conductor.Pier.Model
                 if (this.NomePortador != null)
                     hash = hash * 59 + this.NomePortador.GetHashCode();
                 
-                if (this.DataTransacaoUTC != null)
-                    hash = hash * 59 + this.DataTransacaoUTC.GetHashCode();
+                if (this.DataTransacao != null)
+                    hash = hash * 59 + this.DataTransacao.GetHashCode();
                 
                 if (this.DataFaturamento != null)
                     hash = hash * 59 + this.DataFaturamento.GetHashCode();

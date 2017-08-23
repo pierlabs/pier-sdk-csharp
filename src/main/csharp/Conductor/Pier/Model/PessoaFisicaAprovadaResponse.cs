@@ -47,10 +47,14 @@ namespace Conductor.Pier.Model
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada.</param>
         /// <param name="IdProposta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta.</param>
         /// <param name="CanalEntrada">Indica o canal pelo qual o cadastro do cliente foi realizado.</param>
+        /// <param name="ValorPontuacao">Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0).</param>
         /// <param name="Telefones">Apresenta os telefones da empresa.</param>
         /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros (required).</param>
+        /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
+        /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es (required).</param>
+        /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras (required).</param>
 
-        public PessoaFisicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, int? IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null)
+        public PessoaFisicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, int? IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -106,6 +110,33 @@ namespace Conductor.Pier.Model
             {
                 this.Enderecos = Enderecos;
             }
+            // to ensure "LimiteGlobal" is required (not null)
+            if (LimiteGlobal == null)
+            {
+                throw new InvalidDataException("LimiteGlobal is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+            }
+            else
+            {
+                this.LimiteGlobal = LimiteGlobal;
+            }
+            // to ensure "LimiteMaximo" is required (not null)
+            if (LimiteMaximo == null)
+            {
+                throw new InvalidDataException("LimiteMaximo is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+            }
+            else
+            {
+                this.LimiteMaximo = LimiteMaximo;
+            }
+            // to ensure "LimiteParcelas" is required (not null)
+            if (LimiteParcelas == null)
+            {
+                throw new InvalidDataException("LimiteParcelas is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+            }
+            else
+            {
+                this.LimiteParcelas = LimiteParcelas;
+            }
             this.Id = Id;
             this.NomeMae = NomeMae;
             this.DataNascimento = DataNascimento;
@@ -126,6 +157,7 @@ namespace Conductor.Pier.Model
             this.IdConta = IdConta;
             this.IdProposta = IdProposta;
             this.CanalEntrada = CanalEntrada;
+            this.ValorPontuacao = ValorPontuacao;
             this.Telefones = Telefones;
             
         }
@@ -307,6 +339,13 @@ namespace Conductor.Pier.Model
         public string CanalEntrada { get; set; }
     
         /// <summary>
+        /// Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+        /// </summary>
+        /// <value>Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)</value>
+        [DataMember(Name="valorPontuacao", EmitDefaultValue=false)]
+        public int? ValorPontuacao { get; set; }
+    
+        /// <summary>
         /// Apresenta os telefones da empresa
         /// </summary>
         /// <value>Apresenta os telefones da empresa</value>
@@ -319,6 +358,27 @@ namespace Conductor.Pier.Model
         /// <value>Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros</value>
         [DataMember(Name="enderecos", EmitDefaultValue=false)]
         public List<EnderecoAprovadoResponse> Enderecos { get; set; }
+    
+        /// <summary>
+        /// Valor do Limite Global
+        /// </summary>
+        /// <value>Valor do Limite Global</value>
+        [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
+        public double? LimiteGlobal { get; set; }
+    
+        /// <summary>
+        /// Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+        /// </summary>
+        /// <value>Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es</value>
+        [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
+        public double? LimiteMaximo { get; set; }
+    
+        /// <summary>
+        /// Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+        /// </summary>
+        /// <value>Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras</value>
+        [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
+        public double? LimiteParcelas { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -353,8 +413,12 @@ namespace Conductor.Pier.Model
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdProposta: ").Append(IdProposta).Append("\n");
             sb.Append("  CanalEntrada: ").Append(CanalEntrada).Append("\n");
+            sb.Append("  ValorPontuacao: ").Append(ValorPontuacao).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             sb.Append("  Enderecos: ").Append(Enderecos).Append("\n");
+            sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
+            sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
+            sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -518,6 +582,11 @@ namespace Conductor.Pier.Model
                     this.CanalEntrada.Equals(other.CanalEntrada)
                 ) && 
                 (
+                    this.ValorPontuacao == other.ValorPontuacao ||
+                    this.ValorPontuacao != null &&
+                    this.ValorPontuacao.Equals(other.ValorPontuacao)
+                ) && 
+                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -526,6 +595,21 @@ namespace Conductor.Pier.Model
                     this.Enderecos == other.Enderecos ||
                     this.Enderecos != null &&
                     this.Enderecos.SequenceEqual(other.Enderecos)
+                ) && 
+                (
+                    this.LimiteGlobal == other.LimiteGlobal ||
+                    this.LimiteGlobal != null &&
+                    this.LimiteGlobal.Equals(other.LimiteGlobal)
+                ) && 
+                (
+                    this.LimiteMaximo == other.LimiteMaximo ||
+                    this.LimiteMaximo != null &&
+                    this.LimiteMaximo.Equals(other.LimiteMaximo)
+                ) && 
+                (
+                    this.LimiteParcelas == other.LimiteParcelas ||
+                    this.LimiteParcelas != null &&
+                    this.LimiteParcelas.Equals(other.LimiteParcelas)
                 );
         }
 
@@ -616,11 +700,23 @@ namespace Conductor.Pier.Model
                 if (this.CanalEntrada != null)
                     hash = hash * 59 + this.CanalEntrada.GetHashCode();
                 
+                if (this.ValorPontuacao != null)
+                    hash = hash * 59 + this.ValorPontuacao.GetHashCode();
+                
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();
                 
                 if (this.Enderecos != null)
                     hash = hash * 59 + this.Enderecos.GetHashCode();
+                
+                if (this.LimiteGlobal != null)
+                    hash = hash * 59 + this.LimiteGlobal.GetHashCode();
+                
+                if (this.LimiteMaximo != null)
+                    hash = hash * 59 + this.LimiteMaximo.GetHashCode();
+                
+                if (this.LimiteParcelas != null)
+                    hash = hash * 59 + this.LimiteParcelas.GetHashCode();
                 
                 return hash;
             }

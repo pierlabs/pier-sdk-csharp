@@ -48,12 +48,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>PageAplicacaoMobileResponse</returns>
-        PageAplicacaoMobileResponse ListarUsingGET (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        PageAplicacaoMobileResponse ListarUsingGET1 (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
   
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -62,12 +63,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>ApiResponse of PageAplicacaoMobileResponse</returns>
-        ApiResponse<PageAplicacaoMobileResponse> ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        ApiResponse<PageAplicacaoMobileResponse> ListarUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -126,12 +128,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of PageAplicacaoMobileResponse</returns>
-        System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGETAsync (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
 
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -140,12 +143,13 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacaoMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -447,14 +451,15 @@ namespace Conductor.Pier.Api
         /// Lista os aplicacoes mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
         /// <returns>PageAplicacaoMobileResponse</returns>
-        public PageAplicacaoMobileResponse ListarUsingGET (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public PageAplicacaoMobileResponse ListarUsingGET1 (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = ListarUsingGETWithHttpInfo(page, limit, id, idPlataformaMobile);
+             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = ListarUsingGET1WithHttpInfo(sort, page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
         }
 
@@ -462,12 +467,13 @@ namespace Conductor.Pier.Api
         /// Lista os aplicacoes mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
         /// <returns>ApiResponse of PageAplicacaoMobileResponse</returns>
-        public ApiResponse< PageAplicacaoMobileResponse > ListarUsingGETWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public ApiResponse< PageAplicacaoMobileResponse > ListarUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -498,6 +504,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
@@ -517,9 +524,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -532,14 +539,15 @@ namespace Conductor.Pier.Api
         /// Lista os aplicacoes mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of PageAplicacaoMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGETAsync (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public async System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = await ListarUsingGETAsyncWithHttpInfo(page, limit, id, idPlataformaMobile);
+             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
 
         }
@@ -548,12 +556,13 @@ namespace Conductor.Pier.Api
         /// Lista os aplicacoes mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacaoMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -584,6 +593,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
@@ -603,9 +613,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

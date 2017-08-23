@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
         /// <param name="NumeroParcelas">N\u00C3\u00BAmero de Parcelas. (required).</param>
         /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
-        /// <param name="CodigoSegurancaCartao">C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o. (required).</param>
+        /// <param name="CodigoSegurancaCartao">C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o..</param>
         /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
         /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o. (required).</param>
         /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM (required).</param>
@@ -61,15 +61,6 @@ namespace Conductor.Pier.Model
             else
             {
                 this.CodigoProcessamento = CodigoProcessamento;
-            }
-            // to ensure "CodigoSegurancaCartao" is required (not null)
-            if (CodigoSegurancaCartao == null)
-            {
-                throw new InvalidDataException("CodigoSegurancaCartao is a required property for AutorizacaoOnUsRequest and cannot be null");
-            }
-            else
-            {
-                this.CodigoSegurancaCartao = CodigoSegurancaCartao;
             }
             // to ensure "ValorTransacao" is required (not null)
             if (ValorTransacao == null)
@@ -125,6 +116,7 @@ namespace Conductor.Pier.Model
             {
                 this.TerminalRequisitante = TerminalRequisitante;
             }
+            this.CodigoSegurancaCartao = CodigoSegurancaCartao;
             
         }
         

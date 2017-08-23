@@ -48,8 +48,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataVencimentoPadrao">Dia do vencimento padr\u00C3\u00A3o da fatura.</param>
         /// <param name="IdContaPortador">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id).</param>
         /// <param name="NumeroEstabelecimento">Atributo que representa o numero do estabelecimento..</param>
+        /// <param name="ValorTaxaSaque">Valor da taxa saque..</param>
 
-        public TransferenciaBancariaResponse(long? Nsuorigem = null, long? IdAutorizacao = null, long? IdTransferencia = null, string CodigoAutorizacao = null, string DataAutorizacao = null, string Origem = null, double? Valor = null, long? IdOperacao = null, string Terminal = null, long? IdCartao = null, string DataCompra = null, double? ValorCompra = null, int? NumeroParcelas = null, double? ValorParcela = null, long? IdEstabelecimento = null, string DataMovimento = null, double? ValorContrato = null, double? TaxaJuros = null, double? ValorIOF = null, double? ValorTAC = null, long? IdConta = null, double? ValorEntrada = null, string DataVencimentoReal = null, string DataVencimentoPadrao = null, long? IdContaPortador = null, long? NumeroEstabelecimento = null)
+        public TransferenciaBancariaResponse(long? Nsuorigem = null, long? IdAutorizacao = null, long? IdTransferencia = null, string CodigoAutorizacao = null, string DataAutorizacao = null, string Origem = null, double? Valor = null, long? IdOperacao = null, string Terminal = null, long? IdCartao = null, string DataCompra = null, double? ValorCompra = null, int? NumeroParcelas = null, double? ValorParcela = null, long? IdEstabelecimento = null, string DataMovimento = null, double? ValorContrato = null, double? TaxaJuros = null, double? ValorIOF = null, double? ValorTAC = null, long? IdConta = null, double? ValorEntrada = null, string DataVencimentoReal = null, string DataVencimentoPadrao = null, long? IdContaPortador = null, long? NumeroEstabelecimento = null, double? ValorTaxaSaque = null)
         {
             this.Nsuorigem = Nsuorigem;
             this.IdAutorizacao = IdAutorizacao;
@@ -77,6 +78,7 @@ namespace Conductor.Pier.Model
             this.DataVencimentoPadrao = DataVencimentoPadrao;
             this.IdContaPortador = IdContaPortador;
             this.NumeroEstabelecimento = NumeroEstabelecimento;
+            this.ValorTaxaSaque = ValorTaxaSaque;
             
         }
         
@@ -263,6 +265,13 @@ namespace Conductor.Pier.Model
         public long? NumeroEstabelecimento { get; set; }
     
         /// <summary>
+        /// Valor da taxa saque.
+        /// </summary>
+        /// <value>Valor da taxa saque.</value>
+        [DataMember(Name="valorTaxaSaque", EmitDefaultValue=false)]
+        public double? ValorTaxaSaque { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -296,6 +305,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataVencimentoPadrao: ").Append(DataVencimentoPadrao).Append("\n");
             sb.Append("  IdContaPortador: ").Append(IdContaPortador).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
+            sb.Append("  ValorTaxaSaque: ").Append(ValorTaxaSaque).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -462,6 +472,11 @@ namespace Conductor.Pier.Model
                     this.NumeroEstabelecimento == other.NumeroEstabelecimento ||
                     this.NumeroEstabelecimento != null &&
                     this.NumeroEstabelecimento.Equals(other.NumeroEstabelecimento)
+                ) && 
+                (
+                    this.ValorTaxaSaque == other.ValorTaxaSaque ||
+                    this.ValorTaxaSaque != null &&
+                    this.ValorTaxaSaque.Equals(other.ValorTaxaSaque)
                 );
         }
 
@@ -554,6 +569,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NumeroEstabelecimento != null)
                     hash = hash * 59 + this.NumeroEstabelecimento.GetHashCode();
+                
+                if (this.ValorTaxaSaque != null)
+                    hash = hash * 59 + this.ValorTaxaSaque.GetHashCode();
                 
                 return hash;
             }

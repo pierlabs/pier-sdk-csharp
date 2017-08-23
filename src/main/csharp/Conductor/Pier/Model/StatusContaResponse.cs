@@ -24,13 +24,17 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id). (required).</param>
         /// <param name="Nome">Nome atribu\u00C3\u00ADdo ao Status da Conta. (required).</param>
-        /// <param name="FlagAlteraLimite">Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. (required).</param>
-        /// <param name="MensagemConsultaNegada">Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades..</param>
-        /// <param name="FlagPermiteNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
-        /// <param name="FlagFazTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo..</param>
-        /// <param name="FlagRecebeTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteAlterarVencimento">Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteAlterarLimite">Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteEmitirNovaViaCartao">Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteFazerTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteReceberTransferencia">Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteCriarAcordoCobranca">Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteAtribuirComoBloqueio">Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteDesbloquear">Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteAtribuirComoCancelamento">Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo..</param>
 
-        public StatusContaResponse(long? Id = null, string Nome = null, int? FlagAlteraLimite = null, string MensagemConsultaNegada = null, int? FlagPermiteNovaViaCartao = null, int? FlagFazTransferencia = null, int? FlagRecebeTransferencia = null)
+        public StatusContaResponse(long? Id = null, string Nome = null, int? PermiteAlterarVencimento = null, int? PermiteAlterarLimite = null, int? PermiteEmitirNovaViaCartao = null, int? PermiteFazerTransferencia = null, int? PermiteReceberTransferencia = null, int? PermiteCriarAcordoCobranca = null, int? PermiteAtribuirComoBloqueio = null, int? PermiteDesbloquear = null, int? PermiteAtribuirComoCancelamento = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -50,19 +54,15 @@ namespace Conductor.Pier.Model
             {
                 this.Nome = Nome;
             }
-            // to ensure "FlagAlteraLimite" is required (not null)
-            if (FlagAlteraLimite == null)
-            {
-                throw new InvalidDataException("FlagAlteraLimite is a required property for StatusContaResponse and cannot be null");
-            }
-            else
-            {
-                this.FlagAlteraLimite = FlagAlteraLimite;
-            }
-            this.MensagemConsultaNegada = MensagemConsultaNegada;
-            this.FlagPermiteNovaViaCartao = FlagPermiteNovaViaCartao;
-            this.FlagFazTransferencia = FlagFazTransferencia;
-            this.FlagRecebeTransferencia = FlagRecebeTransferencia;
+            this.PermiteAlterarVencimento = PermiteAlterarVencimento;
+            this.PermiteAlterarLimite = PermiteAlterarLimite;
+            this.PermiteEmitirNovaViaCartao = PermiteEmitirNovaViaCartao;
+            this.PermiteFazerTransferencia = PermiteFazerTransferencia;
+            this.PermiteReceberTransferencia = PermiteReceberTransferencia;
+            this.PermiteCriarAcordoCobranca = PermiteCriarAcordoCobranca;
+            this.PermiteAtribuirComoBloqueio = PermiteAtribuirComoBloqueio;
+            this.PermiteDesbloquear = PermiteDesbloquear;
+            this.PermiteAtribuirComoCancelamento = PermiteAtribuirComoCancelamento;
             
         }
         
@@ -82,39 +82,67 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.</value>
-        [DataMember(Name="flagAlteraLimite", EmitDefaultValue=false)]
-        public int? FlagAlteraLimite { get; set; }
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteAlterarVencimento", EmitDefaultValue=false)]
+        public int? PermiteAlterarVencimento { get; set; }
     
         /// <summary>
-        /// Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.</value>
-        [DataMember(Name="mensagemConsultaNegada", EmitDefaultValue=false)]
-        public string MensagemConsultaNegada { get; set; }
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteAlterarLimite", EmitDefaultValue=false)]
+        public int? PermiteAlterarLimite { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
-        [DataMember(Name="flagPermiteNovaViaCartao", EmitDefaultValue=false)]
-        public int? FlagPermiteNovaViaCartao { get; set; }
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteEmitirNovaViaCartao", EmitDefaultValue=false)]
+        public int? PermiteEmitirNovaViaCartao { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.</value>
-        [DataMember(Name="flagFazTransferencia", EmitDefaultValue=false)]
-        public int? FlagFazTransferencia { get; set; }
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteFazerTransferencia", EmitDefaultValue=false)]
+        public int? PermiteFazerTransferencia { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.</value>
-        [DataMember(Name="flagRecebeTransferencia", EmitDefaultValue=false)]
-        public int? FlagRecebeTransferencia { get; set; }
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteReceberTransferencia", EmitDefaultValue=false)]
+        public int? PermiteReceberTransferencia { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteCriarAcordoCobranca", EmitDefaultValue=false)]
+        public int? PermiteCriarAcordoCobranca { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteAtribuirComoBloqueio", EmitDefaultValue=false)]
+        public int? PermiteAtribuirComoBloqueio { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteDesbloquear", EmitDefaultValue=false)]
+        public int? PermiteDesbloquear { get; set; }
+    
+        /// <summary>
+        /// Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.</value>
+        [DataMember(Name="permiteAtribuirComoCancelamento", EmitDefaultValue=false)]
+        public int? PermiteAtribuirComoCancelamento { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -126,11 +154,15 @@ namespace Conductor.Pier.Model
             sb.Append("class StatusContaResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
-            sb.Append("  FlagAlteraLimite: ").Append(FlagAlteraLimite).Append("\n");
-            sb.Append("  MensagemConsultaNegada: ").Append(MensagemConsultaNegada).Append("\n");
-            sb.Append("  FlagPermiteNovaViaCartao: ").Append(FlagPermiteNovaViaCartao).Append("\n");
-            sb.Append("  FlagFazTransferencia: ").Append(FlagFazTransferencia).Append("\n");
-            sb.Append("  FlagRecebeTransferencia: ").Append(FlagRecebeTransferencia).Append("\n");
+            sb.Append("  PermiteAlterarVencimento: ").Append(PermiteAlterarVencimento).Append("\n");
+            sb.Append("  PermiteAlterarLimite: ").Append(PermiteAlterarLimite).Append("\n");
+            sb.Append("  PermiteEmitirNovaViaCartao: ").Append(PermiteEmitirNovaViaCartao).Append("\n");
+            sb.Append("  PermiteFazerTransferencia: ").Append(PermiteFazerTransferencia).Append("\n");
+            sb.Append("  PermiteReceberTransferencia: ").Append(PermiteReceberTransferencia).Append("\n");
+            sb.Append("  PermiteCriarAcordoCobranca: ").Append(PermiteCriarAcordoCobranca).Append("\n");
+            sb.Append("  PermiteAtribuirComoBloqueio: ").Append(PermiteAtribuirComoBloqueio).Append("\n");
+            sb.Append("  PermiteDesbloquear: ").Append(PermiteDesbloquear).Append("\n");
+            sb.Append("  PermiteAtribuirComoCancelamento: ").Append(PermiteAtribuirComoCancelamento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -179,29 +211,49 @@ namespace Conductor.Pier.Model
                     this.Nome.Equals(other.Nome)
                 ) && 
                 (
-                    this.FlagAlteraLimite == other.FlagAlteraLimite ||
-                    this.FlagAlteraLimite != null &&
-                    this.FlagAlteraLimite.Equals(other.FlagAlteraLimite)
+                    this.PermiteAlterarVencimento == other.PermiteAlterarVencimento ||
+                    this.PermiteAlterarVencimento != null &&
+                    this.PermiteAlterarVencimento.Equals(other.PermiteAlterarVencimento)
                 ) && 
                 (
-                    this.MensagemConsultaNegada == other.MensagemConsultaNegada ||
-                    this.MensagemConsultaNegada != null &&
-                    this.MensagemConsultaNegada.Equals(other.MensagemConsultaNegada)
+                    this.PermiteAlterarLimite == other.PermiteAlterarLimite ||
+                    this.PermiteAlterarLimite != null &&
+                    this.PermiteAlterarLimite.Equals(other.PermiteAlterarLimite)
                 ) && 
                 (
-                    this.FlagPermiteNovaViaCartao == other.FlagPermiteNovaViaCartao ||
-                    this.FlagPermiteNovaViaCartao != null &&
-                    this.FlagPermiteNovaViaCartao.Equals(other.FlagPermiteNovaViaCartao)
+                    this.PermiteEmitirNovaViaCartao == other.PermiteEmitirNovaViaCartao ||
+                    this.PermiteEmitirNovaViaCartao != null &&
+                    this.PermiteEmitirNovaViaCartao.Equals(other.PermiteEmitirNovaViaCartao)
                 ) && 
                 (
-                    this.FlagFazTransferencia == other.FlagFazTransferencia ||
-                    this.FlagFazTransferencia != null &&
-                    this.FlagFazTransferencia.Equals(other.FlagFazTransferencia)
+                    this.PermiteFazerTransferencia == other.PermiteFazerTransferencia ||
+                    this.PermiteFazerTransferencia != null &&
+                    this.PermiteFazerTransferencia.Equals(other.PermiteFazerTransferencia)
                 ) && 
                 (
-                    this.FlagRecebeTransferencia == other.FlagRecebeTransferencia ||
-                    this.FlagRecebeTransferencia != null &&
-                    this.FlagRecebeTransferencia.Equals(other.FlagRecebeTransferencia)
+                    this.PermiteReceberTransferencia == other.PermiteReceberTransferencia ||
+                    this.PermiteReceberTransferencia != null &&
+                    this.PermiteReceberTransferencia.Equals(other.PermiteReceberTransferencia)
+                ) && 
+                (
+                    this.PermiteCriarAcordoCobranca == other.PermiteCriarAcordoCobranca ||
+                    this.PermiteCriarAcordoCobranca != null &&
+                    this.PermiteCriarAcordoCobranca.Equals(other.PermiteCriarAcordoCobranca)
+                ) && 
+                (
+                    this.PermiteAtribuirComoBloqueio == other.PermiteAtribuirComoBloqueio ||
+                    this.PermiteAtribuirComoBloqueio != null &&
+                    this.PermiteAtribuirComoBloqueio.Equals(other.PermiteAtribuirComoBloqueio)
+                ) && 
+                (
+                    this.PermiteDesbloquear == other.PermiteDesbloquear ||
+                    this.PermiteDesbloquear != null &&
+                    this.PermiteDesbloquear.Equals(other.PermiteDesbloquear)
+                ) && 
+                (
+                    this.PermiteAtribuirComoCancelamento == other.PermiteAtribuirComoCancelamento ||
+                    this.PermiteAtribuirComoCancelamento != null &&
+                    this.PermiteAtribuirComoCancelamento.Equals(other.PermiteAtribuirComoCancelamento)
                 );
         }
 
@@ -223,20 +275,32 @@ namespace Conductor.Pier.Model
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
                 
-                if (this.FlagAlteraLimite != null)
-                    hash = hash * 59 + this.FlagAlteraLimite.GetHashCode();
+                if (this.PermiteAlterarVencimento != null)
+                    hash = hash * 59 + this.PermiteAlterarVencimento.GetHashCode();
                 
-                if (this.MensagemConsultaNegada != null)
-                    hash = hash * 59 + this.MensagemConsultaNegada.GetHashCode();
+                if (this.PermiteAlterarLimite != null)
+                    hash = hash * 59 + this.PermiteAlterarLimite.GetHashCode();
                 
-                if (this.FlagPermiteNovaViaCartao != null)
-                    hash = hash * 59 + this.FlagPermiteNovaViaCartao.GetHashCode();
+                if (this.PermiteEmitirNovaViaCartao != null)
+                    hash = hash * 59 + this.PermiteEmitirNovaViaCartao.GetHashCode();
                 
-                if (this.FlagFazTransferencia != null)
-                    hash = hash * 59 + this.FlagFazTransferencia.GetHashCode();
+                if (this.PermiteFazerTransferencia != null)
+                    hash = hash * 59 + this.PermiteFazerTransferencia.GetHashCode();
                 
-                if (this.FlagRecebeTransferencia != null)
-                    hash = hash * 59 + this.FlagRecebeTransferencia.GetHashCode();
+                if (this.PermiteReceberTransferencia != null)
+                    hash = hash * 59 + this.PermiteReceberTransferencia.GetHashCode();
+                
+                if (this.PermiteCriarAcordoCobranca != null)
+                    hash = hash * 59 + this.PermiteCriarAcordoCobranca.GetHashCode();
+                
+                if (this.PermiteAtribuirComoBloqueio != null)
+                    hash = hash * 59 + this.PermiteAtribuirComoBloqueio.GetHashCode();
+                
+                if (this.PermiteDesbloquear != null)
+                    hash = hash * 59 + this.PermiteDesbloquear.GetHashCode();
+                
+                if (this.PermiteAtribuirComoCancelamento != null)
+                    hash = hash * 59 + this.PermiteAtribuirComoCancelamento.GetHashCode();
                 
                 return hash;
             }

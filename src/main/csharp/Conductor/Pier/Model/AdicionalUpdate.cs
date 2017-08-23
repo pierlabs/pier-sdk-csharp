@@ -12,42 +12,53 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta do recurso de cadastrar adicional
+    /// Objeto Adicional
     /// </summary>
     [DataContract]
-    public partial class AdicionalResponse :  IEquatable<AdicionalResponse>
+    public partial class AdicionalUpdate :  IEquatable<AdicionalUpdate>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AdicionalResponse" /> class.
-        /// Initializes a new instance of the <see cref="AdicionalResponse" />class.
+        /// Initializes a new instance of the <see cref="AdicionalUpdate" /> class.
+        /// Initializes a new instance of the <see cref="AdicionalUpdate" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional.</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional.</param>
-        /// <param name="Nome">Nome completo do Adicional.</param>
-        /// <param name="NomeImpresso">Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.</param>
-        /// <param name="NumeroReceitaFederal">N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.</param>
-        /// <param name="DataNascimento">Data de Nascimento do Adicional.</param>
+        /// <param name="Nome">Nome completo do Adicional. (required).</param>
+        /// <param name="NomeImpresso">Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o..</param>
+        /// <param name="NumeroReceitaFederal">N\u00C3\u00BAmero do CPF ou CNPJ do Adicional. (required).</param>
+        /// <param name="DataNascimento">Data de Nascimento do Adicional em formato yyyy-MM-dd..</param>
         /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado)..</param>
-        /// <param name="NumeroIdentidade">N\u00C3\u00BAmero do Documento de Identidade do Adicional.</param>
-        /// <param name="OrgaoExpedidorIdentidade">Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.</param>
-        /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.</param>
-        /// <param name="DataEmissaoIdentidade">Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional.</param>
-        /// <param name="IdEstadoCivil">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.</param>
-        /// <param name="IdProfissao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.</param>
-        /// <param name="IdNacionalidade">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.</param>
-        /// <param name="IdParentesco">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</param>
-        /// <param name="Email">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</param>
-        /// <param name="FlagAtivo">Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0.</param>
-        /// <param name="Telefones">Lista dos telefones do adicional.</param>
+        /// <param name="NumeroIdentidade">N\u00C3\u00BAmero do Documento de Identidade do Adicional..</param>
+        /// <param name="OrgaoExpedidorIdentidade">Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional..</param>
+        /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido..</param>
+        /// <param name="DataEmissaoIdentidade">Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd..</param>
+        /// <param name="IdEstadoCivil">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional..</param>
+        /// <param name="IdProfissao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional..</param>
+        /// <param name="IdNacionalidade">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional..</param>
+        /// <param name="IdParentesco">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular..</param>
+        /// <param name="Email">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular..</param>
+        /// <param name="Telefones">Lista de telefones do adicional..</param>
 
-        public AdicionalResponse(long? IdConta = null, long? IdPessoa = null, string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, int? FlagAtivo = null, List<TelefoneResponse> Telefones = null)
+        public AdicionalUpdate(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, List<TelefoneAdicionalPersist> Telefones = null)
         {
-            this.IdConta = IdConta;
-            this.IdPessoa = IdPessoa;
-            this.Nome = Nome;
+            // to ensure "Nome" is required (not null)
+            if (Nome == null)
+            {
+                throw new InvalidDataException("Nome is a required property for AdicionalUpdate and cannot be null");
+            }
+            else
+            {
+                this.Nome = Nome;
+            }
+            // to ensure "NumeroReceitaFederal" is required (not null)
+            if (NumeroReceitaFederal == null)
+            {
+                throw new InvalidDataException("NumeroReceitaFederal is a required property for AdicionalUpdate and cannot be null");
+            }
+            else
+            {
+                this.NumeroReceitaFederal = NumeroReceitaFederal;
+            }
             this.NomeImpresso = NomeImpresso;
-            this.NumeroReceitaFederal = NumeroReceitaFederal;
             this.DataNascimento = DataNascimento;
             this.Sexo = Sexo;
             this.NumeroIdentidade = NumeroIdentidade;
@@ -59,51 +70,36 @@ namespace Conductor.Pier.Model
             this.IdNacionalidade = IdNacionalidade;
             this.IdParentesco = IdParentesco;
             this.Email = Email;
-            this.FlagAtivo = FlagAtivo;
             this.Telefones = Telefones;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional
+        /// Nome completo do Adicional.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional</value>
-        [DataMember(Name="idConta", EmitDefaultValue=false)]
-        public long? IdConta { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional</value>
-        [DataMember(Name="idPessoa", EmitDefaultValue=false)]
-        public long? IdPessoa { get; set; }
-    
-        /// <summary>
-        /// Nome completo do Adicional
-        /// </summary>
-        /// <value>Nome completo do Adicional</value>
+        /// <value>Nome completo do Adicional.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o
+        /// Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o</value>
+        /// <value>Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CPF ou CNPJ do Adicional
+        /// N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CPF ou CNPJ do Adicional</value>
+        /// <value>N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Data de Nascimento do Adicional
+        /// Data de Nascimento do Adicional em formato yyyy-MM-dd.
         /// </summary>
-        /// <value>Data de Nascimento do Adicional</value>
+        /// <value>Data de Nascimento do Adicional em formato yyyy-MM-dd.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
@@ -115,81 +111,74 @@ namespace Conductor.Pier.Model
         public string Sexo { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Documento de Identidade do Adicional
+        /// N\u00C3\u00BAmero do Documento de Identidade do Adicional.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Documento de Identidade do Adicional</value>
+        /// <value>N\u00C3\u00BAmero do Documento de Identidade do Adicional.</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional
+        /// Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.
         /// </summary>
-        /// <value>Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional</value>
+        /// <value>Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido
+        /// Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.
         /// </summary>
-        /// <value>Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido</value>
+        /// <value>Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional
+        /// Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
         /// </summary>
-        /// <value>Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional</value>
+        /// <value>Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.</value>
         [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public long? IdProfissao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.</value>
         [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular</value>
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+        /// Lista de telefones do adicional.
         /// </summary>
-        /// <value>Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0</value>
-        [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
-        public int? FlagAtivo { get; set; }
-    
-        /// <summary>
-        /// Lista dos telefones do adicional
-        /// </summary>
-        /// <value>Lista dos telefones do adicional</value>
+        /// <value>Lista de telefones do adicional.</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
-        public List<TelefoneResponse> Telefones { get; set; }
+        public List<TelefoneAdicionalPersist> Telefones { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -198,9 +187,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AdicionalResponse {\n");
-            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
-            sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
+            sb.Append("class AdicionalUpdate {\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
             sb.Append("  NumeroReceitaFederal: ").Append(NumeroReceitaFederal).Append("\n");
@@ -215,7 +202,6 @@ namespace Conductor.Pier.Model
             sb.Append("  IdNacionalidade: ").Append(IdNacionalidade).Append("\n");
             sb.Append("  IdParentesco: ").Append(IdParentesco).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
@@ -239,31 +225,21 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AdicionalResponse);
+            return this.Equals(obj as AdicionalUpdate);
         }
 
         /// <summary>
-        /// Returns true if AdicionalResponse instances are equal
+        /// Returns true if AdicionalUpdate instances are equal
         /// </summary>
-        /// <param name="other">Instance of AdicionalResponse to be compared</param>
+        /// <param name="other">Instance of AdicionalUpdate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AdicionalResponse other)
+        public bool Equals(AdicionalUpdate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
-                (
-                    this.IdConta == other.IdConta ||
-                    this.IdConta != null &&
-                    this.IdConta.Equals(other.IdConta)
-                ) && 
-                (
-                    this.IdPessoa == other.IdPessoa ||
-                    this.IdPessoa != null &&
-                    this.IdPessoa.Equals(other.IdPessoa)
-                ) && 
                 (
                     this.Nome == other.Nome ||
                     this.Nome != null &&
@@ -335,11 +311,6 @@ namespace Conductor.Pier.Model
                     this.Email.Equals(other.Email)
                 ) && 
                 (
-                    this.FlagAtivo == other.FlagAtivo ||
-                    this.FlagAtivo != null &&
-                    this.FlagAtivo.Equals(other.FlagAtivo)
-                ) && 
-                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -357,12 +328,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.IdConta != null)
-                    hash = hash * 59 + this.IdConta.GetHashCode();
-                
-                if (this.IdPessoa != null)
-                    hash = hash * 59 + this.IdPessoa.GetHashCode();
                 
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
@@ -405,9 +370,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
-                if (this.FlagAtivo != null)
-                    hash = hash * 59 + this.FlagAtivo.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();

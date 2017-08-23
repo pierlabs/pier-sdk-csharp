@@ -176,10 +176,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageConfiguracaoEmailResponse</returns>
-        PageConfiguracaoEmailResponse ListarConfiguracaoUsingGET (int? page = null, int? limit = null);
+        PageConfiguracaoEmailResponse ListarConfiguracaoUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
@@ -188,10 +189,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
-        ApiResponse<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Listar Push
@@ -200,6 +202,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
@@ -208,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>PagePushResponse</returns>
-        PagePushResponse ListarPushUsingGET (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        PagePushResponse ListarPushUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
   
         /// <summary>
         /// Listar Push
@@ -217,6 +220,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
@@ -225,7 +229,7 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>ApiResponse of PagePushResponse</returns>
-        ApiResponse<PagePushResponse> ListarPushUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        ApiResponse<PagePushResponse> ListarPushUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
         
         /// <summary>
         /// Listar SMS
@@ -234,6 +238,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
@@ -243,7 +248,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>PageSMSResponse</returns>
-        PageSMSResponse ListarSMSUsingGET (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        PageSMSResponse ListarSMSUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
   
         /// <summary>
         /// Listar SMS
@@ -252,6 +257,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
@@ -261,7 +267,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PageSMSResponse</returns>
-        ApiResponse<PageSMSResponse> ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        ApiResponse<PageSMSResponse> ListarSMSUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -270,10 +276,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTemplateNotificacaoResponse</returns>
-        PageTemplateNotificacaoResponse ListarTemplateNotificacaoUsingGET (int? page = null, int? limit = null);
+        PageTemplateNotificacaoResponse ListarTemplateNotificacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -282,10 +289,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTemplateNotificacaoResponse</returns>
-        ApiResponse<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -658,10 +666,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageConfiguracaoEmailResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
@@ -670,10 +679,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Listar Push
@@ -682,6 +692,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
@@ -690,7 +701,7 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of PagePushResponse</returns>
-        System.Threading.Tasks.Task<PagePushResponse> ListarPushUsingGETAsync (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        System.Threading.Tasks.Task<PagePushResponse> ListarPushUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
 
         /// <summary>
         /// Listar Push
@@ -699,6 +710,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
@@ -707,7 +719,7 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of ApiResponse (PagePushResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePushResponse>> ListarPushUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePushResponse>> ListarPushUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
         
         /// <summary>
         /// Listar SMS
@@ -716,6 +728,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
@@ -725,7 +738,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageSMSResponse</returns>
-        System.Threading.Tasks.Task<PageSMSResponse> ListarSMSUsingGETAsync (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        System.Threading.Tasks.Task<PageSMSResponse> ListarSMSUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
 
         /// <summary>
         /// Listar SMS
@@ -734,6 +747,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
@@ -743,7 +757,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageSMSResponse>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
+        System.Threading.Tasks.Task<ApiResponse<PageSMSResponse>> ListarSMSUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -752,10 +766,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTemplateNotificacaoResponse</returns>
-        System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -764,10 +779,11 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTemplateNotificacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -2123,12 +2139,13 @@ namespace Conductor.Pier.Api
         /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageConfiguracaoEmailResponse</returns>
-        public PageConfiguracaoEmailResponse ListarConfiguracaoUsingGET (int? page = null, int? limit = null)
+        public PageConfiguracaoEmailResponse ListarConfiguracaoUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = ListarConfiguracaoUsingGETWithHttpInfo(page, limit);
+             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = ListarConfiguracaoUsingGETWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2136,10 +2153,11 @@ namespace Conductor.Pier.Api
         /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
-        public ApiResponse< PageConfiguracaoEmailResponse > ListarConfiguracaoUsingGETWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< PageConfiguracaoEmailResponse > ListarConfiguracaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2170,6 +2188,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -2202,12 +2221,13 @@ namespace Conductor.Pier.Api
         /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageConfiguracaoEmailResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = await ListarConfiguracaoUsingGETAsyncWithHttpInfo(page, limit);
+             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = await ListarConfiguracaoUsingGETAsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2216,10 +2236,11 @@ namespace Conductor.Pier.Api
         /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2250,6 +2271,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -2281,6 +2303,7 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param> 
@@ -2289,9 +2312,9 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param> 
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <returns>PagePushResponse</returns>
-        public PagePushResponse ListarPushUsingGET (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public PagePushResponse ListarPushUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
-             ApiResponse<PagePushResponse> localVarResponse = ListarPushUsingGETWithHttpInfo(page, limit, dataEnvio, tipoEvento, status, plataforma, protocolo);
+             ApiResponse<PagePushResponse> localVarResponse = ListarPushUsingGETWithHttpInfo(sort, page, limit, dataEnvio, tipoEvento, status, plataforma, protocolo);
              return localVarResponse.Data;
         }
 
@@ -2299,6 +2322,7 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param> 
@@ -2307,7 +2331,7 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param> 
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <returns>ApiResponse of PagePushResponse</returns>
-        public ApiResponse< PagePushResponse > ListarPushUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public ApiResponse< PagePushResponse > ListarPushUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
             
     
@@ -2338,6 +2362,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (dataEnvio != null) localVarQueryParams.Add("dataEnvio", Configuration.ApiClient.ParameterToString(dataEnvio)); // query parameter
@@ -2375,6 +2400,7 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
@@ -2383,9 +2409,9 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of PagePushResponse</returns>
-        public async System.Threading.Tasks.Task<PagePushResponse> ListarPushUsingGETAsync (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public async System.Threading.Tasks.Task<PagePushResponse> ListarPushUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
-             ApiResponse<PagePushResponse> localVarResponse = await ListarPushUsingGETAsyncWithHttpInfo(page, limit, dataEnvio, tipoEvento, status, plataforma, protocolo);
+             ApiResponse<PagePushResponse> localVarResponse = await ListarPushUsingGETAsyncWithHttpInfo(sort, page, limit, dataEnvio, tipoEvento, status, plataforma, protocolo);
              return localVarResponse.Data;
 
         }
@@ -2394,6 +2420,7 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
@@ -2402,7 +2429,7 @@ namespace Conductor.Pier.Api
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <returns>Task of ApiResponse (PagePushResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePushResponse>> ListarPushUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePushResponse>> ListarPushUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
             
     
@@ -2433,6 +2460,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (dataEnvio != null) localVarQueryParams.Add("dataEnvio", Configuration.ApiClient.ParameterToString(dataEnvio)); // query parameter
@@ -2469,6 +2497,7 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param> 
@@ -2478,9 +2507,9 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <returns>PageSMSResponse</returns>
-        public PageSMSResponse ListarSMSUsingGET (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public PageSMSResponse ListarSMSUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
-             ApiResponse<PageSMSResponse> localVarResponse = ListarSMSUsingGETWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
+             ApiResponse<PageSMSResponse> localVarResponse = ListarSMSUsingGETWithHttpInfo(sort, page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
              return localVarResponse.Data;
         }
 
@@ -2488,6 +2517,7 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param> 
@@ -2497,7 +2527,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PageSMSResponse</returns>
-        public ApiResponse< PageSMSResponse > ListarSMSUsingGETWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public ApiResponse< PageSMSResponse > ListarSMSUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
             
     
@@ -2528,6 +2558,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (dataInclusao != null) localVarQueryParams.Add("dataInclusao", Configuration.ApiClient.ParameterToString(dataInclusao)); // query parameter
@@ -2566,6 +2597,7 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
@@ -2575,9 +2607,9 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PageSMSResponse</returns>
-        public async System.Threading.Tasks.Task<PageSMSResponse> ListarSMSUsingGETAsync (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public async System.Threading.Tasks.Task<PageSMSResponse> ListarSMSUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
-             ApiResponse<PageSMSResponse> localVarResponse = await ListarSMSUsingGETAsyncWithHttpInfo(page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
+             ApiResponse<PageSMSResponse> localVarResponse = await ListarSMSUsingGETAsyncWithHttpInfo(sort, page, limit, dataInclusao, tipoEvento, status, operadora, protocolo, nsu);
              return localVarResponse.Data;
 
         }
@@ -2586,6 +2618,7 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
@@ -2595,7 +2628,7 @@ namespace Conductor.Pier.Api
         /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
         /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageSMSResponse>> ListarSMSUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageSMSResponse>> ListarSMSUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
             
     
@@ -2626,6 +2659,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (dataInclusao != null) localVarQueryParams.Add("dataInclusao", Configuration.ApiClient.ParameterToString(dataInclusao)); // query parameter
@@ -2663,12 +2697,13 @@ namespace Conductor.Pier.Api
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTemplateNotificacaoResponse</returns>
-        public PageTemplateNotificacaoResponse ListarTemplateNotificacaoUsingGET (int? page = null, int? limit = null)
+        public PageTemplateNotificacaoResponse ListarTemplateNotificacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = ListarTemplateNotificacaoUsingGETWithHttpInfo(page, limit);
+             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = ListarTemplateNotificacaoUsingGETWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2676,10 +2711,11 @@ namespace Conductor.Pier.Api
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTemplateNotificacaoResponse</returns>
-        public ApiResponse< PageTemplateNotificacaoResponse > ListarTemplateNotificacaoUsingGETWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< PageTemplateNotificacaoResponse > ListarTemplateNotificacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2710,6 +2746,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             
@@ -2742,12 +2779,13 @@ namespace Conductor.Pier.Api
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTemplateNotificacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = await ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo(page, limit);
+             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = await ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2756,10 +2794,11 @@ namespace Conductor.Pier.Api
         /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTemplateNotificacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2790,6 +2829,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             

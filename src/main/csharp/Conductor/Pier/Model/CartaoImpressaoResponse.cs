@@ -45,8 +45,9 @@ namespace Conductor.Pier.Model
         /// <param name="Trilha2">Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor..</param>
         /// <param name="TrilhaCVV1">Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor..</param>
         /// <param name="TrilhaCVV2">Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor..</param>
+        /// <param name="NumeroCartaoHash">Apresenta o numero da hash do cart\u00C3\u00A3o .</param>
 
-        public CartaoImpressaoResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string NumeroCartao = null, string NomePlastico = null, string Cvv2 = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string NomeEmpresa = null, int? NumeroAgencia = null, string NumeroContaCorente = null, string NomeEmpresaBeneficio = null, string Cpf = null, string TipoPortador = null, string NomeEmpregador = null, string Trilha1 = null, string Trilha2 = null, string TrilhaCVV1 = null, string TrilhaCVV2 = null)
+        public CartaoImpressaoResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string NumeroCartao = null, string NomePlastico = null, string Cvv2 = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string NomeEmpresa = null, int? NumeroAgencia = null, string NumeroContaCorente = null, string NomeEmpresaBeneficio = null, string Cpf = null, string TipoPortador = null, string NomeEmpregador = null, string Trilha1 = null, string Trilha2 = null, string TrilhaCVV1 = null, string TrilhaCVV2 = null, long? NumeroCartaoHash = null)
         {
             this.FlagVirtual = FlagVirtual;
             this.IdConta = IdConta;
@@ -71,6 +72,7 @@ namespace Conductor.Pier.Model
             this.Trilha2 = Trilha2;
             this.TrilhaCVV1 = TrilhaCVV1;
             this.TrilhaCVV2 = TrilhaCVV2;
+            this.NumeroCartaoHash = NumeroCartaoHash;
             
         }
         
@@ -236,6 +238,13 @@ namespace Conductor.Pier.Model
         public string TrilhaCVV2 { get; set; }
     
         /// <summary>
+        /// Apresenta o numero da hash do cart\u00C3\u00A3o 
+        /// </summary>
+        /// <value>Apresenta o numero da hash do cart\u00C3\u00A3o </value>
+        [DataMember(Name="numeroCartaoHash", EmitDefaultValue=false)]
+        public long? NumeroCartaoHash { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -266,6 +275,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Trilha2: ").Append(Trilha2).Append("\n");
             sb.Append("  TrilhaCVV1: ").Append(TrilhaCVV1).Append("\n");
             sb.Append("  TrilhaCVV2: ").Append(TrilhaCVV2).Append("\n");
+            sb.Append("  NumeroCartaoHash: ").Append(NumeroCartaoHash).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -417,6 +427,11 @@ namespace Conductor.Pier.Model
                     this.TrilhaCVV2 == other.TrilhaCVV2 ||
                     this.TrilhaCVV2 != null &&
                     this.TrilhaCVV2.Equals(other.TrilhaCVV2)
+                ) && 
+                (
+                    this.NumeroCartaoHash == other.NumeroCartaoHash ||
+                    this.NumeroCartaoHash != null &&
+                    this.NumeroCartaoHash.Equals(other.NumeroCartaoHash)
                 );
         }
 
@@ -500,6 +515,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.TrilhaCVV2 != null)
                     hash = hash * 59 + this.TrilhaCVV2.GetHashCode();
+                
+                if (this.NumeroCartaoHash != null)
+                    hash = hash * 59 + this.NumeroCartaoHash.GetHashCode();
                 
                 return hash;
             }
