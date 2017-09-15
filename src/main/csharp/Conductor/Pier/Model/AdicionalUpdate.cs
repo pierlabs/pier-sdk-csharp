@@ -31,14 +31,10 @@ namespace Conductor.Pier.Model
         /// <param name="OrgaoExpedidorIdentidade">Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional..</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido..</param>
         /// <param name="DataEmissaoIdentidade">Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd..</param>
-        /// <param name="IdEstadoCivil">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional..</param>
-        /// <param name="IdProfissao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional..</param>
-        /// <param name="IdNacionalidade">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional..</param>
         /// <param name="IdParentesco">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular..</param>
-        /// <param name="Email">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular..</param>
         /// <param name="Telefones">Lista de telefones do adicional..</param>
 
-        public AdicionalUpdate(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, List<TelefoneAdicionalPersist> Telefones = null)
+        public AdicionalUpdate(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, List<TelefoneAdicionalUpdate> Telefones = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -65,11 +61,7 @@ namespace Conductor.Pier.Model
             this.OrgaoExpedidorIdentidade = OrgaoExpedidorIdentidade;
             this.UnidadeFederativaIdentidade = UnidadeFederativaIdentidade;
             this.DataEmissaoIdentidade = DataEmissaoIdentidade;
-            this.IdEstadoCivil = IdEstadoCivil;
-            this.IdProfissao = IdProfissao;
-            this.IdNacionalidade = IdNacionalidade;
             this.IdParentesco = IdParentesco;
-            this.Email = Email;
             this.Telefones = Telefones;
             
         }
@@ -139,27 +131,6 @@ namespace Conductor.Pier.Model
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.</value>
-        [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
-        public long? IdEstadoCivil { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.</value>
-        [DataMember(Name="idProfissao", EmitDefaultValue=false)]
-        public long? IdProfissao { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.</value>
-        [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
-        public long? IdNacionalidade { get; set; }
-    
-        /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
         /// </summary>
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</value>
@@ -167,18 +138,11 @@ namespace Conductor.Pier.Model
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</value>
-        [DataMember(Name="email", EmitDefaultValue=false)]
-        public string Email { get; set; }
-    
-        /// <summary>
         /// Lista de telefones do adicional.
         /// </summary>
         /// <value>Lista de telefones do adicional.</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
-        public List<TelefoneAdicionalPersist> Telefones { get; set; }
+        public List<TelefoneAdicionalUpdate> Telefones { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -197,11 +161,7 @@ namespace Conductor.Pier.Model
             sb.Append("  OrgaoExpedidorIdentidade: ").Append(OrgaoExpedidorIdentidade).Append("\n");
             sb.Append("  UnidadeFederativaIdentidade: ").Append(UnidadeFederativaIdentidade).Append("\n");
             sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
-            sb.Append("  IdEstadoCivil: ").Append(IdEstadoCivil).Append("\n");
-            sb.Append("  IdProfissao: ").Append(IdProfissao).Append("\n");
-            sb.Append("  IdNacionalidade: ").Append(IdNacionalidade).Append("\n");
             sb.Append("  IdParentesco: ").Append(IdParentesco).Append("\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
@@ -286,29 +246,9 @@ namespace Conductor.Pier.Model
                     this.DataEmissaoIdentidade.Equals(other.DataEmissaoIdentidade)
                 ) && 
                 (
-                    this.IdEstadoCivil == other.IdEstadoCivil ||
-                    this.IdEstadoCivil != null &&
-                    this.IdEstadoCivil.Equals(other.IdEstadoCivil)
-                ) && 
-                (
-                    this.IdProfissao == other.IdProfissao ||
-                    this.IdProfissao != null &&
-                    this.IdProfissao.Equals(other.IdProfissao)
-                ) && 
-                (
-                    this.IdNacionalidade == other.IdNacionalidade ||
-                    this.IdNacionalidade != null &&
-                    this.IdNacionalidade.Equals(other.IdNacionalidade)
-                ) && 
-                (
                     this.IdParentesco == other.IdParentesco ||
                     this.IdParentesco != null &&
                     this.IdParentesco.Equals(other.IdParentesco)
-                ) && 
-                (
-                    this.Email == other.Email ||
-                    this.Email != null &&
-                    this.Email.Equals(other.Email)
                 ) && 
                 (
                     this.Telefones == other.Telefones ||
@@ -356,20 +296,8 @@ namespace Conductor.Pier.Model
                 if (this.DataEmissaoIdentidade != null)
                     hash = hash * 59 + this.DataEmissaoIdentidade.GetHashCode();
                 
-                if (this.IdEstadoCivil != null)
-                    hash = hash * 59 + this.IdEstadoCivil.GetHashCode();
-                
-                if (this.IdProfissao != null)
-                    hash = hash * 59 + this.IdProfissao.GetHashCode();
-                
-                if (this.IdNacionalidade != null)
-                    hash = hash * 59 + this.IdNacionalidade.GetHashCode();
-                
                 if (this.IdParentesco != null)
                     hash = hash * 59 + this.IdParentesco.GetHashCode();
-                
-                if (this.Email != null)
-                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();

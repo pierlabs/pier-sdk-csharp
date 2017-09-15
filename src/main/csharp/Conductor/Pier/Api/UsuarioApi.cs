@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUsuariosApi
+    public interface IUsuarioApi
     {
         #region Synchronous Operations
         
@@ -98,7 +98,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse ConsultarUsingGET26 (long? id);
+        UsuarioResponse ConsultarUsingGET28 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -109,7 +109,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> ConsultarUsingGET26WithHttpInfo (long? id);
+        ApiResponse<UsuarioResponse> ConsultarUsingGET28WithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -320,7 +320,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET26Async (long? id);
+        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET28Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET28AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -464,13 +464,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class UsuariosApi : IUsuariosApi
+    public class UsuarioApi : IUsuarioApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsuariosApi"/> class.
+        /// Initializes a new instance of the <see cref="UsuarioApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UsuariosApi(String basePath)
+        public UsuarioApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -482,12 +482,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsuariosApi"/> class
+        /// Initializes a new instance of the <see cref="UsuarioApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UsuariosApi(Configuration configuration = null)
+        public UsuarioApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -576,15 +576,15 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->AlterarSenhaUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AlterarSenhaUsingPUT");
             
             // verify the required parameter 'senhaAtual' is set
             if (senhaAtual == null)
-                throw new ApiException(400, "Missing required parameter 'senhaAtual' when calling UsuariosApi->AlterarSenhaUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'senhaAtual' when calling UsuarioApi->AlterarSenhaUsingPUT");
             
             // verify the required parameter 'senhaNova' is set
             if (senhaNova == null)
-                throw new ApiException(400, "Missing required parameter 'senhaNova' when calling UsuariosApi->AlterarSenhaUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'senhaNova' when calling UsuarioApi->AlterarSenhaUsingPUT");
             
     
             var localVarPath = "/api/usuarios/{id}/alterar-senha";
@@ -756,11 +756,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->AlterarUsingPUT10");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AlterarUsingPUT10");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling UsuariosApi->AlterarUsingPUT10");
+                throw new ApiException(400, "Missing required parameter 'update' when calling UsuarioApi->AlterarUsingPUT10");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -936,7 +936,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->AtivarUsuarioUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AtivarUsuarioUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/ativar-usuario";
@@ -1077,9 +1077,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse ConsultarUsingGET26 (long? id)
+        public UsuarioResponse ConsultarUsingGET28 (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET26WithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET28WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1089,12 +1089,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > ConsultarUsingGET26WithHttpInfo (long? id)
+        public ApiResponse< UsuarioResponse > ConsultarUsingGET28WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->ConsultarUsingGET26");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->ConsultarUsingGET28");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1140,9 +1140,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1157,9 +1157,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET26Async (long? id)
+        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET28Async (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET26AsyncWithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET28AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1170,10 +1170,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET28AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET26");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET28");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1219,9 +1219,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1252,7 +1252,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->DesativarUsuarioUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->DesativarUsuarioUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/desativar-usuario";
@@ -1598,7 +1598,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->RecuperarSenhaUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->RecuperarSenhaUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/recuperar-senha";
@@ -1756,7 +1756,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling UsuariosApi->SalvarUsingPOST16");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling UsuarioApi->SalvarUsingPOST16");
             
     
             var localVarPath = "/api/usuarios";
@@ -1928,11 +1928,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'senha' is set
             if (senha == null)
-                throw new ApiException(400, "Missing required parameter 'senha' when calling UsuariosApi->ValidarSenhaUsingGET1");
+                throw new ApiException(400, "Missing required parameter 'senha' when calling UsuarioApi->ValidarSenhaUsingGET1");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuariosApi->ValidarSenhaUsingGET1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->ValidarSenhaUsingGET1");
             
     
             var localVarPath = "/api/usuarios/{id}/validar-senha";

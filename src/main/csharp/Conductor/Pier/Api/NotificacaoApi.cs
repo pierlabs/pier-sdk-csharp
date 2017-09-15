@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface INotificacoesApi
+    public interface INotificacaoApi
     {
         #region Synchronous Operations
         
@@ -1000,13 +1000,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class NotificacoesApi : INotificacoesApi
+    public class NotificacaoApi : INotificacaoApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NotificacoesApi"/> class.
+        /// Initializes a new instance of the <see cref="NotificacaoApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public NotificacoesApi(String basePath)
+        public NotificacaoApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -1018,12 +1018,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="NotificacoesApi"/> class
+        /// Initializes a new instance of the <see cref="NotificacaoApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public NotificacoesApi(Configuration configuration = null)
+        public NotificacaoApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -1110,11 +1110,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacoesApi->AlterarConfiguracaoUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarConfiguracaoUsingPUT");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacoesApi->AlterarConfiguracaoUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->AlterarConfiguracaoUsingPUT");
             
     
             var localVarPath = "/api/configuracoes-email/{id}";
@@ -1300,11 +1300,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacoesApi->AlterarTemplateNotificacaoUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarTemplateNotificacaoUsingPUT");
             
             // verify the required parameter 'conteudo' is set
             if (conteudo == null)
-                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacoesApi->AlterarTemplateNotificacaoUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacaoApi->AlterarTemplateNotificacaoUsingPUT");
             
     
             var localVarPath = "/api/templates-notificacoes/{id}";
@@ -1672,7 +1672,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacoesApi->ConsultarConfiguracaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarConfiguracaoUsingGET");
             
     
             var localVarPath = "/api/configuracoes-email/{id}";
@@ -1830,7 +1830,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacoesApi->ConsultarTemplateNotificacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarTemplateNotificacaoUsingGET");
             
     
             var localVarPath = "/api/templates-notificacoes/{id}";
@@ -1988,7 +1988,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacoesApi->GerarTokenUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->GerarTokenUsingPOST");
             
     
             var localVarPath = "/api/notificacoes-sms/gerar-codigo-seguranca";
@@ -3190,7 +3190,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacoesApi->SalvarConfiguracaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->SalvarConfiguracaoUsingPOST");
             
     
             var localVarPath = "/api/configuracoes-email";
@@ -3360,7 +3360,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'pushPersists' is set
             if (pushPersists == null)
-                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacoesApi->SalvarPushFCMUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacaoApi->SalvarPushFCMUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/push/fcm";
@@ -3530,7 +3530,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'pushPersists' is set
             if (pushPersists == null)
-                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacoesApi->SalvarPushGCMUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacaoApi->SalvarPushGCMUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/push/gcm";
@@ -3700,7 +3700,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'pushPersists' is set
             if (pushPersists == null)
-                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacoesApi->SalvarPushUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacaoApi->SalvarPushUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/push/apns";
@@ -3870,7 +3870,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'listaSMS' is set
             if (listaSMS == null)
-                throw new ApiException(400, "Missing required parameter 'listaSMS' when calling NotificacoesApi->SalvarSMSUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'listaSMS' when calling NotificacaoApi->SalvarSMSUsingPOST");
             
     
             var localVarPath = "/api/notificacoes/sms";
@@ -4048,7 +4048,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'conteudo' is set
             if (conteudo == null)
-                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacoesApi->SalvarTemplateNotificacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacaoApi->SalvarTemplateNotificacaoUsingPOST");
             
     
             var localVarPath = "/api/templates-notificacoes";
@@ -4234,7 +4234,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacoesApi->ValidarTokenUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->ValidarTokenUsingPOST");
             
     
             var localVarPath = "/api/notificacoes-sms/validar-codigo-seguranca";

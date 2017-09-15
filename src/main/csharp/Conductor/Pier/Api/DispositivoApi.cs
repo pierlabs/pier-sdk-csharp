@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IDispositivosApi
+    public interface IDispositivoApi
     {
         #region Synchronous Operations
         
@@ -232,13 +232,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class DispositivosApi : IDispositivosApi
+    public class DispositivoApi : IDispositivoApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DispositivosApi"/> class.
+        /// Initializes a new instance of the <see cref="DispositivoApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public DispositivosApi(String basePath)
+        public DispositivoApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -250,12 +250,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DispositivosApi"/> class
+        /// Initializes a new instance of the <see cref="DispositivoApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public DispositivosApi(Configuration configuration = null)
+        public DispositivoApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -340,7 +340,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DispositivosApi->AtivarUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DispositivoApi->AtivarUsingPOST");
             
     
             var localVarPath = "/api/dispositivos/{id}/ativar-dispositivo";
@@ -498,7 +498,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DispositivosApi->DesativarUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DispositivoApi->DesativarUsingPOST");
             
     
             var localVarPath = "/api/dispositivos/{id}/desativar-dispositivo";
@@ -850,7 +850,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling DispositivosApi->SalvarUsingPOST4");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DispositivoApi->SalvarUsingPOST4");
             
     
             var localVarPath = "/api/dispositivos";

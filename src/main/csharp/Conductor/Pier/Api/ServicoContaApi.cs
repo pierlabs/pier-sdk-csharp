@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IServicosContaApi
+    public interface IServicoContaApi
     {
         #region Synchronous Operations
         
@@ -296,13 +296,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class ServicosContaApi : IServicosContaApi
+    public class ServicoContaApi : IServicoContaApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServicosContaApi"/> class.
+        /// Initializes a new instance of the <see cref="ServicoContaApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ServicosContaApi(String basePath)
+        public ServicoContaApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -314,12 +314,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServicosContaApi"/> class
+        /// Initializes a new instance of the <see cref="ServicoContaApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ServicosContaApi(Configuration configuration = null)
+        public ServicoContaApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -420,11 +420,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ServicosContaApi->AtivarAnuidadeUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->AtivarAnuidadeUsingPOST");
             
             // verify the required parameter 'idAnuidade' is set
             if (idAnuidade == null)
-                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ServicosContaApi->AtivarAnuidadeUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ServicoContaApi->AtivarAnuidadeUsingPOST");
             
     
             var localVarPath = "/api/contas/{id}/atribuir-anuidade";
@@ -616,7 +616,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ServicosContaApi->AtivarEnvioFaturaEmailUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->AtivarEnvioFaturaEmailUsingPOST");
             
     
             var localVarPath = "/api/contas/{id}/ativar-fatura-email";
@@ -774,7 +774,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ServicosContaApi->DesativarEnvioFaturaEmailUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->DesativarEnvioFaturaEmailUsingPOST");
             
     
             var localVarPath = "/api/contas/{id}/desativar-fatura-email";

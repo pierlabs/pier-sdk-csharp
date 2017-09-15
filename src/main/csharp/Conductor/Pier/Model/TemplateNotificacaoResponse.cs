@@ -28,6 +28,9 @@ namespace Conductor.Pier.Model
             [EnumMember(Value = "RECUPERAR_SENHA")]
             RecuperarSenha,
             
+            [EnumMember(Value = "FATURA_POR_EMAIL")]
+            FaturaPorEmail,
+            
             [EnumMember(Value = "VALIDAR_DISPOSITIVO")]
             ValidarDispositivo
         }

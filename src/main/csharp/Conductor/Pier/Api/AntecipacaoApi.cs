@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAntecipacoesApi
+    public interface IAntecipacaoApi
     {
         #region Synchronous Operations
         
@@ -296,13 +296,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class AntecipacoesApi : IAntecipacoesApi
+    public class AntecipacaoApi : IAntecipacaoApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AntecipacoesApi"/> class.
+        /// Initializes a new instance of the <see cref="AntecipacaoApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AntecipacoesApi(String basePath)
+        public AntecipacaoApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -314,12 +314,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AntecipacoesApi"/> class
+        /// Initializes a new instance of the <see cref="AntecipacaoApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AntecipacoesApi(Configuration configuration = null)
+        public AntecipacaoApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -406,11 +406,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->ConfigurarTaxaAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->ConfigurarTaxaAntecipacaoUsingPOST");
             
             // verify the required parameter 'taxaAntecipacaoRequest' is set
             if (taxaAntecipacaoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling AntecipacoesApi->ConfigurarTaxaAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling AntecipacaoApi->ConfigurarTaxaAntecipacaoUsingPOST");
             
     
             var localVarPath = "/api/produtos/{id}/configurar-taxa-antecipacao";
@@ -588,11 +588,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->ConsultarTaxaAntecipacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->ConsultarTaxaAntecipacaoUsingGET");
             
             // verify the required parameter 'tipoTransacao' is set
             if (tipoTransacao == null)
-                throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling AntecipacoesApi->ConsultarTaxaAntecipacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling AntecipacaoApi->ConsultarTaxaAntecipacaoUsingGET");
             
     
             var localVarPath = "/api/produtos/{id}/consultar-taxa-antecipacao";
@@ -760,15 +760,15 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacoesApi->EfetivarAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacaoUsingPOST");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->EfetivarAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->EfetivarAntecipacaoUsingPOST");
             
             // verify the required parameter 'quantidadeParcelas' is set
             if (quantidadeParcelas == null)
-                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling AntecipacoesApi->EfetivarAntecipacaoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling AntecipacaoApi->EfetivarAntecipacaoUsingPOST");
             
     
             var localVarPath = "/api/compras-antecipaveis/{id}/efetivar-antecipacao";
@@ -952,7 +952,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacoesApi->ListarUsingGET7");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->ListarUsingGET7");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1140,11 +1140,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacoesApi->SimularAntecipacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacaoUsingGET");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacoesApi->SimularAntecipacaoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->SimularAntecipacaoUsingGET");
             
     
             var localVarPath = "/api/compras-antecipaveis/{id}/simular-antecipacao";

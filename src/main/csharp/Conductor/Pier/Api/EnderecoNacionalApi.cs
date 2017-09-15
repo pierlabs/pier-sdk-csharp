@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IEnderecosNacionaisApi
+    public interface IEnderecoNacionalApi
     {
         #region Synchronous Operations
         
@@ -72,13 +72,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class EnderecosNacionaisApi : IEnderecosNacionaisApi
+    public class EnderecoNacionalApi : IEnderecoNacionalApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EnderecosNacionaisApi"/> class.
+        /// Initializes a new instance of the <see cref="EnderecoNacionalApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public EnderecosNacionaisApi(String basePath)
+        public EnderecoNacionalApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -90,12 +90,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EnderecosNacionaisApi"/> class
+        /// Initializes a new instance of the <see cref="EnderecoNacionalApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public EnderecosNacionaisApi(Configuration configuration = null)
+        public EnderecoNacionalApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -180,7 +180,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'CEP' is set
             if (CEP == null)
-                throw new ApiException(400, "Missing required parameter 'CEP' when calling EnderecosNacionaisApi->ConsultarEnderecoUsingGET");
+                throw new ApiException(400, "Missing required parameter 'CEP' when calling EnderecoNacionalApi->ConsultarEnderecoUsingGET");
             
     
             var localVarPath = "/api/ceps";

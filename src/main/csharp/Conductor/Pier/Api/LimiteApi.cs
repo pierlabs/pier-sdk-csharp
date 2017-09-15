@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IGestaoLimitesApi
+    public interface ILimiteApi
     {
         #region Synchronous Operations
         
@@ -224,13 +224,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class GestaoLimitesApi : IGestaoLimitesApi
+    public class LimiteApi : ILimiteApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GestaoLimitesApi"/> class.
+        /// Initializes a new instance of the <see cref="LimiteApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public GestaoLimitesApi(String basePath)
+        public LimiteApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -242,12 +242,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="GestaoLimitesApi"/> class
+        /// Initializes a new instance of the <see cref="LimiteApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public GestaoLimitesApi(Configuration configuration = null)
+        public LimiteApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -358,7 +358,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GestaoLimitesApi->AlterarLimiteUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling LimiteApi->AlterarLimiteUsingPUT");
             
     
             var localVarPath = "/api/contas/{id}/alterar-limites";
@@ -568,7 +568,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GestaoLimitesApi->ConsultarLimiteDisponibilidadeUsingGET1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling LimiteApi->ConsultarLimiteDisponibilidadeUsingGET1");
             
     
             var localVarPath = "/api/contas/{id}/limites-disponibilidades";
@@ -732,7 +732,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GestaoLimitesApi->ListarHistoricoAlteracoesLimitesUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling LimiteApi->ListarHistoricoAlteracoesLimitesUsingGET");
             
     
             var localVarPath = "/api/contas/{id}/historicos-alteracoes-limites";

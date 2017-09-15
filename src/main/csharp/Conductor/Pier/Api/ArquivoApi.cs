@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IArquivosApi
+    public interface IArquivoApi
     {
         #region Synchronous Operations
         
@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
         /// <returns>ArquivoResponse</returns>
-        ArquivoResponse ConsultarUsingGET (long? id);
+        ArquivoResponse ConsultarUsingGET1 (long? id);
   
         /// <summary>
         /// Consulta de arquivo no PIER Cloud
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
         /// <returns>ApiResponse of ArquivoResponse</returns>
-        ApiResponse<ArquivoResponse> ConsultarUsingGETWithHttpInfo (long? id);
+        ApiResponse<ArquivoResponse> ConsultarUsingGET1WithHttpInfo (long? id);
         
         /// <summary>
         /// Permite armazenar arquivos no PIER Cloud
@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
         /// <returns>Task of ArquivoResponse</returns>
-        System.Threading.Tasks.Task<ArquivoResponse> ConsultarUsingGETAsync (long? id);
+        System.Threading.Tasks.Task<ArquivoResponse> ConsultarUsingGET1Async (long? id);
 
         /// <summary>
         /// Consulta de arquivo no PIER Cloud
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
         /// <returns>Task of ApiResponse (ArquivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ArquivoResponse>> ConsultarUsingGETAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ArquivoResponse>> ConsultarUsingGET1AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Permite armazenar arquivos no PIER Cloud
@@ -116,13 +116,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class ArquivosApi : IArquivosApi
+    public class ArquivoApi : IArquivoApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ArquivosApi"/> class.
+        /// Initializes a new instance of the <see cref="ArquivoApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ArquivosApi(String basePath)
+        public ArquivoApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -134,12 +134,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ArquivosApi"/> class
+        /// Initializes a new instance of the <see cref="ArquivoApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ArquivosApi(Configuration configuration = null)
+        public ArquivoApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -207,9 +207,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param> 
         /// <returns>ArquivoResponse</returns>
-        public ArquivoResponse ConsultarUsingGET (long? id)
+        public ArquivoResponse ConsultarUsingGET1 (long? id)
         {
-             ApiResponse<ArquivoResponse> localVarResponse = ConsultarUsingGETWithHttpInfo(id);
+             ApiResponse<ArquivoResponse> localVarResponse = ConsultarUsingGET1WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -219,12 +219,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param> 
         /// <returns>ApiResponse of ArquivoResponse</returns>
-        public ApiResponse< ArquivoResponse > ConsultarUsingGETWithHttpInfo (long? id)
+        public ApiResponse< ArquivoResponse > ConsultarUsingGET1WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ArquivosApi->ConsultarUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ArquivoApi->ConsultarUsingGET1");
             
     
             var localVarPath = "/api/arquivos/{id}";
@@ -270,9 +270,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ArquivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -287,9 +287,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
         /// <returns>Task of ArquivoResponse</returns>
-        public async System.Threading.Tasks.Task<ArquivoResponse> ConsultarUsingGETAsync (long? id)
+        public async System.Threading.Tasks.Task<ArquivoResponse> ConsultarUsingGET1Async (long? id)
         {
-             ApiResponse<ArquivoResponse> localVarResponse = await ConsultarUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<ArquivoResponse> localVarResponse = await ConsultarUsingGET1AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -300,10 +300,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
         /// <returns>Task of ApiResponse (ArquivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ArquivoResponse>> ConsultarUsingGETAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ArquivoResponse>> ConsultarUsingGET1AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET1");
             
     
             var localVarPath = "/api/arquivos/{id}";
@@ -349,9 +349,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ArquivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -382,7 +382,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'arquivoPersist' is set
             if (arquivoPersist == null)
-                throw new ApiException(400, "Missing required parameter 'arquivoPersist' when calling ArquivosApi->SalvarUsingPOST1");
+                throw new ApiException(400, "Missing required parameter 'arquivoPersist' when calling ArquivoApi->SalvarUsingPOST1");
             
     
             var localVarPath = "/api/arquivos";

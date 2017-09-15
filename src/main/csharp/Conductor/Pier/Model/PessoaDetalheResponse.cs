@@ -33,7 +33,7 @@ namespace Conductor.Pier.Model
         /// <param name="Email">Email da pessoa fisica.</param>
         /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, int? IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
@@ -75,7 +75,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Profiss\u00C3\u00A3o da pessoa fisica</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
-        public int? IdProfissao { get; set; }
+        public string IdProfissao { get; set; }
     
         /// <summary>
         /// Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica

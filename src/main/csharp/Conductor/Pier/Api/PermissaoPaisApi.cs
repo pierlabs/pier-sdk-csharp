@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IPermissaoPaisesApi
+    public interface IPermissaoPaisApi
     {
         #region Synchronous Operations
         
@@ -184,13 +184,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class PermissaoPaisesApi : IPermissaoPaisesApi
+    public class PermissaoPaisApi : IPermissaoPaisApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PermissaoPaisesApi"/> class.
+        /// Initializes a new instance of the <see cref="PermissaoPaisApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public PermissaoPaisesApi(String basePath)
+        public PermissaoPaisApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -202,12 +202,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PermissaoPaisesApi"/> class
+        /// Initializes a new instance of the <see cref="PermissaoPaisApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PermissaoPaisesApi(Configuration configuration = null)
+        public PermissaoPaisApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -292,7 +292,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PermissaoPaisesApi->ConsultarPaisUsingGET");
+                throw new ApiException(400, "Missing required parameter 'id' when calling PermissaoPaisApi->ConsultarPaisUsingGET");
             
     
             var localVarPath = "/api/paises/{id}";

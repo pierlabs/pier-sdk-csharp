@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IJobsApi
+    public interface IJobApi
     {
         #region Synchronous Operations
         
@@ -288,13 +288,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class JobsApi : IJobsApi
+    public class JobApi : IJobApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="JobsApi"/> class.
+        /// Initializes a new instance of the <see cref="JobApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public JobsApi(String basePath)
+        public JobApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -306,12 +306,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="JobsApi"/> class
+        /// Initializes a new instance of the <see cref="JobApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public JobsApi(Configuration configuration = null)
+        public JobApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -396,7 +396,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling JobsApi->AtivarJobUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling JobApi->AtivarJobUsingPOST");
             
     
             var localVarPath = "/api/jobs/{id}/ativar-job";
@@ -560,19 +560,19 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling JobsApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling JobApi->AtualizarUsingPUT");
             
             // verify the required parameter 'descricao' is set
             if (descricao == null)
-                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobsApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->AtualizarUsingPUT");
             
             // verify the required parameter 'cron' is set
             if (cron == null)
-                throw new ApiException(400, "Missing required parameter 'cron' when calling JobsApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->AtualizarUsingPUT");
             
             // verify the required parameter 'groovy' is set
             if (groovy == null)
-                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobsApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->AtualizarUsingPUT");
             
     
             var localVarPath = "/api/jobs/{id}";
@@ -760,7 +760,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling JobsApi->DesativarJobUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'id' when calling JobApi->DesativarJobUsingPOST");
             
     
             var localVarPath = "/api/jobs/{id}/desativar-job";
@@ -1104,15 +1104,15 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'descricao' is set
             if (descricao == null)
-                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobsApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->SalvarUsingPOST8");
             
             // verify the required parameter 'cron' is set
             if (cron == null)
-                throw new ApiException(400, "Missing required parameter 'cron' when calling JobsApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->SalvarUsingPOST8");
             
             // verify the required parameter 'groovy' is set
             if (groovy == null)
-                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobsApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->SalvarUsingPOST8");
             
     
             var localVarPath = "/api/jobs";

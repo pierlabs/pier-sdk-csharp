@@ -13,7 +13,7 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAplicacoesMobileApi
+    public interface IAplicacaoMobileApi
     {
         #region Synchronous Operations
         
@@ -180,13 +180,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class AplicacoesMobileApi : IAplicacoesMobileApi
+    public class AplicacaoMobileApi : IAplicacaoMobileApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AplicacoesMobileApi"/> class.
+        /// Initializes a new instance of the <see cref="AplicacaoMobileApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AplicacoesMobileApi(String basePath)
+        public AplicacaoMobileApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -198,12 +198,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AplicacoesMobileApi"/> class
+        /// Initializes a new instance of the <see cref="AplicacaoMobileApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AplicacoesMobileApi(Configuration configuration = null)
+        public AplicacaoMobileApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -290,11 +290,11 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AplicacoesMobileApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AplicacaoMobileApi->AtualizarUsingPUT");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling AplicacoesMobileApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'update' when calling AplicacaoMobileApi->AtualizarUsingPUT");
             
     
             var localVarPath = "/api/aplicacoes-mobile/{id}";
@@ -646,7 +646,7 @@ namespace Conductor.Pier.Api
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling AplicacoesMobileApi->SalvarUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling AplicacaoMobileApi->SalvarUsingPOST");
             
     
             var localVarPath = "/api/aplicacoes-mobile";
