@@ -86,6 +86,30 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> CancelarUsingPOST2WithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>TransacaoOnUsResponse</returns>
+        TransacaoOnUsResponse CancelarUsingPOST3 (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+  
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        ApiResponse<TransacaoOnUsResponse> CancelarUsingPOST3WithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        
+        /// <summary>
         /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
         /// </summary>
         /// <remarks>
@@ -198,6 +222,30 @@ namespace Conductor.Pier.Api
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST2AsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOST3Async (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST3AsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
         /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
@@ -848,6 +896,188 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param> 
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
+        /// <returns>TransacaoOnUsResponse</returns>
+        public TransacaoOnUsResponse CancelarUsingPOST3 (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarUsingPOST3WithHttpInfo(id, cancelamentoRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param> 
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        public ApiResponse< TransacaoOnUsResponse > CancelarUsingPOST3WithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->CancelarUsingPOST3");
+            
+            // verify the required parameter 'cancelamentoRequest' is set
+            if (cancelamentoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->CancelarUsingPOST3");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cancelar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (cancelamentoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cancelamentoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cancelamentoRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST3: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOST3Async (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarUsingPOST3AsyncWithHttpInfo(id, cancelamentoRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Cartao</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST3AsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarUsingPOST3");
+            // verify the required parameter 'cancelamentoRequest' is set
+            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarUsingPOST3");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cancelar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (cancelamentoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cancelamentoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cancelamentoRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST3: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarUsingPOST3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

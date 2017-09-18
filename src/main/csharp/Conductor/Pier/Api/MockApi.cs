@@ -98,8 +98,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
-        /// <returns>List&lt;ByteArray&gt;</returns>
-        List<ByteArray> VisualizarDocumentoUsingPOST (long? id, string dataVencimento);
+        /// <returns>Object</returns>
+        Object VisualizarDocumentoUsingPOST (long? id, string dataVencimento);
   
         /// <summary>
         /// Permite visualizar o extrato da fatura em formato PDF
@@ -110,8 +110,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
-        /// <returns>ApiResponse of List&lt;ByteArray&gt;</returns>
-        ApiResponse<List<ByteArray>> VisualizarDocumentoUsingPOSTWithHttpInfo (long? id, string dataVencimento);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> VisualizarDocumentoUsingPOSTWithHttpInfo (long? id, string dataVencimento);
         
         #endregion Synchronous Operations
         
@@ -198,8 +198,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
-        /// <returns>Task of List&lt;ByteArray&gt;</returns>
-        System.Threading.Tasks.Task<List<ByteArray>> VisualizarDocumentoUsingPOSTAsync (long? id, string dataVencimento);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> VisualizarDocumentoUsingPOSTAsync (long? id, string dataVencimento);
 
         /// <summary>
         /// Permite visualizar o extrato da fatura em formato PDF
@@ -210,8 +210,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
-        /// <returns>Task of ApiResponse (List&lt;ByteArray&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> VisualizarDocumentoUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarDocumentoUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento);
         
         #endregion Asynchronous Operations
         
@@ -839,10 +839,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param> 
-        /// <returns>List&lt;ByteArray&gt;</returns>
-        public List<ByteArray> VisualizarDocumentoUsingPOST (long? id, string dataVencimento)
+        /// <returns>Object</returns>
+        public Object VisualizarDocumentoUsingPOST (long? id, string dataVencimento)
         {
-             ApiResponse<List<ByteArray>> localVarResponse = VisualizarDocumentoUsingPOSTWithHttpInfo(id, dataVencimento);
+             ApiResponse<Object> localVarResponse = VisualizarDocumentoUsingPOSTWithHttpInfo(id, dataVencimento);
              return localVarResponse.Data;
         }
 
@@ -852,8 +852,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param> 
-        /// <returns>ApiResponse of List&lt;ByteArray&gt;</returns>
-        public ApiResponse< List<ByteArray> > VisualizarDocumentoUsingPOSTWithHttpInfo (long? id, string dataVencimento)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > VisualizarDocumentoUsingPOSTWithHttpInfo (long? id, string dataVencimento)
         {
             
             // verify the required parameter 'id' is set
@@ -913,9 +913,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling VisualizarDocumentoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<List<ByteArray>>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<ByteArray>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ByteArray>)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -926,10 +926,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
-        /// <returns>Task of List&lt;ByteArray&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ByteArray>> VisualizarDocumentoUsingPOSTAsync (long? id, string dataVencimento)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> VisualizarDocumentoUsingPOSTAsync (long? id, string dataVencimento)
         {
-             ApiResponse<List<ByteArray>> localVarResponse = await VisualizarDocumentoUsingPOSTAsyncWithHttpInfo(id, dataVencimento);
+             ApiResponse<Object> localVarResponse = await VisualizarDocumentoUsingPOSTAsyncWithHttpInfo(id, dataVencimento);
              return localVarResponse.Data;
 
         }
@@ -940,8 +940,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
-        /// <returns>Task of ApiResponse (List&lt;ByteArray&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> VisualizarDocumentoUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarDocumentoUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling VisualizarDocumentoUsingPOST");
@@ -997,9 +997,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling VisualizarDocumentoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<ByteArray>>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<ByteArray>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ByteArray>)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
