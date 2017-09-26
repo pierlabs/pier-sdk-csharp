@@ -32,7 +32,10 @@ namespace Conductor.Pier.Model
             FaturaPorEmail,
             
             [EnumMember(Value = "VALIDAR_DISPOSITIVO")]
-            ValidarDispositivo
+            ValidarDispositivo,
+            
+            [EnumMember(Value = "NOTIFICACAO_EMAIL")]
+            NotificacaoEmail
         }
 
     
@@ -82,17 +85,19 @@ namespace Conductor.Pier.Model
         /// <param name="IdConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail..</param>
         /// <param name="TipoLayout">Tipo do layout de e-mail..</param>
         /// <param name="TipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Remetente">Remetente..</param>
         /// <param name="Assunto">Assunto do e-mail..</param>
         /// <param name="Conteudo">Conteudo do e-mail..</param>
         /// <param name="DataInclusao">Data da inclus\u00C3\u00A3o..</param>
         /// <param name="DataAlteracao">Data altera\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public TemplateNotificacaoResponse(long? Id = null, long? IdConfiguracaoEmail = null, TipoLayoutEnum? TipoLayout = null, TipoNotificacaoEnum? TipoNotificacao = null, string Assunto = null, string Conteudo = null, string DataInclusao = null, string DataAlteracao = null)
+        public TemplateNotificacaoResponse(long? Id = null, long? IdConfiguracaoEmail = null, TipoLayoutEnum? TipoLayout = null, TipoNotificacaoEnum? TipoNotificacao = null, string Remetente = null, string Assunto = null, string Conteudo = null, string DataInclusao = null, string DataAlteracao = null)
         {
             this.Id = Id;
             this.IdConfiguracaoEmail = IdConfiguracaoEmail;
             this.TipoLayout = TipoLayout;
             this.TipoNotificacao = TipoNotificacao;
+            this.Remetente = Remetente;
             this.Assunto = Assunto;
             this.Conteudo = Conteudo;
             this.DataInclusao = DataInclusao;
@@ -114,6 +119,13 @@ namespace Conductor.Pier.Model
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.</value>
         [DataMember(Name="idConfiguracaoEmail", EmitDefaultValue=false)]
         public long? IdConfiguracaoEmail { get; set; }
+    
+        /// <summary>
+        /// Remetente.
+        /// </summary>
+        /// <value>Remetente.</value>
+        [DataMember(Name="remetente", EmitDefaultValue=false)]
+        public string Remetente { get; set; }
     
         /// <summary>
         /// Assunto do e-mail.
@@ -155,6 +167,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdConfiguracaoEmail: ").Append(IdConfiguracaoEmail).Append("\n");
             sb.Append("  TipoLayout: ").Append(TipoLayout).Append("\n");
             sb.Append("  TipoNotificacao: ").Append(TipoNotificacao).Append("\n");
+            sb.Append("  Remetente: ").Append(Remetente).Append("\n");
             sb.Append("  Assunto: ").Append(Assunto).Append("\n");
             sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
             sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
@@ -217,6 +230,11 @@ namespace Conductor.Pier.Model
                     this.TipoNotificacao.Equals(other.TipoNotificacao)
                 ) && 
                 (
+                    this.Remetente == other.Remetente ||
+                    this.Remetente != null &&
+                    this.Remetente.Equals(other.Remetente)
+                ) && 
+                (
                     this.Assunto == other.Assunto ||
                     this.Assunto != null &&
                     this.Assunto.Equals(other.Assunto)
@@ -261,6 +279,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.TipoNotificacao != null)
                     hash = hash * 59 + this.TipoNotificacao.GetHashCode();
+                
+                if (this.Remetente != null)
+                    hash = hash * 59 + this.Remetente.GetHashCode();
                 
                 if (this.Assunto != null)
                     hash = hash * 59 + this.Assunto.GetHashCode();

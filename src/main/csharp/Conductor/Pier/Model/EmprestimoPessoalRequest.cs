@@ -27,10 +27,9 @@ namespace Conductor.Pier.Model
         /// <param name="TaxaJuros">Valor percentual da taxa de juros a ser aplicada (required).</param>
         /// <param name="PeriodoTaxa">Per\u00C3\u00ADodo de aplica da taxa de juros (required).</param>
         /// <param name="SistemaAmortizacao">Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas (required).</param>
-        /// <param name="DiaVencimento">Dia para cobran\u00C3\u00A7a da primeira parcela (required).</param>
         /// <param name="NumeroMesesCarencia">N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela.</param>
 
-        public EmprestimoPessoalRequest(double? ValorSolicitado = null, int? NumeroParcelas = null, double? TaxaJuros = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, int? DiaVencimento = null, int? NumeroMesesCarencia = null)
+        public EmprestimoPessoalRequest(double? ValorSolicitado = null, int? NumeroParcelas = null, double? TaxaJuros = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, int? NumeroMesesCarencia = null)
         {
             // to ensure "ValorSolicitado" is required (not null)
             if (ValorSolicitado == null)
@@ -77,15 +76,6 @@ namespace Conductor.Pier.Model
             {
                 this.SistemaAmortizacao = SistemaAmortizacao;
             }
-            // to ensure "DiaVencimento" is required (not null)
-            if (DiaVencimento == null)
-            {
-                throw new InvalidDataException("DiaVencimento is a required property for EmprestimoPessoalRequest and cannot be null");
-            }
-            else
-            {
-                this.DiaVencimento = DiaVencimento;
-            }
             this.NumeroMesesCarencia = NumeroMesesCarencia;
             
         }
@@ -127,13 +117,6 @@ namespace Conductor.Pier.Model
         public string SistemaAmortizacao { get; set; }
     
         /// <summary>
-        /// Dia para cobran\u00C3\u00A7a da primeira parcela
-        /// </summary>
-        /// <value>Dia para cobran\u00C3\u00A7a da primeira parcela</value>
-        [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
-        public int? DiaVencimento { get; set; }
-    
-        /// <summary>
         /// N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
         /// </summary>
         /// <value>N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela</value>
@@ -153,7 +136,6 @@ namespace Conductor.Pier.Model
             sb.Append("  TaxaJuros: ").Append(TaxaJuros).Append("\n");
             sb.Append("  PeriodoTaxa: ").Append(PeriodoTaxa).Append("\n");
             sb.Append("  SistemaAmortizacao: ").Append(SistemaAmortizacao).Append("\n");
-            sb.Append("  DiaVencimento: ").Append(DiaVencimento).Append("\n");
             sb.Append("  NumeroMesesCarencia: ").Append(NumeroMesesCarencia).Append("\n");
             
             sb.Append("}\n");
@@ -218,11 +200,6 @@ namespace Conductor.Pier.Model
                     this.SistemaAmortizacao.Equals(other.SistemaAmortizacao)
                 ) && 
                 (
-                    this.DiaVencimento == other.DiaVencimento ||
-                    this.DiaVencimento != null &&
-                    this.DiaVencimento.Equals(other.DiaVencimento)
-                ) && 
-                (
                     this.NumeroMesesCarencia == other.NumeroMesesCarencia ||
                     this.NumeroMesesCarencia != null &&
                     this.NumeroMesesCarencia.Equals(other.NumeroMesesCarencia)
@@ -255,9 +232,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.SistemaAmortizacao != null)
                     hash = hash * 59 + this.SistemaAmortizacao.GetHashCode();
-                
-                if (this.DiaVencimento != null)
-                    hash = hash * 59 + this.DiaVencimento.GetHashCode();
                 
                 if (this.NumeroMesesCarencia != null)
                     hash = hash * 59 + this.NumeroMesesCarencia.GetHashCode();

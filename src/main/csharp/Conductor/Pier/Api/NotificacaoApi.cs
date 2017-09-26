@@ -53,9 +53,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>TemplateNotificacaoResponse</returns>
-        TemplateNotificacaoResponse AlterarTemplateNotificacaoUsingPUT (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        TemplateNotificacaoResponse AlterarTemplateNotificacaoUsingPUT (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
   
         /// <summary>
         /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -69,9 +70,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>ApiResponse of TemplateNotificacaoResponse</returns>
-        ApiResponse<TemplateNotificacaoResponse> AlterarTemplateNotificacaoUsingPUTWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        ApiResponse<TemplateNotificacaoResponse> AlterarTemplateNotificacaoUsingPUTWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
         
         /// <summary>
         /// Atualizar SMS
@@ -316,6 +318,28 @@ namespace Conductor.Pier.Api
         ApiResponse<List<Object>> ListarTiposLayoutsUsingGETWithHttpInfo ();
         
         /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>NotificacaoEmailResponse</returns>
+        NotificacaoEmailResponse NotificacaoEmailUsingPOST (NotificacaoEmailRequest request);
+  
+        /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>ApiResponse of NotificacaoEmailResponse</returns>
+        ApiResponse<NotificacaoEmailResponse> NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request);
+        
+        /// <summary>
         /// Responder SMS
         /// </summary>
         /// <remarks>
@@ -462,9 +486,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>TemplateNotificacaoResponse</returns>
-        TemplateNotificacaoResponse SalvarTemplateNotificacaoUsingPOST (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        TemplateNotificacaoResponse SalvarTemplateNotificacaoUsingPOST (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
   
         /// <summary>
         /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -477,9 +502,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>ApiResponse of TemplateNotificacaoResponse</returns>
-        ApiResponse<TemplateNotificacaoResponse> SalvarTemplateNotificacaoUsingPOSTWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        ApiResponse<TemplateNotificacaoResponse> SalvarTemplateNotificacaoUsingPOSTWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
         
         /// <summary>
         /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
@@ -543,9 +569,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoResponse</returns>
-        System.Threading.Tasks.Task<TemplateNotificacaoResponse> AlterarTemplateNotificacaoUsingPUTAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        System.Threading.Tasks.Task<TemplateNotificacaoResponse> AlterarTemplateNotificacaoUsingPUTAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
 
         /// <summary>
         /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -559,9 +586,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
         
         /// <summary>
         /// Atualizar SMS
@@ -806,6 +834,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposLayoutsUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of NotificacaoEmailResponse</returns>
+        System.Threading.Tasks.Task<NotificacaoEmailResponse> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request);
+
+        /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (NotificacaoEmailResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotificacaoEmailResponse>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request);
+        
+        /// <summary>
         /// Responder SMS
         /// </summary>
         /// <remarks>
@@ -952,9 +1002,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoResponse</returns>
-        System.Threading.Tasks.Task<TemplateNotificacaoResponse> SalvarTemplateNotificacaoUsingPOSTAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        System.Threading.Tasks.Task<TemplateNotificacaoResponse> SalvarTemplateNotificacaoUsingPOSTAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
 
         /// <summary>
         /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
@@ -967,9 +1018,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null);
+        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null);
         
         /// <summary>
         /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
@@ -1276,11 +1328,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="remetente">Remetente (optional)</param> 
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
         /// <returns>TemplateNotificacaoResponse</returns>
-        public TemplateNotificacaoResponse AlterarTemplateNotificacaoUsingPUT (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public TemplateNotificacaoResponse AlterarTemplateNotificacaoUsingPUT (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
-             ApiResponse<TemplateNotificacaoResponse> localVarResponse = AlterarTemplateNotificacaoUsingPUTWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, assunto);
+             ApiResponse<TemplateNotificacaoResponse> localVarResponse = AlterarTemplateNotificacaoUsingPUTWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto);
              return localVarResponse.Data;
         }
 
@@ -1293,9 +1346,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="remetente">Remetente (optional)</param> 
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
         /// <returns>ApiResponse of TemplateNotificacaoResponse</returns>
-        public ApiResponse< TemplateNotificacaoResponse > AlterarTemplateNotificacaoUsingPUTWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public ApiResponse< TemplateNotificacaoResponse > AlterarTemplateNotificacaoUsingPUTWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
             
             // verify the required parameter 'id' is set
@@ -1338,6 +1392,7 @@ namespace Conductor.Pier.Api
             if (idConfiguracaoEmail != null) localVarQueryParams.Add("idConfiguracaoEmail", Configuration.ApiClient.ParameterToString(idConfiguracaoEmail)); // query parameter
             if (tipoLayout != null) localVarQueryParams.Add("tipoLayout", Configuration.ApiClient.ParameterToString(tipoLayout)); // query parameter
             if (tipoNotificacao != null) localVarQueryParams.Add("tipoNotificacao", Configuration.ApiClient.ParameterToString(tipoNotificacao)); // query parameter
+            if (remetente != null) localVarQueryParams.Add("remetente", Configuration.ApiClient.ParameterToString(remetente)); // query parameter
             if (assunto != null) localVarQueryParams.Add("assunto", Configuration.ApiClient.ParameterToString(assunto)); // query parameter
             
             
@@ -1381,11 +1436,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateNotificacaoResponse> AlterarTemplateNotificacaoUsingPUTAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public async System.Threading.Tasks.Task<TemplateNotificacaoResponse> AlterarTemplateNotificacaoUsingPUTAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
-             ApiResponse<TemplateNotificacaoResponse> localVarResponse = await AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, assunto);
+             ApiResponse<TemplateNotificacaoResponse> localVarResponse = await AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto);
              return localVarResponse.Data;
 
         }
@@ -1399,9 +1455,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarTemplateNotificacaoUsingPUT");
@@ -1440,6 +1497,7 @@ namespace Conductor.Pier.Api
             if (idConfiguracaoEmail != null) localVarQueryParams.Add("idConfiguracaoEmail", Configuration.ApiClient.ParameterToString(idConfiguracaoEmail)); // query parameter
             if (tipoLayout != null) localVarQueryParams.Add("tipoLayout", Configuration.ApiClient.ParameterToString(tipoLayout)); // query parameter
             if (tipoNotificacao != null) localVarQueryParams.Add("tipoNotificacao", Configuration.ApiClient.ParameterToString(tipoNotificacao)); // query parameter
+            if (remetente != null) localVarQueryParams.Add("remetente", Configuration.ApiClient.ParameterToString(remetente)); // query parameter
             if (assunto != null) localVarQueryParams.Add("assunto", Configuration.ApiClient.ParameterToString(assunto)); // query parameter
             
             
@@ -3004,6 +3062,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>NotificacaoEmailResponse</returns>
+        public NotificacaoEmailResponse NotificacaoEmailUsingPOST (NotificacaoEmailRequest request)
+        {
+             ApiResponse<NotificacaoEmailResponse> localVarResponse = NotificacaoEmailUsingPOSTWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>ApiResponse of NotificacaoEmailResponse</returns>
+        public ApiResponse< NotificacaoEmailResponse > NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request)
+        {
+            
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->NotificacaoEmailUsingPOST");
+            
+    
+            var localVarPath = "/api/notificacoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmailUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmailUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<NotificacaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (NotificacaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificacaoEmailResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of NotificacaoEmailResponse</returns>
+        public async System.Threading.Tasks.Task<NotificacaoEmailResponse> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request)
+        {
+             ApiResponse<NotificacaoEmailResponse> localVarResponse = await NotificacaoEmailUsingPOSTAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (NotificacaoEmailResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoEmailResponse>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoEmailUsingPOST");
+            
+    
+            var localVarPath = "/api/notificacoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmailUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmailUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotificacaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (NotificacaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificacaoEmailResponse)));
+            
+        }
+        
+        /// <summary>
         /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4025,11 +4253,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="remetente">Remetente (optional)</param> 
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
         /// <returns>TemplateNotificacaoResponse</returns>
-        public TemplateNotificacaoResponse SalvarTemplateNotificacaoUsingPOST (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public TemplateNotificacaoResponse SalvarTemplateNotificacaoUsingPOST (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
-             ApiResponse<TemplateNotificacaoResponse> localVarResponse = SalvarTemplateNotificacaoUsingPOSTWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, assunto);
+             ApiResponse<TemplateNotificacaoResponse> localVarResponse = SalvarTemplateNotificacaoUsingPOSTWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto);
              return localVarResponse.Data;
         }
 
@@ -4041,9 +4270,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="remetente">Remetente (optional)</param> 
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
         /// <returns>ApiResponse of TemplateNotificacaoResponse</returns>
-        public ApiResponse< TemplateNotificacaoResponse > SalvarTemplateNotificacaoUsingPOSTWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public ApiResponse< TemplateNotificacaoResponse > SalvarTemplateNotificacaoUsingPOSTWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
             
             // verify the required parameter 'conteudo' is set
@@ -4081,6 +4311,7 @@ namespace Conductor.Pier.Api
             if (idConfiguracaoEmail != null) localVarQueryParams.Add("idConfiguracaoEmail", Configuration.ApiClient.ParameterToString(idConfiguracaoEmail)); // query parameter
             if (tipoLayout != null) localVarQueryParams.Add("tipoLayout", Configuration.ApiClient.ParameterToString(tipoLayout)); // query parameter
             if (tipoNotificacao != null) localVarQueryParams.Add("tipoNotificacao", Configuration.ApiClient.ParameterToString(tipoNotificacao)); // query parameter
+            if (remetente != null) localVarQueryParams.Add("remetente", Configuration.ApiClient.ParameterToString(remetente)); // query parameter
             if (assunto != null) localVarQueryParams.Add("assunto", Configuration.ApiClient.ParameterToString(assunto)); // query parameter
             
             
@@ -4123,11 +4354,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateNotificacaoResponse> SalvarTemplateNotificacaoUsingPOSTAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public async System.Threading.Tasks.Task<TemplateNotificacaoResponse> SalvarTemplateNotificacaoUsingPOSTAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
-             ApiResponse<TemplateNotificacaoResponse> localVarResponse = await SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, assunto);
+             ApiResponse<TemplateNotificacaoResponse> localVarResponse = await SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto);
              return localVarResponse.Data;
 
         }
@@ -4140,9 +4372,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
         /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="remetente">Remetente (optional)</param>
         /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string assunto = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoResponse>> SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null)
         {
             // verify the required parameter 'conteudo' is set
             if (conteudo == null) throw new ApiException(400, "Missing required parameter 'conteudo' when calling SalvarTemplateNotificacaoUsingPOST");
@@ -4178,6 +4411,7 @@ namespace Conductor.Pier.Api
             if (idConfiguracaoEmail != null) localVarQueryParams.Add("idConfiguracaoEmail", Configuration.ApiClient.ParameterToString(idConfiguracaoEmail)); // query parameter
             if (tipoLayout != null) localVarQueryParams.Add("tipoLayout", Configuration.ApiClient.ParameterToString(tipoLayout)); // query parameter
             if (tipoNotificacao != null) localVarQueryParams.Add("tipoNotificacao", Configuration.ApiClient.ParameterToString(tipoNotificacao)); // query parameter
+            if (remetente != null) localVarQueryParams.Add("remetente", Configuration.ApiClient.ParameterToString(remetente)); // query parameter
             if (assunto != null) localVarQueryParams.Add("assunto", Configuration.ApiClient.ParameterToString(assunto)); // query parameter
             
             

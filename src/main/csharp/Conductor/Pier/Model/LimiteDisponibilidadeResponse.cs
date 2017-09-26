@@ -22,229 +22,53 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LimiteDisponibilidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="LimiteDisponibilidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id). (required).</param>
-        /// <param name="LimiteGlobal">Valor do limite de cr\u00C3\u00A9dito. (required).</param>
-        /// <param name="LimiteCompra">Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais. (required).</param>
-        /// <param name="LimiteParcelado">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (required).</param>
-        /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade. (required).</param>
-        /// <param name="LimiteSaqueGlobal">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="LimiteSaquePeriodo">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="LimiteConsignado">Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha). (required).</param>
-        /// <param name="LimiteInternacionalCompra">Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais. (required).</param>
-        /// <param name="LimiteInternacionalParcelado">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas. (required).</param>
-        /// <param name="LimiteInternacionalParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (required).</param>
-        /// <param name="LimiteInternacionalSaqueGlobal">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional. (required).</param>
-        /// <param name="LimiteInternacionalSaquePeriodo">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento. (required).</param>
-        /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (required).</param>
-        /// <param name="SaldoDisponivelGlobal">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es. (required).</param>
-        /// <param name="SaldoDisponivelCompra">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional. (required).</param>
-        /// <param name="SaldoDisponivelParcelado">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada. (required).</param>
-        /// <param name="SaldoDisponivelParcelas">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento. (required).</param>
-        /// <param name="SaldoDisponivelSaque">Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="SaldoPontosFidelidade">Saldo atual de pontos do programa de fidelidade. (required).</param>
-        /// <param name="SaldoDisponivelCompraInternacional">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional. (required).</param>
-        /// <param name="SaldoDisponivelSaqueInternacional">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional. (required).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id)..</param>
+        /// <param name="LimiteGlobal">Valor do limite de cr\u00C3\u00A9dito..</param>
+        /// <param name="LimiteCompra">Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais..</param>
+        /// <param name="LimiteParcelado">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas..</param>
+        /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade..</param>
+        /// <param name="LimiteSaqueGlobal">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional..</param>
+        /// <param name="LimiteSaquePeriodo">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento..</param>
+        /// <param name="LimiteConsignado">Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha)..</param>
+        /// <param name="LimiteInternacionalCompra">Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais..</param>
+        /// <param name="LimiteInternacionalParcelado">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas..</param>
+        /// <param name="LimiteInternacionalParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade..</param>
+        /// <param name="LimiteInternacionalSaqueGlobal">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional..</param>
+        /// <param name="LimiteInternacionalSaquePeriodo">Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento..</param>
+        /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es..</param>
+        /// <param name="SaldoDisponivelGlobal">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es..</param>
+        /// <param name="SaldoDisponivelCompra">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional..</param>
+        /// <param name="SaldoDisponivelParcelado">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada..</param>
+        /// <param name="SaldoDisponivelParcelas">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento..</param>
+        /// <param name="SaldoDisponivelSaque">Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional..</param>
+        /// <param name="SaldoPontosFidelidade">Saldo atual de pontos do programa de fidelidade..</param>
+        /// <param name="SaldoDisponivelCompraInternacional">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional..</param>
+        /// <param name="SaldoDisponivelSaqueInternacional">Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional..</param>
 
         public LimiteDisponibilidadeResponse(long? Id = null, double? LimiteGlobal = null, double? LimiteCompra = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null, double? LimiteConsignado = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? LimiteMaximo = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelCompra = null, double? SaldoDisponivelParcelado = null, double? SaldoDisponivelParcelas = null, double? SaldoDisponivelSaque = null, double? SaldoPontosFidelidade = null, double? SaldoDisponivelCompraInternacional = null, double? SaldoDisponivelSaqueInternacional = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            // to ensure "LimiteGlobal" is required (not null)
-            if (LimiteGlobal == null)
-            {
-                throw new InvalidDataException("LimiteGlobal is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteGlobal = LimiteGlobal;
-            }
-            // to ensure "LimiteCompra" is required (not null)
-            if (LimiteCompra == null)
-            {
-                throw new InvalidDataException("LimiteCompra is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteCompra = LimiteCompra;
-            }
-            // to ensure "LimiteParcelado" is required (not null)
-            if (LimiteParcelado == null)
-            {
-                throw new InvalidDataException("LimiteParcelado is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteParcelado = LimiteParcelado;
-            }
-            // to ensure "LimiteParcelas" is required (not null)
-            if (LimiteParcelas == null)
-            {
-                throw new InvalidDataException("LimiteParcelas is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteParcelas = LimiteParcelas;
-            }
-            // to ensure "LimiteSaqueGlobal" is required (not null)
-            if (LimiteSaqueGlobal == null)
-            {
-                throw new InvalidDataException("LimiteSaqueGlobal is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteSaqueGlobal = LimiteSaqueGlobal;
-            }
-            // to ensure "LimiteSaquePeriodo" is required (not null)
-            if (LimiteSaquePeriodo == null)
-            {
-                throw new InvalidDataException("LimiteSaquePeriodo is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteSaquePeriodo = LimiteSaquePeriodo;
-            }
-            // to ensure "LimiteConsignado" is required (not null)
-            if (LimiteConsignado == null)
-            {
-                throw new InvalidDataException("LimiteConsignado is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteConsignado = LimiteConsignado;
-            }
-            // to ensure "LimiteInternacionalCompra" is required (not null)
-            if (LimiteInternacionalCompra == null)
-            {
-                throw new InvalidDataException("LimiteInternacionalCompra is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteInternacionalCompra = LimiteInternacionalCompra;
-            }
-            // to ensure "LimiteInternacionalParcelado" is required (not null)
-            if (LimiteInternacionalParcelado == null)
-            {
-                throw new InvalidDataException("LimiteInternacionalParcelado is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteInternacionalParcelado = LimiteInternacionalParcelado;
-            }
-            // to ensure "LimiteInternacionalParcelas" is required (not null)
-            if (LimiteInternacionalParcelas == null)
-            {
-                throw new InvalidDataException("LimiteInternacionalParcelas is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteInternacionalParcelas = LimiteInternacionalParcelas;
-            }
-            // to ensure "LimiteInternacionalSaqueGlobal" is required (not null)
-            if (LimiteInternacionalSaqueGlobal == null)
-            {
-                throw new InvalidDataException("LimiteInternacionalSaqueGlobal is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteInternacionalSaqueGlobal = LimiteInternacionalSaqueGlobal;
-            }
-            // to ensure "LimiteInternacionalSaquePeriodo" is required (not null)
-            if (LimiteInternacionalSaquePeriodo == null)
-            {
-                throw new InvalidDataException("LimiteInternacionalSaquePeriodo is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteInternacionalSaquePeriodo = LimiteInternacionalSaquePeriodo;
-            }
-            // to ensure "LimiteMaximo" is required (not null)
-            if (LimiteMaximo == null)
-            {
-                throw new InvalidDataException("LimiteMaximo is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteMaximo = LimiteMaximo;
-            }
-            // to ensure "SaldoDisponivelGlobal" is required (not null)
-            if (SaldoDisponivelGlobal == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelGlobal is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
-            }
-            // to ensure "SaldoDisponivelCompra" is required (not null)
-            if (SaldoDisponivelCompra == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelCompra is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelCompra = SaldoDisponivelCompra;
-            }
-            // to ensure "SaldoDisponivelParcelado" is required (not null)
-            if (SaldoDisponivelParcelado == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelParcelado is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelParcelado = SaldoDisponivelParcelado;
-            }
-            // to ensure "SaldoDisponivelParcelas" is required (not null)
-            if (SaldoDisponivelParcelas == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelParcelas is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelParcelas = SaldoDisponivelParcelas;
-            }
-            // to ensure "SaldoDisponivelSaque" is required (not null)
-            if (SaldoDisponivelSaque == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelSaque is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelSaque = SaldoDisponivelSaque;
-            }
-            // to ensure "SaldoPontosFidelidade" is required (not null)
-            if (SaldoPontosFidelidade == null)
-            {
-                throw new InvalidDataException("SaldoPontosFidelidade is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoPontosFidelidade = SaldoPontosFidelidade;
-            }
-            // to ensure "SaldoDisponivelCompraInternacional" is required (not null)
-            if (SaldoDisponivelCompraInternacional == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelCompraInternacional is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelCompraInternacional = SaldoDisponivelCompraInternacional;
-            }
-            // to ensure "SaldoDisponivelSaqueInternacional" is required (not null)
-            if (SaldoDisponivelSaqueInternacional == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelSaqueInternacional is a required property for LimiteDisponibilidadeResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelSaqueInternacional = SaldoDisponivelSaqueInternacional;
-            }
+            this.Id = Id;
+            this.LimiteGlobal = LimiteGlobal;
+            this.LimiteCompra = LimiteCompra;
+            this.LimiteParcelado = LimiteParcelado;
+            this.LimiteParcelas = LimiteParcelas;
+            this.LimiteSaqueGlobal = LimiteSaqueGlobal;
+            this.LimiteSaquePeriodo = LimiteSaquePeriodo;
+            this.LimiteConsignado = LimiteConsignado;
+            this.LimiteInternacionalCompra = LimiteInternacionalCompra;
+            this.LimiteInternacionalParcelado = LimiteInternacionalParcelado;
+            this.LimiteInternacionalParcelas = LimiteInternacionalParcelas;
+            this.LimiteInternacionalSaqueGlobal = LimiteInternacionalSaqueGlobal;
+            this.LimiteInternacionalSaquePeriodo = LimiteInternacionalSaquePeriodo;
+            this.LimiteMaximo = LimiteMaximo;
+            this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
+            this.SaldoDisponivelCompra = SaldoDisponivelCompra;
+            this.SaldoDisponivelParcelado = SaldoDisponivelParcelado;
+            this.SaldoDisponivelParcelas = SaldoDisponivelParcelas;
+            this.SaldoDisponivelSaque = SaldoDisponivelSaque;
+            this.SaldoPontosFidelidade = SaldoPontosFidelidade;
+            this.SaldoDisponivelCompraInternacional = SaldoDisponivelCompraInternacional;
+            this.SaldoDisponivelSaqueInternacional = SaldoDisponivelSaqueInternacional;
             
         }
         

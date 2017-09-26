@@ -24,19 +24,25 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="PlanosParcelamentos">PlanosParcelamentos.</param>
         /// <param name="ValorSolicitado">Valor solicitado do empr\u00C3\u00A9stimo/financiamento.</param>
-        /// <param name="ValorTotal">Valor total do empr\u00C3\u00A9stimo/financiamento.</param>
-        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas.</param>
+        /// <param name="ValorMaximoSolicitacao">Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela.</param>
+        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de parcelas solicitado.</param>
+        /// <param name="ValorMaximoParcela">Limite m\u00C3\u00A1ximo de parcela permitido.</param>
+        /// <param name="DataPrimeiraParcela">Data do desconto da primeira parcela.</param>
         /// <param name="PeriodoTaxa">Per\u00C3\u00ADodo de aplica da taxa de juros.</param>
-        /// <param name="DataPrimeiraParcela">Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento.</param>
+        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas.</param>
+        /// <param name="TaxaJuros">Valor percentual da taxa de juros a ser aplicada.</param>
 
-        public EmprestimoPessoalResponse(List<PlanoParcelamentoEmprestimoResponse> PlanosParcelamentos = null, double? ValorSolicitado = null, double? ValorTotal = null, string SistemaAmortizacao = null, string PeriodoTaxa = null, string DataPrimeiraParcela = null)
+        public EmprestimoPessoalResponse(List<PlanoParcelamentoEmprestimoResponse> PlanosParcelamentos = null, double? ValorSolicitado = null, double? ValorMaximoSolicitacao = null, int? NumeroParcelas = null, double? ValorMaximoParcela = null, string DataPrimeiraParcela = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, double? TaxaJuros = null)
         {
             this.PlanosParcelamentos = PlanosParcelamentos;
             this.ValorSolicitado = ValorSolicitado;
-            this.ValorTotal = ValorTotal;
-            this.SistemaAmortizacao = SistemaAmortizacao;
-            this.PeriodoTaxa = PeriodoTaxa;
+            this.ValorMaximoSolicitacao = ValorMaximoSolicitacao;
+            this.NumeroParcelas = NumeroParcelas;
+            this.ValorMaximoParcela = ValorMaximoParcela;
             this.DataPrimeiraParcela = DataPrimeiraParcela;
+            this.PeriodoTaxa = PeriodoTaxa;
+            this.SistemaAmortizacao = SistemaAmortizacao;
+            this.TaxaJuros = TaxaJuros;
             
         }
         
@@ -55,18 +61,32 @@ namespace Conductor.Pier.Model
         public double? ValorSolicitado { get; set; }
     
         /// <summary>
-        /// Valor total do empr\u00C3\u00A9stimo/financiamento
+        /// Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
         /// </summary>
-        /// <value>Valor total do empr\u00C3\u00A9stimo/financiamento</value>
-        [DataMember(Name="valorTotal", EmitDefaultValue=false)]
-        public double? ValorTotal { get; set; }
+        /// <value>Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela</value>
+        [DataMember(Name="valorMaximoSolicitacao", EmitDefaultValue=false)]
+        public double? ValorMaximoSolicitacao { get; set; }
     
         /// <summary>
-        /// Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+        /// N\u00C3\u00BAmero de parcelas solicitado
         /// </summary>
-        /// <value>Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas</value>
-        [DataMember(Name="sistemaAmortizacao", EmitDefaultValue=false)]
-        public string SistemaAmortizacao { get; set; }
+        /// <value>N\u00C3\u00BAmero de parcelas solicitado</value>
+        [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
+        public int? NumeroParcelas { get; set; }
+    
+        /// <summary>
+        /// Limite m\u00C3\u00A1ximo de parcela permitido
+        /// </summary>
+        /// <value>Limite m\u00C3\u00A1ximo de parcela permitido</value>
+        [DataMember(Name="valorMaximoParcela", EmitDefaultValue=false)]
+        public double? ValorMaximoParcela { get; set; }
+    
+        /// <summary>
+        /// Data do desconto da primeira parcela
+        /// </summary>
+        /// <value>Data do desconto da primeira parcela</value>
+        [DataMember(Name="dataPrimeiraParcela", EmitDefaultValue=false)]
+        public string DataPrimeiraParcela { get; set; }
     
         /// <summary>
         /// Per\u00C3\u00ADodo de aplica da taxa de juros
@@ -76,11 +96,18 @@ namespace Conductor.Pier.Model
         public string PeriodoTaxa { get; set; }
     
         /// <summary>
-        /// Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
+        /// Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
         /// </summary>
-        /// <value>Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento</value>
-        [DataMember(Name="dataPrimeiraParcela", EmitDefaultValue=false)]
-        public string DataPrimeiraParcela { get; set; }
+        /// <value>Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas</value>
+        [DataMember(Name="sistemaAmortizacao", EmitDefaultValue=false)]
+        public string SistemaAmortizacao { get; set; }
+    
+        /// <summary>
+        /// Valor percentual da taxa de juros a ser aplicada
+        /// </summary>
+        /// <value>Valor percentual da taxa de juros a ser aplicada</value>
+        [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
+        public double? TaxaJuros { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -92,10 +119,13 @@ namespace Conductor.Pier.Model
             sb.Append("class EmprestimoPessoalResponse {\n");
             sb.Append("  PlanosParcelamentos: ").Append(PlanosParcelamentos).Append("\n");
             sb.Append("  ValorSolicitado: ").Append(ValorSolicitado).Append("\n");
-            sb.Append("  ValorTotal: ").Append(ValorTotal).Append("\n");
-            sb.Append("  SistemaAmortizacao: ").Append(SistemaAmortizacao).Append("\n");
-            sb.Append("  PeriodoTaxa: ").Append(PeriodoTaxa).Append("\n");
+            sb.Append("  ValorMaximoSolicitacao: ").Append(ValorMaximoSolicitacao).Append("\n");
+            sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
+            sb.Append("  ValorMaximoParcela: ").Append(ValorMaximoParcela).Append("\n");
             sb.Append("  DataPrimeiraParcela: ").Append(DataPrimeiraParcela).Append("\n");
+            sb.Append("  PeriodoTaxa: ").Append(PeriodoTaxa).Append("\n");
+            sb.Append("  SistemaAmortizacao: ").Append(SistemaAmortizacao).Append("\n");
+            sb.Append("  TaxaJuros: ").Append(TaxaJuros).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -144,14 +174,24 @@ namespace Conductor.Pier.Model
                     this.ValorSolicitado.Equals(other.ValorSolicitado)
                 ) && 
                 (
-                    this.ValorTotal == other.ValorTotal ||
-                    this.ValorTotal != null &&
-                    this.ValorTotal.Equals(other.ValorTotal)
+                    this.ValorMaximoSolicitacao == other.ValorMaximoSolicitacao ||
+                    this.ValorMaximoSolicitacao != null &&
+                    this.ValorMaximoSolicitacao.Equals(other.ValorMaximoSolicitacao)
                 ) && 
                 (
-                    this.SistemaAmortizacao == other.SistemaAmortizacao ||
-                    this.SistemaAmortizacao != null &&
-                    this.SistemaAmortizacao.Equals(other.SistemaAmortizacao)
+                    this.NumeroParcelas == other.NumeroParcelas ||
+                    this.NumeroParcelas != null &&
+                    this.NumeroParcelas.Equals(other.NumeroParcelas)
+                ) && 
+                (
+                    this.ValorMaximoParcela == other.ValorMaximoParcela ||
+                    this.ValorMaximoParcela != null &&
+                    this.ValorMaximoParcela.Equals(other.ValorMaximoParcela)
+                ) && 
+                (
+                    this.DataPrimeiraParcela == other.DataPrimeiraParcela ||
+                    this.DataPrimeiraParcela != null &&
+                    this.DataPrimeiraParcela.Equals(other.DataPrimeiraParcela)
                 ) && 
                 (
                     this.PeriodoTaxa == other.PeriodoTaxa ||
@@ -159,9 +199,14 @@ namespace Conductor.Pier.Model
                     this.PeriodoTaxa.Equals(other.PeriodoTaxa)
                 ) && 
                 (
-                    this.DataPrimeiraParcela == other.DataPrimeiraParcela ||
-                    this.DataPrimeiraParcela != null &&
-                    this.DataPrimeiraParcela.Equals(other.DataPrimeiraParcela)
+                    this.SistemaAmortizacao == other.SistemaAmortizacao ||
+                    this.SistemaAmortizacao != null &&
+                    this.SistemaAmortizacao.Equals(other.SistemaAmortizacao)
+                ) && 
+                (
+                    this.TaxaJuros == other.TaxaJuros ||
+                    this.TaxaJuros != null &&
+                    this.TaxaJuros.Equals(other.TaxaJuros)
                 );
         }
 
@@ -183,17 +228,26 @@ namespace Conductor.Pier.Model
                 if (this.ValorSolicitado != null)
                     hash = hash * 59 + this.ValorSolicitado.GetHashCode();
                 
-                if (this.ValorTotal != null)
-                    hash = hash * 59 + this.ValorTotal.GetHashCode();
+                if (this.ValorMaximoSolicitacao != null)
+                    hash = hash * 59 + this.ValorMaximoSolicitacao.GetHashCode();
                 
-                if (this.SistemaAmortizacao != null)
-                    hash = hash * 59 + this.SistemaAmortizacao.GetHashCode();
+                if (this.NumeroParcelas != null)
+                    hash = hash * 59 + this.NumeroParcelas.GetHashCode();
+                
+                if (this.ValorMaximoParcela != null)
+                    hash = hash * 59 + this.ValorMaximoParcela.GetHashCode();
+                
+                if (this.DataPrimeiraParcela != null)
+                    hash = hash * 59 + this.DataPrimeiraParcela.GetHashCode();
                 
                 if (this.PeriodoTaxa != null)
                     hash = hash * 59 + this.PeriodoTaxa.GetHashCode();
                 
-                if (this.DataPrimeiraParcela != null)
-                    hash = hash * 59 + this.DataPrimeiraParcela.GetHashCode();
+                if (this.SistemaAmortizacao != null)
+                    hash = hash * 59 + this.SistemaAmortizacao.GetHashCode();
+                
+                if (this.TaxaJuros != null)
+                    hash = hash * 59 + this.TaxaJuros.GetHashCode();
                 
                 return hash;
             }

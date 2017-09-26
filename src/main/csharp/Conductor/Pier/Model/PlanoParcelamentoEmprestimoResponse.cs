@@ -25,16 +25,16 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroParcelas">N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento.</param>
         /// <param name="ValorParcelas">Valor da parcela.</param>
         /// <param name="TaxaJuros">Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento.</param>
-        /// <param name="ValorPercentualCET">valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento.</param>
         /// <param name="ValorTributosIOF">valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras.</param>
+        /// <param name="ValorPercentualCET">valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento.</param>
 
-        public PlanoParcelamentoEmprestimoResponse(int? NumeroParcelas = null, double? ValorParcelas = null, double? TaxaJuros = null, double? ValorPercentualCET = null, double? ValorTributosIOF = null)
+        public PlanoParcelamentoEmprestimoResponse(int? NumeroParcelas = null, double? ValorParcelas = null, double? TaxaJuros = null, double? ValorTributosIOF = null, double? ValorPercentualCET = null)
         {
             this.NumeroParcelas = NumeroParcelas;
             this.ValorParcelas = ValorParcelas;
             this.TaxaJuros = TaxaJuros;
-            this.ValorPercentualCET = ValorPercentualCET;
             this.ValorTributosIOF = ValorTributosIOF;
+            this.ValorPercentualCET = ValorPercentualCET;
             
         }
         
@@ -61,18 +61,18 @@ namespace Conductor.Pier.Model
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-        /// </summary>
-        /// <value>valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento</value>
-        [DataMember(Name="valorPercentualCET", EmitDefaultValue=false)]
-        public double? ValorPercentualCET { get; set; }
-    
-        /// <summary>
         /// valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
         /// </summary>
         /// <value>valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras</value>
         [DataMember(Name="valorTributosIOF", EmitDefaultValue=false)]
         public double? ValorTributosIOF { get; set; }
+    
+        /// <summary>
+        /// valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+        /// </summary>
+        /// <value>valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento</value>
+        [DataMember(Name="valorPercentualCET", EmitDefaultValue=false)]
+        public double? ValorPercentualCET { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -85,8 +85,8 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
             sb.Append("  ValorParcelas: ").Append(ValorParcelas).Append("\n");
             sb.Append("  TaxaJuros: ").Append(TaxaJuros).Append("\n");
-            sb.Append("  ValorPercentualCET: ").Append(ValorPercentualCET).Append("\n");
             sb.Append("  ValorTributosIOF: ").Append(ValorTributosIOF).Append("\n");
+            sb.Append("  ValorPercentualCET: ").Append(ValorPercentualCET).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -140,14 +140,14 @@ namespace Conductor.Pier.Model
                     this.TaxaJuros.Equals(other.TaxaJuros)
                 ) && 
                 (
-                    this.ValorPercentualCET == other.ValorPercentualCET ||
-                    this.ValorPercentualCET != null &&
-                    this.ValorPercentualCET.Equals(other.ValorPercentualCET)
-                ) && 
-                (
                     this.ValorTributosIOF == other.ValorTributosIOF ||
                     this.ValorTributosIOF != null &&
                     this.ValorTributosIOF.Equals(other.ValorTributosIOF)
+                ) && 
+                (
+                    this.ValorPercentualCET == other.ValorPercentualCET ||
+                    this.ValorPercentualCET != null &&
+                    this.ValorPercentualCET.Equals(other.ValorPercentualCET)
                 );
         }
 
@@ -172,11 +172,11 @@ namespace Conductor.Pier.Model
                 if (this.TaxaJuros != null)
                     hash = hash * 59 + this.TaxaJuros.GetHashCode();
                 
-                if (this.ValorPercentualCET != null)
-                    hash = hash * 59 + this.ValorPercentualCET.GetHashCode();
-                
                 if (this.ValorTributosIOF != null)
                     hash = hash * 59 + this.ValorTributosIOF.GetHashCode();
+                
+                if (this.ValorPercentualCET != null)
+                    hash = hash * 59 + this.ValorPercentualCET.GetHashCode();
                 
                 return hash;
             }

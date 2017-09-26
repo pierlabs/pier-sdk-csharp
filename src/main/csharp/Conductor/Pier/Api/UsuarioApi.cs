@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="senhaNova">Senha Nova</param>
+        /// <returns>string</returns>
+        string AlterarSenhaLoginUsingPOST (string login, string senhaNova);
+  
+        /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="senhaNova">Senha Nova</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> AlterarSenhaLoginUsingPOSTWithHttpInfo (string login, string senhaNova);
+        
+        /// <summary>
         /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
@@ -44,7 +68,7 @@ namespace Conductor.Pier.Api
         ApiResponse<string> AlterarSenhaUsingPUTWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -56,7 +80,7 @@ namespace Conductor.Pier.Api
         UsuarioResponse AlterarUsingPUT10 (long? id, UsuarioUpdate update);
   
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -190,7 +214,7 @@ namespace Conductor.Pier.Api
         ApiResponse<string> RecuperarSenhaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Cadastra Usu\u00C3\u00A1rio na base.
         /// </summary>
         /// <remarks>
         /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
@@ -198,10 +222,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse SalvarUsingPOST16 (UsuarioPersist persist);
+        UsuarioResponse SalvarUsingPOST19 (UsuarioPersist persist);
   
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Cadastra Usu\u00C3\u00A1rio na base.
         /// </summary>
         /// <remarks>
         /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
@@ -209,7 +233,31 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> SalvarUsingPOST16WithHttpInfo (UsuarioPersist persist);
+        ApiResponse<UsuarioResponse> SalvarUsingPOST19WithHttpInfo (UsuarioPersist persist);
+        
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <returns>Object</returns>
+        Object ValidarSenhaLoginUsingPOST (string login, string senha);
+  
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha);
         
         /// <summary>
         /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -240,6 +288,30 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="senhaNova">Senha Nova</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> AlterarSenhaLoginUsingPOSTAsync (string login, string senhaNova);
+
+        /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="senhaNova">Senha Nova</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senhaNova);
+        
+        /// <summary>
         /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
@@ -266,7 +338,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -278,7 +350,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT10Async (long? id, UsuarioUpdate update);
 
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
         /// </summary>
         /// <remarks>
         /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
@@ -412,7 +484,7 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> RecuperarSenhaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Cadastra Usu\u00C3\u00A1rio na base.
         /// </summary>
         /// <remarks>
         /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
@@ -420,10 +492,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST16Async (UsuarioPersist persist);
+        System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST19Async (UsuarioPersist persist);
 
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Cadastra Usu\u00C3\u00A1rio na base.
         /// </summary>
         /// <remarks>
         /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
@@ -431,7 +503,31 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST16AsyncWithHttpInfo (UsuarioPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST19AsyncWithHttpInfo (UsuarioPersist persist);
+        
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha);
+
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha);
         
         /// <summary>
         /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -548,6 +644,176 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param> 
+        /// <param name="senhaNova">Senha Nova</param> 
+        /// <returns>string</returns>
+        public string AlterarSenhaLoginUsingPOST (string login, string senhaNova)
+        {
+             ApiResponse<string> localVarResponse = AlterarSenhaLoginUsingPOSTWithHttpInfo(login, senhaNova);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param> 
+        /// <param name="senhaNova">Senha Nova</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > AlterarSenhaLoginUsingPOSTWithHttpInfo (string login, string senhaNova)
+        {
+            
+            // verify the required parameter 'login' is set
+            if (login == null)
+                throw new ApiException(400, "Missing required parameter 'login' when calling UsuarioApi->AlterarSenhaLoginUsingPOST");
+            
+            // verify the required parameter 'senhaNova' is set
+            if (senhaNova == null)
+                throw new ApiException(400, "Missing required parameter 'senhaNova' when calling UsuarioApi->AlterarSenhaLoginUsingPOST");
+            
+    
+            var localVarPath = "/api/usuarios/{login}/alterar-senha";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (login != null) localVarPathParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // path parameter
+            
+            
+            if (senhaNova != null) localVarHeaderParams.Add("senhaNova", Configuration.ApiClient.ParameterToString(senhaNova)); // header parameter
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenhaLoginUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenhaLoginUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="senhaNova">Senha Nova</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> AlterarSenhaLoginUsingPOSTAsync (string login, string senhaNova)
+        {
+             ApiResponse<string> localVarResponse = await AlterarSenhaLoginUsingPOSTAsyncWithHttpInfo(login, senhaNova);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="senhaNova">Senha Nova</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senhaNova)
+        {
+            // verify the required parameter 'login' is set
+            if (login == null) throw new ApiException(400, "Missing required parameter 'login' when calling AlterarSenhaLoginUsingPOST");
+            // verify the required parameter 'senhaNova' is set
+            if (senhaNova == null) throw new ApiException(400, "Missing required parameter 'senhaNova' when calling AlterarSenhaLoginUsingPOST");
+            
+    
+            var localVarPath = "/api/usuarios/{login}/alterar-senha";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (login != null) localVarPathParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // path parameter
+            
+            
+            if (senhaNova != null) localVarHeaderParams.Add("senhaNova", Configuration.ApiClient.ParameterToString(senhaNova)); // header parameter
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenhaLoginUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenhaLoginUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
         
         /// <summary>
         /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
@@ -732,7 +998,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
@@ -745,7 +1011,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
@@ -825,7 +1091,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
@@ -839,7 +1105,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
@@ -1734,29 +2000,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse SalvarUsingPOST16 (UsuarioPersist persist)
+        public UsuarioResponse SalvarUsingPOST19 (UsuarioPersist persist)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = SalvarUsingPOST16WithHttpInfo(persist);
+             ApiResponse<UsuarioResponse> localVarResponse = SalvarUsingPOST19WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > SalvarUsingPOST16WithHttpInfo (UsuarioPersist persist)
+        public ApiResponse< UsuarioResponse > SalvarUsingPOST19WithHttpInfo (UsuarioPersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling UsuarioApi->SalvarUsingPOST16");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling UsuarioApi->SalvarUsingPOST19");
             
     
             var localVarPath = "/api/usuarios";
@@ -1808,9 +2074,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1820,28 +2086,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST16Async (UsuarioPersist persist)
+        public async System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST19Async (UsuarioPersist persist)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await SalvarUsingPOST16AsyncWithHttpInfo(persist);
+             ApiResponse<UsuarioResponse> localVarResponse = await SalvarUsingPOST19AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST16AsyncWithHttpInfo (UsuarioPersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST19AsyncWithHttpInfo (UsuarioPersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST16");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST19");
             
     
             var localVarPath = "/api/usuarios";
@@ -1893,13 +2159,183 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UsuarioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsuarioResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param> 
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param> 
+        /// <returns>Object</returns>
+        public Object ValidarSenhaLoginUsingPOST (string login, string senha)
+        {
+             ApiResponse<Object> localVarResponse = ValidarSenhaLoginUsingPOSTWithHttpInfo(login, senha);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param> 
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha)
+        {
+            
+            // verify the required parameter 'login' is set
+            if (login == null)
+                throw new ApiException(400, "Missing required parameter 'login' when calling UsuarioApi->ValidarSenhaLoginUsingPOST");
+            
+            // verify the required parameter 'senha' is set
+            if (senha == null)
+                throw new ApiException(400, "Missing required parameter 'senha' when calling UsuarioApi->ValidarSenhaLoginUsingPOST");
+            
+    
+            var localVarPath = "/api/usuarios/{login}/validar-senha";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (login != null) localVarPathParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // path parameter
+            
+            
+            if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarSenhaLoginUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarSenhaLoginUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha)
+        {
+             ApiResponse<Object> localVarResponse = await ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo(login, senha);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha)
+        {
+            // verify the required parameter 'login' is set
+            if (login == null) throw new ApiException(400, "Missing required parameter 'login' when calling ValidarSenhaLoginUsingPOST");
+            // verify the required parameter 'senha' is set
+            if (senha == null) throw new ApiException(400, "Missing required parameter 'senha' when calling ValidarSenhaLoginUsingPOST");
+            
+    
+            var localVarPath = "/api/usuarios/{login}/validar-senha";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (login != null) localVarPathParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // path parameter
+            
+            
+            if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarSenhaLoginUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarSenhaLoginUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         

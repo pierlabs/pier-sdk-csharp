@@ -132,7 +132,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>JobResponse</returns>
-        JobResponse SalvarUsingPOST8 (string descricao, string cron, string groovy);
+        JobResponse SalvarUsingPOST11 (string descricao, string cron, string groovy);
   
         /// <summary>
         /// Cadastrar Job
@@ -145,7 +145,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        ApiResponse<JobResponse> SalvarUsingPOST8WithHttpInfo (string descricao, string cron, string groovy);
+        ApiResponse<JobResponse> SalvarUsingPOST11WithHttpInfo (string descricao, string cron, string groovy);
         
         #endregion Synchronous Operations
         
@@ -266,7 +266,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of JobResponse</returns>
-        System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST8Async (string descricao, string cron, string groovy);
+        System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST11Async (string descricao, string cron, string groovy);
 
         /// <summary>
         /// Cadastrar Job
@@ -279,7 +279,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST8AsyncWithHttpInfo (string descricao, string cron, string groovy);
+        System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST11AsyncWithHttpInfo (string descricao, string cron, string groovy);
         
         #endregion Asynchronous Operations
         
@@ -1085,9 +1085,9 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
         /// <returns>JobResponse</returns>
-        public JobResponse SalvarUsingPOST8 (string descricao, string cron, string groovy)
+        public JobResponse SalvarUsingPOST11 (string descricao, string cron, string groovy)
         {
-             ApiResponse<JobResponse> localVarResponse = SalvarUsingPOST8WithHttpInfo(descricao, cron, groovy);
+             ApiResponse<JobResponse> localVarResponse = SalvarUsingPOST11WithHttpInfo(descricao, cron, groovy);
              return localVarResponse.Data;
         }
 
@@ -1099,20 +1099,20 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
         /// <returns>ApiResponse of JobResponse</returns>
-        public ApiResponse< JobResponse > SalvarUsingPOST8WithHttpInfo (string descricao, string cron, string groovy)
+        public ApiResponse< JobResponse > SalvarUsingPOST11WithHttpInfo (string descricao, string cron, string groovy)
         {
             
             // verify the required parameter 'descricao' is set
             if (descricao == null)
-                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->SalvarUsingPOST11");
             
             // verify the required parameter 'cron' is set
             if (cron == null)
-                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->SalvarUsingPOST11");
             
             // verify the required parameter 'groovy' is set
             if (groovy == null)
-                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->SalvarUsingPOST11");
             
     
             var localVarPath = "/api/jobs";
@@ -1166,9 +1166,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<JobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1185,9 +1185,9 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of JobResponse</returns>
-        public async System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST8Async (string descricao, string cron, string groovy)
+        public async System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST11Async (string descricao, string cron, string groovy)
         {
-             ApiResponse<JobResponse> localVarResponse = await SalvarUsingPOST8AsyncWithHttpInfo(descricao, cron, groovy);
+             ApiResponse<JobResponse> localVarResponse = await SalvarUsingPOST11AsyncWithHttpInfo(descricao, cron, groovy);
              return localVarResponse.Data;
 
         }
@@ -1200,14 +1200,14 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST8AsyncWithHttpInfo (string descricao, string cron, string groovy)
+        public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST11AsyncWithHttpInfo (string descricao, string cron, string groovy)
         {
             // verify the required parameter 'descricao' is set
-            if (descricao == null) throw new ApiException(400, "Missing required parameter 'descricao' when calling SalvarUsingPOST8");
+            if (descricao == null) throw new ApiException(400, "Missing required parameter 'descricao' when calling SalvarUsingPOST11");
             // verify the required parameter 'cron' is set
-            if (cron == null) throw new ApiException(400, "Missing required parameter 'cron' when calling SalvarUsingPOST8");
+            if (cron == null) throw new ApiException(400, "Missing required parameter 'cron' when calling SalvarUsingPOST11");
             // verify the required parameter 'groovy' is set
-            if (groovy == null) throw new ApiException(400, "Missing required parameter 'groovy' when calling SalvarUsingPOST8");
+            if (groovy == null) throw new ApiException(400, "Missing required parameter 'groovy' when calling SalvarUsingPOST11");
             
     
             var localVarPath = "/api/jobs";
@@ -1261,9 +1261,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<JobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
