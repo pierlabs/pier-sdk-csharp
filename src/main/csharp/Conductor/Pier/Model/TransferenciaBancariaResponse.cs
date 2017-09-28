@@ -49,8 +49,16 @@ namespace Conductor.Pier.Model
         /// <param name="IdContaPortador">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id).</param>
         /// <param name="NumeroEstabelecimento">Atributo que representa o numero do estabelecimento..</param>
         /// <param name="ValorTaxaSaque">Valor da taxa saque..</param>
+        /// <param name="Banco">C\u00C3\u00B3digo do Banco.</param>
+        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da Ag\u00C3\u00AAncia.</param>
+        /// <param name="DigitoAgencia">D\u00C3\u00ADgito da Ag\u00C3\u00AAncia.</param>
+        /// <param name="NumeroConta">N\u00C3\u00BAmero da Conta.</param>
+        /// <param name="DigitoConta">D\u00C3\u00ADgito da Conta.</param>
+        /// <param name="FlagContaPoupanca">Tipo da Conta.</param>
+        /// <param name="DocumentoFavorecido">Documento do Favorecido.</param>
+        /// <param name="NomeFavorecido">Nome do Favorecido.</param>
 
-        public TransferenciaBancariaResponse(long? Nsuorigem = null, long? IdAutorizacao = null, long? IdTransferencia = null, string CodigoAutorizacao = null, string DataAutorizacao = null, string Origem = null, double? Valor = null, long? IdOperacao = null, string Terminal = null, long? IdCartao = null, string DataCompra = null, double? ValorCompra = null, int? NumeroParcelas = null, double? ValorParcela = null, long? IdEstabelecimento = null, string DataMovimento = null, double? ValorContrato = null, double? TaxaJuros = null, double? ValorIOF = null, double? ValorTAC = null, long? IdConta = null, double? ValorEntrada = null, string DataVencimentoReal = null, string DataVencimentoPadrao = null, long? IdContaPortador = null, long? NumeroEstabelecimento = null, double? ValorTaxaSaque = null)
+        public TransferenciaBancariaResponse(long? Nsuorigem = null, long? IdAutorizacao = null, long? IdTransferencia = null, string CodigoAutorizacao = null, string DataAutorizacao = null, string Origem = null, double? Valor = null, long? IdOperacao = null, string Terminal = null, long? IdCartao = null, string DataCompra = null, double? ValorCompra = null, int? NumeroParcelas = null, double? ValorParcela = null, long? IdEstabelecimento = null, string DataMovimento = null, double? ValorContrato = null, double? TaxaJuros = null, double? ValorIOF = null, double? ValorTAC = null, long? IdConta = null, double? ValorEntrada = null, string DataVencimentoReal = null, string DataVencimentoPadrao = null, long? IdContaPortador = null, long? NumeroEstabelecimento = null, double? ValorTaxaSaque = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagContaPoupanca = null, string DocumentoFavorecido = null, string NomeFavorecido = null)
         {
             this.Nsuorigem = Nsuorigem;
             this.IdAutorizacao = IdAutorizacao;
@@ -79,6 +87,14 @@ namespace Conductor.Pier.Model
             this.IdContaPortador = IdContaPortador;
             this.NumeroEstabelecimento = NumeroEstabelecimento;
             this.ValorTaxaSaque = ValorTaxaSaque;
+            this.Banco = Banco;
+            this.NumeroAgencia = NumeroAgencia;
+            this.DigitoAgencia = DigitoAgencia;
+            this.NumeroConta = NumeroConta;
+            this.DigitoConta = DigitoConta;
+            this.FlagContaPoupanca = FlagContaPoupanca;
+            this.DocumentoFavorecido = DocumentoFavorecido;
+            this.NomeFavorecido = NomeFavorecido;
             
         }
         
@@ -272,6 +288,62 @@ namespace Conductor.Pier.Model
         public double? ValorTaxaSaque { get; set; }
     
         /// <summary>
+        /// C\u00C3\u00B3digo do Banco
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo do Banco</value>
+        [DataMember(Name="banco", EmitDefaultValue=false)]
+        public long? Banco { get; set; }
+    
+        /// <summary>
+        /// N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero da Ag\u00C3\u00AAncia</value>
+        [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
+        public string NumeroAgencia { get; set; }
+    
+        /// <summary>
+        /// D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+        /// </summary>
+        /// <value>D\u00C3\u00ADgito da Ag\u00C3\u00AAncia</value>
+        [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
+        public string DigitoAgencia { get; set; }
+    
+        /// <summary>
+        /// N\u00C3\u00BAmero da Conta
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero da Conta</value>
+        [DataMember(Name="numeroConta", EmitDefaultValue=false)]
+        public string NumeroConta { get; set; }
+    
+        /// <summary>
+        /// D\u00C3\u00ADgito da Conta
+        /// </summary>
+        /// <value>D\u00C3\u00ADgito da Conta</value>
+        [DataMember(Name="digitoConta", EmitDefaultValue=false)]
+        public string DigitoConta { get; set; }
+    
+        /// <summary>
+        /// Tipo da Conta
+        /// </summary>
+        /// <value>Tipo da Conta</value>
+        [DataMember(Name="flagContaPoupanca", EmitDefaultValue=false)]
+        public int? FlagContaPoupanca { get; set; }
+    
+        /// <summary>
+        /// Documento do Favorecido
+        /// </summary>
+        /// <value>Documento do Favorecido</value>
+        [DataMember(Name="documentoFavorecido", EmitDefaultValue=false)]
+        public string DocumentoFavorecido { get; set; }
+    
+        /// <summary>
+        /// Nome do Favorecido
+        /// </summary>
+        /// <value>Nome do Favorecido</value>
+        [DataMember(Name="nomeFavorecido", EmitDefaultValue=false)]
+        public string NomeFavorecido { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -306,6 +378,14 @@ namespace Conductor.Pier.Model
             sb.Append("  IdContaPortador: ").Append(IdContaPortador).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
             sb.Append("  ValorTaxaSaque: ").Append(ValorTaxaSaque).Append("\n");
+            sb.Append("  Banco: ").Append(Banco).Append("\n");
+            sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
+            sb.Append("  DigitoAgencia: ").Append(DigitoAgencia).Append("\n");
+            sb.Append("  NumeroConta: ").Append(NumeroConta).Append("\n");
+            sb.Append("  DigitoConta: ").Append(DigitoConta).Append("\n");
+            sb.Append("  FlagContaPoupanca: ").Append(FlagContaPoupanca).Append("\n");
+            sb.Append("  DocumentoFavorecido: ").Append(DocumentoFavorecido).Append("\n");
+            sb.Append("  NomeFavorecido: ").Append(NomeFavorecido).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -477,6 +557,46 @@ namespace Conductor.Pier.Model
                     this.ValorTaxaSaque == other.ValorTaxaSaque ||
                     this.ValorTaxaSaque != null &&
                     this.ValorTaxaSaque.Equals(other.ValorTaxaSaque)
+                ) && 
+                (
+                    this.Banco == other.Banco ||
+                    this.Banco != null &&
+                    this.Banco.Equals(other.Banco)
+                ) && 
+                (
+                    this.NumeroAgencia == other.NumeroAgencia ||
+                    this.NumeroAgencia != null &&
+                    this.NumeroAgencia.Equals(other.NumeroAgencia)
+                ) && 
+                (
+                    this.DigitoAgencia == other.DigitoAgencia ||
+                    this.DigitoAgencia != null &&
+                    this.DigitoAgencia.Equals(other.DigitoAgencia)
+                ) && 
+                (
+                    this.NumeroConta == other.NumeroConta ||
+                    this.NumeroConta != null &&
+                    this.NumeroConta.Equals(other.NumeroConta)
+                ) && 
+                (
+                    this.DigitoConta == other.DigitoConta ||
+                    this.DigitoConta != null &&
+                    this.DigitoConta.Equals(other.DigitoConta)
+                ) && 
+                (
+                    this.FlagContaPoupanca == other.FlagContaPoupanca ||
+                    this.FlagContaPoupanca != null &&
+                    this.FlagContaPoupanca.Equals(other.FlagContaPoupanca)
+                ) && 
+                (
+                    this.DocumentoFavorecido == other.DocumentoFavorecido ||
+                    this.DocumentoFavorecido != null &&
+                    this.DocumentoFavorecido.Equals(other.DocumentoFavorecido)
+                ) && 
+                (
+                    this.NomeFavorecido == other.NomeFavorecido ||
+                    this.NomeFavorecido != null &&
+                    this.NomeFavorecido.Equals(other.NomeFavorecido)
                 );
         }
 
@@ -572,6 +692,30 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorTaxaSaque != null)
                     hash = hash * 59 + this.ValorTaxaSaque.GetHashCode();
+                
+                if (this.Banco != null)
+                    hash = hash * 59 + this.Banco.GetHashCode();
+                
+                if (this.NumeroAgencia != null)
+                    hash = hash * 59 + this.NumeroAgencia.GetHashCode();
+                
+                if (this.DigitoAgencia != null)
+                    hash = hash * 59 + this.DigitoAgencia.GetHashCode();
+                
+                if (this.NumeroConta != null)
+                    hash = hash * 59 + this.NumeroConta.GetHashCode();
+                
+                if (this.DigitoConta != null)
+                    hash = hash * 59 + this.DigitoConta.GetHashCode();
+                
+                if (this.FlagContaPoupanca != null)
+                    hash = hash * 59 + this.FlagContaPoupanca.GetHashCode();
+                
+                if (this.DocumentoFavorecido != null)
+                    hash = hash * 59 + this.DocumentoFavorecido.GetHashCode();
+                
+                if (this.NomeFavorecido != null)
+                    hash = hash * 59 + this.NomeFavorecido.GetHashCode();
                 
                 return hash;
             }

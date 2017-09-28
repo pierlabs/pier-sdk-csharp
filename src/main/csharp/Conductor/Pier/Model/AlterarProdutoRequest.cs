@@ -22,10 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AlterarProdutoRequest" /> class.
         /// Initializes a new instance of the <see cref="AlterarProdutoRequest" />class.
         /// </summary>
-        /// <param name="IdOrigemComercial">C\u00C3\u00B3digo identificador da origem comercial..</param>
         /// <param name="IdProduto">C\u00C3\u00B3digo identificador do produto. (required).</param>
+        /// <param name="IdOrigemComercial">C\u00C3\u00B3digo identificador da origem comercial..</param>
+        /// <param name="LimiteGlobal">Valor do novo limite Global..</param>
 
-        public AlterarProdutoRequest(long? IdOrigemComercial = null, long? IdProduto = null)
+        public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null, double? LimiteGlobal = null)
         {
             // to ensure "IdProduto" is required (not null)
             if (IdProduto == null)
@@ -37,16 +38,10 @@ namespace Conductor.Pier.Model
                 this.IdProduto = IdProduto;
             }
             this.IdOrigemComercial = IdOrigemComercial;
+            this.LimiteGlobal = LimiteGlobal;
             
         }
         
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo identificador da origem comercial.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da origem comercial.</value>
-        [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
-        public long? IdOrigemComercial { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo identificador do produto.
@@ -56,6 +51,20 @@ namespace Conductor.Pier.Model
         public long? IdProduto { get; set; }
     
         /// <summary>
+        /// C\u00C3\u00B3digo identificador da origem comercial.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo identificador da origem comercial.</value>
+        [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
+        public long? IdOrigemComercial { get; set; }
+    
+        /// <summary>
+        /// Valor do novo limite Global.
+        /// </summary>
+        /// <value>Valor do novo limite Global.</value>
+        [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
+        public double? LimiteGlobal { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,8 +72,9 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AlterarProdutoRequest {\n");
-            sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
+            sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
+            sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -103,14 +113,19 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.IdProduto == other.IdProduto ||
+                    this.IdProduto != null &&
+                    this.IdProduto.Equals(other.IdProduto)
+                ) && 
+                (
                     this.IdOrigemComercial == other.IdOrigemComercial ||
                     this.IdOrigemComercial != null &&
                     this.IdOrigemComercial.Equals(other.IdOrigemComercial)
                 ) && 
                 (
-                    this.IdProduto == other.IdProduto ||
-                    this.IdProduto != null &&
-                    this.IdProduto.Equals(other.IdProduto)
+                    this.LimiteGlobal == other.LimiteGlobal ||
+                    this.LimiteGlobal != null &&
+                    this.LimiteGlobal.Equals(other.LimiteGlobal)
                 );
         }
 
@@ -126,11 +141,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.IdProduto != null)
+                    hash = hash * 59 + this.IdProduto.GetHashCode();
+                
                 if (this.IdOrigemComercial != null)
                     hash = hash * 59 + this.IdOrigemComercial.GetHashCode();
                 
-                if (this.IdProduto != null)
-                    hash = hash * 59 + this.IdProduto.GetHashCode();
+                if (this.LimiteGlobal != null)
+                    hash = hash * 59 + this.LimiteGlobal.GetHashCode();
                 
                 return hash;
             }

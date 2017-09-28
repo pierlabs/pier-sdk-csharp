@@ -23,18 +23,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoResponse" />class.
         /// </summary>
         /// <param name="Id">ID do Documento..</param>
-        /// <param name="IdDocumentoTipo">ID do Tipo de Documento associado..</param>
-        /// <param name="IdDocumentoTemplate">ID do Template de Documento associado..</param>
+        /// <param name="IdTipoDocumento">ID do Tipo de Documento associado..</param>
+        /// <param name="IdTemplateDocumento">ID do Template de Documento associado..</param>
         /// <param name="Nome">Nome do Documento..</param>
         /// <param name="Documento">Nome do Documento..</param>
         /// <param name="Extensao">Extens\u00C3\u00A3o do Documento..</param>
         /// <param name="DocumentoDetalhes">Detalhamento do documento..</param>
 
-        public DocumentoResponse(long? Id = null, long? IdDocumentoTipo = null, long? IdDocumentoTemplate = null, string Nome = null, string Documento = null, string Extensao = null, List<DocumentoDetalheResponse> DocumentoDetalhes = null)
+        public DocumentoResponse(long? Id = null, long? IdTipoDocumento = null, long? IdTemplateDocumento = null, string Nome = null, string Documento = null, string Extensao = null, List<DocumentoDetalheResponse> DocumentoDetalhes = null)
         {
             this.Id = Id;
-            this.IdDocumentoTipo = IdDocumentoTipo;
-            this.IdDocumentoTemplate = IdDocumentoTemplate;
+            this.IdTipoDocumento = IdTipoDocumento;
+            this.IdTemplateDocumento = IdTemplateDocumento;
             this.Nome = Nome;
             this.Documento = Documento;
             this.Extensao = Extensao;
@@ -54,15 +54,15 @@ namespace Conductor.Pier.Model
         /// ID do Tipo de Documento associado.
         /// </summary>
         /// <value>ID do Tipo de Documento associado.</value>
-        [DataMember(Name="idDocumentoTipo", EmitDefaultValue=false)]
-        public long? IdDocumentoTipo { get; set; }
+        [DataMember(Name="idTipoDocumento", EmitDefaultValue=false)]
+        public long? IdTipoDocumento { get; set; }
     
         /// <summary>
         /// ID do Template de Documento associado.
         /// </summary>
         /// <value>ID do Template de Documento associado.</value>
-        [DataMember(Name="idDocumentoTemplate", EmitDefaultValue=false)]
-        public long? IdDocumentoTemplate { get; set; }
+        [DataMember(Name="idTemplateDocumento", EmitDefaultValue=false)]
+        public long? IdTemplateDocumento { get; set; }
     
         /// <summary>
         /// Nome do Documento.
@@ -101,8 +101,8 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class DocumentoResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  IdDocumentoTipo: ").Append(IdDocumentoTipo).Append("\n");
-            sb.Append("  IdDocumentoTemplate: ").Append(IdDocumentoTemplate).Append("\n");
+            sb.Append("  IdTipoDocumento: ").Append(IdTipoDocumento).Append("\n");
+            sb.Append("  IdTemplateDocumento: ").Append(IdTemplateDocumento).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Documento: ").Append(Documento).Append("\n");
             sb.Append("  Extensao: ").Append(Extensao).Append("\n");
@@ -150,14 +150,14 @@ namespace Conductor.Pier.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.IdDocumentoTipo == other.IdDocumentoTipo ||
-                    this.IdDocumentoTipo != null &&
-                    this.IdDocumentoTipo.Equals(other.IdDocumentoTipo)
+                    this.IdTipoDocumento == other.IdTipoDocumento ||
+                    this.IdTipoDocumento != null &&
+                    this.IdTipoDocumento.Equals(other.IdTipoDocumento)
                 ) && 
                 (
-                    this.IdDocumentoTemplate == other.IdDocumentoTemplate ||
-                    this.IdDocumentoTemplate != null &&
-                    this.IdDocumentoTemplate.Equals(other.IdDocumentoTemplate)
+                    this.IdTemplateDocumento == other.IdTemplateDocumento ||
+                    this.IdTemplateDocumento != null &&
+                    this.IdTemplateDocumento.Equals(other.IdTemplateDocumento)
                 ) && 
                 (
                     this.Nome == other.Nome ||
@@ -196,11 +196,11 @@ namespace Conductor.Pier.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.IdDocumentoTipo != null)
-                    hash = hash * 59 + this.IdDocumentoTipo.GetHashCode();
+                if (this.IdTipoDocumento != null)
+                    hash = hash * 59 + this.IdTipoDocumento.GetHashCode();
                 
-                if (this.IdDocumentoTemplate != null)
-                    hash = hash * 59 + this.IdDocumentoTemplate.GetHashCode();
+                if (this.IdTemplateDocumento != null)
+                    hash = hash * 59 + this.IdTemplateDocumento.GetHashCode();
                 
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();

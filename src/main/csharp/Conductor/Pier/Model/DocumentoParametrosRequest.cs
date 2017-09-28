@@ -25,9 +25,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdTipoDocumento">ID para o tipo de documento..</param>
         /// <param name="IdTemplateDocumento">ID para o template do documento..</param>
         /// <param name="Nome">Nome para o arquivo..</param>
-        /// <param name="ParametrosConteudo">Mapa de par\u00C3\u00A2metros para montagem do documento..</param>
+        /// <param name="ParametrosConteudo">Lista de par\u00C3\u00A2metros para montagem do documento..</param>
 
-        public DocumentoParametrosRequest(long? IdTipoDocumento = null, long? IdTemplateDocumento = null, string Nome = null, Dictionary<string, Object> ParametrosConteudo = null)
+        public DocumentoParametrosRequest(long? IdTipoDocumento = null, long? IdTemplateDocumento = null, string Nome = null, List<PropriedadeDocumentoRequest> ParametrosConteudo = null)
         {
             this.IdTipoDocumento = IdTipoDocumento;
             this.IdTemplateDocumento = IdTemplateDocumento;
@@ -59,11 +59,11 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Mapa de par\u00C3\u00A2metros para montagem do documento.
+        /// Lista de par\u00C3\u00A2metros para montagem do documento.
         /// </summary>
-        /// <value>Mapa de par\u00C3\u00A2metros para montagem do documento.</value>
+        /// <value>Lista de par\u00C3\u00A2metros para montagem do documento.</value>
         [DataMember(Name="parametrosConteudo", EmitDefaultValue=false)]
-        public Dictionary<string, Object> ParametrosConteudo { get; set; }
+        public List<PropriedadeDocumentoRequest> ParametrosConteudo { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

@@ -15,17 +15,17 @@ namespace Conductor.Pier.Model
     /// Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
     /// </summary>
     [DataContract]
-    public partial class DocumentoTemplateRequest :  IEquatable<DocumentoTemplateRequest>
+    public partial class DocumentoTemplatePersist :  IEquatable<DocumentoTemplatePersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentoTemplateRequest" /> class.
-        /// Initializes a new instance of the <see cref="DocumentoTemplateRequest" />class.
+        /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" /> class.
+        /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" />class.
         /// </summary>
         /// <param name="IdTipoDocumento">ID para o Tipo de Documento vinculado ao template..</param>
         /// <param name="Template">Template para o conte\u00C3\u00BAdo do documento..</param>
 
-        public DocumentoTemplateRequest(long? IdTipoDocumento = null, string Template = null)
+        public DocumentoTemplatePersist(long? IdTipoDocumento = null, string Template = null)
         {
             this.IdTipoDocumento = IdTipoDocumento;
             this.Template = Template;
@@ -54,7 +54,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentoTemplateRequest {\n");
+            sb.Append("class DocumentoTemplatePersist {\n");
             sb.Append("  IdTipoDocumento: ").Append(IdTipoDocumento).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             
@@ -79,15 +79,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DocumentoTemplateRequest);
+            return this.Equals(obj as DocumentoTemplatePersist);
         }
 
         /// <summary>
-        /// Returns true if DocumentoTemplateRequest instances are equal
+        /// Returns true if DocumentoTemplatePersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of DocumentoTemplateRequest to be compared</param>
+        /// <param name="other">Instance of DocumentoTemplatePersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentoTemplateRequest other)
+        public bool Equals(DocumentoTemplatePersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
