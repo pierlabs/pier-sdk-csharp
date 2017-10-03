@@ -12,10 +12,10 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+    /// Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o
     /// </summary>
     [DataContract]
-    public partial class TemplateNotificacaoResponse :  IEquatable<TemplateNotificacaoResponse>
+    public partial class TemplateNotificacaoDetalheResponse :  IEquatable<TemplateNotificacaoDetalheResponse>
     { 
     
         /// <summary>
@@ -78,8 +78,8 @@ namespace Conductor.Pier.Model
         public TipoNotificacaoEnum? TipoNotificacao { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TemplateNotificacaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="TemplateNotificacaoResponse" />class.
+        /// Initializes a new instance of the <see cref="TemplateNotificacaoDetalheResponse" /> class.
+        /// Initializes a new instance of the <see cref="TemplateNotificacaoDetalheResponse" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo Identificador..</param>
         /// <param name="IdConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail..</param>
@@ -90,8 +90,9 @@ namespace Conductor.Pier.Model
         /// <param name="Assunto">Assunto do e-mail..</param>
         /// <param name="DataInclusao">Data da inclus\u00C3\u00A3o..</param>
         /// <param name="DataAlteracao">Data altera\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Conteudo">Conteudo do e-mail..</param>
 
-        public TemplateNotificacaoResponse(long? Id = null, long? IdConfiguracaoEmail = null, TipoLayoutEnum? TipoLayout = null, TipoNotificacaoEnum? TipoNotificacao = null, string TemplatePadrao = null, string Remetente = null, string Assunto = null, string DataInclusao = null, string DataAlteracao = null)
+        public TemplateNotificacaoDetalheResponse(long? Id = null, long? IdConfiguracaoEmail = null, TipoLayoutEnum? TipoLayout = null, TipoNotificacaoEnum? TipoNotificacao = null, string TemplatePadrao = null, string Remetente = null, string Assunto = null, string DataInclusao = null, string DataAlteracao = null, string Conteudo = null)
         {
             this.Id = Id;
             this.IdConfiguracaoEmail = IdConfiguracaoEmail;
@@ -102,6 +103,7 @@ namespace Conductor.Pier.Model
             this.Assunto = Assunto;
             this.DataInclusao = DataInclusao;
             this.DataAlteracao = DataAlteracao;
+            this.Conteudo = Conteudo;
             
         }
         
@@ -156,13 +158,20 @@ namespace Conductor.Pier.Model
         public string DataAlteracao { get; set; }
     
         /// <summary>
+        /// Conteudo do e-mail.
+        /// </summary>
+        /// <value>Conteudo do e-mail.</value>
+        [DataMember(Name="conteudo", EmitDefaultValue=false)]
+        public string Conteudo { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TemplateNotificacaoResponse {\n");
+            sb.Append("class TemplateNotificacaoDetalheResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdConfiguracaoEmail: ").Append(IdConfiguracaoEmail).Append("\n");
             sb.Append("  TipoLayout: ").Append(TipoLayout).Append("\n");
@@ -172,6 +181,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Assunto: ").Append(Assunto).Append("\n");
             sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
             sb.Append("  DataAlteracao: ").Append(DataAlteracao).Append("\n");
+            sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -194,15 +204,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TemplateNotificacaoResponse);
+            return this.Equals(obj as TemplateNotificacaoDetalheResponse);
         }
 
         /// <summary>
-        /// Returns true if TemplateNotificacaoResponse instances are equal
+        /// Returns true if TemplateNotificacaoDetalheResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TemplateNotificacaoResponse to be compared</param>
+        /// <param name="other">Instance of TemplateNotificacaoDetalheResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TemplateNotificacaoResponse other)
+        public bool Equals(TemplateNotificacaoDetalheResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -253,6 +263,11 @@ namespace Conductor.Pier.Model
                     this.DataAlteracao == other.DataAlteracao ||
                     this.DataAlteracao != null &&
                     this.DataAlteracao.Equals(other.DataAlteracao)
+                ) && 
+                (
+                    this.Conteudo == other.Conteudo ||
+                    this.Conteudo != null &&
+                    this.Conteudo.Equals(other.Conteudo)
                 );
         }
 
@@ -294,6 +309,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataAlteracao != null)
                     hash = hash * 59 + this.DataAlteracao.GetHashCode();
+                
+                if (this.Conteudo != null)
+                    hash = hash * 59 + this.Conteudo.GetHashCode();
                 
                 return hash;
             }

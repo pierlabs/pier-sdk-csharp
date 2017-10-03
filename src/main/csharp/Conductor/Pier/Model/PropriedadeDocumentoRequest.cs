@@ -25,9 +25,6 @@ namespace Conductor.Pier.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DetalhesTipoEnum {
             
-            [EnumMember(Value = "LIST")]
-            List,
-            
             [EnumMember(Value = "IMAGEM")]
             Imagem,
             
@@ -53,12 +50,14 @@ namespace Conductor.Pier.Model
         /// <param name="Chave">Valor da propriedade do Documento..</param>
         /// <param name="Valor">Valor da propriedade do Documento..</param>
         /// <param name="DetalhesTipo">Tipo da propriedade do Documento..</param>
+        /// <param name="FlagIndice">Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false).</param>
 
-        public PropriedadeDocumentoRequest(string Chave = null, string Valor = null, DetalhesTipoEnum? DetalhesTipo = null)
+        public PropriedadeDocumentoRequest(string Chave = null, string Valor = null, DetalhesTipoEnum? DetalhesTipo = null, bool? FlagIndice = null)
         {
             this.Chave = Chave;
             this.Valor = Valor;
             this.DetalhesTipo = DetalhesTipo;
+            this.FlagIndice = FlagIndice;
             
         }
         
@@ -78,6 +77,13 @@ namespace Conductor.Pier.Model
         public string Valor { get; set; }
     
         /// <summary>
+        /// Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+        /// </summary>
+        /// <value>Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)</value>
+        [DataMember(Name="flagIndice", EmitDefaultValue=false)]
+        public bool? FlagIndice { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +94,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Chave: ").Append(Chave).Append("\n");
             sb.Append("  Valor: ").Append(Valor).Append("\n");
             sb.Append("  DetalhesTipo: ").Append(DetalhesTipo).Append("\n");
+            sb.Append("  FlagIndice: ").Append(FlagIndice).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -139,6 +146,11 @@ namespace Conductor.Pier.Model
                     this.DetalhesTipo == other.DetalhesTipo ||
                     this.DetalhesTipo != null &&
                     this.DetalhesTipo.Equals(other.DetalhesTipo)
+                ) && 
+                (
+                    this.FlagIndice == other.FlagIndice ||
+                    this.FlagIndice != null &&
+                    this.FlagIndice.Equals(other.FlagIndice)
                 );
         }
 
@@ -162,6 +174,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DetalhesTipo != null)
                     hash = hash * 59 + this.DetalhesTipo.GetHashCode();
+                
+                if (this.FlagIndice != null)
+                    hash = hash * 59 + this.FlagIndice.GetHashCode();
                 
                 return hash;
             }

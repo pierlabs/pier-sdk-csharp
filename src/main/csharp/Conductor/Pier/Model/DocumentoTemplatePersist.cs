@@ -22,23 +22,25 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" /> class.
         /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" />class.
         /// </summary>
-        /// <param name="IdTipoDocumento">ID para o Tipo de Documento vinculado ao template..</param>
+        /// <param name="IdTipoTemplate">ID para o Tipo de Template vinculado ao template..</param>
         /// <param name="Template">Template para o conte\u00C3\u00BAdo do documento..</param>
+        /// <param name="Integracoes">Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o.</param>
 
-        public DocumentoTemplatePersist(long? IdTipoDocumento = null, string Template = null)
+        public DocumentoTemplatePersist(long? IdTipoTemplate = null, string Template = null, List<ReferenciaIdPersist> Integracoes = null)
         {
-            this.IdTipoDocumento = IdTipoDocumento;
+            this.IdTipoTemplate = IdTipoTemplate;
             this.Template = Template;
+            this.Integracoes = Integracoes;
             
         }
         
     
         /// <summary>
-        /// ID para o Tipo de Documento vinculado ao template.
+        /// ID para o Tipo de Template vinculado ao template.
         /// </summary>
-        /// <value>ID para o Tipo de Documento vinculado ao template.</value>
-        [DataMember(Name="idTipoDocumento", EmitDefaultValue=false)]
-        public long? IdTipoDocumento { get; set; }
+        /// <value>ID para o Tipo de Template vinculado ao template.</value>
+        [DataMember(Name="idTipoTemplate", EmitDefaultValue=false)]
+        public long? IdTipoTemplate { get; set; }
     
         /// <summary>
         /// Template para o conte\u00C3\u00BAdo do documento.
@@ -48,6 +50,13 @@ namespace Conductor.Pier.Model
         public string Template { get; set; }
     
         /// <summary>
+        /// Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+        /// </summary>
+        /// <value>Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="integracoes", EmitDefaultValue=false)]
+        public List<ReferenciaIdPersist> Integracoes { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -55,8 +64,9 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentoTemplatePersist {\n");
-            sb.Append("  IdTipoDocumento: ").Append(IdTipoDocumento).Append("\n");
+            sb.Append("  IdTipoTemplate: ").Append(IdTipoTemplate).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
+            sb.Append("  Integracoes: ").Append(Integracoes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -95,14 +105,19 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdTipoDocumento == other.IdTipoDocumento ||
-                    this.IdTipoDocumento != null &&
-                    this.IdTipoDocumento.Equals(other.IdTipoDocumento)
+                    this.IdTipoTemplate == other.IdTipoTemplate ||
+                    this.IdTipoTemplate != null &&
+                    this.IdTipoTemplate.Equals(other.IdTipoTemplate)
                 ) && 
                 (
                     this.Template == other.Template ||
                     this.Template != null &&
                     this.Template.Equals(other.Template)
+                ) && 
+                (
+                    this.Integracoes == other.Integracoes ||
+                    this.Integracoes != null &&
+                    this.Integracoes.SequenceEqual(other.Integracoes)
                 );
         }
 
@@ -118,11 +133,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdTipoDocumento != null)
-                    hash = hash * 59 + this.IdTipoDocumento.GetHashCode();
+                if (this.IdTipoTemplate != null)
+                    hash = hash * 59 + this.IdTipoTemplate.GetHashCode();
                 
                 if (this.Template != null)
                     hash = hash * 59 + this.Template.GetHashCode();
+                
+                if (this.Integracoes != null)
+                    hash = hash * 59 + this.Integracoes.GetHashCode();
                 
                 return hash;
             }

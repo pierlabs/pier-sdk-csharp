@@ -12,40 +12,30 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do Template de Documento
+    /// Representa\u00C3\u00A7\u00C3\u00A3o de objeto de refer\u00C3\u00AAncia por Id.
     /// </summary>
     [DataContract]
-    public partial class DocumentoTemplateResponse :  IEquatable<DocumentoTemplateResponse>
+    public partial class ReferenciaIdPersist :  IEquatable<ReferenciaIdPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentoTemplateResponse" /> class.
-        /// Initializes a new instance of the <see cref="DocumentoTemplateResponse" />class.
+        /// Initializes a new instance of the <see cref="ReferenciaIdPersist" /> class.
+        /// Initializes a new instance of the <see cref="ReferenciaIdPersist" />class.
         /// </summary>
-        /// <param name="Id">ID do Template do Documento..</param>
-        /// <param name="IdTipoTemplate">ID do Tipo de Template..</param>
+        /// <param name="Id">Id.</param>
 
-        public DocumentoTemplateResponse(long? Id = null, long? IdTipoTemplate = null)
+        public ReferenciaIdPersist(long? Id = null)
         {
             this.Id = Id;
-            this.IdTipoTemplate = IdTipoTemplate;
             
         }
         
     
         /// <summary>
-        /// ID do Template do Documento.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>ID do Template do Documento.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
-    
-        /// <summary>
-        /// ID do Tipo de Template.
-        /// </summary>
-        /// <value>ID do Tipo de Template.</value>
-        [DataMember(Name="idTipoTemplate", EmitDefaultValue=false)]
-        public long? IdTipoTemplate { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,9 +44,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentoTemplateResponse {\n");
+            sb.Append("class ReferenciaIdPersist {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  IdTipoTemplate: ").Append(IdTipoTemplate).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -79,15 +68,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DocumentoTemplateResponse);
+            return this.Equals(obj as ReferenciaIdPersist);
         }
 
         /// <summary>
-        /// Returns true if DocumentoTemplateResponse instances are equal
+        /// Returns true if ReferenciaIdPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of DocumentoTemplateResponse to be compared</param>
+        /// <param name="other">Instance of ReferenciaIdPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentoTemplateResponse other)
+        public bool Equals(ReferenciaIdPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -98,11 +87,6 @@ namespace Conductor.Pier.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.IdTipoTemplate == other.IdTipoTemplate ||
-                    this.IdTipoTemplate != null &&
-                    this.IdTipoTemplate.Equals(other.IdTipoTemplate)
                 );
         }
 
@@ -120,9 +104,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.IdTipoTemplate != null)
-                    hash = hash * 59 + this.IdTipoTemplate.GetHashCode();
                 
                 return hash;
             }

@@ -22,27 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoParametrosRequest" /> class.
         /// Initializes a new instance of the <see cref="DocumentoParametrosRequest" />class.
         /// </summary>
-        /// <param name="IdTipoDocumento">ID para o tipo de documento..</param>
         /// <param name="IdTemplateDocumento">ID para o template do documento..</param>
         /// <param name="Nome">Nome para o arquivo..</param>
         /// <param name="ParametrosConteudo">Lista de par\u00C3\u00A2metros para montagem do documento..</param>
 
-        public DocumentoParametrosRequest(long? IdTipoDocumento = null, long? IdTemplateDocumento = null, string Nome = null, List<PropriedadeDocumentoRequest> ParametrosConteudo = null)
+        public DocumentoParametrosRequest(long? IdTemplateDocumento = null, string Nome = null, List<PropriedadeDocumentoRequest> ParametrosConteudo = null)
         {
-            this.IdTipoDocumento = IdTipoDocumento;
             this.IdTemplateDocumento = IdTemplateDocumento;
             this.Nome = Nome;
             this.ParametrosConteudo = ParametrosConteudo;
             
         }
         
-    
-        /// <summary>
-        /// ID para o tipo de documento.
-        /// </summary>
-        /// <value>ID para o tipo de documento.</value>
-        [DataMember(Name="idTipoDocumento", EmitDefaultValue=false)]
-        public long? IdTipoDocumento { get; set; }
     
         /// <summary>
         /// ID para o template do documento.
@@ -73,7 +64,6 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentoParametrosRequest {\n");
-            sb.Append("  IdTipoDocumento: ").Append(IdTipoDocumento).Append("\n");
             sb.Append("  IdTemplateDocumento: ").Append(IdTemplateDocumento).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  ParametrosConteudo: ").Append(ParametrosConteudo).Append("\n");
@@ -115,11 +105,6 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdTipoDocumento == other.IdTipoDocumento ||
-                    this.IdTipoDocumento != null &&
-                    this.IdTipoDocumento.Equals(other.IdTipoDocumento)
-                ) && 
-                (
                     this.IdTemplateDocumento == other.IdTemplateDocumento ||
                     this.IdTemplateDocumento != null &&
                     this.IdTemplateDocumento.Equals(other.IdTemplateDocumento)
@@ -147,9 +132,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.IdTipoDocumento != null)
-                    hash = hash * 59 + this.IdTipoDocumento.GetHashCode();
                 
                 if (this.IdTemplateDocumento != null)
                     hash = hash * 59 + this.IdTemplateDocumento.GetHashCode();

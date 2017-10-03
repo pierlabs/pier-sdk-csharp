@@ -506,7 +506,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>TransferenciaBancariaResponse</returns>
-        TransferenciaBancariaResponse ConsultarUsingGET27 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        TransferenciaBancariaResponse ConsultarUsingGET29 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
   
         /// <summary>
         /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
@@ -519,7 +519,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET27WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET29WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -530,8 +530,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
-        /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse ConsultarUsingGET28 (long? id, long? idTransferencia);
+        /// <returns>TransferenciaDetalheResponse</returns>
+        TransferenciaDetalheResponse ConsultarUsingGET30 (long? id, long? idTransferencia);
   
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -542,8 +542,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
-        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> ConsultarUsingGET28WithHttpInfo (long? id, long? idTransferencia);
+        /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
+        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET30WithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -974,7 +974,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        PageTransferenciaBancariaResponse ListarUsingGET31 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageTransferenciaBancariaResponse ListarUsingGET33 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
@@ -989,7 +989,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET31WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET33WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
@@ -1008,7 +1008,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
         /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse ListarUsingGET32 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        PageTransferenciaResponse ListarUsingGET34 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
   
         /// <summary>
         /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
@@ -1027,7 +1027,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> ListarUsingGET32WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        ApiResponse<PageTransferenciaResponse> ListarUsingGET34WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -1181,8 +1181,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
-        /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse TransferirUsingPOST1 (long? id, long? idContaDestino, double? valorTransferencia);
+        /// <returns>TransferenciaDetalheResponse</returns>
+        TransferenciaDetalheResponse TransferirUsingPOST1 (long? id, long? idContaDestino, double? valorTransferencia);
   
         /// <summary>
         /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -1194,8 +1194,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
-        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> TransferirUsingPOST1WithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
+        /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
+        ApiResponse<TransferenciaDetalheResponse> TransferirUsingPOST1WithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
         
         #endregion Synchronous Operations
         
@@ -1690,7 +1690,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET27Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET29Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
 
         /// <summary>
         /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
@@ -1703,7 +1703,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET27AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -1714,8 +1714,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
-        /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> ConsultarUsingGET28Async (long? id, long? idTransferencia);
+        /// <returns>Task of TransferenciaDetalheResponse</returns>
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET30Async (long? id, long? idTransferencia);
 
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
@@ -1726,8 +1726,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
-        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ConsultarUsingGET28AsyncWithHttpInfo (long? id, long? idTransferencia);
+        /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET30AsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// Apresenta dados de uma determinada conta
@@ -2158,7 +2158,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET31Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET33Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
@@ -2173,7 +2173,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET31AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET33AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
@@ -2192,7 +2192,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET32Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET34Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
 
         /// <summary>
         /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
@@ -2211,7 +2211,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET32AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET34AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -2365,8 +2365,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
-        /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> TransferirUsingPOST1Async (long? id, long? idContaDestino, double? valorTransferencia);
+        /// <returns>Task of TransferenciaDetalheResponse</returns>
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirUsingPOST1Async (long? id, long? idContaDestino, double? valorTransferencia);
 
         /// <summary>
         /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -2378,8 +2378,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
-        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> TransferirUsingPOST1AsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
+        /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirUsingPOST1AsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
         
         #endregion Asynchronous Operations
         
@@ -5649,9 +5649,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
         /// <returns>TransferenciaBancariaResponse</returns>
-        public TransferenciaBancariaResponse ConsultarUsingGET27 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public TransferenciaBancariaResponse ConsultarUsingGET29 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET27WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET29WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
         }
 
@@ -5663,16 +5663,16 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET27WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET29WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET27");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET29");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET27");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET29");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -5720,9 +5720,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5739,9 +5739,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET27Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET29Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET27AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET29AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
 
         }
@@ -5754,12 +5754,12 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
         /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET27AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET27");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET29");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET27");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET29");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -5807,9 +5807,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5823,10 +5823,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param> 
-        /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse ConsultarUsingGET28 (long? id, long? idTransferencia)
+        /// <returns>TransferenciaDetalheResponse</returns>
+        public TransferenciaDetalheResponse ConsultarUsingGET30 (long? id, long? idTransferencia)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = ConsultarUsingGET28WithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET30WithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
         }
 
@@ -5836,17 +5836,17 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param> 
-        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > ConsultarUsingGET28WithHttpInfo (long? id, long? idTransferencia)
+        /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
+        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET30WithHttpInfo (long? id, long? idTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET28");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET30");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET28");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET30");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -5893,13 +5893,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
+            return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
+                (TransferenciaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransferenciaDetalheResponse)));
             
         }
 
@@ -5910,10 +5910,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
-        /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ConsultarUsingGET28Async (long? id, long? idTransferencia)
+        /// <returns>Task of TransferenciaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET30Async (long? id, long? idTransferencia)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await ConsultarUsingGET28AsyncWithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET30AsyncWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
 
         }
@@ -5924,13 +5924,13 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
         /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
-        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ConsultarUsingGET28AsyncWithHttpInfo (long? id, long? idTransferencia)
+        /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET30AsyncWithHttpInfo (long? id, long? idTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET28");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET30");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET28");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET30");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -5977,13 +5977,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
+            return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
+                (TransferenciaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransferenciaDetalheResponse)));
             
         }
         
@@ -8667,9 +8667,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        public PageTransferenciaBancariaResponse ListarUsingGET31 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageTransferenciaBancariaResponse ListarUsingGET33 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET31WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET33WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -8683,12 +8683,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET31WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET33WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarUsingGET31");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarUsingGET33");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -8738,9 +8738,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8759,9 +8759,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET31Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET33Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET31AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET33AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -8776,10 +8776,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET31AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET33AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET31");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET33");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -8829,9 +8829,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8853,9 +8853,9 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param> 
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param> 
         /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse ListarUsingGET32 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public PageTransferenciaResponse ListarUsingGET34 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarUsingGET32WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarUsingGET34WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
              return localVarResponse.Data;
         }
 
@@ -8873,12 +8873,12 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param> 
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > ListarUsingGET32WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public ApiResponse< PageTransferenciaResponse > ListarUsingGET34WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarUsingGET32");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarUsingGET34");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -8932,9 +8932,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8957,9 +8957,9 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET32Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET34Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarUsingGET32AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarUsingGET34AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
              return localVarResponse.Data;
 
         }
@@ -8978,10 +8978,10 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
         /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET32AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET34AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET32");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET34");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -9035,9 +9035,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9968,10 +9968,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param> 
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param> 
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param> 
-        /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse TransferirUsingPOST1 (long? id, long? idContaDestino, double? valorTransferencia)
+        /// <returns>TransferenciaDetalheResponse</returns>
+        public TransferenciaDetalheResponse TransferirUsingPOST1 (long? id, long? idContaDestino, double? valorTransferencia)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = TransferirUsingPOST1WithHttpInfo(id, idContaDestino, valorTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = TransferirUsingPOST1WithHttpInfo(id, idContaDestino, valorTransferencia);
              return localVarResponse.Data;
         }
 
@@ -9982,8 +9982,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param> 
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param> 
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param> 
-        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > TransferirUsingPOST1WithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
+        /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
+        public ApiResponse< TransferenciaDetalheResponse > TransferirUsingPOST1WithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
         {
             
             // verify the required parameter 'id' is set
@@ -10048,9 +10048,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling TransferirUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
+            return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
+                (TransferenciaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransferenciaDetalheResponse)));
             
         }
 
@@ -10062,10 +10062,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
-        /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> TransferirUsingPOST1Async (long? id, long? idContaDestino, double? valorTransferencia)
+        /// <returns>Task of TransferenciaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirUsingPOST1Async (long? id, long? idContaDestino, double? valorTransferencia)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await TransferirUsingPOST1AsyncWithHttpInfo(id, idContaDestino, valorTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await TransferirUsingPOST1AsyncWithHttpInfo(id, idContaDestino, valorTransferencia);
              return localVarResponse.Data;
 
         }
@@ -10077,8 +10077,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
         /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
-        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> TransferirUsingPOST1AsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
+        /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirUsingPOST1AsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling TransferirUsingPOST1");
@@ -10137,9 +10137,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling TransferirUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
+            return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
+                (TransferenciaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransferenciaDetalheResponse)));
             
         }
         

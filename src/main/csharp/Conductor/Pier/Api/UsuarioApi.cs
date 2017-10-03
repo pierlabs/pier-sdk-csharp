@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse AlterarUsingPUT10 (long? id, UsuarioUpdate update);
+        UsuarioResponse AlterarUsingPUT11 (long? id, UsuarioUpdate update);
   
         /// <summary>
         /// Altera os usu\u00C3\u00A1rios cadastrados na base.
@@ -89,7 +89,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> AlterarUsingPUT10WithHttpInfo (long? id, UsuarioUpdate update);
+        ApiResponse<UsuarioResponse> AlterarUsingPUT11WithHttpInfo (long? id, UsuarioUpdate update);
         
         /// <summary>
         /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -122,7 +122,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse ConsultarUsingGET29 (long? id);
+        UsuarioResponse ConsultarUsingGET31 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -133,7 +133,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> ConsultarUsingGET29WithHttpInfo (long? id);
+        ApiResponse<UsuarioResponse> ConsultarUsingGET31WithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>PageUsuarioResponse</returns>
-        PageUsuarioResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        PageUsuarioResponse ListarUsingGET35 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
   
         /// <summary>
         /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -189,7 +189,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        ApiResponse<PageUsuarioResponse> ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        ApiResponse<PageUsuarioResponse> ListarUsingGET35WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -347,7 +347,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT10Async (long? id, UsuarioUpdate update);
+        System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT11Async (long? id, UsuarioUpdate update);
 
         /// <summary>
         /// Altera os usu\u00C3\u00A1rios cadastrados na base.
@@ -359,7 +359,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, UsuarioUpdate update);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT11AsyncWithHttpInfo (long? id, UsuarioUpdate update);
         
         /// <summary>
         /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -392,7 +392,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET29Async (long? id);
+        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET31Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -403,7 +403,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -442,7 +442,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET35Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
 
         /// <summary>
         /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -459,7 +459,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET35AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -1004,9 +1004,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse AlterarUsingPUT10 (long? id, UsuarioUpdate update)
+        public UsuarioResponse AlterarUsingPUT11 (long? id, UsuarioUpdate update)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = AlterarUsingPUT10WithHttpInfo(id, update);
+             ApiResponse<UsuarioResponse> localVarResponse = AlterarUsingPUT11WithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -1017,16 +1017,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > AlterarUsingPUT10WithHttpInfo (long? id, UsuarioUpdate update)
+        public ApiResponse< UsuarioResponse > AlterarUsingPUT11WithHttpInfo (long? id, UsuarioUpdate update)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AlterarUsingPUT10");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AlterarUsingPUT11");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling UsuarioApi->AlterarUsingPUT10");
+                throw new ApiException(400, "Missing required parameter 'update' when calling UsuarioApi->AlterarUsingPUT11");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1079,9 +1079,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1097,9 +1097,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT10Async (long? id, UsuarioUpdate update)
+        public async System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT11Async (long? id, UsuarioUpdate update)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await AlterarUsingPUT10AsyncWithHttpInfo(id, update);
+             ApiResponse<UsuarioResponse> localVarResponse = await AlterarUsingPUT11AsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -1111,12 +1111,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, UsuarioUpdate update)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT11AsyncWithHttpInfo (long? id, UsuarioUpdate update)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT10");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT11");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarUsingPUT10");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarUsingPUT11");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1169,9 +1169,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1343,9 +1343,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse ConsultarUsingGET29 (long? id)
+        public UsuarioResponse ConsultarUsingGET31 (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET29WithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET31WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1355,12 +1355,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > ConsultarUsingGET29WithHttpInfo (long? id)
+        public ApiResponse< UsuarioResponse > ConsultarUsingGET31WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->ConsultarUsingGET29");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->ConsultarUsingGET31");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1406,9 +1406,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1423,9 +1423,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET29Async (long? id)
+        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET31Async (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET29AsyncWithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET31AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1436,10 +1436,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET29");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET31");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1485,9 +1485,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1665,9 +1665,9 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
         /// <returns>PageUsuarioResponse</returns>
-        public PageUsuarioResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public PageUsuarioResponse ListarUsingGET35 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET33WithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET35WithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
         }
 
@@ -1683,7 +1683,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        public ApiResponse< PageUsuarioResponse > ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public ApiResponse< PageUsuarioResponse > ListarUsingGET35WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1736,9 +1736,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1759,9 +1759,9 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET35Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET33AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET35AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
 
         }
@@ -1778,7 +1778,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET35AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1831,9 +1831,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

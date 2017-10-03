@@ -12,24 +12,22 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento
+    /// Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
     /// </summary>
     [DataContract]
-    public partial class DocumentoTipoResponse :  IEquatable<DocumentoTipoResponse>
+    public partial class TipoTemplateRequest :  IEquatable<TipoTemplateRequest>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentoTipoResponse" /> class.
-        /// Initializes a new instance of the <see cref="DocumentoTipoResponse" />class.
+        /// Initializes a new instance of the <see cref="TipoTemplateRequest" /> class.
+        /// Initializes a new instance of the <see cref="TipoTemplateRequest" />class.
         /// </summary>
-        /// <param name="Id">ID do Tipo de Documento..</param>
-        /// <param name="Nome">Nome do Tipo de Documento..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento..</param>
-        /// <param name="Sigla">Sigla do Tipo de Documento..</param>
+        /// <param name="Nome">Nome do tipo de template..</param>
+        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template..</param>
+        /// <param name="Sigla">Sigla do tipo de template..</param>
 
-        public DocumentoTipoResponse(long? Id = null, string Nome = null, string Descricao = null, string Sigla = null)
+        public TipoTemplateRequest(string Nome = null, string Descricao = null, string Sigla = null)
         {
-            this.Id = Id;
             this.Nome = Nome;
             this.Descricao = Descricao;
             this.Sigla = Sigla;
@@ -38,30 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID do Tipo de Documento.
+        /// Nome do tipo de template.
         /// </summary>
-        /// <value>ID do Tipo de Documento.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
-    
-        /// <summary>
-        /// Nome do Tipo de Documento.
-        /// </summary>
-        /// <value>Nome do Tipo de Documento.</value>
+        /// <value>Nome do tipo de template.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.
+        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.</value>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Sigla do Tipo de Documento.
+        /// Sigla do tipo de template.
         /// </summary>
-        /// <value>Sigla do Tipo de Documento.</value>
+        /// <value>Sigla do tipo de template.</value>
         [DataMember(Name="sigla", EmitDefaultValue=false)]
         public string Sigla { get; set; }
     
@@ -72,8 +63,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentoTipoResponse {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("class TipoTemplateRequest {\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  Sigla: ").Append(Sigla).Append("\n");
@@ -99,26 +89,21 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DocumentoTipoResponse);
+            return this.Equals(obj as TipoTemplateRequest);
         }
 
         /// <summary>
-        /// Returns true if DocumentoTipoResponse instances are equal
+        /// Returns true if TipoTemplateRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of DocumentoTipoResponse to be compared</param>
+        /// <param name="other">Instance of TipoTemplateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentoTipoResponse other)
+        public bool Equals(TipoTemplateRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
                 (
                     this.Nome == other.Nome ||
                     this.Nome != null &&
@@ -147,9 +132,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
