@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse ConsultarUsingGET16 (long? id);
+        RiscoFraudeDetalhadoResponse ConsultarUsingGET17 (long? id);
   
         /// <summary>
         /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET16WithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET17WithHttpInfo (long? id);
         
         /// <summary>
         /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
@@ -120,7 +120,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET16Async (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET17Async (long? id);
 
         /// <summary>
         /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
@@ -299,9 +299,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse ConsultarUsingGET16 (long? id)
+        public RiscoFraudeDetalhadoResponse ConsultarUsingGET17 (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET16WithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET17WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -311,12 +311,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET16WithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET17WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ConsultarUsingGET16");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ConsultarUsingGET17");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -362,9 +362,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -379,9 +379,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET16Async (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET17Async (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET16AsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET17AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -392,10 +392,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET16");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET17");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -441,9 +441,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

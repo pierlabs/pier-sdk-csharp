@@ -48,6 +48,7 @@ namespace Conductor.Pier.Model
         /// <param name="GrupoDescricaoMCC">Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento..</param>
         /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id)..</param>
         /// <param name="NomeEstabelecimento">Nome do Estabelecimento..</param>
+        /// <param name="NomeFantasiaEstabelecimento">Nome Fantasia do Estabelecimento..</param>
         /// <param name="LocalidadeEstabelecimento">Localidade do Estabelecimento..</param>
         /// <param name="PlanoParcelamento">Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas..</param>
         /// <param name="NumeroParcela">Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela..</param>
@@ -58,7 +59,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdTransacaoEstorno">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno..</param>
         /// <param name="Status">Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public TransacaoNaoProcessadaResponse(long? IdTipoTransacaoNaoProcessada = null, string DescricaoTipoTransacaoNaoProcessada = null, string DescricaoAbreviada = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataOrigem = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null, int? Status = null)
+        public TransacaoNaoProcessadaResponse(long? IdTipoTransacaoNaoProcessada = null, string DescricaoTipoTransacaoNaoProcessada = null, string DescricaoAbreviada = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataOrigem = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null, int? Status = null)
         {
             this.IdTipoTransacaoNaoProcessada = IdTipoTransacaoNaoProcessada;
             this.DescricaoTipoTransacaoNaoProcessada = DescricaoTipoTransacaoNaoProcessada;
@@ -86,6 +87,7 @@ namespace Conductor.Pier.Model
             this.GrupoDescricaoMCC = GrupoDescricaoMCC;
             this.IdEstabelecimento = IdEstabelecimento;
             this.NomeEstabelecimento = NomeEstabelecimento;
+            this.NomeFantasiaEstabelecimento = NomeFantasiaEstabelecimento;
             this.LocalidadeEstabelecimento = LocalidadeEstabelecimento;
             this.PlanoParcelamento = PlanoParcelamento;
             this.NumeroParcela = NumeroParcela;
@@ -282,6 +284,13 @@ namespace Conductor.Pier.Model
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
+        /// Nome Fantasia do Estabelecimento.
+        /// </summary>
+        /// <value>Nome Fantasia do Estabelecimento.</value>
+        [DataMember(Name="nomeFantasiaEstabelecimento", EmitDefaultValue=false)]
+        public string NomeFantasiaEstabelecimento { get; set; }
+    
+        /// <summary>
         /// Localidade do Estabelecimento.
         /// </summary>
         /// <value>Localidade do Estabelecimento.</value>
@@ -378,6 +387,7 @@ namespace Conductor.Pier.Model
             sb.Append("  GrupoDescricaoMCC: ").Append(GrupoDescricaoMCC).Append("\n");
             sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
             sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
+            sb.Append("  NomeFantasiaEstabelecimento: ").Append(NomeFantasiaEstabelecimento).Append("\n");
             sb.Append("  LocalidadeEstabelecimento: ").Append(LocalidadeEstabelecimento).Append("\n");
             sb.Append("  PlanoParcelamento: ").Append(PlanoParcelamento).Append("\n");
             sb.Append("  NumeroParcela: ").Append(NumeroParcela).Append("\n");
@@ -555,6 +565,11 @@ namespace Conductor.Pier.Model
                     this.NomeEstabelecimento.Equals(other.NomeEstabelecimento)
                 ) && 
                 (
+                    this.NomeFantasiaEstabelecimento == other.NomeFantasiaEstabelecimento ||
+                    this.NomeFantasiaEstabelecimento != null &&
+                    this.NomeFantasiaEstabelecimento.Equals(other.NomeFantasiaEstabelecimento)
+                ) && 
+                (
                     this.LocalidadeEstabelecimento == other.LocalidadeEstabelecimento ||
                     this.LocalidadeEstabelecimento != null &&
                     this.LocalidadeEstabelecimento.Equals(other.LocalidadeEstabelecimento)
@@ -690,6 +705,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeEstabelecimento != null)
                     hash = hash * 59 + this.NomeEstabelecimento.GetHashCode();
+                
+                if (this.NomeFantasiaEstabelecimento != null)
+                    hash = hash * 59 + this.NomeFantasiaEstabelecimento.GetHashCode();
                 
                 if (this.LocalidadeEstabelecimento != null)
                     hash = hash * 59 + this.LocalidadeEstabelecimento.GetHashCode();

@@ -124,7 +124,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param>
         /// <returns>OportunidadeResponse</returns>
-        OportunidadeResponse ConsultarUsingGET12 (long? id);
+        OportunidadeResponse ConsultarUsingGET13 (long? id);
   
         /// <summary>
         /// Apresenta dados de uma determinada oportunidade
@@ -135,7 +135,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param>
         /// <returns>ApiResponse of OportunidadeResponse</returns>
-        ApiResponse<OportunidadeResponse> ConsultarUsingGET12WithHttpInfo (long? id);
+        ApiResponse<OportunidadeResponse> ConsultarUsingGET13WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta dados de um determinado tipo oportunidade
@@ -146,7 +146,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param>
         /// <returns>TipoOportunidadeResponse</returns>
-        TipoOportunidadeResponse ConsultarUsingGET25 (long? id);
+        TipoOportunidadeResponse ConsultarUsingGET26 (long? id);
   
         /// <summary>
         /// Apresenta dados de um determinado tipo oportunidade
@@ -157,7 +157,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param>
         /// <returns>ApiResponse of TipoOportunidadeResponse</returns>
-        ApiResponse<TipoOportunidadeResponse> ConsultarUsingGET25WithHttpInfo (long? id);
+        ApiResponse<TipoOportunidadeResponse> ConsultarUsingGET26WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as auditorias dos status oportunidades
@@ -337,7 +337,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
         /// <returns>PageOportunidadeResponse</returns>
-        PageOportunidadeResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        PageOportunidadeResponse ListarUsingGET17 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista as oportunidades
@@ -357,7 +357,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
         /// <returns>ApiResponse of PageOportunidadeResponse</returns>
-        ApiResponse<PageOportunidadeResponse> ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        ApiResponse<PageOportunidadeResponse> ListarUsingGET17WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista os tipos oportunidades
@@ -372,7 +372,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>PageTipoOportunidadeResponse</returns>
-        PageTipoOportunidadeResponse ListarUsingGET29 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        PageTipoOportunidadeResponse ListarUsingGET30 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista os tipos oportunidades
@@ -387,7 +387,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>ApiResponse of PageTipoOportunidadeResponse</returns>
-        ApiResponse<PageTipoOportunidadeResponse> ListarUsingGET29WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        ApiResponse<PageTipoOportunidadeResponse> ListarUsingGET30WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Cadastra status para o tipo oportunidade
@@ -422,7 +422,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>OportunidadeResponse</returns>
-        OportunidadeResponse SalvarUsingPOST11 (OportunidadePersist persist);
+        OportunidadeResponse SalvarUsingPOST12 (OportunidadePersist persist);
   
         /// <summary>
         /// Cadastra as oportunidades
@@ -433,7 +433,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of OportunidadeResponse</returns>
-        ApiResponse<OportunidadeResponse> SalvarUsingPOST11WithHttpInfo (OportunidadePersist persist);
+        ApiResponse<OportunidadeResponse> SalvarUsingPOST12WithHttpInfo (OportunidadePersist persist);
         
         /// <summary>
         /// Cadastra tipos oportunidades
@@ -444,7 +444,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>TipoOportunidadeResponse</returns>
-        TipoOportunidadeResponse SalvarUsingPOST16 (TipoOportunidade persist);
+        TipoOportunidadeResponse SalvarUsingPOST17 (TipoOportunidade persist);
   
         /// <summary>
         /// Cadastra tipos oportunidades
@@ -455,7 +455,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of TipoOportunidadeResponse</returns>
-        ApiResponse<TipoOportunidadeResponse> SalvarUsingPOST16WithHttpInfo (TipoOportunidade persist);
+        ApiResponse<TipoOportunidadeResponse> SalvarUsingPOST17WithHttpInfo (TipoOportunidade persist);
         
         #endregion Synchronous Operations
         
@@ -568,7 +568,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param>
         /// <returns>Task of OportunidadeResponse</returns>
-        System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET12Async (long? id);
+        System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET13Async (long? id);
 
         /// <summary>
         /// Apresenta dados de uma determinada oportunidade
@@ -579,7 +579,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param>
         /// <returns>Task of ApiResponse (OportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta dados de um determinado tipo oportunidade
@@ -590,7 +590,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param>
         /// <returns>Task of TipoOportunidadeResponse</returns>
-        System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET25Async (long? id);
+        System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET26Async (long? id);
 
         /// <summary>
         /// Apresenta dados de um determinado tipo oportunidade
@@ -601,7 +601,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param>
         /// <returns>Task of ApiResponse (TipoOportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as auditorias dos status oportunidades
@@ -781,7 +781,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
         /// <returns>Task of PageOportunidadeResponse</returns>
-        System.Threading.Tasks.Task<PageOportunidadeResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<PageOportunidadeResponse> ListarUsingGET17Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista as oportunidades
@@ -801,7 +801,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
         /// <returns>Task of ApiResponse (PageOportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOportunidadeResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageOportunidadeResponse>> ListarUsingGET17AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista os tipos oportunidades
@@ -816,7 +816,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of PageTipoOportunidadeResponse</returns>
-        System.Threading.Tasks.Task<PageTipoOportunidadeResponse> ListarUsingGET29Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<PageTipoOportunidadeResponse> ListarUsingGET30Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista os tipos oportunidades
@@ -831,7 +831,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoOportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeResponse>> ListarUsingGET29AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeResponse>> ListarUsingGET30AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Cadastra status para o tipo oportunidade
@@ -866,7 +866,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of OportunidadeResponse</returns>
-        System.Threading.Tasks.Task<OportunidadeResponse> SalvarUsingPOST11Async (OportunidadePersist persist);
+        System.Threading.Tasks.Task<OportunidadeResponse> SalvarUsingPOST12Async (OportunidadePersist persist);
 
         /// <summary>
         /// Cadastra as oportunidades
@@ -877,7 +877,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (OportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> SalvarUsingPOST11AsyncWithHttpInfo (OportunidadePersist persist);
+        System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> SalvarUsingPOST12AsyncWithHttpInfo (OportunidadePersist persist);
         
         /// <summary>
         /// Cadastra tipos oportunidades
@@ -888,7 +888,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoOportunidadeResponse</returns>
-        System.Threading.Tasks.Task<TipoOportunidadeResponse> SalvarUsingPOST16Async (TipoOportunidade persist);
+        System.Threading.Tasks.Task<TipoOportunidadeResponse> SalvarUsingPOST17Async (TipoOportunidade persist);
 
         /// <summary>
         /// Cadastra tipos oportunidades
@@ -899,7 +899,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoOportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> SalvarUsingPOST16AsyncWithHttpInfo (TipoOportunidade persist);
+        System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> SalvarUsingPOST17AsyncWithHttpInfo (TipoOportunidade persist);
         
         #endregion Asynchronous Operations
         
@@ -1727,9 +1727,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param> 
         /// <returns>OportunidadeResponse</returns>
-        public OportunidadeResponse ConsultarUsingGET12 (long? id)
+        public OportunidadeResponse ConsultarUsingGET13 (long? id)
         {
-             ApiResponse<OportunidadeResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
+             ApiResponse<OportunidadeResponse> localVarResponse = ConsultarUsingGET13WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1739,12 +1739,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param> 
         /// <returns>ApiResponse of OportunidadeResponse</returns>
-        public ApiResponse< OportunidadeResponse > ConsultarUsingGET12WithHttpInfo (long? id)
+        public ApiResponse< OportunidadeResponse > ConsultarUsingGET13WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling OportunidadeApi->ConsultarUsingGET12");
+                throw new ApiException(400, "Missing required parameter 'id' when calling OportunidadeApi->ConsultarUsingGET13");
             
     
             var localVarPath = "/api/oportunidades/{id}";
@@ -1790,9 +1790,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<OportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1807,9 +1807,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param>
         /// <returns>Task of OportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET12Async (long? id)
+        public async System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET13Async (long? id)
         {
-             ApiResponse<OportunidadeResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
+             ApiResponse<OportunidadeResponse> localVarResponse = await ConsultarUsingGET13AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1820,10 +1820,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).</param>
         /// <returns>Task of ApiResponse (OportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET13");
             
     
             var localVarPath = "/api/oportunidades/{id}";
@@ -1869,9 +1869,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1885,9 +1885,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param> 
         /// <returns>TipoOportunidadeResponse</returns>
-        public TipoOportunidadeResponse ConsultarUsingGET25 (long? id)
+        public TipoOportunidadeResponse ConsultarUsingGET26 (long? id)
         {
-             ApiResponse<TipoOportunidadeResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(id);
+             ApiResponse<TipoOportunidadeResponse> localVarResponse = ConsultarUsingGET26WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1897,12 +1897,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param> 
         /// <returns>ApiResponse of TipoOportunidadeResponse</returns>
-        public ApiResponse< TipoOportunidadeResponse > ConsultarUsingGET25WithHttpInfo (long? id)
+        public ApiResponse< TipoOportunidadeResponse > ConsultarUsingGET26WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling OportunidadeApi->ConsultarUsingGET25");
+                throw new ApiException(400, "Missing required parameter 'id' when calling OportunidadeApi->ConsultarUsingGET26");
             
     
             var localVarPath = "/api/tipos-oportunidades/{id}";
@@ -1948,9 +1948,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1965,9 +1965,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param>
         /// <returns>Task of TipoOportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET25Async (long? id)
+        public async System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET26Async (long? id)
         {
-             ApiResponse<TipoOportunidadeResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(id);
+             ApiResponse<TipoOportunidadeResponse> localVarResponse = await ConsultarUsingGET26AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1978,10 +1978,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).</param>
         /// <returns>Task of ApiResponse (TipoOportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET25");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET26");
             
     
             var localVarPath = "/api/tipos-oportunidades/{id}";
@@ -2027,9 +2027,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2882,9 +2882,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param> 
         /// <returns>PageOportunidadeResponse</returns>
-        public PageOportunidadeResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        public PageOportunidadeResponse ListarUsingGET17 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageOportunidadeResponse> localVarResponse = ListarUsingGET16WithHttpInfo(sort, page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
+             ApiResponse<PageOportunidadeResponse> localVarResponse = ListarUsingGET17WithHttpInfo(sort, page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -2903,7 +2903,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param> 
         /// <returns>ApiResponse of PageOportunidadeResponse</returns>
-        public ApiResponse< PageOportunidadeResponse > ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        public ApiResponse< PageOportunidadeResponse > ListarUsingGET17WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
             
     
@@ -2959,9 +2959,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2985,9 +2985,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
         /// <returns>Task of PageOportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<PageOportunidadeResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageOportunidadeResponse> ListarUsingGET17Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageOportunidadeResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(sort, page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
+             ApiResponse<PageOportunidadeResponse> localVarResponse = await ListarUsingGET17AsyncWithHttpInfo(sort, page, limit, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -3007,7 +3007,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa (optional)</param>
         /// <returns>Task of ApiResponse (PageOportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOportunidadeResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageOportunidadeResponse>> ListarUsingGET17AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusOportunidade = null, string dataCadastro = null, string dataAtualizacao = null, string numeroReceitaFederal = null, string dataInicioVigencia = null, string dataFimVigencia = null, bool? flagAtivo = null)
         {
             
     
@@ -3063,9 +3063,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3083,9 +3083,9 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param> 
         /// <returns>PageTipoOportunidadeResponse</returns>
-        public PageTipoOportunidadeResponse ListarUsingGET29 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        public PageTipoOportunidadeResponse ListarUsingGET30 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoOportunidadeResponse> localVarResponse = ListarUsingGET29WithHttpInfo(sort, page, limit, descricao, flagAtivo);
+             ApiResponse<PageTipoOportunidadeResponse> localVarResponse = ListarUsingGET30WithHttpInfo(sort, page, limit, descricao, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -3099,7 +3099,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param> 
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param> 
         /// <returns>ApiResponse of PageTipoOportunidadeResponse</returns>
-        public ApiResponse< PageTipoOportunidadeResponse > ListarUsingGET29WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        public ApiResponse< PageTipoOportunidadeResponse > ListarUsingGET30WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
             
     
@@ -3150,9 +3150,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3171,9 +3171,9 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of PageTipoOportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoOportunidadeResponse> ListarUsingGET29Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageTipoOportunidadeResponse> ListarUsingGET30Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoOportunidadeResponse> localVarResponse = await ListarUsingGET29AsyncWithHttpInfo(sort, page, limit, descricao, flagAtivo);
+             ApiResponse<PageTipoOportunidadeResponse> localVarResponse = await ListarUsingGET30AsyncWithHttpInfo(sort, page, limit, descricao, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -3188,7 +3188,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (optional)</param>
         /// <param name="flagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoOportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeResponse>> ListarUsingGET29AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOportunidadeResponse>> ListarUsingGET30AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, bool? flagAtivo = null)
         {
             
     
@@ -3239,9 +3239,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3437,9 +3437,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>OportunidadeResponse</returns>
-        public OportunidadeResponse SalvarUsingPOST11 (OportunidadePersist persist)
+        public OportunidadeResponse SalvarUsingPOST12 (OportunidadePersist persist)
         {
-             ApiResponse<OportunidadeResponse> localVarResponse = SalvarUsingPOST11WithHttpInfo(persist);
+             ApiResponse<OportunidadeResponse> localVarResponse = SalvarUsingPOST12WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -3449,12 +3449,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of OportunidadeResponse</returns>
-        public ApiResponse< OportunidadeResponse > SalvarUsingPOST11WithHttpInfo (OportunidadePersist persist)
+        public ApiResponse< OportunidadeResponse > SalvarUsingPOST12WithHttpInfo (OportunidadePersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling OportunidadeApi->SalvarUsingPOST11");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling OportunidadeApi->SalvarUsingPOST12");
             
     
             var localVarPath = "/api/oportunidades";
@@ -3506,9 +3506,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<OportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3523,9 +3523,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of OportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<OportunidadeResponse> SalvarUsingPOST11Async (OportunidadePersist persist)
+        public async System.Threading.Tasks.Task<OportunidadeResponse> SalvarUsingPOST12Async (OportunidadePersist persist)
         {
-             ApiResponse<OportunidadeResponse> localVarResponse = await SalvarUsingPOST11AsyncWithHttpInfo(persist);
+             ApiResponse<OportunidadeResponse> localVarResponse = await SalvarUsingPOST12AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -3536,10 +3536,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (OportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> SalvarUsingPOST11AsyncWithHttpInfo (OportunidadePersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> SalvarUsingPOST12AsyncWithHttpInfo (OportunidadePersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST11");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST12");
             
     
             var localVarPath = "/api/oportunidades";
@@ -3591,9 +3591,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3607,9 +3607,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>TipoOportunidadeResponse</returns>
-        public TipoOportunidadeResponse SalvarUsingPOST16 (TipoOportunidade persist)
+        public TipoOportunidadeResponse SalvarUsingPOST17 (TipoOportunidade persist)
         {
-             ApiResponse<TipoOportunidadeResponse> localVarResponse = SalvarUsingPOST16WithHttpInfo(persist);
+             ApiResponse<TipoOportunidadeResponse> localVarResponse = SalvarUsingPOST17WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -3619,12 +3619,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of TipoOportunidadeResponse</returns>
-        public ApiResponse< TipoOportunidadeResponse > SalvarUsingPOST16WithHttpInfo (TipoOportunidade persist)
+        public ApiResponse< TipoOportunidadeResponse > SalvarUsingPOST17WithHttpInfo (TipoOportunidade persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling OportunidadeApi->SalvarUsingPOST16");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling OportunidadeApi->SalvarUsingPOST17");
             
     
             var localVarPath = "/api/tipos-oportunidades";
@@ -3676,9 +3676,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3693,9 +3693,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoOportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<TipoOportunidadeResponse> SalvarUsingPOST16Async (TipoOportunidade persist)
+        public async System.Threading.Tasks.Task<TipoOportunidadeResponse> SalvarUsingPOST17Async (TipoOportunidade persist)
         {
-             ApiResponse<TipoOportunidadeResponse> localVarResponse = await SalvarUsingPOST16AsyncWithHttpInfo(persist);
+             ApiResponse<TipoOportunidadeResponse> localVarResponse = await SalvarUsingPOST17AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -3706,10 +3706,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoOportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> SalvarUsingPOST16AsyncWithHttpInfo (TipoOportunidade persist)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> SalvarUsingPOST17AsyncWithHttpInfo (TipoOportunidade persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST16");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST17");
             
     
             var localVarPath = "/api/tipos-oportunidades";
@@ -3761,9 +3761,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

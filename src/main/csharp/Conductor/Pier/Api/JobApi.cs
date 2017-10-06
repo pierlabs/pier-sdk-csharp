@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>JobResponse</returns>
-        JobResponse AtualizarUsingPUT1 (long? id, string descricao, string cron, string groovy);
+        JobResponse AtualizarUsingPUT2 (long? id, string descricao, string cron, string groovy);
   
         /// <summary>
         /// Atualizar Job
@@ -65,7 +65,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        ApiResponse<JobResponse> AtualizarUsingPUT1WithHttpInfo (long? id, string descricao, string cron, string groovy);
+        ApiResponse<JobResponse> AtualizarUsingPUT2WithHttpInfo (long? id, string descricao, string cron, string groovy);
         
         /// <summary>
         /// Desativar Job
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageJobResponse</returns>
-        PageJobResponse ListarUsingGET15 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        PageJobResponse ListarUsingGET16 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar Jobs
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageJobResponse</returns>
-        ApiResponse<PageJobResponse> ListarUsingGET15WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        ApiResponse<PageJobResponse> ListarUsingGET16WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastrar Job
@@ -132,7 +132,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>JobResponse</returns>
-        JobResponse SalvarUsingPOST10 (string descricao, string cron, string groovy);
+        JobResponse SalvarUsingPOST11 (string descricao, string cron, string groovy);
   
         /// <summary>
         /// Cadastrar Job
@@ -145,7 +145,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        ApiResponse<JobResponse> SalvarUsingPOST10WithHttpInfo (string descricao, string cron, string groovy);
+        ApiResponse<JobResponse> SalvarUsingPOST11WithHttpInfo (string descricao, string cron, string groovy);
         
         #endregion Synchronous Operations
         
@@ -185,7 +185,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of JobResponse</returns>
-        System.Threading.Tasks.Task<JobResponse> AtualizarUsingPUT1Async (long? id, string descricao, string cron, string groovy);
+        System.Threading.Tasks.Task<JobResponse> AtualizarUsingPUT2Async (long? id, string descricao, string cron, string groovy);
 
         /// <summary>
         /// Atualizar Job
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, string descricao, string cron, string groovy);
+        System.Threading.Tasks.Task<ApiResponse<JobResponse>> AtualizarUsingPUT2AsyncWithHttpInfo (long? id, string descricao, string cron, string groovy);
         
         /// <summary>
         /// Desativar Job
@@ -237,7 +237,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageJobResponse</returns>
-        System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET15Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET16Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar Jobs
@@ -253,7 +253,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET15AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET16AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastrar Job
@@ -266,7 +266,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of JobResponse</returns>
-        System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST10Async (string descricao, string cron, string groovy);
+        System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST11Async (string descricao, string cron, string groovy);
 
         /// <summary>
         /// Cadastrar Job
@@ -279,7 +279,7 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST10AsyncWithHttpInfo (string descricao, string cron, string groovy);
+        System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST11AsyncWithHttpInfo (string descricao, string cron, string groovy);
         
         #endregion Asynchronous Operations
         
@@ -540,9 +540,9 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
         /// <returns>JobResponse</returns>
-        public JobResponse AtualizarUsingPUT1 (long? id, string descricao, string cron, string groovy)
+        public JobResponse AtualizarUsingPUT2 (long? id, string descricao, string cron, string groovy)
         {
-             ApiResponse<JobResponse> localVarResponse = AtualizarUsingPUT1WithHttpInfo(id, descricao, cron, groovy);
+             ApiResponse<JobResponse> localVarResponse = AtualizarUsingPUT2WithHttpInfo(id, descricao, cron, groovy);
              return localVarResponse.Data;
         }
 
@@ -555,24 +555,24 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
         /// <returns>ApiResponse of JobResponse</returns>
-        public ApiResponse< JobResponse > AtualizarUsingPUT1WithHttpInfo (long? id, string descricao, string cron, string groovy)
+        public ApiResponse< JobResponse > AtualizarUsingPUT2WithHttpInfo (long? id, string descricao, string cron, string groovy)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling JobApi->AtualizarUsingPUT1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling JobApi->AtualizarUsingPUT2");
             
             // verify the required parameter 'descricao' is set
             if (descricao == null)
-                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->AtualizarUsingPUT1");
+                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->AtualizarUsingPUT2");
             
             // verify the required parameter 'cron' is set
             if (cron == null)
-                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->AtualizarUsingPUT1");
+                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->AtualizarUsingPUT2");
             
             // verify the required parameter 'groovy' is set
             if (groovy == null)
-                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->AtualizarUsingPUT1");
+                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->AtualizarUsingPUT2");
             
     
             var localVarPath = "/api/jobs/{id}";
@@ -627,9 +627,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<JobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -647,9 +647,9 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of JobResponse</returns>
-        public async System.Threading.Tasks.Task<JobResponse> AtualizarUsingPUT1Async (long? id, string descricao, string cron, string groovy)
+        public async System.Threading.Tasks.Task<JobResponse> AtualizarUsingPUT2Async (long? id, string descricao, string cron, string groovy)
         {
-             ApiResponse<JobResponse> localVarResponse = await AtualizarUsingPUT1AsyncWithHttpInfo(id, descricao, cron, groovy);
+             ApiResponse<JobResponse> localVarResponse = await AtualizarUsingPUT2AsyncWithHttpInfo(id, descricao, cron, groovy);
              return localVarResponse.Data;
 
         }
@@ -663,16 +663,16 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, string descricao, string cron, string groovy)
+        public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> AtualizarUsingPUT2AsyncWithHttpInfo (long? id, string descricao, string cron, string groovy)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT2");
             // verify the required parameter 'descricao' is set
-            if (descricao == null) throw new ApiException(400, "Missing required parameter 'descricao' when calling AtualizarUsingPUT1");
+            if (descricao == null) throw new ApiException(400, "Missing required parameter 'descricao' when calling AtualizarUsingPUT2");
             // verify the required parameter 'cron' is set
-            if (cron == null) throw new ApiException(400, "Missing required parameter 'cron' when calling AtualizarUsingPUT1");
+            if (cron == null) throw new ApiException(400, "Missing required parameter 'cron' when calling AtualizarUsingPUT2");
             // verify the required parameter 'groovy' is set
-            if (groovy == null) throw new ApiException(400, "Missing required parameter 'groovy' when calling AtualizarUsingPUT1");
+            if (groovy == null) throw new ApiException(400, "Missing required parameter 'groovy' when calling AtualizarUsingPUT2");
             
     
             var localVarPath = "/api/jobs/{id}";
@@ -727,9 +727,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<JobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -906,9 +906,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageJobResponse</returns>
-        public PageJobResponse ListarUsingGET15 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public PageJobResponse ListarUsingGET16 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageJobResponse> localVarResponse = ListarUsingGET15WithHttpInfo(groovy, descricao, cron, status, page, limit);
+             ApiResponse<PageJobResponse> localVarResponse = ListarUsingGET16WithHttpInfo(groovy, descricao, cron, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -923,7 +923,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageJobResponse</returns>
-        public ApiResponse< PageJobResponse > ListarUsingGET15WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public ApiResponse< PageJobResponse > ListarUsingGET16WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -975,9 +975,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -997,9 +997,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageJobResponse</returns>
-        public async System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET15Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET16Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageJobResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(groovy, descricao, cron, status, page, limit);
+             ApiResponse<PageJobResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(groovy, descricao, cron, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1015,7 +1015,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET15AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET16AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -1067,9 +1067,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1085,9 +1085,9 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
         /// <returns>JobResponse</returns>
-        public JobResponse SalvarUsingPOST10 (string descricao, string cron, string groovy)
+        public JobResponse SalvarUsingPOST11 (string descricao, string cron, string groovy)
         {
-             ApiResponse<JobResponse> localVarResponse = SalvarUsingPOST10WithHttpInfo(descricao, cron, groovy);
+             ApiResponse<JobResponse> localVarResponse = SalvarUsingPOST11WithHttpInfo(descricao, cron, groovy);
              return localVarResponse.Data;
         }
 
@@ -1099,20 +1099,20 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
         /// <returns>ApiResponse of JobResponse</returns>
-        public ApiResponse< JobResponse > SalvarUsingPOST10WithHttpInfo (string descricao, string cron, string groovy)
+        public ApiResponse< JobResponse > SalvarUsingPOST11WithHttpInfo (string descricao, string cron, string groovy)
         {
             
             // verify the required parameter 'descricao' is set
             if (descricao == null)
-                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->SalvarUsingPOST10");
+                throw new ApiException(400, "Missing required parameter 'descricao' when calling JobApi->SalvarUsingPOST11");
             
             // verify the required parameter 'cron' is set
             if (cron == null)
-                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->SalvarUsingPOST10");
+                throw new ApiException(400, "Missing required parameter 'cron' when calling JobApi->SalvarUsingPOST11");
             
             // verify the required parameter 'groovy' is set
             if (groovy == null)
-                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->SalvarUsingPOST10");
+                throw new ApiException(400, "Missing required parameter 'groovy' when calling JobApi->SalvarUsingPOST11");
             
     
             var localVarPath = "/api/jobs";
@@ -1166,9 +1166,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<JobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1185,9 +1185,9 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of JobResponse</returns>
-        public async System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST10Async (string descricao, string cron, string groovy)
+        public async System.Threading.Tasks.Task<JobResponse> SalvarUsingPOST11Async (string descricao, string cron, string groovy)
         {
-             ApiResponse<JobResponse> localVarResponse = await SalvarUsingPOST10AsyncWithHttpInfo(descricao, cron, groovy);
+             ApiResponse<JobResponse> localVarResponse = await SalvarUsingPOST11AsyncWithHttpInfo(descricao, cron, groovy);
              return localVarResponse.Data;
 
         }
@@ -1200,14 +1200,14 @@ namespace Conductor.Pier.Api
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST10AsyncWithHttpInfo (string descricao, string cron, string groovy)
+        public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> SalvarUsingPOST11AsyncWithHttpInfo (string descricao, string cron, string groovy)
         {
             // verify the required parameter 'descricao' is set
-            if (descricao == null) throw new ApiException(400, "Missing required parameter 'descricao' when calling SalvarUsingPOST10");
+            if (descricao == null) throw new ApiException(400, "Missing required parameter 'descricao' when calling SalvarUsingPOST11");
             // verify the required parameter 'cron' is set
-            if (cron == null) throw new ApiException(400, "Missing required parameter 'cron' when calling SalvarUsingPOST10");
+            if (cron == null) throw new ApiException(400, "Missing required parameter 'cron' when calling SalvarUsingPOST11");
             // verify the required parameter 'groovy' is set
-            if (groovy == null) throw new ApiException(400, "Missing required parameter 'groovy' when calling SalvarUsingPOST10");
+            if (groovy == null) throw new ApiException(400, "Missing required parameter 'groovy' when calling SalvarUsingPOST11");
             
     
             var localVarPath = "/api/jobs";
@@ -1261,9 +1261,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<JobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
