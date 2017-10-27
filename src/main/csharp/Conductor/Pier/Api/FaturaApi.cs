@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Consulta fatura de um cliente
+        /// </summary>
+        /// <remarks>
+        /// Consulta fatura de um cliente pela data de vencimento.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <returns>FaturaDetalheResponse</returns>
+        FaturaDetalheResponse ConsultarFaturaUsingGET1 (string dataVencimento, long? idConta);
+  
+        /// <summary>
+        /// Consulta fatura de um cliente
+        /// </summary>
+        /// <remarks>
+        /// Consulta fatura de um cliente pela data de vencimento.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <returns>ApiResponse of FaturaDetalheResponse</returns>
+        ApiResponse<FaturaDetalheResponse> ConsultarFaturaUsingGET1WithHttpInfo (string dataVencimento, long? idConta);
+        
+        /// <summary>
         /// Listar planos de parcelamento
         /// </summary>
         /// <remarks>
@@ -74,6 +98,36 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> EnviarFaturaEmailUsingPOSTWithHttpInfo (long? id, string dataVencimento, string email = null);
         
         /// <summary>
+        /// Listar faturas de um cliente.
+        /// </summary>
+        /// <remarks>
+        /// Lista faturas de um cliente.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>PageFaturaResponse</returns>
+        PageFaturaResponse ListarFaturasUsingGET1 (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Listar faturas de um cliente.
+        /// </summary>
+        /// <remarks>
+        /// Lista faturas de um cliente.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>ApiResponse of PageFaturaResponse</returns>
+        ApiResponse<PageFaturaResponse> ListarFaturasUsingGET1WithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Permite visualizar o extrato da fatura em formato PDF
         /// </summary>
         /// <remarks>
@@ -100,6 +154,30 @@ namespace Conductor.Pier.Api
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Consulta fatura de um cliente
+        /// </summary>
+        /// <remarks>
+        /// Consulta fatura de um cliente pela data de vencimento.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <returns>Task of FaturaDetalheResponse</returns>
+        System.Threading.Tasks.Task<FaturaDetalheResponse> ConsultarFaturaUsingGET1Async (string dataVencimento, long? idConta);
+
+        /// <summary>
+        /// Consulta fatura de um cliente
+        /// </summary>
+        /// <remarks>
+        /// Consulta fatura de um cliente pela data de vencimento.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <returns>Task of ApiResponse (FaturaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaturaDetalheResponse>> ConsultarFaturaUsingGET1AsyncWithHttpInfo (string dataVencimento, long? idConta);
         
         /// <summary>
         /// Listar planos de parcelamento
@@ -156,6 +234,36 @@ namespace Conductor.Pier.Api
         /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EnviarFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento, string email = null);
+        
+        /// <summary>
+        /// Listar faturas de um cliente.
+        /// </summary>
+        /// <remarks>
+        /// Lista faturas de um cliente.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of PageFaturaResponse</returns>
+        System.Threading.Tasks.Task<PageFaturaResponse> ListarFaturasUsingGET1Async (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Listar faturas de um cliente.
+        /// </summary>
+        /// <remarks>
+        /// Lista faturas de um cliente.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageFaturaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageFaturaResponse>> ListarFaturasUsingGET1AsyncWithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Permite visualizar o extrato da fatura em formato PDF
@@ -272,6 +380,176 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// Consulta fatura de um cliente Consulta fatura de um cliente pela data de vencimento.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param> 
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <returns>FaturaDetalheResponse</returns>
+        public FaturaDetalheResponse ConsultarFaturaUsingGET1 (string dataVencimento, long? idConta)
+        {
+             ApiResponse<FaturaDetalheResponse> localVarResponse = ConsultarFaturaUsingGET1WithHttpInfo(dataVencimento, idConta);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta fatura de um cliente Consulta fatura de um cliente pela data de vencimento.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param> 
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <returns>ApiResponse of FaturaDetalheResponse</returns>
+        public ApiResponse< FaturaDetalheResponse > ConsultarFaturaUsingGET1WithHttpInfo (string dataVencimento, long? idConta)
+        {
+            
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null)
+                throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling FaturaApi->ConsultarFaturaUsingGET1");
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling FaturaApi->ConsultarFaturaUsingGET1");
+            
+    
+            var localVarPath = "/api/faturas/{dataVencimento}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (dataVencimento != null) localVarPathParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // path parameter
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFaturaUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFaturaUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<FaturaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaturaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaturaDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta fatura de um cliente Consulta fatura de um cliente pela data de vencimento.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <returns>Task of FaturaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<FaturaDetalheResponse> ConsultarFaturaUsingGET1Async (string dataVencimento, long? idConta)
+        {
+             ApiResponse<FaturaDetalheResponse> localVarResponse = await ConsultarFaturaUsingGET1AsyncWithHttpInfo(dataVencimento, idConta);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta fatura de um cliente Consulta fatura de um cliente pela data de vencimento.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">Data Vencimento</param>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <returns>Task of ApiResponse (FaturaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaturaDetalheResponse>> ConsultarFaturaUsingGET1AsyncWithHttpInfo (string dataVencimento, long? idConta)
+        {
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarFaturaUsingGET1");
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarFaturaUsingGET1");
+            
+    
+            var localVarPath = "/api/faturas/{dataVencimento}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (dataVencimento != null) localVarPathParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // path parameter
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFaturaUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFaturaUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FaturaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaturaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaturaDetalheResponse)));
+            
+        }
         
         /// <summary>
         /// Listar planos de parcelamento Lista os planos de parcelamento da fatura de uma conta.
@@ -634,6 +912,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Listar faturas de um cliente. Lista faturas de um cliente.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param> 
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <returns>PageFaturaResponse</returns>
+        public PageFaturaResponse ListarFaturasUsingGET1 (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageFaturaResponse> localVarResponse = ListarFaturasUsingGET1WithHttpInfo(idConta, situacaoProcessamento, sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar faturas de um cliente. Lista faturas de um cliente.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param> 
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <returns>ApiResponse of PageFaturaResponse</returns>
+        public ApiResponse< PageFaturaResponse > ListarFaturasUsingGET1WithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling FaturaApi->ListarFaturasUsingGET1");
+            
+    
+            var localVarPath = "/api/faturas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (situacaoProcessamento != null) localVarQueryParams.Add("situacaoProcessamento", Configuration.ApiClient.ParameterToString(situacaoProcessamento)); // query parameter
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageFaturaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageFaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaturaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar faturas de um cliente. Lista faturas de um cliente.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of PageFaturaResponse</returns>
+        public async System.Threading.Tasks.Task<PageFaturaResponse> ListarFaturasUsingGET1Async (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageFaturaResponse> localVarResponse = await ListarFaturasUsingGET1AsyncWithHttpInfo(idConta, situacaoProcessamento, sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar faturas de um cliente. Lista faturas de um cliente.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageFaturaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageFaturaResponse>> ListarFaturasUsingGET1AsyncWithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarFaturasUsingGET1");
+            
+    
+            var localVarPath = "/api/faturas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (situacaoProcessamento != null) localVarQueryParams.Add("situacaoProcessamento", Configuration.ApiClient.ParameterToString(situacaoProcessamento)); // query parameter
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFaturasUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageFaturaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageFaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFaturaResponse)));
             
         }
         

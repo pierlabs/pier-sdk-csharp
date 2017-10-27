@@ -445,8 +445,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
-        /// <returns>NotificacaoEmailResponse</returns>
-        NotificacaoEmailResponse NotificacaoEmailUsingPOST (NotificacaoEmailRequest request);
+        /// <returns>Object</returns>
+        Object NotificacaoEmailUsingPOST (NotificacaoEmailRequest request);
   
         /// <summary>
         /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
@@ -456,8 +456,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
-        /// <returns>ApiResponse of NotificacaoEmailResponse</returns>
-        ApiResponse<NotificacaoEmailResponse> NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request);
         
         /// <summary>
         /// Responder SMS
@@ -470,7 +470,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>NotificacaoSMSResponse</returns>
-        NotificacaoSMSResponse ResponderSMSUsingPOST (string nsu = null, string data = null, string resposta = null);
+        NotificacaoSMSResponse ResponderSMSGetUsingGET (string nsu = null, string data = null, string resposta = null);
   
         /// <summary>
         /// Responder SMS
@@ -483,7 +483,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
-        ApiResponse<NotificacaoSMSResponse> ResponderSMSUsingPOSTWithHttpInfo (string nsu = null, string data = null, string resposta = null);
+        ApiResponse<NotificacaoSMSResponse> ResponderSMSGetUsingGETWithHttpInfo (string nsu = null, string data = null, string resposta = null);
         
         /// <summary>
         /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
@@ -1105,8 +1105,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
-        /// <returns>Task of NotificacaoEmailResponse</returns>
-        System.Threading.Tasks.Task<NotificacaoEmailResponse> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request);
 
         /// <summary>
         /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
@@ -1116,8 +1116,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
-        /// <returns>Task of ApiResponse (NotificacaoEmailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NotificacaoEmailResponse>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request);
         
         /// <summary>
         /// Responder SMS
@@ -1130,7 +1130,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
-        System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSUsingPOSTAsync (string nsu = null, string data = null, string resposta = null);
+        System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSGetUsingGETAsync (string nsu = null, string data = null, string resposta = null);
 
         /// <summary>
         /// Responder SMS
@@ -1143,7 +1143,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null);
+        System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSGetUsingGETAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null);
         
         /// <summary>
         /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
@@ -4174,10 +4174,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
-        /// <returns>NotificacaoEmailResponse</returns>
-        public NotificacaoEmailResponse NotificacaoEmailUsingPOST (NotificacaoEmailRequest request)
+        /// <returns>Object</returns>
+        public Object NotificacaoEmailUsingPOST (NotificacaoEmailRequest request)
         {
-             ApiResponse<NotificacaoEmailResponse> localVarResponse = NotificacaoEmailUsingPOSTWithHttpInfo(request);
+             ApiResponse<Object> localVarResponse = NotificacaoEmailUsingPOSTWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -4186,8 +4186,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
-        /// <returns>ApiResponse of NotificacaoEmailResponse</returns>
-        public ApiResponse< NotificacaoEmailResponse > NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request)
         {
             
             // verify the required parameter 'request' is set
@@ -4248,9 +4248,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmailUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<NotificacaoEmailResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (NotificacaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificacaoEmailResponse)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -4260,10 +4260,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
-        /// <returns>Task of NotificacaoEmailResponse</returns>
-        public async System.Threading.Tasks.Task<NotificacaoEmailResponse> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request)
         {
-             ApiResponse<NotificacaoEmailResponse> localVarResponse = await NotificacaoEmailUsingPOSTAsyncWithHttpInfo(request);
+             ApiResponse<Object> localVarResponse = await NotificacaoEmailUsingPOSTAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -4273,8 +4273,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
-        /// <returns>Task of ApiResponse (NotificacaoEmailResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoEmailResponse>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoEmailUsingPOST");
@@ -4333,9 +4333,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmailUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<NotificacaoEmailResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (NotificacaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificacaoEmailResponse)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
@@ -4347,9 +4347,9 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param> 
         /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>NotificacaoSMSResponse</returns>
-        public NotificacaoSMSResponse ResponderSMSUsingPOST (string nsu = null, string data = null, string resposta = null)
+        public NotificacaoSMSResponse ResponderSMSGetUsingGET (string nsu = null, string data = null, string resposta = null)
         {
-             ApiResponse<NotificacaoSMSResponse> localVarResponse = ResponderSMSUsingPOSTWithHttpInfo(nsu, data, resposta);
+             ApiResponse<NotificacaoSMSResponse> localVarResponse = ResponderSMSGetUsingGETWithHttpInfo(nsu, data, resposta);
              return localVarResponse.Data;
         }
 
@@ -4361,7 +4361,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param> 
         /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
-        public ApiResponse< NotificacaoSMSResponse > ResponderSMSUsingPOSTWithHttpInfo (string nsu = null, string data = null, string resposta = null)
+        public ApiResponse< NotificacaoSMSResponse > ResponderSMSGetUsingGETWithHttpInfo (string nsu = null, string data = null, string resposta = null)
         {
             
     
@@ -4404,15 +4404,15 @@ namespace Conductor.Pier.Api
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGetUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGetUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<NotificacaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4429,9 +4429,9 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSUsingPOSTAsync (string nsu = null, string data = null, string resposta = null)
+        public async System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSGetUsingGETAsync (string nsu = null, string data = null, string resposta = null)
         {
-             ApiResponse<NotificacaoSMSResponse> localVarResponse = await ResponderSMSUsingPOSTAsyncWithHttpInfo(nsu, data, resposta);
+             ApiResponse<NotificacaoSMSResponse> localVarResponse = await ResponderSMSGetUsingGETAsyncWithHttpInfo(nsu, data, resposta);
              return localVarResponse.Data;
 
         }
@@ -4444,7 +4444,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSGetUsingGETAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null)
         {
             
     
@@ -4487,15 +4487,15 @@ namespace Conductor.Pier.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGetUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGetUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<NotificacaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

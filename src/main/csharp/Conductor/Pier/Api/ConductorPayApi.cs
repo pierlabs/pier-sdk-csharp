@@ -224,13 +224,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param>
+        /// <param name="deviceId">Device id criptografado (optional)</param>
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>PageCartaoPayResponse</returns>
-        PageCartaoPayResponse ListarUsingGET6 (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null);
+        PageCartaoPayResponse ListarUsingGET6 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
   
         /// <summary>
         /// Lista os cart\u00C3\u00B5es cadastrados
@@ -239,13 +240,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param>
+        /// <param name="deviceId">Device id criptografado (optional)</param>
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        ApiResponse<PageCartaoPayResponse> ListarUsingGET6WithHttpInfo (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null);
+        ApiResponse<PageCartaoPayResponse> ListarUsingGET6WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
         /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
@@ -482,13 +484,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param>
+        /// <param name="deviceId">Device id criptografado (optional)</param>
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET6Async (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null);
+        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET6Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
 
         /// <summary>
         /// Lista os cart\u00C3\u00B5es cadastrados
@@ -497,13 +500,14 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param>
+        /// <param name="deviceId">Device id criptografado (optional)</param>
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET6AsyncWithHttpInfo (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET6AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
         /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
@@ -2083,15 +2087,16 @@ namespace Conductor.Pier.Api
         /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param> 
+        /// <param name="deviceId">Device id criptografado (optional)</param> 
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param> 
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param> 
         /// <returns>PageCartaoPayResponse</returns>
-        public PageCartaoPayResponse ListarUsingGET6 (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null)
+        public PageCartaoPayResponse ListarUsingGET6 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET6WithHttpInfo(deviceId, sort, page, limit, status);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET6WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
         }
 
@@ -2099,18 +2104,15 @@ namespace Conductor.Pier.Api
         /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param> 
+        /// <param name="deviceId">Device id criptografado (optional)</param> 
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param> 
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param> 
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        public ApiResponse< PageCartaoPayResponse > ListarUsingGET6WithHttpInfo (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null)
+        public ApiResponse< PageCartaoPayResponse > ListarUsingGET6WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-            
-            // verify the required parameter 'deviceId' is set
-            if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->ListarUsingGET6");
             
     
             var localVarPath = "/api/cartoes-tokenizados";
@@ -2144,6 +2146,7 @@ namespace Conductor.Pier.Api
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            if (numeroCartao != null) localVarQueryParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
             
             if (deviceId != null) localVarHeaderParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // header parameter
             
@@ -2175,15 +2178,16 @@ namespace Conductor.Pier.Api
         /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param>
+        /// <param name="deviceId">Device id criptografado (optional)</param>
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET6Async (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null)
+        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET6Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(deviceId, sort, page, limit, status);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
 
         }
@@ -2192,16 +2196,15 @@ namespace Conductor.Pier.Api
         /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device id criptografado</param>
+        /// <param name="deviceId">Device id criptografado (optional)</param>
         /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET6AsyncWithHttpInfo (string deviceId, List<string> sort = null, int? page = null, int? limit = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET6AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-            // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ListarUsingGET6");
             
     
             var localVarPath = "/api/cartoes-tokenizados";
@@ -2235,6 +2238,7 @@ namespace Conductor.Pier.Api
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            if (numeroCartao != null) localVarQueryParams.Add("numeroCartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
             
             if (deviceId != null) localVarHeaderParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // header parameter
             

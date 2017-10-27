@@ -24,9 +24,8 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="IdProduto">C\u00C3\u00B3digo identificador do produto. (required).</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo identificador da origem comercial..</param>
-        /// <param name="LimiteGlobal">Valor do novo limite Global..</param>
 
-        public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null, double? LimiteGlobal = null)
+        public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null)
         {
             // to ensure "IdProduto" is required (not null)
             if (IdProduto == null)
@@ -38,7 +37,6 @@ namespace Conductor.Pier.Model
                 this.IdProduto = IdProduto;
             }
             this.IdOrigemComercial = IdOrigemComercial;
-            this.LimiteGlobal = LimiteGlobal;
             
         }
         
@@ -58,13 +56,6 @@ namespace Conductor.Pier.Model
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Valor do novo limite Global.
-        /// </summary>
-        /// <value>Valor do novo limite Global.</value>
-        [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
-        public double? LimiteGlobal { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,7 +65,6 @@ namespace Conductor.Pier.Model
             sb.Append("class AlterarProdutoRequest {\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
-            sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -121,11 +111,6 @@ namespace Conductor.Pier.Model
                     this.IdOrigemComercial == other.IdOrigemComercial ||
                     this.IdOrigemComercial != null &&
                     this.IdOrigemComercial.Equals(other.IdOrigemComercial)
-                ) && 
-                (
-                    this.LimiteGlobal == other.LimiteGlobal ||
-                    this.LimiteGlobal != null &&
-                    this.LimiteGlobal.Equals(other.LimiteGlobal)
                 );
         }
 
@@ -146,9 +131,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdOrigemComercial != null)
                     hash = hash * 59 + this.IdOrigemComercial.GetHashCode();
-                
-                if (this.LimiteGlobal != null)
-                    hash = hash * 59 + this.LimiteGlobal.GetHashCode();
                 
                 return hash;
             }

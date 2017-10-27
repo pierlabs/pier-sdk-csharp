@@ -224,6 +224,30 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> AtribuirAssinaturaClienteUsingPOSTWithHttpInfo (long? id, AtribuirAssinaturaClientePersist body);
         
         /// <summary>
+        /// Atualiza conta integrada com o emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param>
+        /// <returns>IntegracaoEmissorResponse</returns>
+        IntegracaoEmissorResponse AtualizarUsingPOST (long? id, IntegracaoEmissorPersist body = null);
+  
+        /// <summary>
+        /// Atualiza conta integrada com o emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param>
+        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
+        ApiResponse<IntegracaoEmissorResponse> AtualizarUsingPOSTWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
+        
+        /// <summary>
         /// Realiza o cadastro de Adicionais para uma Conta
         /// </summary>
         /// <remarks>
@@ -1056,6 +1080,30 @@ namespace Conductor.Pier.Api
         /// <param name="body">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAssinaturaClienteUsingPOSTAsyncWithHttpInfo (long? id, AtribuirAssinaturaClientePersist body);
+        
+        /// <summary>
+        /// Atualiza conta integrada com o emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param>
+        /// <returns>Task of IntegracaoEmissorResponse</returns>
+        System.Threading.Tasks.Task<IntegracaoEmissorResponse> AtualizarUsingPOSTAsync (long? id, IntegracaoEmissorPersist body = null);
+
+        /// <summary>
+        /// Atualiza conta integrada com o emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param>
+        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarUsingPOSTAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
         
         /// <summary>
         /// Realiza o cadastro de Adicionais para uma Conta
@@ -3000,6 +3048,182 @@ namespace Conductor.Pier.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param> 
+        /// <returns>IntegracaoEmissorResponse</returns>
+        public IntegracaoEmissorResponse AtualizarUsingPOST (long? id, IntegracaoEmissorPersist body = null)
+        {
+             ApiResponse<IntegracaoEmissorResponse> localVarResponse = AtualizarUsingPOSTWithHttpInfo(id, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param> 
+        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
+        public ApiResponse< IntegracaoEmissorResponse > AtualizarUsingPOSTWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AtualizarUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/atualizar-registro-integracao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param>
+        /// <returns>Task of IntegracaoEmissorResponse</returns>
+        public async System.Threading.Tasks.Task<IntegracaoEmissorResponse> AtualizarUsingPOSTAsync (long? id, IntegracaoEmissorPersist body = null)
+        {
+             ApiResponse<IntegracaoEmissorResponse> localVarResponse = await AtualizarUsingPOSTAsyncWithHttpInfo(id, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="body">Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada (optional)</param>
+        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarUsingPOSTAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/atualizar-registro-integracao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
             
         }
         

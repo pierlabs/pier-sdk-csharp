@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="Fatura">Apresenta os detalhes da fatura.</param>
         /// <param name="Transacoes">Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura..</param>
 
-        public DetalhesFaturaResponse(FaturaResponse Fatura = null, List<TransacoesCorrentesResponse> Transacoes = null)
+        public DetalhesFaturaResponse(FaturaFechadaResponse Fatura = null, List<TransacoesCorrentesResponse> Transacoes = null)
         {
             this.Fatura = Fatura;
             this.Transacoes = Transacoes;
@@ -38,7 +38,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta os detalhes da fatura</value>
         [DataMember(Name="fatura", EmitDefaultValue=false)]
-        public FaturaResponse Fatura { get; set; }
+        public FaturaFechadaResponse Fatura { get; set; }
     
         /// <summary>
         /// Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.

@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+    /// Lista de faturas
     /// </summary>
     [DataContract]
-    public partial class PageFaturaResponse :  IEquatable<PageFaturaResponse>
+    public partial class PageFaturaFechadaResponse :  IEquatable<PageFaturaFechadaResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageFaturaResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageFaturaResponse" />class.
+        /// Initializes a new instance of the <see cref="PageFaturaFechadaResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageFaturaFechadaResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageFaturaResponse(List<FaturaResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageFaturaFechadaResponse(List<FaturaFechadaResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<FaturaResponse> Content { get; set; }
+        public List<FaturaFechadaResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageFaturaResponse {\n");
+            sb.Append("class PageFaturaFechadaResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageFaturaResponse);
+            return this.Equals(obj as PageFaturaFechadaResponse);
         }
 
         /// <summary>
-        /// Returns true if PageFaturaResponse instances are equal
+        /// Returns true if PageFaturaFechadaResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageFaturaResponse to be compared</param>
+        /// <param name="other">Instance of PageFaturaFechadaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageFaturaResponse other)
+        public bool Equals(PageFaturaFechadaResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

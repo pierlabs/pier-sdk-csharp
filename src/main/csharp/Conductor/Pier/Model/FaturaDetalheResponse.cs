@@ -12,10 +12,10 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Fatura futura
+    /// Detalhes da fatura
     /// </summary>
     [DataContract]
-    public partial class FaturaResponse :  IEquatable<FaturaResponse>
+    public partial class FaturaDetalheResponse :  IEquatable<FaturaDetalheResponse>
     { 
     
         /// <summary>
@@ -44,9 +44,10 @@ namespace Conductor.Pier.Model
         public SituacaoProcessamentoEnum? SituacaoProcessamento { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaturaResponse" /> class.
-        /// Initializes a new instance of the <see cref="FaturaResponse" />class.
+        /// Initializes a new instance of the <see cref="FaturaDetalheResponse" /> class.
+        /// Initializes a new instance of the <see cref="FaturaDetalheResponse" />class.
         /// </summary>
+        /// <param name="LancamentosFaturaResponse">LancamentosFaturaResponse.</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta..</param>
         /// <param name="SituacaoProcessamento">Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura..</param>
         /// <param name="PagamentoEfetuado">Status de pagamento efetuado..</param>
@@ -56,8 +57,9 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTotal">Valor total da fatura..</param>
         /// <param name="ValorPagamentoMinimo">Valor do pagamento m\u00C3\u00ADnimo..</param>
 
-        public FaturaResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null)
+        public FaturaDetalheResponse(List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null)
         {
+            this.LancamentosFaturaResponse = LancamentosFaturaResponse;
             this.IdConta = IdConta;
             this.SituacaoProcessamento = SituacaoProcessamento;
             this.PagamentoEfetuado = PagamentoEfetuado;
@@ -69,6 +71,12 @@ namespace Conductor.Pier.Model
             
         }
         
+    
+        /// <summary>
+        /// Gets or Sets LancamentosFaturaResponse
+        /// </summary>
+        [DataMember(Name="lancamentosFaturaResponse", EmitDefaultValue=false)]
+        public List<LancamentoFaturaResponse> LancamentosFaturaResponse { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
@@ -126,7 +134,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FaturaResponse {\n");
+            sb.Append("class FaturaDetalheResponse {\n");
+            sb.Append("  LancamentosFaturaResponse: ").Append(LancamentosFaturaResponse).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  SituacaoProcessamento: ").Append(SituacaoProcessamento).Append("\n");
             sb.Append("  PagamentoEfetuado: ").Append(PagamentoEfetuado).Append("\n");
@@ -157,21 +166,26 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FaturaResponse);
+            return this.Equals(obj as FaturaDetalheResponse);
         }
 
         /// <summary>
-        /// Returns true if FaturaResponse instances are equal
+        /// Returns true if FaturaDetalheResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of FaturaResponse to be compared</param>
+        /// <param name="other">Instance of FaturaDetalheResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FaturaResponse other)
+        public bool Equals(FaturaDetalheResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
+                (
+                    this.LancamentosFaturaResponse == other.LancamentosFaturaResponse ||
+                    this.LancamentosFaturaResponse != null &&
+                    this.LancamentosFaturaResponse.SequenceEqual(other.LancamentosFaturaResponse)
+                ) && 
                 (
                     this.IdConta == other.IdConta ||
                     this.IdConta != null &&
@@ -225,6 +239,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.LancamentosFaturaResponse != null)
+                    hash = hash * 59 + this.LancamentosFaturaResponse.GetHashCode();
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();

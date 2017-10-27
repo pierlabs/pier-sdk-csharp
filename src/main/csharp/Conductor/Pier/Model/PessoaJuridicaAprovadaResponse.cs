@@ -42,11 +42,12 @@ namespace Conductor.Pier.Model
         /// <param name="Telefones">Apresenta os telefones da empresa.</param>
         /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros.</param>
         /// <param name="Socios">Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista.</param>
+        /// <param name="Referencias">Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista.</param>
         /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
         /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es (required).</param>
         /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras (required).</param>
 
-        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, List<SocioAprovadoResponse> Socios = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null)
+        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, List<SocioAprovadoResponse> Socios = null, List<ReferenciaComercialAprovadoResponse> Referencias = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null)
         {
             // to ensure "LimiteGlobal" is required (not null)
             if (LimiteGlobal == null)
@@ -95,6 +96,7 @@ namespace Conductor.Pier.Model
             this.Telefones = Telefones;
             this.Enderecos = Enderecos;
             this.Socios = Socios;
+            this.Referencias = Referencias;
             
         }
         
@@ -240,6 +242,13 @@ namespace Conductor.Pier.Model
         public List<SocioAprovadoResponse> Socios { get; set; }
     
         /// <summary>
+        /// Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+        /// </summary>
+        /// <value>Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista</value>
+        [DataMember(Name="referencias", EmitDefaultValue=false)]
+        public List<ReferenciaComercialAprovadoResponse> Referencias { get; set; }
+    
+        /// <summary>
         /// Valor do Limite Global
         /// </summary>
         /// <value>Valor do Limite Global</value>
@@ -288,6 +297,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             sb.Append("  Enderecos: ").Append(Enderecos).Append("\n");
             sb.Append("  Socios: ").Append(Socios).Append("\n");
+            sb.Append("  Referencias: ").Append(Referencias).Append("\n");
             sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
             sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
             sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
@@ -429,6 +439,11 @@ namespace Conductor.Pier.Model
                     this.Socios.SequenceEqual(other.Socios)
                 ) && 
                 (
+                    this.Referencias == other.Referencias ||
+                    this.Referencias != null &&
+                    this.Referencias.SequenceEqual(other.Referencias)
+                ) && 
+                (
                     this.LimiteGlobal == other.LimiteGlobal ||
                     this.LimiteGlobal != null &&
                     this.LimiteGlobal.Equals(other.LimiteGlobal)
@@ -516,6 +531,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Socios != null)
                     hash = hash * 59 + this.Socios.GetHashCode();
+                
+                if (this.Referencias != null)
+                    hash = hash * 59 + this.Referencias.GetHashCode();
                 
                 if (this.LimiteGlobal != null)
                     hash = hash * 59 + this.LimiteGlobal.GetHashCode();

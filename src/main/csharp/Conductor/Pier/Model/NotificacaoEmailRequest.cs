@@ -19,60 +19,23 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <value>Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum TipoLayoutEnum {
-            
-            [EnumMember(Value = "RECUPERAR_SENHA")]
-            RecuperarSenha,
-            
-            [EnumMember(Value = "FATURA_POR_EMAIL")]
-            FaturaPorEmail,
-            
-            [EnumMember(Value = "VALIDAR_DISPOSITIVO")]
-            ValidarDispositivo,
-            
-            [EnumMember(Value = "NOTIFICACAO_EMAIL")]
-            NotificacaoEmail
-        }
-
-    
-        /// <summary>
-        /// Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <value>Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
-        [DataMember(Name="tipoLayout", EmitDefaultValue=false)]
-        public TipoLayoutEnum? TipoLayout { get; set; }
-    
-        /// <summary>
         /// Initializes a new instance of the <see cref="NotificacaoEmailRequest" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoEmailRequest" />class.
         /// </summary>
-        /// <param name="IdDocumento">ID para o documento a ser enviado..</param>
         /// <param name="IdTemplateNotificacao">ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="Destinatario">Email do destinat\u00C3\u00A1rio..</param>
-        /// <param name="TipoLayout">Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Destinatarios">Lista de email(s) do(s) destinat\u00C3\u00A1rio(s)..</param>
+        /// <param name="Anexos">Lista de ids dos anexos a serem enviados..</param>
         /// <param name="ParametrosConteudo">Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public NotificacaoEmailRequest(long? IdDocumento = null, long? IdTemplateNotificacao = null, string Destinatario = null, TipoLayoutEnum? TipoLayout = null, Dictionary<string, Object> ParametrosConteudo = null)
+        public NotificacaoEmailRequest(long? IdTemplateNotificacao = null, List<string> Destinatarios = null, List<AnexoNotificacaoEmailRequest> Anexos = null, Dictionary<string, Object> ParametrosConteudo = null)
         {
-            this.IdDocumento = IdDocumento;
             this.IdTemplateNotificacao = IdTemplateNotificacao;
-            this.Destinatario = Destinatario;
-            this.TipoLayout = TipoLayout;
+            this.Destinatarios = Destinatarios;
+            this.Anexos = Anexos;
             this.ParametrosConteudo = ParametrosConteudo;
             
         }
         
-    
-        /// <summary>
-        /// ID para o documento a ser enviado.
-        /// </summary>
-        /// <value>ID para o documento a ser enviado.</value>
-        [DataMember(Name="idDocumento", EmitDefaultValue=false)]
-        public long? IdDocumento { get; set; }
     
         /// <summary>
         /// ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
@@ -82,11 +45,18 @@ namespace Conductor.Pier.Model
         public long? IdTemplateNotificacao { get; set; }
     
         /// <summary>
-        /// Email do destinat\u00C3\u00A1rio.
+        /// Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
         /// </summary>
-        /// <value>Email do destinat\u00C3\u00A1rio.</value>
-        [DataMember(Name="destinatario", EmitDefaultValue=false)]
-        public string Destinatario { get; set; }
+        /// <value>Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).</value>
+        [DataMember(Name="destinatarios", EmitDefaultValue=false)]
+        public List<string> Destinatarios { get; set; }
+    
+        /// <summary>
+        /// Lista de ids dos anexos a serem enviados.
+        /// </summary>
+        /// <value>Lista de ids dos anexos a serem enviados.</value>
+        [DataMember(Name="anexos", EmitDefaultValue=false)]
+        public List<AnexoNotificacaoEmailRequest> Anexos { get; set; }
     
         /// <summary>
         /// Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
@@ -103,10 +73,9 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NotificacaoEmailRequest {\n");
-            sb.Append("  IdDocumento: ").Append(IdDocumento).Append("\n");
             sb.Append("  IdTemplateNotificacao: ").Append(IdTemplateNotificacao).Append("\n");
-            sb.Append("  Destinatario: ").Append(Destinatario).Append("\n");
-            sb.Append("  TipoLayout: ").Append(TipoLayout).Append("\n");
+            sb.Append("  Destinatarios: ").Append(Destinatarios).Append("\n");
+            sb.Append("  Anexos: ").Append(Anexos).Append("\n");
             sb.Append("  ParametrosConteudo: ").Append(ParametrosConteudo).Append("\n");
             
             sb.Append("}\n");
@@ -146,24 +115,19 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdDocumento == other.IdDocumento ||
-                    this.IdDocumento != null &&
-                    this.IdDocumento.Equals(other.IdDocumento)
-                ) && 
-                (
                     this.IdTemplateNotificacao == other.IdTemplateNotificacao ||
                     this.IdTemplateNotificacao != null &&
                     this.IdTemplateNotificacao.Equals(other.IdTemplateNotificacao)
                 ) && 
                 (
-                    this.Destinatario == other.Destinatario ||
-                    this.Destinatario != null &&
-                    this.Destinatario.Equals(other.Destinatario)
+                    this.Destinatarios == other.Destinatarios ||
+                    this.Destinatarios != null &&
+                    this.Destinatarios.SequenceEqual(other.Destinatarios)
                 ) && 
                 (
-                    this.TipoLayout == other.TipoLayout ||
-                    this.TipoLayout != null &&
-                    this.TipoLayout.Equals(other.TipoLayout)
+                    this.Anexos == other.Anexos ||
+                    this.Anexos != null &&
+                    this.Anexos.SequenceEqual(other.Anexos)
                 ) && 
                 (
                     this.ParametrosConteudo == other.ParametrosConteudo ||
@@ -184,17 +148,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdDocumento != null)
-                    hash = hash * 59 + this.IdDocumento.GetHashCode();
-                
                 if (this.IdTemplateNotificacao != null)
                     hash = hash * 59 + this.IdTemplateNotificacao.GetHashCode();
                 
-                if (this.Destinatario != null)
-                    hash = hash * 59 + this.Destinatario.GetHashCode();
+                if (this.Destinatarios != null)
+                    hash = hash * 59 + this.Destinatarios.GetHashCode();
                 
-                if (this.TipoLayout != null)
-                    hash = hash * 59 + this.TipoLayout.GetHashCode();
+                if (this.Anexos != null)
+                    hash = hash * 59 + this.Anexos.GetHashCode();
                 
                 if (this.ParametrosConteudo != null)
                     hash = hash * 59 + this.ParametrosConteudo.GetHashCode();

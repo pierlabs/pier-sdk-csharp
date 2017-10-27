@@ -139,8 +139,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
-        /// <returns>string</returns>
-        string IntegrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest);
+        /// <returns>DocumentoIntegracaoResponse</returns>
+        DocumentoIntegracaoResponse IntegrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest);
   
         /// <summary>
         /// Integra um arquivo a reposit\u00C3\u00B3rios remotos.
@@ -150,8 +150,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> IntegrarUsingPOSTWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
+        /// <returns>ApiResponse of DocumentoIntegracaoResponse</returns>
+        ApiResponse<DocumentoIntegracaoResponse> IntegrarUsingPOSTWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
         
         /// <summary>
         /// Lista documentos
@@ -431,8 +431,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> IntegrarUsingPOSTAsync (IntegrarDocumentoRequest integrarDocumentoRequest);
+        /// <returns>Task of DocumentoIntegracaoResponse</returns>
+        System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarUsingPOSTAsync (IntegrarDocumentoRequest integrarDocumentoRequest);
 
         /// <summary>
         /// Integra um arquivo a reposit\u00C3\u00B3rios remotos.
@@ -442,8 +442,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
+        /// <returns>Task of ApiResponse (DocumentoIntegracaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
         
         /// <summary>
         /// Lista documentos
@@ -1532,10 +1532,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param> 
-        /// <returns>string</returns>
-        public string IntegrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest)
+        /// <returns>DocumentoIntegracaoResponse</returns>
+        public DocumentoIntegracaoResponse IntegrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
-             ApiResponse<string> localVarResponse = IntegrarUsingPOSTWithHttpInfo(integrarDocumentoRequest);
+             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = IntegrarUsingPOSTWithHttpInfo(integrarDocumentoRequest);
              return localVarResponse.Data;
         }
 
@@ -1544,8 +1544,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > IntegrarUsingPOSTWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
+        /// <returns>ApiResponse of DocumentoIntegracaoResponse</returns>
+        public ApiResponse< DocumentoIntegracaoResponse > IntegrarUsingPOSTWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
             
             // verify the required parameter 'integrarDocumentoRequest' is set
@@ -1606,9 +1606,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<DocumentoIntegracaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (DocumentoIntegracaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentoIntegracaoResponse)));
             
         }
 
@@ -1618,10 +1618,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> IntegrarUsingPOSTAsync (IntegrarDocumentoRequest integrarDocumentoRequest)
+        /// <returns>Task of DocumentoIntegracaoResponse</returns>
+        public async System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarUsingPOSTAsync (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
-             ApiResponse<string> localVarResponse = await IntegrarUsingPOSTAsyncWithHttpInfo(integrarDocumentoRequest);
+             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = await IntegrarUsingPOSTAsyncWithHttpInfo(integrarDocumentoRequest);
              return localVarResponse.Data;
 
         }
@@ -1631,8 +1631,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
+        /// <returns>Task of ApiResponse (DocumentoIntegracaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
             // verify the required parameter 'integrarDocumentoRequest' is set
             if (integrarDocumentoRequest == null) throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling IntegrarUsingPOST");
@@ -1691,9 +1691,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<DocumentoIntegracaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (DocumentoIntegracaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentoIntegracaoResponse)));
             
         }
         
