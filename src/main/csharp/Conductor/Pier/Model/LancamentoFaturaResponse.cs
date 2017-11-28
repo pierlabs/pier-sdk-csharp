@@ -46,8 +46,9 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroCartaoMascarado">N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado.</param>
         /// <param name="FlagSolicitouContestacao">Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="ValorTaxaEmbarque">Valor da taxa de embarque.</param>
+        /// <param name="DescricaoAbreviada">Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o.</param>
 
-        public LancamentoFaturaResponse(long? IdTransacao = null, string DescricaoTipoTransacao = null, long? IdTipoEvento = null, string DescricaoTipoEvento = null, long? IdEvento = null, long? IdConta = null, string Complemento = null, double? ValorBRL = null, double? ValorUSD = null, int? NumeroParcela = null, int? QuantidadeParcelas = null, string DataHoraTransacao = null, string NomeEstabelecimento = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, bool? FlagCredito = null, long? IdMCC = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, bool? Titular = null, string NomePortador = null, string NumeroCartaoMascarado = null, bool? FlagSolicitouContestacao = null, double? ValorTaxaEmbarque = null)
+        public LancamentoFaturaResponse(long? IdTransacao = null, string DescricaoTipoTransacao = null, long? IdTipoEvento = null, string DescricaoTipoEvento = null, long? IdEvento = null, long? IdConta = null, string Complemento = null, double? ValorBRL = null, double? ValorUSD = null, int? NumeroParcela = null, int? QuantidadeParcelas = null, string DataHoraTransacao = null, string NomeEstabelecimento = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, bool? FlagCredito = null, long? IdMCC = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, bool? Titular = null, string NomePortador = null, string NumeroCartaoMascarado = null, bool? FlagSolicitouContestacao = null, double? ValorTaxaEmbarque = null, string DescricaoAbreviada = null)
         {
             this.IdTransacao = IdTransacao;
             this.DescricaoTipoTransacao = DescricaoTipoTransacao;
@@ -73,6 +74,7 @@ namespace Conductor.Pier.Model
             this.NumeroCartaoMascarado = NumeroCartaoMascarado;
             this.FlagSolicitouContestacao = FlagSolicitouContestacao;
             this.ValorTaxaEmbarque = ValorTaxaEmbarque;
+            this.DescricaoAbreviada = DescricaoAbreviada;
             
         }
         
@@ -246,6 +248,13 @@ namespace Conductor.Pier.Model
         public double? ValorTaxaEmbarque { get; set; }
     
         /// <summary>
+        /// Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+        /// </summary>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        [DataMember(Name="descricaoAbreviada", EmitDefaultValue=false)]
+        public string DescricaoAbreviada { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -277,6 +286,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroCartaoMascarado: ").Append(NumeroCartaoMascarado).Append("\n");
             sb.Append("  FlagSolicitouContestacao: ").Append(FlagSolicitouContestacao).Append("\n");
             sb.Append("  ValorTaxaEmbarque: ").Append(ValorTaxaEmbarque).Append("\n");
+            sb.Append("  DescricaoAbreviada: ").Append(DescricaoAbreviada).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -433,6 +443,11 @@ namespace Conductor.Pier.Model
                     this.ValorTaxaEmbarque == other.ValorTaxaEmbarque ||
                     this.ValorTaxaEmbarque != null &&
                     this.ValorTaxaEmbarque.Equals(other.ValorTaxaEmbarque)
+                ) && 
+                (
+                    this.DescricaoAbreviada == other.DescricaoAbreviada ||
+                    this.DescricaoAbreviada != null &&
+                    this.DescricaoAbreviada.Equals(other.DescricaoAbreviada)
                 );
         }
 
@@ -519,6 +534,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorTaxaEmbarque != null)
                     hash = hash * 59 + this.ValorTaxaEmbarque.GetHashCode();
+                
+                if (this.DescricaoAbreviada != null)
+                    hash = hash * 59 + this.DescricaoAbreviada.GetHashCode();
                 
                 return hash;
             }

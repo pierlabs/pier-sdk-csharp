@@ -26,13 +26,17 @@ namespace Conductor.Pier.Model
         /// <param name="Terminal">N\u00C3\u00BAmero \u00C3\u00BAnico do terminal..</param>
         /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence..</param>
         /// <param name="IdEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence..</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o))..</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o))..</param>
 
-        public TerminalResponse(long? Id = null, string Terminal = null, long? NumeroEstabelecimento = null, long? IdEstabelecimento = null)
+        public TerminalResponse(long? Id = null, string Terminal = null, long? NumeroEstabelecimento = null, long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
             this.Id = Id;
             this.Terminal = Terminal;
             this.NumeroEstabelecimento = NumeroEstabelecimento;
             this.IdEstabelecimento = IdEstabelecimento;
+            this.FlagConsultaExtrato = FlagConsultaExtrato;
+            this.FlagTerminalVirtual = FlagTerminalVirtual;
             
         }
         
@@ -66,6 +70,20 @@ namespace Conductor.Pier.Model
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
+        /// Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// </summary>
+        /// <value>Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
+        public bool? FlagConsultaExtrato { get; set; }
+    
+        /// <summary>
+        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// </summary>
+        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
+        public bool? FlagTerminalVirtual { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +95,8 @@ namespace Conductor.Pier.Model
             sb.Append("  Terminal: ").Append(Terminal).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
             sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
+            sb.Append("  FlagConsultaExtrato: ").Append(FlagConsultaExtrato).Append("\n");
+            sb.Append("  FlagTerminalVirtual: ").Append(FlagTerminalVirtual).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -133,6 +153,16 @@ namespace Conductor.Pier.Model
                     this.IdEstabelecimento == other.IdEstabelecimento ||
                     this.IdEstabelecimento != null &&
                     this.IdEstabelecimento.Equals(other.IdEstabelecimento)
+                ) && 
+                (
+                    this.FlagConsultaExtrato == other.FlagConsultaExtrato ||
+                    this.FlagConsultaExtrato != null &&
+                    this.FlagConsultaExtrato.Equals(other.FlagConsultaExtrato)
+                ) && 
+                (
+                    this.FlagTerminalVirtual == other.FlagTerminalVirtual ||
+                    this.FlagTerminalVirtual != null &&
+                    this.FlagTerminalVirtual.Equals(other.FlagTerminalVirtual)
                 );
         }
 
@@ -159,6 +189,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdEstabelecimento != null)
                     hash = hash * 59 + this.IdEstabelecimento.GetHashCode();
+                
+                if (this.FlagConsultaExtrato != null)
+                    hash = hash * 59 + this.FlagConsultaExtrato.GetHashCode();
+                
+                if (this.FlagTerminalVirtual != null)
+                    hash = hash * 59 + this.FlagTerminalVirtual.GetHashCode();
                 
                 return hash;
             }

@@ -51,8 +51,9 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
         /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es (required).</param>
         /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras (required).</param>
+        /// <param name="LimiteConsignado">Valor do limite de margem consignado.</param>
 
-        public PessoaFisicaAprovadaPersist(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null)
+        public PessoaFisicaAprovadaPersist(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -155,6 +156,7 @@ namespace Conductor.Pier.Model
             this.CanalEntrada = CanalEntrada;
             this.ValorPontuacao = ValorPontuacao;
             this.Telefones = Telefones;
+            this.LimiteConsignado = LimiteConsignado;
             
         }
         
@@ -363,6 +365,13 @@ namespace Conductor.Pier.Model
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
+        /// Valor do limite de margem consignado
+        /// </summary>
+        /// <value>Valor do limite de margem consignado</value>
+        [DataMember(Name="limiteConsignado", EmitDefaultValue=false)]
+        public double? LimiteConsignado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -399,6 +408,7 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
             sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
             sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
+            sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -580,6 +590,11 @@ namespace Conductor.Pier.Model
                     this.LimiteParcelas == other.LimiteParcelas ||
                     this.LimiteParcelas != null &&
                     this.LimiteParcelas.Equals(other.LimiteParcelas)
+                ) && 
+                (
+                    this.LimiteConsignado == other.LimiteConsignado ||
+                    this.LimiteConsignado != null &&
+                    this.LimiteConsignado.Equals(other.LimiteConsignado)
                 );
         }
 
@@ -681,6 +696,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.LimiteParcelas != null)
                     hash = hash * 59 + this.LimiteParcelas.GetHashCode();
+                
+                if (this.LimiteConsignado != null)
+                    hash = hash * 59 + this.LimiteConsignado.GetHashCode();
                 
                 return hash;
             }

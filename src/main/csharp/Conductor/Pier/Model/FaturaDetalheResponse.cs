@@ -56,8 +56,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataFechamento">Data de fechamento da fatura..</param>
         /// <param name="ValorTotal">Valor total da fatura..</param>
         /// <param name="ValorPagamentoMinimo">Valor do pagamento m\u00C3\u00ADnimo..</param>
+        /// <param name="SaldoAnterior">Valor do saldo anterior..</param>
 
-        public FaturaDetalheResponse(List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null)
+        public FaturaDetalheResponse(List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, double? SaldoAnterior = null)
         {
             this.LancamentosFaturaResponse = LancamentosFaturaResponse;
             this.IdConta = IdConta;
@@ -68,6 +69,7 @@ namespace Conductor.Pier.Model
             this.DataFechamento = DataFechamento;
             this.ValorTotal = ValorTotal;
             this.ValorPagamentoMinimo = ValorPagamentoMinimo;
+            this.SaldoAnterior = SaldoAnterior;
             
         }
         
@@ -128,6 +130,13 @@ namespace Conductor.Pier.Model
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
+        /// Valor do saldo anterior.
+        /// </summary>
+        /// <value>Valor do saldo anterior.</value>
+        [DataMember(Name="saldoAnterior", EmitDefaultValue=false)]
+        public double? SaldoAnterior { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -144,6 +153,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataFechamento: ").Append(DataFechamento).Append("\n");
             sb.Append("  ValorTotal: ").Append(ValorTotal).Append("\n");
             sb.Append("  ValorPagamentoMinimo: ").Append(ValorPagamentoMinimo).Append("\n");
+            sb.Append("  SaldoAnterior: ").Append(SaldoAnterior).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -225,6 +235,11 @@ namespace Conductor.Pier.Model
                     this.ValorPagamentoMinimo == other.ValorPagamentoMinimo ||
                     this.ValorPagamentoMinimo != null &&
                     this.ValorPagamentoMinimo.Equals(other.ValorPagamentoMinimo)
+                ) && 
+                (
+                    this.SaldoAnterior == other.SaldoAnterior ||
+                    this.SaldoAnterior != null &&
+                    this.SaldoAnterior.Equals(other.SaldoAnterior)
                 );
         }
 
@@ -266,6 +281,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorPagamentoMinimo != null)
                     hash = hash * 59 + this.ValorPagamentoMinimo.GetHashCode();
+                
+                if (this.SaldoAnterior != null)
+                    hash = hash * 59 + this.SaldoAnterior.GetHashCode();
                 
                 return hash;
             }

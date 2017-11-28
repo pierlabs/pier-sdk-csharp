@@ -259,7 +259,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="persist">persist</param>
         /// <returns>CartaoPayCadastroResponse</returns>
-        CartaoPayCadastroResponse SalvarUsingPOST4 (string deviceId, CartaoPayPersist persist);
+        CartaoPayCadastroResponse SalvarUsingPOST5 (string deviceId, CartaoPayPersist persist);
   
         /// <summary>
         /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
@@ -271,7 +271,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of CartaoPayCadastroResponse</returns>
-        ApiResponse<CartaoPayCadastroResponse> SalvarUsingPOST4WithHttpInfo (string deviceId, CartaoPayPersist persist);
+        ApiResponse<CartaoPayCadastroResponse> SalvarUsingPOST5WithHttpInfo (string deviceId, CartaoPayPersist persist);
         
         #endregion Synchronous Operations
         
@@ -519,7 +519,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of CartaoPayCadastroResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST4Async (string deviceId, CartaoPayPersist persist);
+        System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST5Async (string deviceId, CartaoPayPersist persist);
 
         /// <summary>
         /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
@@ -531,7 +531,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (CartaoPayCadastroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST4AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST5AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -2272,9 +2272,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param> 
         /// <param name="persist">persist</param> 
         /// <returns>CartaoPayCadastroResponse</returns>
-        public CartaoPayCadastroResponse SalvarUsingPOST4 (string deviceId, CartaoPayPersist persist)
+        public CartaoPayCadastroResponse SalvarUsingPOST5 (string deviceId, CartaoPayPersist persist)
         {
-             ApiResponse<CartaoPayCadastroResponse> localVarResponse = SalvarUsingPOST4WithHttpInfo(deviceId, persist);
+             ApiResponse<CartaoPayCadastroResponse> localVarResponse = SalvarUsingPOST5WithHttpInfo(deviceId, persist);
              return localVarResponse.Data;
         }
 
@@ -2285,16 +2285,16 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of CartaoPayCadastroResponse</returns>
-        public ApiResponse< CartaoPayCadastroResponse > SalvarUsingPOST4WithHttpInfo (string deviceId, CartaoPayPersist persist)
+        public ApiResponse< CartaoPayCadastroResponse > SalvarUsingPOST5WithHttpInfo (string deviceId, CartaoPayPersist persist)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->SalvarUsingPOST4");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->SalvarUsingPOST5");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling ConductorPayApi->SalvarUsingPOST4");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling ConductorPayApi->SalvarUsingPOST5");
             
     
             var localVarPath = "/api/cartoes-tokenizados";
@@ -2347,9 +2347,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayCadastroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2365,9 +2365,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of CartaoPayCadastroResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST4Async (string deviceId, CartaoPayPersist persist)
+        public async System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST5Async (string deviceId, CartaoPayPersist persist)
         {
-             ApiResponse<CartaoPayCadastroResponse> localVarResponse = await SalvarUsingPOST4AsyncWithHttpInfo(deviceId, persist);
+             ApiResponse<CartaoPayCadastroResponse> localVarResponse = await SalvarUsingPOST5AsyncWithHttpInfo(deviceId, persist);
              return localVarResponse.Data;
 
         }
@@ -2379,12 +2379,12 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (CartaoPayCadastroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST4AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST5AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling SalvarUsingPOST4");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling SalvarUsingPOST5");
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST4");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST5");
             
     
             var localVarPath = "/api/cartoes-tokenizados";
@@ -2437,9 +2437,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayCadastroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

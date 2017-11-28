@@ -27,7 +27,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTotalComDesconto">Valor total antecipado com o desconto..</param>
         /// <param name="AntecipacoesSimuladas">Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas..</param>
 
-        public AntecipacaoSimuladaLoteResponse(double? ValorTotalAntecipado = null, double? ValorTotalDesconto = null, double? ValorTotalComDesconto = null, List<AntecipacaoSimuladaMockResponse> AntecipacoesSimuladas = null)
+        public AntecipacaoSimuladaLoteResponse(double? ValorTotalAntecipado = null, double? ValorTotalDesconto = null, double? ValorTotalComDesconto = null, List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas = null)
         {
             this.ValorTotalAntecipado = ValorTotalAntecipado;
             this.ValorTotalDesconto = ValorTotalDesconto;
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.</value>
         [DataMember(Name="antecipacoesSimuladas", EmitDefaultValue=false)]
-        public List<AntecipacaoSimuladaMockResponse> AntecipacoesSimuladas { get; set; }
+        public List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

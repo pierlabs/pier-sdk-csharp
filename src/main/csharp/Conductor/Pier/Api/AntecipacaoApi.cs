@@ -102,8 +102,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <returns>AntecipacaoMockResponse</returns>
-        AntecipacaoMockResponse EfetivarAntecipacoesUsingPOST (long? idConta, string complemento = null);
+        /// <returns>AntecipacaoResponse</returns>
+        AntecipacaoResponse EfetivarAntecipacoesUsingPOST (long? idConta, string complemento = null);
   
         /// <summary>
         /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
@@ -114,8 +114,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <returns>ApiResponse of AntecipacaoMockResponse</returns>
-        ApiResponse<AntecipacaoMockResponse> EfetivarAntecipacoesUsingPOSTWithHttpInfo (long? idConta, string complemento = null);
+        /// <returns>ApiResponse of AntecipacaoResponse</returns>
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesUsingPOSTWithHttpInfo (long? idConta, string complemento = null);
         
         /// <summary>
         /// Listar compras com parcelas antecip\u00C3\u00A1veis
@@ -292,8 +292,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <returns>Task of AntecipacaoMockResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoMockResponse> EfetivarAntecipacoesUsingPOSTAsync (long? idConta, string complemento = null);
+        /// <returns>Task of AntecipacaoResponse</returns>
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesUsingPOSTAsync (long? idConta, string complemento = null);
 
         /// <summary>
         /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
@@ -304,8 +304,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <returns>Task of ApiResponse (AntecipacaoMockResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoMockResponse>> EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo (long? idConta, string complemento = null);
+        /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo (long? idConta, string complemento = null);
         
         /// <summary>
         /// Listar compras com parcelas antecip\u00C3\u00A1veis
@@ -1031,10 +1031,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
-        /// <returns>AntecipacaoMockResponse</returns>
-        public AntecipacaoMockResponse EfetivarAntecipacoesUsingPOST (long? idConta, string complemento = null)
+        /// <returns>AntecipacaoResponse</returns>
+        public AntecipacaoResponse EfetivarAntecipacoesUsingPOST (long? idConta, string complemento = null)
         {
-             ApiResponse<AntecipacaoMockResponse> localVarResponse = EfetivarAntecipacoesUsingPOSTWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacoesUsingPOSTWithHttpInfo(idConta, complemento);
              return localVarResponse.Data;
         }
 
@@ -1044,8 +1044,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
-        /// <returns>ApiResponse of AntecipacaoMockResponse</returns>
-        public ApiResponse< AntecipacaoMockResponse > EfetivarAntecipacoesUsingPOSTWithHttpInfo (long? idConta, string complemento = null)
+        /// <returns>ApiResponse of AntecipacaoResponse</returns>
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesUsingPOSTWithHttpInfo (long? idConta, string complemento = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -1101,9 +1101,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<AntecipacaoMockResponse>(localVarStatusCode,
+            return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AntecipacaoMockResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoMockResponse)));
+                (AntecipacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoResponse)));
             
         }
 
@@ -1114,10 +1114,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <returns>Task of AntecipacaoMockResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoMockResponse> EfetivarAntecipacoesUsingPOSTAsync (long? idConta, string complemento = null)
+        /// <returns>Task of AntecipacaoResponse</returns>
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesUsingPOSTAsync (long? idConta, string complemento = null)
         {
-             ApiResponse<AntecipacaoMockResponse> localVarResponse = await EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo(idConta, complemento);
              return localVarResponse.Data;
 
         }
@@ -1128,8 +1128,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <returns>Task of ApiResponse (AntecipacaoMockResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoMockResponse>> EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo (long? idConta, string complemento = null)
+        /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo (long? idConta, string complemento = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacoesUsingPOST");
@@ -1183,9 +1183,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AntecipacaoMockResponse>(localVarStatusCode,
+            return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AntecipacaoMockResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoMockResponse)));
+                (AntecipacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoResponse)));
             
         }
         
