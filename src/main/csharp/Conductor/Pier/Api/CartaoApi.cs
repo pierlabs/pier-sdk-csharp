@@ -173,8 +173,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <returns>Object</returns>
-        Object ConsultarCartaoImpressaoUsingGET (long? id);
+        /// <returns>DadosCartaoImpressaoResponse</returns>
+        DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id);
   
         /// <summary>
         /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
@@ -184,8 +184,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id);
+        /// <returns>ApiResponse of DadosCartaoImpressaoResponse</returns>
+        ApiResponse<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar Detalhes do Cart\u00C3\u00A3o
@@ -835,8 +835,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConsultarCartaoImpressaoUsingGETAsync (long? id);
+        /// <returns>Task of DadosCartaoImpressaoResponse</returns>
+        System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id);
 
         /// <summary>
         /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
@@ -846,8 +846,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (DadosCartaoImpressaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar Detalhes do Cart\u00C3\u00A3o
@@ -2478,10 +2478,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
-        /// <returns>Object</returns>
-        public Object ConsultarCartaoImpressaoUsingGET (long? id)
+        /// <returns>DadosCartaoImpressaoResponse</returns>
+        public DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id)
         {
-             ApiResponse<Object> localVarResponse = ConsultarCartaoImpressaoUsingGETWithHttpInfo(id);
+             ApiResponse<DadosCartaoImpressaoResponse> localVarResponse = ConsultarCartaoImpressaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2490,8 +2490,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id)
+        /// <returns>ApiResponse of DadosCartaoImpressaoResponse</returns>
+        public ApiResponse< DadosCartaoImpressaoResponse > ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -2546,9 +2546,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarCartaoImpressaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DadosCartaoImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (DadosCartaoImpressaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCartaoImpressaoResponse)));
             
         }
 
@@ -2558,10 +2558,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConsultarCartaoImpressaoUsingGETAsync (long? id)
+        /// <returns>Task of DadosCartaoImpressaoResponse</returns>
+        public async System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo(id);
+             ApiResponse<DadosCartaoImpressaoResponse> localVarResponse = await ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2571,8 +2571,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (DadosCartaoImpressaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarCartaoImpressaoUsingGET");
@@ -2625,9 +2625,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarCartaoImpressaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DadosCartaoImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (DadosCartaoImpressaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosCartaoImpressaoResponse)));
             
         }
         

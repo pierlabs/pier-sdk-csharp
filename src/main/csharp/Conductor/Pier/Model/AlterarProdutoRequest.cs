@@ -24,8 +24,10 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="IdProduto">C\u00C3\u00B3digo identificador do produto. (required).</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo identificador da origem comercial..</param>
+        /// <param name="IdEstabelecimento">Identificador do estabelecimento..</param>
+        /// <param name="IdPromotor">Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento..</param>
 
-        public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null)
+        public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null, long? IdEstabelecimento = null, long? IdPromotor = null)
         {
             // to ensure "IdProduto" is required (not null)
             if (IdProduto == null)
@@ -37,6 +39,8 @@ namespace Conductor.Pier.Model
                 this.IdProduto = IdProduto;
             }
             this.IdOrigemComercial = IdOrigemComercial;
+            this.IdEstabelecimento = IdEstabelecimento;
+            this.IdPromotor = IdPromotor;
             
         }
         
@@ -56,6 +60,20 @@ namespace Conductor.Pier.Model
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
+        /// Identificador do estabelecimento.
+        /// </summary>
+        /// <value>Identificador do estabelecimento.</value>
+        [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
+        public long? IdEstabelecimento { get; set; }
+    
+        /// <summary>
+        /// Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+        /// </summary>
+        /// <value>Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.</value>
+        [DataMember(Name="idPromotor", EmitDefaultValue=false)]
+        public long? IdPromotor { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +83,8 @@ namespace Conductor.Pier.Model
             sb.Append("class AlterarProdutoRequest {\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  IdOrigemComercial: ").Append(IdOrigemComercial).Append("\n");
+            sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
+            sb.Append("  IdPromotor: ").Append(IdPromotor).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -111,6 +131,16 @@ namespace Conductor.Pier.Model
                     this.IdOrigemComercial == other.IdOrigemComercial ||
                     this.IdOrigemComercial != null &&
                     this.IdOrigemComercial.Equals(other.IdOrigemComercial)
+                ) && 
+                (
+                    this.IdEstabelecimento == other.IdEstabelecimento ||
+                    this.IdEstabelecimento != null &&
+                    this.IdEstabelecimento.Equals(other.IdEstabelecimento)
+                ) && 
+                (
+                    this.IdPromotor == other.IdPromotor ||
+                    this.IdPromotor != null &&
+                    this.IdPromotor.Equals(other.IdPromotor)
                 );
         }
 
@@ -131,6 +161,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdOrigemComercial != null)
                     hash = hash * 59 + this.IdOrigemComercial.GetHashCode();
+                
+                if (this.IdEstabelecimento != null)
+                    hash = hash * 59 + this.IdEstabelecimento.GetHashCode();
+                
+                if (this.IdPromotor != null)
+                    hash = hash * 59 + this.IdPromotor.GetHashCode();
                 
                 return hash;
             }
