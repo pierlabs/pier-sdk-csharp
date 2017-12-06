@@ -29,7 +29,7 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse AlterarUsingPUT18 (long? id, string tipoEvento, string url, string status = null);
+        WebHookResponse AlterarUsingPUT20 (long? id, string tipoEvento, string url, string status = null);
   
         /// <summary>
         /// Alterar Webhook
@@ -43,7 +43,7 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> AlterarUsingPUT18WithHttpInfo (long? id, string tipoEvento, string url, string status = null);
+        ApiResponse<WebHookResponse> AlterarUsingPUT20WithHttpInfo (long? id, string tipoEvento, string url, string status = null);
         
         /// <summary>
         /// Consultar Webhook
@@ -54,7 +54,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse ConsultarUsingGET38 (long? id);
+        WebHookResponse ConsultarUsingGET40 (long? id);
   
         /// <summary>
         /// Consultar Webhook
@@ -65,7 +65,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> ConsultarUsingGET38WithHttpInfo (long? id);
+        ApiResponse<WebHookResponse> ConsultarUsingGET40WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os Webhooks
@@ -82,7 +82,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>PageWebHookResponse</returns>
-        PageWebHookResponse ListarUsingGET44 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        PageWebHookResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
   
         /// <summary>
         /// Lista os Webhooks
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>ApiResponse of PageWebHookResponse</returns>
-        ApiResponse<PageWebHookResponse> ListarUsingGET44WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        ApiResponse<PageWebHookResponse> ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
@@ -111,7 +111,7 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse SalvarUsingPOST25 (string tipoEvento, string url);
+        WebHookResponse SalvarUsingPOST26 (string tipoEvento, string url);
   
         /// <summary>
         /// Salvar Webhook
@@ -123,7 +123,7 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> SalvarUsingPOST25WithHttpInfo (string tipoEvento, string url);
+        ApiResponse<WebHookResponse> SalvarUsingPOST26WithHttpInfo (string tipoEvento, string url);
         
         #endregion Synchronous Operations
         
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT18Async (long? id, string tipoEvento, string url, string status = null);
+        System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT20Async (long? id, string tipoEvento, string url, string status = null);
 
         /// <summary>
         /// Alterar Webhook
@@ -155,7 +155,7 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT18AsyncWithHttpInfo (long? id, string tipoEvento, string url, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT20AsyncWithHttpInfo (long? id, string tipoEvento, string url, string status = null);
         
         /// <summary>
         /// Consultar Webhook
@@ -166,7 +166,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET38Async (long? id);
+        System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET40Async (long? id);
 
         /// <summary>
         /// Consultar Webhook
@@ -177,7 +177,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET38AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET40AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os Webhooks
@@ -194,7 +194,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of PageWebHookResponse</returns>
-        System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET44Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
 
         /// <summary>
         /// Lista os Webhooks
@@ -211,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET44AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
@@ -223,7 +223,7 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST25Async (string tipoEvento, string url);
+        System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST26Async (string tipoEvento, string url);
 
         /// <summary>
         /// Salvar Webhook
@@ -235,7 +235,7 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST25AsyncWithHttpInfo (string tipoEvento, string url);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST26AsyncWithHttpInfo (string tipoEvento, string url);
         
         #endregion Asynchronous Operations
         
@@ -338,9 +338,9 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <param name="status">Status (optional)</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse AlterarUsingPUT18 (long? id, string tipoEvento, string url, string status = null)
+        public WebHookResponse AlterarUsingPUT20 (long? id, string tipoEvento, string url, string status = null)
         {
-             ApiResponse<WebHookResponse> localVarResponse = AlterarUsingPUT18WithHttpInfo(id, tipoEvento, url, status);
+             ApiResponse<WebHookResponse> localVarResponse = AlterarUsingPUT20WithHttpInfo(id, tipoEvento, url, status);
              return localVarResponse.Data;
         }
 
@@ -353,20 +353,20 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <param name="status">Status (optional)</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > AlterarUsingPUT18WithHttpInfo (long? id, string tipoEvento, string url, string status = null)
+        public ApiResponse< WebHookResponse > AlterarUsingPUT20WithHttpInfo (long? id, string tipoEvento, string url, string status = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->AlterarUsingPUT18");
+                throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->AlterarUsingPUT20");
             
             // verify the required parameter 'tipoEvento' is set
             if (tipoEvento == null)
-                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhookApi->AlterarUsingPUT18");
+                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhookApi->AlterarUsingPUT20");
             
             // verify the required parameter 'url' is set
             if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhookApi->AlterarUsingPUT18");
+                throw new ApiException(400, "Missing required parameter 'url' when calling WebhookApi->AlterarUsingPUT20");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -415,9 +415,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT18: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -435,9 +435,9 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT18Async (long? id, string tipoEvento, string url, string status = null)
+        public async System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT20Async (long? id, string tipoEvento, string url, string status = null)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await AlterarUsingPUT18AsyncWithHttpInfo(id, tipoEvento, url, status);
+             ApiResponse<WebHookResponse> localVarResponse = await AlterarUsingPUT20AsyncWithHttpInfo(id, tipoEvento, url, status);
              return localVarResponse.Data;
 
         }
@@ -451,14 +451,14 @@ namespace Conductor.Pier.Api
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT18AsyncWithHttpInfo (long? id, string tipoEvento, string url, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT20AsyncWithHttpInfo (long? id, string tipoEvento, string url, string status = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT18");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT20");
             // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling AlterarUsingPUT18");
+            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling AlterarUsingPUT20");
             // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling AlterarUsingPUT18");
+            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling AlterarUsingPUT20");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -507,9 +507,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT18: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -523,9 +523,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse ConsultarUsingGET38 (long? id)
+        public WebHookResponse ConsultarUsingGET40 (long? id)
         {
-             ApiResponse<WebHookResponse> localVarResponse = ConsultarUsingGET38WithHttpInfo(id);
+             ApiResponse<WebHookResponse> localVarResponse = ConsultarUsingGET40WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -535,12 +535,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > ConsultarUsingGET38WithHttpInfo (long? id)
+        public ApiResponse< WebHookResponse > ConsultarUsingGET40WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->ConsultarUsingGET38");
+                throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->ConsultarUsingGET40");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -586,9 +586,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -603,9 +603,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET38Async (long? id)
+        public async System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET40Async (long? id)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await ConsultarUsingGET38AsyncWithHttpInfo(id);
+             ApiResponse<WebHookResponse> localVarResponse = await ConsultarUsingGET40AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -616,10 +616,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET38AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET40AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET38");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET40");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -665,9 +665,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -687,9 +687,9 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
         /// <returns>PageWebHookResponse</returns>
-        public PageWebHookResponse ListarUsingGET44 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public PageWebHookResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHookResponse> localVarResponse = ListarUsingGET44WithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
+             ApiResponse<PageWebHookResponse> localVarResponse = ListarUsingGET46WithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
              return localVarResponse.Data;
         }
 
@@ -705,7 +705,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
         /// <returns>ApiResponse of PageWebHookResponse</returns>
-        public ApiResponse< PageWebHookResponse > ListarUsingGET44WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public ApiResponse< PageWebHookResponse > ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
             
     
@@ -758,9 +758,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageWebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -781,9 +781,9 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of PageWebHookResponse</returns>
-        public async System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET44Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public async System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHookResponse> localVarResponse = await ListarUsingGET44AsyncWithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
+             ApiResponse<PageWebHookResponse> localVarResponse = await ListarUsingGET46AsyncWithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
              return localVarResponse.Data;
 
         }
@@ -800,7 +800,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET44AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
             
     
@@ -853,9 +853,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageWebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -870,9 +870,9 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse SalvarUsingPOST25 (string tipoEvento, string url)
+        public WebHookResponse SalvarUsingPOST26 (string tipoEvento, string url)
         {
-             ApiResponse<WebHookResponse> localVarResponse = SalvarUsingPOST25WithHttpInfo(tipoEvento, url);
+             ApiResponse<WebHookResponse> localVarResponse = SalvarUsingPOST26WithHttpInfo(tipoEvento, url);
              return localVarResponse.Data;
         }
 
@@ -883,16 +883,16 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > SalvarUsingPOST25WithHttpInfo (string tipoEvento, string url)
+        public ApiResponse< WebHookResponse > SalvarUsingPOST26WithHttpInfo (string tipoEvento, string url)
         {
             
             // verify the required parameter 'tipoEvento' is set
             if (tipoEvento == null)
-                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhookApi->SalvarUsingPOST25");
+                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhookApi->SalvarUsingPOST26");
             
             // verify the required parameter 'url' is set
             if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhookApi->SalvarUsingPOST25");
+                throw new ApiException(400, "Missing required parameter 'url' when calling WebhookApi->SalvarUsingPOST26");
             
     
             var localVarPath = "/api/webhooks";
@@ -939,9 +939,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -957,9 +957,9 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST25Async (string tipoEvento, string url)
+        public async System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST26Async (string tipoEvento, string url)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await SalvarUsingPOST25AsyncWithHttpInfo(tipoEvento, url);
+             ApiResponse<WebHookResponse> localVarResponse = await SalvarUsingPOST26AsyncWithHttpInfo(tipoEvento, url);
              return localVarResponse.Data;
 
         }
@@ -971,12 +971,12 @@ namespace Conductor.Pier.Api
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
         /// <param name="url">URL que a ser consumida pelo WebHook</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST25AsyncWithHttpInfo (string tipoEvento, string url)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST26AsyncWithHttpInfo (string tipoEvento, string url)
         {
             // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling SalvarUsingPOST25");
+            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling SalvarUsingPOST26");
             // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling SalvarUsingPOST25");
+            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling SalvarUsingPOST26");
             
     
             var localVarPath = "/api/webhooks";
@@ -1023,9 +1023,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

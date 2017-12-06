@@ -53,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>PagePlataformaMobileResponse</returns>
-        PagePlataformaMobileResponse ListarUsingGET25 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        PagePlataformaMobileResponse ListarUsingGET26 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
   
         /// <summary>
         /// Lista as plataformas mobile cadastradas
@@ -67,7 +67,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET25WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET26WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET25Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET26Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
 
         /// <summary>
         /// Lista as plataformas mobile cadastradas
@@ -145,7 +145,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET25AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET26AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -452,9 +452,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param> 
         /// <returns>PagePlataformaMobileResponse</returns>
-        public PagePlataformaMobileResponse ListarUsingGET25 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public PagePlataformaMobileResponse ListarUsingGET26 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET25WithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET26WithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
         }
 
@@ -467,7 +467,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param> 
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET25WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET26WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -517,9 +517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -537,9 +537,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET25Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET26Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET25AsyncWithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET26AsyncWithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
 
         }
@@ -553,7 +553,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET25AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET26AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -603,9 +603,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

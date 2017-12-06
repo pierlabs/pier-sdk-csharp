@@ -46,7 +46,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorRenda">Apresenta o valor da renda compravada.</param>
         /// <param name="CanalEntrada">Indica o canal pelo qual o cadastro do cliente foi realizado.</param>
         /// <param name="ValorPontuacao">Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0).</param>
-        /// <param name="Telefones">Apresenta os telefones da empresa.</param>
+        /// <param name="Telefones">Apresenta os telefones da empresa (required).</param>
         /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros (required).</param>
         /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
         /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es (required).</param>
@@ -99,6 +99,15 @@ namespace Conductor.Pier.Model
             else
             {
                 this.DiaVencimento = DiaVencimento;
+            }
+            // to ensure "Telefones" is required (not null)
+            if (Telefones == null)
+            {
+                throw new InvalidDataException("Telefones is a required property for PessoaFisicaAprovadaPersist and cannot be null");
+            }
+            else
+            {
+                this.Telefones = Telefones;
             }
             // to ensure "Enderecos" is required (not null)
             if (Enderecos == null)
@@ -155,7 +164,6 @@ namespace Conductor.Pier.Model
             this.ValorRenda = ValorRenda;
             this.CanalEntrada = CanalEntrada;
             this.ValorPontuacao = ValorPontuacao;
-            this.Telefones = Telefones;
             this.LimiteConsignado = LimiteConsignado;
             
         }

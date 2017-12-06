@@ -47,7 +47,6 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaDetalheResponse" />class.
         /// </summary>
-        /// <param name="LancamentosFaturaResponse">LancamentosFaturaResponse.</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta..</param>
         /// <param name="SituacaoProcessamento">Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura..</param>
         /// <param name="PagamentoEfetuado">Status de pagamento efetuado..</param>
@@ -56,11 +55,11 @@ namespace Conductor.Pier.Model
         /// <param name="DataFechamento">Data de fechamento da fatura..</param>
         /// <param name="ValorTotal">Valor total da fatura..</param>
         /// <param name="ValorPagamentoMinimo">Valor do pagamento m\u00C3\u00ADnimo..</param>
+        /// <param name="LancamentosFaturaResponse">Lista de lan\u00C3\u00A7amentos da fatura..</param>
         /// <param name="SaldoAnterior">Valor do saldo anterior..</param>
 
-        public FaturaDetalheResponse(List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, double? SaldoAnterior = null)
+        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null)
         {
-            this.LancamentosFaturaResponse = LancamentosFaturaResponse;
             this.IdConta = IdConta;
             this.SituacaoProcessamento = SituacaoProcessamento;
             this.PagamentoEfetuado = PagamentoEfetuado;
@@ -69,16 +68,11 @@ namespace Conductor.Pier.Model
             this.DataFechamento = DataFechamento;
             this.ValorTotal = ValorTotal;
             this.ValorPagamentoMinimo = ValorPagamentoMinimo;
+            this.LancamentosFaturaResponse = LancamentosFaturaResponse;
             this.SaldoAnterior = SaldoAnterior;
             
         }
         
-    
-        /// <summary>
-        /// Gets or Sets LancamentosFaturaResponse
-        /// </summary>
-        [DataMember(Name="lancamentosFaturaResponse", EmitDefaultValue=false)]
-        public List<LancamentoFaturaResponse> LancamentosFaturaResponse { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
@@ -130,6 +124,13 @@ namespace Conductor.Pier.Model
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
+        /// Lista de lan\u00C3\u00A7amentos da fatura.
+        /// </summary>
+        /// <value>Lista de lan\u00C3\u00A7amentos da fatura.</value>
+        [DataMember(Name="lancamentosFaturaResponse", EmitDefaultValue=false)]
+        public List<LancamentoFaturaResponse> LancamentosFaturaResponse { get; set; }
+    
+        /// <summary>
         /// Valor do saldo anterior.
         /// </summary>
         /// <value>Valor do saldo anterior.</value>
@@ -144,7 +145,6 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaturaDetalheResponse {\n");
-            sb.Append("  LancamentosFaturaResponse: ").Append(LancamentosFaturaResponse).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  SituacaoProcessamento: ").Append(SituacaoProcessamento).Append("\n");
             sb.Append("  PagamentoEfetuado: ").Append(PagamentoEfetuado).Append("\n");
@@ -153,6 +153,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataFechamento: ").Append(DataFechamento).Append("\n");
             sb.Append("  ValorTotal: ").Append(ValorTotal).Append("\n");
             sb.Append("  ValorPagamentoMinimo: ").Append(ValorPagamentoMinimo).Append("\n");
+            sb.Append("  LancamentosFaturaResponse: ").Append(LancamentosFaturaResponse).Append("\n");
             sb.Append("  SaldoAnterior: ").Append(SaldoAnterior).Append("\n");
             
             sb.Append("}\n");
@@ -191,11 +192,6 @@ namespace Conductor.Pier.Model
                 return false;
 
             return 
-                (
-                    this.LancamentosFaturaResponse == other.LancamentosFaturaResponse ||
-                    this.LancamentosFaturaResponse != null &&
-                    this.LancamentosFaturaResponse.SequenceEqual(other.LancamentosFaturaResponse)
-                ) && 
                 (
                     this.IdConta == other.IdConta ||
                     this.IdConta != null &&
@@ -237,6 +233,11 @@ namespace Conductor.Pier.Model
                     this.ValorPagamentoMinimo.Equals(other.ValorPagamentoMinimo)
                 ) && 
                 (
+                    this.LancamentosFaturaResponse == other.LancamentosFaturaResponse ||
+                    this.LancamentosFaturaResponse != null &&
+                    this.LancamentosFaturaResponse.SequenceEqual(other.LancamentosFaturaResponse)
+                ) && 
+                (
                     this.SaldoAnterior == other.SaldoAnterior ||
                     this.SaldoAnterior != null &&
                     this.SaldoAnterior.Equals(other.SaldoAnterior)
@@ -254,9 +255,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.LancamentosFaturaResponse != null)
-                    hash = hash * 59 + this.LancamentosFaturaResponse.GetHashCode();
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
@@ -281,6 +279,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorPagamentoMinimo != null)
                     hash = hash * 59 + this.ValorPagamentoMinimo.GetHashCode();
+                
+                if (this.LancamentosFaturaResponse != null)
+                    hash = hash * 59 + this.LancamentosFaturaResponse.GetHashCode();
                 
                 if (this.SaldoAnterior != null)
                     hash = hash * 59 + this.SaldoAnterior.GetHashCode();

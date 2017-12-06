@@ -12,66 +12,51 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Telefone Pessoa Aprovada
+    /// Objeto de Resposta de Telefone Estabelecimento
     /// </summary>
     [DataContract]
-    public partial class TelefonePessoaAprovadaPersist :  IEquatable<TelefonePessoaAprovadaPersist>
+    public partial class TelefoneEstabelecimentoResponse :  IEquatable<TelefoneEstabelecimentoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" /> class.
-        /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" />class.
+        /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoResponse" /> class.
+        /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoResponse" />class.
         /// </summary>
-        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (required).</param>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id). (required).</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone. (required).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone..</param>
+        /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento..</param>
+        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone..</param>
+        /// <param name="Telefone">N\u00C3\u00BAmero do telefone..</param>
         /// <param name="Ramal">N\u00C3\u00BAmero do ramal..</param>
 
-        public TelefonePessoaAprovadaPersist(long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
+        public TelefoneEstabelecimentoResponse(long? Id = null, long? IdEstabelecimento = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
-            // to ensure "IdTipoTelefone" is required (not null)
-            if (IdTipoTelefone == null)
-            {
-                throw new InvalidDataException("IdTipoTelefone is a required property for TelefonePessoaAprovadaPersist and cannot be null");
-            }
-            else
-            {
-                this.IdTipoTelefone = IdTipoTelefone;
-            }
-            // to ensure "Ddd" is required (not null)
-            if (Ddd == null)
-            {
-                throw new InvalidDataException("Ddd is a required property for TelefonePessoaAprovadaPersist and cannot be null");
-            }
-            else
-            {
-                this.Ddd = Ddd;
-            }
-            // to ensure "Telefone" is required (not null)
-            if (Telefone == null)
-            {
-                throw new InvalidDataException("Telefone is a required property for TelefonePessoaAprovadaPersist and cannot be null");
-            }
-            else
-            {
-                this.Telefone = Telefone;
-            }
+            this.Id = Id;
+            this.IdEstabelecimento = IdEstabelecimento;
+            this.Ddd = Ddd;
+            this.Telefone = Telefone;
             this.Ramal = Ramal;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).</value>
-        [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
-        public long? IdTipoTelefone { get; set; }
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo DDD do telefone (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo DDD do telefone (id).</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento.</value>
+        [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
+        public long? IdEstabelecimento { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo DDD do telefone.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo DDD do telefone.</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
@@ -96,8 +81,9 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TelefonePessoaAprovadaPersist {\n");
-            sb.Append("  IdTipoTelefone: ").Append(IdTipoTelefone).Append("\n");
+            sb.Append("class TelefoneEstabelecimentoResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
             sb.Append("  Ddd: ").Append(Ddd).Append("\n");
             sb.Append("  Telefone: ").Append(Telefone).Append("\n");
             sb.Append("  Ramal: ").Append(Ramal).Append("\n");
@@ -123,15 +109,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TelefonePessoaAprovadaPersist);
+            return this.Equals(obj as TelefoneEstabelecimentoResponse);
         }
 
         /// <summary>
-        /// Returns true if TelefonePessoaAprovadaPersist instances are equal
+        /// Returns true if TelefoneEstabelecimentoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TelefonePessoaAprovadaPersist to be compared</param>
+        /// <param name="other">Instance of TelefoneEstabelecimentoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TelefonePessoaAprovadaPersist other)
+        public bool Equals(TelefoneEstabelecimentoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -139,9 +125,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdTipoTelefone == other.IdTipoTelefone ||
-                    this.IdTipoTelefone != null &&
-                    this.IdTipoTelefone.Equals(other.IdTipoTelefone)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.IdEstabelecimento == other.IdEstabelecimento ||
+                    this.IdEstabelecimento != null &&
+                    this.IdEstabelecimento.Equals(other.IdEstabelecimento)
                 ) && 
                 (
                     this.Ddd == other.Ddd ||
@@ -172,8 +163,11 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdTipoTelefone != null)
-                    hash = hash * 59 + this.IdTipoTelefone.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.IdEstabelecimento != null)
+                    hash = hash * 59 + this.IdEstabelecimento.GetHashCode();
                 
                 if (this.Ddd != null)
                     hash = hash * 59 + this.Ddd.GetHashCode();

@@ -24,8 +24,8 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="IdProduto">C\u00C3\u00B3digo identificador do produto. (required).</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo identificador da origem comercial..</param>
-        /// <param name="IdEstabelecimento">Identificador do estabelecimento..</param>
-        /// <param name="IdPromotor">Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento..</param>
+        /// <param name="IdEstabelecimento">Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta..</param>
+        /// <param name="IdPromotor">Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o..</param>
 
         public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null, long? IdEstabelecimento = null, long? IdPromotor = null)
         {
@@ -60,16 +60,16 @@ namespace Conductor.Pier.Model
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Identificador do estabelecimento.
+        /// Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
         /// </summary>
-        /// <value>Identificador do estabelecimento.</value>
+        /// <value>Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+        /// Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.
         /// </summary>
-        /// <value>Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.</value>
+        /// <value>Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.</value>
         [DataMember(Name="idPromotor", EmitDefaultValue=false)]
         public long? IdPromotor { get; set; }
     
