@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <returns>CartaoPayDetalheResponse</returns>
-        CartaoPayDetalheResponse ConsultarUsingGET5 (string deviceId, long? id);
+        CartaoPayDetalheResponse ConsultarUsingGET6 (string deviceId, long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado cart\u00C3\u00A3o
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET5WithHttpInfo (string deviceId, long? id);
+        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET6WithHttpInfo (string deviceId, long? id);
         
         /// <summary>
         /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
@@ -363,7 +363,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET5Async (string deviceId, long? id);
+        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET6Async (string deviceId, long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado cart\u00C3\u00A3o
@@ -375,7 +375,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET5AsyncWithHttpInfo (string deviceId, long? id);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET6AsyncWithHttpInfo (string deviceId, long? id);
         
         /// <summary>
         /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
@@ -1190,9 +1190,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param> 
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
         /// <returns>CartaoPayDetalheResponse</returns>
-        public CartaoPayDetalheResponse ConsultarUsingGET5 (string deviceId, long? id)
+        public CartaoPayDetalheResponse ConsultarUsingGET6 (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET5WithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET6WithHttpInfo(deviceId, id);
              return localVarResponse.Data;
         }
 
@@ -1203,16 +1203,16 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param> 
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET5WithHttpInfo (string deviceId, long? id)
+        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET6WithHttpInfo (string deviceId, long? id)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->ConsultarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->ConsultarUsingGET6");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ConductorPayApi->ConsultarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ConductorPayApi->ConsultarUsingGET6");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1259,9 +1259,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1277,9 +1277,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET5Async (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET6Async (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(deviceId, id);
              return localVarResponse.Data;
 
         }
@@ -1291,12 +1291,12 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">Device id criptografado</param>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET5AsyncWithHttpInfo (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET6AsyncWithHttpInfo (string deviceId, long? id)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET5");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET6");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1343,9 +1343,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

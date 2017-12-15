@@ -15,26 +15,30 @@ namespace Conductor.Pier.Model
     /// 
     /// </summary>
     [DataContract]
-    public partial class AjusteResponse :  IEquatable<AjusteResponse>
+    public partial class AjusteFinanceiroResponse :  IEquatable<AjusteFinanceiroResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AjusteResponse" /> class.
-        /// Initializes a new instance of the <see cref="AjusteResponse" />class.
+        /// Initializes a new instance of the <see cref="AjusteFinanceiroResponse" /> class.
+        /// Initializes a new instance of the <see cref="AjusteFinanceiroResponse" />class.
         /// </summary>
-        /// <param name="IdAjuste">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
         /// <param name="IdTipoAjuste">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste.</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).</param>
         /// <param name="DataAjuste">Data do ajuste.</param>
         /// <param name="Valor">Valor do ajuste.</param>
+        /// <param name="IdentificadorExterno">Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra..</param>
+        /// <param name="Status">Status do ajuste..</param>
 
-        public AjusteResponse(long? IdAjuste = null, long? IdTipoAjuste = null, long? IdConta = null, string DataAjuste = null, double? Valor = null)
+        public AjusteFinanceiroResponse(long? Id = null, long? IdTipoAjuste = null, long? IdConta = null, string DataAjuste = null, double? Valor = null, string IdentificadorExterno = null, long? Status = null)
         {
-            this.IdAjuste = IdAjuste;
+            this.Id = Id;
             this.IdTipoAjuste = IdTipoAjuste;
             this.IdConta = IdConta;
             this.DataAjuste = DataAjuste;
             this.Valor = Valor;
+            this.IdentificadorExterno = IdentificadorExterno;
+            this.Status = Status;
             
         }
         
@@ -43,8 +47,8 @@ namespace Conductor.Pier.Model
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
         /// </summary>
         /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)</value>
-        [DataMember(Name="idAjuste", EmitDefaultValue=false)]
-        public long? IdAjuste { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
@@ -75,18 +79,34 @@ namespace Conductor.Pier.Model
         public double? Valor { get; set; }
     
         /// <summary>
+        /// Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+        /// </summary>
+        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.</value>
+        [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
+        public string IdentificadorExterno { get; set; }
+    
+        /// <summary>
+        /// Status do ajuste.
+        /// </summary>
+        /// <value>Status do ajuste.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public long? Status { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AjusteResponse {\n");
-            sb.Append("  IdAjuste: ").Append(IdAjuste).Append("\n");
+            sb.Append("class AjusteFinanceiroResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdTipoAjuste: ").Append(IdTipoAjuste).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  DataAjuste: ").Append(DataAjuste).Append("\n");
             sb.Append("  Valor: ").Append(Valor).Append("\n");
+            sb.Append("  IdentificadorExterno: ").Append(IdentificadorExterno).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -109,15 +129,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AjusteResponse);
+            return this.Equals(obj as AjusteFinanceiroResponse);
         }
 
         /// <summary>
-        /// Returns true if AjusteResponse instances are equal
+        /// Returns true if AjusteFinanceiroResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of AjusteResponse to be compared</param>
+        /// <param name="other">Instance of AjusteFinanceiroResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AjusteResponse other)
+        public bool Equals(AjusteFinanceiroResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -125,9 +145,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdAjuste == other.IdAjuste ||
-                    this.IdAjuste != null &&
-                    this.IdAjuste.Equals(other.IdAjuste)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) && 
                 (
                     this.IdTipoAjuste == other.IdTipoAjuste ||
@@ -148,6 +168,16 @@ namespace Conductor.Pier.Model
                     this.Valor == other.Valor ||
                     this.Valor != null &&
                     this.Valor.Equals(other.Valor)
+                ) && 
+                (
+                    this.IdentificadorExterno == other.IdentificadorExterno ||
+                    this.IdentificadorExterno != null &&
+                    this.IdentificadorExterno.Equals(other.IdentificadorExterno)
+                ) && 
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 );
         }
 
@@ -163,8 +193,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdAjuste != null)
-                    hash = hash * 59 + this.IdAjuste.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.IdTipoAjuste != null)
                     hash = hash * 59 + this.IdTipoAjuste.GetHashCode();
@@ -177,6 +207,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.Valor != null)
                     hash = hash * 59 + this.Valor.GetHashCode();
+                
+                if (this.IdentificadorExterno != null)
+                    hash = hash * 59 + this.IdentificadorExterno.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 return hash;
             }
