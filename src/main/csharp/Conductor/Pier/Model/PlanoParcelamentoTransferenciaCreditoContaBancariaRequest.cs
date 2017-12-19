@@ -24,14 +24,13 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
         /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
-        /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o. (required).</param>
-        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM (required).</param>
+        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o. (required).</param>
         /// <param name="NumeroMesesCarencia">Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia. (required).</param>
         /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV). (required).</param>
         /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
         /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
 
-        public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest(string NsuOrigem = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroMesesCarencia = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
+        public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest(string NsuOrigem = null, double? ValorTransacao = null, long? IdCartao = null, long? NumeroMesesCarencia = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
         {
             // to ensure "NsuOrigem" is required (not null)
             if (NsuOrigem == null)
@@ -51,23 +50,14 @@ namespace Conductor.Pier.Model
             {
                 this.ValorTransacao = ValorTransacao;
             }
-            // to ensure "NumeroRealCartao" is required (not null)
-            if (NumeroRealCartao == null)
+            // to ensure "IdCartao" is required (not null)
+            if (IdCartao == null)
             {
-                throw new InvalidDataException("NumeroRealCartao is a required property for PlanoParcelamentoTransferenciaCreditoContaBancariaRequest and cannot be null");
+                throw new InvalidDataException("IdCartao is a required property for PlanoParcelamentoTransferenciaCreditoContaBancariaRequest and cannot be null");
             }
             else
             {
-                this.NumeroRealCartao = NumeroRealCartao;
-            }
-            // to ensure "DataValidadeCartao" is required (not null)
-            if (DataValidadeCartao == null)
-            {
-                throw new InvalidDataException("DataValidadeCartao is a required property for PlanoParcelamentoTransferenciaCreditoContaBancariaRequest and cannot be null");
-            }
-            else
-            {
-                this.DataValidadeCartao = DataValidadeCartao;
+                this.IdCartao = IdCartao;
             }
             // to ensure "NumeroMesesCarencia" is required (not null)
             if (NumeroMesesCarencia == null)
@@ -124,18 +114,11 @@ namespace Conductor.Pier.Model
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.</value>
-        [DataMember(Name="numeroRealCartao", EmitDefaultValue=false)]
-        public string NumeroRealCartao { get; set; }
-    
-        /// <summary>
-        /// Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
-        /// </summary>
-        /// <value>Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM</value>
-        [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
-        public string DataValidadeCartao { get; set; }
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.</value>
+        [DataMember(Name="idCartao", EmitDefaultValue=false)]
+        public long? IdCartao { get; set; }
     
         /// <summary>
         /// Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
@@ -175,8 +158,7 @@ namespace Conductor.Pier.Model
             sb.Append("class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest {\n");
             sb.Append("  NsuOrigem: ").Append(NsuOrigem).Append("\n");
             sb.Append("  ValorTransacao: ").Append(ValorTransacao).Append("\n");
-            sb.Append("  NumeroRealCartao: ").Append(NumeroRealCartao).Append("\n");
-            sb.Append("  DataValidadeCartao: ").Append(DataValidadeCartao).Append("\n");
+            sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
             sb.Append("  NumeroMesesCarencia: ").Append(NumeroMesesCarencia).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
             sb.Append("  DataHoraTerminal: ").Append(DataHoraTerminal).Append("\n");
@@ -229,14 +211,9 @@ namespace Conductor.Pier.Model
                     this.ValorTransacao.Equals(other.ValorTransacao)
                 ) && 
                 (
-                    this.NumeroRealCartao == other.NumeroRealCartao ||
-                    this.NumeroRealCartao != null &&
-                    this.NumeroRealCartao.Equals(other.NumeroRealCartao)
-                ) && 
-                (
-                    this.DataValidadeCartao == other.DataValidadeCartao ||
-                    this.DataValidadeCartao != null &&
-                    this.DataValidadeCartao.Equals(other.DataValidadeCartao)
+                    this.IdCartao == other.IdCartao ||
+                    this.IdCartao != null &&
+                    this.IdCartao.Equals(other.IdCartao)
                 ) && 
                 (
                     this.NumeroMesesCarencia == other.NumeroMesesCarencia ||
@@ -278,11 +255,8 @@ namespace Conductor.Pier.Model
                 if (this.ValorTransacao != null)
                     hash = hash * 59 + this.ValorTransacao.GetHashCode();
                 
-                if (this.NumeroRealCartao != null)
-                    hash = hash * 59 + this.NumeroRealCartao.GetHashCode();
-                
-                if (this.DataValidadeCartao != null)
-                    hash = hash * 59 + this.DataValidadeCartao.GetHashCode();
+                if (this.IdCartao != null)
+                    hash = hash * 59 + this.IdCartao.GetHashCode();
                 
                 if (this.NumeroMesesCarencia != null)
                     hash = hash * 59 + this.NumeroMesesCarencia.GetHashCode();

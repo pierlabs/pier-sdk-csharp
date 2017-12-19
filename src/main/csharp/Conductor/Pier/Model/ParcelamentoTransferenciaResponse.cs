@@ -25,14 +25,20 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroParcela">N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis..</param>
         /// <param name="ValorPrimeiraParcela">Valor da primeira parcela..</param>
         /// <param name="ValorDemaisParcelas">Valor das demais parcelas..</param>
+        /// <param name="ValorTotal">Valor total do financiamento..</param>
+        /// <param name="ValorTAC">Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="ValorIOF">IOF.</param>
         /// <param name="TaxaJuros">Valor da taxa de juros..</param>
         /// <param name="CetAnual">CET anual..</param>
 
-        public ParcelamentoTransferenciaResponse(string NumeroParcela = null, double? ValorPrimeiraParcela = null, double? ValorDemaisParcelas = null, double? TaxaJuros = null, double? CetAnual = null)
+        public ParcelamentoTransferenciaResponse(string NumeroParcela = null, double? ValorPrimeiraParcela = null, double? ValorDemaisParcelas = null, double? ValorTotal = null, double? ValorTAC = null, double? ValorIOF = null, double? TaxaJuros = null, double? CetAnual = null)
         {
             this.NumeroParcela = NumeroParcela;
             this.ValorPrimeiraParcela = ValorPrimeiraParcela;
             this.ValorDemaisParcelas = ValorDemaisParcelas;
+            this.ValorTotal = ValorTotal;
+            this.ValorTAC = ValorTAC;
+            this.ValorIOF = ValorIOF;
             this.TaxaJuros = TaxaJuros;
             this.CetAnual = CetAnual;
             
@@ -61,6 +67,27 @@ namespace Conductor.Pier.Model
         public double? ValorDemaisParcelas { get; set; }
     
         /// <summary>
+        /// Valor total do financiamento.
+        /// </summary>
+        /// <value>Valor total do financiamento.</value>
+        [DataMember(Name="valorTotal", EmitDefaultValue=false)]
+        public double? ValorTotal { get; set; }
+    
+        /// <summary>
+        /// Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+        /// </summary>
+        /// <value>Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.</value>
+        [DataMember(Name="valorTAC", EmitDefaultValue=false)]
+        public double? ValorTAC { get; set; }
+    
+        /// <summary>
+        /// IOF
+        /// </summary>
+        /// <value>IOF</value>
+        [DataMember(Name="valorIOF", EmitDefaultValue=false)]
+        public double? ValorIOF { get; set; }
+    
+        /// <summary>
         /// Valor da taxa de juros.
         /// </summary>
         /// <value>Valor da taxa de juros.</value>
@@ -85,6 +112,9 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroParcela: ").Append(NumeroParcela).Append("\n");
             sb.Append("  ValorPrimeiraParcela: ").Append(ValorPrimeiraParcela).Append("\n");
             sb.Append("  ValorDemaisParcelas: ").Append(ValorDemaisParcelas).Append("\n");
+            sb.Append("  ValorTotal: ").Append(ValorTotal).Append("\n");
+            sb.Append("  ValorTAC: ").Append(ValorTAC).Append("\n");
+            sb.Append("  ValorIOF: ").Append(ValorIOF).Append("\n");
             sb.Append("  TaxaJuros: ").Append(TaxaJuros).Append("\n");
             sb.Append("  CetAnual: ").Append(CetAnual).Append("\n");
             
@@ -140,6 +170,21 @@ namespace Conductor.Pier.Model
                     this.ValorDemaisParcelas.Equals(other.ValorDemaisParcelas)
                 ) && 
                 (
+                    this.ValorTotal == other.ValorTotal ||
+                    this.ValorTotal != null &&
+                    this.ValorTotal.Equals(other.ValorTotal)
+                ) && 
+                (
+                    this.ValorTAC == other.ValorTAC ||
+                    this.ValorTAC != null &&
+                    this.ValorTAC.Equals(other.ValorTAC)
+                ) && 
+                (
+                    this.ValorIOF == other.ValorIOF ||
+                    this.ValorIOF != null &&
+                    this.ValorIOF.Equals(other.ValorIOF)
+                ) && 
+                (
                     this.TaxaJuros == other.TaxaJuros ||
                     this.TaxaJuros != null &&
                     this.TaxaJuros.Equals(other.TaxaJuros)
@@ -171,6 +216,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorDemaisParcelas != null)
                     hash = hash * 59 + this.ValorDemaisParcelas.GetHashCode();
+                
+                if (this.ValorTotal != null)
+                    hash = hash * 59 + this.ValorTotal.GetHashCode();
+                
+                if (this.ValorTAC != null)
+                    hash = hash * 59 + this.ValorTAC.GetHashCode();
+                
+                if (this.ValorIOF != null)
+                    hash = hash * 59 + this.ValorIOF.GetHashCode();
                 
                 if (this.TaxaJuros != null)
                     hash = hash * 59 + this.TaxaJuros.GetHashCode();
