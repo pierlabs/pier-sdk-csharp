@@ -22,28 +22,100 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AutorizacaoOnUsRequest" /> class.
         /// Initializes a new instance of the <see cref="AutorizacaoOnUsRequest" />class.
         /// </summary>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou..</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos..</param>
-        /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM.</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV)..</param>
-        /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00.</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de Parcelas..</param>
+        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
+        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de Parcelas. (required).</param>
+        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
         /// <param name="CodigoSegurancaCartao">C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o..</param>
+        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
+        /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o. (required).</param>
+        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM (required).</param>
+        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV). (required).</param>
+        /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
 
-        public AutorizacaoOnUsRequest(string NsuOrigem = null, string CodigoProcessamento = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, DateTime? DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroParcelas = null, long? CodigoSegurancaCartao = null)
+        public AutorizacaoOnUsRequest(string NsuOrigem = null, long? NumeroParcelas = null, string CodigoProcessamento = null, string CodigoSegurancaCartao = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
         {
-            this.NsuOrigem = NsuOrigem;
-            this.CodigoProcessamento = CodigoProcessamento;
-            this.ValorTransacao = ValorTransacao;
-            this.NumeroRealCartao = NumeroRealCartao;
-            this.DataValidadeCartao = DataValidadeCartao;
-            this.NumeroEstabelecimento = NumeroEstabelecimento;
-            this.DataHoraTerminal = DataHoraTerminal;
-            this.TerminalRequisitante = TerminalRequisitante;
-            this.NumeroParcelas = NumeroParcelas;
+            // to ensure "NsuOrigem" is required (not null)
+            if (NsuOrigem == null)
+            {
+                throw new InvalidDataException("NsuOrigem is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.NsuOrigem = NsuOrigem;
+            }
+            // to ensure "NumeroParcelas" is required (not null)
+            if (NumeroParcelas == null)
+            {
+                throw new InvalidDataException("NumeroParcelas is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.NumeroParcelas = NumeroParcelas;
+            }
+            // to ensure "CodigoProcessamento" is required (not null)
+            if (CodigoProcessamento == null)
+            {
+                throw new InvalidDataException("CodigoProcessamento is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.CodigoProcessamento = CodigoProcessamento;
+            }
+            // to ensure "ValorTransacao" is required (not null)
+            if (ValorTransacao == null)
+            {
+                throw new InvalidDataException("ValorTransacao is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.ValorTransacao = ValorTransacao;
+            }
+            // to ensure "NumeroRealCartao" is required (not null)
+            if (NumeroRealCartao == null)
+            {
+                throw new InvalidDataException("NumeroRealCartao is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.NumeroRealCartao = NumeroRealCartao;
+            }
+            // to ensure "DataValidadeCartao" is required (not null)
+            if (DataValidadeCartao == null)
+            {
+                throw new InvalidDataException("DataValidadeCartao is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.DataValidadeCartao = DataValidadeCartao;
+            }
+            // to ensure "NumeroEstabelecimento" is required (not null)
+            if (NumeroEstabelecimento == null)
+            {
+                throw new InvalidDataException("NumeroEstabelecimento is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.NumeroEstabelecimento = NumeroEstabelecimento;
+            }
+            // to ensure "DataHoraTerminal" is required (not null)
+            if (DataHoraTerminal == null)
+            {
+                throw new InvalidDataException("DataHoraTerminal is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.DataHoraTerminal = DataHoraTerminal;
+            }
+            // to ensure "TerminalRequisitante" is required (not null)
+            if (TerminalRequisitante == null)
+            {
+                throw new InvalidDataException("TerminalRequisitante is a required property for AutorizacaoOnUsRequest and cannot be null");
+            }
+            else
+            {
+                this.TerminalRequisitante = TerminalRequisitante;
+            }
             this.CodigoSegurancaCartao = CodigoSegurancaCartao;
             
         }
@@ -57,11 +129,25 @@ namespace Conductor.Pier.Model
         public string NsuOrigem { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero de Parcelas.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero de Parcelas.</value>
+        [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
+        public long? NumeroParcelas { get; set; }
+    
+        /// <summary>
         /// C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
         /// <value>C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
+    
+        /// <summary>
+        /// C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+        /// </summary>
+        /// <value>C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.</value>
+        [DataMember(Name="codigoSegurancaCartao", EmitDefaultValue=false)]
+        public string CodigoSegurancaCartao { get; set; }
     
         /// <summary>
         /// Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
@@ -96,7 +182,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTerminal", EmitDefaultValue=false)]
-        public DateTime? DataHoraTerminal { get; set; }
+        public string DataHoraTerminal { get; set; }
     
         /// <summary>
         /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
@@ -104,20 +190,6 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero de Parcelas.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero de Parcelas.</value>
-        [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
-        public long? NumeroParcelas { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.</value>
-        [DataMember(Name="codigoSegurancaCartao", EmitDefaultValue=false)]
-        public long? CodigoSegurancaCartao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -128,15 +200,15 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class AutorizacaoOnUsRequest {\n");
             sb.Append("  NsuOrigem: ").Append(NsuOrigem).Append("\n");
+            sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
             sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
+            sb.Append("  CodigoSegurancaCartao: ").Append(CodigoSegurancaCartao).Append("\n");
             sb.Append("  ValorTransacao: ").Append(ValorTransacao).Append("\n");
             sb.Append("  NumeroRealCartao: ").Append(NumeroRealCartao).Append("\n");
             sb.Append("  DataValidadeCartao: ").Append(DataValidadeCartao).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
             sb.Append("  DataHoraTerminal: ").Append(DataHoraTerminal).Append("\n");
             sb.Append("  TerminalRequisitante: ").Append(TerminalRequisitante).Append("\n");
-            sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
-            sb.Append("  CodigoSegurancaCartao: ").Append(CodigoSegurancaCartao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -180,9 +252,19 @@ namespace Conductor.Pier.Model
                     this.NsuOrigem.Equals(other.NsuOrigem)
                 ) && 
                 (
+                    this.NumeroParcelas == other.NumeroParcelas ||
+                    this.NumeroParcelas != null &&
+                    this.NumeroParcelas.Equals(other.NumeroParcelas)
+                ) && 
+                (
                     this.CodigoProcessamento == other.CodigoProcessamento ||
                     this.CodigoProcessamento != null &&
                     this.CodigoProcessamento.Equals(other.CodigoProcessamento)
+                ) && 
+                (
+                    this.CodigoSegurancaCartao == other.CodigoSegurancaCartao ||
+                    this.CodigoSegurancaCartao != null &&
+                    this.CodigoSegurancaCartao.Equals(other.CodigoSegurancaCartao)
                 ) && 
                 (
                     this.ValorTransacao == other.ValorTransacao ||
@@ -213,16 +295,6 @@ namespace Conductor.Pier.Model
                     this.TerminalRequisitante == other.TerminalRequisitante ||
                     this.TerminalRequisitante != null &&
                     this.TerminalRequisitante.Equals(other.TerminalRequisitante)
-                ) && 
-                (
-                    this.NumeroParcelas == other.NumeroParcelas ||
-                    this.NumeroParcelas != null &&
-                    this.NumeroParcelas.Equals(other.NumeroParcelas)
-                ) && 
-                (
-                    this.CodigoSegurancaCartao == other.CodigoSegurancaCartao ||
-                    this.CodigoSegurancaCartao != null &&
-                    this.CodigoSegurancaCartao.Equals(other.CodigoSegurancaCartao)
                 );
         }
 
@@ -241,8 +313,14 @@ namespace Conductor.Pier.Model
                 if (this.NsuOrigem != null)
                     hash = hash * 59 + this.NsuOrigem.GetHashCode();
                 
+                if (this.NumeroParcelas != null)
+                    hash = hash * 59 + this.NumeroParcelas.GetHashCode();
+                
                 if (this.CodigoProcessamento != null)
                     hash = hash * 59 + this.CodigoProcessamento.GetHashCode();
+                
+                if (this.CodigoSegurancaCartao != null)
+                    hash = hash * 59 + this.CodigoSegurancaCartao.GetHashCode();
                 
                 if (this.ValorTransacao != null)
                     hash = hash * 59 + this.ValorTransacao.GetHashCode();
@@ -261,12 +339,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.TerminalRequisitante != null)
                     hash = hash * 59 + this.TerminalRequisitante.GetHashCode();
-                
-                if (this.NumeroParcelas != null)
-                    hash = hash * 59 + this.NumeroParcelas.GetHashCode();
-                
-                if (this.CodigoSegurancaCartao != null)
-                    hash = hash * 59 + this.CodigoSegurancaCartao.GetHashCode();
                 
                 return hash;
             }

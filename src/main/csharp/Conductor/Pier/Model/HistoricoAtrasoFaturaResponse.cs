@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataVencimento">Data vencimento fatura..</param>
         /// <param name="DiasPagamentoAposVencimento">Quantidade de dias em atraso..</param>
 
-        public HistoricoAtrasoFaturaResponse(DateTime? DataVencimento = null, long? DiasPagamentoAposVencimento = null)
+        public HistoricoAtrasoFaturaResponse(string DataVencimento = null, long? DiasPagamentoAposVencimento = null)
         {
             this.DataVencimento = DataVencimento;
             this.DiasPagamentoAposVencimento = DiasPagamentoAposVencimento;
@@ -38,7 +38,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data vencimento fatura.</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
-        public DateTime? DataVencimento { get; set; }
+        public string DataVencimento { get; set; }
     
         /// <summary>
         /// Quantidade de dias em atraso.

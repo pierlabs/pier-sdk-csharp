@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageLoteCartoesPrePagosResponse(List<LoteCartoesPrePagos> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageLoteCartoesPrePagosResponse(List<LoteCartoesPrePagosResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<LoteCartoesPrePagos> Content { get; set; }
+        public List<LoteCartoesPrePagosResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First

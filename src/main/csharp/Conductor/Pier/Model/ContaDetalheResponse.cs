@@ -24,13 +24,13 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id)..</param>
         /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id)..</param>
-        /// <param name="Nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required).</param>
+        /// <param name="Nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;..</param>
         /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
         /// <param name="IdOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta..</param>
-        /// <param name="NomeOrigemComercial">Nome da origem comercial (required).</param>
+        /// <param name="NomeOrigemComercial">Nome da origem comercial.</param>
         /// <param name="IdFantasiaBasica">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id)..</param>
-        /// <param name="NomeFantasiaBasica">Nome da Fantasia Basica (required).</param>
-        /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id)..</param>
+        /// <param name="NomeFantasiaBasica">Nome da Fantasia Basica.</param>
+        /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta..</param>
         /// <param name="StatusConta">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta.</param>
         /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
@@ -43,82 +43,22 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
         /// <param name="FormaEnvioFatura">Forma de envio da fatura..</param>
         /// <param name="Titular">Apresenta se a pessoa \u00C3\u00A9 titular da conta..</param>
-        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (required).</param>
-        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (required).</param>
-        /// <param name="SaldoDisponivelGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (required).</param>
-        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (required).</param>
+        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui..</param>
+        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional..</param>
+        /// <param name="SaldoDisponivelGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais..</param>
+        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento..</param>
         /// <param name="DiasAtraso">Apresenta a quantidade de dias que a conta esta em atraso.</param>
 
-        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, DateTime? DataStatusConta = null, double? ValorRenda = null, DateTime? DataCadastro = null, DateTime? DataUltimaAlteracaoVencimento = null, DateTime? DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null)
+        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null)
         {
-            // to ensure "Nome" is required (not null)
-            if (Nome == null)
-            {
-                throw new InvalidDataException("Nome is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.Nome = Nome;
-            }
-            // to ensure "NomeOrigemComercial" is required (not null)
-            if (NomeOrigemComercial == null)
-            {
-                throw new InvalidDataException("NomeOrigemComercial is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.NomeOrigemComercial = NomeOrigemComercial;
-            }
-            // to ensure "NomeFantasiaBasica" is required (not null)
-            if (NomeFantasiaBasica == null)
-            {
-                throw new InvalidDataException("NomeFantasiaBasica is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.NomeFantasiaBasica = NomeFantasiaBasica;
-            }
-            // to ensure "LimiteGlobal" is required (not null)
-            if (LimiteGlobal == null)
-            {
-                throw new InvalidDataException("LimiteGlobal is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteGlobal = LimiteGlobal;
-            }
-            // to ensure "LimiteSaqueGlobal" is required (not null)
-            if (LimiteSaqueGlobal == null)
-            {
-                throw new InvalidDataException("LimiteSaqueGlobal is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.LimiteSaqueGlobal = LimiteSaqueGlobal;
-            }
-            // to ensure "SaldoDisponivelGlobal" is required (not null)
-            if (SaldoDisponivelGlobal == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelGlobal is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
-            }
-            // to ensure "SaldoDisponivelSaque" is required (not null)
-            if (SaldoDisponivelSaque == null)
-            {
-                throw new InvalidDataException("SaldoDisponivelSaque is a required property for ContaDetalheResponse and cannot be null");
-            }
-            else
-            {
-                this.SaldoDisponivelSaque = SaldoDisponivelSaque;
-            }
             this.Id = Id;
             this.IdPessoa = IdPessoa;
+            this.Nome = Nome;
             this.IdProduto = IdProduto;
             this.IdOrigemComercial = IdOrigemComercial;
+            this.NomeOrigemComercial = NomeOrigemComercial;
             this.IdFantasiaBasica = IdFantasiaBasica;
+            this.NomeFantasiaBasica = NomeFantasiaBasica;
             this.IdStatusConta = IdStatusConta;
             this.StatusConta = StatusConta;
             this.DiaVencimento = DiaVencimento;
@@ -132,6 +72,10 @@ namespace Conductor.Pier.Model
             this.NumeroContaCorrente = NumeroContaCorrente;
             this.FormaEnvioFatura = FormaEnvioFatura;
             this.Titular = Titular;
+            this.LimiteGlobal = LimiteGlobal;
+            this.LimiteSaqueGlobal = LimiteSaqueGlobal;
+            this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
+            this.SaldoDisponivelSaque = SaldoDisponivelSaque;
             this.DiasAtraso = DiasAtraso;
             
         }
@@ -194,9 +138,9 @@ namespace Conductor.Pier.Model
         public string NomeFantasiaBasica { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
@@ -226,7 +170,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
-        public DateTime? DataStatusConta { get; set; }
+        public string DataStatusConta { get; set; }
     
         /// <summary>
         /// Valor da renda comprovada.
@@ -240,21 +184,21 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
-        public DateTime? DataCadastro { get; set; }
+        public string DataCadastro { get; set; }
     
         /// <summary>
         /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
         /// </summary>
         /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
-        public DateTime? DataUltimaAlteracaoVencimento { get; set; }
+        public string DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
         /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
         /// </summary>
         /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
         [DataMember(Name="dataHoraUltimaCompra", EmitDefaultValue=false)]
-        public DateTime? DataHoraUltimaCompra { get; set; }
+        public string DataHoraUltimaCompra { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.

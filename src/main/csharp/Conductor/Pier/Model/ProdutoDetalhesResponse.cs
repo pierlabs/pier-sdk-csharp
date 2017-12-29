@@ -27,8 +27,9 @@ namespace Conductor.Pier.Model
         /// <param name="Status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (required).</param>
         /// <param name="IdFantasiaBasica">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence..</param>
         /// <param name="FantasiaBasica">Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence..</param>
+        /// <param name="UsoExterior">Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior..</param>
 
-        public ProdutoDetalhesResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, string FantasiaBasica = null)
+        public ProdutoDetalhesResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, string FantasiaBasica = null, bool? UsoExterior = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -59,6 +60,7 @@ namespace Conductor.Pier.Model
             }
             this.IdFantasiaBasica = IdFantasiaBasica;
             this.FantasiaBasica = FantasiaBasica;
+            this.UsoExterior = UsoExterior;
             
         }
         
@@ -99,6 +101,13 @@ namespace Conductor.Pier.Model
         public string FantasiaBasica { get; set; }
     
         /// <summary>
+        /// Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+        /// </summary>
+        /// <value>Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.</value>
+        [DataMember(Name="usoExterior", EmitDefaultValue=false)]
+        public bool? UsoExterior { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -111,6 +120,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  IdFantasiaBasica: ").Append(IdFantasiaBasica).Append("\n");
             sb.Append("  FantasiaBasica: ").Append(FantasiaBasica).Append("\n");
+            sb.Append("  UsoExterior: ").Append(UsoExterior).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -172,6 +182,11 @@ namespace Conductor.Pier.Model
                     this.FantasiaBasica == other.FantasiaBasica ||
                     this.FantasiaBasica != null &&
                     this.FantasiaBasica.Equals(other.FantasiaBasica)
+                ) && 
+                (
+                    this.UsoExterior == other.UsoExterior ||
+                    this.UsoExterior != null &&
+                    this.UsoExterior.Equals(other.UsoExterior)
                 );
         }
 
@@ -201,6 +216,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FantasiaBasica != null)
                     hash = hash * 59 + this.FantasiaBasica.GetHashCode();
+                
+                if (this.UsoExterior != null)
+                    hash = hash * 59 + this.UsoExterior.GetHashCode();
                 
                 return hash;
             }

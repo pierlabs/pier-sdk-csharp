@@ -22,31 +22,63 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoAprovadoPersist" /> class.
         /// Initializes a new instance of the <see cref="EnderecoAprovadoPersist" />class.
         /// </summary>
-        /// <param name="IdTipoEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id).</param>
+        /// <param name="IdTipoEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (required).</param>
         /// <param name="Cep">Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
         /// <param name="Logradouro">Apresenta o nome do Logradouro.</param>
         /// <param name="Numero">Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o.</param>
         /// <param name="Complemento">Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o.</param>
         /// <param name="PontoReferencia">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o.</param>
         /// <param name="Bairro">Apresenta nome do bairro.</param>
-        /// <param name="Cidade">Apresenta nome da cidade.</param>
-        /// <param name="Uf">Apresenta sigla da Unidade Federativa.</param>
+        /// <param name="Cidade">Apresenta nome da cidade (required).</param>
+        /// <param name="Uf">Apresenta sigla da Unidade Federativa (required).</param>
         /// <param name="Pais">Apresenta nome do Pais.</param>
-        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia.</param>
+        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia (required).</param>
 
         public EnderecoAprovadoPersist(long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null)
         {
-            this.IdTipoEndereco = IdTipoEndereco;
+            // to ensure "IdTipoEndereco" is required (not null)
+            if (IdTipoEndereco == null)
+            {
+                throw new InvalidDataException("IdTipoEndereco is a required property for EnderecoAprovadoPersist and cannot be null");
+            }
+            else
+            {
+                this.IdTipoEndereco = IdTipoEndereco;
+            }
+            // to ensure "Cidade" is required (not null)
+            if (Cidade == null)
+            {
+                throw new InvalidDataException("Cidade is a required property for EnderecoAprovadoPersist and cannot be null");
+            }
+            else
+            {
+                this.Cidade = Cidade;
+            }
+            // to ensure "Uf" is required (not null)
+            if (Uf == null)
+            {
+                throw new InvalidDataException("Uf is a required property for EnderecoAprovadoPersist and cannot be null");
+            }
+            else
+            {
+                this.Uf = Uf;
+            }
+            // to ensure "EnderecoCorrespondencia" is required (not null)
+            if (EnderecoCorrespondencia == null)
+            {
+                throw new InvalidDataException("EnderecoCorrespondencia is a required property for EnderecoAprovadoPersist and cannot be null");
+            }
+            else
+            {
+                this.EnderecoCorrespondencia = EnderecoCorrespondencia;
+            }
             this.Cep = Cep;
             this.Logradouro = Logradouro;
             this.Numero = Numero;
             this.Complemento = Complemento;
             this.PontoReferencia = PontoReferencia;
             this.Bairro = Bairro;
-            this.Cidade = Cidade;
-            this.Uf = Uf;
             this.Pais = Pais;
-            this.EnderecoCorrespondencia = EnderecoCorrespondencia;
             
         }
         

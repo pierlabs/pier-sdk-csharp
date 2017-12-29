@@ -25,11 +25,11 @@ namespace Conductor.Pier.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
-            [EnumMember(Value = "ATIVO")]
-            Ativo,
-            
             [EnumMember(Value = "INATIVO")]
-            Inativo
+            Inativo,
+            
+            [EnumMember(Value = "ATIVO")]
+            Ativo
         }
 
     
@@ -55,7 +55,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataModificacao">Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio.</param>
         /// <param name="TentativasIncorretas">N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas.</param>
 
-        public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, DateTime? DataCriacao = null, DateTime? DataModificacao = null, long? TentativasIncorretas = null)
+        public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, string DataCriacao = null, string DataModificacao = null, long? TentativasIncorretas = null)
         {
             // to ensure "Login" is required (not null)
             if (Login == null)
@@ -134,14 +134,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
-        public DateTime? DataCriacao { get; set; }
+        public string DataCriacao { get; set; }
     
         /// <summary>
         /// Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
         /// </summary>
         /// <value>Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
-        public DateTime? DataModificacao { get; set; }
+        public string DataModificacao { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas

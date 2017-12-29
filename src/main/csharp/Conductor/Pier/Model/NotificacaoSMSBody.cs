@@ -28,6 +28,9 @@ namespace Conductor.Pier.Model
             [EnumMember(Value = "RISCO_FRAUDE")]
             RiscoFraude,
             
+            [EnumMember(Value = "CODIGO_SEGURANCA")]
+            CodigoSeguranca,
+            
             [EnumMember(Value = "OUTROS")]
             Outros
         }
@@ -52,7 +55,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o.</param>
         /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
 
-        public NotificacaoSMSBody(long? Nsu = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, DateTime? DataAgendamento = null, TipoEventoEnum? TipoEvento = null)
+        public NotificacaoSMSBody(long? Nsu = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, string DataAgendamento = null, TipoEventoEnum? TipoEvento = null)
         {
             // to ensure "Nsu" is required (not null)
             if (Nsu == null)
@@ -153,7 +156,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
-        public DateTime? DataAgendamento { get; set; }
+        public string DataAgendamento { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
