@@ -54,7 +54,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>PageAplicacaoMobileResponse</returns>
-        PageAplicacaoMobileResponse ListarUsingGET1 (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        PageAplicacaoMobileResponse ListarUsingGET2 (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
   
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -69,7 +69,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>ApiResponse of PageAplicacaoMobileResponse</returns>
-        ApiResponse<PageAplicacaoMobileResponse> ListarUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        ApiResponse<PageAplicacaoMobileResponse> ListarUsingGET2WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -134,7 +134,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of PageAplicacaoMobileResponse</returns>
-        System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGET2Async (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
 
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -149,7 +149,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacaoMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGET2AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -457,9 +457,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
         /// <returns>PageAplicacaoMobileResponse</returns>
-        public PageAplicacaoMobileResponse ListarUsingGET1 (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public PageAplicacaoMobileResponse ListarUsingGET2 (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = ListarUsingGET1WithHttpInfo(sort, page, limit, id, idPlataformaMobile);
+             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = ListarUsingGET2WithHttpInfo(sort, page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
         }
 
@@ -473,7 +473,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
         /// <returns>ApiResponse of PageAplicacaoMobileResponse</returns>
-        public ApiResponse< PageAplicacaoMobileResponse > ListarUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public ApiResponse< PageAplicacaoMobileResponse > ListarUsingGET2WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -524,9 +524,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -545,9 +545,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of PageAplicacaoMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public async System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarUsingGET2Async (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
+             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = await ListarUsingGET2AsyncWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
 
         }
@@ -562,7 +562,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacaoMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarUsingGET2AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -613,9 +613,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
