@@ -28,12 +28,13 @@ namespace Conductor.Pier.Model
         /// <param name="IdProfissao">Profiss\u00C3\u00A3o da pessoa fisica.</param>
         /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica.</param>
         /// <param name="IdNacionalidade">Id Nacionalidade da pessoa fisica.</param>
+        /// <param name="NumeroBanco">N\u00C3\u00BAmero do banco..</param>
         /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
         /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
         /// <param name="Email">Email da pessoa fisica.</param>
         /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
@@ -41,6 +42,7 @@ namespace Conductor.Pier.Model
             this.IdProfissao = IdProfissao;
             this.IdNaturezaOcupacao = IdNaturezaOcupacao;
             this.IdNacionalidade = IdNacionalidade;
+            this.NumeroBanco = NumeroBanco;
             this.NumeroAgencia = NumeroAgencia;
             this.NumeroContaCorrente = NumeroContaCorrente;
             this.Email = Email;
@@ -92,6 +94,13 @@ namespace Conductor.Pier.Model
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero do banco.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero do banco.</value>
+        [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
+        public int? NumeroBanco { get; set; }
+    
+        /// <summary>
         /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
         /// </summary>
         /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
@@ -133,6 +142,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdProfissao: ").Append(IdProfissao).Append("\n");
             sb.Append("  IdNaturezaOcupacao: ").Append(IdNaturezaOcupacao).Append("\n");
             sb.Append("  IdNacionalidade: ").Append(IdNacionalidade).Append("\n");
+            sb.Append("  NumeroBanco: ").Append(NumeroBanco).Append("\n");
             sb.Append("  NumeroAgencia: ").Append(NumeroAgencia).Append("\n");
             sb.Append("  NumeroContaCorrente: ").Append(NumeroContaCorrente).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
@@ -205,6 +215,11 @@ namespace Conductor.Pier.Model
                     this.IdNacionalidade.Equals(other.IdNacionalidade)
                 ) && 
                 (
+                    this.NumeroBanco == other.NumeroBanco ||
+                    this.NumeroBanco != null &&
+                    this.NumeroBanco.Equals(other.NumeroBanco)
+                ) && 
+                (
                     this.NumeroAgencia == other.NumeroAgencia ||
                     this.NumeroAgencia != null &&
                     this.NumeroAgencia.Equals(other.NumeroAgencia)
@@ -255,6 +270,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdNacionalidade != null)
                     hash = hash * 59 + this.IdNacionalidade.GetHashCode();
+                
+                if (this.NumeroBanco != null)
+                    hash = hash * 59 + this.NumeroBanco.GetHashCode();
                 
                 if (this.NumeroAgencia != null)
                     hash = hash * 59 + this.NumeroAgencia.GetHashCode();

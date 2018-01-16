@@ -56,12 +56,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse AlterarUsingPUT10 (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        PessoaDetalheResponse AlterarUsingPUT10 (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
   
         /// <summary>
         /// Atualiza os detalhes de uma determinada Pessoa
@@ -76,12 +77,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> AlterarUsingPUT10WithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        ApiResponse<PessoaDetalheResponse> AlterarUsingPUT10WithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
         
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -533,12 +535,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>PagePessoaDetalheResponse</returns>
-        PagePessoaDetalheResponse ListarUsingGET23 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        PagePessoaDetalheResponse ListarUsingGET23 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
   
         /// <summary>
         /// Lista os Detalhes das Pessoas cadastradas no Emissor
@@ -556,12 +559,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        ApiResponse<PagePessoaDetalheResponse> ListarUsingGET23WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        ApiResponse<PagePessoaDetalheResponse> ListarUsingGET23WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
         
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -774,12 +778,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse SalvarUsingPOST16 (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        PessoaDetalheResponse SalvarUsingPOST16 (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
   
         /// <summary>
         /// Salvar os detalhes de uma determinada Pessoa
@@ -794,12 +799,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> SalvarUsingPOST16WithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        ApiResponse<PessoaDetalheResponse> SalvarUsingPOST16WithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
         
         /// <summary>
         /// Realiza o cadastro de um nova Pessoa
@@ -914,12 +920,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarUsingPUT10Async (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarUsingPUT10Async (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
 
         /// <summary>
         /// Atualiza os detalhes de uma determinada Pessoa
@@ -934,12 +941,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
         
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -1391,12 +1399,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PagePessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET23Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET23Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
 
         /// <summary>
         /// Lista os Detalhes das Pessoas cadastradas no Emissor
@@ -1414,12 +1423,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET23AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET23AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
         
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -1632,12 +1642,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarUsingPOST16Async (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarUsingPOST16Async (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
 
         /// <summary>
         /// Salvar os detalhes de uma determinada Pessoa
@@ -1652,12 +1663,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarUsingPOST16AsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarUsingPOST16AsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null);
         
         /// <summary>
         /// Realiza o cadastro de um nova Pessoa
@@ -2025,14 +2037,15 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param> 
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param> 
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param> 
         /// <param name="email">Email da pessoa fisica (optional)</param> 
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param> 
         /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse AlterarUsingPUT10 (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public PessoaDetalheResponse AlterarUsingPUT10 (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = AlterarUsingPUT10WithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = AlterarUsingPUT10WithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
              return localVarResponse.Data;
         }
 
@@ -2046,12 +2059,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param> 
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param> 
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param> 
         /// <param name="email">Email da pessoa fisica (optional)</param> 
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > AlterarUsingPUT10WithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public ApiResponse< PessoaDetalheResponse > AlterarUsingPUT10WithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
             
             // verify the required parameter 'id' is set
@@ -2092,6 +2106,7 @@ namespace Conductor.Pier.Api
             if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
             if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
             if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
             if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
             if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
             if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
@@ -2132,14 +2147,15 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarUsingPUT10Async (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarUsingPUT10Async (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await AlterarUsingPUT10AsyncWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await AlterarUsingPUT10AsyncWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
              return localVarResponse.Data;
 
         }
@@ -2154,12 +2170,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT10");
@@ -2198,6 +2215,7 @@ namespace Conductor.Pier.Api
             if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
             if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
             if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
             if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
             if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
             if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
@@ -4994,14 +5012,15 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param> 
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param> 
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param> 
         /// <param name="email">Email da pessoa fisica (optional)</param> 
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param> 
         /// <returns>PagePessoaDetalheResponse</returns>
-        public PagePessoaDetalheResponse ListarUsingGET23 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public PagePessoaDetalheResponse ListarUsingGET23 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarUsingGET23WithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarUsingGET23WithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
              return localVarResponse.Data;
         }
 
@@ -5018,12 +5037,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param> 
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param> 
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param> 
         /// <param name="email">Email da pessoa fisica (optional)</param> 
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        public ApiResponse< PagePessoaDetalheResponse > ListarUsingGET23WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public ApiResponse< PagePessoaDetalheResponse > ListarUsingGET23WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
             
     
@@ -5063,6 +5083,7 @@ namespace Conductor.Pier.Api
             if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
             if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
             if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
             if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
             if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
             if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
@@ -5106,14 +5127,15 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PagePessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET23Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET23Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarUsingGET23AsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarUsingGET23AsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
              return localVarResponse.Data;
 
         }
@@ -5131,12 +5153,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do Banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET23AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET23AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
             
     
@@ -5176,6 +5199,7 @@ namespace Conductor.Pier.Api
             if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
             if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
             if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
             if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
             if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
             if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
@@ -6379,14 +6403,15 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param> 
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param> 
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param> 
         /// <param name="email">Email da pessoa fisica (optional)</param> 
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param> 
         /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse SalvarUsingPOST16 (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public PessoaDetalheResponse SalvarUsingPOST16 (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = SalvarUsingPOST16WithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = SalvarUsingPOST16WithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
              return localVarResponse.Data;
         }
 
@@ -6400,12 +6425,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param> 
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param> 
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param> 
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param> 
         /// <param name="email">Email da pessoa fisica (optional)</param> 
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param> 
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > SalvarUsingPOST16WithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public ApiResponse< PessoaDetalheResponse > SalvarUsingPOST16WithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
             
             // verify the required parameter 'idPessoa' is set
@@ -6446,6 +6472,7 @@ namespace Conductor.Pier.Api
             if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
             if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
             if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
             if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
             if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
             if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
@@ -6486,14 +6513,15 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarUsingPOST16Async (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarUsingPOST16Async (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await SalvarUsingPOST16AsyncWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await SalvarUsingPOST16AsyncWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
              return localVarResponse.Data;
 
         }
@@ -6508,12 +6536,13 @@ namespace Conductor.Pier.Api
         /// <param name="idProfissao">Profiss\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (optional)</param>
         /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00C3\u00BAmero do banco. (optional)</param>
         /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia. (optional)</param>
         /// <param name="numeroContaCorrente">N\u00C3\u00BAmero da conta corrente. (optional)</param>
         /// <param name="email">Email da pessoa fisica (optional)</param>
         /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarUsingPOST16AsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarUsingPOST16AsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null)
         {
             // verify the required parameter 'idPessoa' is set
             if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling SalvarUsingPOST16");
@@ -6552,6 +6581,7 @@ namespace Conductor.Pier.Api
             if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
             if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
             if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
             if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
             if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
             if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter

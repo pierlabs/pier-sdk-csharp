@@ -32,7 +32,7 @@ namespace Conductor.Pier.Model
         /// <param name="TerminalRequisitante">Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante. (required).</param>
         /// <param name="NumeroEstabelecimento">Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento. (required).</param>
 
-        public TransferenciaCreditoContaBancariaPersist(long? NsuOrigem = null, long? IdCartao = null, long? IdContaBancaria = null, double? Valor = null, long? NumeroParcelas = null, long? NumeroMesesCarencia = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroEstabelecimento = null)
+        public TransferenciaCreditoContaBancariaPersist(long? NsuOrigem = null, long? IdCartao = null, long? IdContaBancaria = null, double? Valor = null, long? NumeroParcelas = null, int? NumeroMesesCarencia = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroEstabelecimento = null)
         {
             // to ensure "NsuOrigem" is required (not null)
             if (NsuOrigem == null)
@@ -159,7 +159,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
-        public long? NumeroMesesCarencia { get; set; }
+        public int? NumeroMesesCarencia { get; set; }
     
         /// <summary>
         /// Representa a Data e hora do terminal requisitante.

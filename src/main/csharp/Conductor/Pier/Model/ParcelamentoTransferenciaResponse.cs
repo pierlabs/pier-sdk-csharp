@@ -23,19 +23,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParcelamentoTransferenciaResponse" />class.
         /// </summary>
         /// <param name="NumeroParcela">N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis..</param>
-        /// <param name="ValorPrimeiraParcela">Valor da primeira parcela..</param>
-        /// <param name="ValorDemaisParcelas">Valor das demais parcelas..</param>
+        /// <param name="ValorParcelas">Valor das demais parcelas..</param>
         /// <param name="ValorTotal">Valor total do financiamento..</param>
         /// <param name="ValorTAC">Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="ValorIOF">IOF.</param>
         /// <param name="TaxaJuros">Valor da taxa de juros..</param>
         /// <param name="CetAnual">CET anual..</param>
 
-        public ParcelamentoTransferenciaResponse(string NumeroParcela = null, double? ValorPrimeiraParcela = null, double? ValorDemaisParcelas = null, double? ValorTotal = null, double? ValorTAC = null, double? ValorIOF = null, double? TaxaJuros = null, double? CetAnual = null)
+        public ParcelamentoTransferenciaResponse(int? NumeroParcela = null, double? ValorParcelas = null, double? ValorTotal = null, double? ValorTAC = null, double? ValorIOF = null, double? TaxaJuros = null, double? CetAnual = null)
         {
             this.NumeroParcela = NumeroParcela;
-            this.ValorPrimeiraParcela = ValorPrimeiraParcela;
-            this.ValorDemaisParcelas = ValorDemaisParcelas;
+            this.ValorParcelas = ValorParcelas;
             this.ValorTotal = ValorTotal;
             this.ValorTAC = ValorTAC;
             this.ValorIOF = ValorIOF;
@@ -50,21 +48,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
-        public string NumeroParcela { get; set; }
-    
-        /// <summary>
-        /// Valor da primeira parcela.
-        /// </summary>
-        /// <value>Valor da primeira parcela.</value>
-        [DataMember(Name="valorPrimeiraParcela", EmitDefaultValue=false)]
-        public double? ValorPrimeiraParcela { get; set; }
+        public int? NumeroParcela { get; set; }
     
         /// <summary>
         /// Valor das demais parcelas.
         /// </summary>
         /// <value>Valor das demais parcelas.</value>
-        [DataMember(Name="valorDemaisParcelas", EmitDefaultValue=false)]
-        public double? ValorDemaisParcelas { get; set; }
+        [DataMember(Name="valorParcelas", EmitDefaultValue=false)]
+        public double? ValorParcelas { get; set; }
     
         /// <summary>
         /// Valor total do financiamento.
@@ -110,8 +101,7 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class ParcelamentoTransferenciaResponse {\n");
             sb.Append("  NumeroParcela: ").Append(NumeroParcela).Append("\n");
-            sb.Append("  ValorPrimeiraParcela: ").Append(ValorPrimeiraParcela).Append("\n");
-            sb.Append("  ValorDemaisParcelas: ").Append(ValorDemaisParcelas).Append("\n");
+            sb.Append("  ValorParcelas: ").Append(ValorParcelas).Append("\n");
             sb.Append("  ValorTotal: ").Append(ValorTotal).Append("\n");
             sb.Append("  ValorTAC: ").Append(ValorTAC).Append("\n");
             sb.Append("  ValorIOF: ").Append(ValorIOF).Append("\n");
@@ -160,14 +150,9 @@ namespace Conductor.Pier.Model
                     this.NumeroParcela.Equals(other.NumeroParcela)
                 ) && 
                 (
-                    this.ValorPrimeiraParcela == other.ValorPrimeiraParcela ||
-                    this.ValorPrimeiraParcela != null &&
-                    this.ValorPrimeiraParcela.Equals(other.ValorPrimeiraParcela)
-                ) && 
-                (
-                    this.ValorDemaisParcelas == other.ValorDemaisParcelas ||
-                    this.ValorDemaisParcelas != null &&
-                    this.ValorDemaisParcelas.Equals(other.ValorDemaisParcelas)
+                    this.ValorParcelas == other.ValorParcelas ||
+                    this.ValorParcelas != null &&
+                    this.ValorParcelas.Equals(other.ValorParcelas)
                 ) && 
                 (
                     this.ValorTotal == other.ValorTotal ||
@@ -211,11 +196,8 @@ namespace Conductor.Pier.Model
                 if (this.NumeroParcela != null)
                     hash = hash * 59 + this.NumeroParcela.GetHashCode();
                 
-                if (this.ValorPrimeiraParcela != null)
-                    hash = hash * 59 + this.ValorPrimeiraParcela.GetHashCode();
-                
-                if (this.ValorDemaisParcelas != null)
-                    hash = hash * 59 + this.ValorDemaisParcelas.GetHashCode();
+                if (this.ValorParcelas != null)
+                    hash = hash * 59 + this.ValorParcelas.GetHashCode();
                 
                 if (this.ValorTotal != null)
                     hash = hash * 59 + this.ValorTotal.GetHashCode();

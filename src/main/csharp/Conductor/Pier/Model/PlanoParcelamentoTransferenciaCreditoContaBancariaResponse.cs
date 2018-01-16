@@ -22,27 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaResponse" />class.
         /// </summary>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou..</param>
         /// <param name="NumeroMascaradoCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado..</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.</param>
-        /// <param name="PlanoParcelamentos">Lista os planos de parcelamentos.</param>
+        /// <param name="VencimentoPrimeiraParcela">Data de vencimento da primeira parcela..</param>
+        /// <param name="ValorTransacao">Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque..</param>
+        /// <param name="NumeroMesesCarencia">N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia..</param>
+        /// <param name="Parcelas">Lista com os planos de parcelamento..</param>
 
-        public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse(string NsuOrigem = null, string NumeroMascaradoCartao = null, string TerminalRequisitante = null, List<PlanoParcelamentoTransferenciaResponse> PlanoParcelamentos = null)
+        public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse(string NumeroMascaradoCartao = null, string VencimentoPrimeiraParcela = null, double? ValorTransacao = null, int? NumeroMesesCarencia = null, List<ParcelamentoTransferenciaResponse> Parcelas = null)
         {
-            this.NsuOrigem = NsuOrigem;
             this.NumeroMascaradoCartao = NumeroMascaradoCartao;
-            this.TerminalRequisitante = TerminalRequisitante;
-            this.PlanoParcelamentos = PlanoParcelamentos;
+            this.VencimentoPrimeiraParcela = VencimentoPrimeiraParcela;
+            this.ValorTransacao = ValorTransacao;
+            this.NumeroMesesCarencia = NumeroMesesCarencia;
+            this.Parcelas = Parcelas;
             
         }
         
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.</value>
-        [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
-        public string NsuOrigem { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
@@ -52,18 +47,32 @@ namespace Conductor.Pier.Model
         public string NumeroMascaradoCartao { get; set; }
     
         /// <summary>
-        /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+        /// Data de vencimento da primeira parcela.
         /// </summary>
-        /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
-        [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
-        public string TerminalRequisitante { get; set; }
+        /// <value>Data de vencimento da primeira parcela.</value>
+        [DataMember(Name="vencimentoPrimeiraParcela", EmitDefaultValue=false)]
+        public string VencimentoPrimeiraParcela { get; set; }
     
         /// <summary>
-        /// Lista os planos de parcelamentos
+        /// Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
         /// </summary>
-        /// <value>Lista os planos de parcelamentos</value>
-        [DataMember(Name="planoParcelamentos", EmitDefaultValue=false)]
-        public List<PlanoParcelamentoTransferenciaResponse> PlanoParcelamentos { get; set; }
+        /// <value>Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.</value>
+        [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
+        public double? ValorTransacao { get; set; }
+    
+        /// <summary>
+        /// N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.</value>
+        [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
+        public int? NumeroMesesCarencia { get; set; }
+    
+        /// <summary>
+        /// Lista com os planos de parcelamento.
+        /// </summary>
+        /// <value>Lista com os planos de parcelamento.</value>
+        [DataMember(Name="parcelas", EmitDefaultValue=false)]
+        public List<ParcelamentoTransferenciaResponse> Parcelas { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,10 +82,11 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse {\n");
-            sb.Append("  NsuOrigem: ").Append(NsuOrigem).Append("\n");
             sb.Append("  NumeroMascaradoCartao: ").Append(NumeroMascaradoCartao).Append("\n");
-            sb.Append("  TerminalRequisitante: ").Append(TerminalRequisitante).Append("\n");
-            sb.Append("  PlanoParcelamentos: ").Append(PlanoParcelamentos).Append("\n");
+            sb.Append("  VencimentoPrimeiraParcela: ").Append(VencimentoPrimeiraParcela).Append("\n");
+            sb.Append("  ValorTransacao: ").Append(ValorTransacao).Append("\n");
+            sb.Append("  NumeroMesesCarencia: ").Append(NumeroMesesCarencia).Append("\n");
+            sb.Append("  Parcelas: ").Append(Parcelas).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -115,24 +125,29 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.NsuOrigem == other.NsuOrigem ||
-                    this.NsuOrigem != null &&
-                    this.NsuOrigem.Equals(other.NsuOrigem)
-                ) && 
-                (
                     this.NumeroMascaradoCartao == other.NumeroMascaradoCartao ||
                     this.NumeroMascaradoCartao != null &&
                     this.NumeroMascaradoCartao.Equals(other.NumeroMascaradoCartao)
                 ) && 
                 (
-                    this.TerminalRequisitante == other.TerminalRequisitante ||
-                    this.TerminalRequisitante != null &&
-                    this.TerminalRequisitante.Equals(other.TerminalRequisitante)
+                    this.VencimentoPrimeiraParcela == other.VencimentoPrimeiraParcela ||
+                    this.VencimentoPrimeiraParcela != null &&
+                    this.VencimentoPrimeiraParcela.Equals(other.VencimentoPrimeiraParcela)
                 ) && 
                 (
-                    this.PlanoParcelamentos == other.PlanoParcelamentos ||
-                    this.PlanoParcelamentos != null &&
-                    this.PlanoParcelamentos.SequenceEqual(other.PlanoParcelamentos)
+                    this.ValorTransacao == other.ValorTransacao ||
+                    this.ValorTransacao != null &&
+                    this.ValorTransacao.Equals(other.ValorTransacao)
+                ) && 
+                (
+                    this.NumeroMesesCarencia == other.NumeroMesesCarencia ||
+                    this.NumeroMesesCarencia != null &&
+                    this.NumeroMesesCarencia.Equals(other.NumeroMesesCarencia)
+                ) && 
+                (
+                    this.Parcelas == other.Parcelas ||
+                    this.Parcelas != null &&
+                    this.Parcelas.SequenceEqual(other.Parcelas)
                 );
         }
 
@@ -148,17 +163,20 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.NsuOrigem != null)
-                    hash = hash * 59 + this.NsuOrigem.GetHashCode();
-                
                 if (this.NumeroMascaradoCartao != null)
                     hash = hash * 59 + this.NumeroMascaradoCartao.GetHashCode();
                 
-                if (this.TerminalRequisitante != null)
-                    hash = hash * 59 + this.TerminalRequisitante.GetHashCode();
+                if (this.VencimentoPrimeiraParcela != null)
+                    hash = hash * 59 + this.VencimentoPrimeiraParcela.GetHashCode();
                 
-                if (this.PlanoParcelamentos != null)
-                    hash = hash * 59 + this.PlanoParcelamentos.GetHashCode();
+                if (this.ValorTransacao != null)
+                    hash = hash * 59 + this.ValorTransacao.GetHashCode();
+                
+                if (this.NumeroMesesCarencia != null)
+                    hash = hash * 59 + this.NumeroMesesCarencia.GetHashCode();
+                
+                if (this.Parcelas != null)
+                    hash = hash * 59 + this.Parcelas.GetHashCode();
                 
                 return hash;
             }

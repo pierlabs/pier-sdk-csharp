@@ -25,12 +25,14 @@ namespace Conductor.Pier.Model
         /// <param name="Id">Identificador do plano de campanha.</param>
         /// <param name="Parcelas">Quantidade de parcelas.</param>
         /// <param name="Taxa">Taxa de juros.</param>
+        /// <param name="Usuario">Nome do usu\u00C3\u00A1rio.</param>
 
-        public PlanoCampanhaResponse(long? Id = null, int? Parcelas = null, double? Taxa = null)
+        public PlanoCampanhaResponse(long? Id = null, int? Parcelas = null, double? Taxa = null, string Usuario = null)
         {
             this.Id = Id;
             this.Parcelas = Parcelas;
             this.Taxa = Taxa;
+            this.Usuario = Usuario;
             
         }
         
@@ -57,6 +59,13 @@ namespace Conductor.Pier.Model
         public double? Taxa { get; set; }
     
         /// <summary>
+        /// Nome do usu\u00C3\u00A1rio
+        /// </summary>
+        /// <value>Nome do usu\u00C3\u00A1rio</value>
+        [DataMember(Name="usuario", EmitDefaultValue=false)]
+        public string Usuario { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -67,6 +76,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parcelas: ").Append(Parcelas).Append("\n");
             sb.Append("  Taxa: ").Append(Taxa).Append("\n");
+            sb.Append("  Usuario: ").Append(Usuario).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -118,6 +128,11 @@ namespace Conductor.Pier.Model
                     this.Taxa == other.Taxa ||
                     this.Taxa != null &&
                     this.Taxa.Equals(other.Taxa)
+                ) && 
+                (
+                    this.Usuario == other.Usuario ||
+                    this.Usuario != null &&
+                    this.Usuario.Equals(other.Usuario)
                 );
         }
 
@@ -141,6 +156,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Taxa != null)
                     hash = hash * 59 + this.Taxa.GetHashCode();
+                
+                if (this.Usuario != null)
+                    hash = hash * 59 + this.Usuario.GetHashCode();
                 
                 return hash;
             }
