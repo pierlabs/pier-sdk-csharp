@@ -23,29 +23,27 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoCorrenteResponse" />class.
         /// </summary>
         /// <param name="UltimaParcelaLancada">UltimaParcelaLancada.</param>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id)..</param>
         /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)..</param>
         /// <param name="IdTipoRegistro">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id)..</param>
         /// <param name="Ordem">Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id)..</param>
         /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id)..</param>
-        /// <param name="Descricao">Descricao.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="DescricaoStatus">DescricaoStatus.</param>
-        /// <param name="Valor">Valor.</param>
-        /// <param name="ValorDolar">ValorDolar.</param>
-        /// <param name="QuantidadeParcelas">QuantidadeParcelas.</param>
-        /// <param name="ValorParcela">ValorParcela.</param>
-        /// <param name="DataEvento">DataEvento.</param>
-        /// <param name="Estabelecimento">Estabelecimento.</param>
-        /// <param name="FlagCredito">FlagCredito.</param>
-        /// <param name="TipoEstabelecimento">TipoEstabelecimento.</param>
-        /// <param name="IdGrupoMCC">IdGrupoMCC.</param>
-        /// <param name="FlagSolicitouContestacao">FlagSolicitouContestacao.</param>
+        /// <param name="Descricao">Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Status">Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="DescricaoStatus">Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Valor">Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="ValorDolar">Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="QuantidadeParcelas">Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="ValorParcela">Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="DataEvento">Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Estabelecimento">Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="FlagCredito">Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito..</param>
+        /// <param name="TipoEstabelecimento">Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="IdGrupoMCC">Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="FlagSolicitouContestacao">Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? Id = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, DateTime? DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
+        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
-            this.Id = Id;
             this.IdConta = IdConta;
             this.IdTipoRegistro = IdTipoRegistro;
             this.Ordem = Ordem;
@@ -72,13 +70,6 @@ namespace Conductor.Pier.Model
         /// </summary>
         [DataMember(Name="ultimaParcelaLancada", EmitDefaultValue=false)]
         public int? UltimaParcelaLancada { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -109,80 +100,93 @@ namespace Conductor.Pier.Model
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Gets or Sets Descricao
+        /// Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Gets or Sets Status
+        /// Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Gets or Sets DescricaoStatus
+        /// Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
     
         /// <summary>
-        /// Gets or Sets Valor
+        /// Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Gets or Sets ValorDolar
+        /// Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="valorDolar", EmitDefaultValue=false)]
         public double? ValorDolar { get; set; }
     
         /// <summary>
-        /// Gets or Sets QuantidadeParcelas
+        /// Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// Gets or Sets ValorParcela
+        /// Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// Gets or Sets DataEvento
+        /// Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="dataEvento", EmitDefaultValue=false)]
-        public DateTime? DataEvento { get; set; }
+        public string DataEvento { get; set; }
     
         /// <summary>
-        /// Gets or Sets Estabelecimento
+        /// Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="estabelecimento", EmitDefaultValue=false)]
         public string Estabelecimento { get; set; }
     
         /// <summary>
-        /// Gets or Sets FlagCredito
+        /// Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.
         /// </summary>
+        /// <value>Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public int? FlagCredito { get; set; }
     
         /// <summary>
-        /// Gets or Sets TipoEstabelecimento
+        /// Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="tipoEstabelecimento", EmitDefaultValue=false)]
         public string TipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// Gets or Sets IdGrupoMCC
+        /// Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public int? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// Gets or Sets FlagSolicitouContestacao
+        /// Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
         /// </summary>
+        /// <value>Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</value>
         [DataMember(Name="flagSolicitouContestacao", EmitDefaultValue=false)]
         public int? FlagSolicitouContestacao { get; set; }
     
@@ -195,7 +199,6 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class TransacaoCorrenteResponse {\n");
             sb.Append("  UltimaParcelaLancada: ").Append(UltimaParcelaLancada).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdTipoRegistro: ").Append(IdTipoRegistro).Append("\n");
             sb.Append("  Ordem: ").Append(Ordem).Append("\n");
@@ -254,11 +257,6 @@ namespace Conductor.Pier.Model
                     this.UltimaParcelaLancada == other.UltimaParcelaLancada ||
                     this.UltimaParcelaLancada != null &&
                     this.UltimaParcelaLancada.Equals(other.UltimaParcelaLancada)
-                ) && 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
                 ) && 
                 (
                     this.IdConta == other.IdConta ||
@@ -361,9 +359,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.UltimaParcelaLancada != null)
                     hash = hash * 59 + this.UltimaParcelaLancada.GetHashCode();
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();

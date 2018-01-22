@@ -32,7 +32,7 @@ namespace Conductor.Pier.Model
         /// <param name="RevType">RevType.</param>
         /// <param name="RevUser">RevUser.</param>
 
-        public CdtDetalheOportunidadeAUD(string Conteudo = null, long? Id = null, long? IdOportunidade = null, string NomeCampo = null, long? Rev = null, DateTime? RevDate = null, long? RevOportunidade = null, long? RevType = null, string RevUser = null)
+        public CdtDetalheOportunidadeAUD(string Conteudo = null, long? Id = null, long? IdOportunidade = null, string NomeCampo = null, long? Rev = null, string RevDate = null, long? RevOportunidade = null, long? RevType = null, string RevUser = null)
         {
             this.Conteudo = Conteudo;
             this.Id = Id;
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets RevDate
         /// </summary>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
-        public DateTime? RevDate { get; set; }
+        public string RevDate { get; set; }
     
         /// <summary>
         /// Gets or Sets RevOportunidade

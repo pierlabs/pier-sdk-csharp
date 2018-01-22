@@ -28,9 +28,19 @@ namespace Conductor.Pier.Model
         /// <param name="CodigoAutorizacao">C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador..</param>
         /// <param name="NumeroMascaradoCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado..</param>
         /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
 
-        public TransacaoOnUsResponse(string NsuOrigem = null, string NsuAutorizacao = null, List<MapOfstringAndstring> PlanoDeParcelamento = null, string CodigoAutorizacao = null, string NumeroMascaradoCartao = null, string NomePortadorCartao = null)
+        public TransacaoOnUsResponse(string NsuOrigem = null, string NsuAutorizacao = null, List<MapOfstringAndstring> PlanoDeParcelamento = null, string CodigoAutorizacao = null, string NumeroMascaradoCartao = null, string NomePortadorCartao = null, string TerminalRequisitante = null)
         {
+            // to ensure "TerminalRequisitante" is required (not null)
+            if (TerminalRequisitante == null)
+            {
+                throw new InvalidDataException("TerminalRequisitante is a required property for TransacaoOnUsResponse and cannot be null");
+            }
+            else
+            {
+                this.TerminalRequisitante = TerminalRequisitante;
+            }
             this.NsuOrigem = NsuOrigem;
             this.NsuAutorizacao = NsuAutorizacao;
             this.PlanoDeParcelamento = PlanoDeParcelamento;
@@ -84,6 +94,13 @@ namespace Conductor.Pier.Model
         public string NomePortadorCartao { get; set; }
     
         /// <summary>
+        /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+        /// </summary>
+        /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
+        [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
+        public string TerminalRequisitante { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,6 +114,7 @@ namespace Conductor.Pier.Model
             sb.Append("  CodigoAutorizacao: ").Append(CodigoAutorizacao).Append("\n");
             sb.Append("  NumeroMascaradoCartao: ").Append(NumeroMascaradoCartao).Append("\n");
             sb.Append("  NomePortadorCartao: ").Append(NomePortadorCartao).Append("\n");
+            sb.Append("  TerminalRequisitante: ").Append(TerminalRequisitante).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -163,6 +181,11 @@ namespace Conductor.Pier.Model
                     this.NomePortadorCartao == other.NomePortadorCartao ||
                     this.NomePortadorCartao != null &&
                     this.NomePortadorCartao.Equals(other.NomePortadorCartao)
+                ) && 
+                (
+                    this.TerminalRequisitante == other.TerminalRequisitante ||
+                    this.TerminalRequisitante != null &&
+                    this.TerminalRequisitante.Equals(other.TerminalRequisitante)
                 );
         }
 
@@ -195,6 +218,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomePortadorCartao != null)
                     hash = hash * 59 + this.NomePortadorCartao.GetHashCode();
+                
+                if (this.TerminalRequisitante != null)
+                    hash = hash * 59 + this.TerminalRequisitante.GetHashCode();
                 
                 return hash;
             }

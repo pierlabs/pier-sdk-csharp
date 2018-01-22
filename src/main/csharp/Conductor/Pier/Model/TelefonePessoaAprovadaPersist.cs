@@ -22,16 +22,40 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" /> class.
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" />class.
         /// </summary>
-        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)..</param>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id)..</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone..</param>
+        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (required).</param>
+        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id). (required).</param>
+        /// <param name="Telefone">N\u00C3\u00BAmero do telefone. (required).</param>
         /// <param name="Ramal">N\u00C3\u00BAmero do ramal..</param>
 
         public TelefonePessoaAprovadaPersist(long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
-            this.IdTipoTelefone = IdTipoTelefone;
-            this.Ddd = Ddd;
-            this.Telefone = Telefone;
+            // to ensure "IdTipoTelefone" is required (not null)
+            if (IdTipoTelefone == null)
+            {
+                throw new InvalidDataException("IdTipoTelefone is a required property for TelefonePessoaAprovadaPersist and cannot be null");
+            }
+            else
+            {
+                this.IdTipoTelefone = IdTipoTelefone;
+            }
+            // to ensure "Ddd" is required (not null)
+            if (Ddd == null)
+            {
+                throw new InvalidDataException("Ddd is a required property for TelefonePessoaAprovadaPersist and cannot be null");
+            }
+            else
+            {
+                this.Ddd = Ddd;
+            }
+            // to ensure "Telefone" is required (not null)
+            if (Telefone == null)
+            {
+                throw new InvalidDataException("Telefone is a required property for TelefonePessoaAprovadaPersist and cannot be null");
+            }
+            else
+            {
+                this.Telefone = Telefone;
+            }
             this.Ramal = Ramal;
             
         }

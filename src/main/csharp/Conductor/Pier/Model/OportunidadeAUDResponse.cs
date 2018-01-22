@@ -34,8 +34,9 @@ namespace Conductor.Pier.Model
         /// <param name="Detalhes">Lista de detalhes da oportunidade.</param>
         /// <param name="RevDate">Data da auditoria.</param>
         /// <param name="RevType">Tipo da auditoria.</param>
+        /// <param name="Rev">Identificador da auditoria.</param>
 
-        public OportunidadeAUDResponse(long? Id = null, long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, DateTime? DataCadastro = null, DateTime? DataAtualizacao = null, string NumeroReceitaFederal = null, DateTime? DataInicioVigencia = null, DateTime? DataFimVigencia = null, bool? FlagAtivo = null, List<CdtDetalheOportunidadeAUD> Detalhes = null, DateTime? RevDate = null, long? RevType = null)
+        public OportunidadeAUDResponse(long? Id = null, long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, string DataCadastro = null, string DataAtualizacao = null, string NumeroReceitaFederal = null, string DataInicioVigencia = null, string DataFimVigencia = null, bool? FlagAtivo = null, List<CdtDetalheOportunidadeAUD> Detalhes = null, string RevDate = null, long? RevType = null, long? Rev = null)
         {
             this.Id = Id;
             this.IdTipoOportunidade = IdTipoOportunidade;
@@ -49,6 +50,7 @@ namespace Conductor.Pier.Model
             this.Detalhes = Detalhes;
             this.RevDate = RevDate;
             this.RevType = RevType;
+            this.Rev = Rev;
             
         }
         
@@ -79,14 +81,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data cadastro da oportunidade.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
-        public DateTime? DataCadastro { get; set; }
+        public string DataCadastro { get; set; }
     
         /// <summary>
         /// Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
         /// </summary>
         /// <value>Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.</value>
         [DataMember(Name="dataAtualizacao", EmitDefaultValue=false)]
-        public DateTime? DataAtualizacao { get; set; }
+        public string DataAtualizacao { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
@@ -100,14 +102,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade</value>
         [DataMember(Name="dataInicioVigencia", EmitDefaultValue=false)]
-        public DateTime? DataInicioVigencia { get; set; }
+        public string DataInicioVigencia { get; set; }
     
         /// <summary>
         /// fim da vig\u00C3\u00AAncia da oportunidade
         /// </summary>
         /// <value>fim da vig\u00C3\u00AAncia da oportunidade</value>
         [DataMember(Name="dataFimVigencia", EmitDefaultValue=false)]
-        public DateTime? DataFimVigencia { get; set; }
+        public string DataFimVigencia { get; set; }
     
         /// <summary>
         /// Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
@@ -128,7 +130,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data da auditoria</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
-        public DateTime? RevDate { get; set; }
+        public string RevDate { get; set; }
     
         /// <summary>
         /// Tipo da auditoria
@@ -136,6 +138,13 @@ namespace Conductor.Pier.Model
         /// <value>Tipo da auditoria</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public long? RevType { get; set; }
+    
+        /// <summary>
+        /// Identificador da auditoria
+        /// </summary>
+        /// <value>Identificador da auditoria</value>
+        [DataMember(Name="rev", EmitDefaultValue=false)]
+        public long? Rev { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -157,6 +166,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Detalhes: ").Append(Detalhes).Append("\n");
             sb.Append("  RevDate: ").Append(RevDate).Append("\n");
             sb.Append("  RevType: ").Append(RevType).Append("\n");
+            sb.Append("  Rev: ").Append(Rev).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -253,6 +263,11 @@ namespace Conductor.Pier.Model
                     this.RevType == other.RevType ||
                     this.RevType != null &&
                     this.RevType.Equals(other.RevType)
+                ) && 
+                (
+                    this.Rev == other.Rev ||
+                    this.Rev != null &&
+                    this.Rev.Equals(other.Rev)
                 );
         }
 
@@ -303,6 +318,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.RevType != null)
                     hash = hash * 59 + this.RevType.GetHashCode();
+                
+                if (this.Rev != null)
+                    hash = hash * 59 + this.Rev.GetHashCode();
                 
                 return hash;
             }

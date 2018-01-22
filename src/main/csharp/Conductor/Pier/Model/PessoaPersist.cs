@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaPersist" /> class.
         /// Initializes a new instance of the <see cref="PessoaPersist" />class.
         /// </summary>
-        /// <param name="Cpf">N\u00C3\u00BAmero do CPF, quando PF..</param>
-        /// <param name="DataEmissaoIdentidade">Data emiss\u00C3\u00A3o da Identidade.</param>
-        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd..</param>
-        /// <param name="Email">Email do s\u00C3\u00B3cio.</param>
-        /// <param name="EstadoCivil">Estado civil do s\u00C3\u00B3cio.</param>
-        /// <param name="Nacionalidade">Nacionalidade do s\u00C3\u00B3cio.</param>
         /// <param name="Nome">Apresenta o Nome do Socio (required).</param>
+        /// <param name="Cpf">N\u00C3\u00BAmero do CPF, quando PF..</param>
+        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd..</param>
+        /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino)..</param>
         /// <param name="NumeroIdentidade">N\u00C3\u00BAmero da Identidade..</param>
         /// <param name="OrgaoExpedidorIdentidade">Org\u00C3\u00A3o expedidor da Identidade..</param>
-        /// <param name="Profissao">Profiss\u00C3\u00A3o do s\u00C3\u00B3cio.</param>
-        /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino)..</param>
-        /// <param name="Telefones">Informa os telefones do s\u00C3\u00B3cio.</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
+        /// <param name="DataEmissaoIdentidade">Data emiss\u00C3\u00A3o da Identidade.</param>
+        /// <param name="EstadoCivil">Estado civil do s\u00C3\u00B3cio.</param>
+        /// <param name="Profissao">Profiss\u00C3\u00A3o do s\u00C3\u00B3cio.</param>
+        /// <param name="Nacionalidade">Nacionalidade do s\u00C3\u00B3cio.</param>
+        /// <param name="Email">Email do s\u00C3\u00B3cio.</param>
+        /// <param name="Telefones">Informa os telefones do s\u00C3\u00B3cio.</param>
 
-        public PessoaPersist(string Cpf = null, DateTime? DataEmissaoIdentidade = null, DateTime? DataNascimento = null, string Email = null, string EstadoCivil = null, string Nacionalidade = null, string Nome = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Profissao = null, string Sexo = null, List<TelefonePessoaAprovadaPersist> Telefones = null, string UnidadeFederativaIdentidade = null)
+        public PessoaPersist(string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaPersist> Telefones = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -48,20 +48,27 @@ namespace Conductor.Pier.Model
                 this.Nome = Nome;
             }
             this.Cpf = Cpf;
-            this.DataEmissaoIdentidade = DataEmissaoIdentidade;
             this.DataNascimento = DataNascimento;
-            this.Email = Email;
-            this.EstadoCivil = EstadoCivil;
-            this.Nacionalidade = Nacionalidade;
+            this.Sexo = Sexo;
             this.NumeroIdentidade = NumeroIdentidade;
             this.OrgaoExpedidorIdentidade = OrgaoExpedidorIdentidade;
-            this.Profissao = Profissao;
-            this.Sexo = Sexo;
-            this.Telefones = Telefones;
             this.UnidadeFederativaIdentidade = UnidadeFederativaIdentidade;
+            this.DataEmissaoIdentidade = DataEmissaoIdentidade;
+            this.EstadoCivil = EstadoCivil;
+            this.Profissao = Profissao;
+            this.Nacionalidade = Nacionalidade;
+            this.Email = Email;
+            this.Telefones = Telefones;
             
         }
         
+    
+        /// <summary>
+        /// Apresenta o Nome do Socio
+        /// </summary>
+        /// <value>Apresenta o Nome do Socio</value>
+        [DataMember(Name="nome", EmitDefaultValue=false)]
+        public string Nome { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero do CPF, quando PF.
@@ -71,46 +78,18 @@ namespace Conductor.Pier.Model
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Data emiss\u00C3\u00A3o da Identidade
-        /// </summary>
-        /// <value>Data emiss\u00C3\u00A3o da Identidade</value>
-        [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
-        public DateTime? DataEmissaoIdentidade { get; set; }
-    
-        /// <summary>
         /// Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
         /// </summary>
         /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
-        public DateTime? DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
     
         /// <summary>
-        /// Email do s\u00C3\u00B3cio
+        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).
         /// </summary>
-        /// <value>Email do s\u00C3\u00B3cio</value>
-        [DataMember(Name="email", EmitDefaultValue=false)]
-        public string Email { get; set; }
-    
-        /// <summary>
-        /// Estado civil do s\u00C3\u00B3cio
-        /// </summary>
-        /// <value>Estado civil do s\u00C3\u00B3cio</value>
-        [DataMember(Name="estadoCivil", EmitDefaultValue=false)]
-        public string EstadoCivil { get; set; }
-    
-        /// <summary>
-        /// Nacionalidade do s\u00C3\u00B3cio
-        /// </summary>
-        /// <value>Nacionalidade do s\u00C3\u00B3cio</value>
-        [DataMember(Name="nacionalidade", EmitDefaultValue=false)]
-        public string Nacionalidade { get; set; }
-    
-        /// <summary>
-        /// Apresenta o Nome do Socio
-        /// </summary>
-        /// <value>Apresenta o Nome do Socio</value>
-        [DataMember(Name="nome", EmitDefaultValue=false)]
-        public string Nome { get; set; }
+        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).</value>
+        [DataMember(Name="sexo", EmitDefaultValue=false)]
+        public string Sexo { get; set; }
     
         /// <summary>
         /// N\u00C3\u00BAmero da Identidade.
@@ -127,6 +106,27 @@ namespace Conductor.Pier.Model
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
+        /// Sigla da Unidade Federativa de onde foi expedido a Identidade
+        /// </summary>
+        /// <value>Sigla da Unidade Federativa de onde foi expedido a Identidade</value>
+        [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
+        public string UnidadeFederativaIdentidade { get; set; }
+    
+        /// <summary>
+        /// Data emiss\u00C3\u00A3o da Identidade
+        /// </summary>
+        /// <value>Data emiss\u00C3\u00A3o da Identidade</value>
+        [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
+        public string DataEmissaoIdentidade { get; set; }
+    
+        /// <summary>
+        /// Estado civil do s\u00C3\u00B3cio
+        /// </summary>
+        /// <value>Estado civil do s\u00C3\u00B3cio</value>
+        [DataMember(Name="estadoCivil", EmitDefaultValue=false)]
+        public string EstadoCivil { get; set; }
+    
+        /// <summary>
         /// Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
         /// </summary>
         /// <value>Profiss\u00C3\u00A3o do s\u00C3\u00B3cio</value>
@@ -134,11 +134,18 @@ namespace Conductor.Pier.Model
         public string Profissao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).
+        /// Nacionalidade do s\u00C3\u00B3cio
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).</value>
-        [DataMember(Name="sexo", EmitDefaultValue=false)]
-        public string Sexo { get; set; }
+        /// <value>Nacionalidade do s\u00C3\u00B3cio</value>
+        [DataMember(Name="nacionalidade", EmitDefaultValue=false)]
+        public string Nacionalidade { get; set; }
+    
+        /// <summary>
+        /// Email do s\u00C3\u00B3cio
+        /// </summary>
+        /// <value>Email do s\u00C3\u00B3cio</value>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
     
         /// <summary>
         /// Informa os telefones do s\u00C3\u00B3cio
@@ -148,13 +155,6 @@ namespace Conductor.Pier.Model
         public List<TelefonePessoaAprovadaPersist> Telefones { get; set; }
     
         /// <summary>
-        /// Sigla da Unidade Federativa de onde foi expedido a Identidade
-        /// </summary>
-        /// <value>Sigla da Unidade Federativa de onde foi expedido a Identidade</value>
-        [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
-        public string UnidadeFederativaIdentidade { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -162,19 +162,19 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PessoaPersist {\n");
-            sb.Append("  Cpf: ").Append(Cpf).Append("\n");
-            sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
-            sb.Append("  DataNascimento: ").Append(DataNascimento).Append("\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  EstadoCivil: ").Append(EstadoCivil).Append("\n");
-            sb.Append("  Nacionalidade: ").Append(Nacionalidade).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
+            sb.Append("  Cpf: ").Append(Cpf).Append("\n");
+            sb.Append("  DataNascimento: ").Append(DataNascimento).Append("\n");
+            sb.Append("  Sexo: ").Append(Sexo).Append("\n");
             sb.Append("  NumeroIdentidade: ").Append(NumeroIdentidade).Append("\n");
             sb.Append("  OrgaoExpedidorIdentidade: ").Append(OrgaoExpedidorIdentidade).Append("\n");
-            sb.Append("  Profissao: ").Append(Profissao).Append("\n");
-            sb.Append("  Sexo: ").Append(Sexo).Append("\n");
-            sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             sb.Append("  UnidadeFederativaIdentidade: ").Append(UnidadeFederativaIdentidade).Append("\n");
+            sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
+            sb.Append("  EstadoCivil: ").Append(EstadoCivil).Append("\n");
+            sb.Append("  Profissao: ").Append(Profissao).Append("\n");
+            sb.Append("  Nacionalidade: ").Append(Nacionalidade).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -213,14 +213,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.Nome == other.Nome ||
+                    this.Nome != null &&
+                    this.Nome.Equals(other.Nome)
+                ) && 
+                (
                     this.Cpf == other.Cpf ||
                     this.Cpf != null &&
                     this.Cpf.Equals(other.Cpf)
-                ) && 
-                (
-                    this.DataEmissaoIdentidade == other.DataEmissaoIdentidade ||
-                    this.DataEmissaoIdentidade != null &&
-                    this.DataEmissaoIdentidade.Equals(other.DataEmissaoIdentidade)
                 ) && 
                 (
                     this.DataNascimento == other.DataNascimento ||
@@ -228,24 +228,9 @@ namespace Conductor.Pier.Model
                     this.DataNascimento.Equals(other.DataNascimento)
                 ) && 
                 (
-                    this.Email == other.Email ||
-                    this.Email != null &&
-                    this.Email.Equals(other.Email)
-                ) && 
-                (
-                    this.EstadoCivil == other.EstadoCivil ||
-                    this.EstadoCivil != null &&
-                    this.EstadoCivil.Equals(other.EstadoCivil)
-                ) && 
-                (
-                    this.Nacionalidade == other.Nacionalidade ||
-                    this.Nacionalidade != null &&
-                    this.Nacionalidade.Equals(other.Nacionalidade)
-                ) && 
-                (
-                    this.Nome == other.Nome ||
-                    this.Nome != null &&
-                    this.Nome.Equals(other.Nome)
+                    this.Sexo == other.Sexo ||
+                    this.Sexo != null &&
+                    this.Sexo.Equals(other.Sexo)
                 ) && 
                 (
                     this.NumeroIdentidade == other.NumeroIdentidade ||
@@ -258,24 +243,39 @@ namespace Conductor.Pier.Model
                     this.OrgaoExpedidorIdentidade.Equals(other.OrgaoExpedidorIdentidade)
                 ) && 
                 (
+                    this.UnidadeFederativaIdentidade == other.UnidadeFederativaIdentidade ||
+                    this.UnidadeFederativaIdentidade != null &&
+                    this.UnidadeFederativaIdentidade.Equals(other.UnidadeFederativaIdentidade)
+                ) && 
+                (
+                    this.DataEmissaoIdentidade == other.DataEmissaoIdentidade ||
+                    this.DataEmissaoIdentidade != null &&
+                    this.DataEmissaoIdentidade.Equals(other.DataEmissaoIdentidade)
+                ) && 
+                (
+                    this.EstadoCivil == other.EstadoCivil ||
+                    this.EstadoCivil != null &&
+                    this.EstadoCivil.Equals(other.EstadoCivil)
+                ) && 
+                (
                     this.Profissao == other.Profissao ||
                     this.Profissao != null &&
                     this.Profissao.Equals(other.Profissao)
                 ) && 
                 (
-                    this.Sexo == other.Sexo ||
-                    this.Sexo != null &&
-                    this.Sexo.Equals(other.Sexo)
+                    this.Nacionalidade == other.Nacionalidade ||
+                    this.Nacionalidade != null &&
+                    this.Nacionalidade.Equals(other.Nacionalidade)
+                ) && 
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
                 ) && 
                 (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
-                ) && 
-                (
-                    this.UnidadeFederativaIdentidade == other.UnidadeFederativaIdentidade ||
-                    this.UnidadeFederativaIdentidade != null &&
-                    this.UnidadeFederativaIdentidade.Equals(other.UnidadeFederativaIdentidade)
                 );
         }
 
@@ -291,26 +291,17 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Nome != null)
+                    hash = hash * 59 + this.Nome.GetHashCode();
+                
                 if (this.Cpf != null)
                     hash = hash * 59 + this.Cpf.GetHashCode();
-                
-                if (this.DataEmissaoIdentidade != null)
-                    hash = hash * 59 + this.DataEmissaoIdentidade.GetHashCode();
                 
                 if (this.DataNascimento != null)
                     hash = hash * 59 + this.DataNascimento.GetHashCode();
                 
-                if (this.Email != null)
-                    hash = hash * 59 + this.Email.GetHashCode();
-                
-                if (this.EstadoCivil != null)
-                    hash = hash * 59 + this.EstadoCivil.GetHashCode();
-                
-                if (this.Nacionalidade != null)
-                    hash = hash * 59 + this.Nacionalidade.GetHashCode();
-                
-                if (this.Nome != null)
-                    hash = hash * 59 + this.Nome.GetHashCode();
+                if (this.Sexo != null)
+                    hash = hash * 59 + this.Sexo.GetHashCode();
                 
                 if (this.NumeroIdentidade != null)
                     hash = hash * 59 + this.NumeroIdentidade.GetHashCode();
@@ -318,17 +309,26 @@ namespace Conductor.Pier.Model
                 if (this.OrgaoExpedidorIdentidade != null)
                     hash = hash * 59 + this.OrgaoExpedidorIdentidade.GetHashCode();
                 
+                if (this.UnidadeFederativaIdentidade != null)
+                    hash = hash * 59 + this.UnidadeFederativaIdentidade.GetHashCode();
+                
+                if (this.DataEmissaoIdentidade != null)
+                    hash = hash * 59 + this.DataEmissaoIdentidade.GetHashCode();
+                
+                if (this.EstadoCivil != null)
+                    hash = hash * 59 + this.EstadoCivil.GetHashCode();
+                
                 if (this.Profissao != null)
                     hash = hash * 59 + this.Profissao.GetHashCode();
                 
-                if (this.Sexo != null)
-                    hash = hash * 59 + this.Sexo.GetHashCode();
+                if (this.Nacionalidade != null)
+                    hash = hash * 59 + this.Nacionalidade.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();
-                
-                if (this.UnidadeFederativaIdentidade != null)
-                    hash = hash * 59 + this.UnidadeFederativaIdentidade.GetHashCode();
                 
                 return hash;
             }

@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).</param>
+        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id).</param>
         /// <param name="Nome">Apresenta o Nome do Socio.</param>
         /// <param name="Cpf">N\u00C3\u00BAmero do CPF, quando PF..</param>
         /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd..</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="Email">Email do s\u00C3\u00B3cio.</param>
         /// <param name="Telefones">Informa os telefones do s\u00C3\u00B3cio.</param>
 
-        public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, DateTime? DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, DateTime? DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
+        public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
         {
             this.Id = Id;
             this.Nome = Nome;
@@ -58,9 +58,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)</value>
+        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -83,7 +83,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
-        public DateTime? DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data emiss\u00C3\u00A3o da Identidade</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
-        public DateTime? DataEmissaoIdentidade { get; set; }
+        public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
         /// Estado civil do s\u00C3\u00B3cio

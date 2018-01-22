@@ -40,7 +40,7 @@ namespace Conductor.Pier.Model
         /// <param name="NomeEscritorioCobranca">Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a.</param>
         /// <param name="EmailPessoaConta">Email do devedor.</param>
 
-        public DividaClienteResponse(long? Id = null, DateTime? DataVencimentoFaturaAtraso = null, long? QuantidadeDiasAtraso = null, DateTime? DataVencimentoAcordo = null, long? QuantidadeDiasAtrasoCorrigido = null, double? ValorSaldoDevedor = null, double? TaxaCorrecao = null, double? ValorCorrecao = null, double? ValorIOF = null, double? ValorSaldoCorrigido = null, long? IdStatusConta = null, string DescricaoStatusConta = null, long? IdStatusAcordo = null, string DescricaoStatusAcordo = null, long? IdEscritorioCobranca = null, string NomeEscritorioCobranca = null, string EmailPessoaConta = null)
+        public DividaClienteResponse(long? Id = null, string DataVencimentoFaturaAtraso = null, long? QuantidadeDiasAtraso = null, string DataVencimentoAcordo = null, long? QuantidadeDiasAtrasoCorrigido = null, double? ValorSaldoDevedor = null, double? TaxaCorrecao = null, double? ValorCorrecao = null, double? ValorIOF = null, double? ValorSaldoCorrigido = null, long? IdStatusConta = null, string DescricaoStatusConta = null, long? IdStatusAcordo = null, string DescricaoStatusAcordo = null, long? IdEscritorioCobranca = null, string NomeEscritorioCobranca = null, string EmailPessoaConta = null)
         {
             this.Id = Id;
             this.DataVencimentoFaturaAtraso = DataVencimentoFaturaAtraso;
@@ -75,7 +75,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de vencimento da cobran\u00C3\u00A7a</value>
         [DataMember(Name="dataVencimentoFaturaAtraso", EmitDefaultValue=false)]
-        public DateTime? DataVencimentoFaturaAtraso { get; set; }
+        public string DataVencimentoFaturaAtraso { get; set; }
     
         /// <summary>
         /// Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
@@ -89,7 +89,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Data de vencimento do acordo</value>
         [DataMember(Name="dataVencimentoAcordo", EmitDefaultValue=false)]
-        public DateTime? DataVencimentoAcordo { get; set; }
+        public string DataVencimentoAcordo { get; set; }
     
         /// <summary>
         /// Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo

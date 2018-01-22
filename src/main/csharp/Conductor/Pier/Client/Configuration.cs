@@ -36,7 +36,7 @@ namespace Conductor.Pier.Client
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
-                             string userAgent = "Swagger-Codegen/2.15.5/csharp"
+                             string userAgent = "Swagger-Codegen/2.50.14/csharp"
                             )
         {
             setApiClientUsingDefault(apiClient);
@@ -71,7 +71,7 @@ namespace Conductor.Pier.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "2.15.5";
+        public const string Version = "2.50.14";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -276,7 +276,7 @@ namespace Conductor.Pier.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 0.0.1\n";
-            report += "    SDK Package Version: 2.15.5\n";
+            report += "    SDK Package Version: 2.50.14\n";
 
             return report;
         }
