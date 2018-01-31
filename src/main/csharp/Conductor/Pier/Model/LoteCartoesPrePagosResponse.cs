@@ -32,8 +32,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataCadastro">Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos. (required).</param>
         /// <param name="UsuarioCadastro">Nome do usu\u00C3\u00A1rio que criou o lote. (required).</param>
         /// <param name="StatusProcessamento">Indica o status de processamento do lote. (required).</param>
+        /// <param name="IdentificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (required).</param>
 
-        public LoteCartoesPrePagosResponse(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, string DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null)
+        public LoteCartoesPrePagosResponse(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, string DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null, string IdentificadorExterno = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -125,6 +126,15 @@ namespace Conductor.Pier.Model
             {
                 this.StatusProcessamento = StatusProcessamento;
             }
+            // to ensure "IdentificadorExterno" is required (not null)
+            if (IdentificadorExterno == null)
+            {
+                throw new InvalidDataException("IdentificadorExterno is a required property for LoteCartoesPrePagosResponse and cannot be null");
+            }
+            else
+            {
+                this.IdentificadorExterno = IdentificadorExterno;
+            }
             
         }
         
@@ -200,6 +210,13 @@ namespace Conductor.Pier.Model
         public int? StatusProcessamento { get; set; }
     
         /// <summary>
+        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+        /// </summary>
+        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).</value>
+        [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
+        public string IdentificadorExterno { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -217,6 +234,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  UsuarioCadastro: ").Append(UsuarioCadastro).Append("\n");
             sb.Append("  StatusProcessamento: ").Append(StatusProcessamento).Append("\n");
+            sb.Append("  IdentificadorExterno: ").Append(IdentificadorExterno).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -303,6 +321,11 @@ namespace Conductor.Pier.Model
                     this.StatusProcessamento == other.StatusProcessamento ||
                     this.StatusProcessamento != null &&
                     this.StatusProcessamento.Equals(other.StatusProcessamento)
+                ) && 
+                (
+                    this.IdentificadorExterno == other.IdentificadorExterno ||
+                    this.IdentificadorExterno != null &&
+                    this.IdentificadorExterno.Equals(other.IdentificadorExterno)
                 );
         }
 
@@ -347,6 +370,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.StatusProcessamento != null)
                     hash = hash * 59 + this.StatusProcessamento.GetHashCode();
+                
+                if (this.IdentificadorExterno != null)
+                    hash = hash * 59 + this.IdentificadorExterno.GetHashCode();
                 
                 return hash;
             }

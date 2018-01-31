@@ -354,8 +354,9 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>LoteCartoesPrePagosResponse</returns>
-        LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
   
         /// <summary>
         /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -370,8 +371,9 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
-        ApiResponse<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        ApiResponse<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
         
         /// <summary>
         /// Gerar uma nova via de Cart\u00C3\u00A3o
@@ -436,8 +438,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>PageLoteCartoesPrePagosResponse</returns>
-        PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null);
+        PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
   
         /// <summary>
         /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -458,8 +461,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>ApiResponse of PageLoteCartoesPrePagosResponse</returns>
-        ApiResponse<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null);
+        ApiResponse<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
         
         /// <summary>
         /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -1016,8 +1020,9 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
-        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
 
         /// <summary>
         /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -1032,8 +1037,9 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null);
+        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
         
         /// <summary>
         /// Gerar uma nova via de Cart\u00C3\u00A3o
@@ -1098,8 +1104,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of PageLoteCartoesPrePagosResponse</returns>
-        System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null);
+        System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
 
         /// <summary>
         /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
@@ -1120,8 +1127,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (PageLoteCartoesPrePagosResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
         
         /// <summary>
         /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
@@ -3747,10 +3755,11 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>LoteCartoesPrePagosResponse</returns>
-        public LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        public LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
-             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, identificadorExterno);
              return localVarResponse.Data;
         }
 
@@ -3764,8 +3773,9 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
-        public ApiResponse< LoteCartoesPrePagosResponse > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        public ApiResponse< LoteCartoesPrePagosResponse > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
             
     
@@ -3802,6 +3812,7 @@ namespace Conductor.Pier.Api
             if (idImagem != null) localVarQueryParams.Add("idImagem", Configuration.ApiClient.ParameterToString(idImagem)); // query parameter
             if (idEndereco != null) localVarQueryParams.Add("idEndereco", Configuration.ApiClient.ParameterToString(idEndereco)); // query parameter
             if (quantidadeCartoes != null) localVarQueryParams.Add("quantidadeCartoes", Configuration.ApiClient.ParameterToString(quantidadeCartoes)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
             
             
@@ -3838,10 +3849,11 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
-        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
-             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, identificadorExterno);
              return localVarResponse.Data;
 
         }
@@ -3856,8 +3868,9 @@ namespace Conductor.Pier.Api
         /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
         /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
         /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
             
     
@@ -3894,6 +3907,7 @@ namespace Conductor.Pier.Api
             if (idImagem != null) localVarQueryParams.Add("idImagem", Configuration.ApiClient.ParameterToString(idImagem)); // query parameter
             if (idEndereco != null) localVarQueryParams.Add("idEndereco", Configuration.ApiClient.ParameterToString(idEndereco)); // query parameter
             if (quantidadeCartoes != null) localVarQueryParams.Add("quantidadeCartoes", Configuration.ApiClient.ParameterToString(quantidadeCartoes)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
             
             
@@ -4251,10 +4265,11 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param> 
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param> 
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param> 
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>PageLoteCartoesPrePagosResponse</returns>
-        public PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null)
+        public PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
-             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = ListarLotesCartoesPrePagosUsingGETWithHttpInfo(sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento);
+             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = ListarLotesCartoesPrePagosUsingGETWithHttpInfo(sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
              return localVarResponse.Data;
         }
 
@@ -4274,8 +4289,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param> 
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param> 
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param> 
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>ApiResponse of PageLoteCartoesPrePagosResponse</returns>
-        public ApiResponse< PageLoteCartoesPrePagosResponse > ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null)
+        public ApiResponse< PageLoteCartoesPrePagosResponse > ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
             
     
@@ -4318,6 +4334,7 @@ namespace Conductor.Pier.Api
             if (dataCadastro != null) localVarQueryParams.Add("dataCadastro", Configuration.ApiClient.ParameterToString(dataCadastro)); // query parameter
             if (usuarioCadastro != null) localVarQueryParams.Add("usuarioCadastro", Configuration.ApiClient.ParameterToString(usuarioCadastro)); // query parameter
             if (statusProcessamento != null) localVarQueryParams.Add("statusProcessamento", Configuration.ApiClient.ParameterToString(statusProcessamento)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
             
             
@@ -4360,10 +4377,11 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of PageLoteCartoesPrePagosResponse</returns>
-        public async System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null)
+        public async System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
-             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = await ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento);
+             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = await ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
              return localVarResponse.Data;
 
         }
@@ -4384,8 +4402,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
         /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (PageLoteCartoesPrePagosResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
             
     
@@ -4428,6 +4447,7 @@ namespace Conductor.Pier.Api
             if (dataCadastro != null) localVarQueryParams.Add("dataCadastro", Configuration.ApiClient.ParameterToString(dataCadastro)); // query parameter
             if (usuarioCadastro != null) localVarQueryParams.Add("usuarioCadastro", Configuration.ApiClient.ParameterToString(usuarioCadastro)); // query parameter
             if (statusProcessamento != null) localVarQueryParams.Add("statusProcessamento", Configuration.ApiClient.ParameterToString(statusProcessamento)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
             
             
