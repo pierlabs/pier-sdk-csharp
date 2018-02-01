@@ -12,10 +12,10 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Estabelecimento
+    /// Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
     /// </summary>
     [DataContract]
-    public partial class EstabelecimentoResponse :  IEquatable<EstabelecimentoResponse>
+    public partial class EstabelecimentoPersist :  IEquatable<EstabelecimentoPersist>
     { 
     
         /// <summary>
@@ -63,11 +63,9 @@ namespace Conductor.Pier.Model
         public TipoPagamentoEnum? TipoPagamento { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EstabelecimentoResponse" /> class.
-        /// Initializes a new instance of the <see cref="EstabelecimentoResponse" />class.
+        /// Initializes a new instance of the <see cref="EstabelecimentoPersist" /> class.
+        /// Initializes a new instance of the <see cref="EstabelecimentoPersist" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)..</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor..</param>
         /// <param name="FlagMatriz">Indica se \u00C3\u00A9 matriz ou filial..</param>
         /// <param name="IdCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor..</param>
         /// <param name="NumeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal..</param>
@@ -105,14 +103,29 @@ namespace Conductor.Pier.Model
         /// <param name="Consulta">Consulta de cadastro n\u00C3\u00BAmero um..</param>
         /// <param name="Consulta2">Consulta de cadastro n\u00C3\u00BAmero um..</param>
         /// <param name="Consulta3">Consulta de cadastro n\u00C3\u00BAmero um..</param>
-        /// <param name="Terminal">Terminal do estabelecimento..</param>
-        /// <param name="DataCadastramento">Data de Cadastro do Estabelecimento..</param>
-        /// <param name="Usuario">Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
 
-        public EstabelecimentoResponse(long? Id = null, string NumeroEstabelecimento = null, int? FlagMatriz = null, long? IdCredor = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, string NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, TipoCorrespondenciaEnum? TipoCorrespondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, string Terminal = null, string DataCadastramento = null, string Usuario = null)
+        public EstabelecimentoPersist(int? FlagMatriz = null, long? IdCredor = null, string NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, int? NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, int? NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, TipoCorrespondenciaEnum? TipoCorrespondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, bool? FlagTerminalVirtual = null, bool? FlagConsultaExtrato = null)
         {
-            this.Id = Id;
-            this.NumeroEstabelecimento = NumeroEstabelecimento;
+            // to ensure "FlagTerminalVirtual" is required (not null)
+            if (FlagTerminalVirtual == null)
+            {
+                throw new InvalidDataException("FlagTerminalVirtual is a required property for EstabelecimentoPersist and cannot be null");
+            }
+            else
+            {
+                this.FlagTerminalVirtual = FlagTerminalVirtual;
+            }
+            // to ensure "FlagConsultaExtrato" is required (not null)
+            if (FlagConsultaExtrato == null)
+            {
+                throw new InvalidDataException("FlagConsultaExtrato is a required property for EstabelecimentoPersist and cannot be null");
+            }
+            else
+            {
+                this.FlagConsultaExtrato = FlagConsultaExtrato;
+            }
             this.FlagMatriz = FlagMatriz;
             this.IdCredor = IdCredor;
             this.NumeroReceitaFederal = NumeroReceitaFederal;
@@ -150,26 +163,9 @@ namespace Conductor.Pier.Model
             this.Consulta = Consulta;
             this.Consulta2 = Consulta2;
             this.Consulta3 = Consulta3;
-            this.Terminal = Terminal;
-            this.DataCadastramento = DataCadastramento;
-            this.Usuario = Usuario;
             
         }
         
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.</value>
-        [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
-        public string NumeroEstabelecimento { get; set; }
     
         /// <summary>
         /// Indica se \u00C3\u00A9 matriz ou filial.
@@ -190,7 +186,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
-        public long? NumeroReceitaFederal { get; set; }
+        public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
         /// Nome do Estabelecimento.
@@ -232,7 +228,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>N\u00C3\u00BAmero do endere\u00C3\u00A7o.</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
-        public string NumeroEndereco { get; set; }
+        public int? NumeroEndereco { get; set; }
     
         /// <summary>
         /// Nome do bairro do endere\u00C3\u00A7o.
@@ -281,7 +277,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>N\u00C3\u00BAmero do endere\u00C3\u00A7o.</value>
         [DataMember(Name="numeroEndereco2", EmitDefaultValue=false)]
-        public string NumeroEndereco2 { get; set; }
+        public int? NumeroEndereco2 { get; set; }
     
         /// <summary>
         /// Nome do bairro do endere\u00C3\u00A7o.
@@ -417,25 +413,18 @@ namespace Conductor.Pier.Model
         public ConsultaCadastroEstabelecimentoDTO Consulta3 { get; set; }
     
         /// <summary>
-        /// Terminal do estabelecimento.
+        /// Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
         /// </summary>
-        /// <value>Terminal do estabelecimento.</value>
-        [DataMember(Name="terminal", EmitDefaultValue=false)]
-        public string Terminal { get; set; }
+        /// <value>Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
+        public bool? FlagTerminalVirtual { get; set; }
     
         /// <summary>
-        /// Data de Cadastro do Estabelecimento.
+        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
         /// </summary>
-        /// <value>Data de Cadastro do Estabelecimento.</value>
-        [DataMember(Name="dataCadastramento", EmitDefaultValue=false)]
-        public string DataCadastramento { get; set; }
-    
-        /// <summary>
-        /// Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <value>Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.</value>
-        [DataMember(Name="usuario", EmitDefaultValue=false)]
-        public string Usuario { get; set; }
+        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
+        public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -444,9 +433,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EstabelecimentoResponse {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
+            sb.Append("class EstabelecimentoPersist {\n");
             sb.Append("  FlagMatriz: ").Append(FlagMatriz).Append("\n");
             sb.Append("  IdCredor: ").Append(IdCredor).Append("\n");
             sb.Append("  NumeroReceitaFederal: ").Append(NumeroReceitaFederal).Append("\n");
@@ -484,9 +471,8 @@ namespace Conductor.Pier.Model
             sb.Append("  Consulta: ").Append(Consulta).Append("\n");
             sb.Append("  Consulta2: ").Append(Consulta2).Append("\n");
             sb.Append("  Consulta3: ").Append(Consulta3).Append("\n");
-            sb.Append("  Terminal: ").Append(Terminal).Append("\n");
-            sb.Append("  DataCadastramento: ").Append(DataCadastramento).Append("\n");
-            sb.Append("  Usuario: ").Append(Usuario).Append("\n");
+            sb.Append("  FlagTerminalVirtual: ").Append(FlagTerminalVirtual).Append("\n");
+            sb.Append("  FlagConsultaExtrato: ").Append(FlagConsultaExtrato).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -509,31 +495,21 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EstabelecimentoResponse);
+            return this.Equals(obj as EstabelecimentoPersist);
         }
 
         /// <summary>
-        /// Returns true if EstabelecimentoResponse instances are equal
+        /// Returns true if EstabelecimentoPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of EstabelecimentoResponse to be compared</param>
+        /// <param name="other">Instance of EstabelecimentoPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EstabelecimentoResponse other)
+        public bool Equals(EstabelecimentoPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.NumeroEstabelecimento == other.NumeroEstabelecimento ||
-                    this.NumeroEstabelecimento != null &&
-                    this.NumeroEstabelecimento.Equals(other.NumeroEstabelecimento)
-                ) && 
                 (
                     this.FlagMatriz == other.FlagMatriz ||
                     this.FlagMatriz != null &&
@@ -720,19 +696,14 @@ namespace Conductor.Pier.Model
                     this.Consulta3.Equals(other.Consulta3)
                 ) && 
                 (
-                    this.Terminal == other.Terminal ||
-                    this.Terminal != null &&
-                    this.Terminal.Equals(other.Terminal)
+                    this.FlagTerminalVirtual == other.FlagTerminalVirtual ||
+                    this.FlagTerminalVirtual != null &&
+                    this.FlagTerminalVirtual.Equals(other.FlagTerminalVirtual)
                 ) && 
                 (
-                    this.DataCadastramento == other.DataCadastramento ||
-                    this.DataCadastramento != null &&
-                    this.DataCadastramento.Equals(other.DataCadastramento)
-                ) && 
-                (
-                    this.Usuario == other.Usuario ||
-                    this.Usuario != null &&
-                    this.Usuario.Equals(other.Usuario)
+                    this.FlagConsultaExtrato == other.FlagConsultaExtrato ||
+                    this.FlagConsultaExtrato != null &&
+                    this.FlagConsultaExtrato.Equals(other.FlagConsultaExtrato)
                 );
         }
 
@@ -747,12 +718,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.NumeroEstabelecimento != null)
-                    hash = hash * 59 + this.NumeroEstabelecimento.GetHashCode();
                 
                 if (this.FlagMatriz != null)
                     hash = hash * 59 + this.FlagMatriz.GetHashCode();
@@ -865,14 +830,11 @@ namespace Conductor.Pier.Model
                 if (this.Consulta3 != null)
                     hash = hash * 59 + this.Consulta3.GetHashCode();
                 
-                if (this.Terminal != null)
-                    hash = hash * 59 + this.Terminal.GetHashCode();
+                if (this.FlagTerminalVirtual != null)
+                    hash = hash * 59 + this.FlagTerminalVirtual.GetHashCode();
                 
-                if (this.DataCadastramento != null)
-                    hash = hash * 59 + this.DataCadastramento.GetHashCode();
-                
-                if (this.Usuario != null)
-                    hash = hash * 59 + this.Usuario.GetHashCode();
+                if (this.FlagConsultaExtrato != null)
+                    hash = hash * 59 + this.FlagConsultaExtrato.GetHashCode();
                 
                 return hash;
             }

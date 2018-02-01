@@ -12,10 +12,10 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Estabelecimento
+    /// Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
     /// </summary>
     [DataContract]
-    public partial class EstabelecimentoResponse :  IEquatable<EstabelecimentoResponse>
+    public partial class EstabelecimentoUpdate :  IEquatable<EstabelecimentoUpdate>
     { 
     
         /// <summary>
@@ -63,14 +63,10 @@ namespace Conductor.Pier.Model
         public TipoPagamentoEnum? TipoPagamento { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EstabelecimentoResponse" /> class.
-        /// Initializes a new instance of the <see cref="EstabelecimentoResponse" />class.
+        /// Initializes a new instance of the <see cref="EstabelecimentoUpdate" /> class.
+        /// Initializes a new instance of the <see cref="EstabelecimentoUpdate" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)..</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor..</param>
         /// <param name="FlagMatriz">Indica se \u00C3\u00A9 matriz ou filial..</param>
-        /// <param name="IdCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor..</param>
-        /// <param name="NumeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal..</param>
         /// <param name="Nome">Nome do Estabelecimento..</param>
         /// <param name="Descricao">Raz\u00C3\u00A3o Social do Estabelecimento..</param>
         /// <param name="NomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento..</param>
@@ -105,17 +101,11 @@ namespace Conductor.Pier.Model
         /// <param name="Consulta">Consulta de cadastro n\u00C3\u00BAmero um..</param>
         /// <param name="Consulta2">Consulta de cadastro n\u00C3\u00BAmero um..</param>
         /// <param name="Consulta3">Consulta de cadastro n\u00C3\u00BAmero um..</param>
-        /// <param name="Terminal">Terminal do estabelecimento..</param>
-        /// <param name="DataCadastramento">Data de Cadastro do Estabelecimento..</param>
-        /// <param name="Usuario">Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros..</param>
 
-        public EstabelecimentoResponse(long? Id = null, string NumeroEstabelecimento = null, int? FlagMatriz = null, long? IdCredor = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, string NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, TipoCorrespondenciaEnum? TipoCorrespondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, string Terminal = null, string DataCadastramento = null, string Usuario = null)
+        public EstabelecimentoUpdate(int? FlagMatriz = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, int? NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, int? NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, TipoCorrespondenciaEnum? TipoCorrespondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, List<string> Sort = null)
         {
-            this.Id = Id;
-            this.NumeroEstabelecimento = NumeroEstabelecimento;
             this.FlagMatriz = FlagMatriz;
-            this.IdCredor = IdCredor;
-            this.NumeroReceitaFederal = NumeroReceitaFederal;
             this.Nome = Nome;
             this.Descricao = Descricao;
             this.NomeFantasia = NomeFantasia;
@@ -150,26 +140,10 @@ namespace Conductor.Pier.Model
             this.Consulta = Consulta;
             this.Consulta2 = Consulta2;
             this.Consulta3 = Consulta3;
-            this.Terminal = Terminal;
-            this.DataCadastramento = DataCadastramento;
-            this.Usuario = Usuario;
+            this.Sort = Sort;
             
         }
         
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
-    
-        /// <summary>
-        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-        /// </summary>
-        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.</value>
-        [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
-        public string NumeroEstabelecimento { get; set; }
     
         /// <summary>
         /// Indica se \u00C3\u00A9 matriz ou filial.
@@ -177,20 +151,6 @@ namespace Conductor.Pier.Model
         /// <value>Indica se \u00C3\u00A9 matriz ou filial.</value>
         [DataMember(Name="flagMatriz", EmitDefaultValue=false)]
         public int? FlagMatriz { get; set; }
-    
-        /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-        /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.</value>
-        [DataMember(Name="idCredor", EmitDefaultValue=false)]
-        public long? IdCredor { get; set; }
-    
-        /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
-        /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.</value>
-        [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
-        public long? NumeroReceitaFederal { get; set; }
     
         /// <summary>
         /// Nome do Estabelecimento.
@@ -232,7 +192,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>N\u00C3\u00BAmero do endere\u00C3\u00A7o.</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
-        public string NumeroEndereco { get; set; }
+        public int? NumeroEndereco { get; set; }
     
         /// <summary>
         /// Nome do bairro do endere\u00C3\u00A7o.
@@ -281,7 +241,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>N\u00C3\u00BAmero do endere\u00C3\u00A7o.</value>
         [DataMember(Name="numeroEndereco2", EmitDefaultValue=false)]
-        public string NumeroEndereco2 { get; set; }
+        public int? NumeroEndereco2 { get; set; }
     
         /// <summary>
         /// Nome do bairro do endere\u00C3\u00A7o.
@@ -417,25 +377,11 @@ namespace Conductor.Pier.Model
         public ConsultaCadastroEstabelecimentoDTO Consulta3 { get; set; }
     
         /// <summary>
-        /// Terminal do estabelecimento.
+        /// Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
         /// </summary>
-        /// <value>Terminal do estabelecimento.</value>
-        [DataMember(Name="terminal", EmitDefaultValue=false)]
-        public string Terminal { get; set; }
-    
-        /// <summary>
-        /// Data de Cadastro do Estabelecimento.
-        /// </summary>
-        /// <value>Data de Cadastro do Estabelecimento.</value>
-        [DataMember(Name="dataCadastramento", EmitDefaultValue=false)]
-        public string DataCadastramento { get; set; }
-    
-        /// <summary>
-        /// Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
-        /// </summary>
-        /// <value>Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.</value>
-        [DataMember(Name="usuario", EmitDefaultValue=false)]
-        public string Usuario { get; set; }
+        /// <value>Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.</value>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public List<string> Sort { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -444,12 +390,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EstabelecimentoResponse {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
+            sb.Append("class EstabelecimentoUpdate {\n");
             sb.Append("  FlagMatriz: ").Append(FlagMatriz).Append("\n");
-            sb.Append("  IdCredor: ").Append(IdCredor).Append("\n");
-            sb.Append("  NumeroReceitaFederal: ").Append(NumeroReceitaFederal).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  NomeFantasia: ").Append(NomeFantasia).Append("\n");
@@ -484,9 +426,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Consulta: ").Append(Consulta).Append("\n");
             sb.Append("  Consulta2: ").Append(Consulta2).Append("\n");
             sb.Append("  Consulta3: ").Append(Consulta3).Append("\n");
-            sb.Append("  Terminal: ").Append(Terminal).Append("\n");
-            sb.Append("  DataCadastramento: ").Append(DataCadastramento).Append("\n");
-            sb.Append("  Usuario: ").Append(Usuario).Append("\n");
+            sb.Append("  Sort: ").Append(Sort).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -509,15 +449,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EstabelecimentoResponse);
+            return this.Equals(obj as EstabelecimentoUpdate);
         }
 
         /// <summary>
-        /// Returns true if EstabelecimentoResponse instances are equal
+        /// Returns true if EstabelecimentoUpdate instances are equal
         /// </summary>
-        /// <param name="other">Instance of EstabelecimentoResponse to be compared</param>
+        /// <param name="other">Instance of EstabelecimentoUpdate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EstabelecimentoResponse other)
+        public bool Equals(EstabelecimentoUpdate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -525,29 +465,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.NumeroEstabelecimento == other.NumeroEstabelecimento ||
-                    this.NumeroEstabelecimento != null &&
-                    this.NumeroEstabelecimento.Equals(other.NumeroEstabelecimento)
-                ) && 
-                (
                     this.FlagMatriz == other.FlagMatriz ||
                     this.FlagMatriz != null &&
                     this.FlagMatriz.Equals(other.FlagMatriz)
-                ) && 
-                (
-                    this.IdCredor == other.IdCredor ||
-                    this.IdCredor != null &&
-                    this.IdCredor.Equals(other.IdCredor)
-                ) && 
-                (
-                    this.NumeroReceitaFederal == other.NumeroReceitaFederal ||
-                    this.NumeroReceitaFederal != null &&
-                    this.NumeroReceitaFederal.Equals(other.NumeroReceitaFederal)
                 ) && 
                 (
                     this.Nome == other.Nome ||
@@ -720,19 +640,9 @@ namespace Conductor.Pier.Model
                     this.Consulta3.Equals(other.Consulta3)
                 ) && 
                 (
-                    this.Terminal == other.Terminal ||
-                    this.Terminal != null &&
-                    this.Terminal.Equals(other.Terminal)
-                ) && 
-                (
-                    this.DataCadastramento == other.DataCadastramento ||
-                    this.DataCadastramento != null &&
-                    this.DataCadastramento.Equals(other.DataCadastramento)
-                ) && 
-                (
-                    this.Usuario == other.Usuario ||
-                    this.Usuario != null &&
-                    this.Usuario.Equals(other.Usuario)
+                    this.Sort == other.Sort ||
+                    this.Sort != null &&
+                    this.Sort.SequenceEqual(other.Sort)
                 );
         }
 
@@ -748,20 +658,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.NumeroEstabelecimento != null)
-                    hash = hash * 59 + this.NumeroEstabelecimento.GetHashCode();
-                
                 if (this.FlagMatriz != null)
                     hash = hash * 59 + this.FlagMatriz.GetHashCode();
-                
-                if (this.IdCredor != null)
-                    hash = hash * 59 + this.IdCredor.GetHashCode();
-                
-                if (this.NumeroReceitaFederal != null)
-                    hash = hash * 59 + this.NumeroReceitaFederal.GetHashCode();
                 
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
@@ -865,14 +763,8 @@ namespace Conductor.Pier.Model
                 if (this.Consulta3 != null)
                     hash = hash * 59 + this.Consulta3.GetHashCode();
                 
-                if (this.Terminal != null)
-                    hash = hash * 59 + this.Terminal.GetHashCode();
-                
-                if (this.DataCadastramento != null)
-                    hash = hash * 59 + this.DataCadastramento.GetHashCode();
-                
-                if (this.Usuario != null)
-                    hash = hash * 59 + this.Usuario.GetHashCode();
+                if (this.Sort != null)
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 return hash;
             }

@@ -12,25 +12,35 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// TerminalUpdate
+    /// Objeto Terminal
     /// </summary>
     [DataContract]
-    public partial class TerminalUpdate :  IEquatable<TerminalUpdate>
+    public partial class TerminalPersist :  IEquatable<TerminalPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TerminalUpdate" /> class.
-        /// Initializes a new instance of the <see cref="TerminalUpdate" />class.
+        /// Initializes a new instance of the <see cref="TerminalPersist" /> class.
+        /// Initializes a new instance of the <see cref="TerminalPersist" />class.
         /// </summary>
-        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
+        /// <param name="IdEstabelecimento">Apresenta o id do estabelecimento. (required).</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
         /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
 
-        public TerminalUpdate(bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
+        public TerminalPersist(long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
+            // to ensure "IdEstabelecimento" is required (not null)
+            if (IdEstabelecimento == null)
+            {
+                throw new InvalidDataException("IdEstabelecimento is a required property for TerminalPersist and cannot be null");
+            }
+            else
+            {
+                this.IdEstabelecimento = IdEstabelecimento;
+            }
             // to ensure "FlagConsultaExtrato" is required (not null)
             if (FlagConsultaExtrato == null)
             {
-                throw new InvalidDataException("FlagConsultaExtrato is a required property for TerminalUpdate and cannot be null");
+                throw new InvalidDataException("FlagConsultaExtrato is a required property for TerminalPersist and cannot be null");
             }
             else
             {
@@ -39,7 +49,7 @@ namespace Conductor.Pier.Model
             // to ensure "FlagTerminalVirtual" is required (not null)
             if (FlagTerminalVirtual == null)
             {
-                throw new InvalidDataException("FlagTerminalVirtual is a required property for TerminalUpdate and cannot be null");
+                throw new InvalidDataException("FlagTerminalVirtual is a required property for TerminalPersist and cannot be null");
             }
             else
             {
@@ -50,9 +60,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Apresenta o id do estabelecimento.
         /// </summary>
-        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Apresenta o id do estabelecimento.</value>
+        [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
+        public long? IdEstabelecimento { get; set; }
+    
+        /// <summary>
+        /// Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// </summary>
+        /// <value>Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
@@ -70,7 +87,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TerminalUpdate {\n");
+            sb.Append("class TerminalPersist {\n");
+            sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
             sb.Append("  FlagConsultaExtrato: ").Append(FlagConsultaExtrato).Append("\n");
             sb.Append("  FlagTerminalVirtual: ").Append(FlagTerminalVirtual).Append("\n");
             
@@ -95,21 +113,26 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TerminalUpdate);
+            return this.Equals(obj as TerminalPersist);
         }
 
         /// <summary>
-        /// Returns true if TerminalUpdate instances are equal
+        /// Returns true if TerminalPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of TerminalUpdate to be compared</param>
+        /// <param name="other">Instance of TerminalPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TerminalUpdate other)
+        public bool Equals(TerminalPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
+                (
+                    this.IdEstabelecimento == other.IdEstabelecimento ||
+                    this.IdEstabelecimento != null &&
+                    this.IdEstabelecimento.Equals(other.IdEstabelecimento)
+                ) && 
                 (
                     this.FlagConsultaExtrato == other.FlagConsultaExtrato ||
                     this.FlagConsultaExtrato != null &&
@@ -133,6 +156,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.IdEstabelecimento != null)
+                    hash = hash * 59 + this.IdEstabelecimento.GetHashCode();
                 
                 if (this.FlagConsultaExtrato != null)
                     hash = hash * 59 + this.FlagConsultaExtrato.GetHashCode();

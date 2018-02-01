@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>PageDispositivoResponse</returns>
-        PageDispositivoResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        PageDispositivoResponse ListarUsingGET14 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
   
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -95,7 +95,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>ApiResponse of PageDispositivoResponse</returns>
-        ApiResponse<PageDispositivoResponse> ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        ApiResponse<PageDispositivoResponse> ListarUsingGET14WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// Cadastra Dispositivo
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of PageDispositivoResponse</returns>
-        System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET14Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
 
         /// <summary>
         /// Lista os dispositivos cadastrados
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of ApiResponse (PageDispositivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET14AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// Cadastra Dispositivo
@@ -646,9 +646,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
         /// <returns>PageDispositivoResponse</returns>
-        public PageDispositivoResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public PageDispositivoResponse ListarUsingGET14 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivoResponse> localVarResponse = ListarUsingGET15WithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivoResponse> localVarResponse = ListarUsingGET14WithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
         }
 
@@ -665,7 +665,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param> 
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param> 
         /// <returns>ApiResponse of PageDispositivoResponse</returns>
-        public ApiResponse< PageDispositivoResponse > ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public ApiResponse< PageDispositivoResponse > ListarUsingGET14WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -719,9 +719,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -743,9 +743,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of PageDispositivoResponse</returns>
-        public async System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public async System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET14Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivoResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivoResponse> localVarResponse = await ListarUsingGET14AsyncWithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
 
         }
@@ -763,7 +763,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">Apresenta a data e em que o registro foi criado. (optional)</param>
         /// <param name="dataDesativacao">Apresenta a data e em que o registro foi desativado. (optional)</param>
         /// <returns>Task of ApiResponse (PageDispositivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET14AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -817,9 +817,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
