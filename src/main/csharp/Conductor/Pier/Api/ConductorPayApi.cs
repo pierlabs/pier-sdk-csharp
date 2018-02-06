@@ -231,7 +231,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>PageCartaoPayResponse</returns>
-        PageCartaoPayResponse ListarUsingGET6 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        PageCartaoPayResponse ListarUsingGET7 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
   
         /// <summary>
         /// Lista os cart\u00C3\u00B5es cadastrados
@@ -247,7 +247,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        ApiResponse<PageCartaoPayResponse> ListarUsingGET6WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        ApiResponse<PageCartaoPayResponse> ListarUsingGET7WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
         /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
@@ -491,7 +491,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET6Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET7Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
 
         /// <summary>
         /// Lista os cart\u00C3\u00B5es cadastrados
@@ -507,7 +507,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET6AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET7AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
         /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
@@ -2094,9 +2094,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param> 
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param> 
         /// <returns>PageCartaoPayResponse</returns>
-        public PageCartaoPayResponse ListarUsingGET6 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public PageCartaoPayResponse ListarUsingGET7 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET6WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET7WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
         }
 
@@ -2111,7 +2111,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param> 
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param> 
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        public ApiResponse< PageCartaoPayResponse > ListarUsingGET6WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public ApiResponse< PageCartaoPayResponse > ListarUsingGET7WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
             
     
@@ -2163,9 +2163,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2185,9 +2185,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET6Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET7Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
 
         }
@@ -2203,7 +2203,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET6AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET7AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
             
     
@@ -2255,9 +2255,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

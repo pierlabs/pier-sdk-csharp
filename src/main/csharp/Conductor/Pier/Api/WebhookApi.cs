@@ -82,7 +82,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>PageWebHookResponse</returns>
-        PageWebHookResponse ListarUsingGET50 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        PageWebHookResponse ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
   
         /// <summary>
         /// Lista os Webhooks
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>ApiResponse of PageWebHookResponse</returns>
-        ApiResponse<PageWebHookResponse> ListarUsingGET50WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        ApiResponse<PageWebHookResponse> ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
@@ -194,7 +194,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of PageWebHookResponse</returns>
-        System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET50Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
 
         /// <summary>
         /// Lista os Webhooks
@@ -211,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET50AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
@@ -687,9 +687,9 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
         /// <returns>PageWebHookResponse</returns>
-        public PageWebHookResponse ListarUsingGET50 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public PageWebHookResponse ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHookResponse> localVarResponse = ListarUsingGET50WithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
+             ApiResponse<PageWebHookResponse> localVarResponse = ListarUsingGET51WithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
              return localVarResponse.Data;
         }
 
@@ -705,7 +705,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
         /// <returns>ApiResponse of PageWebHookResponse</returns>
-        public ApiResponse< PageWebHookResponse > ListarUsingGET50WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public ApiResponse< PageWebHookResponse > ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
             
     
@@ -758,9 +758,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageWebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -781,9 +781,9 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of PageWebHookResponse</returns>
-        public async System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET50Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public async System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHookResponse> localVarResponse = await ListarUsingGET50AsyncWithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
+             ApiResponse<PageWebHookResponse> localVarResponse = await ListarUsingGET51AsyncWithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
              return localVarResponse.Data;
 
         }
@@ -800,7 +800,7 @@ namespace Conductor.Pier.Api
         /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET50AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
             
     
@@ -853,9 +853,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageWebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

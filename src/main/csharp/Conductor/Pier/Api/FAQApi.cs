@@ -123,7 +123,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>PageFaqResponse</returns>
-        PageFaqResponse ListarUsingGET19 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        PageFaqResponse ListarUsingGET20 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// Lista FAQs
@@ -143,7 +143,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>ApiResponse of PageFaqResponse</returns>
-        ApiResponse<PageFaqResponse> ListarUsingGET19WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        ApiResponse<PageFaqResponse> ListarUsingGET20WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Synchronous Operations
         
@@ -255,7 +255,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of PageFaqResponse</returns>
-        System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET19Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET20Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// Lista FAQs
@@ -275,7 +275,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of ApiResponse (PageFaqResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET19AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET20AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Asynchronous Operations
         
@@ -942,9 +942,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
         /// <returns>PageFaqResponse</returns>
-        public PageFaqResponse ListarUsingGET19 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public PageFaqResponse ListarUsingGET20 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqResponse> localVarResponse = ListarUsingGET19WithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqResponse> localVarResponse = ListarUsingGET20WithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -963,7 +963,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param> 
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param> 
         /// <returns>ApiResponse of PageFaqResponse</returns>
-        public ApiResponse< PageFaqResponse > ListarUsingGET19WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public ApiResponse< PageFaqResponse > ListarUsingGET20WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1019,9 +1019,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageFaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1045,9 +1045,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of PageFaqResponse</returns>
-        public async System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET19Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET20Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqResponse> localVarResponse = await ListarUsingGET19AsyncWithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqResponse> localVarResponse = await ListarUsingGET20AsyncWithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -1067,7 +1067,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">Categoria de assunto do qual a FAQ se trata. (optional)</param>
         /// <param name="status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ. (optional)</param>
         /// <returns>Task of ApiResponse (PageFaqResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET19AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET20AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1123,9 +1123,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageFaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

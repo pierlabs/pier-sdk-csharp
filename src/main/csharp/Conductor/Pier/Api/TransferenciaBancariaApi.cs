@@ -162,7 +162,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageContaBancariaPortadorResponse</returns>
-        PageContaBancariaPortadorResponse ListarUsingGET11 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageContaBancariaPortadorResponse ListarUsingGET12 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista contas banc\u00C3\u00A1rias portador
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageContaBancariaPortadorResponse</returns>
-        ApiResponse<PageContaBancariaPortadorResponse> ListarUsingGET11WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageContaBancariaPortadorResponse> ListarUsingGET12WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
@@ -198,7 +198,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        PageTransferenciaBancariaResponse ListarUsingGET44 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageTransferenciaBancariaResponse ListarUsingGET45 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
@@ -213,7 +213,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET44WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET45WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastra uma conta banc\u00C3\u00A1ria do portador
@@ -454,7 +454,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET11Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET12Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista contas banc\u00C3\u00A1rias portador
@@ -475,7 +475,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET11AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET12AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
@@ -490,7 +490,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET44Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET45Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
@@ -505,7 +505,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET44AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET45AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastra uma conta banc\u00C3\u00A1ria do portador
@@ -1561,9 +1561,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageContaBancariaPortadorResponse</returns>
-        public PageContaBancariaPortadorResponse ListarUsingGET11 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageContaBancariaPortadorResponse ListarUsingGET12 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = ListarUsingGET11WithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
+             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = ListarUsingGET12WithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1583,7 +1583,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageContaBancariaPortadorResponse</returns>
-        public ApiResponse< PageContaBancariaPortadorResponse > ListarUsingGET11WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageContaBancariaPortadorResponse > ListarUsingGET12WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -1640,9 +1640,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1667,9 +1667,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET11Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET12Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
+             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = await ListarUsingGET12AsyncWithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1690,7 +1690,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET11AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET12AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -1747,9 +1747,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1767,9 +1767,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        public PageTransferenciaBancariaResponse ListarUsingGET44 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageTransferenciaBancariaResponse ListarUsingGET45 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET44WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET45WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1783,12 +1783,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET44WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET45WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ListarUsingGET44");
+                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ListarUsingGET45");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -1838,9 +1838,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1859,9 +1859,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET44Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET45Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET44AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET45AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1876,10 +1876,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET44AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET45AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET44");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET45");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -1929,9 +1929,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

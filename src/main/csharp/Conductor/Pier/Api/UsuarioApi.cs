@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>PageUsuarioResponse</returns>
-        PageUsuarioResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        PageUsuarioResponse ListarUsingGET47 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
   
         /// <summary>
         /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -189,7 +189,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        ApiResponse<PageUsuarioResponse> ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        ApiResponse<PageUsuarioResponse> ListarUsingGET47WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -442,7 +442,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET47Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
 
         /// <summary>
         /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -459,7 +459,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET47AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
@@ -1665,9 +1665,9 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
         /// <returns>PageUsuarioResponse</returns>
-        public PageUsuarioResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public PageUsuarioResponse ListarUsingGET47 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET46WithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET47WithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
         }
 
@@ -1683,7 +1683,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        public ApiResponse< PageUsuarioResponse > ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public ApiResponse< PageUsuarioResponse > ListarUsingGET47WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1736,9 +1736,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1759,9 +1759,9 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET47Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET46AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET47AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
 
         }
@@ -1778,7 +1778,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET47AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1831,9 +1831,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

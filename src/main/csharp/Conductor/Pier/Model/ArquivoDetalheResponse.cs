@@ -15,16 +15,17 @@ namespace Conductor.Pier.Model
     /// Objeto Response do arquivo.
     /// </summary>
     [DataContract]
-    public partial class ArquivoResponse :  IEquatable<ArquivoResponse>
+    public partial class ArquivoDetalheResponse :  IEquatable<ArquivoDetalheResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ArquivoResponse" /> class.
-        /// Initializes a new instance of the <see cref="ArquivoResponse" />class.
+        /// Initializes a new instance of the <see cref="ArquivoDetalheResponse" /> class.
+        /// Initializes a new instance of the <see cref="ArquivoDetalheResponse" />class.
         /// </summary>
         /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.</param>
         /// <param name="IdTipoArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo.</param>
         /// <param name="NomeTipoArquivo">Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo.</param>
+        /// <param name="Arquivo">Conte\u00C3\u00BAdo do arquivo convertido em Base 64.</param>
         /// <param name="IdStatusArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo.</param>
         /// <param name="NomeStatusArquivo">Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo.</param>
         /// <param name="Nome">Nome do arquivo.</param>
@@ -33,11 +34,12 @@ namespace Conductor.Pier.Model
         /// <param name="DataAlteracao">Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo..</param>
         /// <param name="Detalhes">Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo..</param>
 
-        public ArquivoResponse(long? Id = null, long? IdTipoArquivo = null, string NomeTipoArquivo = null, long? IdStatusArquivo = null, string NomeStatusArquivo = null, string Nome = null, string Extensao = null, string DataInclusao = null, string DataAlteracao = null, List<ArquivoParametroResponse> Detalhes = null)
+        public ArquivoDetalheResponse(long? Id = null, long? IdTipoArquivo = null, string NomeTipoArquivo = null, string Arquivo = null, long? IdStatusArquivo = null, string NomeStatusArquivo = null, string Nome = null, string Extensao = null, string DataInclusao = null, string DataAlteracao = null, List<ArquivoParametroResponse> Detalhes = null)
         {
             this.Id = Id;
             this.IdTipoArquivo = IdTipoArquivo;
             this.NomeTipoArquivo = NomeTipoArquivo;
+            this.Arquivo = Arquivo;
             this.IdStatusArquivo = IdStatusArquivo;
             this.NomeStatusArquivo = NomeStatusArquivo;
             this.Nome = Nome;
@@ -69,6 +71,13 @@ namespace Conductor.Pier.Model
         /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo</value>
         [DataMember(Name="nomeTipoArquivo", EmitDefaultValue=false)]
         public string NomeTipoArquivo { get; set; }
+    
+        /// <summary>
+        /// Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+        /// </summary>
+        /// <value>Conte\u00C3\u00BAdo do arquivo convertido em Base 64</value>
+        [DataMember(Name="arquivo", EmitDefaultValue=false)]
+        public string Arquivo { get; set; }
     
         /// <summary>
         /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
@@ -126,10 +135,11 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ArquivoResponse {\n");
+            sb.Append("class ArquivoDetalheResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdTipoArquivo: ").Append(IdTipoArquivo).Append("\n");
             sb.Append("  NomeTipoArquivo: ").Append(NomeTipoArquivo).Append("\n");
+            sb.Append("  Arquivo: ").Append(Arquivo).Append("\n");
             sb.Append("  IdStatusArquivo: ").Append(IdStatusArquivo).Append("\n");
             sb.Append("  NomeStatusArquivo: ").Append(NomeStatusArquivo).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
@@ -159,15 +169,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ArquivoResponse);
+            return this.Equals(obj as ArquivoDetalheResponse);
         }
 
         /// <summary>
-        /// Returns true if ArquivoResponse instances are equal
+        /// Returns true if ArquivoDetalheResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of ArquivoResponse to be compared</param>
+        /// <param name="other">Instance of ArquivoDetalheResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ArquivoResponse other)
+        public bool Equals(ArquivoDetalheResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -188,6 +198,11 @@ namespace Conductor.Pier.Model
                     this.NomeTipoArquivo == other.NomeTipoArquivo ||
                     this.NomeTipoArquivo != null &&
                     this.NomeTipoArquivo.Equals(other.NomeTipoArquivo)
+                ) && 
+                (
+                    this.Arquivo == other.Arquivo ||
+                    this.Arquivo != null &&
+                    this.Arquivo.Equals(other.Arquivo)
                 ) && 
                 (
                     this.IdStatusArquivo == other.IdStatusArquivo ||
@@ -246,6 +261,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeTipoArquivo != null)
                     hash = hash * 59 + this.NomeTipoArquivo.GetHashCode();
+                
+                if (this.Arquivo != null)
+                    hash = hash * 59 + this.Arquivo.GetHashCode();
                 
                 if (this.IdStatusArquivo != null)
                     hash = hash * 59 + this.IdStatusArquivo.GetHashCode();

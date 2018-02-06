@@ -19,17 +19,49 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
+        /// Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+        /// </summary>
+        /// <value>Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TipoComunicacaoEnum {
+            
+            [EnumMember(Value = "SOAP")]
+            Soap,
+            
+            [EnumMember(Value = "REST")]
+            Rest
+        }
+
+    
+        /// <summary>
+        /// Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+        /// </summary>
+        /// <value>Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.</value>
+        [DataMember(Name="tipoComunicacao", EmitDefaultValue=false)]
+        public TipoComunicacaoEnum? TipoComunicacao { get; set; }
+    
+        /// <summary>
         /// Initializes a new instance of the <see cref="ArquivoPersist" /> class.
         /// Initializes a new instance of the <see cref="ArquivoPersist" />class.
         /// </summary>
         /// <param name="IdTipoArquivo">Tipo do arquivo.</param>
-        /// <param name="Arquivo">Conte\u00C3\u00BAdo do arquivo convertido em Base 64.</param>
+        /// <param name="Arquivo">Conte\u00C3\u00BAdo do arquivo convertido em Base 64 (required).</param>
         /// <param name="Nome">Nome do arquivo..</param>
         /// <param name="Extensao">Formato/extens\u00C3\u00A3o do arquivo..</param>
+        /// <param name="TipoComunicacao">Tipo de comunica\u00C3\u00A7\u00C3\u00A3o..</param>
         /// <param name="Detalhes">Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo (required).</param>
 
-        public ArquivoPersist(long? IdTipoArquivo = null, string Arquivo = null, string Nome = null, string Extensao = null, List<ArquivoDetalhesPersist> Detalhes = null)
+        public ArquivoPersist(long? IdTipoArquivo = null, string Arquivo = null, string Nome = null, string Extensao = null, TipoComunicacaoEnum? TipoComunicacao = null, List<ArquivoDetalhesPersist> Detalhes = null)
         {
+            // to ensure "Arquivo" is required (not null)
+            if (Arquivo == null)
+            {
+                throw new InvalidDataException("Arquivo is a required property for ArquivoPersist and cannot be null");
+            }
+            else
+            {
+                this.Arquivo = Arquivo;
+            }
             // to ensure "Detalhes" is required (not null)
             if (Detalhes == null)
             {
@@ -40,9 +72,9 @@ namespace Conductor.Pier.Model
                 this.Detalhes = Detalhes;
             }
             this.IdTipoArquivo = IdTipoArquivo;
-            this.Arquivo = Arquivo;
             this.Nome = Nome;
             this.Extensao = Extensao;
+            this.TipoComunicacao = TipoComunicacao;
             
         }
         
@@ -94,6 +126,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Arquivo: ").Append(Arquivo).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Extensao: ").Append(Extensao).Append("\n");
+            sb.Append("  TipoComunicacao: ").Append(TipoComunicacao).Append("\n");
             sb.Append("  Detalhes: ").Append(Detalhes).Append("\n");
             
             sb.Append("}\n");
@@ -153,6 +186,11 @@ namespace Conductor.Pier.Model
                     this.Extensao.Equals(other.Extensao)
                 ) && 
                 (
+                    this.TipoComunicacao == other.TipoComunicacao ||
+                    this.TipoComunicacao != null &&
+                    this.TipoComunicacao.Equals(other.TipoComunicacao)
+                ) && 
+                (
                     this.Detalhes == other.Detalhes ||
                     this.Detalhes != null &&
                     this.Detalhes.SequenceEqual(other.Detalhes)
@@ -182,6 +220,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Extensao != null)
                     hash = hash * 59 + this.Extensao.GetHashCode();
+                
+                if (this.TipoComunicacao != null)
+                    hash = hash * 59 + this.TipoComunicacao.GetHashCode();
                 
                 if (this.Detalhes != null)
                     hash = hash * 59 + this.Detalhes.GetHashCode();

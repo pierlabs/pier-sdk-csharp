@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageJobResponse</returns>
-        PageJobResponse ListarUsingGET21 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        PageJobResponse ListarUsingGET22 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar Jobs
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageJobResponse</returns>
-        ApiResponse<PageJobResponse> ListarUsingGET21WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        ApiResponse<PageJobResponse> ListarUsingGET22WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastrar Job
@@ -237,7 +237,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageJobResponse</returns>
-        System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET21Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET22Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar Jobs
@@ -253,7 +253,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET21AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET22AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastrar Job
@@ -906,9 +906,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageJobResponse</returns>
-        public PageJobResponse ListarUsingGET21 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public PageJobResponse ListarUsingGET22 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageJobResponse> localVarResponse = ListarUsingGET21WithHttpInfo(groovy, descricao, cron, status, page, limit);
+             ApiResponse<PageJobResponse> localVarResponse = ListarUsingGET22WithHttpInfo(groovy, descricao, cron, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -923,7 +923,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageJobResponse</returns>
-        public ApiResponse< PageJobResponse > ListarUsingGET21WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public ApiResponse< PageJobResponse > ListarUsingGET22WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -975,9 +975,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -997,9 +997,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageJobResponse</returns>
-        public async System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET21Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET22Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageJobResponse> localVarResponse = await ListarUsingGET21AsyncWithHttpInfo(groovy, descricao, cron, status, page, limit);
+             ApiResponse<PageJobResponse> localVarResponse = await ListarUsingGET22AsyncWithHttpInfo(groovy, descricao, cron, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1015,7 +1015,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET21AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET22AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -1067,9 +1067,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

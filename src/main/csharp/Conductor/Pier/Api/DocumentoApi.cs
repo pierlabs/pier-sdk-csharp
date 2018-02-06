@@ -140,7 +140,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>DocumentoIntegracaoResponse</returns>
-        DocumentoIntegracaoResponse IntegrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest);
+        DocumentoIntegracaoResponse IntegrarUsingPOST1 (IntegrarDocumentoRequest integrarDocumentoRequest);
   
         /// <summary>
         /// Integra um arquivo a reposit\u00C3\u00B3rios remotos.
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>ApiResponse of DocumentoIntegracaoResponse</returns>
-        ApiResponse<DocumentoIntegracaoResponse> IntegrarUsingPOSTWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
+        ApiResponse<DocumentoIntegracaoResponse> IntegrarUsingPOST1WithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
         
         /// <summary>
         /// Lista documentos
@@ -167,7 +167,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param>
         /// <param name="extensao">Extensao do documento. (optional)</param>
         /// <returns>PageDocumentoResponse</returns>
-        PageDocumentoResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        PageDocumentoResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
   
         /// <summary>
         /// Lista documentos
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param>
         /// <param name="extensao">Extensao do documento. (optional)</param>
         /// <returns>ApiResponse of PageDocumentoResponse</returns>
-        ApiResponse<PageDocumentoResponse> ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        ApiResponse<PageDocumentoResponse> ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
         
         /// <summary>
         /// Lista os templates dos documentos
@@ -197,7 +197,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param>
         /// <returns>PageDocumentoTemplateResponse</returns>
-        PageDocumentoTemplateResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        PageDocumentoTemplateResponse ListarUsingGET17 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
   
         /// <summary>
         /// Lista os templates dos documentos
@@ -211,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param>
         /// <returns>ApiResponse of PageDocumentoTemplateResponse</returns>
-        ApiResponse<PageDocumentoTemplateResponse> ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        ApiResponse<PageDocumentoTemplateResponse> ListarUsingGET17WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
         
         /// <summary>
         /// Lista os tipos de templates
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTipoTemplateResponse</returns>
-        PageTipoTemplateResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null);
+        PageTipoTemplateResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os tipos de templates
@@ -237,7 +237,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        ApiResponse<PageTipoTemplateResponse> ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTipoTemplateResponse> ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastra os templates dos documentos
@@ -432,7 +432,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of DocumentoIntegracaoResponse</returns>
-        System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarUsingPOSTAsync (IntegrarDocumentoRequest integrarDocumentoRequest);
+        System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarUsingPOST1Async (IntegrarDocumentoRequest integrarDocumentoRequest);
 
         /// <summary>
         /// Integra um arquivo a reposit\u00C3\u00B3rios remotos.
@@ -443,7 +443,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of ApiResponse (DocumentoIntegracaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarUsingPOST1AsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
         
         /// <summary>
         /// Lista documentos
@@ -459,7 +459,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param>
         /// <param name="extensao">Extensao do documento. (optional)</param>
         /// <returns>Task of PageDocumentoResponse</returns>
-        System.Threading.Tasks.Task<PageDocumentoResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        System.Threading.Tasks.Task<PageDocumentoResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
 
         /// <summary>
         /// Lista documentos
@@ -475,7 +475,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param>
         /// <param name="extensao">Extensao do documento. (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
         
         /// <summary>
         /// Lista os templates dos documentos
@@ -489,7 +489,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param>
         /// <returns>Task of PageDocumentoTemplateResponse</returns>
-        System.Threading.Tasks.Task<PageDocumentoTemplateResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        System.Threading.Tasks.Task<PageDocumentoTemplateResponse> ListarUsingGET17Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
 
         /// <summary>
         /// Lista os templates dos documentos
@@ -503,7 +503,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> ListarUsingGET17AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
         
         /// <summary>
         /// Lista os tipos de templates
@@ -516,7 +516,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os tipos de templates
@@ -529,7 +529,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastra os templates dos documentos
@@ -1533,9 +1533,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param> 
         /// <returns>DocumentoIntegracaoResponse</returns>
-        public DocumentoIntegracaoResponse IntegrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public DocumentoIntegracaoResponse IntegrarUsingPOST1 (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
-             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = IntegrarUsingPOSTWithHttpInfo(integrarDocumentoRequest);
+             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = IntegrarUsingPOST1WithHttpInfo(integrarDocumentoRequest);
              return localVarResponse.Data;
         }
 
@@ -1545,12 +1545,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param> 
         /// <returns>ApiResponse of DocumentoIntegracaoResponse</returns>
-        public ApiResponse< DocumentoIntegracaoResponse > IntegrarUsingPOSTWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public ApiResponse< DocumentoIntegracaoResponse > IntegrarUsingPOST1WithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
             
             // verify the required parameter 'integrarDocumentoRequest' is set
             if (integrarDocumentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling DocumentoApi->IntegrarUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling DocumentoApi->IntegrarUsingPOST1");
             
     
             var localVarPath = "/api/documentos/integrar";
@@ -1602,9 +1602,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoIntegracaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1619,9 +1619,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of DocumentoIntegracaoResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarUsingPOSTAsync (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public async System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarUsingPOST1Async (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
-             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = await IntegrarUsingPOSTAsyncWithHttpInfo(integrarDocumentoRequest);
+             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = await IntegrarUsingPOST1AsyncWithHttpInfo(integrarDocumentoRequest);
              return localVarResponse.Data;
 
         }
@@ -1632,10 +1632,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of ApiResponse (DocumentoIntegracaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarUsingPOST1AsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
             // verify the required parameter 'integrarDocumentoRequest' is set
-            if (integrarDocumentoRequest == null) throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling IntegrarUsingPOST");
+            if (integrarDocumentoRequest == null) throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling IntegrarUsingPOST1");
             
     
             var localVarPath = "/api/documentos/integrar";
@@ -1687,9 +1687,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoIntegracaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1708,9 +1708,9 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param> 
         /// <param name="extensao">Extensao do documento. (optional)</param> 
         /// <returns>PageDocumentoResponse</returns>
-        public PageDocumentoResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public PageDocumentoResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
-             ApiResponse<PageDocumentoResponse> localVarResponse = ListarUsingGET15WithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
+             ApiResponse<PageDocumentoResponse> localVarResponse = ListarUsingGET16WithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
              return localVarResponse.Data;
         }
 
@@ -1725,7 +1725,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param> 
         /// <param name="extensao">Extensao do documento. (optional)</param> 
         /// <returns>ApiResponse of PageDocumentoResponse</returns>
-        public ApiResponse< PageDocumentoResponse > ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public ApiResponse< PageDocumentoResponse > ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
             
     
@@ -1777,9 +1777,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDocumentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1799,9 +1799,9 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param>
         /// <param name="extensao">Extensao do documento. (optional)</param>
         /// <returns>Task of PageDocumentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageDocumentoResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public async System.Threading.Tasks.Task<PageDocumentoResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
-             ApiResponse<PageDocumentoResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
+             ApiResponse<PageDocumentoResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
              return localVarResponse.Data;
 
         }
@@ -1817,7 +1817,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento. (optional)</param>
         /// <param name="extensao">Extensao do documento. (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
             
     
@@ -1869,9 +1869,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDocumentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1888,9 +1888,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param> 
         /// <returns>PageDocumentoTemplateResponse</returns>
-        public PageDocumentoTemplateResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public PageDocumentoTemplateResponse ListarUsingGET17 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
-             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = ListarUsingGET16WithHttpInfo(sort, page, limit, idTipoTemplate);
+             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = ListarUsingGET17WithHttpInfo(sort, page, limit, idTipoTemplate);
              return localVarResponse.Data;
         }
 
@@ -1903,7 +1903,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param> 
         /// <returns>ApiResponse of PageDocumentoTemplateResponse</returns>
-        public ApiResponse< PageDocumentoTemplateResponse > ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public ApiResponse< PageDocumentoTemplateResponse > ListarUsingGET17WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
             
     
@@ -1953,9 +1953,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1973,9 +1973,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param>
         /// <returns>Task of PageDocumentoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<PageDocumentoTemplateResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public async System.Threading.Tasks.Task<PageDocumentoTemplateResponse> ListarUsingGET17Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
-             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(sort, page, limit, idTipoTemplate);
+             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = await ListarUsingGET17AsyncWithHttpInfo(sort, page, limit, idTipoTemplate);
              return localVarResponse.Data;
 
         }
@@ -1989,7 +1989,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> ListarUsingGET17AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
             
     
@@ -2039,9 +2039,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2057,9 +2057,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTipoTemplateResponse</returns>
-        public PageTipoTemplateResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null)
+        public PageTipoTemplateResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarUsingGET42WithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarUsingGET43WithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2071,7 +2071,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        public ApiResponse< PageTipoTemplateResponse > ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTipoTemplateResponse > ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2120,9 +2120,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2139,9 +2139,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarUsingGET42AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarUsingGET43AsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2154,7 +2154,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2203,9 +2203,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
