@@ -62,6 +62,32 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> IntegrarUsingPOSTWithHttpInfo (IntegrarArquivoRequest integrarArquivoRequest);
         
         /// <summary>
+        /// Lista as auditorias do arquivo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>PageArquivoAUDResponse</returns>
+        PageArquivoAUDResponse ListarUsingGET3 (long? id, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Lista as auditorias do arquivo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>ApiResponse of PageArquivoAUDResponse</returns>
+        ApiResponse<PageArquivoAUDResponse> ListarUsingGET3WithHttpInfo (long? id, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Listar arquivos do Pier Cloud
         /// </summary>
         /// <remarks>
@@ -76,7 +102,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param>
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param>
         /// <returns>PageArquivoResponse</returns>
-        PageArquivoResponse ListarUsingGET3 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        PageArquivoResponse ListarUsingGET4 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
   
         /// <summary>
         /// Listar arquivos do Pier Cloud
@@ -93,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param>
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param>
         /// <returns>ApiResponse of PageArquivoResponse</returns>
-        ApiResponse<PageArquivoResponse> ListarUsingGET3WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        ApiResponse<PageArquivoResponse> ListarUsingGET4WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
         
         /// <summary>
         /// Permite armazenar arquivos no PIER Cloud
@@ -166,6 +192,32 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> IntegrarUsingPOSTAsyncWithHttpInfo (IntegrarArquivoRequest integrarArquivoRequest);
         
         /// <summary>
+        /// Lista as auditorias do arquivo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of PageArquivoAUDResponse</returns>
+        System.Threading.Tasks.Task<PageArquivoAUDResponse> ListarUsingGET3Async (long? id, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Lista as auditorias do arquivo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageArquivoAUDResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageArquivoAUDResponse>> ListarUsingGET3AsyncWithHttpInfo (long? id, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Listar arquivos do Pier Cloud
         /// </summary>
         /// <remarks>
@@ -180,7 +232,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param>
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param>
         /// <returns>Task of PageArquivoResponse</returns>
-        System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET3Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET4Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
 
         /// <summary>
         /// Listar arquivos do Pier Cloud
@@ -197,7 +249,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param>
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param>
         /// <returns>Task of ApiResponse (PageArquivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET3AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET4AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
         
         /// <summary>
         /// Permite armazenar arquivos no PIER Cloud
@@ -642,6 +694,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista as auditorias do arquivo Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <returns>PageArquivoAUDResponse</returns>
+        public PageArquivoAUDResponse ListarUsingGET3 (long? id, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageArquivoAUDResponse> localVarResponse = ListarUsingGET3WithHttpInfo(id, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as auditorias do arquivo Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <returns>ApiResponse of PageArquivoAUDResponse</returns>
+        public ApiResponse< PageArquivoAUDResponse > ListarUsingGET3WithHttpInfo (long? id, int? page = null, int? limit = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ArquivoApi->ListarUsingGET3");
+            
+    
+            var localVarPath = "/api/arquivos/{id}/auditorias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageArquivoAUDResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageArquivoAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageArquivoAUDResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as auditorias do arquivo Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of PageArquivoAUDResponse</returns>
+        public async System.Threading.Tasks.Task<PageArquivoAUDResponse> ListarUsingGET3Async (long? id, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageArquivoAUDResponse> localVarResponse = await ListarUsingGET3AsyncWithHttpInfo(id, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as auditorias do arquivo Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageArquivoAUDResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoAUDResponse>> ListarUsingGET3AsyncWithHttpInfo (long? id, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET3");
+            
+    
+            var localVarPath = "/api/arquivos/{id}/auditorias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageArquivoAUDResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageArquivoAUDResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageArquivoAUDResponse)));
+            
+        }
+        
+        /// <summary>
         /// Listar arquivos do Pier Cloud Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -653,9 +875,9 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param> 
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param> 
         /// <returns>PageArquivoResponse</returns>
-        public PageArquivoResponse ListarUsingGET3 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public PageArquivoResponse ListarUsingGET4 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
-             ApiResponse<PageArquivoResponse> localVarResponse = ListarUsingGET3WithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
+             ApiResponse<PageArquivoResponse> localVarResponse = ListarUsingGET4WithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
              return localVarResponse.Data;
         }
 
@@ -671,7 +893,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param> 
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param> 
         /// <returns>ApiResponse of PageArquivoResponse</returns>
-        public ApiResponse< PageArquivoResponse > ListarUsingGET3WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public ApiResponse< PageArquivoResponse > ListarUsingGET4WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
             
     
@@ -724,9 +946,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageArquivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -747,9 +969,9 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param>
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param>
         /// <returns>Task of PageArquivoResponse</returns>
-        public async System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET3Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public async System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET4Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
-             ApiResponse<PageArquivoResponse> localVarResponse = await ListarUsingGET3AsyncWithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
+             ApiResponse<PageArquivoResponse> localVarResponse = await ListarUsingGET4AsyncWithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
              return localVarResponse.Data;
 
         }
@@ -766,7 +988,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">Identificador do status do arquivo (optional)</param>
         /// <param name="extensao">Extens\u00C3\u00A3o do arquivo (optional)</param>
         /// <returns>Task of ApiResponse (PageArquivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET3AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET4AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
             
     
@@ -819,9 +1041,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageArquivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

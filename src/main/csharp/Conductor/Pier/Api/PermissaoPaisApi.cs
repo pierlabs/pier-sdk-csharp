@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using Conductor.Pier.Client;
+using Conductor.Pier.Model;
 
 namespace Conductor.Pier.Api
 {
@@ -15,6 +16,28 @@ namespace Conductor.Pier.Api
     public interface IPermissaoPaisApi
     {
         #region Synchronous Operations
+        
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <returns>PaisResponse</returns>
+        PaisResponse ConsultarPaisUsingGET (long? id);
+  
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <returns>ApiResponse of PaisResponse</returns>
+        ApiResponse<PaisResponse> ConsultarPaisUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os continentes
@@ -36,9 +59,67 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarContinentesUsingGETWithHttpInfo ();
         
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <returns>PagePaisResponse</returns>
+        PagePaisResponse ListarPaisesUsingGET (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+  
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <returns>ApiResponse of PagePaisResponse</returns>
+        ApiResponse<PagePaisResponse> ListarPaisesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <returns>Task of PaisResponse</returns>
+        System.Threading.Tasks.Task<PaisResponse> ConsultarPaisUsingGETAsync (long? id);
+
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <returns>Task of ApiResponse (PaisResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaisResponse>> ConsultarPaisUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os continentes
@@ -59,6 +140,42 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarContinentesUsingGETAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <returns>Task of PagePaisResponse</returns>
+        System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
+
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <returns>Task of ApiResponse (PagePaisResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
         
         #endregion Asynchronous Operations
         
@@ -151,6 +268,164 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param> 
+        /// <returns>PaisResponse</returns>
+        public PaisResponse ConsultarPaisUsingGET (long? id)
+        {
+             ApiResponse<PaisResponse> localVarResponse = ConsultarPaisUsingGETWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param> 
+        /// <returns>ApiResponse of PaisResponse</returns>
+        public ApiResponse< PaisResponse > ConsultarPaisUsingGETWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling PermissaoPaisApi->ConsultarPaisUsingGET");
+            
+    
+            var localVarPath = "/api/paises/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPaisUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPaisUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PaisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PaisResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaisResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <returns>Task of PaisResponse</returns>
+        public async System.Threading.Tasks.Task<PaisResponse> ConsultarPaisUsingGETAsync (long? id)
+        {
+             ApiResponse<PaisResponse> localVarResponse = await ConsultarPaisUsingGETAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <returns>Task of ApiResponse (PaisResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PaisResponse>> ConsultarPaisUsingGETAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPaisUsingGET");
+            
+    
+            var localVarPath = "/api/paises/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPaisUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPaisUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PaisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PaisResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PaisResponse)));
+            
+        }
         
         /// <summary>
         /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
@@ -295,6 +570,200 @@ namespace Conductor.Pier.Api
             return new ApiResponse<List<Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param> 
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param> 
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param> 
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param> 
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param> 
+        /// <returns>PagePaisResponse</returns>
+        public PagePaisResponse ListarPaisesUsingGET (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        {
+             ApiResponse<PagePaisResponse> localVarResponse = ListarPaisesUsingGETWithHttpInfo(sort, page, limit, codigo, sigla, descricao, continente, flagAtivo);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param> 
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param> 
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param> 
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param> 
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param> 
+        /// <returns>ApiResponse of PagePaisResponse</returns>
+        public ApiResponse< PagePaisResponse > ListarPaisesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        {
+            
+    
+            var localVarPath = "/api/paises";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
+            if (sigla != null) localVarQueryParams.Add("sigla", Configuration.ApiClient.ParameterToString(sigla)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (continente != null) localVarQueryParams.Add("continente", Configuration.ApiClient.ParameterToString(continente)); // query parameter
+            if (flagAtivo != null) localVarQueryParams.Add("flagAtivo", Configuration.ApiClient.ParameterToString(flagAtivo)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPaisesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPaisesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PagePaisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePaisResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePaisResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <returns>Task of PagePaisResponse</returns>
+        public async System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        {
+             ApiResponse<PagePaisResponse> localVarResponse = await ListarPaisesUsingGETAsyncWithHttpInfo(sort, page, limit, codigo, sigla, descricao, continente, flagAtivo);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
+        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <returns>Task of ApiResponse (PagePaisResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
+        {
+            
+    
+            var localVarPath = "/api/paises";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
+            if (sigla != null) localVarQueryParams.Add("sigla", Configuration.ApiClient.ParameterToString(sigla)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (continente != null) localVarQueryParams.Add("continente", Configuration.ApiClient.ParameterToString(continente)); // query parameter
+            if (flagAtivo != null) localVarQueryParams.Add("flagAtivo", Configuration.ApiClient.ParameterToString(flagAtivo)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPaisesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPaisesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PagePaisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePaisResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePaisResponse)));
             
         }
         
