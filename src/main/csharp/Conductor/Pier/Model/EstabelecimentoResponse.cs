@@ -19,21 +19,6 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
-        /// </summary>
-        /// <value>Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum TipoCorrespondenciaEnum {
-            
-            [EnumMember(Value = "ORIGEM")]
-            Origem,
-            
-            [EnumMember(Value = "CORRESPONDENCIA")]
-            Correspondencia
-        }
-
-    
-        /// <summary>
         /// Tipo do regime de pagamento do estabelecimento.
         /// </summary>
         /// <value>Tipo do regime de pagamento do estabelecimento.</value>
@@ -47,13 +32,6 @@ namespace Conductor.Pier.Model
             Pv
         }
 
-    
-        /// <summary>
-        /// Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
-        /// </summary>
-        /// <value>Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).</value>
-        [DataMember(Name="tipoCorrespondencia", EmitDefaultValue=false)]
-        public TipoCorrespondenciaEnum? TipoCorrespondencia { get; set; }
     
         /// <summary>
         /// Tipo do regime de pagamento do estabelecimento.
@@ -99,7 +77,7 @@ namespace Conductor.Pier.Model
         /// <param name="AssociadoSPCBrasil">N\u00C3\u00BAmero do associado ao SPCBrasil..</param>
         /// <param name="Mcc">C\u00C3\u00B3digo de Categoria de Mercado..</param>
         /// <param name="IdTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento..</param>
-        /// <param name="TipoCorrespondencia">Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA)..</param>
+        /// <param name="Correspondencia">Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA)..</param>
         /// <param name="CargoContato">Cargo do contato do estabelecimento..</param>
         /// <param name="TipoPagamento">Tipo do regime de pagamento do estabelecimento..</param>
         /// <param name="Consulta">Consulta de cadastro n\u00C3\u00BAmero um..</param>
@@ -109,7 +87,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataCadastramento">Data de Cadastro do Estabelecimento..</param>
         /// <param name="Usuario">Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
 
-        public EstabelecimentoResponse(long? Id = null, string NumeroEstabelecimento = null, int? FlagMatriz = null, long? IdCredor = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, string NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, TipoCorrespondenciaEnum? TipoCorrespondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, string Terminal = null, string DataCadastramento = null, string Usuario = null)
+        public EstabelecimentoResponse(long? Id = null, string NumeroEstabelecimento = null, int? FlagMatriz = null, long? IdCredor = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, string NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, int? Correspondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, string Terminal = null, string DataCadastramento = null, string Usuario = null)
         {
             this.Id = Id;
             this.NumeroEstabelecimento = NumeroEstabelecimento;
@@ -144,7 +122,7 @@ namespace Conductor.Pier.Model
             this.AssociadoSPCBrasil = AssociadoSPCBrasil;
             this.Mcc = Mcc;
             this.IdTipoEstabelecimento = IdTipoEstabelecimento;
-            this.TipoCorrespondencia = TipoCorrespondencia;
+            this.Correspondencia = Correspondencia;
             this.CargoContato = CargoContato;
             this.TipoPagamento = TipoPagamento;
             this.Consulta = Consulta;
@@ -389,6 +367,13 @@ namespace Conductor.Pier.Model
         public long? IdTipoEstabelecimento { get; set; }
     
         /// <summary>
+        /// Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+        /// </summary>
+        /// <value>Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).</value>
+        [DataMember(Name="correspondencia", EmitDefaultValue=false)]
+        public int? Correspondencia { get; set; }
+    
+        /// <summary>
         /// Cargo do contato do estabelecimento.
         /// </summary>
         /// <value>Cargo do contato do estabelecimento.</value>
@@ -478,7 +463,7 @@ namespace Conductor.Pier.Model
             sb.Append("  AssociadoSPCBrasil: ").Append(AssociadoSPCBrasil).Append("\n");
             sb.Append("  Mcc: ").Append(Mcc).Append("\n");
             sb.Append("  IdTipoEstabelecimento: ").Append(IdTipoEstabelecimento).Append("\n");
-            sb.Append("  TipoCorrespondencia: ").Append(TipoCorrespondencia).Append("\n");
+            sb.Append("  Correspondencia: ").Append(Correspondencia).Append("\n");
             sb.Append("  CargoContato: ").Append(CargoContato).Append("\n");
             sb.Append("  TipoPagamento: ").Append(TipoPagamento).Append("\n");
             sb.Append("  Consulta: ").Append(Consulta).Append("\n");
@@ -690,9 +675,9 @@ namespace Conductor.Pier.Model
                     this.IdTipoEstabelecimento.Equals(other.IdTipoEstabelecimento)
                 ) && 
                 (
-                    this.TipoCorrespondencia == other.TipoCorrespondencia ||
-                    this.TipoCorrespondencia != null &&
-                    this.TipoCorrespondencia.Equals(other.TipoCorrespondencia)
+                    this.Correspondencia == other.Correspondencia ||
+                    this.Correspondencia != null &&
+                    this.Correspondencia.Equals(other.Correspondencia)
                 ) && 
                 (
                     this.CargoContato == other.CargoContato ||
@@ -847,8 +832,8 @@ namespace Conductor.Pier.Model
                 if (this.IdTipoEstabelecimento != null)
                     hash = hash * 59 + this.IdTipoEstabelecimento.GetHashCode();
                 
-                if (this.TipoCorrespondencia != null)
-                    hash = hash * 59 + this.TipoCorrespondencia.GetHashCode();
+                if (this.Correspondencia != null)
+                    hash = hash * 59 + this.Correspondencia.GetHashCode();
                 
                 if (this.CargoContato != null)
                     hash = hash * 59 + this.CargoContato.GetHashCode();

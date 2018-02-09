@@ -32,7 +32,7 @@ namespace Conductor.Pier.Model
         /// <param name="TerminalRequisitante">Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante. (required).</param>
         /// <param name="NumeroEstabelecimento">Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento. (required).</param>
 
-        public TransferenciaCreditoContaBancariaPersist(long? NsuOrigem = null, long? IdCartao = null, long? IdContaBancaria = null, double? Valor = null, long? NumeroParcelas = null, int? NumeroMesesCarencia = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroEstabelecimento = null)
+        public TransferenciaCreditoContaBancariaPersist(long? NsuOrigem = null, long? IdCartao = null, long? IdContaBancaria = null, double? Valor = null, long? NumeroParcelas = null, int? NumeroMesesCarencia = null, string DataHoraTerminal = null, string TerminalRequisitante = null, string NumeroEstabelecimento = null)
         {
             // to ensure "NsuOrigem" is required (not null)
             if (NsuOrigem == null)
@@ -180,7 +180,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
-        public long? NumeroEstabelecimento { get; set; }
+        public string NumeroEstabelecimento { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
