@@ -558,8 +558,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <returns>Object</returns>
-        Object ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV);
+        /// <returns>string</returns>
+        string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV);
   
         /// <summary>
         /// Validar CVV do cart\u00C3\u00A3o
@@ -570,8 +570,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
         
         /// <summary>
         /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
@@ -1248,8 +1248,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV);
 
         /// <summary>
         /// Validar CVV do cart\u00C3\u00A3o
@@ -1260,8 +1260,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
         
         /// <summary>
         /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
@@ -4957,10 +4957,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
         /// <param name="validaCVV">validaCVV</param> 
-        /// <returns>Object</returns>
-        public Object ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV)
+        /// <returns>string</returns>
+        public string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV)
         {
-             ApiResponse<Object> localVarResponse = ValidarCVVUsingPOSTWithHttpInfo(id, validaCVV);
+             ApiResponse<string> localVarResponse = ValidarCVVUsingPOSTWithHttpInfo(id, validaCVV);
              return localVarResponse.Data;
         }
 
@@ -4970,8 +4970,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
         /// <param name="validaCVV">validaCVV</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
         {
             
             // verify the required parameter 'id' is set
@@ -5037,9 +5037,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarCVVUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
 
@@ -5050,10 +5050,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV)
         {
-             ApiResponse<Object> localVarResponse = await ValidarCVVUsingPOSTAsyncWithHttpInfo(id, validaCVV);
+             ApiResponse<string> localVarResponse = await ValidarCVVUsingPOSTAsyncWithHttpInfo(id, validaCVV);
              return localVarResponse.Data;
 
         }
@@ -5064,8 +5064,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ValidarCVVUsingPOST");
@@ -5127,9 +5127,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ValidarCVVUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
         
