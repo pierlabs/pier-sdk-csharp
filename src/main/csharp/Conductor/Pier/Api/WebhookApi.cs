@@ -25,11 +25,10 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse AlterarUsingPUT22 (long? id, string tipoEvento, string url, string status = null);
+        WebHookResponse AlterarUsingPUT22 (long? id, WebHook webhook, string status = null);
   
         /// <summary>
         /// Alterar Webhook
@@ -39,11 +38,10 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> AlterarUsingPUT22WithHttpInfo (long? id, string tipoEvento, string url, string status = null);
+        ApiResponse<WebHookResponse> AlterarUsingPUT22WithHttpInfo (long? id, WebHook webhook, string status = null);
         
         /// <summary>
         /// Consultar Webhook
@@ -108,10 +106,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse SalvarUsingPOST30 (string tipoEvento, string url);
+        WebHookResponse SalvarUsingPOST30 (WebHook webhook);
   
         /// <summary>
         /// Salvar Webhook
@@ -120,10 +117,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> SalvarUsingPOST30WithHttpInfo (string tipoEvento, string url);
+        ApiResponse<WebHookResponse> SalvarUsingPOST30WithHttpInfo (WebHook webhook);
         
         #endregion Synchronous Operations
         
@@ -137,11 +133,10 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT22Async (long? id, string tipoEvento, string url, string status = null);
+        System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT22Async (long? id, WebHook webhook, string status = null);
 
         /// <summary>
         /// Alterar Webhook
@@ -151,11 +146,10 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT22AsyncWithHttpInfo (long? id, string tipoEvento, string url, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT22AsyncWithHttpInfo (long? id, WebHook webhook, string status = null);
         
         /// <summary>
         /// Consultar Webhook
@@ -220,10 +214,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST30Async (string tipoEvento, string url);
+        System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST30Async (WebHook webhook);
 
         /// <summary>
         /// Salvar Webhook
@@ -232,10 +225,9 @@ namespace Conductor.Pier.Api
         /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST30AsyncWithHttpInfo (string tipoEvento, string url);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST30AsyncWithHttpInfo (WebHook webhook);
         
         #endregion Asynchronous Operations
         
@@ -334,13 +326,12 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param> 
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
+        /// <param name="webhook">webhook</param> 
         /// <param name="status">Status (optional)</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse AlterarUsingPUT22 (long? id, string tipoEvento, string url, string status = null)
+        public WebHookResponse AlterarUsingPUT22 (long? id, WebHook webhook, string status = null)
         {
-             ApiResponse<WebHookResponse> localVarResponse = AlterarUsingPUT22WithHttpInfo(id, tipoEvento, url, status);
+             ApiResponse<WebHookResponse> localVarResponse = AlterarUsingPUT22WithHttpInfo(id, webhook, status);
              return localVarResponse.Data;
         }
 
@@ -349,24 +340,19 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param> 
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
+        /// <param name="webhook">webhook</param> 
         /// <param name="status">Status (optional)</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > AlterarUsingPUT22WithHttpInfo (long? id, string tipoEvento, string url, string status = null)
+        public ApiResponse< WebHookResponse > AlterarUsingPUT22WithHttpInfo (long? id, WebHook webhook, string status = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->AlterarUsingPUT22");
             
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null)
-                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhookApi->AlterarUsingPUT22");
-            
-            // verify the required parameter 'url' is set
-            if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhookApi->AlterarUsingPUT22");
+            // verify the required parameter 'webhook' is set
+            if (webhook == null)
+                throw new ApiException(400, "Missing required parameter 'webhook' when calling WebhookApi->AlterarUsingPUT22");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -398,12 +384,17 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
             
             
             
-            
+            if (webhook.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(webhook); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = webhook; // byte array
+            }
 
             
     
@@ -431,13 +422,12 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT22Async (long? id, string tipoEvento, string url, string status = null)
+        public async System.Threading.Tasks.Task<WebHookResponse> AlterarUsingPUT22Async (long? id, WebHook webhook, string status = null)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await AlterarUsingPUT22AsyncWithHttpInfo(id, tipoEvento, url, status);
+             ApiResponse<WebHookResponse> localVarResponse = await AlterarUsingPUT22AsyncWithHttpInfo(id, webhook, status);
              return localVarResponse.Data;
 
         }
@@ -447,18 +437,15 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT22AsyncWithHttpInfo (long? id, string tipoEvento, string url, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> AlterarUsingPUT22AsyncWithHttpInfo (long? id, WebHook webhook, string status = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT22");
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling AlterarUsingPUT22");
-            // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling AlterarUsingPUT22");
+            // verify the required parameter 'webhook' is set
+            if (webhook == null) throw new ApiException(400, "Missing required parameter 'webhook' when calling AlterarUsingPUT22");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -490,12 +477,17 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
             
             
             
-            
+            if (webhook.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(webhook); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = webhook; // byte array
+            }
 
             
 
@@ -867,12 +859,11 @@ namespace Conductor.Pier.Api
         /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
+        /// <param name="webhook">webhook</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse SalvarUsingPOST30 (string tipoEvento, string url)
+        public WebHookResponse SalvarUsingPOST30 (WebHook webhook)
         {
-             ApiResponse<WebHookResponse> localVarResponse = SalvarUsingPOST30WithHttpInfo(tipoEvento, url);
+             ApiResponse<WebHookResponse> localVarResponse = SalvarUsingPOST30WithHttpInfo(webhook);
              return localVarResponse.Data;
         }
 
@@ -880,19 +871,14 @@ namespace Conductor.Pier.Api
         /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param> 
-        /// <param name="url">URL que a ser consumida pelo WebHook</param> 
+        /// <param name="webhook">webhook</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > SalvarUsingPOST30WithHttpInfo (string tipoEvento, string url)
+        public ApiResponse< WebHookResponse > SalvarUsingPOST30WithHttpInfo (WebHook webhook)
         {
             
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null)
-                throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling WebhookApi->SalvarUsingPOST30");
-            
-            // verify the required parameter 'url' is set
-            if (url == null)
-                throw new ApiException(400, "Missing required parameter 'url' when calling WebhookApi->SalvarUsingPOST30");
+            // verify the required parameter 'webhook' is set
+            if (webhook == null)
+                throw new ApiException(400, "Missing required parameter 'webhook' when calling WebhookApi->SalvarUsingPOST30");
             
     
             var localVarPath = "/api/webhooks";
@@ -922,12 +908,17 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
             
             
             
-            
+            if (webhook.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(webhook); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = webhook; // byte array
+            }
 
             
     
@@ -954,12 +945,11 @@ namespace Conductor.Pier.Api
         /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST30Async (string tipoEvento, string url)
+        public async System.Threading.Tasks.Task<WebHookResponse> SalvarUsingPOST30Async (WebHook webhook)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await SalvarUsingPOST30AsyncWithHttpInfo(tipoEvento, url);
+             ApiResponse<WebHookResponse> localVarResponse = await SalvarUsingPOST30AsyncWithHttpInfo(webhook);
              return localVarResponse.Data;
 
         }
@@ -968,15 +958,12 @@ namespace Conductor.Pier.Api
         /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook</param>
-        /// <param name="url">URL que a ser consumida pelo WebHook</param>
+        /// <param name="webhook">webhook</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST30AsyncWithHttpInfo (string tipoEvento, string url)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> SalvarUsingPOST30AsyncWithHttpInfo (WebHook webhook)
         {
-            // verify the required parameter 'tipoEvento' is set
-            if (tipoEvento == null) throw new ApiException(400, "Missing required parameter 'tipoEvento' when calling SalvarUsingPOST30");
-            // verify the required parameter 'url' is set
-            if (url == null) throw new ApiException(400, "Missing required parameter 'url' when calling SalvarUsingPOST30");
+            // verify the required parameter 'webhook' is set
+            if (webhook == null) throw new ApiException(400, "Missing required parameter 'webhook' when calling SalvarUsingPOST30");
             
     
             var localVarPath = "/api/webhooks";
@@ -1006,12 +993,17 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (tipoEvento != null) localVarQueryParams.Add("tipoEvento", Configuration.ApiClient.ParameterToString(tipoEvento)); // query parameter
-            if (url != null) localVarQueryParams.Add("url", Configuration.ApiClient.ParameterToString(url)); // query parameter
             
             
             
-            
+            if (webhook.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(webhook); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = webhook; // byte array
+            }
 
             
 
