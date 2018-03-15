@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Opera\u00C3\u00A7\u00C3\u00B5es
+    /// Lista de Opera\u00E7\u00F5es
     /// </summary>
     [DataContract]
     public partial class PageOperacaoResponse :  IEquatable<PageOperacaoResponse>

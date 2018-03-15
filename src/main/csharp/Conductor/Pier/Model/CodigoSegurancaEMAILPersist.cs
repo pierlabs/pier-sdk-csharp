@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+    /// Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaEMAILPersist :  IEquatable<CodigoSegurancaEMAILPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaEMAILPersist" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaEMAILPersist" />class.
         /// </summary>
-        /// <param name="Email">E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a..</param>
-        /// <param name="CodigoSeguranca">Token para valida\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Email">E-mail usado para envio do c\u00F3digo de seguran\u00E7a..</param>
+        /// <param name="CodigoSeguranca">Token para valida\u00E7\u00E3o..</param>
 
         public CodigoSegurancaEMAILPersist(string Email = null, string CodigoSeguranca = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+        /// E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
         /// </summary>
-        /// <value>E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.</value>
+        /// <value>E-mail usado para envio do c\u00F3digo de seguran\u00E7a.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Token para valida\u00C3\u00A7\u00C3\u00A3o.
+        /// Token para valida\u00E7\u00E3o.
         /// </summary>
-        /// <value>Token para valida\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Token para valida\u00E7\u00E3o.</value>
         [DataMember(Name="codigoSeguranca", EmitDefaultValue=false)]
         public string CodigoSeguranca { get; set; }
     

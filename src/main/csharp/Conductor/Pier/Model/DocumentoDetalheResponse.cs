@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o detalhamento do documento
+    /// Representa\u00E7\u00E3o da resposta para o detalhamento do documento
     /// </summary>
     [DataContract]
     public partial class DocumentoDetalheResponse :  IEquatable<DocumentoDetalheResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="DocumentoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento..</param>
+        /// <param name="Id">ID de identifica\u00E7\u00E3o do detalhamento do documento..</param>
         /// <param name="Propriedade">Propriedade do detalhamento do documento..</param>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo do detalhamento do documento..</param>
+        /// <param name="Conteudo">Conte\u00FAdo do detalhamento do documento..</param>
 
         public DocumentoDetalheResponse(long? Id = null, string Propriedade = null, string Conteudo = null)
         {
@@ -36,9 +36,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.
+        /// ID de identifica\u00E7\u00E3o do detalhamento do documento.
         /// </summary>
-        /// <value>ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.</value>
+        /// <value>ID de identifica\u00E7\u00E3o do detalhamento do documento.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -50,9 +50,9 @@ namespace Conductor.Pier.Model
         public string Propriedade { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do detalhamento do documento.
+        /// Conte\u00FAdo do detalhamento do documento.
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do detalhamento do documento.</value>
+        /// <value>Conte\u00FAdo do detalhamento do documento.</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

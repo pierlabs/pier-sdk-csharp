@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.
+    /// Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
     /// </summary>
     [DataContract]
     public partial class NotificacaoEmailRequest :  IEquatable<NotificacaoEmailRequest>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoEmailRequest" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoEmailRequest" />class.
         /// </summary>
-        /// <param name="IdTemplateNotificacao">ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="Destinatarios">Lista de email(s) do(s) destinat\u00C3\u00A1rio(s)..</param>
+        /// <param name="IdTemplateNotificacao">ID para o template da notifica\u00E7\u00E3o..</param>
+        /// <param name="Destinatarios">Lista de email(s) do(s) destinat\u00E1rio(s)..</param>
         /// <param name="Anexos">Lista de ids dos anexos a serem enviados..</param>
-        /// <param name="ParametrosConteudo">Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="ParametrosConteudo">Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o..</param>
 
         public NotificacaoEmailRequest(long? IdTemplateNotificacao = null, List<string> Destinatarios = null, List<AnexoNotificacaoEmailRequest> Anexos = null, Dictionary<string, Object> ParametrosConteudo = null)
         {
@@ -38,16 +38,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+        /// ID para o template da notifica\u00E7\u00E3o.
         /// </summary>
-        /// <value>ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>ID para o template da notifica\u00E7\u00E3o.</value>
         [DataMember(Name="idTemplateNotificacao", EmitDefaultValue=false)]
         public long? IdTemplateNotificacao { get; set; }
     
         /// <summary>
-        /// Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+        /// Lista de email(s) do(s) destinat\u00E1rio(s).
         /// </summary>
-        /// <value>Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).</value>
+        /// <value>Lista de email(s) do(s) destinat\u00E1rio(s).</value>
         [DataMember(Name="destinatarios", EmitDefaultValue=false)]
         public List<string> Destinatarios { get; set; }
     
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public List<AnexoNotificacaoEmailRequest> Anexos { get; set; }
     
         /// <summary>
-        /// Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
+        /// Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.</value>
         [DataMember(Name="parametrosConteudo", EmitDefaultValue=false)]
         public Dictionary<string, Object> ParametrosConteudo { get; set; }
     

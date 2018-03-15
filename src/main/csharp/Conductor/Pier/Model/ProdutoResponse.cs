@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (required).</param>
-        /// <param name="Nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (required).</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (required).</param>
+        /// <param name="Nome">Descri\u00E7\u00E3o do Nome do Produto. (required).</param>
         /// <param name="Status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (required).</param>
-        /// <param name="IdFantasiaBasica">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence..</param>
+        /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence..</param>
 
         public ProdutoResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null)
         {
@@ -62,16 +62,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+        /// Descri\u00E7\u00E3o do Nome do Produto.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.</value>
+        /// <value>Descri\u00E7\u00E3o do Nome do Produto.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
@@ -83,9 +83,9 @@ namespace Conductor.Pier.Model
         public int? Status { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     

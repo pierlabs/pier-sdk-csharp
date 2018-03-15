@@ -24,9 +24,9 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Mcc">Mcc.</param>
         /// <param name="Uf">Uf.</param>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="IdCompra">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="IdCompra">C\u00F3digo de identifica\u00E7\u00E3o da compra.</param>
         /// <param name="QuantidadeParcelasTotal">Apresenta o numero total de parcelas da compra.</param>
         /// <param name="QuantidadeParcelasAntecipadas">Apresenta o numero de parcelas antecipadas.</param>
         /// <param name="ValorParcela">Apresenta o valor de cada parcela antecipadas.</param>
@@ -34,18 +34,18 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTotalComDesconto">Apresenta o valor total com desconto.</param>
         /// <param name="TaxaDesconto">Apresenta a taxa de desconto.</param>
         /// <param name="DataCompra">Data da compra..</param>
-        /// <param name="Status">Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra..</param>
+        /// <param name="Status">Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra..</param>
         /// <param name="NomeEstabelecimento">Nome do estabelecimento da compra..</param>
-        /// <param name="TipoOrigemTransacao">Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra..</param>
+        /// <param name="TipoOrigemTransacao">Tipo de transa\u00E7\u00E3o da compra..</param>
         /// <param name="Cidade">Cidade onde a compra foi realizada..</param>
-        /// <param name="Pais">Pa\u00C3\u00ADs onde a compra foi realizada..</param>
-        /// <param name="Latitude">Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra..</param>
-        /// <param name="Longitude">Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra..</param>
-        /// <param name="IdGrupoMCC">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra..</param>
-        /// <param name="DescricaoGrupoMCC">Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra..</param>
-        /// <param name="DescricaoProduto">Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra..</param>
-        /// <param name="DescricaoEstabelecimento">Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra..</param>
+        /// <param name="Pais">Pa\u00EDs onde a compra foi realizada..</param>
+        /// <param name="Latitude">Coordenada latitudinal da localiza\u00E7\u00E3o da compra..</param>
+        /// <param name="Longitude">Coordenada longitudinal da localiza\u00E7\u00E3o da compra..</param>
+        /// <param name="IdGrupoMCC">C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra..</param>
+        /// <param name="DescricaoGrupoMCC">Descri\u00E7\u00E3o do Grupo MCC da compra..</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra..</param>
+        /// <param name="DescricaoProduto">Descri\u00E7\u00E3o do produto da compra..</param>
+        /// <param name="DescricaoEstabelecimento">Descri\u00E7\u00E3o do estabelecimento da compra..</param>
         /// <param name="NomeFantasiaEstabelecimento">Nome fantasia do estabelecimento da compra..</param>
 
         public AntecipacaoResponse(long? Mcc = null, string Uf = null, long? Id = null, long? IdConta = null, long? IdCompra = null, long? QuantidadeParcelasTotal = null, long? QuantidadeParcelasAntecipadas = null, double? ValorParcela = null, double? ValorDescontoTotal = null, double? ValorTotalComDesconto = null, double? TaxaDesconto = null, string DataCompra = null, string Status = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdProduto = null, string DescricaoProduto = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null)
@@ -92,23 +92,23 @@ namespace Conductor.Pier.Model
         public string Uf { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra
+        /// C\u00F3digo de identifica\u00E7\u00E3o da compra
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da compra</value>
         [DataMember(Name="idCompra", EmitDefaultValue=false)]
         public long? IdCompra { get; set; }
     
@@ -162,9 +162,9 @@ namespace Conductor.Pier.Model
         public string DataCompra { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+        /// Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.</value>
+        /// <value>Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
@@ -176,9 +176,9 @@ namespace Conductor.Pier.Model
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+        /// Tipo de transa\u00E7\u00E3o da compra.
         /// </summary>
-        /// <value>Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.</value>
+        /// <value>Tipo de transa\u00E7\u00E3o da compra.</value>
         [DataMember(Name="tipoOrigemTransacao", EmitDefaultValue=false)]
         public string TipoOrigemTransacao { get; set; }
     
@@ -190,58 +190,58 @@ namespace Conductor.Pier.Model
         public string Cidade { get; set; }
     
         /// <summary>
-        /// Pa\u00C3\u00ADs onde a compra foi realizada.
+        /// Pa\u00EDs onde a compra foi realizada.
         /// </summary>
-        /// <value>Pa\u00C3\u00ADs onde a compra foi realizada.</value>
+        /// <value>Pa\u00EDs onde a compra foi realizada.</value>
         [DataMember(Name="pais", EmitDefaultValue=false)]
         public string Pais { get; set; }
     
         /// <summary>
-        /// Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+        /// Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
         /// </summary>
-        /// <value>Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.</value>
+        /// <value>Coordenada latitudinal da localiza\u00E7\u00E3o da compra.</value>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public string Latitude { get; set; }
     
         /// <summary>
-        /// Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+        /// Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
         /// </summary>
-        /// <value>Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.</value>
+        /// <value>Coordenada longitudinal da localiza\u00E7\u00E3o da compra.</value>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public string Longitude { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public long? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+        /// Descri\u00E7\u00E3o do Grupo MCC da compra.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.</value>
+        /// <value>Descri\u00E7\u00E3o do Grupo MCC da compra.</value>
         [DataMember(Name="descricaoGrupoMCC", EmitDefaultValue=false)]
         public string DescricaoGrupoMCC { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+        /// Descri\u00E7\u00E3o do produto da compra.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.</value>
+        /// <value>Descri\u00E7\u00E3o do produto da compra.</value>
         [DataMember(Name="descricaoProduto", EmitDefaultValue=false)]
         public string DescricaoProduto { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+        /// Descri\u00E7\u00E3o do estabelecimento da compra.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.</value>
+        /// <value>Descri\u00E7\u00E3o do estabelecimento da compra.</value>
         [DataMember(Name="descricaoEstabelecimento", EmitDefaultValue=false)]
         public string DescricaoEstabelecimento { get; set; }
     

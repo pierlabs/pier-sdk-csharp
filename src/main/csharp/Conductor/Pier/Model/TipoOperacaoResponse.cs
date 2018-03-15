@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao
+    /// Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
     /// </summary>
     [DataContract]
     public partial class TipoOperacaoResponse :  IEquatable<TipoOperacaoResponse>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOperacaoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do TipoOperacao (required).</param>
-        /// <param name="TipoOperacao">C\u00C3\u00B3digo do TipoOperacao (required).</param>
+        /// <param name="Id">C\u00F3digo identificador do TipoOperacao (required).</param>
+        /// <param name="TipoOperacao">C\u00F3digo do TipoOperacao (required).</param>
         /// <param name="Nome">Nome do TipoOperacao (required).</param>
-        /// <param name="Descricao">Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao (required).</param>
+        /// <param name="Descricao">Decri\u00E7\u00E3o do TipoOperacao (required).</param>
         /// <param name="ExcedentePermitido">Excedente permitido para o TipoOperacao.</param>
         /// <param name="TipoExcedentePermitido">Tipo do Excedente permitido para o TipoOperacao.</param>
-        /// <param name="ValorMinimo">Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao (required).</param>
-        /// <param name="ValorMaximo">Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao (required).</param>
-        /// <param name="ValorTAC">Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao.</param>
+        /// <param name="ValorMinimo">Valor minimo para a transa\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ValorMaximo">Valor maximo para a transa\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ValorTAC">Valor TAC da transa\u00E7\u00E3o do TipoOperacao.</param>
         /// <param name="FlagTiraTac">Flag Tira TAC do TipoOperacao.</param>
         /// <param name="IdProduto">Identificador do Produto do TipoOperacao (required).</param>
         /// <param name="IdEstabelecimento">Identificador do Estabelecimento do TipoOperacao (required).</param>
         /// <param name="Tarifa">Tarifa do TipoOperacao.</param>
-        /// <param name="RemuneracaoEmissor">Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao.</param>
-        /// <param name="PlanoMaximo">Plano m\u00C3\u00A1ximo do TipoOperacao (required).</param>
+        /// <param name="RemuneracaoEmissor">Remunera\u00E7\u00E3o do Emissor para o TipoOperacao.</param>
+        /// <param name="PlanoMaximo">Plano m\u00E1ximo do TipoOperacao (required).</param>
         /// <param name="PlanoMinimo">Plano minimo do TipoOperacao (required).</param>
 
         public TipoOperacaoResponse(long? Id = null, string TipoOperacao = null, string Nome = null, string Descricao = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorMinimo = null, double? ValorMaximo = null, double? ValorTAC = null, int? FlagTiraTac = null, long? IdProduto = null, long? IdEstabelecimento = null, double? Tarifa = null, double? RemuneracaoEmissor = null, int? PlanoMaximo = null, int? PlanoMinimo = null)
@@ -142,16 +142,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do TipoOperacao
+        /// C\u00F3digo identificador do TipoOperacao
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do TipoOperacao</value>
+        /// <value>C\u00F3digo identificador do TipoOperacao</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do TipoOperacao
+        /// C\u00F3digo do TipoOperacao
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do TipoOperacao</value>
+        /// <value>C\u00F3digo do TipoOperacao</value>
         [DataMember(Name="tipoOperacao", EmitDefaultValue=false)]
         public string TipoOperacao { get; set; }
     
@@ -163,9 +163,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+        /// Decri\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao</value>
+        /// <value>Decri\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
@@ -184,23 +184,23 @@ namespace Conductor.Pier.Model
         public string TipoExcedentePermitido { get; set; }
     
         /// <summary>
-        /// Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+        /// Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao</value>
+        /// <value>Valor minimo para a transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorMinimo", EmitDefaultValue=false)]
         public double? ValorMinimo { get; set; }
     
         /// <summary>
-        /// Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+        /// Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao</value>
+        /// <value>Valor maximo para a transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorMaximo", EmitDefaultValue=false)]
         public double? ValorMaximo { get; set; }
     
         /// <summary>
-        /// Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+        /// Valor TAC da transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao</value>
+        /// <value>Valor TAC da transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
@@ -233,16 +233,16 @@ namespace Conductor.Pier.Model
         public double? Tarifa { get; set; }
     
         /// <summary>
-        /// Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao
+        /// Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
         /// </summary>
-        /// <value>Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao</value>
+        /// <value>Remunera\u00E7\u00E3o do Emissor para o TipoOperacao</value>
         [DataMember(Name="remuneracaoEmissor", EmitDefaultValue=false)]
         public double? RemuneracaoEmissor { get; set; }
     
         /// <summary>
-        /// Plano m\u00C3\u00A1ximo do TipoOperacao
+        /// Plano m\u00E1ximo do TipoOperacao
         /// </summary>
-        /// <value>Plano m\u00C3\u00A1ximo do TipoOperacao</value>
+        /// <value>Plano m\u00E1ximo do TipoOperacao</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     

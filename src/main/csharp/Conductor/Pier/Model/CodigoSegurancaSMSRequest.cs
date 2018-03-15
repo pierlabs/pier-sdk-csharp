@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+    /// Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaSMSRequest :  IEquatable<CodigoSegurancaSMSRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSRequest" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSRequest" />class.
         /// </summary>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id)..</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone..</param>
-        /// <param name="CodigoSeguranca">Token para valida\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Ddd">C\u00F3digo DDD do telefone (id)..</param>
+        /// <param name="Telefone">N\u00FAmero do telefone..</param>
+        /// <param name="CodigoSeguranca">Token para valida\u00E7\u00E3o..</param>
 
         public CodigoSegurancaSMSRequest(string Ddd = null, string Telefone = null, string CodigoSeguranca = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo DDD do telefone (id).
+        /// C\u00F3digo DDD do telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo DDD do telefone (id).</value>
+        /// <value>C\u00F3digo DDD do telefone (id).</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do telefone.
+        /// N\u00FAmero do telefone.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do telefone.</value>
+        /// <value>N\u00FAmero do telefone.</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Token para valida\u00C3\u00A7\u00C3\u00A3o.
+        /// Token para valida\u00E7\u00E3o.
         /// </summary>
-        /// <value>Token para valida\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Token para valida\u00E7\u00E3o.</value>
         [DataMember(Name="codigoSeguranca", EmitDefaultValue=false)]
         public string CodigoSeguranca { get; set; }
     

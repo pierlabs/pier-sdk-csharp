@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaResponse" /> class.
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).</param>
-        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)..</param>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id)..</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone..</param>
-        /// <param name="Ramal">N\u00C3\u00BAmero do ramal..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).</param>
+        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)..</param>
+        /// <param name="Ddd">C\u00F3digo DDD do telefone (id)..</param>
+        /// <param name="Telefone">N\u00FAmero do telefone..</param>
+        /// <param name="Ramal">N\u00FAmero do ramal..</param>
 
         public TelefonePessoaAprovadaResponse(long? Id = null, long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo DDD do telefone (id).
+        /// C\u00F3digo DDD do telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo DDD do telefone (id).</value>
+        /// <value>C\u00F3digo DDD do telefone (id).</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do telefone.
+        /// N\u00FAmero do telefone.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do telefone.</value>
+        /// <value>N\u00FAmero do telefone.</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do ramal.
+        /// N\u00FAmero do ramal.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do ramal.</value>
+        /// <value>N\u00FAmero do ramal.</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+    /// Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
     /// </summary>
     [DataContract]
     public partial class AntecipacaoSimuladaLoteResponse :  IEquatable<AntecipacaoSimuladaLoteResponse>
@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTotalAntecipado">Valor total antecipado..</param>
         /// <param name="ValorTotalDesconto">Valor total do desconto..</param>
         /// <param name="ValorTotalComDesconto">Valor total antecipado com o desconto..</param>
-        /// <param name="AntecipacoesSimuladas">Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas..</param>
+        /// <param name="AntecipacoesSimuladas">Antecipa\u00E7\u00F5es Simuladas..</param>
 
         public AntecipacaoSimuladaLoteResponse(double? ValorTotalAntecipado = null, double? ValorTotalDesconto = null, double? ValorTotalComDesconto = null, List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas = null)
         {
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public double? ValorTotalComDesconto { get; set; }
     
         /// <summary>
-        /// Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+        /// Antecipa\u00E7\u00F5es Simuladas.
         /// </summary>
-        /// <value>Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.</value>
+        /// <value>Antecipa\u00E7\u00F5es Simuladas.</value>
         [DataMember(Name="antecipacoesSimuladas", EmitDefaultValue=false)]
         public List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas { get; set; }
     

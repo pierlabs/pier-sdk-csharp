@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EntidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="EntidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o da entidade..</param>
-        /// <param name="FlagAtivo">Flag que indica se a entidade est\u00C3\u00A1 ativa..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o da entidade..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o da entidade..</param>
+        /// <param name="FlagAtivo">Flag que indica se a entidade est\u00E1 ativa..</param>
 
         public EntidadeResponse(long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da entidade.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+        /// Descri\u00E7\u00E3o da entidade.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da entidade.</value>
+        /// <value>Descri\u00E7\u00E3o da entidade.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag que indica se a entidade est\u00C3\u00A1 ativa.
+        /// Flag que indica se a entidade est\u00E1 ativa.
         /// </summary>
-        /// <value>Flag que indica se a entidade est\u00C3\u00A1 ativa.</value>
+        /// <value>Flag que indica se a entidade est\u00E1 ativa.</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

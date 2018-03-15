@@ -18,31 +18,31 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada
+        /// Lan\u00E7a um ajuste para a conta informada
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
         /// <returns>AjusteFinanceiroResponse</returns>
         AjusteFinanceiroResponse AjustarContaUsingPOST (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null);
   
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada
+        /// Lan\u00E7a um ajuste para a conta informada
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
         ApiResponse<AjusteFinanceiroResponse> AjustarContaUsingPOSTWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null);
@@ -51,23 +51,23 @@ namespace Conductor.Pier.Api
         /// Apresenta dados de um determinado ajuste financeiro
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
         /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse ConsultarUsingGET1 (long? id);
+        AjusteFinanceiroResponse ConsultarUsingGET2 (long? id);
   
         /// <summary>
         /// Apresenta dados de um determinado ajuste financeiro
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> ConsultarUsingGET1WithHttpInfo (long? id);
+        ApiResponse<AjusteFinanceiroResponse> ConsultarUsingGET2WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista ajustes existentes na base de dados do Emissor
@@ -76,16 +76,16 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param>
         /// <param name="valorAjuste">Valor do ajuste (optional)</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param>
         /// <returns>PageAjusteResponse</returns>
-        PageAjusteResponse ListarUsingGET1 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
+        PageAjusteResponse ListarUsingGET2 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
   
         /// <summary>
         /// Lista ajustes existentes na base de dados do Emissor
@@ -94,47 +94,47 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param>
         /// <param name="valorAjuste">Valor do ajuste (optional)</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param>
         /// <returns>ApiResponse of PageAjusteResponse</returns>
-        ApiResponse<PageAjusteResponse> ListarUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
+        ApiResponse<PageAjusteResponse> ListarUsingGET2WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada
+        /// Lan\u00E7a um ajuste para a conta informada
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
         System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOSTAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null);
 
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada
+        /// Lan\u00E7a um ajuste para a conta informada
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOSTAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null);
@@ -143,23 +143,23 @@ namespace Conductor.Pier.Api
         /// Apresenta dados de um determinado ajuste financeiro
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET1Async (long? id);
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET2Async (long? id);
 
         /// <summary>
         /// Apresenta dados de um determinado ajuste financeiro
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET1AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET2AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista ajustes existentes na base de dados do Emissor
@@ -168,16 +168,16 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param>
         /// <param name="valorAjuste">Valor do ajuste (optional)</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param>
         /// <returns>Task of PageAjusteResponse</returns>
-        System.Threading.Tasks.Task<PageAjusteResponse> ListarUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
+        System.Threading.Tasks.Task<PageAjusteResponse> ListarUsingGET2Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
 
         /// <summary>
         /// Lista ajustes existentes na base de dados do Emissor
@@ -186,16 +186,16 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param>
         /// <param name="valorAjuste">Valor do ajuste (optional)</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param>
         /// <returns>Task of ApiResponse (PageAjusteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAjusteResponse>> ListarUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAjusteResponse>> ListarUsingGET2AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null);
         
         #endregion Asynchronous Operations
         
@@ -290,13 +290,13 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param> 
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param> 
         /// <param name="valorAjuste">Valor do ajuste</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param> 
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
         public AjusteFinanceiroResponse AjustarContaUsingPOST (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null)
@@ -306,13 +306,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param> 
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param> 
         /// <param name="valorAjuste">Valor do ajuste</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param> 
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
         public ApiResponse< AjusteFinanceiroResponse > AjustarContaUsingPOSTWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null)
@@ -394,13 +394,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
         public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOSTAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null)
@@ -411,13 +411,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta informada Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta.</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta.</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOSTAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string identificadorExterno = null)
@@ -490,29 +490,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta dados de um determinado ajuste financeiro Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado ajuste financeiro Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse ConsultarUsingGET1 (long? id)
+        public AjusteFinanceiroResponse ConsultarUsingGET2 (long? id)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = ConsultarUsingGET1WithHttpInfo(id);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = ConsultarUsingGET2WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado ajuste financeiro Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado ajuste financeiro Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > ConsultarUsingGET1WithHttpInfo (long? id)
+        public ApiResponse< AjusteFinanceiroResponse > ConsultarUsingGET2WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AjusteFinanceiroApi->ConsultarUsingGET1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AjusteFinanceiroApi->ConsultarUsingGET2");
             
     
             var localVarPath = "/api/ajustes-financeiros/{id}";
@@ -558,9 +558,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -570,28 +570,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta dados de um determinado ajuste financeiro Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado ajuste financeiro Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET1Async (long? id)
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET2Async (long? id)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await ConsultarUsingGET1AsyncWithHttpInfo(id);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await ConsultarUsingGET2AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado ajuste financeiro Este m\u00C3\u00A9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado ajuste financeiro Este m\u00E9todo permite consultar dados de um determinado ajuste a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET1AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET2AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET2");
             
     
             var localVarPath = "/api/ajustes-financeiros/{id}";
@@ -637,9 +637,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -651,18 +651,18 @@ namespace Conductor.Pier.Api
         /// Lista ajustes existentes na base de dados do Emissor Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param> 
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param> 
         /// <param name="valorAjuste">Valor do ajuste (optional)</param> 
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param> 
         /// <returns>PageAjusteResponse</returns>
-        public PageAjusteResponse ListarUsingGET1 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
+        public PageAjusteResponse ListarUsingGET2 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
         {
-             ApiResponse<PageAjusteResponse> localVarResponse = ListarUsingGET1WithHttpInfo(sort, page, limit, idTipoAjuste, dataAjuste, valorAjuste, identificadorExterno, idConta);
+             ApiResponse<PageAjusteResponse> localVarResponse = ListarUsingGET2WithHttpInfo(sort, page, limit, idTipoAjuste, dataAjuste, valorAjuste, identificadorExterno, idConta);
              return localVarResponse.Data;
         }
 
@@ -670,16 +670,16 @@ namespace Conductor.Pier.Api
         /// Lista ajustes existentes na base de dados do Emissor Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param> 
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param> 
         /// <param name="valorAjuste">Valor do ajuste (optional)</param> 
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param> 
         /// <returns>ApiResponse of PageAjusteResponse</returns>
-        public ApiResponse< PageAjusteResponse > ListarUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
+        public ApiResponse< PageAjusteResponse > ListarUsingGET2WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
         {
             
     
@@ -733,9 +733,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAjusteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -748,18 +748,18 @@ namespace Conductor.Pier.Api
         /// Lista ajustes existentes na base de dados do Emissor Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param>
         /// <param name="valorAjuste">Valor do ajuste (optional)</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param>
         /// <returns>Task of PageAjusteResponse</returns>
-        public async System.Threading.Tasks.Task<PageAjusteResponse> ListarUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
+        public async System.Threading.Tasks.Task<PageAjusteResponse> ListarUsingGET2Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
         {
-             ApiResponse<PageAjusteResponse> localVarResponse = await ListarUsingGET1AsyncWithHttpInfo(sort, page, limit, idTipoAjuste, dataAjuste, valorAjuste, identificadorExterno, idConta);
+             ApiResponse<PageAjusteResponse> localVarResponse = await ListarUsingGET2AsyncWithHttpInfo(sort, page, limit, idTipoAjuste, dataAjuste, valorAjuste, identificadorExterno, idConta);
              return localVarResponse.Data;
 
         }
@@ -768,16 +768,16 @@ namespace Conductor.Pier.Api
         /// Lista ajustes existentes na base de dados do Emissor Este recurso permite listar ajustes existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste. (optional)</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. (optional)</param>
         /// <param name="valorAjuste">Valor do ajuste (optional)</param>
         /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta. (optional)</param>
         /// <returns>Task of ApiResponse (PageAjusteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAjusteResponse>> ListarUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAjusteResponse>> ListarUsingGET2AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAjuste = null, string dataAjuste = null, double? valorAjuste = null, string identificadorExterno = null, long? idConta = null)
         {
             
     
@@ -831,9 +831,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAjusteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

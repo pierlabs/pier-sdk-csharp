@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MCCResponse" /> class.
         /// Initializes a new instance of the <see cref="MCCResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do MCC (id)..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id)..</param>
         /// <param name="Descricao">descricao do MCC..</param>
 
         public MCCResponse(long? Id = null, string Descricao = null)
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do MCC (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do MCC (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

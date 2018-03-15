@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto transacao N\u00C3\u00A3o Processada
+    /// Objeto transacao N\u00E3o Processada
     /// </summary>
     [DataContract]
     public partial class TransacaoNaoProcessadaResponse :  IEquatable<TransacaoNaoProcessadaResponse>
@@ -22,42 +22,42 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoNaoProcessadaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransacaoNaoProcessadaResponse" />class.
         /// </summary>
-        /// <param name="IdTipoTransacaoNaoProcessada">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="DescricaoTipoTransacaoNaoProcessada">Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o n\u00C3\u00A3o Processada..</param>
-        /// <param name="DescricaoAbreviada">Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)..</param>
-        /// <param name="CartaoMascarado">N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000..</param>
-        /// <param name="NomePortador">Nome completo do Portador do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataOrigem">Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada..</param>
-        /// <param name="DataFaturamento">Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="IdTipoTransacaoNaoProcessada">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o..</param>
+        /// <param name="DescricaoTipoTransacaoNaoProcessada">Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada..</param>
+        /// <param name="DescricaoAbreviada">Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o..</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)..</param>
+        /// <param name="CartaoMascarado">N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000..</param>
+        /// <param name="NomePortador">Nome completo do Portador do Cart\u00E3o..</param>
+        /// <param name="DataOrigem">Data em que a Transa\u00E7\u00E3o foi realizada..</param>
+        /// <param name="DataFaturamento">Data de Faturamento da Transa\u00E7\u00E3o..</param>
         /// <param name="DataVencimento">Data de Vencimento da Fatura..</param>
-        /// <param name="ModoEntradaTransacao">Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="ValorTaxaEmbarque">Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas..</param>
-        /// <param name="ValorEntrada">Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada..</param>
-        /// <param name="ValorBRL">Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL)..</param>
-        /// <param name="ValorUSD">Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD)..</param>
-        /// <param name="CotacaoUSD">Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL)..</param>
-        /// <param name="DataCotacaoUSD">Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD)..</param>
-        /// <param name="CodigoMoedaOrigem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217..</param>
-        /// <param name="CodigoMoedaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217..</param>
-        /// <param name="CodigoAutorizacao">C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="CodigoReferencia">C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado..</param>
-        /// <param name="CodigoTerminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="CodigoMCC">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento..</param>
-        /// <param name="GrupoMCC">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento..</param>
-        /// <param name="GrupoDescricaoMCC">Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento..</param>
-        /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id)..</param>
+        /// <param name="ModoEntradaTransacao">Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o..</param>
+        /// <param name="ValorTaxaEmbarque">Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas..</param>
+        /// <param name="ValorEntrada">Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada..</param>
+        /// <param name="ValorBRL">Valor da Transa\u00E7\u00E3o em Real (BRL)..</param>
+        /// <param name="ValorUSD">Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)..</param>
+        /// <param name="CotacaoUSD">Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)..</param>
+        /// <param name="DataCotacaoUSD">Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)..</param>
+        /// <param name="CodigoMoedaOrigem">C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217..</param>
+        /// <param name="CodigoMoedaDestino">C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217..</param>
+        /// <param name="CodigoAutorizacao">C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o..</param>
+        /// <param name="CodigoReferencia">C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado..</param>
+        /// <param name="CodigoTerminal">C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o..</param>
+        /// <param name="CodigoMCC">C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento..</param>
+        /// <param name="GrupoMCC">C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento..</param>
+        /// <param name="GrupoDescricaoMCC">Descri\u00E7\u00E3o do grupo do Estabelecimento..</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)..</param>
         /// <param name="NomeEstabelecimento">Nome do Estabelecimento..</param>
         /// <param name="NomeFantasiaEstabelecimento">Nome Fantasia do Estabelecimento..</param>
         /// <param name="LocalidadeEstabelecimento">Localidade do Estabelecimento..</param>
-        /// <param name="PlanoParcelamento">Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas..</param>
-        /// <param name="NumeroParcela">Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela..</param>
-        /// <param name="DetalhesTransacao">Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="FlagCredito">Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo &#39;Cr\u00C3\u00A9dito&#39;..</param>
-        /// <param name="FlagFaturado">Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura..</param>
-        /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada..</param>
-        /// <param name="IdTransacaoEstorno">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno..</param>
-        /// <param name="Status">Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="PlanoParcelamento">Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas..</param>
+        /// <param name="NumeroParcela">Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela..</param>
+        /// <param name="DetalhesTransacao">Detalhes complementares a respeito da Transa\u00E7\u00E3o..</param>
+        /// <param name="FlagCredito">Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;..</param>
+        /// <param name="FlagFaturado">Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura..</param>
+        /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada..</param>
+        /// <param name="IdTransacaoEstorno">C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno..</param>
+        /// <param name="Status">Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o..</param>
 
         public TransacaoNaoProcessadaResponse(long? IdTipoTransacaoNaoProcessada = null, string DescricaoTipoTransacaoNaoProcessada = null, string DescricaoAbreviada = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataOrigem = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null, int? Status = null)
         {
@@ -102,58 +102,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="idTipoTransacaoNaoProcessada", EmitDefaultValue=false)]
         public long? IdTipoTransacaoNaoProcessada { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o n\u00C3\u00A3o Processada.
+        /// Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o n\u00C3\u00A3o Processada.</value>
+        /// <value>Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.</value>
         [DataMember(Name="descricaoTipoTransacaoNaoProcessada", EmitDefaultValue=false)]
         public string DescricaoTipoTransacaoNaoProcessada { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="descricaoAbreviada", EmitDefaultValue=false)]
         public string DescricaoAbreviada { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000.
+        /// N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000.</value>
+        /// <value>N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.</value>
         [DataMember(Name="cartaoMascarado", EmitDefaultValue=false)]
         public string CartaoMascarado { get; set; }
     
         /// <summary>
-        /// Nome completo do Portador do Cart\u00C3\u00A3o.
+        /// Nome completo do Portador do Cart\u00E3o.
         /// </summary>
-        /// <value>Nome completo do Portador do Cart\u00C3\u00A3o.</value>
+        /// <value>Nome completo do Portador do Cart\u00E3o.</value>
         [DataMember(Name="nomePortador", EmitDefaultValue=false)]
         public string NomePortador { get; set; }
     
         /// <summary>
-        /// Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
+        /// Data em que a Transa\u00E7\u00E3o foi realizada.
         /// </summary>
-        /// <value>Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.</value>
+        /// <value>Data em que a Transa\u00E7\u00E3o foi realizada.</value>
         [DataMember(Name="dataOrigem", EmitDefaultValue=false)]
         public string DataOrigem { get; set; }
     
         /// <summary>
-        /// Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Data de Faturamento da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Data de Faturamento da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="dataFaturamento", EmitDefaultValue=false)]
         public string DataFaturamento { get; set; }
     
@@ -165,114 +165,114 @@ namespace Conductor.Pier.Model
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.</value>
         [DataMember(Name="modoEntradaTransacao", EmitDefaultValue=false)]
         public string ModoEntradaTransacao { get; set; }
     
         /// <summary>
-        /// Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas.
+        /// Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
         /// </summary>
-        /// <value>Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas.</value>
+        /// <value>Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.</value>
         [DataMember(Name="valorTaxaEmbarque", EmitDefaultValue=false)]
         public double? ValorTaxaEmbarque { get; set; }
     
         /// <summary>
-        /// Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+        /// Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
         /// </summary>
-        /// <value>Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada.</value>
+        /// <value>Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.</value>
         [DataMember(Name="valorEntrada", EmitDefaultValue=false)]
         public double? ValorEntrada { get; set; }
     
         /// <summary>
-        /// Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).
+        /// Valor da Transa\u00E7\u00E3o em Real (BRL).
         /// </summary>
-        /// <value>Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).</value>
+        /// <value>Valor da Transa\u00E7\u00E3o em Real (BRL).</value>
         [DataMember(Name="valorBRL", EmitDefaultValue=false)]
         public double? ValorBRL { get; set; }
     
         /// <summary>
-        /// Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
+        /// Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
         /// </summary>
-        /// <value>Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).</value>
+        /// <value>Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).</value>
         [DataMember(Name="valorUSD", EmitDefaultValue=false)]
         public double? ValorUSD { get; set; }
     
         /// <summary>
-        /// Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+        /// Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
         /// </summary>
-        /// <value>Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).</value>
+        /// <value>Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).</value>
         [DataMember(Name="cotacaoUSD", EmitDefaultValue=false)]
         public double? CotacaoUSD { get; set; }
     
         /// <summary>
-        /// Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
+        /// Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
         /// </summary>
-        /// <value>Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).</value>
+        /// <value>Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).</value>
         [DataMember(Name="dataCotacaoUSD", EmitDefaultValue=false)]
         public string DataCotacaoUSD { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.</value>
         [DataMember(Name="codigoMoedaOrigem", EmitDefaultValue=false)]
         public string CodigoMoedaOrigem { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.</value>
         [DataMember(Name="codigoMoedaDestino", EmitDefaultValue=false)]
         public string CodigoMoedaDestino { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado.
+        /// C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado.</value>
+        /// <value>C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.</value>
         [DataMember(Name="codigoReferencia", EmitDefaultValue=false)]
         public string CodigoReferencia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="codigoTerminal", EmitDefaultValue=false)]
         public string CodigoTerminal { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public long? CodigoMCC { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.</value>
         [DataMember(Name="grupoMCC", EmitDefaultValue=false)]
         public long? GrupoMCC { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+        /// Descri\u00E7\u00E3o do grupo do Estabelecimento.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.</value>
+        /// <value>Descri\u00E7\u00E3o do grupo do Estabelecimento.</value>
         [DataMember(Name="grupoDescricaoMCC", EmitDefaultValue=false)]
         public string GrupoDescricaoMCC { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
@@ -298,58 +298,58 @@ namespace Conductor.Pier.Model
         public string LocalidadeEstabelecimento { get; set; }
     
         /// <summary>
-        /// Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas.
+        /// Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
         /// </summary>
-        /// <value>Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas.</value>
+        /// <value>Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.</value>
         [DataMember(Name="planoParcelamento", EmitDefaultValue=false)]
         public long? PlanoParcelamento { get; set; }
     
         /// <summary>
-        /// Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela.
+        /// Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
         /// </summary>
-        /// <value>Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela.</value>
+        /// <value>Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public long? NumeroParcela { get; set; }
     
         /// <summary>
-        /// Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Detalhes complementares a respeito da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Detalhes complementares a respeito da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="detalhesTransacao", EmitDefaultValue=false)]
         public string DetalhesTransacao { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo &#39;Cr\u00C3\u00A9dito&#39;.
+        /// Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;.
         /// </summary>
-        /// <value>Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo &#39;Cr\u00C3\u00A9dito&#39;.</value>
+        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;.</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public int? FlagCredito { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura.
+        /// Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
         /// </summary>
-        /// <value>Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura.</value>
+        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.</value>
         [DataMember(Name="flagFaturado", EmitDefaultValue=false)]
         public int? FlagFaturado { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada.
+        /// Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
         /// </summary>
-        /// <value>Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada.</value>
+        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.</value>
         [DataMember(Name="flagEstorno", EmitDefaultValue=false)]
         public int? FlagEstorno { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.</value>
         [DataMember(Name="idTransacaoEstorno", EmitDefaultValue=false)]
         public long? IdTransacaoEstorno { get; set; }
     
         /// <summary>
-        /// Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     

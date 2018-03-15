@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.
+    /// Objeto de requisi\u00E7\u00E3o.
     /// </summary>
     [DataContract]
     public partial class IntegrarDocumentoRequest :  IEquatable<IntegrarDocumentoRequest>
@@ -23,9 +23,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegrarDocumentoRequest" />class.
         /// </summary>
         /// <param name="IdTemplate">Identificador do template de documento.</param>
-        /// <param name="Arquivo">Conte\u00C3\u00BAdo do arquivo convertido em Base 64.</param>
+        /// <param name="Arquivo">Conte\u00FAdo do arquivo convertido em Base 64.</param>
         /// <param name="Nome">Nome do arquivo..</param>
-        /// <param name="Propriedades">Lista de par\u00C3\u00A2metros para montagem do documento..</param>
+        /// <param name="Propriedades">Lista de par\u00E2metros para montagem do documento..</param>
 
         public IntegrarDocumentoRequest(long? IdTemplate = null, string Arquivo = null, string Nome = null, List<PropriedadeDocumentoRequest> Propriedades = null)
         {
@@ -45,9 +45,9 @@ namespace Conductor.Pier.Model
         public long? IdTemplate { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+        /// Conte\u00FAdo do arquivo convertido em Base 64
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do arquivo convertido em Base 64</value>
+        /// <value>Conte\u00FAdo do arquivo convertido em Base 64</value>
         [DataMember(Name="arquivo", EmitDefaultValue=false)]
         public string Arquivo { get; set; }
     
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Lista de par\u00C3\u00A2metros para montagem do documento.
+        /// Lista de par\u00E2metros para montagem do documento.
         /// </summary>
-        /// <value>Lista de par\u00C3\u00A2metros para montagem do documento.</value>
+        /// <value>Lista de par\u00E2metros para montagem do documento.</value>
         [DataMember(Name="propriedades", EmitDefaultValue=false)]
         public List<PropriedadeDocumentoRequest> Propriedades { get; set; }
     

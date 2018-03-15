@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do {@link HistoricoAssessoriaResponse}
+    /// Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}
     /// </summary>
     [DataContract]
     public partial class HistoricoAssessoriaResponse :  IEquatable<HistoricoAssessoriaResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoAssessoriaResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoAssessoriaResponse" />class.
         /// </summary>
-        /// <param name="DataHoraHistorico">Apresenta a data e hora do hist\u00C3\u00B3rico.</param>
-        /// <param name="TipoHistorico">Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA.</param>
-        /// <param name="NomeAssessoria">Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico.</param>
+        /// <param name="DataHoraHistorico">Apresenta a data e hora do hist\u00F3rico.</param>
+        /// <param name="TipoHistorico">Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA.</param>
+        /// <param name="NomeAssessoria">Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico.</param>
 
         public HistoricoAssessoriaResponse(string DataHoraHistorico = null, string TipoHistorico = null, string NomeAssessoria = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta a data e hora do hist\u00C3\u00B3rico
+        /// Apresenta a data e hora do hist\u00F3rico
         /// </summary>
-        /// <value>Apresenta a data e hora do hist\u00C3\u00B3rico</value>
+        /// <value>Apresenta a data e hora do hist\u00F3rico</value>
         [DataMember(Name="dataHoraHistorico", EmitDefaultValue=false)]
         public string DataHoraHistorico { get; set; }
     
         /// <summary>
-        /// Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA
+        /// Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA
         /// </summary>
-        /// <value>Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA</value>
+        /// <value>Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA</value>
         [DataMember(Name="tipoHistorico", EmitDefaultValue=false)]
         public string TipoHistorico { get; set; }
     
         /// <summary>
-        /// Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico
+        /// Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico
         /// </summary>
-        /// <value>Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico</value>
+        /// <value>Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico</value>
         [DataMember(Name="nomeAssessoria", EmitDefaultValue=false)]
         public string NomeAssessoria { get; set; }
     

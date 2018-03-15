@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CampoCodificadoDescricaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CampoCodificadoDescricaoResponse" />class.
         /// </summary>
-        /// <param name="Codigo">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado..</param>
+        /// <param name="Codigo">C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do campo codificado..</param>
 
         public CampoCodificadoDescricaoResponse(long? Codigo = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public long? Codigo { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.
+        /// Descri\u00E7\u00E3o do campo codificado.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.</value>
+        /// <value>Descri\u00E7\u00E3o do campo codificado.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

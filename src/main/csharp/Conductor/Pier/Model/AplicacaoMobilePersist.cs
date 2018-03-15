@@ -26,9 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="Token">Apresenta o token da aplicacao..</param>
         /// <param name="Cor">Apresenta a cor da mensagem da aplicacao..</param>
         /// <param name="Som">Apresenta o som da mensagem da aplicacao.</param>
-        /// <param name="Icone">Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="CertificadoBase64">Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="Senha">Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Icone">Apresenta o icone da mensagem da aplica\u00E7\u00E3o..</param>
+        /// <param name="CertificadoBase64">Apresenta o certificado da aplica\u00E7\u00E3o..</param>
+        /// <param name="Senha">Apresenta a senha da aplica\u00E7\u00E3o..</param>
 
         public AplicacaoMobilePersist(long? IdPlataformaMobile = null, string Token = null, string Cor = null, string Som = null, string Icone = null, string CertificadoBase64 = null, string Senha = null)
         {
@@ -72,23 +72,23 @@ namespace Conductor.Pier.Model
         public string Som { get; set; }
     
         /// <summary>
-        /// Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta o icone da mensagem da aplica\u00E7\u00E3o.</value>
         [DataMember(Name="icone", EmitDefaultValue=false)]
         public string Icone { get; set; }
     
         /// <summary>
-        /// Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta o certificado da aplica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta o certificado da aplica\u00E7\u00E3o.</value>
         [DataMember(Name="certificadoBase64", EmitDefaultValue=false)]
         public string CertificadoBase64 { get; set; }
     
         /// <summary>
-        /// Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta a senha da aplica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta a senha da aplica\u00E7\u00E3o.</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     

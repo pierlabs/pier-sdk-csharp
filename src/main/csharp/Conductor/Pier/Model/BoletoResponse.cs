@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura
+    /// Representa\u00E7\u00E3o da resposta do boleto de fatura
     /// </summary>
     [DataContract]
     public partial class BoletoResponse :  IEquatable<BoletoResponse>
@@ -22,36 +22,36 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoResponse" /> class.
         /// Initializes a new instance of the <see cref="BoletoResponse" />class.
         /// </summary>
-        /// <param name="NumeroDoDocumento">N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente.</param>
-        /// <param name="DataProcessamento">Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto.</param>
-        /// <param name="DataDocumento">Data do documento (impress\u00C3\u00A3o).</param>
+        /// <param name="NumeroDoDocumento">N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente.</param>
+        /// <param name="DataProcessamento">Data do processamento (emiss\u00E3o ou faturamento) do boleto.</param>
+        /// <param name="DataDocumento">Data do documento (impress\u00E3o).</param>
         /// <param name="DataVencimento">Data do vencimento.</param>
         /// <param name="DataFechamento">Data do fechamento.</param>
         /// <param name="ValorBoleto">Valor do Boleto..</param>
-        /// <param name="NomeBeneficiario">Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto.</param>
+        /// <param name="NomeBeneficiario">Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto.</param>
         /// <param name="DocumentoBeneficiario">Documento do Beneficiario..</param>
-        /// <param name="Agencia">Ag\u00C3\u00AAncia..</param>
-        /// <param name="CodigoBeneficiario">C\u00C3\u00B3digo do benefici\u00C3\u00A1rio.</param>
-        /// <param name="NumeroConvenio">N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos..</param>
-        /// <param name="DigitoCodigoBeneficiario">D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio.</param>
-        /// <param name="Carteira">Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto.</param>
-        /// <param name="NossoNumero">Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos.</param>
-        /// <param name="DigitoNossoNumero">D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero.</param>
+        /// <param name="Agencia">Ag\u00EAncia..</param>
+        /// <param name="CodigoBeneficiario">C\u00F3digo do benefici\u00E1rio.</param>
+        /// <param name="NumeroConvenio">N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos..</param>
+        /// <param name="DigitoCodigoBeneficiario">D\u00EDgito do c\u00F3digo do benefici\u00E1rio.</param>
+        /// <param name="Carteira">Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto.</param>
+        /// <param name="NossoNumero">Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos.</param>
+        /// <param name="DigitoNossoNumero">D\u00EDgito do nosso n\u00FAmero.</param>
         /// <param name="Banco">Banco.</param>
-        /// <param name="Aceite">Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \&quot;N\&quot;).</param>
-        /// <param name="EspecieDoDocumento">Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \&quot;DV\&quot;).</param>
-        /// <param name="Especie">Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \&quot;R$\&quot;).</param>
-        /// <param name="Instrucoes">Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio.</param>
+        /// <param name="Aceite">Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \&quot;N\&quot;).</param>
+        /// <param name="EspecieDoDocumento">Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \&quot;DV\&quot;).</param>
+        /// <param name="Especie">Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \&quot;R$\&quot;).</param>
+        /// <param name="Instrucoes">Instru\u00E7\u00F5es para o benefici\u00E1rio.</param>
         /// <param name="LocaisDePagamento">Locais de pagamento.</param>
-        /// <param name="NomePagador">Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto.</param>
+        /// <param name="NomePagador">Pagador \u00E9 a pessoa/empresa que deve pagar o boleto.</param>
         /// <param name="DocumentoPagador">Documento do pagador (CPF ou CNPJ).</param>
         /// <param name="LogradouroPagador">Logradouro do pagador.</param>
         /// <param name="BairroPagador">Bairro do pagador.</param>
         /// <param name="CepPagador">CEP do pagador.</param>
         /// <param name="CidadePagador">Cidade do pagador.</param>
         /// <param name="UfPagador">Unidade federativa do pagador.</param>
-        /// <param name="CodigoDeBarras">Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras.</param>
-        /// <param name="LinhaDigitavel">Linha digit\u00C3\u00A1vel formatada.</param>
+        /// <param name="CodigoDeBarras">Valor num\u00E9rico do c\u00F3digo de barras.</param>
+        /// <param name="LinhaDigitavel">Linha digit\u00E1vel formatada.</param>
 
         public BoletoResponse(string NumeroDoDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null)
         {
@@ -90,23 +90,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+        /// N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente</value>
+        /// <value>N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente</value>
         [DataMember(Name="numeroDoDocumento", EmitDefaultValue=false)]
         public string NumeroDoDocumento { get; set; }
     
         /// <summary>
-        /// Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
+        /// Data do processamento (emiss\u00E3o ou faturamento) do boleto
         /// </summary>
-        /// <value>Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto</value>
+        /// <value>Data do processamento (emiss\u00E3o ou faturamento) do boleto</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
         public string DataProcessamento { get; set; }
     
         /// <summary>
-        /// Data do documento (impress\u00C3\u00A3o)
+        /// Data do documento (impress\u00E3o)
         /// </summary>
-        /// <value>Data do documento (impress\u00C3\u00A3o)</value>
+        /// <value>Data do documento (impress\u00E3o)</value>
         [DataMember(Name="dataDocumento", EmitDefaultValue=false)]
         public string DataDocumento { get; set; }
     
@@ -132,9 +132,9 @@ namespace Conductor.Pier.Model
         public double? ValorBoleto { get; set; }
     
         /// <summary>
-        /// Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
+        /// Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
         /// </summary>
-        /// <value>Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto</value>
+        /// <value>Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto</value>
         [DataMember(Name="nomeBeneficiario", EmitDefaultValue=false)]
         public string NomeBeneficiario { get; set; }
     
@@ -146,51 +146,51 @@ namespace Conductor.Pier.Model
         public string DocumentoBeneficiario { get; set; }
     
         /// <summary>
-        /// Ag\u00C3\u00AAncia.
+        /// Ag\u00EAncia.
         /// </summary>
-        /// <value>Ag\u00C3\u00AAncia.</value>
+        /// <value>Ag\u00EAncia.</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public string Agencia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+        /// C\u00F3digo do benefici\u00E1rio
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do benefici\u00C3\u00A1rio</value>
+        /// <value>C\u00F3digo do benefici\u00E1rio</value>
         [DataMember(Name="codigoBeneficiario", EmitDefaultValue=false)]
         public string CodigoBeneficiario { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
+        /// N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.</value>
+        /// <value>N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.</value>
         [DataMember(Name="numeroConvenio", EmitDefaultValue=false)]
         public string NumeroConvenio { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+        /// D\u00EDgito do c\u00F3digo do benefici\u00E1rio
         /// </summary>
-        /// <value>D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio</value>
+        /// <value>D\u00EDgito do c\u00F3digo do benefici\u00E1rio</value>
         [DataMember(Name="digitoCodigoBeneficiario", EmitDefaultValue=false)]
         public string DigitoCodigoBeneficiario { get; set; }
     
         /// <summary>
-        /// Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
+        /// Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
         /// </summary>
-        /// <value>Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto</value>
+        /// <value>Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto</value>
         [DataMember(Name="carteira", EmitDefaultValue=false)]
         public string Carteira { get; set; }
     
         /// <summary>
-        /// Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos
+        /// Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
         /// </summary>
-        /// <value>Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos</value>
+        /// <value>Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos</value>
         [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
         public string NossoNumero { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
+        /// D\u00EDgito do nosso n\u00FAmero
         /// </summary>
-        /// <value>D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero</value>
+        /// <value>D\u00EDgito do nosso n\u00FAmero</value>
         [DataMember(Name="digitoNossoNumero", EmitDefaultValue=false)]
         public string DigitoNossoNumero { get; set; }
     
@@ -202,30 +202,30 @@ namespace Conductor.Pier.Model
         public string Banco { get; set; }
     
         /// <summary>
-        /// Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \&quot;N\&quot;)
+        /// Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \&quot;N\&quot;)
         /// </summary>
-        /// <value>Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \&quot;N\&quot;)</value>
+        /// <value>Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \&quot;N\&quot;)</value>
         [DataMember(Name="aceite", EmitDefaultValue=false)]
         public bool? Aceite { get; set; }
     
         /// <summary>
-        /// Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \&quot;DV\&quot;)
+        /// Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \&quot;DV\&quot;)
         /// </summary>
-        /// <value>Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \&quot;DV\&quot;)</value>
+        /// <value>Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \&quot;DV\&quot;)</value>
         [DataMember(Name="especieDoDocumento", EmitDefaultValue=false)]
         public string EspecieDoDocumento { get; set; }
     
         /// <summary>
-        /// Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \&quot;R$\&quot;)
+        /// Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \&quot;R$\&quot;)
         /// </summary>
-        /// <value>Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \&quot;R$\&quot;)</value>
+        /// <value>Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \&quot;R$\&quot;)</value>
         [DataMember(Name="especie", EmitDefaultValue=false)]
         public string Especie { get; set; }
     
         /// <summary>
-        /// Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio
+        /// Instru\u00E7\u00F5es para o benefici\u00E1rio
         /// </summary>
-        /// <value>Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio</value>
+        /// <value>Instru\u00E7\u00F5es para o benefici\u00E1rio</value>
         [DataMember(Name="instrucoes", EmitDefaultValue=false)]
         public List<string> Instrucoes { get; set; }
     
@@ -237,9 +237,9 @@ namespace Conductor.Pier.Model
         public List<string> LocaisDePagamento { get; set; }
     
         /// <summary>
-        /// Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
+        /// Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
         /// </summary>
-        /// <value>Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto</value>
+        /// <value>Pagador \u00E9 a pessoa/empresa que deve pagar o boleto</value>
         [DataMember(Name="nomePagador", EmitDefaultValue=false)]
         public string NomePagador { get; set; }
     
@@ -286,16 +286,16 @@ namespace Conductor.Pier.Model
         public string UfPagador { get; set; }
     
         /// <summary>
-        /// Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras
+        /// Valor num\u00E9rico do c\u00F3digo de barras
         /// </summary>
-        /// <value>Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras</value>
+        /// <value>Valor num\u00E9rico do c\u00F3digo de barras</value>
         [DataMember(Name="codigoDeBarras", EmitDefaultValue=false)]
         public string CodigoDeBarras { get; set; }
     
         /// <summary>
-        /// Linha digit\u00C3\u00A1vel formatada
+        /// Linha digit\u00E1vel formatada
         /// </summary>
-        /// <value>Linha digit\u00C3\u00A1vel formatada</value>
+        /// <value>Linha digit\u00E1vel formatada</value>
         [DataMember(Name="linhaDigitavel", EmitDefaultValue=false)]
         public string LinhaDigitavel { get; set; }
     

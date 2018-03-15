@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+    /// Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
     /// </summary>
     [DataContract]
     public partial class CartaoPayPersist :  IEquatable<CartaoPayPersist>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoPayPersist" /> class.
         /// Initializes a new instance of the <see cref="CartaoPayPersist" />class.
         /// </summary>
-        /// <param name="NumeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado (required).</param>
-        /// <param name="DataValidade">Data de validade do cart\u00C3\u00A3o.</param>
-        /// <param name="Cvv">CVV do cart\u00C3\u00A3o criptografado.</param>
-        /// <param name="NumeroReceitaFederal">CPF do portador do cart\u00C3\u00A3o criptografado.</param>
-        /// <param name="NomeImpresso">Nome impresso no cart\u00C3\u00A3o criptografado.</param>
-        /// <param name="ChavePublicaDevice">Chave p\u00C3\u00BAblica do dispositivo criptografada (required).</param>
+        /// <param name="NumeroCartao">N\u00FAmero do cart\u00E3o criptografado (required).</param>
+        /// <param name="DataValidade">Data de validade do cart\u00E3o.</param>
+        /// <param name="Cvv">CVV do cart\u00E3o criptografado.</param>
+        /// <param name="NumeroReceitaFederal">CPF do portador do cart\u00E3o criptografado.</param>
+        /// <param name="NomeImpresso">Nome impresso no cart\u00E3o criptografado.</param>
+        /// <param name="ChavePublicaDevice">Chave p\u00FAblica do dispositivo criptografada (required).</param>
 
         public CartaoPayPersist(string NumeroCartao = null, string DataValidade = null, string Cvv = null, string NumeroReceitaFederal = null, string NomeImpresso = null, string ChavePublicaDevice = null)
         {
@@ -58,44 +58,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado
+        /// N\u00FAmero do cart\u00E3o criptografado
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado</value>
+        /// <value>N\u00FAmero do cart\u00E3o criptografado</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Data de validade do cart\u00C3\u00A3o
+        /// Data de validade do cart\u00E3o
         /// </summary>
-        /// <value>Data de validade do cart\u00C3\u00A3o</value>
+        /// <value>Data de validade do cart\u00E3o</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// CVV do cart\u00C3\u00A3o criptografado
+        /// CVV do cart\u00E3o criptografado
         /// </summary>
-        /// <value>CVV do cart\u00C3\u00A3o criptografado</value>
+        /// <value>CVV do cart\u00E3o criptografado</value>
         [DataMember(Name="cvv", EmitDefaultValue=false)]
         public string Cvv { get; set; }
     
         /// <summary>
-        /// CPF do portador do cart\u00C3\u00A3o criptografado
+        /// CPF do portador do cart\u00E3o criptografado
         /// </summary>
-        /// <value>CPF do portador do cart\u00C3\u00A3o criptografado</value>
+        /// <value>CPF do portador do cart\u00E3o criptografado</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Nome impresso no cart\u00C3\u00A3o criptografado
+        /// Nome impresso no cart\u00E3o criptografado
         /// </summary>
-        /// <value>Nome impresso no cart\u00C3\u00A3o criptografado</value>
+        /// <value>Nome impresso no cart\u00E3o criptografado</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Chave p\u00C3\u00BAblica do dispositivo criptografada
+        /// Chave p\u00FAblica do dispositivo criptografada
         /// </summary>
-        /// <value>Chave p\u00C3\u00BAblica do dispositivo criptografada</value>
+        /// <value>Chave p\u00FAblica do dispositivo criptografada</value>
         [DataMember(Name="chavePublicaDevice", EmitDefaultValue=false)]
         public string ChavePublicaDevice { get; set; }
     

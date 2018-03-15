@@ -18,206 +18,206 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="login">Login do usu\u00E1rio.</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>string</returns>
         string AlterarSenhaLoginUsingPOST (string login, string senhaNova);
   
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="login">Login do usu\u00E1rio.</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AlterarSenhaLoginUsingPOSTWithHttpInfo (string login, string senhaNova);
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>string</returns>
         string AlterarSenhaUsingPUT (long? id, string senhaAtual, string senhaNova);
   
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AlterarSenhaUsingPUTWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
+        /// Altera os usu\u00E1rios cadastrados na base.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>UsuarioResponse</returns>
         UsuarioResponse AlterarUsingPUT21 (long? id, UsuarioUpdate update);
   
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
+        /// Altera os usu\u00E1rios cadastrados na base.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
         ApiResponse<UsuarioResponse> AlterarUsingPUT21WithHttpInfo (long? id, UsuarioUpdate update);
         
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>UsuarioResponse</returns>
         UsuarioResponse AtivarUsuarioUsingPOST (long? id);
   
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
         ApiResponse<UsuarioResponse> AtivarUsuarioUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse ConsultarUsingGET42 (long? id);
+        UsuarioResponse ConsultarUsingGET43 (long? id);
   
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> ConsultarUsingGET42WithHttpInfo (long? id);
+        ApiResponse<UsuarioResponse> ConsultarUsingGET43WithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>UsuarioResponse</returns>
         UsuarioResponse DesativarUsuarioUsingPOST (long? id);
   
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
         ApiResponse<UsuarioResponse> DesativarUsuarioUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome do Usuario (optional)</param>
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>PageUsuarioResponse</returns>
-        PageUsuarioResponse ListarUsingGET49 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        PageUsuarioResponse ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
   
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome do Usuario (optional)</param>
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        ApiResponse<PageUsuarioResponse> ListarUsingGET49WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        ApiResponse<PageUsuarioResponse> ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>string</returns>
         string RecuperarSenhaUsingPOST (long? id);
   
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> RecuperarSenhaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base.
+        /// Cadastra Usu\u00E1rio na base.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Esse recurso permite cadastrar usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -225,10 +225,10 @@ namespace Conductor.Pier.Api
         UsuarioResponse SalvarUsingPOST28 (UsuarioPersist persist);
   
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base.
+        /// Cadastra Usu\u00E1rio na base.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Esse recurso permite cadastrar usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -236,50 +236,50 @@ namespace Conductor.Pier.Api
         ApiResponse<UsuarioResponse> SalvarUsingPOST28WithHttpInfo (UsuarioPersist persist);
         
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
         /// <returns>Object</returns>
         Object ValidarSenhaLoginUsingPOST (string login, string senha);
   
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha);
         
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>string</returns>
         string ValidarSenhaUsingGET1 (string senha, long? id);
   
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ValidarSenhaUsingGET1WithHttpInfo (string senha, long? id);
         
@@ -288,206 +288,206 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="login">Login do usu\u00E1rio.</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AlterarSenhaLoginUsingPOSTAsync (string login, string senhaNova);
 
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="login">Login do usu\u00E1rio.</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senhaNova);
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AlterarSenhaUsingPUTAsync (long? id, string senhaAtual, string senhaNova);
 
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
+        /// Altera os usu\u00E1rios cadastrados na base.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of UsuarioResponse</returns>
         System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT21Async (long? id, UsuarioUpdate update);
 
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base.
+        /// Altera os usu\u00E1rios cadastrados na base.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT21AsyncWithHttpInfo (long? id, UsuarioUpdate update);
         
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
         System.Threading.Tasks.Task<UsuarioResponse> AtivarUsuarioUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AtivarUsuarioUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET42Async (long? id);
+        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET43Async (long? id);
 
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET42AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
         System.Threading.Tasks.Task<UsuarioResponse> DesativarUsuarioUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> DesativarUsuarioUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome do Usuario (optional)</param>
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET49Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
 
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome do Usuario (optional)</param>
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET49AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> RecuperarSenhaUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> RecuperarSenhaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base.
+        /// Cadastra Usu\u00E1rio na base.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Esse recurso permite cadastrar usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -495,10 +495,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST28Async (UsuarioPersist persist);
 
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base.
+        /// Cadastra Usu\u00E1rio na base.
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Esse recurso permite cadastrar usu\u00E1rios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -506,50 +506,50 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST28AsyncWithHttpInfo (UsuarioPersist persist);
         
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha);
 
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha);
         
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ValidarSenhaUsingGET1Async (string senha, long? id);
 
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ValidarSenhaUsingGET1AsyncWithHttpInfo (string senha, long? id);
         
@@ -646,10 +646,10 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param> 
+        /// <param name="login">Login do usu\u00E1rio.</param> 
         /// <param name="senhaNova">Senha Nova</param> 
         /// <returns>string</returns>
         public string AlterarSenhaLoginUsingPOST (string login, string senhaNova)
@@ -659,10 +659,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param> 
+        /// <param name="login">Login do usu\u00E1rio.</param> 
         /// <param name="senhaNova">Senha Nova</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AlterarSenhaLoginUsingPOSTWithHttpInfo (string login, string senhaNova)
@@ -733,10 +733,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="login">Login do usu\u00E1rio.</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AlterarSenhaLoginUsingPOSTAsync (string login, string senhaNova)
@@ -747,10 +747,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login do usu\u00C3\u00A1rio.</param>
+        /// <param name="login">Login do usu\u00E1rio.</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senhaNova)
@@ -816,10 +816,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <param name="senhaAtual">Senha Atual</param> 
         /// <param name="senhaNova">Senha Nova</param> 
         /// <returns>string</returns>
@@ -830,10 +830,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <param name="senhaAtual">Senha Atual</param> 
         /// <param name="senhaNova">Senha Nova</param> 
         /// <returns>ApiResponse of string</returns>
@@ -910,10 +910,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of string</returns>
@@ -925,10 +925,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+        /// Alterar senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -998,10 +998,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00E1rios cadastrados na base. Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>UsuarioResponse</returns>
         public UsuarioResponse AlterarUsingPUT21 (long? id, UsuarioUpdate update)
@@ -1011,10 +1011,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00E1rios cadastrados na base. Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
         public ApiResponse< UsuarioResponse > AlterarUsingPUT21WithHttpInfo (long? id, UsuarioUpdate update)
@@ -1091,10 +1091,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00E1rios cadastrados na base. Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of UsuarioResponse</returns>
         public async System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT21Async (long? id, UsuarioUpdate update)
@@ -1105,10 +1105,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera os usu\u00C3\u00A1rios cadastrados na base. Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Altera os usu\u00E1rios cadastrados na base. Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT21AsyncWithHttpInfo (long? id, UsuarioUpdate update)
@@ -1180,10 +1180,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>UsuarioResponse</returns>
         public UsuarioResponse AtivarUsuarioUsingPOST (long? id)
         {
@@ -1192,10 +1192,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
         public ApiResponse< UsuarioResponse > AtivarUsuarioUsingPOSTWithHttpInfo (long? id)
         {
@@ -1260,10 +1260,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
         public async System.Threading.Tasks.Task<UsuarioResponse> AtivarUsuarioUsingPOSTAsync (long? id)
         {
@@ -1273,10 +1273,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Ativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AtivarUsuarioUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -1338,29 +1338,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse ConsultarUsingGET42 (long? id)
+        public UsuarioResponse ConsultarUsingGET43 (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET42WithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET43WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > ConsultarUsingGET42WithHttpInfo (long? id)
+        public ApiResponse< UsuarioResponse > ConsultarUsingGET43WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->ConsultarUsingGET42");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->ConsultarUsingGET43");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1406,9 +1406,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1418,28 +1418,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET42Async (long? id)
+        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET43Async (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET42AsyncWithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET43AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET42AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET42");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET43");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1485,9 +1485,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1496,10 +1496,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>UsuarioResponse</returns>
         public UsuarioResponse DesativarUsuarioUsingPOST (long? id)
         {
@@ -1508,10 +1508,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
         public ApiResponse< UsuarioResponse > DesativarUsuarioUsingPOSTWithHttpInfo (long? id)
         {
@@ -1576,10 +1576,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of UsuarioResponse</returns>
         public async System.Threading.Tasks.Task<UsuarioResponse> DesativarUsuarioUsingPOSTAsync (long? id)
         {
@@ -1589,10 +1589,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+        /// Desativa os usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> DesativarUsuarioUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -1654,36 +1654,36 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome do Usuario (optional)</param> 
         /// <param name="cpf">CPF do Usuario (optional)</param> 
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
         /// <returns>PageUsuarioResponse</returns>
-        public PageUsuarioResponse ListarUsingGET49 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public PageUsuarioResponse ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET49WithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET51WithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome do Usuario (optional)</param> 
         /// <param name="cpf">CPF do Usuario (optional)</param> 
         /// <param name="email">Email do Usuario (optional)</param> 
         /// <param name="status">Status do Usuario (optional)</param> 
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        public ApiResponse< PageUsuarioResponse > ListarUsingGET49WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public ApiResponse< PageUsuarioResponse > ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1736,9 +1736,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1748,37 +1748,37 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome do Usuario (optional)</param>
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET49Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET49AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET51AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+        /// Lista os Usu\u00E1rios cadastrados na base do PIER ou WS. Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome do Usuario (optional)</param>
         /// <param name="cpf">CPF do Usuario (optional)</param>
         /// <param name="email">Email do Usuario (optional)</param>
         /// <param name="status">Status do Usuario (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET49AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -1831,9 +1831,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1842,10 +1842,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>string</returns>
         public string RecuperarSenhaUsingPOST (long? id)
         {
@@ -1854,10 +1854,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > RecuperarSenhaUsingPOSTWithHttpInfo (long? id)
         {
@@ -1922,10 +1922,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> RecuperarSenhaUsingPOSTAsync (long? id)
         {
@@ -1935,10 +1935,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+        /// Recuperar senha do usu\u00E1rio na base do PIER ou WS. Esse recurso permite recuperar a senha do usu\u00E1rio.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> RecuperarSenhaUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -2000,7 +2000,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00E1rio na base. Esse recurso permite cadastrar usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2012,7 +2012,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00E1rio na base. Esse recurso permite cadastrar usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2086,7 +2086,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00E1rio na base. Esse recurso permite cadastrar usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2099,7 +2099,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastra Usu\u00C3\u00A1rio na base. Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+        /// Cadastra Usu\u00E1rio na base. Esse recurso permite cadastrar usu\u00E1rios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2170,11 +2170,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param> 
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param> 
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param> 
+        /// <param name="senha">Senha do usu\u00E1rio</param> 
         /// <returns>Object</returns>
         public Object ValidarSenhaLoginUsingPOST (string login, string senha)
         {
@@ -2183,11 +2183,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param> 
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param> 
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param> 
+        /// <param name="senha">Senha do usu\u00E1rio</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha)
         {
@@ -2257,11 +2257,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha)
         {
@@ -2271,11 +2271,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+        /// Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS. O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="login">Login identificador do usu\u00C3\u00A1rio (login).</param>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
+        /// <param name="login">Login identificador do usu\u00E1rio (login).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha)
         {
@@ -2340,11 +2340,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="senha">Senha do usu\u00E1rio</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>string</returns>
         public string ValidarSenhaUsingGET1 (string senha, long? id)
         {
@@ -2353,11 +2353,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param> 
+        /// <param name="senha">Senha do usu\u00E1rio</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > ValidarSenhaUsingGET1WithHttpInfo (string senha, long? id)
         {
@@ -2427,11 +2427,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> ValidarSenhaUsingGET1Async (string senha, long? id)
         {
@@ -2441,11 +2441,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS. Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+        /// Validar a senha do usu\u00E1rio na base do PIER ou WS. Este m\u00E9todo permite validar a senha do usu\u00E1rio).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="senha">Senha do usu\u00C3\u00A1rio</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).</param>
+        /// <param name="senha">Senha do usu\u00E1rio</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarSenhaUsingGET1AsyncWithHttpInfo (string senha, long? id)
         {

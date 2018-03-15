@@ -23,9 +23,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MoedaResponse" />class.
         /// </summary>
         /// <param name="Id">Identificador do tipo de moeda..</param>
-        /// <param name="CodigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda..</param>
-        /// <param name="Simbolo">S\u00C3\u00ADmbolo da Moeda..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda..</param>
+        /// <param name="CodigoMoeda">C\u00F3digo identificador do tipo de moeda..</param>
+        /// <param name="Simbolo">S\u00EDmbolo da Moeda..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo da moeda..</param>
 
         public MoedaResponse(long? Id = null, string CodigoMoeda = null, string Simbolo = null, string Descricao = null)
         {
@@ -45,23 +45,23 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo de moeda.
+        /// C\u00F3digo identificador do tipo de moeda.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo de moeda.</value>
+        /// <value>C\u00F3digo identificador do tipo de moeda.</value>
         [DataMember(Name="codigoMoeda", EmitDefaultValue=false)]
         public string CodigoMoeda { get; set; }
     
         /// <summary>
-        /// S\u00C3\u00ADmbolo da Moeda.
+        /// S\u00EDmbolo da Moeda.
         /// </summary>
-        /// <value>S\u00C3\u00ADmbolo da Moeda.</value>
+        /// <value>S\u00EDmbolo da Moeda.</value>
         [DataMember(Name="simbolo", EmitDefaultValue=false)]
         public string Simbolo { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+        /// Descri\u00E7\u00E3o do tipo da moeda.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.</value>
+        /// <value>Descri\u00E7\u00E3o do tipo da moeda.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

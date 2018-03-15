@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Response da auditoria dos par\u00C3\u00A2metros do arquivo.
+    /// Objeto Response da auditoria dos par\u00E2metros do arquivo.
     /// </summary>
     [DataContract]
     public partial class ArquivoParametroAUDResponse :  IEquatable<ArquivoParametroAUDResponse>
@@ -23,12 +23,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoParametroAUDResponse" />class.
         /// </summary>
         /// <param name="Rev">Identificador da auditoria arquivo.</param>
-        /// <param name="RevType">Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo).</param>
-        /// <param name="Id">Identificador do par\u00C3\u00A2metro.</param>
-        /// <param name="Parametro">Nome do par\u00C3\u00A2metro.</param>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo do par\u00C3\u00A2metro.</param>
-        /// <param name="DataHoraInclusao">Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro.</param>
-        /// <param name="DataHoraAlteracao">Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro.</param>
+        /// <param name="RevType">Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo).</param>
+        /// <param name="Id">Identificador do par\u00E2metro.</param>
+        /// <param name="Parametro">Nome do par\u00E2metro.</param>
+        /// <param name="Conteudo">Conte\u00FAdo do par\u00E2metro.</param>
+        /// <param name="DataHoraInclusao">Data de inclus\u00E3o do par\u00E2metro.</param>
+        /// <param name="DataHoraAlteracao">Data de altera\u00E7\u00E3o do par\u00E2metro.</param>
 
         public ArquivoParametroAUDResponse(long? Rev = null, int? RevType = null, string Id = null, string Parametro = null, string Conteudo = null, string DataHoraInclusao = null, string DataHoraAlteracao = null)
         {
@@ -51,44 +51,44 @@ namespace Conductor.Pier.Model
         public long? Rev { get; set; }
     
         /// <summary>
-        /// Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+        /// Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
         /// </summary>
-        /// <value>Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)</value>
+        /// <value>Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public int? RevType { get; set; }
     
         /// <summary>
-        /// Identificador do par\u00C3\u00A2metro
+        /// Identificador do par\u00E2metro
         /// </summary>
-        /// <value>Identificador do par\u00C3\u00A2metro</value>
+        /// <value>Identificador do par\u00E2metro</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
     
         /// <summary>
-        /// Nome do par\u00C3\u00A2metro
+        /// Nome do par\u00E2metro
         /// </summary>
-        /// <value>Nome do par\u00C3\u00A2metro</value>
+        /// <value>Nome do par\u00E2metro</value>
         [DataMember(Name="parametro", EmitDefaultValue=false)]
         public string Parametro { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do par\u00C3\u00A2metro
+        /// Conte\u00FAdo do par\u00E2metro
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do par\u00C3\u00A2metro</value>
+        /// <value>Conte\u00FAdo do par\u00E2metro</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro
+        /// Data de inclus\u00E3o do par\u00E2metro
         /// </summary>
-        /// <value>Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro</value>
+        /// <value>Data de inclus\u00E3o do par\u00E2metro</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro
+        /// Data de altera\u00E7\u00E3o do par\u00E2metro
         /// </summary>
-        /// <value>Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro</value>
+        /// <value>Data de altera\u00E7\u00E3o do par\u00E2metro</value>
         [DataMember(Name="dataHoraAlteracao", EmitDefaultValue=false)]
         public string DataHoraAlteracao { get; set; }
     

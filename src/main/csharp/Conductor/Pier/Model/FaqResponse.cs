@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+        /// Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
         /// </summary>
-        /// <value>Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.</value>
+        /// <value>Status descrevendo a situa\u00E7\u00E3o atual da FAQ.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+        /// Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
         /// </summary>
-        /// <value>Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.</value>
+        /// <value>Status descrevendo a situa\u00E7\u00E3o atual da FAQ.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,13 +44,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaqResponse" /> class.
         /// Initializes a new instance of the <see cref="FaqResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id)..</param>
-        /// <param name="Pergunta">Conte\u00C3\u00BAdo da pergunta..</param>
-        /// <param name="Resposta">Conte\u00C3\u00BAdo da resposta..</param>
-        /// <param name="Relevancia">N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id)..</param>
+        /// <param name="Pergunta">Conte\u00FAdo da pergunta..</param>
+        /// <param name="Resposta">Conte\u00FAdo da resposta..</param>
+        /// <param name="Relevancia">N\u00EDvel de relev\u00E2ncia da pergunta..</param>
         /// <param name="Plataforma">Plataforma em que a FAQ se encaixa..</param>
         /// <param name="Categoria">Categoria de assunto do qual a FAQ se trata..</param>
-        /// <param name="Status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ..</param>
+        /// <param name="Status">Status descrevendo a situa\u00E7\u00E3o atual da FAQ..</param>
 
         public FaqResponse(long? Id = null, string Pergunta = null, string Resposta = null, int? Relevancia = null, string Plataforma = null, string Categoria = null, StatusEnum? Status = null)
         {
@@ -66,30 +66,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo da pergunta.
+        /// Conte\u00FAdo da pergunta.
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo da pergunta.</value>
+        /// <value>Conte\u00FAdo da pergunta.</value>
         [DataMember(Name="pergunta", EmitDefaultValue=false)]
         public string Pergunta { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo da resposta.
+        /// Conte\u00FAdo da resposta.
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo da resposta.</value>
+        /// <value>Conte\u00FAdo da resposta.</value>
         [DataMember(Name="resposta", EmitDefaultValue=false)]
         public string Resposta { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+        /// N\u00EDvel de relev\u00E2ncia da pergunta.
         /// </summary>
-        /// <value>N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.</value>
+        /// <value>N\u00EDvel de relev\u00E2ncia da pergunta.</value>
         [DataMember(Name="relevancia", EmitDefaultValue=false)]
         public int? Relevancia { get; set; }
     

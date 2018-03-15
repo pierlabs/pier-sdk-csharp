@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
+    /// Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento
     /// </summary>
     [DataContract]
     public partial class DocumentoResponse :  IEquatable<DocumentoResponse>
@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="Id">ID do Documento..</param>
         /// <param name="IdTemplateDocumento">ID do Template de Documento associado..</param>
         /// <param name="Nome">Nome do Documento..</param>
-        /// <param name="Extensao">Extens\u00C3\u00A3o do Documento..</param>
+        /// <param name="Extensao">Extens\u00E3o do Documento..</param>
 
         public DocumentoResponse(long? Id = null, long? IdTemplateDocumento = null, string Nome = null, string Extensao = null)
         {
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Extens\u00C3\u00A3o do Documento.
+        /// Extens\u00E3o do Documento.
         /// </summary>
-        /// <value>Extens\u00C3\u00A3o do Documento.</value>
+        /// <value>Extens\u00E3o do Documento.</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     

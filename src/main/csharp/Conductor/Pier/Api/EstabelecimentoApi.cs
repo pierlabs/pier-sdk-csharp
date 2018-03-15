@@ -24,7 +24,7 @@ namespace Conductor.Pier.Api
         /// Altera uma origem comercial.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <param name="origemComercialUpdate">origemComercialUpdate</param>
         /// <returns>OrigemComercialResponse</returns>
         OrigemComercialResponse AlterarOrigemComercialUsingPUT (long? id, OrigemComercialUpdate origemComercialUpdate);
@@ -36,7 +36,7 @@ namespace Conductor.Pier.Api
         /// Altera uma origem comercial.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <param name="origemComercialUpdate">origemComercialUpdate</param>
         /// <returns>ApiResponse of OrigemComercialResponse</returns>
         ApiResponse<OrigemComercialResponse> AlterarOrigemComercialUsingPUTWithHttpInfo (long? id, OrigemComercialUpdate origemComercialUpdate);
@@ -45,10 +45,10 @@ namespace Conductor.Pier.Api
         /// Altera uma Maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <param name="maquinetaUpdate">maquinetaUpdate</param>
         /// <returns>MaquinetaResponse</returns>
         MaquinetaResponse AlterarUsingPUT10 (long? id, MaquinetaUpdate maquinetaUpdate);
@@ -57,34 +57,34 @@ namespace Conductor.Pier.Api
         /// Altera uma Maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <param name="maquinetaUpdate">maquinetaUpdate</param>
         /// <returns>ApiResponse of MaquinetaResponse</returns>
         ApiResponse<MaquinetaResponse> AlterarUsingPUT10WithHttpInfo (long? id, MaquinetaUpdate maquinetaUpdate);
         
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Altera uma Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param>
         /// <returns>OperacaoCredorResponse</returns>
         OperacaoCredorResponse AlterarUsingPUT11 (long? id, OperacaoCredorUpdate operacaoCredorUpdate);
   
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Altera uma Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param>
         /// <returns>ApiResponse of OperacaoCredorResponse</returns>
         ApiResponse<OperacaoCredorResponse> AlterarUsingPUT11WithHttpInfo (long? id, OperacaoCredorUpdate operacaoCredorUpdate);
@@ -93,38 +93,34 @@ namespace Conductor.Pier.Api
         /// Altera um Telefone do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param>
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        TelefoneEstabelecimentoResponse AlterarUsingPUT15 (long? id, string ddd, string telefone, string ramal = null);
+        TelefoneEstabelecimentoResponse AlterarUsingPUT15 (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate);
   
         /// <summary>
         /// Altera um Telefone do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param>
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        ApiResponse<TelefoneEstabelecimentoResponse> AlterarUsingPUT15WithHttpInfo (long? id, string ddd, string telefone, string ramal = null);
+        ApiResponse<TelefoneEstabelecimentoResponse> AlterarUsingPUT15WithHttpInfo (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate);
         
         /// <summary>
         /// Altera um Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param>
         /// <param name="terminalUpdate">terminalUpdate</param>
         /// <returns>TerminalResponse</returns>
         TerminalResponse AlterarUsingPUT17 (long? id, TerminalUpdate terminalUpdate);
@@ -133,10 +129,10 @@ namespace Conductor.Pier.Api
         /// Altera um Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param>
         /// <param name="terminalUpdate">terminalUpdate</param>
         /// <returns>ApiResponse of TerminalResponse</returns>
         ApiResponse<TerminalResponse> AlterarUsingPUT17WithHttpInfo (long? id, TerminalUpdate terminalUpdate);
@@ -166,25 +162,25 @@ namespace Conductor.Pier.Api
         ApiResponse<EstabelecimentoResponse> AlterarUsingPUT6WithHttpInfo (long? id, EstabelecimentoUpdate update);
         
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico
+        /// Alterar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Altera um grupo econ\u00C3\u00B4mico.
+        /// Altera um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>GrupoEconomicoResponse</returns>
         GrupoEconomicoResponse AlterarUsingPUT8 (long? id, GrupoEconomicoDTO grupoEconomicoDTO);
   
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico
+        /// Alterar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Altera um grupo econ\u00C3\u00B4mico.
+        /// Altera um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>ApiResponse of GrupoEconomicoResponse</returns>
         ApiResponse<GrupoEconomicoResponse> AlterarUsingPUT8WithHttpInfo (long? id, GrupoEconomicoDTO grupoEconomicoDTO);
@@ -234,10 +230,10 @@ namespace Conductor.Pier.Api
         ApiResponse<EstabelecimentoResponse> CadastrarUsingPOST2WithHttpInfo (EstabelecimentoPersist persist);
         
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico
+        /// Cadastrar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastra um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param>
@@ -245,10 +241,10 @@ namespace Conductor.Pier.Api
         GrupoEconomicoResponse CadastrarUsingPOST3 (GrupoEconomicoDTO grupoEconomicoDTO);
   
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico
+        /// Cadastrar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastra um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param>
@@ -256,24 +252,24 @@ namespace Conductor.Pier.Api
         ApiResponse<GrupoEconomicoResponse> CadastrarUsingPOST3WithHttpInfo (GrupoEconomicoDTO grupoEconomicoDTO);
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param>
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param>
         /// <returns>DetalheOperacaoResponse</returns>
         DetalheOperacaoResponse ConsultaOperacaoUsingGET (long? id);
   
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param>
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param>
         /// <returns>ApiResponse of DetalheOperacaoResponse</returns>
         ApiResponse<DetalheOperacaoResponse> ConsultaOperacaoUsingGETWithHttpInfo (long? id);
         
@@ -281,10 +277,10 @@ namespace Conductor.Pier.Api
         /// Consultar Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <returns>OrigemComercialResponse</returns>
         OrigemComercialResponse ConsultarOrigemComercialUsingGET (long? id);
   
@@ -292,10 +288,10 @@ namespace Conductor.Pier.Api
         /// Consultar Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <returns>ApiResponse of OrigemComercialResponse</returns>
         ApiResponse<OrigemComercialResponse> ConsultarOrigemComercialUsingGETWithHttpInfo (long? id);
         
@@ -308,7 +304,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>EstabelecimentoResponse</returns>
-        EstabelecimentoResponse ConsultarUsingGET16 (long? id);
+        EstabelecimentoResponse ConsultarUsingGET17 (long? id);
   
         /// <summary>
         /// Consultar estabelecimento por id
@@ -319,259 +315,259 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>ApiResponse of EstabelecimentoResponse</returns>
-        ApiResponse<EstabelecimentoResponse> ConsultarUsingGET16WithHttpInfo (long? id);
+        ApiResponse<EstabelecimentoResponse> ConsultarUsingGET17WithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico
+        /// Consultar grupo econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>GrupoEconomicoResponse</returns>
-        GrupoEconomicoResponse ConsultarUsingGET18 (long? id);
+        GrupoEconomicoResponse ConsultarUsingGET19 (long? id);
   
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico
+        /// Consultar grupo econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>ApiResponse of GrupoEconomicoResponse</returns>
-        ApiResponse<GrupoEconomicoResponse> ConsultarUsingGET18WithHttpInfo (long? id);
+        ApiResponse<GrupoEconomicoResponse> ConsultarUsingGET19WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <returns>MaquinetaResponse</returns>
-        MaquinetaResponse ConsultarUsingGET20 (long? id);
+        MaquinetaResponse ConsultarUsingGET21 (long? id);
   
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <returns>ApiResponse of MaquinetaResponse</returns>
-        ApiResponse<MaquinetaResponse> ConsultarUsingGET20WithHttpInfo (long? id);
+        ApiResponse<MaquinetaResponse> ConsultarUsingGET21WithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <returns>OperacaoCredorResponse</returns>
-        OperacaoCredorResponse ConsultarUsingGET21 (long? id);
+        OperacaoCredorResponse ConsultarUsingGET22 (long? id);
   
         /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <returns>ApiResponse of OperacaoCredorResponse</returns>
-        ApiResponse<OperacaoCredorResponse> ConsultarUsingGET21WithHttpInfo (long? id);
+        ApiResponse<OperacaoCredorResponse> ConsultarUsingGET22WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado telefone de um estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        TelefoneEstabelecimentoResponse ConsultarUsingGET29 (long? id);
+        TelefoneEstabelecimentoResponse ConsultarUsingGET30 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado telefone de um estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        ApiResponse<TelefoneEstabelecimentoResponse> ConsultarUsingGET29WithHttpInfo (long? id);
+        ApiResponse<TelefoneEstabelecimentoResponse> ConsultarUsingGET30WithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
         /// <returns>TerminalResponse</returns>
-        TerminalResponse ConsultarUsingGET31 (long? id);
+        TerminalResponse ConsultarUsingGET32 (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
         /// <returns>ApiResponse of TerminalResponse</returns>
-        ApiResponse<TerminalResponse> ConsultarUsingGET31WithHttpInfo (long? id);
+        ApiResponse<TerminalResponse> ConsultarUsingGET32WithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo
+        /// Apresenta os dados de um determinado V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param>
         /// <returns>VinculoEstabelecimentoAdquirenteResponse</returns>
-        VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET43 (long? id);
+        VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET44 (long? id);
   
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo
+        /// Apresenta os dados de um determinado V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param>
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
-        ApiResponse<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET43WithHttpInfo (long? id);
+        ApiResponse<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET44WithHttpInfo (long? id);
         
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo
+        /// Desabilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Object</returns>
         Object DesabilitarVinculoUsingPOST (long? id);
   
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo
+        /// Desabilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DesabilitarVinculoUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Object</returns>
         Object DesabilitarVinculoUsingPOST1 (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
   
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DesabilitarVinculoUsingPOST1WithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
         
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo
+        /// Habilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Object</returns>
         Object HabilitarVinculoUsingPOST (long? id);
   
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo
+        /// Habilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> HabilitarVinculoUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Object</returns>
         Object HabilitarVinculoUsingPOST1 (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
   
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> HabilitarVinculoUsingPOST1WithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
         
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param>
         /// <returns>PageOperacaoResponse</returns>
         PageOperacaoResponse ListaOperacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null);
   
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param>
         /// <returns>ApiResponse of PageOperacaoResponse</returns>
         ApiResponse<PageOperacaoResponse> ListaOperacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null);
         
@@ -579,12 +575,12 @@ namespace Conductor.Pier.Api
         /// Lista os MCCs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageMCCResponse</returns>
         PageMCCResponse ListarMCCUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
@@ -592,12 +588,12 @@ namespace Conductor.Pier.Api
         /// Lista os MCCs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageMCCResponse</returns>
         ApiResponse<PageMCCResponse> ListarMCCUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -608,32 +604,32 @@ namespace Conductor.Pier.Api
         /// Lista origens comerciais cadastradas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id da origem comercial (optional)</param>
         /// <param name="nome">Nome da origem comercial (optional)</param>
         /// <param name="status">Indica o status da origem comercial (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param>
         /// <param name="idProduto">Identificador do produto (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param>
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param>
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param>
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param>
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param>
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param>
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param>
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param>
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param>
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param>
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param>
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param>
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param>
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param>
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param>
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param>
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param>
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param>
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param>
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param>
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param>
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param>
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param>
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param>
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param>
         /// <returns>PageOrigemComercialResponse</returns>
         PageOrigemComercialResponse ListarOrigensComerciaisUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null);
@@ -645,32 +641,32 @@ namespace Conductor.Pier.Api
         /// Lista origens comerciais cadastradas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id da origem comercial (optional)</param>
         /// <param name="nome">Nome da origem comercial (optional)</param>
         /// <param name="status">Indica o status da origem comercial (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param>
         /// <param name="idProduto">Identificador do produto (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param>
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param>
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param>
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param>
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param>
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param>
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param>
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param>
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param>
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param>
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param>
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param>
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param>
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param>
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param>
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param>
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param>
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param>
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param>
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param>
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param>
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param>
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param>
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param>
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param>
         /// <returns>ApiResponse of PageOrigemComercialResponse</returns>
         ApiResponse<PageOrigemComercialResponse> ListarOrigensComerciaisUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null);
@@ -679,12 +675,12 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos de adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageEntidadeResponse</returns>
         PageEntidadeResponse ListarTiposAdquirentesUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
@@ -692,25 +688,53 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos de adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageEntidadeResponse</returns>
         ApiResponse<PageEntidadeResponse> ListarTiposAdquirentesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de estabelecimentos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param>
+        /// <returns>PageTipoEstabelecimentoResponse</returns>
+        PageTipoEstabelecimentoResponse ListarTiposEstabelecimentosUsingGET (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+  
+        /// <summary>
+        /// Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de estabelecimentos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param>
+        /// <returns>ApiResponse of PageTipoEstabelecimentoResponse</returns>
+        ApiResponse<PageTipoEstabelecimentoResponse> ListarTiposEstabelecimentosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
         /// Lista os Tipos de  Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageCampoCodificadoDescricaoResponse</returns>
         PageCampoCodificadoDescricaoResponse ListarTiposMaquinetasUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
@@ -718,25 +742,53 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos de  Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageCampoCodificadoDescricaoResponse</returns>
         ApiResponse<PageCampoCodificadoDescricaoResponse> ListarTiposMaquinetasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Listar tipos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param>
+        /// <returns>PageTipoOrigemComercialResponse</returns>
+        PageTipoOrigemComercialResponse ListarTiposOrigensComerciaisUsingGET (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+  
+        /// <summary>
+        /// Listar tipos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param>
+        /// <returns>ApiResponse of PageTipoOrigemComercialResponse</returns>
+        ApiResponse<PageTipoOrigemComercialResponse> ListarTiposOrigensComerciaisUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Lista os Tipos Terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTipoTerminalResponse</returns>
         PageTipoTerminalResponse ListarTiposTerminaisUsingGET1 (List<string> sort = null, int? page = null, int? limit = null);
   
@@ -744,12 +796,12 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos Terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTipoTerminalResponse</returns>
         ApiResponse<PageTipoTerminalResponse> ListarTiposTerminaisUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -757,118 +809,118 @@ namespace Conductor.Pier.Api
         /// Lista Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Lista todas os Estabelecimentos
+        /// Lista todos os Estabelecimentos
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param>
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param>
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param>
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param>
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param>
         /// <param name="nome">Nome do Estabelecimento. (optional)</param>
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param>
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param>
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param>
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param>
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param>
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param>
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param>
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param>
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param>
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param>
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param>
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param>
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param>
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param>
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param>
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param>
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param>
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param>
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param>
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param>
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param>
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param>
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param>
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param>
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param>
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param>
         /// <returns>PageEstabelecimentoResponse</returns>
-        PageEstabelecimentoResponse ListarUsingGET21 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
+        PageEstabelecimentoResponse ListarUsingGET22 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
   
         /// <summary>
         /// Lista Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Lista todas os Estabelecimentos
+        /// Lista todos os Estabelecimentos
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param>
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param>
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param>
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param>
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param>
         /// <param name="nome">Nome do Estabelecimento. (optional)</param>
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param>
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param>
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param>
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param>
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param>
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param>
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param>
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param>
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param>
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param>
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param>
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param>
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param>
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param>
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param>
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param>
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param>
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param>
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param>
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param>
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param>
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param>
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param>
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param>
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param>
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param>
         /// <returns>ApiResponse of PageEstabelecimentoResponse</returns>
-        ApiResponse<PageEstabelecimentoResponse> ListarUsingGET21WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
+        ApiResponse<PageEstabelecimentoResponse> ListarUsingGET22WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
         
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos
+        /// Listar grupos econ\u00F4micos
         /// </summary>
         /// <remarks>
-        /// Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Lista grupos econ\u00F4micos cadastrados. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
         /// <param name="nomeCredor">Nome do credor (optional)</param>
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param>
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param>
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param>
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param>
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param>
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param>
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param>
+        /// <param name="banco">C\u00F3digo do banco (optional)</param>
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param>
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param>
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param>
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param>
@@ -883,30 +935,30 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param>
         /// <param name="taxaBanco">Taxa do Banco (optional)</param>
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param>
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param>
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param>
         /// <returns>PageGrupoEconomicoResponse</returns>
-        PageGrupoEconomicoResponse ListarUsingGET23 (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
+        PageGrupoEconomicoResponse ListarUsingGET24 (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
   
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos
+        /// Listar grupos econ\u00F4micos
         /// </summary>
         /// <remarks>
-        /// Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Lista grupos econ\u00F4micos cadastrados. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
         /// <param name="nomeCredor">Nome do credor (optional)</param>
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param>
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param>
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param>
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param>
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param>
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param>
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param>
+        /// <param name="banco">C\u00F3digo do banco (optional)</param>
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param>
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param>
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param>
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param>
@@ -921,37 +973,65 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param>
         /// <param name="taxaBanco">Taxa do Banco (optional)</param>
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param>
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param>
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param>
         /// <returns>ApiResponse of PageGrupoEconomicoResponse</returns>
-        ApiResponse<PageGrupoEconomicoResponse> ListarUsingGET23WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
+        ApiResponse<PageGrupoEconomicoResponse> ListarUsingGET24WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
+        
+        /// <summary>
+        /// Listar grupos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os grupos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
+        /// <returns>PageGrupoOrigemComercialResponse</returns>
+        PageGrupoOrigemComercialResponse ListarUsingGET25 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+  
+        /// <summary>
+        /// Listar grupos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os grupos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
+        /// <returns>ApiResponse of PageGrupoOrigemComercialResponse</returns>
+        ApiResponse<PageGrupoOrigemComercialResponse> ListarUsingGET25WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Lista as Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>PageMaquinetaResponse</returns>
-        PageMaquinetaResponse ListarUsingGET25 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        PageMaquinetaResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
   
         /// <summary>
         /// Lista as Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>ApiResponse of PageMaquinetaResponse</returns>
-        ApiResponse<PageMaquinetaResponse> ListarUsingGET25WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        ApiResponse<PageMaquinetaResponse> ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// Lista os tipos de moedas do emissor 
@@ -960,14 +1040,14 @@ namespace Conductor.Pier.Api
         /// Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param>
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param>
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param>
         /// <returns>PageMoedaResponse</returns>
-        PageMoedaResponse ListarUsingGET26 (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
+        PageMoedaResponse ListarUsingGET28 (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
   
         /// <summary>
         /// Lista os tipos de moedas do emissor 
@@ -976,180 +1056,180 @@ namespace Conductor.Pier.Api
         /// Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param>
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param>
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param>
         /// <returns>ApiResponse of PageMoedaResponse</returns>
-        ApiResponse<PageMoedaResponse> ListarUsingGET26WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
+        ApiResponse<PageMoedaResponse> ListarUsingGET28WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
         
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as Regras Opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param>
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param>
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param>
         /// <returns>PageOperacaoCredorResponse</returns>
-        PageOperacaoCredorResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
+        PageOperacaoCredorResponse ListarUsingGET29 (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
   
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as Regras Opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param>
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param>
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param>
         /// <returns>ApiResponse of PageOperacaoCredorResponse</returns>
-        ApiResponse<PageOperacaoCredorResponse> ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
+        ApiResponse<PageOperacaoCredorResponse> ListarUsingGET29WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
         
         /// <summary>
         /// Lista os Telefones Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>PageTelefoneEstabelecimentoResponse</returns>
-        PageTelefoneEstabelecimentoResponse ListarUsingGET38 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        PageTelefoneEstabelecimentoResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
   
         /// <summary>
         /// Lista os Telefones Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>ApiResponse of PageTelefoneEstabelecimentoResponse</returns>
-        ApiResponse<PageTelefoneEstabelecimentoResponse> ListarUsingGET38WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        ApiResponse<PageTelefoneEstabelecimentoResponse> ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// Lista os Terminais cadastrados no Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param>
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param>
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param>
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param>
         /// <returns>PageTerminalResponse</returns>
-        PageTerminalResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        PageTerminalResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
   
         /// <summary>
         /// Lista os Terminais cadastrados no Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param>
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param>
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param>
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param>
         /// <returns>ApiResponse of PageTerminalResponse</returns>
-        ApiResponse<PageTerminalResponse> ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        ApiResponse<PageTerminalResponse> ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
         
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param>
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param>
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param>
         /// <returns>PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET53 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
   
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param>
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param>
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param>
         /// <returns>ApiResponse of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET53WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
         
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param>
         /// <returns>PageVinculoOperacaoResponse</returns>
-        PageVinculoOperacaoResponse ListarUsingGET52 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        PageVinculoOperacaoResponse ListarUsingGET54 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
   
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param>
         /// <returns>ApiResponse of PageVinculoOperacaoResponse</returns>
-        ApiResponse<PageVinculoOperacaoResponse> ListarUsingGET52WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        ApiResponse<PageVinculoOperacaoResponse> ListarUsingGET54WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
         
         /// <summary>
         /// Realiza o cadastro de uma nova maquineta para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param>
@@ -1160,7 +1240,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de uma nova maquineta para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param>
@@ -1168,10 +1248,10 @@ namespace Conductor.Pier.Api
         ApiResponse<MaquinetaResponse> SalvarUsingPOST16WithHttpInfo (MaquinetaPersist maquinetaPersist);
         
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param>
@@ -1179,10 +1259,10 @@ namespace Conductor.Pier.Api
         OperacaoCredorResponse SalvarUsingPOST17 (OperacaoCredorPersist oprecaoCredorPersist);
   
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param>
@@ -1193,35 +1273,29 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo telefone para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param>
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        TelefoneEstabelecimentoResponse SalvarUsingPOST22 (long? idEstabelecimento, string ddd, string telefone, string ramal = null);
+        TelefoneEstabelecimentoResponse SalvarUsingPOST22 (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist);
   
         /// <summary>
         /// Realiza o cadastro de um novo telefone para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param>
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        ApiResponse<TelefoneEstabelecimentoResponse> SalvarUsingPOST22WithHttpInfo (long? idEstabelecimento, string ddd, string telefone, string ramal = null);
+        ApiResponse<TelefoneEstabelecimentoResponse> SalvarUsingPOST22WithHttpInfo (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist);
         
         /// <summary>
         /// Realiza o cadastro de um novo Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param>
@@ -1232,7 +1306,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param>
@@ -1243,7 +1317,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
@@ -1254,7 +1328,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
@@ -1272,7 +1346,7 @@ namespace Conductor.Pier.Api
         /// Altera uma origem comercial.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <param name="origemComercialUpdate">origemComercialUpdate</param>
         /// <returns>Task of OrigemComercialResponse</returns>
         System.Threading.Tasks.Task<OrigemComercialResponse> AlterarOrigemComercialUsingPUTAsync (long? id, OrigemComercialUpdate origemComercialUpdate);
@@ -1284,7 +1358,7 @@ namespace Conductor.Pier.Api
         /// Altera uma origem comercial.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <param name="origemComercialUpdate">origemComercialUpdate</param>
         /// <returns>Task of ApiResponse (OrigemComercialResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrigemComercialResponse>> AlterarOrigemComercialUsingPUTAsyncWithHttpInfo (long? id, OrigemComercialUpdate origemComercialUpdate);
@@ -1293,10 +1367,10 @@ namespace Conductor.Pier.Api
         /// Altera uma Maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <param name="maquinetaUpdate">maquinetaUpdate</param>
         /// <returns>Task of MaquinetaResponse</returns>
         System.Threading.Tasks.Task<MaquinetaResponse> AlterarUsingPUT10Async (long? id, MaquinetaUpdate maquinetaUpdate);
@@ -1305,34 +1379,34 @@ namespace Conductor.Pier.Api
         /// Altera uma Maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <param name="maquinetaUpdate">maquinetaUpdate</param>
         /// <returns>Task of ApiResponse (MaquinetaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, MaquinetaUpdate maquinetaUpdate);
         
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Altera uma Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param>
         /// <returns>Task of OperacaoCredorResponse</returns>
         System.Threading.Tasks.Task<OperacaoCredorResponse> AlterarUsingPUT11Async (long? id, OperacaoCredorUpdate operacaoCredorUpdate);
 
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Altera uma Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param>
         /// <returns>Task of ApiResponse (OperacaoCredorResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OperacaoCredorResponse>> AlterarUsingPUT11AsyncWithHttpInfo (long? id, OperacaoCredorUpdate operacaoCredorUpdate);
@@ -1341,38 +1415,34 @@ namespace Conductor.Pier.Api
         /// Altera um Telefone do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> AlterarUsingPUT15Async (long? id, string ddd, string telefone, string ramal = null);
+        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> AlterarUsingPUT15Async (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate);
 
         /// <summary>
         /// Altera um Telefone do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> AlterarUsingPUT15AsyncWithHttpInfo (long? id, string ddd, string telefone, string ramal = null);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> AlterarUsingPUT15AsyncWithHttpInfo (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate);
         
         /// <summary>
         /// Altera um Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param>
         /// <param name="terminalUpdate">terminalUpdate</param>
         /// <returns>Task of TerminalResponse</returns>
         System.Threading.Tasks.Task<TerminalResponse> AlterarUsingPUT17Async (long? id, TerminalUpdate terminalUpdate);
@@ -1381,10 +1451,10 @@ namespace Conductor.Pier.Api
         /// Altera um Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param>
         /// <param name="terminalUpdate">terminalUpdate</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> AlterarUsingPUT17AsyncWithHttpInfo (long? id, TerminalUpdate terminalUpdate);
@@ -1414,25 +1484,25 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> AlterarUsingPUT6AsyncWithHttpInfo (long? id, EstabelecimentoUpdate update);
         
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico
+        /// Alterar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Altera um grupo econ\u00C3\u00B4mico.
+        /// Altera um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>Task of GrupoEconomicoResponse</returns>
         System.Threading.Tasks.Task<GrupoEconomicoResponse> AlterarUsingPUT8Async (long? id, GrupoEconomicoDTO grupoEconomicoDTO);
 
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico
+        /// Alterar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Altera um grupo econ\u00C3\u00B4mico.
+        /// Altera um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>Task of ApiResponse (GrupoEconomicoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> AlterarUsingPUT8AsyncWithHttpInfo (long? id, GrupoEconomicoDTO grupoEconomicoDTO);
@@ -1482,10 +1552,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> CadastrarUsingPOST2AsyncWithHttpInfo (EstabelecimentoPersist persist);
         
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico
+        /// Cadastrar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastra um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param>
@@ -1493,10 +1563,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<GrupoEconomicoResponse> CadastrarUsingPOST3Async (GrupoEconomicoDTO grupoEconomicoDTO);
 
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico
+        /// Cadastrar Grupo Econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastra um grupo econ\u00F4mico.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param>
@@ -1504,24 +1574,24 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> CadastrarUsingPOST3AsyncWithHttpInfo (GrupoEconomicoDTO grupoEconomicoDTO);
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param>
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param>
         /// <returns>Task of DetalheOperacaoResponse</returns>
         System.Threading.Tasks.Task<DetalheOperacaoResponse> ConsultaOperacaoUsingGETAsync (long? id);
 
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param>
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param>
         /// <returns>Task of ApiResponse (DetalheOperacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DetalheOperacaoResponse>> ConsultaOperacaoUsingGETAsyncWithHttpInfo (long? id);
         
@@ -1529,10 +1599,10 @@ namespace Conductor.Pier.Api
         /// Consultar Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <returns>Task of OrigemComercialResponse</returns>
         System.Threading.Tasks.Task<OrigemComercialResponse> ConsultarOrigemComercialUsingGETAsync (long? id);
 
@@ -1540,10 +1610,10 @@ namespace Conductor.Pier.Api
         /// Consultar Origem Comercial
         /// </summary>
         /// <remarks>
-        /// Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <returns>Task of ApiResponse (OrigemComercialResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrigemComercialResponse>> ConsultarOrigemComercialUsingGETAsyncWithHttpInfo (long? id);
         
@@ -1556,7 +1626,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of EstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET16Async (long? id);
+        System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET17Async (long? id);
 
         /// <summary>
         /// Consultar estabelecimento por id
@@ -1567,259 +1637,259 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse (EstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico
+        /// Consultar grupo econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>Task of GrupoEconomicoResponse</returns>
-        System.Threading.Tasks.Task<GrupoEconomicoResponse> ConsultarUsingGET18Async (long? id);
+        System.Threading.Tasks.Task<GrupoEconomicoResponse> ConsultarUsingGET19Async (long? id);
 
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico
+        /// Consultar grupo econ\u00F4mico
         /// </summary>
         /// <remarks>
-        /// Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>Task of ApiResponse (GrupoEconomicoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> ConsultarUsingGET18AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> ConsultarUsingGET19AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <returns>Task of MaquinetaResponse</returns>
-        System.Threading.Tasks.Task<MaquinetaResponse> ConsultarUsingGET20Async (long? id);
+        System.Threading.Tasks.Task<MaquinetaResponse> ConsultarUsingGET21Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <returns>Task of ApiResponse (MaquinetaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <returns>Task of OperacaoCredorResponse</returns>
-        System.Threading.Tasks.Task<OperacaoCredorResponse> ConsultarUsingGET21Async (long? id);
+        System.Threading.Tasks.Task<OperacaoCredorResponse> ConsultarUsingGET22Async (long? id);
 
         /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (OperacaoCredorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OperacaoCredorResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<OperacaoCredorResponse>> ConsultarUsingGET22AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado telefone de um estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET29Async (long? id);
+        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET30Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado telefone de um estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET30AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
         /// <returns>Task of TerminalResponse</returns>
-        System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET31Async (long? id);
+        System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET32Async (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo
+        /// Apresenta os dados de um determinado V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param>
         /// <returns>Task of VinculoEstabelecimentoAdquirenteResponse</returns>
-        System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET43Async (long? id);
+        System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET44Async (long? id);
 
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo
+        /// Apresenta os dados de um determinado V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param>
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo
+        /// Desabilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DesabilitarVinculoUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo
+        /// Desabilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DesabilitarVinculoUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DesabilitarVinculoUsingPOST1Async (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
 
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DesabilitarVinculoUsingPOST1AsyncWithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
         
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo
+        /// Habilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> HabilitarVinculoUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo
+        /// Habilitar um V\u00EDnculo
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> HabilitarVinculoUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> HabilitarVinculoUsingPOST1Async (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
 
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> HabilitarVinculoUsingPOST1AsyncWithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist);
         
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param>
         /// <returns>Task of PageOperacaoResponse</returns>
         System.Threading.Tasks.Task<PageOperacaoResponse> ListaOperacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null);
 
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param>
         /// <returns>Task of ApiResponse (PageOperacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageOperacaoResponse>> ListaOperacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null);
         
@@ -1827,12 +1897,12 @@ namespace Conductor.Pier.Api
         /// Lista os MCCs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageMCCResponse</returns>
         System.Threading.Tasks.Task<PageMCCResponse> ListarMCCUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1840,12 +1910,12 @@ namespace Conductor.Pier.Api
         /// Lista os MCCs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageMCCResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageMCCResponse>> ListarMCCUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -1856,32 +1926,32 @@ namespace Conductor.Pier.Api
         /// Lista origens comerciais cadastradas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id da origem comercial (optional)</param>
         /// <param name="nome">Nome da origem comercial (optional)</param>
         /// <param name="status">Indica o status da origem comercial (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param>
         /// <param name="idProduto">Identificador do produto (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param>
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param>
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param>
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param>
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param>
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param>
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param>
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param>
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param>
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param>
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param>
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param>
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param>
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param>
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param>
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param>
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param>
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param>
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param>
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param>
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param>
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param>
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param>
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param>
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param>
         /// <returns>Task of PageOrigemComercialResponse</returns>
         System.Threading.Tasks.Task<PageOrigemComercialResponse> ListarOrigensComerciaisUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null);
@@ -1893,32 +1963,32 @@ namespace Conductor.Pier.Api
         /// Lista origens comerciais cadastradas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id da origem comercial (optional)</param>
         /// <param name="nome">Nome da origem comercial (optional)</param>
         /// <param name="status">Indica o status da origem comercial (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param>
         /// <param name="idProduto">Identificador do produto (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param>
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param>
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param>
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param>
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param>
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param>
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param>
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param>
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param>
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param>
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param>
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param>
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param>
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param>
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param>
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param>
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param>
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param>
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param>
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param>
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param>
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param>
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param>
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param>
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param>
         /// <returns>Task of ApiResponse (PageOrigemComercialResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageOrigemComercialResponse>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null);
@@ -1927,12 +1997,12 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos de adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageEntidadeResponse</returns>
         System.Threading.Tasks.Task<PageEntidadeResponse> ListarTiposAdquirentesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1940,25 +2010,53 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos de adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageEntidadeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageEntidadeResponse>> ListarTiposAdquirentesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de estabelecimentos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param>
+        /// <returns>Task of PageTipoEstabelecimentoResponse</returns>
+        System.Threading.Tasks.Task<PageTipoEstabelecimentoResponse> ListarTiposEstabelecimentosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+
+        /// <summary>
+        /// Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de estabelecimentos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoEstabelecimentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoEstabelecimentoResponse>> ListarTiposEstabelecimentosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
         /// Lista os Tipos de  Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageCampoCodificadoDescricaoResponse</returns>
         System.Threading.Tasks.Task<PageCampoCodificadoDescricaoResponse> ListarTiposMaquinetasUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1966,25 +2064,53 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos de  Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageCampoCodificadoDescricaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageCampoCodificadoDescricaoResponse>> ListarTiposMaquinetasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Listar tipos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param>
+        /// <returns>Task of PageTipoOrigemComercialResponse</returns>
+        System.Threading.Tasks.Task<PageTipoOrigemComercialResponse> ListarTiposOrigensComerciaisUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+
+        /// <summary>
+        /// Listar tipos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os tipos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoOrigemComercialResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoOrigemComercialResponse>> ListarTiposOrigensComerciaisUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Lista os Tipos Terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTipoTerminalResponse</returns>
         System.Threading.Tasks.Task<PageTipoTerminalResponse> ListarTiposTerminaisUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1992,12 +2118,12 @@ namespace Conductor.Pier.Api
         /// Lista os Tipos Terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTerminalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTipoTerminalResponse>> ListarTiposTerminaisUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -2005,118 +2131,118 @@ namespace Conductor.Pier.Api
         /// Lista Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Lista todas os Estabelecimentos
+        /// Lista todos os Estabelecimentos
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param>
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param>
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param>
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param>
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param>
         /// <param name="nome">Nome do Estabelecimento. (optional)</param>
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param>
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param>
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param>
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param>
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param>
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param>
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param>
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param>
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param>
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param>
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param>
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param>
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param>
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param>
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param>
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param>
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param>
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param>
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param>
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param>
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param>
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param>
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param>
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param>
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param>
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param>
         /// <returns>Task of PageEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<PageEstabelecimentoResponse> ListarUsingGET21Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
+        System.Threading.Tasks.Task<PageEstabelecimentoResponse> ListarUsingGET22Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
 
         /// <summary>
         /// Lista Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Lista todas os Estabelecimentos
+        /// Lista todos os Estabelecimentos
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param>
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param>
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param>
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param>
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param>
         /// <param name="nome">Nome do Estabelecimento. (optional)</param>
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param>
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param>
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param>
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param>
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param>
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param>
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param>
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param>
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param>
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param>
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param>
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param>
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param>
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param>
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param>
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param>
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param>
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param>
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param>
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param>
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param>
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param>
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param>
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param>
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param>
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param>
         /// <returns>Task of ApiResponse (PageEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageEstabelecimentoResponse>> ListarUsingGET21AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
+        System.Threading.Tasks.Task<ApiResponse<PageEstabelecimentoResponse>> ListarUsingGET22AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null);
         
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos
+        /// Listar grupos econ\u00F4micos
         /// </summary>
         /// <remarks>
-        /// Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Lista grupos econ\u00F4micos cadastrados. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
         /// <param name="nomeCredor">Nome do credor (optional)</param>
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param>
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param>
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param>
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param>
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param>
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param>
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param>
+        /// <param name="banco">C\u00F3digo do banco (optional)</param>
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param>
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param>
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param>
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param>
@@ -2131,30 +2257,30 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param>
         /// <param name="taxaBanco">Taxa do Banco (optional)</param>
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param>
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param>
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param>
         /// <returns>Task of PageGrupoEconomicoResponse</returns>
-        System.Threading.Tasks.Task<PageGrupoEconomicoResponse> ListarUsingGET23Async (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
+        System.Threading.Tasks.Task<PageGrupoEconomicoResponse> ListarUsingGET24Async (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
 
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos
+        /// Listar grupos econ\u00F4micos
         /// </summary>
         /// <remarks>
-        /// Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Lista grupos econ\u00F4micos cadastrados. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
         /// <param name="nomeCredor">Nome do credor (optional)</param>
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param>
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param>
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param>
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param>
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param>
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param>
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param>
+        /// <param name="banco">C\u00F3digo do banco (optional)</param>
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param>
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param>
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param>
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param>
@@ -2169,37 +2295,65 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param>
         /// <param name="taxaBanco">Taxa do Banco (optional)</param>
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param>
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param>
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoEconomicoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageGrupoEconomicoResponse>> ListarUsingGET23AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
+        System.Threading.Tasks.Task<ApiResponse<PageGrupoEconomicoResponse>> ListarUsingGET24AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null);
+        
+        /// <summary>
+        /// Listar grupos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os grupos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
+        /// <returns>Task of PageGrupoOrigemComercialResponse</returns>
+        System.Threading.Tasks.Task<PageGrupoOrigemComercialResponse> ListarUsingGET25Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+
+        /// <summary>
+        /// Listar grupos de origens comerciais
+        /// </summary>
+        /// <remarks>
+        /// Lista os grupos de origens comerciais
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
+        /// <returns>Task of ApiResponse (PageGrupoOrigemComercialResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageGrupoOrigemComercialResponse>> ListarUsingGET25AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Lista as Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of PageMaquinetaResponse</returns>
-        System.Threading.Tasks.Task<PageMaquinetaResponse> ListarUsingGET25Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<PageMaquinetaResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
 
         /// <summary>
         /// Lista as Maquinetas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of ApiResponse (PageMaquinetaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageMaquinetaResponse>> ListarUsingGET25AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageMaquinetaResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// Lista os tipos de moedas do emissor 
@@ -2208,14 +2362,14 @@ namespace Conductor.Pier.Api
         /// Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param>
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param>
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param>
         /// <returns>Task of PageMoedaResponse</returns>
-        System.Threading.Tasks.Task<PageMoedaResponse> ListarUsingGET26Async (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
+        System.Threading.Tasks.Task<PageMoedaResponse> ListarUsingGET28Async (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
 
         /// <summary>
         /// Lista os tipos de moedas do emissor 
@@ -2224,180 +2378,180 @@ namespace Conductor.Pier.Api
         /// Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param>
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param>
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param>
         /// <returns>Task of ApiResponse (PageMoedaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageMoedaResponse>> ListarUsingGET26AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageMoedaResponse>> ListarUsingGET28AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null);
         
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as Regras Opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param>
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param>
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param>
         /// <returns>Task of PageOperacaoCredorResponse</returns>
-        System.Threading.Tasks.Task<PageOperacaoCredorResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
+        System.Threading.Tasks.Task<PageOperacaoCredorResponse> ListarUsingGET29Async (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
 
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as Regras Opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param>
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param>
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param>
         /// <returns>Task of ApiResponse (PageOperacaoCredorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOperacaoCredorResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
+        System.Threading.Tasks.Task<ApiResponse<PageOperacaoCredorResponse>> ListarUsingGET29AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null);
         
         /// <summary>
         /// Lista os Telefones Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of PageTelefoneEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET38Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
 
         /// <summary>
         /// Lista os Telefones Estabelecimentos
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET38AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// Lista os Terminais cadastrados no Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param>
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param>
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param>
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param>
         /// <returns>Task of PageTerminalResponse</returns>
-        System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
 
         /// <summary>
         /// Lista os Terminais cadastrados no Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param>
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param>
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param>
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param>
         /// <returns>Task of ApiResponse (PageTerminalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
         
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param>
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param>
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param>
         /// <returns>Task of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET53Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
 
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param>
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param>
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoEstabelecimentoAdquirenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET53AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
         
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param>
         /// <returns>Task of PageVinculoOperacaoResponse</returns>
-        System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET52Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET54Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
 
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoOperacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET52AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET54AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
         
         /// <summary>
         /// Realiza o cadastro de uma nova maquineta para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param>
@@ -2408,7 +2562,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de uma nova maquineta para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param>
@@ -2416,10 +2570,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> SalvarUsingPOST16AsyncWithHttpInfo (MaquinetaPersist maquinetaPersist);
         
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param>
@@ -2427,10 +2581,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<OperacaoCredorResponse> SalvarUsingPOST17Async (OperacaoCredorPersist oprecaoCredorPersist);
 
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param>
@@ -2441,35 +2595,29 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo telefone para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> SalvarUsingPOST22Async (long? idEstabelecimento, string ddd, string telefone, string ramal = null);
+        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> SalvarUsingPOST22Async (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist);
 
         /// <summary>
         /// Realiza o cadastro de um novo telefone para um estabelecimento 
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> SalvarUsingPOST22AsyncWithHttpInfo (long? idEstabelecimento, string ddd, string telefone, string ramal = null);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> SalvarUsingPOST22AsyncWithHttpInfo (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist);
         
         /// <summary>
         /// Realiza o cadastro de um novo Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param>
@@ -2480,7 +2628,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo Terminal
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param>
@@ -2491,7 +2639,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
@@ -2502,7 +2650,7 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
@@ -2605,7 +2753,7 @@ namespace Conductor.Pier.Api
         /// Alterar Origem Comercial Altera uma origem comercial.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param> 
         /// <param name="origemComercialUpdate">origemComercialUpdate</param> 
         /// <returns>OrigemComercialResponse</returns>
         public OrigemComercialResponse AlterarOrigemComercialUsingPUT (long? id, OrigemComercialUpdate origemComercialUpdate)
@@ -2618,7 +2766,7 @@ namespace Conductor.Pier.Api
         /// Alterar Origem Comercial Altera uma origem comercial.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param> 
         /// <param name="origemComercialUpdate">origemComercialUpdate</param> 
         /// <returns>ApiResponse of OrigemComercialResponse</returns>
         public ApiResponse< OrigemComercialResponse > AlterarOrigemComercialUsingPUTWithHttpInfo (long? id, OrigemComercialUpdate origemComercialUpdate)
@@ -2698,7 +2846,7 @@ namespace Conductor.Pier.Api
         /// Alterar Origem Comercial Altera uma origem comercial.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <param name="origemComercialUpdate">origemComercialUpdate</param>
         /// <returns>Task of OrigemComercialResponse</returns>
         public async System.Threading.Tasks.Task<OrigemComercialResponse> AlterarOrigemComercialUsingPUTAsync (long? id, OrigemComercialUpdate origemComercialUpdate)
@@ -2712,7 +2860,7 @@ namespace Conductor.Pier.Api
         /// Alterar Origem Comercial Altera uma origem comercial.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <param name="origemComercialUpdate">origemComercialUpdate</param>
         /// <returns>Task of ApiResponse (OrigemComercialResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrigemComercialResponse>> AlterarOrigemComercialUsingPUTAsyncWithHttpInfo (long? id, OrigemComercialUpdate origemComercialUpdate)
@@ -2784,10 +2932,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera uma Maquineta Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Altera uma Maquineta Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param> 
         /// <param name="maquinetaUpdate">maquinetaUpdate</param> 
         /// <returns>MaquinetaResponse</returns>
         public MaquinetaResponse AlterarUsingPUT10 (long? id, MaquinetaUpdate maquinetaUpdate)
@@ -2797,10 +2945,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera uma Maquineta Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Altera uma Maquineta Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param> 
         /// <param name="maquinetaUpdate">maquinetaUpdate</param> 
         /// <returns>ApiResponse of MaquinetaResponse</returns>
         public ApiResponse< MaquinetaResponse > AlterarUsingPUT10WithHttpInfo (long? id, MaquinetaUpdate maquinetaUpdate)
@@ -2877,10 +3025,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera uma Maquineta Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Altera uma Maquineta Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <param name="maquinetaUpdate">maquinetaUpdate</param>
         /// <returns>Task of MaquinetaResponse</returns>
         public async System.Threading.Tasks.Task<MaquinetaResponse> AlterarUsingPUT10Async (long? id, MaquinetaUpdate maquinetaUpdate)
@@ -2891,10 +3039,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera uma Maquineta Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
+        /// Altera uma Maquineta Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
         /// <param name="maquinetaUpdate">maquinetaUpdate</param>
         /// <returns>Task of ApiResponse (MaquinetaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> AlterarUsingPUT10AsyncWithHttpInfo (long? id, MaquinetaUpdate maquinetaUpdate)
@@ -2966,10 +3114,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Altera uma Regra Opera\u00E7\u00E3o Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param> 
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param> 
         /// <returns>OperacaoCredorResponse</returns>
         public OperacaoCredorResponse AlterarUsingPUT11 (long? id, OperacaoCredorUpdate operacaoCredorUpdate)
@@ -2979,10 +3127,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Altera uma Regra Opera\u00E7\u00E3o Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param> 
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param> 
         /// <returns>ApiResponse of OperacaoCredorResponse</returns>
         public ApiResponse< OperacaoCredorResponse > AlterarUsingPUT11WithHttpInfo (long? id, OperacaoCredorUpdate operacaoCredorUpdate)
@@ -3059,10 +3207,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Altera uma Regra Opera\u00E7\u00E3o Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param>
         /// <returns>Task of OperacaoCredorResponse</returns>
         public async System.Threading.Tasks.Task<OperacaoCredorResponse> AlterarUsingPUT11Async (long? id, OperacaoCredorUpdate operacaoCredorUpdate)
@@ -3073,10 +3221,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Altera uma Regra Opera\u00E7\u00E3o Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
         /// <param name="operacaoCredorUpdate">operacaoCredorUpdate</param>
         /// <returns>Task of ApiResponse (OperacaoCredorResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OperacaoCredorResponse>> AlterarUsingPUT11AsyncWithHttpInfo (long? id, OperacaoCredorUpdate operacaoCredorUpdate)
@@ -3148,43 +3296,35 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera um Telefone do estabelecimento Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Altera um Telefone do estabelecimento Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param> 
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param> 
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param> 
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param> 
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param> 
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        public TelefoneEstabelecimentoResponse AlterarUsingPUT15 (long? id, string ddd, string telefone, string ramal = null)
+        public TelefoneEstabelecimentoResponse AlterarUsingPUT15 (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = AlterarUsingPUT15WithHttpInfo(id, ddd, telefone, ramal);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = AlterarUsingPUT15WithHttpInfo(id, telefoneEstabelecimentoUpdate);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Altera um Telefone do estabelecimento Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Altera um Telefone do estabelecimento Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param> 
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param> 
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param> 
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param> 
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param> 
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        public ApiResponse< TelefoneEstabelecimentoResponse > AlterarUsingPUT15WithHttpInfo (long? id, string ddd, string telefone, string ramal = null)
+        public ApiResponse< TelefoneEstabelecimentoResponse > AlterarUsingPUT15WithHttpInfo (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->AlterarUsingPUT15");
             
-            // verify the required parameter 'ddd' is set
-            if (ddd == null)
-                throw new ApiException(400, "Missing required parameter 'ddd' when calling EstabelecimentoApi->AlterarUsingPUT15");
-            
-            // verify the required parameter 'telefone' is set
-            if (telefone == null)
-                throw new ApiException(400, "Missing required parameter 'telefone' when calling EstabelecimentoApi->AlterarUsingPUT15");
+            // verify the required parameter 'telefoneEstabelecimentoUpdate' is set
+            if (telefoneEstabelecimentoUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'telefoneEstabelecimentoUpdate' when calling EstabelecimentoApi->AlterarUsingPUT15");
             
     
             var localVarPath = "/api/telefones-estabelecimentos/{id}";
@@ -3215,13 +3355,17 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
-            if (ddd != null) localVarQueryParams.Add("ddd", Configuration.ApiClient.ParameterToString(ddd)); // query parameter
-            if (telefone != null) localVarQueryParams.Add("telefone", Configuration.ApiClient.ParameterToString(telefone)); // query parameter
-            if (ramal != null) localVarQueryParams.Add("ramal", Configuration.ApiClient.ParameterToString(ramal)); // query parameter
             
             
             
-            
+            if (telefoneEstabelecimentoUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(telefoneEstabelecimentoUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = telefoneEstabelecimentoUpdate; // byte array
+            }
 
             
     
@@ -3245,38 +3389,32 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera um Telefone do estabelecimento Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Altera um Telefone do estabelecimento Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> AlterarUsingPUT15Async (long? id, string ddd, string telefone, string ramal = null)
+        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> AlterarUsingPUT15Async (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await AlterarUsingPUT15AsyncWithHttpInfo(id, ddd, telefone, ramal);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await AlterarUsingPUT15AsyncWithHttpInfo(id, telefoneEstabelecimentoUpdate);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Altera um Telefone do estabelecimento Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+        /// Altera um Telefone do estabelecimento Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
+        /// <param name="telefoneEstabelecimentoUpdate">telefoneEstabelecimentoUpdate</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> AlterarUsingPUT15AsyncWithHttpInfo (long? id, string ddd, string telefone, string ramal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> AlterarUsingPUT15AsyncWithHttpInfo (long? id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT15");
-            // verify the required parameter 'ddd' is set
-            if (ddd == null) throw new ApiException(400, "Missing required parameter 'ddd' when calling AlterarUsingPUT15");
-            // verify the required parameter 'telefone' is set
-            if (telefone == null) throw new ApiException(400, "Missing required parameter 'telefone' when calling AlterarUsingPUT15");
+            // verify the required parameter 'telefoneEstabelecimentoUpdate' is set
+            if (telefoneEstabelecimentoUpdate == null) throw new ApiException(400, "Missing required parameter 'telefoneEstabelecimentoUpdate' when calling AlterarUsingPUT15");
             
     
             var localVarPath = "/api/telefones-estabelecimentos/{id}";
@@ -3307,13 +3445,17 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
-            if (ddd != null) localVarQueryParams.Add("ddd", Configuration.ApiClient.ParameterToString(ddd)); // query parameter
-            if (telefone != null) localVarQueryParams.Add("telefone", Configuration.ApiClient.ParameterToString(telefone)); // query parameter
-            if (ramal != null) localVarQueryParams.Add("ramal", Configuration.ApiClient.ParameterToString(ramal)); // query parameter
             
             
             
-            
+            if (telefoneEstabelecimentoUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(telefoneEstabelecimentoUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = telefoneEstabelecimentoUpdate; // byte array
+            }
 
             
 
@@ -3336,10 +3478,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera um Terminal Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Altera um Terminal Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param> 
         /// <param name="terminalUpdate">terminalUpdate</param> 
         /// <returns>TerminalResponse</returns>
         public TerminalResponse AlterarUsingPUT17 (long? id, TerminalUpdate terminalUpdate)
@@ -3349,10 +3491,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera um Terminal Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Altera um Terminal Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param> 
         /// <param name="terminalUpdate">terminalUpdate</param> 
         /// <returns>ApiResponse of TerminalResponse</returns>
         public ApiResponse< TerminalResponse > AlterarUsingPUT17WithHttpInfo (long? id, TerminalUpdate terminalUpdate)
@@ -3429,10 +3571,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera um Terminal Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Altera um Terminal Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param>
         /// <param name="terminalUpdate">terminalUpdate</param>
         /// <returns>Task of TerminalResponse</returns>
         public async System.Threading.Tasks.Task<TerminalResponse> AlterarUsingPUT17Async (long? id, TerminalUpdate terminalUpdate)
@@ -3443,10 +3585,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera um Terminal Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+        /// Altera um Terminal Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).</param>
         /// <param name="terminalUpdate">terminalUpdate</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> AlterarUsingPUT17AsyncWithHttpInfo (long? id, TerminalUpdate terminalUpdate)
@@ -3700,10 +3842,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico Altera um grupo econ\u00C3\u00B4mico.
+        /// Alterar Grupo Econ\u00F4mico Altera um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param> 
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param> 
         /// <returns>GrupoEconomicoResponse</returns>
         public GrupoEconomicoResponse AlterarUsingPUT8 (long? id, GrupoEconomicoDTO grupoEconomicoDTO)
@@ -3713,10 +3855,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico Altera um grupo econ\u00C3\u00B4mico.
+        /// Alterar Grupo Econ\u00F4mico Altera um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param> 
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param> 
         /// <returns>ApiResponse of GrupoEconomicoResponse</returns>
         public ApiResponse< GrupoEconomicoResponse > AlterarUsingPUT8WithHttpInfo (long? id, GrupoEconomicoDTO grupoEconomicoDTO)
@@ -3793,10 +3935,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico Altera um grupo econ\u00C3\u00B4mico.
+        /// Alterar Grupo Econ\u00F4mico Altera um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>Task of GrupoEconomicoResponse</returns>
         public async System.Threading.Tasks.Task<GrupoEconomicoResponse> AlterarUsingPUT8Async (long? id, GrupoEconomicoDTO grupoEconomicoDTO)
@@ -3807,10 +3949,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar Grupo Econ\u00C3\u00B4mico Altera um grupo econ\u00C3\u00B4mico.
+        /// Alterar Grupo Econ\u00F4mico Altera um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>Task of ApiResponse (GrupoEconomicoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> AlterarUsingPUT8AsyncWithHttpInfo (long? id, GrupoEconomicoDTO grupoEconomicoDTO)
@@ -4222,7 +4364,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastrar Grupo Econ\u00F4mico Cadastra um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param> 
@@ -4234,7 +4376,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastrar Grupo Econ\u00F4mico Cadastra um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param> 
@@ -4308,7 +4450,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastrar Grupo Econ\u00F4mico Cadastra um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param>
@@ -4321,7 +4463,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastrar Grupo Econ\u00C3\u00B4mico Cadastra um grupo econ\u00C3\u00B4mico.
+        /// Cadastrar Grupo Econ\u00F4mico Cadastra um grupo econ\u00F4mico.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="grupoEconomicoDTO">GrupoEconomicoDTO</param>
@@ -4392,10 +4534,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param> 
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param> 
         /// <returns>DetalheOperacaoResponse</returns>
         public DetalheOperacaoResponse ConsultaOperacaoUsingGET (long? id)
         {
@@ -4404,10 +4546,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param> 
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param> 
         /// <returns>ApiResponse of DetalheOperacaoResponse</returns>
         public ApiResponse< DetalheOperacaoResponse > ConsultaOperacaoUsingGETWithHttpInfo (long? id)
         {
@@ -4472,10 +4614,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param>
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param>
         /// <returns>Task of DetalheOperacaoResponse</returns>
         public async System.Threading.Tasks.Task<DetalheOperacaoResponse> ConsultaOperacaoUsingGETAsync (long? id)
         {
@@ -4485,10 +4627,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+        /// Apresenta dados de um determinado tipo de opera\u00E7\u00E3o Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).</param>
+        /// <param name="id">C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).</param>
         /// <returns>Task of ApiResponse (DetalheOperacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DetalheOperacaoResponse>> ConsultaOperacaoUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -4550,10 +4692,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param> 
         /// <returns>OrigemComercialResponse</returns>
         public OrigemComercialResponse ConsultarOrigemComercialUsingGET (long? id)
         {
@@ -4562,10 +4704,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param> 
         /// <returns>ApiResponse of OrigemComercialResponse</returns>
         public ApiResponse< OrigemComercialResponse > ConsultarOrigemComercialUsingGETWithHttpInfo (long? id)
         {
@@ -4630,10 +4772,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <returns>Task of OrigemComercialResponse</returns>
         public async System.Threading.Tasks.Task<OrigemComercialResponse> ConsultarOrigemComercialUsingGETAsync (long? id)
         {
@@ -4643,10 +4785,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar Origem Comercial Consulta uma origem comercial atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da origem comercial</param>
         /// <returns>Task of ApiResponse (OrigemComercialResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrigemComercialResponse>> ConsultarOrigemComercialUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -4713,9 +4855,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
         /// <returns>EstabelecimentoResponse</returns>
-        public EstabelecimentoResponse ConsultarUsingGET16 (long? id)
+        public EstabelecimentoResponse ConsultarUsingGET17 (long? id)
         {
-             ApiResponse<EstabelecimentoResponse> localVarResponse = ConsultarUsingGET16WithHttpInfo(id);
+             ApiResponse<EstabelecimentoResponse> localVarResponse = ConsultarUsingGET17WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4725,12 +4867,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
         /// <returns>ApiResponse of EstabelecimentoResponse</returns>
-        public ApiResponse< EstabelecimentoResponse > ConsultarUsingGET16WithHttpInfo (long? id)
+        public ApiResponse< EstabelecimentoResponse > ConsultarUsingGET17WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET16");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET17");
             
     
             var localVarPath = "/api/estabelecimentos/{id}";
@@ -4776,9 +4918,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<EstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4793,9 +4935,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of EstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET16Async (long? id)
+        public async System.Threading.Tasks.Task<EstabelecimentoResponse> ConsultarUsingGET17Async (long? id)
         {
-             ApiResponse<EstabelecimentoResponse> localVarResponse = await ConsultarUsingGET16AsyncWithHttpInfo(id);
+             ApiResponse<EstabelecimentoResponse> localVarResponse = await ConsultarUsingGET17AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4806,10 +4948,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse (EstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<EstabelecimentoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET16");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET17");
             
     
             var localVarPath = "/api/estabelecimentos/{id}";
@@ -4855,9 +4997,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4866,29 +5008,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar grupo econ\u00F4mico Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param> 
         /// <returns>GrupoEconomicoResponse</returns>
-        public GrupoEconomicoResponse ConsultarUsingGET18 (long? id)
+        public GrupoEconomicoResponse ConsultarUsingGET19 (long? id)
         {
-             ApiResponse<GrupoEconomicoResponse> localVarResponse = ConsultarUsingGET18WithHttpInfo(id);
+             ApiResponse<GrupoEconomicoResponse> localVarResponse = ConsultarUsingGET19WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar grupo econ\u00F4mico Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param> 
         /// <returns>ApiResponse of GrupoEconomicoResponse</returns>
-        public ApiResponse< GrupoEconomicoResponse > ConsultarUsingGET18WithHttpInfo (long? id)
+        public ApiResponse< GrupoEconomicoResponse > ConsultarUsingGET19WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET18");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET19");
             
     
             var localVarPath = "/api/grupos-economicos/{id}";
@@ -4934,9 +5076,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<GrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4946,28 +5088,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar grupo econ\u00F4mico Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>Task of GrupoEconomicoResponse</returns>
-        public async System.Threading.Tasks.Task<GrupoEconomicoResponse> ConsultarUsingGET18Async (long? id)
+        public async System.Threading.Tasks.Task<GrupoEconomicoResponse> ConsultarUsingGET19Async (long? id)
         {
-             ApiResponse<GrupoEconomicoResponse> localVarResponse = await ConsultarUsingGET18AsyncWithHttpInfo(id);
+             ApiResponse<GrupoEconomicoResponse> localVarResponse = await ConsultarUsingGET19AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consultar grupo econ\u00C3\u00B4mico Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
+        /// Consultar grupo econ\u00F4mico Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>Task of ApiResponse (GrupoEconomicoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> ConsultarUsingGET18AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> ConsultarUsingGET19AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET18");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET19");
             
     
             var localVarPath = "/api/grupos-economicos/{id}";
@@ -5013,9 +5155,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5024,182 +5166,24 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de uma determinada maquineta Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de uma determinada maquineta Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param> 
         /// <returns>MaquinetaResponse</returns>
-        public MaquinetaResponse ConsultarUsingGET20 (long? id)
+        public MaquinetaResponse ConsultarUsingGET21 (long? id)
         {
-             ApiResponse<MaquinetaResponse> localVarResponse = ConsultarUsingGET20WithHttpInfo(id);
+             ApiResponse<MaquinetaResponse> localVarResponse = ConsultarUsingGET21WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de uma determinada maquineta Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de uma determinada maquineta Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param> 
         /// <returns>ApiResponse of MaquinetaResponse</returns>
-        public ApiResponse< MaquinetaResponse > ConsultarUsingGET20WithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET20");
-            
-    
-            var localVarPath = "/api/maquinetas/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<MaquinetaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (MaquinetaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaquinetaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta os dados de uma determinada maquineta Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
-        /// <returns>Task of MaquinetaResponse</returns>
-        public async System.Threading.Tasks.Task<MaquinetaResponse> ConsultarUsingGET20Async (long? id)
-        {
-             ApiResponse<MaquinetaResponse> localVarResponse = await ConsultarUsingGET20AsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta os dados de uma determinada maquineta Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).</param>
-        /// <returns>Task of ApiResponse (MaquinetaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET20");
-            
-    
-            var localVarPath = "/api/maquinetas/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<MaquinetaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (MaquinetaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaquinetaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param> 
-        /// <returns>OperacaoCredorResponse</returns>
-        public OperacaoCredorResponse ConsultarUsingGET21 (long? id)
-        {
-             ApiResponse<OperacaoCredorResponse> localVarResponse = ConsultarUsingGET21WithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param> 
-        /// <returns>ApiResponse of OperacaoCredorResponse</returns>
-        public ApiResponse< OperacaoCredorResponse > ConsultarUsingGET21WithHttpInfo (long? id)
+        public ApiResponse< MaquinetaResponse > ConsultarUsingGET21WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -5207,7 +5191,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET21");
             
     
-            var localVarPath = "/api/regras-operacoes-estabelecimentos/{id}";
+            var localVarPath = "/api/maquinetas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5254,39 +5238,39 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<OperacaoCredorResponse>(localVarStatusCode,
+            return new ApiResponse<MaquinetaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OperacaoCredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperacaoCredorResponse)));
+                (MaquinetaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaquinetaResponse)));
             
         }
 
         
         /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de uma determinada maquineta Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
-        /// <returns>Task of OperacaoCredorResponse</returns>
-        public async System.Threading.Tasks.Task<OperacaoCredorResponse> ConsultarUsingGET21Async (long? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
+        /// <returns>Task of MaquinetaResponse</returns>
+        public async System.Threading.Tasks.Task<MaquinetaResponse> ConsultarUsingGET21Async (long? id)
         {
-             ApiResponse<OperacaoCredorResponse> localVarResponse = await ConsultarUsingGET21AsyncWithHttpInfo(id);
+             ApiResponse<MaquinetaResponse> localVarResponse = await ConsultarUsingGET21AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de uma determinada maquineta Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
-        /// <returns>Task of ApiResponse (OperacaoCredorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OperacaoCredorResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).</param>
+        /// <returns>Task of ApiResponse (MaquinetaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MaquinetaResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET21");
             
     
-            var localVarPath = "/api/regras-operacoes-estabelecimentos/{id}";
+            var localVarPath = "/api/maquinetas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5333,6 +5317,164 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+            return new ApiResponse<MaquinetaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaquinetaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaquinetaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param> 
+        /// <returns>OperacaoCredorResponse</returns>
+        public OperacaoCredorResponse ConsultarUsingGET22 (long? id)
+        {
+             ApiResponse<OperacaoCredorResponse> localVarResponse = ConsultarUsingGET22WithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param> 
+        /// <returns>ApiResponse of OperacaoCredorResponse</returns>
+        public ApiResponse< OperacaoCredorResponse > ConsultarUsingGET22WithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET22");
+            
+    
+            var localVarPath = "/api/regras-operacoes-estabelecimentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<OperacaoCredorResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OperacaoCredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperacaoCredorResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
+        /// <returns>Task of OperacaoCredorResponse</returns>
+        public async System.Threading.Tasks.Task<OperacaoCredorResponse> ConsultarUsingGET22Async (long? id)
+        {
+             ApiResponse<OperacaoCredorResponse> localVarResponse = await ConsultarUsingGET22AsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).</param>
+        /// <returns>Task of ApiResponse (OperacaoCredorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OperacaoCredorResponse>> ConsultarUsingGET22AsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET22");
+            
+    
+            var localVarPath = "/api/regras-operacoes-estabelecimentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
             return new ApiResponse<OperacaoCredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OperacaoCredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperacaoCredorResponse)));
@@ -5340,29 +5482,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param> 
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        public TelefoneEstabelecimentoResponse ConsultarUsingGET29 (long? id)
+        public TelefoneEstabelecimentoResponse ConsultarUsingGET30 (long? id)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = ConsultarUsingGET29WithHttpInfo(id);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = ConsultarUsingGET30WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param> 
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        public ApiResponse< TelefoneEstabelecimentoResponse > ConsultarUsingGET29WithHttpInfo (long? id)
+        public ApiResponse< TelefoneEstabelecimentoResponse > ConsultarUsingGET30WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET29");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET30");
             
     
             var localVarPath = "/api/telefones-estabelecimentos/{id}";
@@ -5408,9 +5550,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5420,28 +5562,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET29Async (long? id)
+        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET30Async (long? id)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await ConsultarUsingGET29AsyncWithHttpInfo(id);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await ConsultarUsingGET30AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado telefone de um estabelecimento Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET30AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET29");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET30");
             
     
             var localVarPath = "/api/telefones-estabelecimentos/{id}";
@@ -5487,9 +5629,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5498,29 +5640,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de um determinado Terminal Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Terminal Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param> 
         /// <returns>TerminalResponse</returns>
-        public TerminalResponse ConsultarUsingGET31 (long? id)
+        public TerminalResponse ConsultarUsingGET32 (long? id)
         {
-             ApiResponse<TerminalResponse> localVarResponse = ConsultarUsingGET31WithHttpInfo(id);
+             ApiResponse<TerminalResponse> localVarResponse = ConsultarUsingGET32WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Terminal Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Terminal Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param> 
         /// <returns>ApiResponse of TerminalResponse</returns>
-        public ApiResponse< TerminalResponse > ConsultarUsingGET31WithHttpInfo (long? id)
+        public ApiResponse< TerminalResponse > ConsultarUsingGET32WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET31");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET32");
             
     
             var localVarPath = "/api/terminais/{id}";
@@ -5566,9 +5708,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5578,28 +5720,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado Terminal Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Terminal Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
         /// <returns>Task of TerminalResponse</returns>
-        public async System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET31Async (long? id)
+        public async System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET32Async (long? id)
         {
-             ApiResponse<TerminalResponse> localVarResponse = await ConsultarUsingGET31AsyncWithHttpInfo(id);
+             ApiResponse<TerminalResponse> localVarResponse = await ConsultarUsingGET32AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Terminal Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Terminal Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET31");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET32");
             
     
             var localVarPath = "/api/terminais/{id}";
@@ -5645,9 +5787,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5656,29 +5798,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado V\u00EDnculo Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param> 
         /// <returns>VinculoEstabelecimentoAdquirenteResponse</returns>
-        public VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET43 (long? id)
+        public VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET44 (long? id)
         {
-             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = ConsultarUsingGET43WithHttpInfo(id);
+             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = ConsultarUsingGET44WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado V\u00EDnculo Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param> 
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
-        public ApiResponse< VinculoEstabelecimentoAdquirenteResponse > ConsultarUsingGET43WithHttpInfo (long? id)
+        public ApiResponse< VinculoEstabelecimentoAdquirenteResponse > ConsultarUsingGET44WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET43");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarUsingGET44");
             
     
             var localVarPath = "/api/adquirentes-estabelecimento/{id}";
@@ -5724,9 +5866,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5736,28 +5878,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado V\u00EDnculo Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param>
         /// <returns>Task of VinculoEstabelecimentoAdquirenteResponse</returns>
-        public async System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET43Async (long? id)
+        public async System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET44Async (long? id)
         {
-             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ConsultarUsingGET43AsyncWithHttpInfo(id);
+             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ConsultarUsingGET44AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado V\u00C3\u00ADnculo Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado V\u00EDnculo Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).</param>
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET43");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET44");
             
     
             var localVarPath = "/api/adquirentes-estabelecimento/{id}";
@@ -5803,9 +5945,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5814,10 +5956,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Desabilitar um V\u00EDnculo Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param> 
         /// <returns>Object</returns>
         public Object DesabilitarVinculoUsingPOST (long? id)
         {
@@ -5826,10 +5968,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Desabilitar um V\u00EDnculo Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DesabilitarVinculoUsingPOSTWithHttpInfo (long? id)
         {
@@ -5894,10 +6036,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Desabilitar um V\u00EDnculo Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DesabilitarVinculoUsingPOSTAsync (long? id)
         {
@@ -5907,10 +6049,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desabilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Desabilitar um V\u00EDnculo Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DesabilitarVinculoUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -5972,10 +6114,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param> 
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param> 
         /// <returns>Object</returns>
         public Object DesabilitarVinculoUsingPOST1 (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -5985,10 +6127,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param> 
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DesabilitarVinculoUsingPOST1WithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6065,10 +6207,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DesabilitarVinculoUsingPOST1Async (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6079,10 +6221,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
+        /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite desabilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DesabilitarVinculoUsingPOST1AsyncWithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6154,10 +6296,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Habilitar um V\u00EDnculo Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param> 
         /// <returns>Object</returns>
         public Object HabilitarVinculoUsingPOST (long? id)
         {
@@ -6166,10 +6308,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Habilitar um V\u00EDnculo Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > HabilitarVinculoUsingPOSTWithHttpInfo (long? id)
         {
@@ -6234,10 +6376,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Habilitar um V\u00EDnculo Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> HabilitarVinculoUsingPOSTAsync (long? id)
         {
@@ -6247,10 +6389,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Habilitar um V\u00C3\u00ADnculo Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
+        /// Habilitar um V\u00EDnculo Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> HabilitarVinculoUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -6312,10 +6454,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param> 
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param> 
         /// <returns>Object</returns>
         public Object HabilitarVinculoUsingPOST1 (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6325,10 +6467,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param> 
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > HabilitarVinculoUsingPOST1WithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6405,10 +6547,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> HabilitarVinculoUsingPOST1Async (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6419,10 +6561,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
+        /// Habilitar um v\u00EDnculo opera\u00E7\u00E3o Este m\u00E9todo permite habilitar um v\u00EDnculo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="vinculoOperacaoPersist">vinculoOperacaoPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> HabilitarVinculoUsingPOST1AsyncWithHttpInfo (long? id, VinculoOperacaoPersist vinculoOperacaoPersist)
@@ -6494,14 +6636,14 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista Este recurso permite listar as opera\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param> 
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param> 
         /// <returns>PageOperacaoResponse</returns>
         public PageOperacaoResponse ListaOperacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null)
         {
@@ -6510,14 +6652,14 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista Este recurso permite listar as opera\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param> 
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param> 
         /// <returns>ApiResponse of PageOperacaoResponse</returns>
         public ApiResponse< PageOperacaoResponse > ListaOperacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null)
         {
@@ -6582,14 +6724,14 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista Este recurso permite listar as opera\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param>
         /// <returns>Task of PageOperacaoResponse</returns>
         public async System.Threading.Tasks.Task<PageOperacaoResponse> ListaOperacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null)
         {
@@ -6599,14 +6741,14 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta dados de opera\u00E7\u00F5es em uma lista Este recurso permite listar as opera\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="codigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador (optional)</param>
         /// <returns>Task of ApiResponse (PageOperacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageOperacaoResponse>> ListaOperacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string codigoProcessamento = null)
         {
@@ -6670,12 +6812,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os MCCs Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Lista os MCCs Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageMCCResponse</returns>
         public PageMCCResponse ListarMCCUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -6684,12 +6826,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os MCCs Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Lista os MCCs Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageMCCResponse</returns>
         public ApiResponse< PageMCCResponse > ListarMCCUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -6752,12 +6894,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os MCCs Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Lista os MCCs Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageMCCResponse</returns>
         public async System.Threading.Tasks.Task<PageMCCResponse> ListarMCCUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -6767,12 +6909,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os MCCs Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+        /// Lista os MCCs Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageMCCResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageMCCResponse>> ListarMCCUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -6837,32 +6979,32 @@ namespace Conductor.Pier.Api
         /// Listar Origens Comerciais Lista origens comerciais cadastradas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Id da origem comercial (optional)</param> 
         /// <param name="nome">Nome da origem comercial (optional)</param> 
         /// <param name="status">Indica o status da origem comercial (optional)</param> 
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param> 
         /// <param name="idProduto">Identificador do produto (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param> 
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param> 
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param> 
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param> 
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param> 
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param> 
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param> 
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param> 
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param> 
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param> 
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param> 
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param> 
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param> 
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param> 
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param> 
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param> 
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param> 
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param> 
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param> 
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param> 
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param> 
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param> 
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param> 
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param> 
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param> 
         /// <returns>PageOrigemComercialResponse</returns>
         public PageOrigemComercialResponse ListarOrigensComerciaisUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null)
@@ -6875,32 +7017,32 @@ namespace Conductor.Pier.Api
         /// Listar Origens Comerciais Lista origens comerciais cadastradas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Id da origem comercial (optional)</param> 
         /// <param name="nome">Nome da origem comercial (optional)</param> 
         /// <param name="status">Indica o status da origem comercial (optional)</param> 
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param> 
         /// <param name="idProduto">Identificador do produto (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param> 
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param> 
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param> 
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param> 
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param> 
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param> 
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param> 
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param> 
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param> 
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param> 
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param> 
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param> 
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param> 
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param> 
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param> 
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param> 
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param> 
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param> 
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param> 
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param> 
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param> 
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param> 
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param> 
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param> 
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param> 
         /// <returns>ApiResponse of PageOrigemComercialResponse</returns>
         public ApiResponse< PageOrigemComercialResponse > ListarOrigensComerciaisUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null)
@@ -6991,32 +7133,32 @@ namespace Conductor.Pier.Api
         /// Listar Origens Comerciais Lista origens comerciais cadastradas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id da origem comercial (optional)</param>
         /// <param name="nome">Nome da origem comercial (optional)</param>
         /// <param name="status">Indica o status da origem comercial (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param>
         /// <param name="idProduto">Identificador do produto (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param>
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param>
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param>
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param>
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param>
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param>
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param>
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param>
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param>
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param>
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param>
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param>
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param>
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param>
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param>
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param>
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param>
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param>
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param>
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param>
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param>
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param>
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param>
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param>
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param>
         /// <returns>Task of PageOrigemComercialResponse</returns>
         public async System.Threading.Tasks.Task<PageOrigemComercialResponse> ListarOrigensComerciaisUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null)
@@ -7030,32 +7172,32 @@ namespace Conductor.Pier.Api
         /// Listar Origens Comerciais Lista origens comerciais cadastradas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id da origem comercial (optional)</param>
         /// <param name="nome">Nome da origem comercial (optional)</param>
         /// <param name="status">Indica o status da origem comercial (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento (optional)</param>
         /// <param name="idProduto">Identificador do produto (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da origem comercial (optional)</param>
         /// <param name="idTipoOrigemComercial">Identificador do tipo de origem comercial (optional)</param>
         /// <param name="idGrupoOrigemComercial">Identificador do grupo de origem comercial (optional)</param>
-        /// <param name="flagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata (optional)</param>
-        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico (optional)</param>
-        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio (optional)</param>
-        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo (optional)</param>
-        /// <param name="usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="flagOrigemExterna">Indica se \u00C3\u00A9 origem externa (optional)</param>
-        /// <param name="flagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="flagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o (optional)</param>
+        /// <param name="flagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata (optional)</param>
+        /// <param name="nomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico (optional)</param>
+        /// <param name="flagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio (optional)</param>
+        /// <param name="flagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo (optional)</param>
+        /// <param name="usuario">Usu\u00E1rio para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="senha">Senha para autentica\u00E7\u00E3o (optional)</param>
+        /// <param name="flagOrigemExterna">Indica se \u00E9 origem externa (optional)</param>
+        /// <param name="flagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o (optional)</param>
         /// <param name="flagEnviaFaturaUsuario">Indica se envia fatura (optional)</param>
-        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento (optional)</param>
-        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio (optional)</param>
+        /// <param name="flagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento (optional)</param>
+        /// <param name="flagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio (optional)</param>
         /// <param name="flagDigitalizarDoc">Indica se digitaliza documento (optional)</param>
         /// <param name="flagEmbossingLoja">Indica se realiza embossing em loja (optional)</param>
-        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via (optional)</param>
+        /// <param name="flagConsultaPrevia">Indica se realiza consulta pr\u00E9via (optional)</param>
         /// <param name="tipoPessoa">Tipo de pessoa (optional)</param>
         /// <returns>Task of ApiResponse (PageOrigemComercialResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageOrigemComercialResponse>> ListarOrigensComerciaisUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? status = null, long? idEstabelecimento = null, long? idProduto = null, string descricao = null, long? idTipoOrigemComercial = null, long? idGrupoOrigemComercial = null, bool? flagPreAprovado = null, bool? flagAprovacaoImediata = null, string nomeFantasiaPlastico = null, bool? flagCartaoProvisorio = null, bool? flagCartaoDefinitivo = null, string usuario = null, string senha = null, bool? flagOrigemExterna = null, bool? flagModificado = null, bool? flagEnviaFaturaUsuario = null, bool? flagCreditoFaturamento = null, bool? flagConcedeLimiteProvisorio = null, bool? flagDigitalizarDoc = null, bool? flagEmbossingLoja = null, bool? flagConsultaPrevia = null, string tipoPessoa = null)
@@ -7142,12 +7284,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Tipos de adquirentes Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Lista os Tipos de adquirentes Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageEntidadeResponse</returns>
         public PageEntidadeResponse ListarTiposAdquirentesUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7156,12 +7298,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Tipos de adquirentes Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Lista os Tipos de adquirentes Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageEntidadeResponse</returns>
         public ApiResponse< PageEntidadeResponse > ListarTiposAdquirentesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7224,12 +7366,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Tipos de adquirentes Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Lista os Tipos de adquirentes Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageEntidadeResponse</returns>
         public async System.Threading.Tasks.Task<PageEntidadeResponse> ListarTiposAdquirentesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7239,12 +7381,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Tipos de adquirentes Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+        /// Lista os Tipos de adquirentes Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageEntidadeResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageEntidadeResponse>> ListarTiposAdquirentesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7306,12 +7448,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Tipos de  Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Lista os tipos de estabelecimentos Lista os tipos de estabelecimentos
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param> 
+        /// <returns>PageTipoEstabelecimentoResponse</returns>
+        public PageTipoEstabelecimentoResponse ListarTiposEstabelecimentosUsingGET (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+             ApiResponse<PageTipoEstabelecimentoResponse> localVarResponse = ListarTiposEstabelecimentosUsingGETWithHttpInfo(sort, page, limit, descricao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os tipos de estabelecimentos Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param> 
+        /// <returns>ApiResponse of PageTipoEstabelecimentoResponse</returns>
+        public ApiResponse< PageTipoEstabelecimentoResponse > ListarTiposEstabelecimentosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+            
+    
+            var localVarPath = "/api/tipos-estabelecimentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEstabelecimentosUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEstabelecimentosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTipoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoEstabelecimentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os tipos de estabelecimentos Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param>
+        /// <returns>Task of PageTipoEstabelecimentoResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoEstabelecimentoResponse> ListarTiposEstabelecimentosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+             ApiResponse<PageTipoEstabelecimentoResponse> localVarResponse = await ListarTiposEstabelecimentosUsingGETAsyncWithHttpInfo(sort, page, limit, descricao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os tipos de estabelecimentos Lista os tipos de estabelecimentos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de estabelecimento. (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoEstabelecimentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoEstabelecimentoResponse>> ListarTiposEstabelecimentosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+            
+    
+            var localVarPath = "/api/tipos-estabelecimentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEstabelecimentosUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEstabelecimentosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTipoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoEstabelecimentoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os Tipos de  Maquinetas Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageCampoCodificadoDescricaoResponse</returns>
         public PageCampoCodificadoDescricaoResponse ListarTiposMaquinetasUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7320,12 +7632,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Tipos de  Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Lista os Tipos de  Maquinetas Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageCampoCodificadoDescricaoResponse</returns>
         public ApiResponse< PageCampoCodificadoDescricaoResponse > ListarTiposMaquinetasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7388,12 +7700,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Tipos de  Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Lista os Tipos de  Maquinetas Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageCampoCodificadoDescricaoResponse</returns>
         public async System.Threading.Tasks.Task<PageCampoCodificadoDescricaoResponse> ListarTiposMaquinetasUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7403,12 +7715,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Tipos de  Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+        /// Lista os Tipos de  Maquinetas Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageCampoCodificadoDescricaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageCampoCodificadoDescricaoResponse>> ListarTiposMaquinetasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7470,12 +7782,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Tipos Terminais Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Listar tipos de origens comerciais Lista os tipos de origens comerciais
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param> 
+        /// <returns>PageTipoOrigemComercialResponse</returns>
+        public PageTipoOrigemComercialResponse ListarTiposOrigensComerciaisUsingGET (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+             ApiResponse<PageTipoOrigemComercialResponse> localVarResponse = ListarTiposOrigensComerciaisUsingGETWithHttpInfo(sort, page, limit, nome);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar tipos de origens comerciais Lista os tipos de origens comerciais
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param> 
+        /// <returns>ApiResponse of PageTipoOrigemComercialResponse</returns>
+        public ApiResponse< PageTipoOrigemComercialResponse > ListarTiposOrigensComerciaisUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+            
+    
+            var localVarPath = "/api/tipos-origens-comerciais";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOrigensComerciaisUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOrigensComerciaisUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTipoOrigemComercialResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoOrigemComercialResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOrigemComercialResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar tipos de origens comerciais Lista os tipos de origens comerciais
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param>
+        /// <returns>Task of PageTipoOrigemComercialResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoOrigemComercialResponse> ListarTiposOrigensComerciaisUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+             ApiResponse<PageTipoOrigemComercialResponse> localVarResponse = await ListarTiposOrigensComerciaisUsingGETAsyncWithHttpInfo(sort, page, limit, nome);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar tipos de origens comerciais Lista os tipos de origens comerciais
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do tipo de origem comercial (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoOrigemComercialResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOrigemComercialResponse>> ListarTiposOrigensComerciaisUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+            
+    
+            var localVarPath = "/api/tipos-origens-comerciais";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOrigensComerciaisUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOrigensComerciaisUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTipoOrigemComercialResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoOrigemComercialResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoOrigemComercialResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os Tipos Terminais Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTipoTerminalResponse</returns>
         public PageTipoTerminalResponse ListarTiposTerminaisUsingGET1 (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7484,12 +7966,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Tipos Terminais Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Lista os Tipos Terminais Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTipoTerminalResponse</returns>
         public ApiResponse< PageTipoTerminalResponse > ListarTiposTerminaisUsingGET1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7552,12 +8034,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Tipos Terminais Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Lista os Tipos Terminais Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTipoTerminalResponse</returns>
         public async System.Threading.Tasks.Task<PageTipoTerminalResponse> ListarTiposTerminaisUsingGET1Async (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7567,12 +8049,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os Tipos Terminais Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+        /// Lista os Tipos Terminais Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTerminalResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTipoTerminalResponse>> ListarTiposTerminaisUsingGET1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7634,98 +8116,98 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista Estabelecimentos Lista todas os Estabelecimentos
+        /// Lista Estabelecimentos Lista todos os Estabelecimentos
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param> 
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param> 
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param> 
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param> 
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param> 
         /// <param name="nome">Nome do Estabelecimento. (optional)</param> 
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param> 
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param> 
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param> 
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param> 
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param> 
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param> 
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param> 
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param> 
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param> 
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param> 
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param> 
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param> 
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param> 
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param> 
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param> 
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param> 
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param> 
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param> 
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param> 
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param> 
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param> 
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param> 
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param> 
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param> 
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param> 
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param> 
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param> 
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param> 
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param> 
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param> 
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param> 
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param> 
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param> 
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param> 
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param> 
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param> 
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param> 
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param> 
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param> 
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param> 
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param> 
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param> 
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param> 
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param> 
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param> 
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param> 
         /// <returns>PageEstabelecimentoResponse</returns>
-        public PageEstabelecimentoResponse ListarUsingGET21 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
+        public PageEstabelecimentoResponse ListarUsingGET22 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
         {
-             ApiResponse<PageEstabelecimentoResponse> localVarResponse = ListarUsingGET21WithHttpInfo(sort, page, limit, id, idCredor, numeroReceitaFederal, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, complemento, bairro, cidade, uf, pais, dataCadastramento, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idPais, mcc, idTipoEstabelecimento, correspondencia, idMoeda, tipoPagamento, numeroEstabelecimento, cep2, nomeLogradouro2, numeroEndereco2, complemento2, bairro2, cidade2, uf2, flagMatriz);
+             ApiResponse<PageEstabelecimentoResponse> localVarResponse = ListarUsingGET22WithHttpInfo(sort, page, limit, id, idGrupoEconomico, numeroReceitaFederal, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, complemento, bairro, cidade, uf, pais, dataCadastramento, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idPais, mcc, idTipoEstabelecimento, correspondencia, idMoeda, tipoPagamento, numeroEstabelecimento, cep2, nomeLogradouro2, numeroEndereco2, complemento2, bairro2, cidade2, uf2, flagMatriz);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista Estabelecimentos Lista todas os Estabelecimentos
+        /// Lista Estabelecimentos Lista todos os Estabelecimentos
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param> 
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param> 
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param> 
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param> 
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param> 
         /// <param name="nome">Nome do Estabelecimento. (optional)</param> 
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param> 
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param> 
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param> 
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param> 
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param> 
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param> 
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param> 
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param> 
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param> 
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param> 
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param> 
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param> 
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param> 
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param> 
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param> 
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param> 
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param> 
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param> 
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param> 
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param> 
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param> 
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param> 
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param> 
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param> 
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param> 
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param> 
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param> 
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param> 
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param> 
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param> 
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param> 
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param> 
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param> 
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param> 
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param> 
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param> 
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param> 
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param> 
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param> 
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param> 
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param> 
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param> 
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param> 
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param> 
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param> 
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param> 
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param> 
         /// <returns>ApiResponse of PageEstabelecimentoResponse</returns>
-        public ApiResponse< PageEstabelecimentoResponse > ListarUsingGET21WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
+        public ApiResponse< PageEstabelecimentoResponse > ListarUsingGET22WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
         {
             
     
@@ -7760,7 +8242,7 @@ namespace Conductor.Pier.Api
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (idCredor != null) localVarQueryParams.Add("idCredor", Configuration.ApiClient.ParameterToString(idCredor)); // query parameter
+            if (idGrupoEconomico != null) localVarQueryParams.Add("idGrupoEconomico", Configuration.ApiClient.ParameterToString(idGrupoEconomico)); // query parameter
             if (numeroReceitaFederal != null) localVarQueryParams.Add("numeroReceitaFederal", Configuration.ApiClient.ParameterToString(numeroReceitaFederal)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
@@ -7809,9 +8291,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7821,99 +8303,99 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista Estabelecimentos Lista todas os Estabelecimentos
+        /// Lista Estabelecimentos Lista todos os Estabelecimentos
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param>
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param>
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param>
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param>
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param>
         /// <param name="nome">Nome do Estabelecimento. (optional)</param>
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param>
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param>
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param>
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param>
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param>
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param>
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param>
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param>
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param>
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param>
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param>
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param>
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param>
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param>
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param>
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param>
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param>
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param>
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param>
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param>
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param>
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param>
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param>
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param>
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param>
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param>
         /// <returns>Task of PageEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageEstabelecimentoResponse> ListarUsingGET21Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
+        public async System.Threading.Tasks.Task<PageEstabelecimentoResponse> ListarUsingGET22Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
         {
-             ApiResponse<PageEstabelecimentoResponse> localVarResponse = await ListarUsingGET21AsyncWithHttpInfo(sort, page, limit, id, idCredor, numeroReceitaFederal, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, complemento, bairro, cidade, uf, pais, dataCadastramento, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idPais, mcc, idTipoEstabelecimento, correspondencia, idMoeda, tipoPagamento, numeroEstabelecimento, cep2, nomeLogradouro2, numeroEndereco2, complemento2, bairro2, cidade2, uf2, flagMatriz);
+             ApiResponse<PageEstabelecimentoResponse> localVarResponse = await ListarUsingGET22AsyncWithHttpInfo(sort, page, limit, id, idGrupoEconomico, numeroReceitaFederal, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, complemento, bairro, cidade, uf, pais, dataCadastramento, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idPais, mcc, idTipoEstabelecimento, correspondencia, idMoeda, tipoPagamento, numeroEstabelecimento, cep2, nomeLogradouro2, numeroEndereco2, complemento2, bairro2, cidade2, uf2, flagMatriz);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista Estabelecimentos Lista todas os Estabelecimentos
+        /// Lista Estabelecimentos Lista todos os Estabelecimentos
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). (optional)</param>
-        /// <param name="idCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor. (optional)</param>
-        /// <param name="numeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id). (optional)</param>
+        /// <param name="idGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico. (optional)</param>
+        /// <param name="numeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal. (optional)</param>
         /// <param name="nome">Nome do Estabelecimento. (optional)</param>
-        /// <param name="descricao">Raz\u00C3\u00A3o Social do Estabelecimento. (optional)</param>
-        /// <param name="nomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento. (optional)</param>
-        /// <param name="cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="descricao">Raz\u00E3o Social do Estabelecimento. (optional)</param>
+        /// <param name="nomeFantasia">T\u00EDtulo Comercial do Estabelecimento. (optional)</param>
+        /// <param name="cep">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="pais">Nome do pa\u00C3\u00ADs. (optional)</param>
+        /// <param name="numeroEndereco">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="pais">Nome do pa\u00EDs. (optional)</param>
         /// <param name="dataCadastramento">Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. (optional)</param>
         /// <param name="contato">Nome da pessoa para contato com o Estabelecimento. (optional)</param>
         /// <param name="email">E-mail da pessoa para contato com o Estabelecimento. (optional)</param>
-        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
-        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo. (optional)</param>
-        /// <param name="idPais">Identificador de Pa\u00C3\u00ADs. (optional)</param>
-        /// <param name="mcc">C\u00C3\u00B3digo de Categoria de Mercado (optional)</param>
-        /// <param name="idTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. (optional)</param>
-        /// <param name="correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. (optional)</param>
-        /// <param name="idMoeda">C\u00C3\u00B3digo identificador da moeda. (optional)</param>
+        /// <param name="flagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual. (optional)</param>
+        /// <param name="flagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o. (optional)</param>
+        /// <param name="inativo">Indica se o estabelecimento est\u00E1 inativo. (optional)</param>
+        /// <param name="idPais">Identificador de Pa\u00EDs. (optional)</param>
+        /// <param name="mcc">C\u00F3digo de Categoria de Mercado (optional)</param>
+        /// <param name="idTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento. (optional)</param>
+        /// <param name="correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA. (optional)</param>
+        /// <param name="idMoeda">C\u00F3digo identificador da moeda. (optional)</param>
         /// <param name="tipoPagamento">Tipo do regime de pagamento do estabelecimento. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. (optional)</param>
-        /// <param name="cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor. (optional)</param>
+        /// <param name="cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP). (optional)</param>
         /// <param name="nomeLogradouro2">Nome do Logradouro. (optional)</param>
-        /// <param name="numeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="bairro2">Nome do bairro do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="cidade2">Nome da cidade do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. (optional)</param>
-        /// <param name="flagMatriz">Indica se \u00C3\u00A9 matriz ou filial. (optional)</param>
+        /// <param name="numeroEndereco2">N\u00FAmero do endere\u00E7o. (optional)</param>
+        /// <param name="complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o. (optional)</param>
+        /// <param name="bairro2">Nome do bairro do endere\u00E7o. (optional)</param>
+        /// <param name="cidade2">Nome da cidade do endere\u00E7o. (optional)</param>
+        /// <param name="uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o. (optional)</param>
+        /// <param name="flagMatriz">Indica se \u00E9 matriz ou filial. (optional)</param>
         /// <returns>Task of ApiResponse (PageEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageEstabelecimentoResponse>> ListarUsingGET21AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idCredor = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageEstabelecimentoResponse>> ListarUsingGET22AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idGrupoEconomico = null, string numeroReceitaFederal = null, string nome = null, string descricao = null, string nomeFantasia = null, string cep = null, string nomeLogradouro = null, int? numeroEndereco = null, string complemento = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataCadastramento = null, string contato = null, string email = null, int? flagArquivoSecrFazenda = null, int? flagCartaoDigitado = null, int? inativo = null, long? idPais = null, long? mcc = null, long? idTipoEstabelecimento = null, int? correspondencia = null, long? idMoeda = null, string tipoPagamento = null, string numeroEstabelecimento = null, string cep2 = null, string nomeLogradouro2 = null, int? numeroEndereco2 = null, string complemento2 = null, string bairro2 = null, string cidade2 = null, string uf2 = null, int? flagMatriz = null)
         {
             
     
@@ -7948,7 +8430,7 @@ namespace Conductor.Pier.Api
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (idCredor != null) localVarQueryParams.Add("idCredor", Configuration.ApiClient.ParameterToString(idCredor)); // query parameter
+            if (idGrupoEconomico != null) localVarQueryParams.Add("idGrupoEconomico", Configuration.ApiClient.ParameterToString(idGrupoEconomico)); // query parameter
             if (numeroReceitaFederal != null) localVarQueryParams.Add("numeroReceitaFederal", Configuration.ApiClient.ParameterToString(numeroReceitaFederal)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
@@ -7997,9 +8479,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8008,22 +8490,22 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Listar grupos econ\u00F4micos Lista grupos econ\u00F4micos cadastrados. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param> 
         /// <param name="nomeCredor">Nome do credor (optional)</param> 
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param> 
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param> 
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param> 
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param> 
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param> 
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param> 
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param> 
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param> 
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param> 
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param> 
+        /// <param name="banco">C\u00F3digo do banco (optional)</param> 
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param> 
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param> 
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param> 
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param> 
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param> 
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param> 
@@ -8038,31 +8520,31 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param> 
         /// <param name="taxaBanco">Taxa do Banco (optional)</param> 
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param> 
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param> 
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param> 
         /// <returns>PageGrupoEconomicoResponse</returns>
-        public PageGrupoEconomicoResponse ListarUsingGET23 (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
+        public PageGrupoEconomicoResponse ListarUsingGET24 (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
         {
-             ApiResponse<PageGrupoEconomicoResponse> localVarResponse = ListarUsingGET23WithHttpInfo(sort, page, limit, razaoSocial, nomeCredor, numeroReceitaFederal, inscricaoEstadual, contato, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, periodicidade, pagamentoSemanal, pagamentoMensal, pagamentoDecendialPrimeiro, pagamentoDecendialSegundo, pagamentoDecendialTerceiro, pagamentoQuinzenalPrimeiro, pagamentoQuinzenalSegundo, percentualRAV, recebeRAV, percentualMultiplica, taxaAdm, taxaBanco, limiteRAV, idCredorRAV);
+             ApiResponse<PageGrupoEconomicoResponse> localVarResponse = ListarUsingGET24WithHttpInfo(sort, page, limit, razaoSocial, nomeCredor, numeroReceitaFederal, inscricaoEstadual, contato, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, periodicidade, pagamentoSemanal, pagamentoMensal, pagamentoDecendialPrimeiro, pagamentoDecendialSegundo, pagamentoDecendialTerceiro, pagamentoQuinzenalPrimeiro, pagamentoQuinzenalSegundo, percentualRAV, recebeRAV, percentualMultiplica, taxaAdm, taxaBanco, limiteRAV, idCredorRAV);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Listar grupos econ\u00F4micos Lista grupos econ\u00F4micos cadastrados. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param> 
         /// <param name="nomeCredor">Nome do credor (optional)</param> 
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param> 
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param> 
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param> 
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param> 
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param> 
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param> 
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param> 
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param> 
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param> 
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param> 
+        /// <param name="banco">C\u00F3digo do banco (optional)</param> 
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param> 
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param> 
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param> 
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param> 
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param> 
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param> 
@@ -8077,9 +8559,9 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param> 
         /// <param name="taxaBanco">Taxa do Banco (optional)</param> 
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param> 
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param> 
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param> 
         /// <returns>ApiResponse of PageGrupoEconomicoResponse</returns>
-        public ApiResponse< PageGrupoEconomicoResponse > ListarUsingGET23WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
+        public ApiResponse< PageGrupoEconomicoResponse > ListarUsingGET24WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
         {
             
     
@@ -8153,9 +8635,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageGrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8165,22 +8647,22 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Listar grupos econ\u00F4micos Lista grupos econ\u00F4micos cadastrados. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
         /// <param name="nomeCredor">Nome do credor (optional)</param>
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param>
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param>
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param>
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param>
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param>
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param>
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param>
+        /// <param name="banco">C\u00F3digo do banco (optional)</param>
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param>
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param>
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param>
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param>
@@ -8195,32 +8677,32 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param>
         /// <param name="taxaBanco">Taxa do Banco (optional)</param>
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param>
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param>
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param>
         /// <returns>Task of PageGrupoEconomicoResponse</returns>
-        public async System.Threading.Tasks.Task<PageGrupoEconomicoResponse> ListarUsingGET23Async (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
+        public async System.Threading.Tasks.Task<PageGrupoEconomicoResponse> ListarUsingGET24Async (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
         {
-             ApiResponse<PageGrupoEconomicoResponse> localVarResponse = await ListarUsingGET23AsyncWithHttpInfo(sort, page, limit, razaoSocial, nomeCredor, numeroReceitaFederal, inscricaoEstadual, contato, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, periodicidade, pagamentoSemanal, pagamentoMensal, pagamentoDecendialPrimeiro, pagamentoDecendialSegundo, pagamentoDecendialTerceiro, pagamentoQuinzenalPrimeiro, pagamentoQuinzenalSegundo, percentualRAV, recebeRAV, percentualMultiplica, taxaAdm, taxaBanco, limiteRAV, idCredorRAV);
+             ApiResponse<PageGrupoEconomicoResponse> localVarResponse = await ListarUsingGET24AsyncWithHttpInfo(sort, page, limit, razaoSocial, nomeCredor, numeroReceitaFederal, inscricaoEstadual, contato, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, periodicidade, pagamentoSemanal, pagamentoMensal, pagamentoDecendialPrimeiro, pagamentoDecendialSegundo, pagamentoDecendialTerceiro, pagamentoQuinzenalPrimeiro, pagamentoQuinzenalSegundo, percentualRAV, recebeRAV, percentualMultiplica, taxaAdm, taxaBanco, limiteRAV, idCredorRAV);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Listar grupos econ\u00C3\u00B4micos Lista grupos econ\u00C3\u00B4micos cadastrados. 
+        /// Listar grupos econ\u00F4micos Lista grupos econ\u00F4micos cadastrados. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="razaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
         /// <param name="nomeCredor">Nome do credor (optional)</param>
-        /// <param name="numeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (optional)</param>
-        /// <param name="inscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual (optional)</param>
+        /// <param name="numeroReceitaFederal">N\u00FAmero da Receita Federal (optional)</param>
+        /// <param name="inscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual (optional)</param>
         /// <param name="contato">Nome da pessoa para entrar em contato (optional)</param>
-        /// <param name="banco">C\u00C3\u00B3digo do banco (optional)</param>
-        /// <param name="agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="contaCorrente">C\u00C3\u00B3digo da Conta Corrente (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente (optional)</param>
+        /// <param name="banco">C\u00F3digo do banco (optional)</param>
+        /// <param name="agencia">Raz\u00E3o social da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito Verificador da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">C\u00F3digo da Conta Corrente (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito Verificador da Conta Corrente (optional)</param>
         /// <param name="periodicidade">Periodicidade do pagamento (optional)</param>
         /// <param name="pagamentoSemanal">Dia para pagamento semanal (optional)</param>
         /// <param name="pagamentoMensal">Dia da data para o pagamento mensal (optional)</param>
@@ -8235,9 +8717,9 @@ namespace Conductor.Pier.Api
         /// <param name="taxaAdm">Taxa Administrativa (optional)</param>
         /// <param name="taxaBanco">Taxa do Banco (optional)</param>
         /// <param name="limiteRAV">Valor limite do RAV (optional)</param>
-        /// <param name="idCredorRAV">C\u00C3\u00B3digo identificador do credor RAV (optional)</param>
+        /// <param name="idCredorRAV">C\u00F3digo identificador do credor RAV (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoEconomicoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoEconomicoResponse>> ListarUsingGET23AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoEconomicoResponse>> ListarUsingGET24AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string razaoSocial = null, string nomeCredor = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, string contato = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, string periodicidade = null, string pagamentoSemanal = null, int? pagamentoMensal = null, int? pagamentoDecendialPrimeiro = null, int? pagamentoDecendialSegundo = null, int? pagamentoDecendialTerceiro = null, int? pagamentoQuinzenalPrimeiro = null, int? pagamentoQuinzenalSegundo = null, double? percentualRAV = null, string recebeRAV = null, double? percentualMultiplica = null, double? taxaAdm = null, double? taxaBanco = null, double? limiteRAV = null, long? idCredorRAV = null)
         {
             
     
@@ -8311,9 +8793,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageGrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8322,30 +8804,200 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Listar grupos de origens comerciais Lista os grupos de origens comerciais
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param> 
+        /// <returns>PageGrupoOrigemComercialResponse</returns>
+        public PageGrupoOrigemComercialResponse ListarUsingGET25 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+             ApiResponse<PageGrupoOrigemComercialResponse> localVarResponse = ListarUsingGET25WithHttpInfo(sort, page, limit, nome);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar grupos de origens comerciais Lista os grupos de origens comerciais
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param> 
+        /// <returns>ApiResponse of PageGrupoOrigemComercialResponse</returns>
+        public ApiResponse< PageGrupoOrigemComercialResponse > ListarUsingGET25WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+            
+    
+            var localVarPath = "/api/grupos-origens-comerciais";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageGrupoOrigemComercialResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageGrupoOrigemComercialResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageGrupoOrigemComercialResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar grupos de origens comerciais Lista os grupos de origens comerciais
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
+        /// <returns>Task of PageGrupoOrigemComercialResponse</returns>
+        public async System.Threading.Tasks.Task<PageGrupoOrigemComercialResponse> ListarUsingGET25Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+             ApiResponse<PageGrupoOrigemComercialResponse> localVarResponse = await ListarUsingGET25AsyncWithHttpInfo(sort, page, limit, nome);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar grupos de origens comerciais Lista os grupos de origens comerciais
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
+        /// <returns>Task of ApiResponse (PageGrupoOrigemComercialResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoOrigemComercialResponse>> ListarUsingGET25AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        {
+            
+    
+            var localVarPath = "/api/grupos-origens-comerciais";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageGrupoOrigemComercialResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageGrupoOrigemComercialResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageGrupoOrigemComercialResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista as Maquinetas Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param> 
         /// <returns>PageMaquinetaResponse</returns>
-        public PageMaquinetaResponse ListarUsingGET25 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public PageMaquinetaResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageMaquinetaResponse> localVarResponse = ListarUsingGET25WithHttpInfo(sort, page, limit, idEstabelecimento);
+             ApiResponse<PageMaquinetaResponse> localVarResponse = ListarUsingGET27WithHttpInfo(sort, page, limit, idEstabelecimento);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista as Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Lista as Maquinetas Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param> 
         /// <returns>ApiResponse of PageMaquinetaResponse</returns>
-        public ApiResponse< PageMaquinetaResponse > ListarUsingGET25WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public ApiResponse< PageMaquinetaResponse > ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
             
     
@@ -8395,9 +9047,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageMaquinetaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8407,31 +9059,31 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Lista as Maquinetas Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of PageMaquinetaResponse</returns>
-        public async System.Threading.Tasks.Task<PageMaquinetaResponse> ListarUsingGET25Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<PageMaquinetaResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageMaquinetaResponse> localVarResponse = await ListarUsingGET25AsyncWithHttpInfo(sort, page, limit, idEstabelecimento);
+             ApiResponse<PageMaquinetaResponse> localVarResponse = await ListarUsingGET27AsyncWithHttpInfo(sort, page, limit, idEstabelecimento);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista as Maquinetas Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+        /// Lista as Maquinetas Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of ApiResponse (PageMaquinetaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageMaquinetaResponse>> ListarUsingGET25AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageMaquinetaResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
             
     
@@ -8481,9 +9133,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageMaquinetaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8495,16 +9147,16 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de moedas do emissor  Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param> 
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param> 
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param> 
         /// <returns>PageMoedaResponse</returns>
-        public PageMoedaResponse ListarUsingGET26 (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
+        public PageMoedaResponse ListarUsingGET28 (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
         {
-             ApiResponse<PageMoedaResponse> localVarResponse = ListarUsingGET26WithHttpInfo(sort, page, limit, codigoMoeda, simbolo, descricao);
+             ApiResponse<PageMoedaResponse> localVarResponse = ListarUsingGET28WithHttpInfo(sort, page, limit, codigoMoeda, simbolo, descricao);
              return localVarResponse.Data;
         }
 
@@ -8512,14 +9164,14 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de moedas do emissor  Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param> 
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param> 
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param> 
         /// <returns>ApiResponse of PageMoedaResponse</returns>
-        public ApiResponse< PageMoedaResponse > ListarUsingGET26WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
+        public ApiResponse< PageMoedaResponse > ListarUsingGET28WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
         {
             
     
@@ -8571,9 +9223,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageMoedaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8586,16 +9238,16 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de moedas do emissor  Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param>
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param>
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param>
         /// <returns>Task of PageMoedaResponse</returns>
-        public async System.Threading.Tasks.Task<PageMoedaResponse> ListarUsingGET26Async (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
+        public async System.Threading.Tasks.Task<PageMoedaResponse> ListarUsingGET28Async (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
         {
-             ApiResponse<PageMoedaResponse> localVarResponse = await ListarUsingGET26AsyncWithHttpInfo(sort, page, limit, codigoMoeda, simbolo, descricao);
+             ApiResponse<PageMoedaResponse> localVarResponse = await ListarUsingGET28AsyncWithHttpInfo(sort, page, limit, codigoMoeda, simbolo, descricao);
              return localVarResponse.Data;
 
         }
@@ -8604,14 +9256,14 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de moedas do emissor  Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigoMoeda">C\u00C3\u00B3digo identificador do tipo de moeda. (optional)</param>
-        /// <param name="simbolo">S\u00C3\u00ADmbolo da Moeda. (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigoMoeda">C\u00F3digo identificador do tipo de moeda. (optional)</param>
+        /// <param name="simbolo">S\u00EDmbolo da Moeda. (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo da moeda. (optional)</param>
         /// <returns>Task of ApiResponse (PageMoedaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageMoedaResponse>> ListarUsingGET26AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageMoedaResponse>> ListarUsingGET28AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigoMoeda = null, string simbolo = null, string descricao = null)
         {
             
     
@@ -8663,9 +9315,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageMoedaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8674,34 +9326,34 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista as Regras Opera\u00E7\u00F5es Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param> 
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param> 
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param> 
         /// <returns>PageOperacaoCredorResponse</returns>
-        public PageOperacaoCredorResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
+        public PageOperacaoCredorResponse ListarUsingGET29 (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
         {
-             ApiResponse<PageOperacaoCredorResponse> localVarResponse = ListarUsingGET27WithHttpInfo(sort, page, limit, idOperacao, idCredor, idProduto);
+             ApiResponse<PageOperacaoCredorResponse> localVarResponse = ListarUsingGET29WithHttpInfo(sort, page, limit, idOperacao, idCredor, idProduto);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista as Regras Opera\u00E7\u00F5es Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param> 
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param> 
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param> 
         /// <returns>ApiResponse of PageOperacaoCredorResponse</returns>
-        public ApiResponse< PageOperacaoCredorResponse > ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
+        public ApiResponse< PageOperacaoCredorResponse > ListarUsingGET29WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
         {
             
     
@@ -8753,9 +9405,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageOperacaoCredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8765,35 +9417,35 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista as Regras Opera\u00E7\u00F5es Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param>
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param>
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param>
         /// <returns>Task of PageOperacaoCredorResponse</returns>
-        public async System.Threading.Tasks.Task<PageOperacaoCredorResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
+        public async System.Threading.Tasks.Task<PageOperacaoCredorResponse> ListarUsingGET29Async (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
         {
-             ApiResponse<PageOperacaoCredorResponse> localVarResponse = await ListarUsingGET27AsyncWithHttpInfo(sort, page, limit, idOperacao, idCredor, idProduto);
+             ApiResponse<PageOperacaoCredorResponse> localVarResponse = await ListarUsingGET29AsyncWithHttpInfo(sort, page, limit, idOperacao, idCredor, idProduto);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Lista as Regras Opera\u00E7\u00F5es Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOperacao">Apresenta o id da Opera\u00E7\u00E3o. (optional)</param>
         /// <param name="idCredor">Apresenta o id do Credor. (optional)</param>
         /// <param name="idProduto">Apresenta o id do produto que vai ser alterado. (optional)</param>
         /// <returns>Task of ApiResponse (PageOperacaoCredorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOperacaoCredorResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageOperacaoCredorResponse>> ListarUsingGET29AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, long? idCredor = null, long? idProduto = null)
         {
             
     
@@ -8845,9 +9497,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageOperacaoCredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8856,30 +9508,30 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Telefones Estabelecimentos Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Lista os Telefones Estabelecimentos Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param> 
         /// <returns>PageTelefoneEstabelecimentoResponse</returns>
-        public PageTelefoneEstabelecimentoResponse ListarUsingGET38 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public PageTelefoneEstabelecimentoResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = ListarUsingGET38WithHttpInfo(sort, page, limit, idEstabelecimento);
+             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = ListarUsingGET40WithHttpInfo(sort, page, limit, idEstabelecimento);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os Telefones Estabelecimentos Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Lista os Telefones Estabelecimentos Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param> 
         /// <returns>ApiResponse of PageTelefoneEstabelecimentoResponse</returns>
-        public ApiResponse< PageTelefoneEstabelecimentoResponse > ListarUsingGET38WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public ApiResponse< PageTelefoneEstabelecimentoResponse > ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
             
     
@@ -8929,9 +9581,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8941,31 +9593,31 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Telefones Estabelecimentos Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Lista os Telefones Estabelecimentos Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of PageTelefoneEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET38Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = await ListarUsingGET38AsyncWithHttpInfo(sort, page, limit, idEstabelecimento);
+             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = await ListarUsingGET40AsyncWithHttpInfo(sort, page, limit, idEstabelecimento);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os Telefones Estabelecimentos Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+        /// Lista os Telefones Estabelecimentos Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id). (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET38AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
             
     
@@ -9015,9 +9667,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9026,36 +9678,36 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Terminais cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Lista os Terminais cadastrados no Emissor Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param> 
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param> 
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param> 
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param> 
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param> 
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param> 
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param> 
         /// <returns>PageTerminalResponse</returns>
-        public PageTerminalResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public PageTerminalResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTerminalResponse> localVarResponse = ListarUsingGET40WithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
+             ApiResponse<PageTerminalResponse> localVarResponse = ListarUsingGET42WithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os Terminais cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Lista os Terminais cadastrados no Emissor Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param> 
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param> 
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param> 
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param> 
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param> 
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param> 
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param> 
         /// <returns>ApiResponse of PageTerminalResponse</returns>
-        public ApiResponse< PageTerminalResponse > ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public ApiResponse< PageTerminalResponse > ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
             
     
@@ -9108,9 +9760,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9120,37 +9772,37 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Terminais cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Lista os Terminais cadastrados no Emissor Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param>
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param>
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param>
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param>
         /// <returns>Task of PageTerminalResponse</returns>
-        public async System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTerminalResponse> localVarResponse = await ListarUsingGET40AsyncWithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
+             ApiResponse<PageTerminalResponse> localVarResponse = await ListarUsingGET42AsyncWithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os Terminais cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+        /// Lista os Terminais cadastrados no Emissor Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). (optional)</param>
-        /// <param name="terminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. (optional)</param>
-        /// <param name="numeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. (optional)</param>
-        /// <param name="idEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (optional)</param>
+        /// <param name="terminal">C\u00F3digo de Identifica\u00E7\u00E3o do terminal. (optional)</param>
+        /// <param name="numeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence. (optional)</param>
+        /// <param name="idEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence. (optional)</param>
         /// <returns>Task of ApiResponse (PageTerminalResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
             
     
@@ -9203,9 +9855,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9214,34 +9866,34 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param> 
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param> 
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param> 
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param> 
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param> 
         /// <returns>PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        public PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET53 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
-             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = ListarUsingGET51WithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
+             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = ListarUsingGET53WithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param> 
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param> 
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param> 
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param> 
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param> 
         /// <returns>ApiResponse of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        public ApiResponse< PageVinculoEstabelecimentoAdquirenteResponse > ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public ApiResponse< PageVinculoEstabelecimentoAdquirenteResponse > ListarUsingGET53WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
             
     
@@ -9293,9 +9945,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9305,35 +9957,35 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param>
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param>
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param>
         /// <returns>Task of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        public async System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public async System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET53Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
-             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ListarUsingGET51AsyncWithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
+             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ListarUsingGET53AsyncWithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+        /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id). (optional)</param>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento. (optional)</param>
-        /// <param name="codigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id). (optional)</param>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento. (optional)</param>
+        /// <param name="codigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente. (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoEstabelecimentoAdquirenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET53AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
             
     
@@ -9385,9 +10037,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9396,41 +10048,41 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param> 
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param> 
         /// <returns>PageVinculoOperacaoResponse</returns>
-        public PageVinculoOperacaoResponse ListarUsingGET52 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public PageVinculoOperacaoResponse ListarUsingGET54 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
-             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = ListarUsingGET52WithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
+             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = ListarUsingGET54WithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param> 
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param> 
         /// <returns>ApiResponse of PageVinculoOperacaoResponse</returns>
-        public ApiResponse< PageVinculoOperacaoResponse > ListarUsingGET52WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public ApiResponse< PageVinculoOperacaoResponse > ListarUsingGET54WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ListarUsingGET52");
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ListarUsingGET54");
             
     
             var localVarPath = "/api/estabelecimentos/{id}/operacoes";
@@ -9482,9 +10134,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageVinculoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9494,40 +10146,40 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param>
         /// <returns>Task of PageVinculoOperacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET52Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public async System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET54Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
-             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = await ListarUsingGET52AsyncWithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
+             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = await ListarUsingGET54AsyncWithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os v\u00C3\u00ADnculos cadastrados no Emissor Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+        /// Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idOperacao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="codigoMCC">C\u00C3\u00B3digo MCC. (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC. (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoOperacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET52AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET54AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET52");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET54");
             
     
             var localVarPath = "/api/estabelecimentos/{id}/operacoes";
@@ -9579,9 +10231,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageVinculoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9590,7 +10242,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param> 
@@ -9602,7 +10254,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param> 
@@ -9676,7 +10328,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param>
@@ -9689,7 +10341,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+        /// Realiza o cadastro de uma nova maquineta para um estabelecimento  Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maquinetaPersist">maquinetaPersist</param>
@@ -9760,7 +10412,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param> 
@@ -9772,7 +10424,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param> 
@@ -9846,7 +10498,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param>
@@ -9859,7 +10511,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="oprecaoCredorPersist">oprecaoCredorPersist</param>
@@ -9930,43 +10582,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param> 
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param> 
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param> 
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param> 
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param> 
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        public TelefoneEstabelecimentoResponse SalvarUsingPOST22 (long? idEstabelecimento, string ddd, string telefone, string ramal = null)
+        public TelefoneEstabelecimentoResponse SalvarUsingPOST22 (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = SalvarUsingPOST22WithHttpInfo(idEstabelecimento, ddd, telefone, ramal);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = SalvarUsingPOST22WithHttpInfo(telefoneEstabelecimentoPersist);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param> 
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param> 
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param> 
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param> 
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param> 
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        public ApiResponse< TelefoneEstabelecimentoResponse > SalvarUsingPOST22WithHttpInfo (long? idEstabelecimento, string ddd, string telefone, string ramal = null)
+        public ApiResponse< TelefoneEstabelecimentoResponse > SalvarUsingPOST22WithHttpInfo (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist)
         {
             
-            // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null)
-                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->SalvarUsingPOST22");
-            
-            // verify the required parameter 'ddd' is set
-            if (ddd == null)
-                throw new ApiException(400, "Missing required parameter 'ddd' when calling EstabelecimentoApi->SalvarUsingPOST22");
-            
-            // verify the required parameter 'telefone' is set
-            if (telefone == null)
-                throw new ApiException(400, "Missing required parameter 'telefone' when calling EstabelecimentoApi->SalvarUsingPOST22");
+            // verify the required parameter 'telefoneEstabelecimentoPersist' is set
+            if (telefoneEstabelecimentoPersist == null)
+                throw new ApiException(400, "Missing required parameter 'telefoneEstabelecimentoPersist' when calling EstabelecimentoApi->SalvarUsingPOST22");
             
     
             var localVarPath = "/api/telefones-estabelecimentos";
@@ -9996,14 +10634,17 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
-            if (ddd != null) localVarQueryParams.Add("ddd", Configuration.ApiClient.ParameterToString(ddd)); // query parameter
-            if (telefone != null) localVarQueryParams.Add("telefone", Configuration.ApiClient.ParameterToString(telefone)); // query parameter
-            if (ramal != null) localVarQueryParams.Add("ramal", Configuration.ApiClient.ParameterToString(ramal)); // query parameter
             
             
             
-            
+            if (telefoneEstabelecimentoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(telefoneEstabelecimentoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = telefoneEstabelecimentoPersist; // byte array
+            }
 
             
     
@@ -10027,38 +10668,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> SalvarUsingPOST22Async (long? idEstabelecimento, string ddd, string telefone, string ramal = null)
+        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> SalvarUsingPOST22Async (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await SalvarUsingPOST22AsyncWithHttpInfo(idEstabelecimento, ddd, telefone, ramal);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await SalvarUsingPOST22AsyncWithHttpInfo(telefoneEstabelecimentoPersist);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+        /// Realiza o cadastro de um novo telefone para um estabelecimento  Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</param>
-        /// <param name="ddd">C\u00C3\u00B3digo DDD do telefone (id).</param>
-        /// <param name="telefone">N\u00C3\u00BAmero do telefone.</param>
-        /// <param name="ramal">N\u00C3\u00BAmero do ramal. (optional)</param>
+        /// <param name="telefoneEstabelecimentoPersist">telefoneEstabelecimentoPersist</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> SalvarUsingPOST22AsyncWithHttpInfo (long? idEstabelecimento, string ddd, string telefone, string ramal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> SalvarUsingPOST22AsyncWithHttpInfo (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist)
         {
-            // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling SalvarUsingPOST22");
-            // verify the required parameter 'ddd' is set
-            if (ddd == null) throw new ApiException(400, "Missing required parameter 'ddd' when calling SalvarUsingPOST22");
-            // verify the required parameter 'telefone' is set
-            if (telefone == null) throw new ApiException(400, "Missing required parameter 'telefone' when calling SalvarUsingPOST22");
+            // verify the required parameter 'telefoneEstabelecimentoPersist' is set
+            if (telefoneEstabelecimentoPersist == null) throw new ApiException(400, "Missing required parameter 'telefoneEstabelecimentoPersist' when calling SalvarUsingPOST22");
             
     
             var localVarPath = "/api/telefones-estabelecimentos";
@@ -10088,14 +10719,17 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
-            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
-            if (ddd != null) localVarQueryParams.Add("ddd", Configuration.ApiClient.ParameterToString(ddd)); // query parameter
-            if (telefone != null) localVarQueryParams.Add("telefone", Configuration.ApiClient.ParameterToString(telefone)); // query parameter
-            if (ramal != null) localVarQueryParams.Add("ramal", Configuration.ApiClient.ParameterToString(ramal)); // query parameter
             
             
             
-            
+            if (telefoneEstabelecimentoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(telefoneEstabelecimentoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = telefoneEstabelecimentoPersist; // byte array
+            }
 
             
 
@@ -10118,7 +10752,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de um novo Terminal Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Realiza o cadastro de um novo Terminal Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param> 
@@ -10130,7 +10764,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo Terminal Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Realiza o cadastro de um novo Terminal Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param> 
@@ -10204,7 +10838,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro de um novo Terminal Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Realiza o cadastro de um novo Terminal Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param>
@@ -10217,7 +10851,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo Terminal Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+        /// Realiza o cadastro de um novo Terminal Este m\u00E9todo permite que seja cadastrado um novo Terminal.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="terminalPersist">terminalPersist</param>
@@ -10288,7 +10922,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param> 
@@ -10300,7 +10934,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param> 
@@ -10374,7 +11008,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
@@ -10387,7 +11021,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+        /// Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>

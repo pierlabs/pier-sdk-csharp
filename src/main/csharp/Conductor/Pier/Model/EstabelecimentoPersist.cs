@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
+    /// Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
     /// </summary>
     [DataContract]
     public partial class EstabelecimentoPersist :  IEquatable<EstabelecimentoPersist>
@@ -44,47 +44,47 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EstabelecimentoPersist" /> class.
         /// Initializes a new instance of the <see cref="EstabelecimentoPersist" />class.
         /// </summary>
-        /// <param name="FlagMatriz">Indica se \u00C3\u00A9 matriz ou filial..</param>
-        /// <param name="IdCredor">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor..</param>
-        /// <param name="NumeroReceitaFederal">Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal..</param>
+        /// <param name="FlagMatriz">Indica se \u00E9 matriz ou filial..</param>
+        /// <param name="IdGrupoEconomico">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico..</param>
+        /// <param name="NumeroReceitaFederal">Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal..</param>
         /// <param name="Nome">Nome do Estabelecimento..</param>
-        /// <param name="Descricao">Raz\u00C3\u00A3o Social do Estabelecimento..</param>
-        /// <param name="NomeFantasia">T\u00C3\u00ADtulo Comercial do Estabelecimento..</param>
-        /// <param name="Cep">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)..</param>
+        /// <param name="Descricao">Raz\u00E3o Social do Estabelecimento..</param>
+        /// <param name="NomeFantasia">T\u00EDtulo Comercial do Estabelecimento..</param>
+        /// <param name="Cep">C\u00F3digo de Endere\u00E7amento Postal (CEP)..</param>
         /// <param name="NomeLogradouro">Nome do Logradouro..</param>
-        /// <param name="NumeroEndereco">N\u00C3\u00BAmero do endere\u00C3\u00A7o..</param>
-        /// <param name="Bairro">Nome do bairro do endere\u00C3\u00A7o..</param>
-        /// <param name="Cidade">Nome da cidade do endere\u00C3\u00A7o..</param>
-        /// <param name="Complemento">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o..</param>
-        /// <param name="Uf">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o..</param>
-        /// <param name="Cep2">C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)..</param>
+        /// <param name="NumeroEndereco">N\u00FAmero do endere\u00E7o..</param>
+        /// <param name="Bairro">Nome do bairro do endere\u00E7o..</param>
+        /// <param name="Cidade">Nome da cidade do endere\u00E7o..</param>
+        /// <param name="Complemento">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o..</param>
+        /// <param name="Uf">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o..</param>
+        /// <param name="Cep2">C\u00F3digo de Endere\u00E7amento Postal (CEP)..</param>
         /// <param name="NomeLogradouro2">Nome do Logradouro ..</param>
-        /// <param name="NumeroEndereco2">N\u00C3\u00BAmero do endere\u00C3\u00A7o..</param>
-        /// <param name="Bairro2">Nome do bairro do endere\u00C3\u00A7o..</param>
-        /// <param name="Cidade2">Nome da cidade do endere\u00C3\u00A7o..</param>
-        /// <param name="Complemento2">Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o..</param>
-        /// <param name="Uf2">Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o..</param>
-        /// <param name="Obs">Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento..</param>
+        /// <param name="NumeroEndereco2">N\u00FAmero do endere\u00E7o..</param>
+        /// <param name="Bairro2">Nome do bairro do endere\u00E7o..</param>
+        /// <param name="Cidade2">Nome da cidade do endere\u00E7o..</param>
+        /// <param name="Complemento2">Descri\u00E7\u00F5es complementares referente ao endere\u00E7o..</param>
+        /// <param name="Uf2">Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o..</param>
+        /// <param name="Obs">Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento..</param>
         /// <param name="Contato">Nome da pessoa para contato com o Estabelecimento..</param>
         /// <param name="Email">E-mail da pessoa para contato com o Estabelecimento..</param>
-        /// <param name="FlagArquivoSecrFazenda">Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual..</param>
-        /// <param name="FlagCartaoDigitado">Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o..</param>
-        /// <param name="Inativo">Indica se o estabelecimento est\u00C3\u00A1 inativo..</param>
-        /// <param name="IdMoeda">C\u00C3\u00B3digo identificador da moeda..</param>
-        /// <param name="IdPais">Identificador de Pa\u00C3\u00ADs..</param>
-        /// <param name="AssociadoSPCBrasil">N\u00C3\u00BAmero do associado ao SPCBrasil..</param>
-        /// <param name="Mcc">C\u00C3\u00B3digo de Categoria de Mercado..</param>
-        /// <param name="IdTipoEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento..</param>
-        /// <param name="Correspondencia">Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA..</param>
+        /// <param name="FlagArquivoSecrFazenda">Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual..</param>
+        /// <param name="FlagCartaoDigitado">Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o..</param>
+        /// <param name="Inativo">Indica se o estabelecimento est\u00E1 inativo..</param>
+        /// <param name="IdMoeda">C\u00F3digo identificador da moeda..</param>
+        /// <param name="IdPais">Identificador de Pa\u00EDs..</param>
+        /// <param name="AssociadoSPCBrasil">N\u00FAmero do associado ao SPCBrasil..</param>
+        /// <param name="Mcc">C\u00F3digo de Categoria de Mercado..</param>
+        /// <param name="IdTipoEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento..</param>
+        /// <param name="Correspondencia">Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA..</param>
         /// <param name="CargoContato">Cargo do contato do estabelecimento..</param>
         /// <param name="TipoPagamento">Tipo do regime de pagamento do estabelecimento..</param>
-        /// <param name="Consulta">Consulta de cadastro n\u00C3\u00BAmero um..</param>
-        /// <param name="Consulta2">Consulta de cadastro n\u00C3\u00BAmero um..</param>
-        /// <param name="Consulta3">Consulta de cadastro n\u00C3\u00BAmero um..</param>
-        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
-        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
+        /// <param name="Consulta">Consulta de cadastro n\u00FAmero um..</param>
+        /// <param name="Consulta2">Consulta de cadastro n\u00FAmero dois..</param>
+        /// <param name="Consulta3">Consulta de cadastro n\u00FAmero tr\u00EAs..</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)). (required).</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)). (required).</param>
 
-        public EstabelecimentoPersist(int? FlagMatriz = null, long? IdCredor = null, string NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, int? NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, int? NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, int? Correspondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, bool? FlagTerminalVirtual = null, bool? FlagConsultaExtrato = null)
+        public EstabelecimentoPersist(int? FlagMatriz = null, long? IdGrupoEconomico = null, string NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, int? NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, int? NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, int? Correspondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, bool? FlagTerminalVirtual = null, bool? FlagConsultaExtrato = null)
         {
             // to ensure "FlagTerminalVirtual" is required (not null)
             if (FlagTerminalVirtual == null)
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Model
                 this.FlagConsultaExtrato = FlagConsultaExtrato;
             }
             this.FlagMatriz = FlagMatriz;
-            this.IdCredor = IdCredor;
+            this.IdGrupoEconomico = IdGrupoEconomico;
             this.NumeroReceitaFederal = NumeroReceitaFederal;
             this.Nome = Nome;
             this.Descricao = Descricao;
@@ -146,23 +146,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Indica se \u00C3\u00A9 matriz ou filial.
+        /// Indica se \u00E9 matriz ou filial.
         /// </summary>
-        /// <value>Indica se \u00C3\u00A9 matriz ou filial.</value>
+        /// <value>Indica se \u00E9 matriz ou filial.</value>
         [DataMember(Name="flagMatriz", EmitDefaultValue=false)]
         public int? FlagMatriz { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+        /// Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.</value>
-        [DataMember(Name="idCredor", EmitDefaultValue=false)]
-        public long? IdCredor { get; set; }
+        /// <value>Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.</value>
+        [DataMember(Name="idGrupoEconomico", EmitDefaultValue=false)]
+        public long? IdGrupoEconomico { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+        /// Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.</value>
+        /// <value>Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
@@ -174,23 +174,23 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Raz\u00C3\u00A3o Social do Estabelecimento.
+        /// Raz\u00E3o Social do Estabelecimento.
         /// </summary>
-        /// <value>Raz\u00C3\u00A3o Social do Estabelecimento.</value>
+        /// <value>Raz\u00E3o Social do Estabelecimento.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// T\u00C3\u00ADtulo Comercial do Estabelecimento.
+        /// T\u00EDtulo Comercial do Estabelecimento.
         /// </summary>
-        /// <value>T\u00C3\u00ADtulo Comercial do Estabelecimento.</value>
+        /// <value>T\u00EDtulo Comercial do Estabelecimento.</value>
         [DataMember(Name="nomeFantasia", EmitDefaultValue=false)]
         public string NomeFantasia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+        /// C\u00F3digo de Endere\u00E7amento Postal (CEP).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).</value>
+        /// <value>C\u00F3digo de Endere\u00E7amento Postal (CEP).</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
@@ -202,44 +202,44 @@ namespace Conductor.Pier.Model
         public string NomeLogradouro { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+        /// N\u00FAmero do endere\u00E7o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do endere\u00C3\u00A7o.</value>
+        /// <value>N\u00FAmero do endere\u00E7o.</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
         public int? NumeroEndereco { get; set; }
     
         /// <summary>
-        /// Nome do bairro do endere\u00C3\u00A7o.
+        /// Nome do bairro do endere\u00E7o.
         /// </summary>
-        /// <value>Nome do bairro do endere\u00C3\u00A7o.</value>
+        /// <value>Nome do bairro do endere\u00E7o.</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// Nome da cidade do endere\u00C3\u00A7o.
+        /// Nome da cidade do endere\u00E7o.
         /// </summary>
-        /// <value>Nome da cidade do endere\u00C3\u00A7o.</value>
+        /// <value>Nome da cidade do endere\u00E7o.</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+        /// Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.</value>
+        /// <value>Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+        /// Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
         /// </summary>
-        /// <value>Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.</value>
+        /// <value>Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+        /// C\u00F3digo de Endere\u00E7amento Postal (CEP).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).</value>
+        /// <value>C\u00F3digo de Endere\u00E7amento Postal (CEP).</value>
         [DataMember(Name="cep2", EmitDefaultValue=false)]
         public string Cep2 { get; set; }
     
@@ -251,44 +251,44 @@ namespace Conductor.Pier.Model
         public string NomeLogradouro2 { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+        /// N\u00FAmero do endere\u00E7o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do endere\u00C3\u00A7o.</value>
+        /// <value>N\u00FAmero do endere\u00E7o.</value>
         [DataMember(Name="numeroEndereco2", EmitDefaultValue=false)]
         public int? NumeroEndereco2 { get; set; }
     
         /// <summary>
-        /// Nome do bairro do endere\u00C3\u00A7o.
+        /// Nome do bairro do endere\u00E7o.
         /// </summary>
-        /// <value>Nome do bairro do endere\u00C3\u00A7o.</value>
+        /// <value>Nome do bairro do endere\u00E7o.</value>
         [DataMember(Name="bairro2", EmitDefaultValue=false)]
         public string Bairro2 { get; set; }
     
         /// <summary>
-        /// Nome da cidade do endere\u00C3\u00A7o.
+        /// Nome da cidade do endere\u00E7o.
         /// </summary>
-        /// <value>Nome da cidade do endere\u00C3\u00A7o.</value>
+        /// <value>Nome da cidade do endere\u00E7o.</value>
         [DataMember(Name="cidade2", EmitDefaultValue=false)]
         public string Cidade2 { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+        /// Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.</value>
+        /// <value>Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.</value>
         [DataMember(Name="complemento2", EmitDefaultValue=false)]
         public string Complemento2 { get; set; }
     
         /// <summary>
-        /// Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+        /// Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
         /// </summary>
-        /// <value>Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.</value>
+        /// <value>Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.</value>
         [DataMember(Name="uf2", EmitDefaultValue=false)]
         public string Uf2 { get; set; }
     
         /// <summary>
-        /// Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+        /// Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
         /// </summary>
-        /// <value>Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.</value>
+        /// <value>Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.</value>
         [DataMember(Name="obs", EmitDefaultValue=false)]
         public string Obs { get; set; }
     
@@ -307,65 +307,65 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+        /// Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
         /// </summary>
-        /// <value>Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.</value>
+        /// <value>Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.</value>
         [DataMember(Name="flagArquivoSecrFazenda", EmitDefaultValue=false)]
         public int? FlagArquivoSecrFazenda { get; set; }
     
         /// <summary>
-        /// Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+        /// Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
         /// </summary>
-        /// <value>Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.</value>
+        /// <value>Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.</value>
         [DataMember(Name="flagCartaoDigitado", EmitDefaultValue=false)]
         public int? FlagCartaoDigitado { get; set; }
     
         /// <summary>
-        /// Indica se o estabelecimento est\u00C3\u00A1 inativo.
+        /// Indica se o estabelecimento est\u00E1 inativo.
         /// </summary>
-        /// <value>Indica se o estabelecimento est\u00C3\u00A1 inativo.</value>
+        /// <value>Indica se o estabelecimento est\u00E1 inativo.</value>
         [DataMember(Name="inativo", EmitDefaultValue=false)]
         public int? Inativo { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da moeda.
+        /// C\u00F3digo identificador da moeda.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da moeda.</value>
+        /// <value>C\u00F3digo identificador da moeda.</value>
         [DataMember(Name="idMoeda", EmitDefaultValue=false)]
         public long? IdMoeda { get; set; }
     
         /// <summary>
-        /// Identificador de Pa\u00C3\u00ADs.
+        /// Identificador de Pa\u00EDs.
         /// </summary>
-        /// <value>Identificador de Pa\u00C3\u00ADs.</value>
+        /// <value>Identificador de Pa\u00EDs.</value>
         [DataMember(Name="idPais", EmitDefaultValue=false)]
         public long? IdPais { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do associado ao SPCBrasil.
+        /// N\u00FAmero do associado ao SPCBrasil.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do associado ao SPCBrasil.</value>
+        /// <value>N\u00FAmero do associado ao SPCBrasil.</value>
         [DataMember(Name="associadoSPCBrasil", EmitDefaultValue=false)]
         public int? AssociadoSPCBrasil { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Categoria de Mercado.
+        /// C\u00F3digo de Categoria de Mercado.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Categoria de Mercado.</value>
+        /// <value>C\u00F3digo de Categoria de Mercado.</value>
         [DataMember(Name="mcc", EmitDefaultValue=false)]
         public long? Mcc { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.</value>
         [DataMember(Name="idTipoEstabelecimento", EmitDefaultValue=false)]
         public long? IdTipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+        /// Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
         /// </summary>
-        /// <value>Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.</value>
+        /// <value>Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.</value>
         [DataMember(Name="correspondencia", EmitDefaultValue=false)]
         public int? Correspondencia { get; set; }
     
@@ -377,37 +377,37 @@ namespace Conductor.Pier.Model
         public string CargoContato { get; set; }
     
         /// <summary>
-        /// Consulta de cadastro n\u00C3\u00BAmero um.
+        /// Consulta de cadastro n\u00FAmero um.
         /// </summary>
-        /// <value>Consulta de cadastro n\u00C3\u00BAmero um.</value>
+        /// <value>Consulta de cadastro n\u00FAmero um.</value>
         [DataMember(Name="consulta", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta { get; set; }
     
         /// <summary>
-        /// Consulta de cadastro n\u00C3\u00BAmero um.
+        /// Consulta de cadastro n\u00FAmero dois.
         /// </summary>
-        /// <value>Consulta de cadastro n\u00C3\u00BAmero um.</value>
+        /// <value>Consulta de cadastro n\u00FAmero dois.</value>
         [DataMember(Name="consulta2", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta2 { get; set; }
     
         /// <summary>
-        /// Consulta de cadastro n\u00C3\u00BAmero um.
+        /// Consulta de cadastro n\u00FAmero tr\u00EAs.
         /// </summary>
-        /// <value>Consulta de cadastro n\u00C3\u00BAmero um.</value>
+        /// <value>Consulta de cadastro n\u00FAmero tr\u00EAs.</value>
         [DataMember(Name="consulta3", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta3 { get; set; }
     
         /// <summary>
-        /// Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
         /// </summary>
-        /// <value>Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     
         /// <summary>
-        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
         /// </summary>
-        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
@@ -420,7 +420,7 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class EstabelecimentoPersist {\n");
             sb.Append("  FlagMatriz: ").Append(FlagMatriz).Append("\n");
-            sb.Append("  IdCredor: ").Append(IdCredor).Append("\n");
+            sb.Append("  IdGrupoEconomico: ").Append(IdGrupoEconomico).Append("\n");
             sb.Append("  NumeroReceitaFederal: ").Append(NumeroReceitaFederal).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
@@ -501,9 +501,9 @@ namespace Conductor.Pier.Model
                     this.FlagMatriz.Equals(other.FlagMatriz)
                 ) && 
                 (
-                    this.IdCredor == other.IdCredor ||
-                    this.IdCredor != null &&
-                    this.IdCredor.Equals(other.IdCredor)
+                    this.IdGrupoEconomico == other.IdGrupoEconomico ||
+                    this.IdGrupoEconomico != null &&
+                    this.IdGrupoEconomico.Equals(other.IdGrupoEconomico)
                 ) && 
                 (
                     this.NumeroReceitaFederal == other.NumeroReceitaFederal ||
@@ -707,8 +707,8 @@ namespace Conductor.Pier.Model
                 if (this.FlagMatriz != null)
                     hash = hash * 59 + this.FlagMatriz.GetHashCode();
                 
-                if (this.IdCredor != null)
-                    hash = hash * 59 + this.IdCredor.GetHashCode();
+                if (this.IdGrupoEconomico != null)
+                    hash = hash * 59 + this.IdGrupoEconomico.GetHashCode();
                 
                 if (this.NumeroReceitaFederal != null)
                     hash = hash * 59 + this.NumeroReceitaFederal.GetHashCode();

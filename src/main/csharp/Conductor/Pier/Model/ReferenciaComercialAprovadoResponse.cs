@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoResponse" />class.
         /// </summary>
-        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial).</param>
-        /// <param name="NomeContrato">Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial.</param>
-        /// <param name="Ddd">Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial.</param>
-        /// <param name="Telefone">Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial.</param>
-        /// <param name="Email">Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial.</param>
+        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial).</param>
+        /// <param name="NomeContrato">Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial.</param>
+        /// <param name="Ddd">Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial.</param>
+        /// <param name="Telefone">Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial.</param>
+        /// <param name="Email">Apresenta o e-mail de contato da refer\u00EAncia comercial.</param>
 
         public ReferenciaComercialAprovadoResponse(string RazaoSocial = null, string NomeContrato = null, string Ddd = null, string Telefone = null, string Email = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
+        /// Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
         /// </summary>
-        /// <value>Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)</value>
+        /// <value>Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
+        /// Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial</value>
+        /// <value>Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial</value>
         [DataMember(Name="nomeContrato", EmitDefaultValue=false)]
         public string NomeContrato { get; set; }
     
         /// <summary>
-        /// Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+        /// Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial</value>
+        /// <value>Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+        /// Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial</value>
+        /// <value>Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial
+        /// Apresenta o e-mail de contato da refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial</value>
+        /// <value>Apresenta o e-mail de contato da refer\u00EAncia comercial</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     

@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PromotorResponse" /> class.
         /// Initializes a new instance of the <see cref="PromotorResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id).</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id).</param>
         /// <param name="Nome">Nome do Promotor.</param>
-        /// <param name="DataCadastro">Data da Inclus\u00C3\u00A3o.</param>
-        /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.</param>
-        /// <param name="IdUsuario">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio.</param>
+        /// <param name="DataCadastro">Data da Inclus\u00E3o.</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento.</param>
+        /// <param name="IdUsuario">C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio.</param>
 
         public PromotorResponse(long? Id = null, string Nome = null, string DataCadastro = null, long? IdEstabelecimento = null, long? IdUsuario = null)
         {
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -54,23 +54,23 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Data da Inclus\u00C3\u00A3o
+        /// Data da Inclus\u00E3o
         /// </summary>
-        /// <value>Data da Inclus\u00C3\u00A3o</value>
+        /// <value>Data da Inclus\u00E3o</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     

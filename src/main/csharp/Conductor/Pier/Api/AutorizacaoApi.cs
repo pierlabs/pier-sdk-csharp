@@ -18,10 +18,10 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -30,10 +30,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse AutorizarPorContaUsingPOST (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
   
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -42,10 +42,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> AutorizarPorContaUsingPOSTWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Autoriza transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
@@ -53,10 +53,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse AutorizarUsingPOST (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
   
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Autoriza transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
@@ -64,10 +64,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> AutorizarUsingPOSTWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -76,10 +76,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse AutorizarUsingPOST1 (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
   
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -88,10 +88,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> AutorizarUsingPOST1WithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -100,10 +100,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse CancelarPorIdContaUsingPOST (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
   
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -112,10 +112,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> CancelarPorIdContaUsingPOSTWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Cancela transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -123,10 +123,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse CancelarUsingPOST2 (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
   
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Cancela transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -134,10 +134,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> CancelarUsingPOST2WithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -146,10 +146,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse CancelarUsingPOST3 (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
   
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -158,30 +158,30 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> CancelarUsingPOST3WithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
         List<Object> ListarCodigosProcessamentoAutorizacaoUsingGET ();
   
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Simula planos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -189,10 +189,10 @@ namespace Conductor.Pier.Api
         TransacaoOnUsResponse SimularUsingPOST (TransacaoOnUsRequest transacoesRequest);
   
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Simula planos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -204,10 +204,10 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -216,10 +216,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarPorContaUsingPOSTAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -228,10 +228,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarPorContaUsingPOSTAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Autoriza transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
@@ -239,10 +239,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarUsingPOSTAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Autoriza transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
@@ -250,10 +250,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOSTAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -262,10 +262,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarUsingPOST1Async (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -274,10 +274,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOST1AsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -286,10 +286,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarPorIdContaUsingPOSTAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -298,10 +298,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarPorIdContaUsingPOSTAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Cancela transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -309,10 +309,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOST2Async (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+        /// Cancela transa\u00E7\u00E3o financeira
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -320,10 +320,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST2AsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -332,10 +332,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarUsingPOST3Async (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -344,30 +344,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarUsingPOST3AsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
         System.Threading.Tasks.Task<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETAsync ();
 
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Simula planos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -375,10 +375,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularUsingPOSTAsync (TransacaoOnUsRequest transacoesRequest);
 
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Simula planos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -478,7 +478,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -491,7 +491,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -571,7 +571,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -585,7 +585,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -660,7 +660,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Autoriza transa\u00E7\u00E3o financeira Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
@@ -672,7 +672,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Autoriza transa\u00E7\u00E3o financeira Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
@@ -746,7 +746,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Autoriza transa\u00E7\u00E3o financeira Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
@@ -759,7 +759,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+        /// Autoriza transa\u00E7\u00E3o financeira Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
@@ -830,7 +830,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param> 
@@ -843,7 +843,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param> 
@@ -923,7 +923,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -937,7 +937,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+        /// Autoriza transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -1012,7 +1012,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -1025,7 +1025,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -1105,7 +1105,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -1119,7 +1119,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -1194,7 +1194,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00E7\u00E3o financeira Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
@@ -1206,7 +1206,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00E7\u00E3o financeira Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
@@ -1280,7 +1280,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00E7\u00E3o financeira Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -1293,7 +1293,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Cancela transa\u00E7\u00E3o financeira Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
@@ -1364,7 +1364,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param> 
@@ -1377,7 +1377,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param> 
@@ -1457,7 +1457,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -1471,7 +1471,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+        /// Cancela transa\u00E7\u00E3o financeira por idCartao Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Cartao</param>
@@ -1546,7 +1546,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -1557,7 +1557,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -1619,7 +1619,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -1631,7 +1631,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+        /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -1692,7 +1692,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Simula planos de transa\u00E7\u00F5es Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
@@ -1704,7 +1704,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Simula planos de transa\u00E7\u00F5es Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
@@ -1778,7 +1778,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Simula planos de transa\u00E7\u00F5es Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
@@ -1791,7 +1791,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula planos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Simula planos de transa\u00E7\u00F5es Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>

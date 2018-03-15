@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o
+    /// Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class TaxaAntecipacaoRequest :  IEquatable<TaxaAntecipacaoRequest>
     { 
     
         /// <summary>
-        /// C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+        /// C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.</value>
+        /// <value>C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoTransacaoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+        /// C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.</value>
+        /// <value>C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.</value>
         [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
         public TipoTransacaoEnum? TipoTransacao { get; set; }
     
@@ -44,8 +44,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TaxaAntecipacaoRequest" /> class.
         /// Initializes a new instance of the <see cref="TaxaAntecipacaoRequest" />class.
         /// </summary>
-        /// <param name="TipoTransacao">C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us..</param>
-        /// <param name="ValorTaxa">Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="TipoTransacao">C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us..</param>
+        /// <param name="ValorTaxa">Valor da Taxa de Antecipa\u00E7\u00E3o..</param>
 
         public TaxaAntecipacaoRequest(TipoTransacaoEnum? TipoTransacao = null, double? ValorTaxa = null)
         {
@@ -56,9 +56,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.
+        /// Valor da Taxa de Antecipa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Valor da Taxa de Antecipa\u00E7\u00E3o.</value>
         [DataMember(Name="valorTaxa", EmitDefaultValue=false)]
         public double? ValorTaxa { get; set; }
     

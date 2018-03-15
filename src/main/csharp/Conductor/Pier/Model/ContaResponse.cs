@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id)..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
-        /// <param name="IdOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id)..</param>
-        /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o de conta (id)..</param>
+        /// <param name="IdProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)..</param>
+        /// <param name="IdOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)..</param>
+        /// <param name="IdStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta..</param>
         /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
-        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
-        /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
-        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
+        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela..</param>
+        /// <param name="DataCadastro">Apresenta a data em que o cart\u00E3o foi gerado..</param>
+        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento..</param>
         /// <param name="ValorRenda">Apresenta o valor da renda comprovada.</param>
 
         public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null)
@@ -52,37 +52,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o de conta (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
@@ -101,23 +101,23 @@ namespace Conductor.Pier.Model
         public int? MelhorDiaCompra { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+        /// Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
         /// </summary>
-        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
+        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
         public string DataStatusConta { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+        /// Apresenta a data em que o cart\u00E3o foi gerado.
         /// </summary>
-        /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
+        /// <value>Apresenta a data em que o cart\u00E3o foi gerado.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+        /// Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
         /// </summary>
-        /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
+        /// <value>Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
         public string DataUltimaAlteracaoVencimento { get; set; }
     

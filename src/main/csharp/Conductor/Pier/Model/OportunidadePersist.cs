@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OportunidadePersist" /> class.
         /// Initializes a new instance of the <see cref="OportunidadePersist" />class.
         /// </summary>
-        /// <param name="IdTipoOportunidade">C\u00C3\u00B3digo identificador do tipo oportunidade (required).</param>
-        /// <param name="IdStatusOportunidade">C\u00C3\u00B3digo identificador do status oportunidade (required).</param>
-        /// <param name="NumeroReceitaFederal">N\u00C3\u00BAmero receita federal do cliente (required).</param>
-        /// <param name="DataInicioVigencia">Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade (required).</param>
-        /// <param name="DataFimVigencia">Data do fim da vig\u00C3\u00AAncia da oportunidade (required).</param>
-        /// <param name="FlagAtivo">Atributo que indica se a oportunidade est\u00C3\u00A1 ativa (required).</param>
+        /// <param name="IdTipoOportunidade">C\u00F3digo identificador do tipo oportunidade (required).</param>
+        /// <param name="IdStatusOportunidade">C\u00F3digo identificador do status oportunidade (required).</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero receita federal do cliente (required).</param>
+        /// <param name="DataInicioVigencia">Date de in\u00EDcio da vig\u00EAncia da oportunidade (required).</param>
+        /// <param name="DataFimVigencia">Data do fim da vig\u00EAncia da oportunidade (required).</param>
+        /// <param name="FlagAtivo">Atributo que indica se a oportunidade est\u00E1 ativa (required).</param>
         /// <param name="Detalhes">Lista de detalhes (required).</param>
 
         public OportunidadePersist(long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, string NumeroReceitaFederal = null, string DataInicioVigencia = null, string DataFimVigencia = null, bool? FlagAtivo = null, List<DetalheOportunidadePersist> Detalhes = null)
@@ -100,44 +100,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo oportunidade
+        /// C\u00F3digo identificador do tipo oportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo oportunidade</value>
+        /// <value>C\u00F3digo identificador do tipo oportunidade</value>
         [DataMember(Name="idTipoOportunidade", EmitDefaultValue=false)]
         public long? IdTipoOportunidade { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do status oportunidade
+        /// C\u00F3digo identificador do status oportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do status oportunidade</value>
+        /// <value>C\u00F3digo identificador do status oportunidade</value>
         [DataMember(Name="idStatusOportunidade", EmitDefaultValue=false)]
         public long? IdStatusOportunidade { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero receita federal do cliente
+        /// N\u00FAmero receita federal do cliente
         /// </summary>
-        /// <value>N\u00C3\u00BAmero receita federal do cliente</value>
+        /// <value>N\u00FAmero receita federal do cliente</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+        /// Date de in\u00EDcio da vig\u00EAncia da oportunidade
         /// </summary>
-        /// <value>Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade</value>
+        /// <value>Date de in\u00EDcio da vig\u00EAncia da oportunidade</value>
         [DataMember(Name="dataInicioVigencia", EmitDefaultValue=false)]
         public string DataInicioVigencia { get; set; }
     
         /// <summary>
-        /// Data do fim da vig\u00C3\u00AAncia da oportunidade
+        /// Data do fim da vig\u00EAncia da oportunidade
         /// </summary>
-        /// <value>Data do fim da vig\u00C3\u00AAncia da oportunidade</value>
+        /// <value>Data do fim da vig\u00EAncia da oportunidade</value>
         [DataMember(Name="dataFimVigencia", EmitDefaultValue=false)]
         public string DataFimVigencia { get; set; }
     
         /// <summary>
-        /// Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+        /// Atributo que indica se a oportunidade est\u00E1 ativa
         /// </summary>
-        /// <value>Atributo que indica se a oportunidade est\u00C3\u00A1 ativa</value>
+        /// <value>Atributo que indica se a oportunidade est\u00E1 ativa</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

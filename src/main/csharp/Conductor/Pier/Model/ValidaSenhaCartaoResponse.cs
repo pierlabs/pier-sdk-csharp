@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
+    /// Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
     /// </summary>
     [DataContract]
     public partial class ValidaSenhaCartaoResponse :  IEquatable<ValidaSenhaCartaoResponse>
@@ -23,10 +23,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidaSenhaCartaoResponse" />class.
         /// </summary>
         /// <param name="Mensagem">Mensagem.</param>
-        /// <param name="IdStatusCartao">Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.</param>
-        /// <param name="StatusCartao">Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.</param>
+        /// <param name="IdStatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
+        /// <param name="StatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
         /// <param name="QuantidadeTentativas">Quantidade tentativas.</param>
-        /// <param name="QuantidadeMaximaTentativas">Quantidade m\u00C3\u00A1xima tentativas permitidas.</param>
+        /// <param name="QuantidadeMaximaTentativas">Quantidade m\u00E1xima tentativas permitidas.</param>
 
         public ValidaSenhaCartaoResponse(string Mensagem = null, long? IdStatusCartao = null, string StatusCartao = null, int? QuantidadeTentativas = null, int? QuantidadeMaximaTentativas = null)
         {
@@ -47,16 +47,16 @@ namespace Conductor.Pier.Model
         public string Mensagem { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o do status do cart\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o do status do cart\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     
@@ -68,9 +68,9 @@ namespace Conductor.Pier.Model
         public int? QuantidadeTentativas { get; set; }
     
         /// <summary>
-        /// Quantidade m\u00C3\u00A1xima tentativas permitidas
+        /// Quantidade m\u00E1xima tentativas permitidas
         /// </summary>
-        /// <value>Quantidade m\u00C3\u00A1xima tentativas permitidas</value>
+        /// <value>Quantidade m\u00E1xima tentativas permitidas</value>
         [DataMember(Name="quantidadeMaximaTentativas", EmitDefaultValue=false)]
         public int? QuantidadeMaximaTentativas { get; set; }
     

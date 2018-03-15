@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoCampanhaUpdate" /> class.
         /// Initializes a new instance of the <see cref="PlanoCampanhaUpdate" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do plano campanha.</param>
+        /// <param name="Id">C\u00F3digo identificador do plano campanha.</param>
         /// <param name="Parcelas">Quantidade de parcelas.</param>
         /// <param name="Taxa">Taxa de juros.</param>
-        /// <param name="Usuario">Nome do usu\u00C3\u00A1rio.</param>
+        /// <param name="Usuario">Nome do usu\u00E1rio.</param>
 
         public PlanoCampanhaUpdate(long? Id = null, int? Parcelas = null, double? Taxa = null, string Usuario = null)
         {
@@ -38,9 +38,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do plano campanha
+        /// C\u00F3digo identificador do plano campanha
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do plano campanha</value>
+        /// <value>C\u00F3digo identificador do plano campanha</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public double? Taxa { get; set; }
     
         /// <summary>
-        /// Nome do usu\u00C3\u00A1rio
+        /// Nome do usu\u00E1rio
         /// </summary>
-        /// <value>Nome do usu\u00C3\u00A1rio</value>
+        /// <value>Nome do usu\u00E1rio</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     

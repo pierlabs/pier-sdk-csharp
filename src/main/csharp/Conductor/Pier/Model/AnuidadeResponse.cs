@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de anuidade
+    /// Representa\u00E7\u00E3o da resposta do recurso de anuidade
     /// </summary>
     [DataContract]
     public partial class AnuidadeResponse :  IEquatable<AnuidadeResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AnuidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="AnuidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">Identificador do Tipo de anuidade de b\u00C3\u00B4nus de celular.</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de anuidade de b\u00C3\u00B4nus de celular.</param>
-        /// <param name="Valor">Valor do tipo de anuidade de b\u00C3\u00B4nus de celular.</param>
-        /// <param name="FlagAnuidadeBonificada">Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada.</param>
+        /// <param name="Id">Identificador do Tipo de anuidade de b\u00F4nus de celular.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular.</param>
+        /// <param name="Valor">Valor do tipo de anuidade de b\u00F4nus de celular.</param>
+        /// <param name="FlagAnuidadeBonificada">Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada.</param>
 
         public AnuidadeResponse(long? Id = null, string Descricao = null, double? Valor = null, bool? FlagAnuidadeBonificada = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador do Tipo de anuidade de b\u00C3\u00B4nus de celular
+        /// Identificador do Tipo de anuidade de b\u00F4nus de celular
         /// </summary>
-        /// <value>Identificador do Tipo de anuidade de b\u00C3\u00B4nus de celular</value>
+        /// <value>Identificador do Tipo de anuidade de b\u00F4nus de celular</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de anuidade de b\u00C3\u00B4nus de celular
+        /// Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de anuidade de b\u00C3\u00B4nus de celular</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Valor do tipo de anuidade de b\u00C3\u00B4nus de celular
+        /// Valor do tipo de anuidade de b\u00F4nus de celular
         /// </summary>
-        /// <value>Valor do tipo de anuidade de b\u00C3\u00B4nus de celular</value>
+        /// <value>Valor do tipo de anuidade de b\u00F4nus de celular</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada
+        /// Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
         /// </summary>
-        /// <value>Se o tipo de anuidade de b\u00C3\u00B4nus de celular \u00C3\u00A9 bonificada</value>
+        /// <value>Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada</value>
         [DataMember(Name="flagAnuidadeBonificada", EmitDefaultValue=false)]
         public bool? FlagAnuidadeBonificada { get; set; }
     

@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TerminalResponse" /> class.
         /// Initializes a new instance of the <see cref="TerminalResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id)..</param>
-        /// <param name="Terminal">N\u00C3\u00BAmero \u00C3\u00BAnico do terminal..</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence..</param>
-        /// <param name="IdEstabelecimento">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence..</param>
-        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o))..</param>
-        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o))..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)..</param>
+        /// <param name="Terminal">N\u00FAmero \u00FAnico do terminal..</param>
+        /// <param name="NumeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence..</param>
+        /// <param name="IdEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence..</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))..</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))..</param>
 
         public TerminalResponse(long? Id = null, string Terminal = null, long? NumeroEstabelecimento = null, long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.
+        /// N\u00FAmero \u00FAnico do terminal.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.</value>
+        /// <value>N\u00FAmero \u00FAnico do terminal.</value>
         [DataMember(Name="terminal", EmitDefaultValue=false)]
         public string Terminal { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+        /// N\u00FAmero do estabelecimento a qual o terminal pertence.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.</value>
+        /// <value>N\u00FAmero do estabelecimento a qual o terminal pertence.</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+        /// N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.</value>
+        /// <value>N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
         /// </summary>
-        /// <value>Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
-        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
         /// </summary>
-        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     

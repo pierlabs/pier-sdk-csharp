@@ -23,8 +23,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusOportunidade" />class.
         /// </summary>
         /// <param name="Nome">Nome do status oportunidade.</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade (required).</param>
-        /// <param name="FlagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo (required).</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do status oportunidade (required).</param>
+        /// <param name="FlagAtivo">Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo (required).</param>
 
         public StatusOportunidade(string Nome = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -59,16 +59,16 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
+        /// Descri\u00E7\u00E3o do status oportunidade
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade</value>
+        /// <value>Descri\u00E7\u00E3o do status oportunidade</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+        /// Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
         /// </summary>
-        /// <value>Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo</value>
+        /// <value>Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

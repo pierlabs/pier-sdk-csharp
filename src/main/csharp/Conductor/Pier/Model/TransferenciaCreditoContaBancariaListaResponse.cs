@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Listagem de Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+    /// Listagem de Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
     /// </summary>
     [DataContract]
     public partial class TransferenciaCreditoContaBancariaListaResponse :  IEquatable<TransferenciaCreditoContaBancariaListaResponse>
@@ -22,50 +22,77 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaListaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaListaResponse" />class.
         /// </summary>
-        /// <param name="IdTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia..</param>
-        /// <param name="ValorCompra">Valor da transfer\u00C3\u00AAncia..</param>
-        /// <param name="ValorContrato">Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque..</param>
-        /// <param name="DataCompra">Data da transfer\u00C3\u00AAncia..</param>
+        /// <param name="IdTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transferencia..</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta..</param>
+        /// <param name="IdCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o..</param>
+        /// <param name="ValorCompra">Valor da transfer\u00EAncia..</param>
+        /// <param name="ValorContrato">Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque..</param>
+        /// <param name="DataCompra">Data da transfer\u00EAncia..</param>
+        /// <param name="Status">C\u00F3digo de status de processamento..</param>
         /// <param name="StatusProcessamento">Status Processamento..</param>
 
-        public TransferenciaCreditoContaBancariaListaResponse(long? IdTransferencia = null, double? ValorCompra = null, double? ValorContrato = null, string DataCompra = null, string StatusProcessamento = null)
+        public TransferenciaCreditoContaBancariaListaResponse(long? IdTransferencia = null, long? IdConta = null, long? IdCartao = null, double? ValorCompra = null, double? ValorContrato = null, string DataCompra = null, int? Status = null, string StatusProcessamento = null)
         {
             this.IdTransferencia = IdTransferencia;
+            this.IdConta = IdConta;
+            this.IdCartao = IdCartao;
             this.ValorCompra = ValorCompra;
             this.ValorContrato = ValorContrato;
             this.DataCompra = DataCompra;
+            this.Status = Status;
             this.StatusProcessamento = StatusProcessamento;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transferencia.</value>
         [DataMember(Name="idTransferencia", EmitDefaultValue=false)]
         public long? IdTransferencia { get; set; }
     
         /// <summary>
-        /// Valor da transfer\u00C3\u00AAncia.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta.
         /// </summary>
-        /// <value>Valor da transfer\u00C3\u00AAncia.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta.</value>
+        [DataMember(Name="idConta", EmitDefaultValue=false)]
+        public long? IdConta { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.</value>
+        [DataMember(Name="idCartao", EmitDefaultValue=false)]
+        public long? IdCartao { get; set; }
+    
+        /// <summary>
+        /// Valor da transfer\u00EAncia.
+        /// </summary>
+        /// <value>Valor da transfer\u00EAncia.</value>
         [DataMember(Name="valorCompra", EmitDefaultValue=false)]
         public double? ValorCompra { get; set; }
     
         /// <summary>
-        /// Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+        /// Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
         /// </summary>
-        /// <value>Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.</value>
+        /// <value>Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.</value>
         [DataMember(Name="valorContrato", EmitDefaultValue=false)]
         public double? ValorContrato { get; set; }
     
         /// <summary>
-        /// Data da transfer\u00C3\u00AAncia.
+        /// Data da transfer\u00EAncia.
         /// </summary>
-        /// <value>Data da transfer\u00C3\u00AAncia.</value>
+        /// <value>Data da transfer\u00EAncia.</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
         public string DataCompra { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de status de processamento.
+        /// </summary>
+        /// <value>C\u00F3digo de status de processamento.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public int? Status { get; set; }
     
         /// <summary>
         /// Status Processamento.
@@ -83,9 +110,12 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class TransferenciaCreditoContaBancariaListaResponse {\n");
             sb.Append("  IdTransferencia: ").Append(IdTransferencia).Append("\n");
+            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
             sb.Append("  ValorCompra: ").Append(ValorCompra).Append("\n");
             sb.Append("  ValorContrato: ").Append(ValorContrato).Append("\n");
             sb.Append("  DataCompra: ").Append(DataCompra).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StatusProcessamento: ").Append(StatusProcessamento).Append("\n");
             
             sb.Append("}\n");
@@ -130,6 +160,16 @@ namespace Conductor.Pier.Model
                     this.IdTransferencia.Equals(other.IdTransferencia)
                 ) && 
                 (
+                    this.IdConta == other.IdConta ||
+                    this.IdConta != null &&
+                    this.IdConta.Equals(other.IdConta)
+                ) && 
+                (
+                    this.IdCartao == other.IdCartao ||
+                    this.IdCartao != null &&
+                    this.IdCartao.Equals(other.IdCartao)
+                ) && 
+                (
                     this.ValorCompra == other.ValorCompra ||
                     this.ValorCompra != null &&
                     this.ValorCompra.Equals(other.ValorCompra)
@@ -143,6 +183,11 @@ namespace Conductor.Pier.Model
                     this.DataCompra == other.DataCompra ||
                     this.DataCompra != null &&
                     this.DataCompra.Equals(other.DataCompra)
+                ) && 
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 ) && 
                 (
                     this.StatusProcessamento == other.StatusProcessamento ||
@@ -166,6 +211,12 @@ namespace Conductor.Pier.Model
                 if (this.IdTransferencia != null)
                     hash = hash * 59 + this.IdTransferencia.GetHashCode();
                 
+                if (this.IdConta != null)
+                    hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdCartao != null)
+                    hash = hash * 59 + this.IdCartao.GetHashCode();
+                
                 if (this.ValorCompra != null)
                     hash = hash * 59 + this.ValorCompra.GetHashCode();
                 
@@ -174,6 +225,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataCompra != null)
                     hash = hash * 59 + this.DataCompra.GetHashCode();
+                
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.StatusProcessamento != null)
                     hash = hash * 59 + this.StatusProcessamento.GetHashCode();

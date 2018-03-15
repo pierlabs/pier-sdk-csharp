@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id)..</param>
-        /// <param name="DataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia..</param>
-        /// <param name="IdContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id)..</param>
-        /// <param name="IdContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id)..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)..</param>
+        /// <param name="DataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia..</param>
+        /// <param name="IdContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id)..</param>
+        /// <param name="IdContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id)..</param>
         /// <param name="ValorTransferencia">Valor estabelecido para ser transferido..</param>
 
         public TransferenciaResponse(long? Id = null, string DataTransferencia = null, long? IdContaOrigem = null, long? IdContaDestino = null, double? ValorTransferencia = null)
@@ -40,30 +40,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+        /// Data estabelecida para ocorrer a transfer\u00EAncia.
         /// </summary>
-        /// <value>Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.</value>
+        /// <value>Data estabelecida para ocorrer a transfer\u00EAncia.</value>
         [DataMember(Name="dataTransferencia", EmitDefaultValue=false)]
         public string DataTransferencia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).</value>
         [DataMember(Name="idContaOrigem", EmitDefaultValue=false)]
         public long? IdContaOrigem { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).</value>
         [DataMember(Name="idContaDestino", EmitDefaultValue=false)]
         public long? IdContaDestino { get; set; }
     

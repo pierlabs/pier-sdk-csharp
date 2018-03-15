@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id)..</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento..</param>
-        /// <param name="Status">Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado..</param>
-        /// <param name="IdTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado..</param>
-        /// <param name="DataHoraInclusao">Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta..</param>
-        /// <param name="DataHoraCancelamento">Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta..</param>
-        /// <param name="ModificadoPor">Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)..</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento..</param>
+        /// <param name="Status">Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado..</param>
+        /// <param name="IdTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado..</param>
+        /// <param name="DataHoraInclusao">Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta..</param>
+        /// <param name="DataHoraCancelamento">Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta..</param>
+        /// <param name="ModificadoPor">Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o..</param>
 
         public TipoFaturamentoPorContaResponse(long? Id = null, long? IdConta = null, bool? Status = null, long? IdTipoFaturamento = null, string DataHoraInclusao = null, string DataHoraCancelamento = null, string ModificadoPor = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.
+        /// Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
         /// </summary>
-        /// <value>Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.</value>
+        /// <value>Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public bool? Status { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.</value>
         [DataMember(Name="idTipoFaturamento", EmitDefaultValue=false)]
         public long? IdTipoFaturamento { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+        /// Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
         /// </summary>
-        /// <value>Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.</value>
+        /// <value>Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+        /// Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
         /// </summary>
-        /// <value>Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.</value>
+        /// <value>Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.</value>
         [DataMember(Name="dataHoraCancelamento", EmitDefaultValue=false)]
         public string DataHoraCancelamento { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.
+        /// Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.</value>
         [DataMember(Name="modificadoPor", EmitDefaultValue=false)]
         public string ModificadoPor { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+    /// Objeto Notifica\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class NotificacaoSMSBody :  IEquatable<NotificacaoSMSBody>
     { 
     
         /// <summary>
-        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
@@ -47,13 +47,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoSMSBody" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoSMSBody" />class.
         /// </summary>
-        /// <param name="Nsu">N\u00C3\u00BAmero sequencial \u00C3\u00BAnico (required).</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
+        /// <param name="Nsu">N\u00FAmero sequencial \u00FAnico (required).</param>
+        /// <param name="IdPessoa">C\u00F3digo identificado da pessoa (required).</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta (required).</param>
         /// <param name="Celular">Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999. (required).</param>
         /// <param name="Conteudo">Apresenta o texto do SMS a ser enviado (required).</param>
-        /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
+        /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o.</param>
+        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o (required).</param>
 
         public NotificacaoSMSBody(long? Nsu = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, string DataAgendamento = null, TipoEventoEnum? TipoEvento = null)
         {
@@ -117,23 +117,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+        /// N\u00FAmero sequencial \u00FAnico
         /// </summary>
-        /// <value>N\u00C3\u00BAmero sequencial \u00C3\u00BAnico</value>
+        /// <value>N\u00FAmero sequencial \u00FAnico</value>
         [DataMember(Name="nsu", EmitDefaultValue=false)]
         public long? Nsu { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificado da pessoa
+        /// C\u00F3digo identificado da pessoa
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificado da pessoa</value>
+        /// <value>C\u00F3digo identificado da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
@@ -152,9 +152,9 @@ namespace Conductor.Pier.Model
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
         public string DataAgendamento { get; set; }
     

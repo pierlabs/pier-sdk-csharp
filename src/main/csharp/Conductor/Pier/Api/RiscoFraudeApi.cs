@@ -18,188 +18,232 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
         /// <remarks>
-        /// Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse ConsultarUsingGET26 (long? id);
+        RiscoFraudeDetalhadoResponse ConsultarUsingGET27 (long? id);
   
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
         /// <remarks>
-        /// Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET26WithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET27WithHttpInfo (long? id);
         
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>TipoResolucaoResponse</returns>
         TipoResolucaoResponse ListarTiposResolucaoUsingGET (int? page = null, int? limit = null);
   
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of TipoResolucaoResponse</returns>
         ApiResponse<TipoResolucaoResponse> ListarTiposResolucaoUsingGETWithHttpInfo (int? page = null, int? limit = null);
         
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Object</returns>
         Object NegarUsingPOST (long? id);
   
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> NegarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Object</returns>
         Object ReconhecerUsingPOST (long? id);
   
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ReconhecerUsingPOSTWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+        /// </summary>
+        /// <remarks>
+        /// Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Object</returns>
+        Object ValidarDadosPortadorUsingPOST (DadosPortadorRequest request);
+  
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+        /// </summary>
+        /// <remarks>
+        /// Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ValidarDadosPortadorUsingPOSTWithHttpInfo (DadosPortadorRequest request);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
         /// <remarks>
-        /// Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET26Async (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET27Async (long? id);
 
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
         /// <remarks>
-        /// Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET27AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of TipoResolucaoResponse</returns>
         System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucaoUsingGETAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (TipoResolucaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null);
         
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> NegarUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> NegarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> ReconhecerUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
         /// </summary>
         /// <remarks>
-        /// Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ReconhecerUsingPOSTAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+        /// </summary>
+        /// <remarks>
+        /// Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ValidarDadosPortadorUsingPOSTAsync (DadosPortadorRequest request);
+
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
+        /// </summary>
+        /// <remarks>
+        /// Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarDadosPortadorUsingPOSTAsyncWithHttpInfo (DadosPortadorRequest request);
         
         #endregion Asynchronous Operations
         
@@ -294,29 +338,29 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse ConsultarUsingGET26 (long? id)
+        public RiscoFraudeDetalhadoResponse ConsultarUsingGET27 (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET26WithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET27WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET26WithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET27WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ConsultarUsingGET26");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ConsultarUsingGET27");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -362,9 +406,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -374,28 +418,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET26Async (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET27Async (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET26AsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET27AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET27AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET26");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET27");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -441,9 +485,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -452,11 +496,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>TipoResolucaoResponse</returns>
         public TipoResolucaoResponse ListarTiposResolucaoUsingGET (int? page = null, int? limit = null)
         {
@@ -465,11 +509,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of TipoResolucaoResponse</returns>
         public ApiResponse< TipoResolucaoResponse > ListarTiposResolucaoUsingGETWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -531,11 +575,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of TipoResolucaoResponse</returns>
         public async System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucaoUsingGETAsync (int? page = null, int? limit = null)
         {
@@ -545,11 +589,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor.
+        /// Listar os tipos de resolu\u00E7\u00E3o de fraude Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (TipoResolucaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -610,10 +654,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>Object</returns>
         public Object NegarUsingPOST (long? id)
         {
@@ -622,10 +666,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > NegarUsingPOSTWithHttpInfo (long? id)
         {
@@ -690,10 +734,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> NegarUsingPOSTAsync (long? id)
         {
@@ -703,10 +747,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Nega a realiza\u00C3\u00A7\u00C3\u00A3o de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Nega a realiza\u00E7\u00E3o de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> NegarUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -768,10 +812,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>Object</returns>
         public Object ReconhecerUsingPOST (long? id)
         {
@@ -780,10 +824,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > ReconhecerUsingPOSTWithHttpInfo (long? id)
         {
@@ -848,10 +892,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> ReconhecerUsingPOSTAsync (long? id)
         {
@@ -861,10 +905,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
+        /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude Confirma a autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ReconhecerUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -918,6 +962,176 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ReconhecerUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>Object</returns>
+        public Object ValidarDadosPortadorUsingPOST (DadosPortadorRequest request)
+        {
+             ApiResponse<Object> localVarResponse = ValidarDadosPortadorUsingPOSTWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ValidarDadosPortadorUsingPOSTWithHttpInfo (DadosPortadorRequest request)
+        {
+            
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling RiscoFraudeApi->ValidarDadosPortadorUsingPOST");
+            
+    
+            var localVarPath = "/api/riscos-fraudes/validar-dados-portador";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortadorUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortadorUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ValidarDadosPortadorUsingPOSTAsync (DadosPortadorRequest request)
+        {
+             ApiResponse<Object> localVarResponse = await ValidarDadosPortadorUsingPOSTAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor Verif\u00EDca a exist\u00EAncias das informa\u00E7\u00F5es na base do emissor.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarDadosPortadorUsingPOSTAsyncWithHttpInfo (DadosPortadorRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarDadosPortadorUsingPOST");
+            
+    
+            var localVarPath = "/api/riscos-fraudes/validar-dados-portador";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortadorUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortadorUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
+    /// Representa\u00E7\u00E3o do template do documento.
     /// </summary>
     [DataContract]
     public partial class DocumentoTemplatePersist :  IEquatable<DocumentoTemplatePersist>
@@ -23,8 +23,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" />class.
         /// </summary>
         /// <param name="IdTipoTemplate">ID para o Tipo de Template vinculado ao template..</param>
-        /// <param name="Template">Template para o conte\u00C3\u00BAdo do documento..</param>
-        /// <param name="Integracoes">Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="Template">Template para o conte\u00FAdo do documento..</param>
+        /// <param name="Integracoes">Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o.</param>
 
         public DocumentoTemplatePersist(long? IdTipoTemplate = null, string Template = null, List<ReferenciaIdPersist> Integracoes = null)
         {
@@ -43,16 +43,16 @@ namespace Conductor.Pier.Model
         public long? IdTipoTemplate { get; set; }
     
         /// <summary>
-        /// Template para o conte\u00C3\u00BAdo do documento.
+        /// Template para o conte\u00FAdo do documento.
         /// </summary>
-        /// <value>Template para o conte\u00C3\u00BAdo do documento.</value>
+        /// <value>Template para o conte\u00FAdo do documento.</value>
         [DataMember(Name="template", EmitDefaultValue=false)]
         public string Template { get; set; }
     
         /// <summary>
-        /// Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+        /// Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
         /// </summary>
-        /// <value>Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o</value>
         [DataMember(Name="integracoes", EmitDefaultValue=false)]
         public List<ReferenciaIdPersist> Integracoes { get; set; }
     

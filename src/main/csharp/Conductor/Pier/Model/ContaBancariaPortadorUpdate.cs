@@ -22,18 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaBancariaPortadorUpdate" /> class.
         /// Initializes a new instance of the <see cref="ContaBancariaPortadorUpdate" />class.
         /// </summary>
-        /// <param name="NomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia.</param>
-        /// <param name="Banco">C\u00C3\u00B3digo do banco (required).</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (required).</param>
-        /// <param name="DigitoAgencia">D\u00C3\u00ADgito da ag\u00C3\u00AAncia.</param>
-        /// <param name="NumeroConta">N\u00C3\u00BAmero da conta (required).</param>
-        /// <param name="DigitoConta">D\u00C3\u00ADgito da conta.</param>
-        /// <param name="FlagAtivo">Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa) (required).</param>
-        /// <param name="FlagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (required).</param>
-        /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) (required).</param>
+        /// <param name="NomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia.</param>
+        /// <param name="Banco">C\u00F3digo do banco (required).</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia (required).</param>
+        /// <param name="DigitoAgencia">D\u00EDgito da ag\u00EAncia.</param>
+        /// <param name="NumeroConta">N\u00FAmero da conta (required).</param>
+        /// <param name="DigitoConta">D\u00EDgito da conta.</param>
+        /// <param name="FlagAtivo">Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa) (required).</param>
+        /// <param name="FlagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (required).</param>
+        /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente) (required).</param>
         /// <param name="Favorecido">Nome do favorecido (required).</param>
         /// <param name="NumeroReceiraFederal">Documento do favorecido (required).</param>
-        /// <param name="Titularidade">Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular.</param>
+        /// <param name="Titularidade">Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular.</param>
 
         public ContaBancariaPortadorUpdate(string NomeAgencia = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagAtivo = null, int? FlagContaOrigemDoc = null, int? FlagContaPoupanca = null, string Favorecido = null, string NumeroReceiraFederal = null, int? Titularidade = null)
         {
@@ -118,65 +118,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+        /// Descri\u00E7\u00E3o da ag\u00EAncia
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia</value>
+        /// <value>Descri\u00E7\u00E3o da ag\u00EAncia</value>
         [DataMember(Name="nomeAgencia", EmitDefaultValue=false)]
         public string NomeAgencia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do banco
+        /// C\u00F3digo do banco
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do banco</value>
+        /// <value>C\u00F3digo do banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+        /// N\u00FAmero da ag\u00EAncia
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia</value>
+        /// <value>N\u00FAmero da ag\u00EAncia</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public string NumeroAgencia { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+        /// D\u00EDgito da ag\u00EAncia
         /// </summary>
-        /// <value>D\u00C3\u00ADgito da ag\u00C3\u00AAncia</value>
+        /// <value>D\u00EDgito da ag\u00EAncia</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da conta
+        /// N\u00FAmero da conta
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta</value>
+        /// <value>N\u00FAmero da conta</value>
         [DataMember(Name="numeroConta", EmitDefaultValue=false)]
         public string NumeroConta { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito da conta
+        /// D\u00EDgito da conta
         /// </summary>
-        /// <value>D\u00C3\u00ADgito da conta</value>
+        /// <value>D\u00EDgito da conta</value>
         [DataMember(Name="digitoConta", EmitDefaultValue=false)]
         public string DigitoConta { get; set; }
     
         /// <summary>
-        /// Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+        /// Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
         /// </summary>
-        /// <value>Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)</value>
+        /// <value>Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     
         /// <summary>
-        /// Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+        /// Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
         /// </summary>
-        /// <value>Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)</value>
+        /// <value>Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)</value>
         [DataMember(Name="flagContaOrigemDoc", EmitDefaultValue=false)]
         public int? FlagContaOrigemDoc { get; set; }
     
         /// <summary>
-        /// Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+        /// Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
         /// </summary>
-        /// <value>Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)</value>
+        /// <value>Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)</value>
         [DataMember(Name="flagContaPoupanca", EmitDefaultValue=false)]
         public int? FlagContaPoupanca { get; set; }
     
@@ -195,9 +195,9 @@ namespace Conductor.Pier.Model
         public string NumeroReceiraFederal { get; set; }
     
         /// <summary>
-        /// Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+        /// Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
         /// </summary>
-        /// <value>Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular</value>
+        /// <value>Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular</value>
         [DataMember(Name="titularidade", EmitDefaultValue=false)]
         public int? Titularidade { get; set; }
     

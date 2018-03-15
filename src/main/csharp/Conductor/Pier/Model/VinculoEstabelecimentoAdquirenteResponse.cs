@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoEstabelecimentoAdquirenteResponse" /> class.
         /// Initializes a new instance of the <see cref="VinculoEstabelecimentoAdquirenteResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id)..</param>
-        /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id)..</param>
-        /// <param name="IdAdquirente">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id)..</param>
-        /// <param name="CodigoEstabelecimentoAdquirente">C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente..</param>
-        /// <param name="DataHoraCadastro">Data de cadastro do v\u00C3\u00ADnculo..</param>
-        /// <param name="Mensagem">Data de cadastro do v\u00C3\u00ADnculo..</param>
-        /// <param name="Status">Data de cadastro do v\u00C3\u00ADnculo..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id)..</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)..</param>
+        /// <param name="IdAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id)..</param>
+        /// <param name="CodigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente..</param>
+        /// <param name="DataHoraCadastro">Data de cadastro do v\u00EDnculo..</param>
+        /// <param name="Mensagem">Data de cadastro do v\u00EDnculo..</param>
+        /// <param name="Status">Data de cadastro do v\u00EDnculo..</param>
 
         public VinculoEstabelecimentoAdquirenteResponse(long? Id = null, long? IdEstabelecimento = null, long? IdAdquirente = null, string CodigoEstabelecimentoAdquirente = null, string DataHoraCadastro = null, string Mensagem = null, int? Status = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).</value>
         [DataMember(Name="idAdquirente", EmitDefaultValue=false)]
         public long? IdAdquirente { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+        /// C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.</value>
+        /// <value>C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.</value>
         [DataMember(Name="codigoEstabelecimentoAdquirente", EmitDefaultValue=false)]
         public string CodigoEstabelecimentoAdquirente { get; set; }
     
         /// <summary>
-        /// Data de cadastro do v\u00C3\u00ADnculo.
+        /// Data de cadastro do v\u00EDnculo.
         /// </summary>
-        /// <value>Data de cadastro do v\u00C3\u00ADnculo.</value>
+        /// <value>Data de cadastro do v\u00EDnculo.</value>
         [DataMember(Name="dataHoraCadastro", EmitDefaultValue=false)]
         public string DataHoraCadastro { get; set; }
     
         /// <summary>
-        /// Data de cadastro do v\u00C3\u00ADnculo.
+        /// Data de cadastro do v\u00EDnculo.
         /// </summary>
-        /// <value>Data de cadastro do v\u00C3\u00ADnculo.</value>
+        /// <value>Data de cadastro do v\u00EDnculo.</value>
         [DataMember(Name="mensagem", EmitDefaultValue=false)]
         public string Mensagem { get; set; }
     
         /// <summary>
-        /// Data de cadastro do v\u00C3\u00ADnculo.
+        /// Data de cadastro do v\u00EDnculo.
         /// </summary>
-        /// <value>Data de cadastro do v\u00C3\u00ADnculo.</value>
+        /// <value>Data de cadastro do v\u00EDnculo.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     

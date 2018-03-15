@@ -50,7 +50,7 @@ namespace Conductor.Pier.Model
         /// <param name="Chave">Valor da propriedade do Documento..</param>
         /// <param name="Valor">Valor da propriedade do Documento..</param>
         /// <param name="DetalhesTipo">Tipo da propriedade do Documento..</param>
-        /// <param name="FlagIndice">Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false).</param>
+        /// <param name="FlagIndice">Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false).</param>
 
         public PropriedadeDocumentoRequest(string Chave = null, string Valor = null, DetalhesTipoEnum? DetalhesTipo = null, bool? FlagIndice = null)
         {
@@ -77,9 +77,9 @@ namespace Conductor.Pier.Model
         public string Valor { get; set; }
     
         /// <summary>
-        /// Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+        /// Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
         /// </summary>
-        /// <value>Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)</value>
+        /// <value>Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)</value>
         [DataMember(Name="flagIndice", EmitDefaultValue=false)]
         public bool? FlagIndice { get; set; }
     

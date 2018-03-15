@@ -18,30 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageHistoricoEventosResponse</returns>
         PageHistoricoEventosResponse ListarHistoricoAlteracoesLimitesUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageHistoricoEventosResponse</returns>
         ApiResponse<PageHistoricoEventosResponse> ListarHistoricoAlteracoesLimitesUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -50,30 +50,30 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoEventosResponse</returns>
         System.Threading.Tasks.Task<PageHistoricoEventosResponse> ListarHistoricoAlteracoesLimitesUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoEventosResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageHistoricoEventosResponse>> ListarHistoricoAlteracoesLimitesUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -170,13 +170,13 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageHistoricoEventosResponse</returns>
         public PageHistoricoEventosResponse ListarHistoricoAlteracoesLimitesUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -185,13 +185,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageHistoricoEventosResponse</returns>
         public ApiResponse< PageHistoricoEventosResponse > ListarHistoricoAlteracoesLimitesUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -259,13 +259,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoEventosResponse</returns>
         public async System.Threading.Tasks.Task<PageHistoricoEventosResponse> ListarHistoricoAlteracoesLimitesUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -275,13 +275,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoEventosResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageHistoricoEventosResponse>> ListarHistoricoAlteracoesLimitesUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {

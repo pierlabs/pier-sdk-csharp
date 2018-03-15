@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AtendimentoClienteResponse" /> class.
         /// Initializes a new instance of the <see cref="AtendimentoClienteResponse" />class.
         /// </summary>
-        /// <param name="IdAtendimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado.</param>
-        /// <param name="IdTipoAtendimento">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id).</param>
-        /// <param name="DescricaoTipoAtendimento">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento.</param>
-        /// <param name="ConteudoAtendimento">Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento..</param>
-        /// <param name="DetalhesAtendimento">Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento..</param>
+        /// <param name="IdAtendimento">C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id).</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado.</param>
+        /// <param name="IdTipoAtendimento">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id).</param>
+        /// <param name="DescricaoTipoAtendimento">Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento.</param>
+        /// <param name="ConteudoAtendimento">Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento..</param>
+        /// <param name="DetalhesAtendimento">Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento..</param>
         /// <param name="NomeAtendente">Apresenta o nome do Atendente que registrou o Atendimento..</param>
-        /// <param name="NomeSistema">Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento..</param>
+        /// <param name="NomeSistema">Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento..</param>
         /// <param name="DataHoraInicioAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos..</param>
         /// <param name="DataHoraFimAtendimento">Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos..</param>
         /// <param name="DataAtendimento">Apresenta a data e hora em que o Atendimento foi realizado..</param>
         /// <param name="DataAgendamento">Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento..</param>
-        /// <param name="DataProcessamento">Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada..</param>
-        /// <param name="FlagProcessamento">Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado..</param>
+        /// <param name="DataProcessamento">Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada..</param>
+        /// <param name="FlagProcessamento">Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado..</param>
 
         public AtendimentoClienteResponse(long? IdAtendimento = null, long? IdConta = null, long? IdTipoAtendimento = null, string DescricaoTipoAtendimento = null, string ConteudoAtendimento = null, string DetalhesAtendimento = null, string NomeAtendente = null, string NomeSistema = null, string DataHoraInicioAtendimento = null, string DataHoraFimAtendimento = null, string DataAtendimento = null, string DataAgendamento = null, string DataProcessamento = null, int? FlagProcessamento = null)
         {
@@ -58,44 +58,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)</value>
         [DataMember(Name="idAtendimento", EmitDefaultValue=false)]
         public long? IdAtendimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)</value>
         [DataMember(Name="idTipoAtendimento", EmitDefaultValue=false)]
         public long? IdTipoAtendimento { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento
+        /// Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
         /// </summary>
-        /// <value>Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento</value>
+        /// <value>Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento</value>
         [DataMember(Name="descricaoTipoAtendimento", EmitDefaultValue=false)]
         public string DescricaoTipoAtendimento { get; set; }
     
         /// <summary>
-        /// Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+        /// Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
         /// </summary>
-        /// <value>Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.</value>
+        /// <value>Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.</value>
         [DataMember(Name="conteudoAtendimento", EmitDefaultValue=false)]
         public string ConteudoAtendimento { get; set; }
     
         /// <summary>
-        /// Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+        /// Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
         /// </summary>
-        /// <value>Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.</value>
+        /// <value>Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.</value>
         [DataMember(Name="detalhesAtendimento", EmitDefaultValue=false)]
         public string DetalhesAtendimento { get; set; }
     
@@ -107,9 +107,9 @@ namespace Conductor.Pier.Model
         public string NomeAtendente { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento.
+        /// Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
         /// </summary>
-        /// <value>Apresenta o nome do Sistema, Servidor, M\u00C3\u00B3dulo ou M\u00C3\u00A9todo REST que originou o registro do Atendimento.</value>
+        /// <value>Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.</value>
         [DataMember(Name="nomeSistema", EmitDefaultValue=false)]
         public string NomeSistema { get; set; }
     
@@ -142,16 +142,16 @@ namespace Conductor.Pier.Model
         public string DataAgendamento { get; set; }
     
         /// <summary>
-        /// Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+        /// Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
         /// </summary>
-        /// <value>Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.</value>
+        /// <value>Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
         public string DataProcessamento { get; set; }
     
         /// <summary>
-        /// Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.
+        /// Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
         /// </summary>
-        /// <value>Quando aplic\u00C3\u00A1vel, de acordo com o Indica se o Processamento da solicita\u00C3\u00A7\u00C3\u00A3o fora realizado.</value>
+        /// <value>Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.</value>
         [DataMember(Name="flagProcessamento", EmitDefaultValue=false)]
         public int? FlagProcessamento { get; set; }
     

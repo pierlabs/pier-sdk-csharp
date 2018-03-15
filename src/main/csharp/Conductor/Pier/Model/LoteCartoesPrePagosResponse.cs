@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos
+    /// Lote Cart\u00F5es Pr\u00E9-Pagos
     /// </summary>
     [DataContract]
     public partial class LoteCartoesPrePagosResponse :  IEquatable<LoteCartoesPrePagosResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LoteCartoesPrePagosResponse" /> class.
         /// Initializes a new instance of the <see cref="LoteCartoesPrePagosResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id). (required).</param>
-        /// <param name="IdOrigemComercial">C\u00C3\u00B3digo identificador da origem comercial. (required).</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo identificador do Produto. (required).</param>
-        /// <param name="IdTipoCartao">C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o. (required).</param>
-        /// <param name="IdImagem">C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o. (required).</param>
-        /// <param name="IdEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o. (required).</param>
-        /// <param name="Quantidade">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (required).</param>
-        /// <param name="DataCadastro">Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos. (required).</param>
-        /// <param name="UsuarioCadastro">Nome do usu\u00C3\u00A1rio que criou o lote. (required).</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id). (required).</param>
+        /// <param name="IdOrigemComercial">C\u00F3digo identificador da origem comercial. (required).</param>
+        /// <param name="IdProduto">C\u00F3digo identificador do Produto. (required).</param>
+        /// <param name="IdTipoCartao">C\u00F3digo identificador do tipo do cart\u00E3o. (required).</param>
+        /// <param name="IdImagem">C\u00F3digo identificador da Imagem do cart\u00E3o. (required).</param>
+        /// <param name="IdEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o. (required).</param>
+        /// <param name="Quantidade">N\u00FAmero de cart\u00F5es existentes no Lote. (required).</param>
+        /// <param name="DataCadastro">Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos. (required).</param>
+        /// <param name="UsuarioCadastro">Nome do usu\u00E1rio que criou o lote. (required).</param>
         /// <param name="StatusProcessamento">Indica o status de processamento do lote. (required).</param>
-        /// <param name="IdentificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (required).</param>
+        /// <param name="IdentificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (required).</param>
 
         public LoteCartoesPrePagosResponse(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, string DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null, string IdentificadorExterno = null)
         {
@@ -140,65 +140,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da origem comercial.
+        /// C\u00F3digo identificador da origem comercial.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da origem comercial.</value>
+        /// <value>C\u00F3digo identificador da origem comercial.</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do Produto.
+        /// C\u00F3digo identificador do Produto.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do Produto.</value>
+        /// <value>C\u00F3digo identificador do Produto.</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.
+        /// C\u00F3digo identificador do tipo do cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo identificador do tipo do cart\u00E3o.</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.
+        /// C\u00F3digo identificador da Imagem do cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo identificador da Imagem do cart\u00E3o.</value>
         [DataMember(Name="idImagem", EmitDefaultValue=false)]
         public long? IdImagem { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.</value>
         [DataMember(Name="idEndereco", EmitDefaultValue=false)]
         public long? IdEndereco { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+        /// N\u00FAmero de cart\u00F5es existentes no Lote.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.</value>
+        /// <value>N\u00FAmero de cart\u00F5es existentes no Lote.</value>
         [DataMember(Name="quantidade", EmitDefaultValue=false)]
         public int? Quantidade { get; set; }
     
         /// <summary>
-        /// Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+        /// Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.
         /// </summary>
-        /// <value>Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.</value>
+        /// <value>Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Nome do usu\u00C3\u00A1rio que criou o lote.
+        /// Nome do usu\u00E1rio que criou o lote.
         /// </summary>
-        /// <value>Nome do usu\u00C3\u00A1rio que criou o lote.</value>
+        /// <value>Nome do usu\u00E1rio que criou o lote.</value>
         [DataMember(Name="usuarioCadastro", EmitDefaultValue=false)]
         public string UsuarioCadastro { get; set; }
     
@@ -210,9 +210,9 @@ namespace Conductor.Pier.Model
         public int? StatusProcessamento { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+        /// N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).</value>
+        /// <value>N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).</value>
         [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
         public string IdentificadorExterno { get; set; }
     

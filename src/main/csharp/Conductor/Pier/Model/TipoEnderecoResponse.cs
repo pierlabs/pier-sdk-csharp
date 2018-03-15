@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Tipo Endere\u00C3\u00A7o
+    /// Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o
     /// </summary>
     [DataContract]
     public partial class TipoEnderecoResponse :  IEquatable<TipoEnderecoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoEnderecoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoEnderecoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id).</param>
-        /// <param name="Nome">Nome do Tipo do Endere\u00C3\u00A7o.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id).</param>
+        /// <param name="Nome">Nome do Tipo do Endere\u00E7o.</param>
 
         public TipoEnderecoResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do Tipo do Endere\u00C3\u00A7o
+        /// Nome do Tipo do Endere\u00E7o
         /// </summary>
-        /// <value>Nome do Tipo do Endere\u00C3\u00A7o</value>
+        /// <value>Nome do Tipo do Endere\u00E7o</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

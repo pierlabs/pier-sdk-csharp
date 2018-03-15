@@ -18,14 +18,14 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="identificadorExterno">Identificador Externo (optional)</param>
@@ -33,14 +33,14 @@ namespace Conductor.Pier.Api
         AjusteFinanceiroResponse AjustarContaUsingPOST1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string identificadorExterno = null);
   
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="identificadorExterno">Identificador Externo (optional)</param>
@@ -48,73 +48,73 @@ namespace Conductor.Pier.Api
         ApiResponse<AjusteFinanceiroResponse> AjustarContaUsingPOST1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string identificadorExterno = null);
         
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>string</returns>
         string AlterarProdutoUsingPOST (long? id, AlterarProdutoRequest request);
   
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AlterarProdutoUsingPOSTWithHttpInfo (long? id, AlterarProdutoRequest request);
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>ContaResponse</returns>
         ContaResponse AlterarTitularUsingPOST (long? id, long? idPessoa);
   
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>ApiResponse of ContaResponse</returns>
         ApiResponse<ContaResponse> AlterarTitularUsingPOSTWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
         /// <returns>ContaResponse</returns>
         ContaResponse AlterarVencimentoUsingPUT (long? id, int? novoDiaVencimento);
   
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
         /// <returns>ApiResponse of ContaResponse</returns>
         ApiResponse<ContaResponse> AlterarVencimentoUsingPUTWithHttpInfo (long? id, int? novoDiaVencimento);
@@ -123,16 +123,16 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Object</returns>
@@ -142,40 +142,40 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Object</returns>
         Object AtivarEnvioFaturaEmailUsingPOST (long? id);
   
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
@@ -183,11 +183,11 @@ namespace Conductor.Pier.Api
         /// Realiza o bloqueio de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>ContaResponse</returns>
         ContaResponse BloquearUsingPOST1 (long? id, long? idStatus);
   
@@ -195,11 +195,11 @@ namespace Conductor.Pier.Api
         /// Realiza o bloqueio de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>ApiResponse of ContaResponse</returns>
         ApiResponse<ContaResponse> BloquearUsingPOST1WithHttpInfo (long? id, long? idStatus);
         
@@ -207,11 +207,11 @@ namespace Conductor.Pier.Api
         /// Realiza o cancelamento de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>ContaResponse</returns>
         ContaResponse CancelarUsingPOST1 (long? id, long? idStatus);
   
@@ -219,33 +219,33 @@ namespace Conductor.Pier.Api
         /// Realiza o cancelamento de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>ApiResponse of ContaResponse</returns>
         ApiResponse<ContaResponse> CancelarUsingPOST1WithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>BeneficioPagamentoAtrasoResponse</returns>
         BeneficioPagamentoAtrasoResponse ConsultarBeneficioPagamentoAtrasoUsingGET (long? id);
   
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of BeneficioPagamentoAtrasoResponse</returns>
         ApiResponse<BeneficioPagamentoAtrasoResponse> ConsultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo (long? id);
         
@@ -272,34 +272,34 @@ namespace Conductor.Pier.Api
         ApiResponse<BoletoResponse> ConsultarBoletoEmitidoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param>
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>DividaClienteResponse</returns>
         DividaClienteResponse ConsultarDividaAtualizadaClienteUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
   
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param>
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>ApiResponse of DividaClienteResponse</returns>
         ApiResponse<DividaClienteResponse> ConsultarDividaAtualizadaClienteUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
         
@@ -307,13 +307,13 @@ namespace Conductor.Pier.Api
         /// Permite consultar a partir do ID da conta as taxas e tarifas
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTaxasRefinanciamentoResponse</returns>
         PageTaxasRefinanciamentoResponse ConsultarTaxasTarifasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
@@ -321,13 +321,13 @@ namespace Conductor.Pier.Api
         /// Permite consultar a partir do ID da conta as taxas e tarifas
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTaxasRefinanciamentoResponse</returns>
         ApiResponse<PageTaxasRefinanciamentoResponse> ConsultarTaxasTarifasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -335,67 +335,67 @@ namespace Conductor.Pier.Api
         /// Apresenta dados de uma determinada conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ContaDetalheResponse</returns>
-        ContaDetalheResponse ConsultarUsingGET12 (long? id);
+        ContaDetalheResponse ConsultarUsingGET13 (long? id);
   
         /// <summary>
         /// Apresenta dados de uma determinada conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        ApiResponse<ContaDetalheResponse> ConsultarUsingGET12WithHttpInfo (long? id);
+        ApiResponse<ContaDetalheResponse> ConsultarUsingGET13WithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param>
         /// <returns>TransferenciaDetalheResponse</returns>
-        TransferenciaDetalheResponse ConsultarUsingGET41 (long? id, long? idTransferencia);
+        TransferenciaDetalheResponse ConsultarUsingGET42 (long? id, long? idTransferencia);
   
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param>
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET41WithHttpInfo (long? id, long? idTransferencia);
+        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET42WithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Object</returns>
         Object DesativarEnvioFaturaEmailUsingPOST (long? id);
   
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
@@ -426,154 +426,154 @@ namespace Conductor.Pier.Api
         ApiResponse<BoletoResponse> GerarBoletoRecargaUsingPOSTWithHttpInfo (long? id, double? valor, string dataVencimento);
         
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>CartaoEmbossingResponse</returns>
         CartaoEmbossingResponse GerarCartaoEmbossingUsingPOST (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
   
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>ApiResponse of CartaoEmbossingResponse</returns>
         ApiResponse<CartaoEmbossingResponse> GerarCartaoEmbossingUsingPOSTWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>CartaoImpressaoProvisorioResponse</returns>
         CartaoImpressaoProvisorioResponse GerarCartaoProvisorioUsingPOST (long? id);
   
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of CartaoImpressaoProvisorioResponse</returns>
         ApiResponse<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param>
         /// <returns>CartaoImpressaoResponse</returns>
         CartaoImpressaoResponse GerarCartaoUsingPOST (long? id, long? idPessoa, long? idTipoPlastico = null);
   
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param>
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
         ApiResponse<CartaoImpressaoResponse> GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataValidade">Data de Validade</param>
         /// <returns>CartaoImpressaoResponse</returns>
         CartaoImpressaoResponse GerarCartaoVirtualUsingPOST (long? id, string dataValidade);
   
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataValidade">Data de Validade</param>
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
         ApiResponse<CartaoImpressaoResponse> GerarCartaoVirtualUsingPOSTWithHttpInfo (long? id, string dataValidade);
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageHistoricoEventosResponse</returns>
         PageHistoricoEventosResponse ListarHistoricoAlteracoesLimitesUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageHistoricoEventosResponse</returns>
         ApiResponse<PageHistoricoEventosResponse> ListarHistoricoAlteracoesLimitesUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
         /// </summary>
         /// <remarks>
-        /// Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageHistoricoAssessoriaResponse</returns>
         PageHistoricoAssessoriaResponse ListarHistoricoAssessoriaUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
         /// </summary>
         /// <remarks>
-        /// Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageHistoricoAssessoriaResponse</returns>
         ApiResponse<PageHistoricoAssessoriaResponse> ListarHistoricoAssessoriaUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -581,13 +581,13 @@ namespace Conductor.Pier.Api
         /// Lista o historico de atrasos das faturas
         /// </summary>
         /// <remarks>
-        /// Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageHistoricoAtrasoFaturaResponse</returns>
         PageHistoricoAtrasoFaturaResponse ListarHistoricoAtrasosFaturasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
@@ -595,79 +595,79 @@ namespace Conductor.Pier.Api
         /// Lista o historico de atrasos das faturas
         /// </summary>
         /// <remarks>
-        /// Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageHistoricoAtrasoFaturaResponse</returns>
         ApiResponse<PageHistoricoAtrasoFaturaResponse> ListarHistoricoAtrasosFaturasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param>
         /// <returns>PageTransacaoNaoProcessadaResponse</returns>
         PageTransacaoNaoProcessadaResponse ListarNaoProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
   
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param>
         /// <returns>ApiResponse of PageTransacaoNaoProcessadaResponse</returns>
         ApiResponse<PageTransacaoNaoProcessadaResponse> ListarNaoProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+        /// Lista as transa\u00E7\u00F5es processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
         /// <returns>PageTransacoesCorrentesResponse</returns>
         PageTransacoesCorrentesResponse ListarProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null);
   
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+        /// Lista as transa\u00E7\u00F5es processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
         /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
         ApiResponse<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null);
         
@@ -678,20 +678,20 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param>
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param>
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param>
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param>
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param>
         /// <returns>PageContaResponse</returns>
-        PageContaResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
+        PageContaResponse ListarUsingGET17 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
   
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -700,64 +700,64 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param>
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param>
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param>
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param>
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param>
         /// <returns>ApiResponse of PageContaResponse</returns>
-        ApiResponse<PageContaResponse> ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
+        ApiResponse<PageContaResponse> ListarUsingGET17WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
+        /// Lista as transfer\u00EAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param>
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param>
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param>
         /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse ListarUsingGET48 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        PageTransferenciaResponse ListarUsingGET50 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
   
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
+        /// Lista as transfer\u00EAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param>
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param>
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> ListarUsingGET48WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        ApiResponse<PageTransferenciaResponse> ListarUsingGET50WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+        /// Realiza a reativa\u00E7\u00E3o de contas.
         /// </summary>
         /// <remarks>
-        /// Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -765,10 +765,10 @@ namespace Conductor.Pier.Api
         Object ReativarUsingPOST1 (long? id);
   
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+        /// Realiza a reativa\u00E7\u00E3o de contas.
         /// </summary>
         /// <remarks>
-        /// Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -776,25 +776,25 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> ReativarUsingPOST1WithHttpInfo (long? id);
         
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>EmprestimoPessoalResponse</returns>
         EmprestimoPessoalResponse SimularEmprestimoFinanciamentoUsingPOST (long? id, EmprestimoPessoalRequest request);
   
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of EmprestimoPessoalResponse</returns>
         ApiResponse<EmprestimoPessoalResponse> SimularEmprestimoFinanciamentoUsingPOSTWithHttpInfo (long? id, EmprestimoPessoalRequest request);
@@ -803,13 +803,13 @@ namespace Conductor.Pier.Api
         /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTransacaoResponse</returns>
         PageTransacaoResponse TransacoesUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
@@ -817,39 +817,39 @@ namespace Conductor.Pier.Api
         /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTransacaoResponse</returns>
         ApiResponse<PageTransacaoResponse> TransacoesUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param>
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param>
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param>
         /// <returns>TransferenciaDetalheResponse</returns>
         TransferenciaDetalheResponse TransferirUsingPOST1 (long? id, long? idContaDestino, double? valorTransferencia);
   
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param>
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param>
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param>
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
         ApiResponse<TransferenciaDetalheResponse> TransferirUsingPOST1WithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
         
@@ -858,14 +858,14 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="identificadorExterno">Identificador Externo (optional)</param>
@@ -873,14 +873,14 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOST1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string identificadorExterno = null);
 
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
         /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="identificadorExterno">Identificador Externo (optional)</param>
@@ -888,73 +888,73 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOST1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string identificadorExterno = null);
         
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AlterarProdutoUsingPOSTAsync (long? id, AlterarProdutoRequest request);
 
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta.
         /// </summary>
         /// <remarks>
-        /// O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AlterarProdutoUsingPOSTAsyncWithHttpInfo (long? id, AlterarProdutoRequest request);
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of ContaResponse</returns>
         System.Threading.Tasks.Task<ContaResponse> AlterarTitularUsingPOSTAsync (long? id, long? idPessoa);
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AlterarTitularUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
         /// <returns>Task of ContaResponse</returns>
         System.Threading.Tasks.Task<ContaResponse> AlterarVencimentoUsingPUTAsync (long? id, int? novoDiaVencimento);
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AlterarVencimentoUsingPUTAsyncWithHttpInfo (long? id, int? novoDiaVencimento);
@@ -963,16 +963,16 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of Object</returns>
@@ -982,40 +982,40 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id);
 
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -1023,11 +1023,11 @@ namespace Conductor.Pier.Api
         /// Realiza o bloqueio de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ContaResponse</returns>
         System.Threading.Tasks.Task<ContaResponse> BloquearUsingPOST1Async (long? id, long? idStatus);
 
@@ -1035,11 +1035,11 @@ namespace Conductor.Pier.Api
         /// Realiza o bloqueio de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus);
         
@@ -1047,11 +1047,11 @@ namespace Conductor.Pier.Api
         /// Realiza o cancelamento de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ContaResponse</returns>
         System.Threading.Tasks.Task<ContaResponse> CancelarUsingPOST1Async (long? id, long? idStatus);
 
@@ -1059,33 +1059,33 @@ namespace Conductor.Pier.Api
         /// Realiza o cancelamento de uma determinada Conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of BeneficioPagamentoAtrasoResponse</returns>
         System.Threading.Tasks.Task<BeneficioPagamentoAtrasoResponse> ConsultarBeneficioPagamentoAtrasoUsingGETAsync (long? id);
 
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (BeneficioPagamentoAtrasoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BeneficioPagamentoAtrasoResponse>> ConsultarBeneficioPagamentoAtrasoUsingGETAsyncWithHttpInfo (long? id);
         
@@ -1112,34 +1112,34 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarBoletoEmitidoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param>
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of DividaClienteResponse</returns>
         System.Threading.Tasks.Task<DividaClienteResponse> ConsultarDividaAtualizadaClienteUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
 
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param>
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of ApiResponse (DividaClienteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaClienteUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
         
@@ -1147,13 +1147,13 @@ namespace Conductor.Pier.Api
         /// Permite consultar a partir do ID da conta as taxas e tarifas
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTaxasRefinanciamentoResponse</returns>
         System.Threading.Tasks.Task<PageTaxasRefinanciamentoResponse> ConsultarTaxasTarifasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1161,13 +1161,13 @@ namespace Conductor.Pier.Api
         /// Permite consultar a partir do ID da conta as taxas e tarifas
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTaxasRefinanciamentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ConsultarTaxasTarifasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -1175,67 +1175,67 @@ namespace Conductor.Pier.Api
         /// Apresenta dados de uma determinada conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ContaDetalheResponse</returns>
-        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET12Async (long? id);
+        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET13Async (long? id);
 
         /// <summary>
         /// Apresenta dados de uma determinada conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET41Async (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET42Async (long? id, long? idTransferencia);
 
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET41AsyncWithHttpInfo (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET42AsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -1266,154 +1266,154 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoRecargaUsingPOSTAsyncWithHttpInfo (long? id, double? valor, string dataVencimento);
         
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of CartaoEmbossingResponse</returns>
         System.Threading.Tasks.Task<CartaoEmbossingResponse> GerarCartaoEmbossingUsingPOSTAsync (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
 
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of ApiResponse (CartaoEmbossingResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoEmbossingResponse>> GerarCartaoEmbossingUsingPOSTAsyncWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of CartaoImpressaoProvisorioResponse</returns>
         System.Threading.Tasks.Task<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoProvisorioResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoProvisorioResponse>> GerarCartaoProvisorioUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
         System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoUsingPOSTAsync (long? id, long? idPessoa, long? idTipoPlastico = null);
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataValidade">Data de Validade</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
         System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoVirtualUsingPOSTAsync (long? id, string dataValidade);
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataValidade">Data de Validade</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualUsingPOSTAsyncWithHttpInfo (long? id, string dataValidade);
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoEventosResponse</returns>
         System.Threading.Tasks.Task<PageHistoricoEventosResponse> ListarHistoricoAlteracoesLimitesUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoEventosResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageHistoricoEventosResponse>> ListarHistoricoAlteracoesLimitesUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
         /// </summary>
         /// <remarks>
-        /// Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoAssessoriaResponse</returns>
         System.Threading.Tasks.Task<PageHistoricoAssessoriaResponse> ListarHistoricoAssessoriaUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
         /// </summary>
         /// <remarks>
-        /// Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoAssessoriaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageHistoricoAssessoriaResponse>> ListarHistoricoAssessoriaUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -1421,13 +1421,13 @@ namespace Conductor.Pier.Api
         /// Lista o historico de atrasos das faturas
         /// </summary>
         /// <remarks>
-        /// Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoAtrasoFaturaResponse</returns>
         System.Threading.Tasks.Task<PageHistoricoAtrasoFaturaResponse> ListarHistoricoAtrasosFaturasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1435,79 +1435,79 @@ namespace Conductor.Pier.Api
         /// Lista o historico de atrasos das faturas
         /// </summary>
         /// <remarks>
-        /// Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoAtrasoFaturaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageHistoricoAtrasoFaturaResponse>> ListarHistoricoAtrasosFaturasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param>
         /// <returns>Task of PageTransacaoNaoProcessadaResponse</returns>
         System.Threading.Tasks.Task<PageTransacaoNaoProcessadaResponse> ListarNaoProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
 
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoNaoProcessadaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTransacaoNaoProcessadaResponse>> ListarNaoProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+        /// Lista as transa\u00E7\u00F5es processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
         /// <returns>Task of PageTransacoesCorrentesResponse</returns>
         System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null);
 
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+        /// Lista as transa\u00E7\u00F5es processadas da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null);
         
@@ -1518,20 +1518,20 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param>
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param>
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param>
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param>
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param>
         /// <returns>Task of PageContaResponse</returns>
-        System.Threading.Tasks.Task<PageContaResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
+        System.Threading.Tasks.Task<PageContaResponse> ListarUsingGET17Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
 
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -1540,64 +1540,64 @@ namespace Conductor.Pier.Api
         /// Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param>
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param>
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param>
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param>
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarUsingGET17AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null);
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
+        /// Lista as transfer\u00EAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param>
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param>
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET48Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET50Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
 
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta
+        /// Lista as transfer\u00EAncias realizadas pela conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param>
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param>
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET48AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET50AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+        /// Realiza a reativa\u00E7\u00E3o de contas.
         /// </summary>
         /// <remarks>
-        /// Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -1605,10 +1605,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Object> ReativarUsingPOST1Async (long? id);
 
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+        /// Realiza a reativa\u00E7\u00E3o de contas.
         /// </summary>
         /// <remarks>
-        /// Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -1616,25 +1616,25 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> ReativarUsingPOST1AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of EmprestimoPessoalResponse</returns>
         System.Threading.Tasks.Task<EmprestimoPessoalResponse> SimularEmprestimoFinanciamentoUsingPOSTAsync (long? id, EmprestimoPessoalRequest request);
 
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (EmprestimoPessoalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmprestimoPessoalResponse>> SimularEmprestimoFinanciamentoUsingPOSTAsyncWithHttpInfo (long? id, EmprestimoPessoalRequest request);
@@ -1643,13 +1643,13 @@ namespace Conductor.Pier.Api
         /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransacaoResponse</returns>
         System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
@@ -1657,39 +1657,39 @@ namespace Conductor.Pier.Api
         /// Permite listar uma linha do tempo com os eventos da conta
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param>
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param>
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
         System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirUsingPOST1Async (long? id, long? idContaDestino, double? valorTransferencia);
 
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param>
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param>
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirUsingPOST1AsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
         
@@ -1786,11 +1786,11 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param> 
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param> 
         /// <param name="valorAjuste">Valor do ajuste</param> 
         /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
@@ -1802,11 +1802,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param> 
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param> 
         /// <param name="valorAjuste">Valor do ajuste</param> 
         /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
@@ -1890,11 +1890,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="identificadorExterno">Identificador Externo (optional)</param>
@@ -1907,11 +1907,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lan\u00C3\u00A7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00C3\u00B3digo identificador do tipo de ajuste.</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste.</param>
         /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.</param>
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="identificadorExterno">Identificador Externo (optional)</param>
@@ -1986,10 +1986,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta. O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta. O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="request">request</param> 
         /// <returns>string</returns>
         public string AlterarProdutoUsingPOST (long? id, AlterarProdutoRequest request)
@@ -1999,10 +1999,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta. O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta. O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AlterarProdutoUsingPOSTWithHttpInfo (long? id, AlterarProdutoRequest request)
@@ -2079,10 +2079,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta. O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta. O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AlterarProdutoUsingPOSTAsync (long? id, AlterarProdutoRequest request)
@@ -2093,10 +2093,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera o produto associado \u00C3\u00A0 conta. O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+        /// Altera o produto associado \u00E0 conta. O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarProdutoUsingPOSTAsyncWithHttpInfo (long? id, AlterarProdutoRequest request)
@@ -2168,11 +2168,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param> 
         /// <returns>ContaResponse</returns>
         public ContaResponse AlterarTitularUsingPOST (long? id, long? idPessoa)
         {
@@ -2181,11 +2181,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
         public ApiResponse< ContaResponse > AlterarTitularUsingPOSTWithHttpInfo (long? id, long? idPessoa)
         {
@@ -2255,11 +2255,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of ContaResponse</returns>
         public async System.Threading.Tasks.Task<ContaResponse> AlterarTitularUsingPOSTAsync (long? id, long? idPessoa)
         {
@@ -2269,11 +2269,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+        /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta Esta m\u00E9todo permite altera a pessoa de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AlterarTitularUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa)
         {
@@ -2338,10 +2338,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param> 
         /// <returns>ContaResponse</returns>
         public ContaResponse AlterarVencimentoUsingPUT (long? id, int? novoDiaVencimento)
@@ -2351,10 +2351,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
         public ApiResponse< ContaResponse > AlterarVencimentoUsingPUTWithHttpInfo (long? id, int? novoDiaVencimento)
@@ -2425,10 +2425,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
         /// <returns>Task of ContaResponse</returns>
         public async System.Threading.Tasks.Task<ContaResponse> AlterarVencimentoUsingPUTAsync (long? id, int? novoDiaVencimento)
@@ -2439,10 +2439,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+        /// Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="novoDiaVencimento">Novo dia de vencimento.</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AlterarVencimentoUsingPUTAsyncWithHttpInfo (long? id, int? novoDiaVencimento)
@@ -2508,16 +2508,16 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
         /// <returns>Object</returns>
@@ -2528,16 +2528,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
@@ -2616,16 +2616,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of Object</returns>
@@ -2637,16 +2637,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
@@ -2720,10 +2720,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>Object</returns>
         public Object AtivarEnvioFaturaEmailUsingPOST (long? id)
         {
@@ -2732,10 +2732,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id)
         {
@@ -2800,10 +2800,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id)
         {
@@ -2813,10 +2813,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -2878,11 +2878,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param> 
         /// <returns>ContaResponse</returns>
         public ContaResponse BloquearUsingPOST1 (long? id, long? idStatus)
         {
@@ -2891,11 +2891,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
         public ApiResponse< ContaResponse > BloquearUsingPOST1WithHttpInfo (long? id, long? idStatus)
         {
@@ -2965,11 +2965,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ContaResponse</returns>
         public async System.Threading.Tasks.Task<ContaResponse> BloquearUsingPOST1Async (long? id, long? idStatus)
         {
@@ -2979,11 +2979,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o bloqueio de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o bloqueio de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus)
         {
@@ -3048,11 +3048,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param> 
         /// <returns>ContaResponse</returns>
         public ContaResponse CancelarUsingPOST1 (long? id, long? idStatus)
         {
@@ -3061,11 +3061,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
         public ApiResponse< ContaResponse > CancelarUsingPOST1WithHttpInfo (long? id, long? idStatus)
         {
@@ -3135,11 +3135,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ContaResponse</returns>
         public async System.Threading.Tasks.Task<ContaResponse> CancelarUsingPOST1Async (long? id, long? idStatus)
         {
@@ -3149,11 +3149,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cancelamento de uma determinada Conta Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o cancelamento de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus)
         {
@@ -3218,10 +3218,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio. Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio. Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>BeneficioPagamentoAtrasoResponse</returns>
         public BeneficioPagamentoAtrasoResponse ConsultarBeneficioPagamentoAtrasoUsingGET (long? id)
         {
@@ -3230,10 +3230,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio. Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio. Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of BeneficioPagamentoAtrasoResponse</returns>
         public ApiResponse< BeneficioPagamentoAtrasoResponse > ConsultarBeneficioPagamentoAtrasoUsingGETWithHttpInfo (long? id)
         {
@@ -3298,10 +3298,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio. Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio. Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of BeneficioPagamentoAtrasoResponse</returns>
         public async System.Threading.Tasks.Task<BeneficioPagamentoAtrasoResponse> ConsultarBeneficioPagamentoAtrasoUsingGETAsync (long? id)
         {
@@ -3311,10 +3311,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio. Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+        /// Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio. Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (BeneficioPagamentoAtrasoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<BeneficioPagamentoAtrasoResponse>> ConsultarBeneficioPagamentoAtrasoUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -3534,15 +3534,15 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataVencimento">Data do vencimento (optional)</param> 
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param> 
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param> 
         /// <returns>DividaClienteResponse</returns>
         public DividaClienteResponse ConsultarDividaAtualizadaClienteUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
@@ -3551,15 +3551,15 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataVencimento">Data do vencimento (optional)</param> 
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param> 
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param> 
         /// <returns>ApiResponse of DividaClienteResponse</returns>
         public ApiResponse< DividaClienteResponse > ConsultarDividaAtualizadaClienteUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
@@ -3629,15 +3629,15 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param>
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of DividaClienteResponse</returns>
         public async System.Threading.Tasks.Task<DividaClienteResponse> ConsultarDividaAtualizadaClienteUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
@@ -3647,15 +3647,15 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta a d\u00C3\u00ADvida atualizada do cliente Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+        /// Consulta a d\u00EDvida atualizada do cliente Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
-        /// <param name="idEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a (optional)</param>
+        /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of ApiResponse (DividaClienteResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaClienteUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
@@ -3722,13 +3722,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTaxasRefinanciamentoResponse</returns>
         public PageTaxasRefinanciamentoResponse ConsultarTaxasTarifasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3737,13 +3737,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTaxasRefinanciamentoResponse</returns>
         public ApiResponse< PageTaxasRefinanciamentoResponse > ConsultarTaxasTarifasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3811,13 +3811,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTaxasRefinanciamentoResponse</returns>
         public async System.Threading.Tasks.Task<PageTaxasRefinanciamentoResponse> ConsultarTaxasTarifasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3827,13 +3827,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+        /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da conta a ser consultada.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTaxasRefinanciamentoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ConsultarTaxasTarifasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3898,29 +3898,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ContaDetalheResponse</returns>
-        public ContaDetalheResponse ConsultarUsingGET12 (long? id)
+        public ContaDetalheResponse ConsultarUsingGET13 (long? id)
         {
-             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
+             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarUsingGET13WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        public ApiResponse< ContaDetalheResponse > ConsultarUsingGET12WithHttpInfo (long? id)
+        public ApiResponse< ContaDetalheResponse > ConsultarUsingGET13WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET12");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET13");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -3966,9 +3966,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3978,28 +3978,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ContaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET12Async (long? id)
+        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET13Async (long? id)
         {
-             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
+             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarUsingGET13AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET13");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -4045,9 +4045,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4056,35 +4056,35 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param> 
         /// <returns>TransferenciaDetalheResponse</returns>
-        public TransferenciaDetalheResponse ConsultarUsingGET41 (long? id, long? idTransferencia)
+        public TransferenciaDetalheResponse ConsultarUsingGET42 (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET41WithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET42WithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param> 
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET41WithHttpInfo (long? id, long? idTransferencia)
+        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET42WithHttpInfo (long? id, long? idTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET41");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarUsingGET42");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET41");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarUsingGET42");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -4131,9 +4131,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4143,32 +4143,32 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET41Async (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET42Async (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET41AsyncWithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET42AsyncWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+        /// Consulta os detalhes de uma determinada transfer\u00EAncia Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET41AsyncWithHttpInfo (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET42AsyncWithHttpInfo (long? id, long? idTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET41");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET42");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET41");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET42");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -4215,9 +4215,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4226,10 +4226,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>Object</returns>
         public Object DesativarEnvioFaturaEmailUsingPOST (long? id)
         {
@@ -4238,10 +4238,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id)
         {
@@ -4306,10 +4306,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id)
         {
@@ -4319,10 +4319,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -4566,10 +4566,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param> 
         /// <returns>CartaoEmbossingResponse</returns>
         public CartaoEmbossingResponse GerarCartaoEmbossingUsingPOST (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
@@ -4579,10 +4579,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param> 
         /// <returns>ApiResponse of CartaoEmbossingResponse</returns>
         public ApiResponse< CartaoEmbossingResponse > GerarCartaoEmbossingUsingPOSTWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
@@ -4659,10 +4659,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of CartaoEmbossingResponse</returns>
         public async System.Threading.Tasks.Task<CartaoEmbossingResponse> GerarCartaoEmbossingUsingPOSTAsync (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
@@ -4673,10 +4673,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+        /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of ApiResponse (CartaoEmbossingResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoEmbossingResponse>> GerarCartaoEmbossingUsingPOSTAsyncWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
@@ -4748,10 +4748,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>CartaoImpressaoProvisorioResponse</returns>
         public CartaoImpressaoProvisorioResponse GerarCartaoProvisorioUsingPOST (long? id)
         {
@@ -4760,10 +4760,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of CartaoImpressaoProvisorioResponse</returns>
         public ApiResponse< CartaoImpressaoProvisorioResponse > GerarCartaoProvisorioUsingPOSTWithHttpInfo (long? id)
         {
@@ -4828,10 +4828,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of CartaoImpressaoProvisorioResponse</returns>
         public async System.Threading.Tasks.Task<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioUsingPOSTAsync (long? id)
         {
@@ -4841,10 +4841,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoProvisorioResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoProvisorioResponse>> GerarCartaoProvisorioUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -4906,12 +4906,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param> 
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param> 
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param> 
         /// <returns>CartaoImpressaoResponse</returns>
         public CartaoImpressaoResponse GerarCartaoUsingPOST (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
@@ -4920,12 +4920,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param> 
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param> 
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param> 
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
         public ApiResponse< CartaoImpressaoResponse > GerarCartaoUsingPOSTWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
@@ -4996,12 +4996,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoUsingPOSTAsync (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
@@ -5011,12 +5011,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+        /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).</param>
-        /// <param name="idTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).</param>
+        /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoUsingPOSTAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
@@ -5082,10 +5082,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="dataValidade">Data de Validade</param> 
         /// <returns>CartaoImpressaoResponse</returns>
         public CartaoImpressaoResponse GerarCartaoVirtualUsingPOST (long? id, string dataValidade)
@@ -5095,10 +5095,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="dataValidade">Data de Validade</param> 
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
         public ApiResponse< CartaoImpressaoResponse > GerarCartaoVirtualUsingPOSTWithHttpInfo (long? id, string dataValidade)
@@ -5169,10 +5169,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataValidade">Data de Validade</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoVirtualUsingPOSTAsync (long? id, string dataValidade)
@@ -5183,10 +5183,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+        /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataValidade">Data de Validade</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualUsingPOSTAsyncWithHttpInfo (long? id, string dataValidade)
@@ -5252,13 +5252,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageHistoricoEventosResponse</returns>
         public PageHistoricoEventosResponse ListarHistoricoAlteracoesLimitesUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5267,13 +5267,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageHistoricoEventosResponse</returns>
         public ApiResponse< PageHistoricoEventosResponse > ListarHistoricoAlteracoesLimitesUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5341,13 +5341,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoEventosResponse</returns>
         public async System.Threading.Tasks.Task<PageHistoricoEventosResponse> ListarHistoricoAlteracoesLimitesUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5357,13 +5357,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+        /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoEventosResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageHistoricoEventosResponse>> ListarHistoricoAlteracoesLimitesUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5428,13 +5428,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageHistoricoAssessoriaResponse</returns>
         public PageHistoricoAssessoriaResponse ListarHistoricoAssessoriaUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5443,13 +5443,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageHistoricoAssessoriaResponse</returns>
         public ApiResponse< PageHistoricoAssessoriaResponse > ListarHistoricoAssessoriaUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5517,13 +5517,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoAssessoriaResponse</returns>
         public async System.Threading.Tasks.Task<PageHistoricoAssessoriaResponse> ListarHistoricoAssessoriaUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5533,13 +5533,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+        /// Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoAssessoriaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageHistoricoAssessoriaResponse>> ListarHistoricoAssessoriaUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5604,13 +5604,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageHistoricoAtrasoFaturaResponse</returns>
         public PageHistoricoAtrasoFaturaResponse ListarHistoricoAtrasosFaturasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5619,13 +5619,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageHistoricoAtrasoFaturaResponse</returns>
         public ApiResponse< PageHistoricoAtrasoFaturaResponse > ListarHistoricoAtrasosFaturasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5693,13 +5693,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageHistoricoAtrasoFaturaResponse</returns>
         public async System.Threading.Tasks.Task<PageHistoricoAtrasoFaturaResponse> ListarHistoricoAtrasosFaturasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5709,13 +5709,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+        /// Lista o historico de atrasos das faturas Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoAtrasoFaturaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageHistoricoAtrasoFaturaResponse>> ListarHistoricoAtrasosFaturasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -5780,15 +5780,15 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param> 
         /// <returns>PageTransacaoNaoProcessadaResponse</returns>
         public PageTransacaoNaoProcessadaResponse ListarNaoProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
@@ -5797,15 +5797,15 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param> 
         /// <returns>ApiResponse of PageTransacaoNaoProcessadaResponse</returns>
         public ApiResponse< PageTransacaoNaoProcessadaResponse > ListarNaoProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
@@ -5875,15 +5875,15 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param>
         /// <returns>Task of PageTransacaoNaoProcessadaResponse</returns>
         public async System.Threading.Tasks.Task<PageTransacaoNaoProcessadaResponse> ListarNaoProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
@@ -5893,15 +5893,15 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoNaoProcessadaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoNaoProcessadaResponse>> ListarNaoProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
@@ -5968,16 +5968,16 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param> 
         /// <returns>PageTransacoesCorrentesResponse</returns>
         public PageTransacoesCorrentesResponse ListarProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null)
         {
@@ -5986,16 +5986,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param> 
         /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
         public ApiResponse< PageTransacoesCorrentesResponse > ListarProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null)
         {
@@ -6066,16 +6066,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
         /// <returns>Task of PageTransacoesCorrentesResponse</returns>
         public async System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null)
         {
@@ -6085,16 +6085,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd. (optional)</param>
-        /// <param name="dataInicio">Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null)
         {
@@ -6165,22 +6165,22 @@ namespace Conductor.Pier.Api
         /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param> 
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param> 
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param> 
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param> 
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param> 
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param> 
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param> 
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param> 
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param> 
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param> 
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param> 
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param> 
         /// <returns>PageContaResponse</returns>
-        public PageContaResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
+        public PageContaResponse ListarUsingGET17 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
         {
-             ApiResponse<PageContaResponse> localVarResponse = ListarUsingGET16WithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
+             ApiResponse<PageContaResponse> localVarResponse = ListarUsingGET17WithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
              return localVarResponse.Data;
         }
 
@@ -6188,20 +6188,20 @@ namespace Conductor.Pier.Api
         /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param> 
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param> 
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param> 
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param> 
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param> 
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param> 
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param> 
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param> 
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param> 
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param> 
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param> 
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param> 
         /// <returns>ApiResponse of PageContaResponse</returns>
-        public ApiResponse< PageContaResponse > ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
+        public ApiResponse< PageContaResponse > ListarUsingGET17WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
         {
             
     
@@ -6259,9 +6259,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6274,22 +6274,22 @@ namespace Conductor.Pier.Api
         /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param>
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param>
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param>
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param>
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param>
         /// <returns>Task of PageContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
+        public async System.Threading.Tasks.Task<PageContaResponse> ListarUsingGET17Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
         {
-             ApiResponse<PageContaResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
+             ApiResponse<PageContaResponse> localVarResponse = await ListarUsingGET17AsyncWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
              return localVarResponse.Data;
 
         }
@@ -6298,20 +6298,20 @@ namespace Conductor.Pier.Api
         /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). (optional)</param>
-        /// <param name="idStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). (optional)</param>
+        /// <param name="idStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. (optional)</param>
         /// <param name="diaVencimento">Apresenta o dia de vencimento. (optional)</param>
         /// <param name="melhorDiaCompra">Apresenta o melhor dia de compra. (optional)</param>
-        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. (optional)</param>
-        /// <param name="dataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. (optional)</param>
+        /// <param name="dataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. (optional)</param>
+        /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarUsingGET17AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null)
         {
             
     
@@ -6369,9 +6369,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6380,45 +6380,45 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param> 
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param> 
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param> 
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param> 
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param> 
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param> 
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param> 
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param> 
         /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse ListarUsingGET48 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public PageTransferenciaResponse ListarUsingGET50 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarUsingGET48WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarUsingGET50WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param> 
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param> 
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param> 
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param> 
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param> 
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param> 
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param> 
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > ListarUsingGET48WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public ApiResponse< PageTransferenciaResponse > ListarUsingGET50WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarUsingGET48");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarUsingGET50");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -6472,9 +6472,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6484,44 +6484,44 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param>
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param>
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET48Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET50Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarUsingGET48AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarUsingGET50AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista as transfer\u00C3\u00AAncias realizadas pela conta Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). (optional)</param>
-        /// <param name="idContaOrigem">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). (optional)</param>
         /// <param name="valorTransferencia">Valor estabelecido para ser transferido. (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia. (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET48AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET50AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET48");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET50");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -6575,9 +6575,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6586,7 +6586,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas. Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a reativa\u00E7\u00E3o de contas. Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -6598,7 +6598,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas. Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a reativa\u00E7\u00E3o de contas. Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -6666,7 +6666,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas. Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a reativa\u00E7\u00E3o de contas. Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -6679,7 +6679,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas. Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// Realiza a reativa\u00E7\u00E3o de contas. Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -6744,10 +6744,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="request">request</param> 
         /// <returns>EmprestimoPessoalResponse</returns>
         public EmprestimoPessoalResponse SimularEmprestimoFinanciamentoUsingPOST (long? id, EmprestimoPessoalRequest request)
@@ -6757,10 +6757,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of EmprestimoPessoalResponse</returns>
         public ApiResponse< EmprestimoPessoalResponse > SimularEmprestimoFinanciamentoUsingPOSTWithHttpInfo (long? id, EmprestimoPessoalRequest request)
@@ -6837,10 +6837,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of EmprestimoPessoalResponse</returns>
         public async System.Threading.Tasks.Task<EmprestimoPessoalResponse> SimularEmprestimoFinanciamentoUsingPOSTAsync (long? id, EmprestimoPessoalRequest request)
@@ -6851,10 +6851,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+        /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (EmprestimoPessoalResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmprestimoPessoalResponse>> SimularEmprestimoFinanciamentoUsingPOSTAsyncWithHttpInfo (long? id, EmprestimoPessoalRequest request)
@@ -6926,13 +6926,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTransacaoResponse</returns>
         public PageTransacaoResponse TransacoesUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -6941,13 +6941,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTransacaoResponse</returns>
         public ApiResponse< PageTransacaoResponse > TransacoesUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7015,13 +7015,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransacaoResponse</returns>
         public async System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7031,13 +7031,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -7102,12 +7102,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param> 
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param> 
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param> 
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param> 
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param> 
         /// <returns>TransferenciaDetalheResponse</returns>
         public TransferenciaDetalheResponse TransferirUsingPOST1 (long? id, long? idContaDestino, double? valorTransferencia)
         {
@@ -7116,12 +7116,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param> 
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param> 
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param> 
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param> 
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param> 
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
         public ApiResponse< TransferenciaDetalheResponse > TransferirUsingPOST1WithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
         {
@@ -7196,12 +7196,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param>
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param>
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
         public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirUsingPOST1Async (long? id, long? idContaDestino, double? valorTransferencia)
         {
@@ -7211,12 +7211,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+        /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).</param>
-        /// <param name="idContaDestino">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).</param>
-        /// <param name="valorTransferencia">Valor da Transfer\u00C3\u00AAncia.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).</param>
+        /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).</param>
+        /// <param name="valorTransferencia">Valor da Transfer\u00EAncia.</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirUsingPOST1AsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
         {

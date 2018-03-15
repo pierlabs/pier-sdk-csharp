@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoAUDResponse" />class.
         /// </summary>
         /// <param name="Rev">Identificador da auditoria arquivo.</param>
-        /// <param name="RevType">Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo).</param>
+        /// <param name="RevType">Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo).</param>
         /// <param name="Id">Identificador do arquivo auditado.</param>
         /// <param name="Nome">Nome do arquivo auditado.</param>
         /// <param name="IdRespostaAcessoDigital">Identificador da resposta da Acesso Digital.</param>
@@ -31,10 +31,10 @@ namespace Conductor.Pier.Model
         /// <param name="IdRespostaNeurotech">Identificador da resposta da Neurotech.</param>
         /// <param name="DataHoraRespostaNeurotech">Data de resposta da Neurotech.</param>
         /// <param name="Uri">Uri de acesso.</param>
-        /// <param name="DataHoraInclusao">Data de inclus\u00C3\u00A3o do arquivo auditado.</param>
-        /// <param name="DataHoraAlteracao">Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado.</param>
-        /// <param name="Extensao">Extens\u00C3\u00A3o do arquivo auditado.</param>
-        /// <param name="Parametros">Lista  de par\u00C3\u00A2metros do arquivo auditado.</param>
+        /// <param name="DataHoraInclusao">Data de inclus\u00E3o do arquivo auditado.</param>
+        /// <param name="DataHoraAlteracao">Data de altera\u00E7\u00E3o do arquivo auditado.</param>
+        /// <param name="Extensao">Extens\u00E3o do arquivo auditado.</param>
+        /// <param name="Parametros">Lista  de par\u00E2metros do arquivo auditado.</param>
 
         public ArquivoAUDResponse(long? Rev = null, int? RevType = null, long? Id = null, string Nome = null, string IdRespostaAcessoDigital = null, string DataHoraRespostaAcessoDigital = null, string IdRespostaNeurotech = null, string DataHoraRespostaNeurotech = null, string Uri = null, string DataHoraInclusao = null, string DataHoraAlteracao = null, string Extensao = null, List<ArquivoParametroAUDResponse> Parametros = null)
         {
@@ -63,9 +63,9 @@ namespace Conductor.Pier.Model
         public long? Rev { get; set; }
     
         /// <summary>
-        /// Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+        /// Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
         /// </summary>
-        /// <value>Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)</value>
+        /// <value>Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public int? RevType { get; set; }
     
@@ -119,30 +119,30 @@ namespace Conductor.Pier.Model
         public string Uri { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00C3\u00A3o do arquivo auditado
+        /// Data de inclus\u00E3o do arquivo auditado
         /// </summary>
-        /// <value>Data de inclus\u00C3\u00A3o do arquivo auditado</value>
+        /// <value>Data de inclus\u00E3o do arquivo auditado</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+        /// Data de altera\u00E7\u00E3o do arquivo auditado
         /// </summary>
-        /// <value>Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado</value>
+        /// <value>Data de altera\u00E7\u00E3o do arquivo auditado</value>
         [DataMember(Name="dataHoraAlteracao", EmitDefaultValue=false)]
         public string DataHoraAlteracao { get; set; }
     
         /// <summary>
-        /// Extens\u00C3\u00A3o do arquivo auditado
+        /// Extens\u00E3o do arquivo auditado
         /// </summary>
-        /// <value>Extens\u00C3\u00A3o do arquivo auditado</value>
+        /// <value>Extens\u00E3o do arquivo auditado</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// Lista  de par\u00C3\u00A2metros do arquivo auditado
+        /// Lista  de par\u00E2metros do arquivo auditado
         /// </summary>
-        /// <value>Lista  de par\u00C3\u00A2metros do arquivo auditado</value>
+        /// <value>Lista  de par\u00E2metros do arquivo auditado</value>
         [DataMember(Name="parametros", EmitDefaultValue=false)]
         public List<ArquivoParametroAUDResponse> Parametros { get; set; }
     

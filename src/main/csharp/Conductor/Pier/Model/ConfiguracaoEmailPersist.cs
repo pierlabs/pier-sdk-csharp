@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Email
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Email
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoEmailPersist :  IEquatable<ConfiguracaoEmailPersist>
@@ -24,14 +24,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Host">IP (Host) do servidor de e-mail..</param>
         /// <param name="Port">Porta usada pelo servidor de e-mail..</param>
-        /// <param name="PortTLSSTARTTLS">Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS..</param>
-        /// <param name="PortSSL">Porta usada pelo servi\u00C3\u00A7o SSL..</param>
-        /// <param name="Protocolo">Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail..</param>
-        /// <param name="RequerAutenticacao">O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="RequerSSL">O servi\u00C3\u00A7o de e-mail requer SSL..</param>
-        /// <param name="RequerTLS">O servi\u00C3\u00A7o de e-mail requer TLS..</param>
-        /// <param name="Usuario">Usuario do servi\u00C3\u00A7o de e-mail..</param>
-        /// <param name="Senha">Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail..</param>
+        /// <param name="PortTLSSTARTTLS">Porta usada pelo servi\u00E7o TLS/STARTTLS..</param>
+        /// <param name="PortSSL">Porta usada pelo servi\u00E7o SSL..</param>
+        /// <param name="Protocolo">Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail..</param>
+        /// <param name="RequerAutenticacao">O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o..</param>
+        /// <param name="RequerSSL">O servi\u00E7o de e-mail requer SSL..</param>
+        /// <param name="RequerTLS">O servi\u00E7o de e-mail requer TLS..</param>
+        /// <param name="Usuario">Usuario do servi\u00E7o de e-mail..</param>
+        /// <param name="Senha">Senha de usu\u00E1rio do servi\u00E7o de e-mail..</param>
 
         public ConfiguracaoEmailPersist(string Host = null, string Port = null, string PortTLSSTARTTLS = null, string PortSSL = null, string Protocolo = null, bool? RequerAutenticacao = null, bool? RequerSSL = null, bool? RequerTLS = null, string Usuario = null, string Senha = null)
         {
@@ -64,58 +64,58 @@ namespace Conductor.Pier.Model
         public string Port { get; set; }
     
         /// <summary>
-        /// Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+        /// Porta usada pelo servi\u00E7o TLS/STARTTLS.
         /// </summary>
-        /// <value>Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.</value>
+        /// <value>Porta usada pelo servi\u00E7o TLS/STARTTLS.</value>
         [DataMember(Name="portTLSSTARTTLS", EmitDefaultValue=false)]
         public string PortTLSSTARTTLS { get; set; }
     
         /// <summary>
-        /// Porta usada pelo servi\u00C3\u00A7o SSL.
+        /// Porta usada pelo servi\u00E7o SSL.
         /// </summary>
-        /// <value>Porta usada pelo servi\u00C3\u00A7o SSL.</value>
+        /// <value>Porta usada pelo servi\u00E7o SSL.</value>
         [DataMember(Name="portSSL", EmitDefaultValue=false)]
         public string PortSSL { get; set; }
     
         /// <summary>
-        /// Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail.
+        /// Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail.
         /// </summary>
-        /// <value>Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail.</value>
+        /// <value>Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail.</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     
         /// <summary>
-        /// O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+        /// O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
         /// </summary>
-        /// <value>O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.</value>
         [DataMember(Name="requerAutenticacao", EmitDefaultValue=false)]
         public bool? RequerAutenticacao { get; set; }
     
         /// <summary>
-        /// O servi\u00C3\u00A7o de e-mail requer SSL.
+        /// O servi\u00E7o de e-mail requer SSL.
         /// </summary>
-        /// <value>O servi\u00C3\u00A7o de e-mail requer SSL.</value>
+        /// <value>O servi\u00E7o de e-mail requer SSL.</value>
         [DataMember(Name="requerSSL", EmitDefaultValue=false)]
         public bool? RequerSSL { get; set; }
     
         /// <summary>
-        /// O servi\u00C3\u00A7o de e-mail requer TLS.
+        /// O servi\u00E7o de e-mail requer TLS.
         /// </summary>
-        /// <value>O servi\u00C3\u00A7o de e-mail requer TLS.</value>
+        /// <value>O servi\u00E7o de e-mail requer TLS.</value>
         [DataMember(Name="requerTLS", EmitDefaultValue=false)]
         public bool? RequerTLS { get; set; }
     
         /// <summary>
-        /// Usuario do servi\u00C3\u00A7o de e-mail.
+        /// Usuario do servi\u00E7o de e-mail.
         /// </summary>
-        /// <value>Usuario do servi\u00C3\u00A7o de e-mail.</value>
+        /// <value>Usuario do servi\u00E7o de e-mail.</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+        /// Senha de usu\u00E1rio do servi\u00E7o de e-mail.
         /// </summary>
-        /// <value>Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.</value>
+        /// <value>Senha de usu\u00E1rio do servi\u00E7o de e-mail.</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     

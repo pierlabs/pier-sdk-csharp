@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaSMSPersist :  IEquatable<CodigoSegurancaSMSPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSPersist" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSPersist" />class.
         /// </summary>
-        /// <param name="Ddd">DDD do n\u00C3\u00BAmero de telefone para envio do sms..</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone para envio do sms..</param>
+        /// <param name="Ddd">DDD do n\u00FAmero de telefone para envio do sms..</param>
+        /// <param name="Telefone">N\u00FAmero do telefone para envio do sms..</param>
 
         public CodigoSegurancaSMSPersist(string Ddd = null, string Telefone = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// DDD do n\u00C3\u00BAmero de telefone para envio do sms.
+        /// DDD do n\u00FAmero de telefone para envio do sms.
         /// </summary>
-        /// <value>DDD do n\u00C3\u00BAmero de telefone para envio do sms.</value>
+        /// <value>DDD do n\u00FAmero de telefone para envio do sms.</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do telefone para envio do sms.
+        /// N\u00FAmero do telefone para envio do sms.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do telefone para envio do sms.</value>
+        /// <value>N\u00FAmero do telefone para envio do sms.</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     

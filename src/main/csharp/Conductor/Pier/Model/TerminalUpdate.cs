@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TerminalUpdate" /> class.
         /// Initializes a new instance of the <see cref="TerminalUpdate" />class.
         /// </summary>
-        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
-        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)). (required).</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)). (required).</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)). (required).</param>
 
         public TerminalUpdate(bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
@@ -50,16 +50,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
         /// </summary>
-        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
-        /// Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+        /// Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
         /// </summary>
-        /// <value>Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).</value>
+        /// <value>Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     

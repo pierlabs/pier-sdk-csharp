@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BeneficioPagamentoAtrasoResponse" /> class.
         /// Initializes a new instance of the <see cref="BeneficioPagamentoAtrasoResponse" />class.
         /// </summary>
-        /// <param name="DataBeneficio">Data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio de isen\u00C3\u00A7\u00C3\u00A3o total no pagamento de multa, encargos, mora e IOF..</param>
+        /// <param name="DataBeneficio">Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF..</param>
 
         public BeneficioPagamentoAtrasoResponse(string DataBeneficio = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio de isen\u00C3\u00A7\u00C3\u00A3o total no pagamento de multa, encargos, mora e IOF.
+        /// Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
         /// </summary>
-        /// <value>Data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio de isen\u00C3\u00A7\u00C3\u00A3o total no pagamento de multa, encargos, mora e IOF.</value>
+        /// <value>Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.</value>
         [DataMember(Name="dataBeneficio", EmitDefaultValue=false)]
         public string DataBeneficio { get; set; }
     

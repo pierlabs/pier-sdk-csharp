@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+    /// Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoEmprestimoResponse :  IEquatable<PlanoParcelamentoEmprestimoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoEmprestimoResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoEmprestimoResponse" />class.
         /// </summary>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento.</param>
+        /// <param name="NumeroParcelas">N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento.</param>
         /// <param name="ValorParcelas">Valor da parcela.</param>
-        /// <param name="TaxaJuros">Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento.</param>
-        /// <param name="ValorTributosIOF">valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras.</param>
-        /// <param name="ValorPercentualCET">valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento.</param>
+        /// <param name="TaxaJuros">Taxa de juros aplicado no empr\u00E9stimo/financiamento.</param>
+        /// <param name="ValorTributosIOF">valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras.</param>
+        /// <param name="ValorPercentualCET">valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento.</param>
 
         public PlanoParcelamentoEmprestimoResponse(int? NumeroParcelas = null, double? ValorParcelas = null, double? TaxaJuros = null, double? ValorTributosIOF = null, double? ValorPercentualCET = null)
         {
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento
+        /// N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
         /// </summary>
-        /// <value>N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento</value>
+        /// <value>N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
@@ -54,23 +54,23 @@ namespace Conductor.Pier.Model
         public double? ValorParcelas { get; set; }
     
         /// <summary>
-        /// Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento
+        /// Taxa de juros aplicado no empr\u00E9stimo/financiamento
         /// </summary>
-        /// <value>Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento</value>
+        /// <value>Taxa de juros aplicado no empr\u00E9stimo/financiamento</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
+        /// valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
         /// </summary>
-        /// <value>valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras</value>
+        /// <value>valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras</value>
         [DataMember(Name="valorTributosIOF", EmitDefaultValue=false)]
         public double? ValorTributosIOF { get; set; }
     
         /// <summary>
-        /// valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+        /// valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
         /// </summary>
-        /// <value>valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento</value>
+        /// <value>valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento</value>
         [DataMember(Name="valorPercentualCET", EmitDefaultValue=false)]
         public double? ValorPercentualCET { get; set; }
     

@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioPersist" /> class.
         /// Initializes a new instance of the <see cref="UsuarioPersist" />class.
         /// </summary>
-        /// <param name="Nome">Apresenta o nome do usu\u00C3\u00A1rio..</param>
-        /// <param name="Login">Apresenta o login do usu\u00C3\u00A1rio..</param>
-        /// <param name="Cpf">N\u00C3\u00BAmero do CPF..</param>
-        /// <param name="Email">Apresenta o email do usu\u00C3\u00A1rio..</param>
-        /// <param name="Senha">Apresenta a senha do usu\u00C3\u00A1rio..</param>
+        /// <param name="Nome">Apresenta o nome do usu\u00E1rio..</param>
+        /// <param name="Login">Apresenta o login do usu\u00E1rio..</param>
+        /// <param name="Cpf">N\u00FAmero do CPF..</param>
+        /// <param name="Email">Apresenta o email do usu\u00E1rio..</param>
+        /// <param name="Senha">Apresenta a senha do usu\u00E1rio..</param>
 
         public UsuarioPersist(string Nome = null, string Login = null, string Cpf = null, string Email = null, string Senha = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o nome do usu\u00C3\u00A1rio.
+        /// Apresenta o nome do usu\u00E1rio.
         /// </summary>
-        /// <value>Apresenta o nome do usu\u00C3\u00A1rio.</value>
+        /// <value>Apresenta o nome do usu\u00E1rio.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Apresenta o login do usu\u00C3\u00A1rio.
+        /// Apresenta o login do usu\u00E1rio.
         /// </summary>
-        /// <value>Apresenta o login do usu\u00C3\u00A1rio.</value>
+        /// <value>Apresenta o login do usu\u00E1rio.</value>
         [DataMember(Name="login", EmitDefaultValue=false)]
         public string Login { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CPF.
+        /// N\u00FAmero do CPF.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CPF.</value>
+        /// <value>N\u00FAmero do CPF.</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Apresenta o email do usu\u00C3\u00A1rio.
+        /// Apresenta o email do usu\u00E1rio.
         /// </summary>
-        /// <value>Apresenta o email do usu\u00C3\u00A1rio.</value>
+        /// <value>Apresenta o email do usu\u00E1rio.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Apresenta a senha do usu\u00C3\u00A1rio.
+        /// Apresenta a senha do usu\u00E1rio.
         /// </summary>
-        /// <value>Apresenta a senha do usu\u00C3\u00A1rio.</value>
+        /// <value>Apresenta a senha do usu\u00E1rio.</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     

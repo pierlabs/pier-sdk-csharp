@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de campanha
+    /// Representa\u00E7\u00E3o da resposta do recurso de campanha
     /// </summary>
     [DataContract]
     public partial class CampanhaResponse :  IEquatable<CampanhaResponse>
@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">Identificador da campanha.</param>
         /// <param name="Nome">Nome da campanha.</param>
-        /// <param name="IdTipoCampanha">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha a qual a a Campanha pertence.</param>
+        /// <param name="IdTipoCampanha">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence.</param>
         /// <param name="PlanosCampanhas">Lista de planos associados a Campanha (required).</param>
 
         public CampanhaResponse(long? Id = null, string Nome = null, long? IdTipoCampanha = null, List<PlanoCampanhaResponse> PlanosCampanhas = null)
@@ -60,9 +60,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha a qual a a Campanha pertence
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha a qual a a Campanha pertence</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence</value>
         [DataMember(Name="idTipoCampanha", EmitDefaultValue=false)]
         public long? IdTipoCampanha { get; set; }
     

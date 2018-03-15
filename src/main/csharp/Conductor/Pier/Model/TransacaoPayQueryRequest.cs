@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
     /// </summary>
     [DataContract]
     public partial class TransacaoPayQueryRequest :  IEquatable<TransacaoPayQueryRequest>
@@ -23,9 +23,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoPayQueryRequest" />class.
         /// </summary>
         /// <param name="NumeroCartao">Numero do cartao (criptografado).</param>
-        /// <param name="IdCartao">Id do cart\u00C3\u00A3o.</param>
+        /// <param name="IdCartao">Id do cart\u00E3o.</param>
         /// <param name="Origem">Origem.</param>
-        /// <param name="Sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros..</param>
+        /// <param name="Sort">Tipo de ordena\u00E7\u00E3o dos registros..</param>
 
         public TransacaoPayQueryRequest(string NumeroCartao = null, long? IdCartao = null, string Origem = null, List<string> Sort = null)
         {
@@ -45,9 +45,9 @@ namespace Conductor.Pier.Model
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Id do cart\u00C3\u00A3o
+        /// Id do cart\u00E3o
         /// </summary>
-        /// <value>Id do cart\u00C3\u00A3o</value>
+        /// <value>Id do cart\u00E3o</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public string Origem { get; set; }
     
         /// <summary>
-        /// Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+        /// Tipo de ordena\u00E7\u00E3o dos registros.
         /// </summary>
-        /// <value>Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.</value>
+        /// <value>Tipo de ordena\u00E7\u00E3o dos registros.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<string> Sort { get; set; }
     

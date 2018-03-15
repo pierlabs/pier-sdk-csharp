@@ -22,33 +22,33 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaConsignadaResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaConsignadaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador da fatura..</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (id)..</param>
-        /// <param name="FlagEmiteFatura">C\u00C3\u00B3digo identificador da conta a qual a fatura se refere..</param>
+        /// <param name="Id">C\u00F3digo identificador da fatura..</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta (id)..</param>
+        /// <param name="FlagEmiteFatura">C\u00F3digo identificador da conta a qual a fatura se refere..</param>
         /// <param name="DataVencimentoFatura">Data de vencimento da fatura..</param>
         /// <param name="ValorTotalFatura">Valor para pagamento total da fatura..</param>
         /// <param name="ValorFaturaAnterior">Valor total da fatura anterior..</param>
-        /// <param name="ValorPagamentoMinimo">Valor m\u00C3\u00ADnimo para pagamento da fatura..</param>
-        /// <param name="ValorPagamentoConsignado">Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha..</param>
-        /// <param name="ValorPagamentoComplementar">Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura..</param>
-        /// <param name="TotalComprasNacionais">Valor total das compras nacionais lan\u00C3\u00A7adas na fatura..</param>
-        /// <param name="TotalComprasInternacionas">Valor total das compras internacionais lan\u00C3\u00A7adas na fatura..</param>
-        /// <param name="TotalSaquesNacionais">Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalSaquesInternacionais">Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalDebitosNacionais">Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalDebitosRecorrentes">Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalDebitosInternacionais">Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalDebitosDiversosNacionais">Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalDebitosOpcionais">Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalPagamentos">Valor total dos pagamentos lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalCreditosNacionais">Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalAjustes">Valor total dos ajustes lan\u00C3\u00A7ados na fatura..</param>
-        /// <param name="TotalTarifas">Valor total das tarifas lan\u00C3\u00A7adas na fatura..</param>
-        /// <param name="TotalMulta">Valor total da multa lan\u00C3\u00A7ada na fatura..</param>
-        /// <param name="TotalJuros">Valor total dos juros de mora lan\u00C3\u00A7ados na fatura..</param>
+        /// <param name="ValorPagamentoMinimo">Valor m\u00EDnimo para pagamento da fatura..</param>
+        /// <param name="ValorPagamentoConsignado">Valor da fatura pago atrav\u00E9s de desconto em folha..</param>
+        /// <param name="ValorPagamentoComplementar">Valor complementar para considerar o pagamento m\u00EDnimo da fatura..</param>
+        /// <param name="TotalComprasNacionais">Valor total das compras nacionais lan\u00E7adas na fatura..</param>
+        /// <param name="TotalComprasInternacionas">Valor total das compras internacionais lan\u00E7adas na fatura..</param>
+        /// <param name="TotalSaquesNacionais">Valor total dos saques nacionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalSaquesInternacionais">Valor total dos saques internacionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalDebitosNacionais">Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalDebitosRecorrentes">Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura..</param>
+        /// <param name="TotalDebitosInternacionais">Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalDebitosDiversosNacionais">Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalDebitosOpcionais">Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalPagamentos">Valor total dos pagamentos lan\u00E7ados na fatura..</param>
+        /// <param name="TotalCreditosNacionais">Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura..</param>
+        /// <param name="TotalAjustes">Valor total dos ajustes lan\u00E7ados na fatura..</param>
+        /// <param name="TotalTarifas">Valor total das tarifas lan\u00E7adas na fatura..</param>
+        /// <param name="TotalMulta">Valor total da multa lan\u00E7ada na fatura..</param>
+        /// <param name="TotalJuros">Valor total dos juros de mora lan\u00E7ados na fatura..</param>
         /// <param name="TaxaRotativo">Valor percentual da taxa de juros rotativos..</param>
         /// <param name="TaxaSaque">Valor percentual da taxa de saque..</param>
-        /// <param name="TaxaMaximaProximoPeriodo">Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo..</param>
+        /// <param name="TaxaMaximaProximoPeriodo">Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo..</param>
         /// <param name="TotalServicos">Apresenta a soma de todos os seguros cobrados na fatura do cliente. (required).</param>
 
         public FaturaConsignadaResponse(long? Id = null, long? IdConta = null, int? FlagEmiteFatura = null, string DataVencimentoFatura = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? ValorPagamentoConsignado = null, double? ValorPagamentoComplementar = null, double? TotalComprasNacionais = null, double? TotalComprasInternacionas = null, double? TotalSaquesNacionais = null, double? TotalSaquesInternacionais = null, double? TotalDebitosNacionais = null, double? TotalDebitosRecorrentes = null, double? TotalDebitosInternacionais = null, double? TotalDebitosDiversosNacionais = null, double? TotalDebitosOpcionais = null, double? TotalPagamentos = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? TotalJuros = null, double? TaxaRotativo = null, double? TaxaSaque = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null)
@@ -94,23 +94,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da fatura.
+        /// C\u00F3digo identificador da fatura.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da fatura.</value>
+        /// <value>C\u00F3digo identificador da fatura.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta (id).
+        /// C\u00F3digo identificador da conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta (id).</value>
+        /// <value>C\u00F3digo identificador da conta (id).</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+        /// C\u00F3digo identificador da conta a qual a fatura se refere.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.</value>
+        /// <value>C\u00F3digo identificador da conta a qual a fatura se refere.</value>
         [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
         public int? FlagEmiteFatura { get; set; }
     
@@ -136,128 +136,128 @@ namespace Conductor.Pier.Model
         public double? ValorFaturaAnterior { get; set; }
     
         /// <summary>
-        /// Valor m\u00C3\u00ADnimo para pagamento da fatura.
+        /// Valor m\u00EDnimo para pagamento da fatura.
         /// </summary>
-        /// <value>Valor m\u00C3\u00ADnimo para pagamento da fatura.</value>
+        /// <value>Valor m\u00EDnimo para pagamento da fatura.</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.
+        /// Valor da fatura pago atrav\u00E9s de desconto em folha.
         /// </summary>
-        /// <value>Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.</value>
+        /// <value>Valor da fatura pago atrav\u00E9s de desconto em folha.</value>
         [DataMember(Name="valorPagamentoConsignado", EmitDefaultValue=false)]
         public double? ValorPagamentoConsignado { get; set; }
     
         /// <summary>
-        /// Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.
+        /// Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
         /// </summary>
-        /// <value>Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.</value>
+        /// <value>Valor complementar para considerar o pagamento m\u00EDnimo da fatura.</value>
         [DataMember(Name="valorPagamentoComplementar", EmitDefaultValue=false)]
         public double? ValorPagamentoComplementar { get; set; }
     
         /// <summary>
-        /// Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+        /// Valor total das compras nacionais lan\u00E7adas na fatura.
         /// </summary>
-        /// <value>Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.</value>
+        /// <value>Valor total das compras nacionais lan\u00E7adas na fatura.</value>
         [DataMember(Name="totalComprasNacionais", EmitDefaultValue=false)]
         public double? TotalComprasNacionais { get; set; }
     
         /// <summary>
-        /// Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+        /// Valor total das compras internacionais lan\u00E7adas na fatura.
         /// </summary>
-        /// <value>Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.</value>
+        /// <value>Valor total das compras internacionais lan\u00E7adas na fatura.</value>
         [DataMember(Name="totalComprasInternacionas", EmitDefaultValue=false)]
         public double? TotalComprasInternacionas { get; set; }
     
         /// <summary>
-        /// Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos saques nacionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos saques nacionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalSaquesNacionais", EmitDefaultValue=false)]
         public double? TotalSaquesNacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos saques internacionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos saques internacionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalSaquesInternacionais", EmitDefaultValue=false)]
         public double? TotalSaquesInternacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalDebitosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosNacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalDebitosRecorrentes", EmitDefaultValue=false)]
         public double? TotalDebitosRecorrentes { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalDebitosInternacionais", EmitDefaultValue=false)]
         public double? TotalDebitosInternacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalDebitosDiversosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosDiversosNacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalDebitosOpcionais", EmitDefaultValue=false)]
         public double? TotalDebitosOpcionais { get; set; }
     
         /// <summary>
-        /// Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos pagamentos lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos pagamentos lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalPagamentos", EmitDefaultValue=false)]
         public double? TotalPagamentos { get; set; }
     
         /// <summary>
-        /// Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalCreditosNacionais", EmitDefaultValue=false)]
         public double? TotalCreditosNacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos ajustes lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos ajustes lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos ajustes lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalAjustes", EmitDefaultValue=false)]
         public double? TotalAjustes { get; set; }
     
         /// <summary>
-        /// Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+        /// Valor total das tarifas lan\u00E7adas na fatura.
         /// </summary>
-        /// <value>Valor total das tarifas lan\u00C3\u00A7adas na fatura.</value>
+        /// <value>Valor total das tarifas lan\u00E7adas na fatura.</value>
         [DataMember(Name="totalTarifas", EmitDefaultValue=false)]
         public double? TotalTarifas { get; set; }
     
         /// <summary>
-        /// Valor total da multa lan\u00C3\u00A7ada na fatura.
+        /// Valor total da multa lan\u00E7ada na fatura.
         /// </summary>
-        /// <value>Valor total da multa lan\u00C3\u00A7ada na fatura.</value>
+        /// <value>Valor total da multa lan\u00E7ada na fatura.</value>
         [DataMember(Name="totalMulta", EmitDefaultValue=false)]
         public double? TotalMulta { get; set; }
     
         /// <summary>
-        /// Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+        /// Valor total dos juros de mora lan\u00E7ados na fatura.
         /// </summary>
-        /// <value>Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.</value>
+        /// <value>Valor total dos juros de mora lan\u00E7ados na fatura.</value>
         [DataMember(Name="totalJuros", EmitDefaultValue=false)]
         public double? TotalJuros { get; set; }
     
@@ -276,9 +276,9 @@ namespace Conductor.Pier.Model
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+        /// Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
         /// </summary>
-        /// <value>Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.</value>
+        /// <value>Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     

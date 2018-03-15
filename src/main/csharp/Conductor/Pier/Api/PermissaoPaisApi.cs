@@ -18,24 +18,24 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// Apresenta dados de um determinado pa\u00EDs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param>
         /// <returns>PaisResponse</returns>
         PaisResponse ConsultarPaisUsingGET (long? id);
   
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// Apresenta dados de um determinado pa\u00EDs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param>
         /// <returns>ApiResponse of PaisResponse</returns>
         ApiResponse<PaisResponse> ConsultarPaisUsingGETWithHttpInfo (long? id);
         
@@ -43,7 +43,7 @@ namespace Conductor.Pier.Api
         /// Lista os continentes
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -53,45 +53,45 @@ namespace Conductor.Pier.Api
         /// Lista os continentes
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarContinentesUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses
+        /// Lista os pa\u00EDses
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Este recurso permite listar os pa\u00EDses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param>
         /// <returns>PagePaisResponse</returns>
         PagePaisResponse ListarPaisesUsingGET (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
   
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses
+        /// Lista os pa\u00EDses
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Este recurso permite listar os pa\u00EDses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param>
         /// <returns>ApiResponse of PagePaisResponse</returns>
         ApiResponse<PagePaisResponse> ListarPaisesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
         
@@ -100,24 +100,24 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// Apresenta dados de um determinado pa\u00EDs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param>
         /// <returns>Task of PaisResponse</returns>
         System.Threading.Tasks.Task<PaisResponse> ConsultarPaisUsingGETAsync (long? id);
 
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs
+        /// Apresenta dados de um determinado pa\u00EDs
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param>
         /// <returns>Task of ApiResponse (PaisResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PaisResponse>> ConsultarPaisUsingGETAsyncWithHttpInfo (long? id);
         
@@ -125,7 +125,7 @@ namespace Conductor.Pier.Api
         /// Lista os continentes
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -135,45 +135,45 @@ namespace Conductor.Pier.Api
         /// Lista os continentes
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarContinentesUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses
+        /// Lista os pa\u00EDses
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Este recurso permite listar os pa\u00EDses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param>
         /// <returns>Task of PagePaisResponse</returns>
         System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
 
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses
+        /// Lista os pa\u00EDses
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Este recurso permite listar os pa\u00EDses.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PagePaisResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null);
         
@@ -270,10 +270,10 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado pa\u00EDs Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param> 
         /// <returns>PaisResponse</returns>
         public PaisResponse ConsultarPaisUsingGET (long? id)
         {
@@ -282,10 +282,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado pa\u00EDs Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param> 
         /// <returns>ApiResponse of PaisResponse</returns>
         public ApiResponse< PaisResponse > ConsultarPaisUsingGETWithHttpInfo (long? id)
         {
@@ -350,10 +350,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado pa\u00EDs Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param>
         /// <returns>Task of PaisResponse</returns>
         public async System.Threading.Tasks.Task<PaisResponse> ConsultarPaisUsingGETAsync (long? id)
         {
@@ -363,10 +363,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado pa\u00C3\u00ADs Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta dados de um determinado pa\u00EDs Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).</param>
         /// <returns>Task of ApiResponse (PaisResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PaisResponse>> ConsultarPaisUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -428,7 +428,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -439,7 +439,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -501,7 +501,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -513,7 +513,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+        /// Lista os continentes Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -574,17 +574,17 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Lista os pa\u00EDses Este recurso permite listar os pa\u00EDses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param> 
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param> 
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param> 
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param> 
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param> 
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param> 
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param> 
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param> 
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param> 
         /// <returns>PagePaisResponse</returns>
         public PagePaisResponse ListarPaisesUsingGET (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
@@ -593,17 +593,17 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Lista os pa\u00EDses Este recurso permite listar os pa\u00EDses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param> 
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param> 
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param> 
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param> 
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param> 
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param> 
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param> 
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param> 
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param> 
         /// <returns>ApiResponse of PagePaisResponse</returns>
         public ApiResponse< PagePaisResponse > ListarPaisesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
@@ -671,17 +671,17 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Lista os pa\u00EDses Este recurso permite listar os pa\u00EDses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param>
         /// <returns>Task of PagePaisResponse</returns>
         public async System.Threading.Tasks.Task<PagePaisResponse> ListarPaisesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {
@@ -691,17 +691,17 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os pa\u00C3\u00ADses Este recurso permite listar os pa\u00C3\u00ADses.
+        /// Lista os pa\u00EDses Este recurso permite listar os pa\u00EDses.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="codigo">C\u00C3\u00B3digo do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="sigla">Sigla do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="descricao">Nome do pa\u00C3\u00ADs (optional)</param>
-        /// <param name="continente">Continente no qual o pa\u00C3\u00ADs faz parte (optional)</param>
-        /// <param name="flagAtivo">Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="codigo">C\u00F3digo do pa\u00EDs (optional)</param>
+        /// <param name="sigla">Sigla do pa\u00EDs (optional)</param>
+        /// <param name="descricao">Nome do pa\u00EDs (optional)</param>
+        /// <param name="continente">Continente no qual o pa\u00EDs faz parte (optional)</param>
+        /// <param name="flagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PagePaisResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PagePaisResponse>> ListarPaisesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string codigo = null, string sigla = null, string descricao = null, string continente = null, bool? flagAtivo = null)
         {

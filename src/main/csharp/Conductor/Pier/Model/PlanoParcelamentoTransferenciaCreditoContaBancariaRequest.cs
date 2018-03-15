@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Transfer\u00C3\u00AAncia cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria request
+    /// Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest :  IEquatable<PlanoParcelamentoTransferenciaCreditoContaBancariaRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaRequest" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaRequest" />class.
         /// </summary>
-        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o. (required).</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
-        /// <param name="NumeroMesesCarencia">Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia. (required).</param>
+        /// <param name="IdCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o. (required).</param>
+        /// <param name="ValorTransacao">Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos. (required).</param>
+        /// <param name="NumeroMesesCarencia">Representa o N\u00FAmero de Meses concedido como car\u00EAncia. (required).</param>
 
         public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest(long? IdCartao = null, double? ValorTransacao = null, int? NumeroMesesCarencia = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+        /// Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.</value>
+        /// <value>Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+        /// Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
         /// </summary>
-        /// <value>Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.</value>
+        /// <value>Representa o N\u00FAmero de Meses concedido como car\u00EAncia.</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     

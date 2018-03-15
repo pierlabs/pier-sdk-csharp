@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Notifica\u00C3\u00A7\u00C3\u00A3o SMS
+    /// Objeto Notifica\u00E7\u00E3o SMS
     /// </summary>
     [DataContract]
     public partial class NotificacaoResponse :  IEquatable<NotificacaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoResponse" />class.
         /// </summary>
-        /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
-        /// <param name="Mensagem">Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio.</param>
+        /// <param name="Protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es.</param>
+        /// <param name="Mensagem">Mensagem de resposta da solicita\u00E7\u00F5es de envio.</param>
 
         public NotificacaoResponse(string Protocolo = null, string Mensagem = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es</value>
+        /// <value>N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     
         /// <summary>
-        /// Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio
+        /// Mensagem de resposta da solicita\u00E7\u00F5es de envio
         /// </summary>
-        /// <value>Mensagem de resposta da solicita\u00C3\u00A7\u00C3\u00B5es de envio</value>
+        /// <value>Mensagem de resposta da solicita\u00E7\u00F5es de envio</value>
         [DataMember(Name="mensagem", EmitDefaultValue=false)]
         public string Mensagem { get; set; }
     

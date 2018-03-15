@@ -18,50 +18,50 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param>
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param>
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param>
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param>
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param>
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param>
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param>
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param>
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param>
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param>
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param>
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param>
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
         LimiteDisponibilidadeResponse AlterarUsingPUT9 (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
   
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param>
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param>
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param>
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param>
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param>
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param>
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param>
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param>
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param>
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param>
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param>
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param>
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
         ApiResponse<LimiteDisponibilidadeResponse> AlterarUsingPUT9WithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
         
@@ -69,73 +69,73 @@ namespace Conductor.Pier.Api
         /// Apresenta os limites da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse ConsultarUsingGET19 (long? idConta);
+        LimiteDisponibilidadeResponse ConsultarUsingGET20 (long? idConta);
   
         /// <summary>
         /// Apresenta os limites da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET19WithHttpInfo (long? idConta);
+        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET20WithHttpInfo (long? idConta);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param>
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param>
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param>
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param>
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param>
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param>
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param>
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param>
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param>
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param>
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param>
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param>
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
         System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarUsingPUT9Async (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param>
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param>
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param>
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param>
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param>
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param>
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param>
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param>
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param>
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param>
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param>
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param>
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarUsingPUT9AsyncWithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
         
@@ -143,23 +143,23 @@ namespace Conductor.Pier.Api
         /// Apresenta os limites da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET19Async (long? idConta);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET20Async (long? idConta);
 
         /// <summary>
         /// Apresenta os limites da conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET19AsyncWithHttpInfo (long? idConta);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? idConta);
         
         #endregion Asynchronous Operations
         
@@ -254,23 +254,23 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param> 
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param> 
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param> 
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param> 
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param> 
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param> 
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param> 
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param> 
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param> 
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param> 
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param> 
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param> 
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param> 
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param> 
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param> 
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param> 
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param> 
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param> 
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param> 
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param> 
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param> 
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param> 
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param> 
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param> 
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param> 
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
         public LimiteDisponibilidadeResponse AlterarUsingPUT9 (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
@@ -279,23 +279,23 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param> 
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param> 
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param> 
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param> 
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param> 
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param> 
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param> 
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param> 
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param> 
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param> 
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param> 
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param> 
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param> 
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param> 
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param> 
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param> 
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param> 
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param> 
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param> 
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param> 
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param> 
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param> 
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param> 
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param> 
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param> 
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
         public ApiResponse< LimiteDisponibilidadeResponse > AlterarUsingPUT9WithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
@@ -373,23 +373,23 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param>
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param>
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param>
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param>
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param>
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param>
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param>
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param>
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param>
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param>
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param>
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param>
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
         public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarUsingPUT9Async (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
@@ -399,23 +399,23 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
+        /// Realiza a altera\u00E7\u00E3o dos limites da conta Esse recurso permite realizar a altera\u00E7\u00E3o dos Limites de uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui. (optional)</param>
-        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
-        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas. (optional)</param>
-        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional. (optional)</param>
-        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos. (optional)</param>
-        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
-        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas. (optional)</param>
-        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
-        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. (optional)</param>
-        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
-        /// <param name="limiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="limiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. (optional)</param>
+        /// <param name="limiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. (optional)</param>
+        /// <param name="limiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. (optional)</param>
+        /// <param name="limiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. (optional)</param>
+        /// <param name="limiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. (optional)</param>
+        /// <param name="limiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. (optional)</param>
+        /// <param name="limiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. (optional)</param>
+        /// <param name="limiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. (optional)</param>
+        /// <param name="limiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. (optional)</param>
+        /// <param name="limiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. (optional)</param>
+        /// <param name="limiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es. (optional)</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarUsingPUT9AsyncWithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
@@ -490,29 +490,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os limites da conta Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Apresenta os limites da conta Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse ConsultarUsingGET19 (long? idConta)
+        public LimiteDisponibilidadeResponse ConsultarUsingGET20 (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET19WithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET20WithHttpInfo(idConta);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os limites da conta Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Apresenta os limites da conta Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET19WithHttpInfo (long? idConta)
+        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET20WithHttpInfo (long? idConta)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling LimiteDisponibilidadeApi->ConsultarUsingGET19");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling LimiteDisponibilidadeApi->ConsultarUsingGET20");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -558,9 +558,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -570,28 +570,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os limites da conta Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Apresenta os limites da conta Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET19Async (long? idConta)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET20Async (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET19AsyncWithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET20AsyncWithHttpInfo(idConta);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os limites da conta Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+        /// Apresenta os limites da conta Este m\u00E9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">Id Conta</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET19AsyncWithHttpInfo (long? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? idConta)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET19");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET20");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -637,9 +637,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoRegistroCobrancaPersist :  IEquatable<ConfiguracaoRegistroCobrancaPersist>
     { 
     
         /// <summary>
-        /// Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+        /// Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
         /// </summary>
-        /// <value>Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+        /// Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
         /// </summary>
-        /// <value>Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,7 +44,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoRegistroCobrancaPersist" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoRegistroCobrancaPersist" />class.
         /// </summary>
-        /// <param name="CodigoBanco">C\u00C3\u00B3digo do Banco. (required).</param>
+        /// <param name="CodigoBanco">C\u00F3digo do Banco. (required).</param>
         /// <param name="Uri">URL de acesso ao banco..</param>
         /// <param name="KeyStoreName">Caminho do certificado digital do emissor..</param>
         /// <param name="KeyStorePassword">Senha do certificado digital do emissor..</param>
@@ -56,7 +56,7 @@ namespace Conductor.Pier.Model
         /// <param name="TruststoreAlias">Alias do certificado digital do banco..</param>
         /// <param name="TypeTruststore">Tipo do certificado digital do banco..</param>
         /// <param name="UriAdicional">URL adicional de acesso ao banco..</param>
-        /// <param name="Status">Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o. (required).</param>
+        /// <param name="Status">Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o. (required).</param>
 
         public ConfiguracaoRegistroCobrancaPersist(long? CodigoBanco = null, string Uri = null, string KeyStoreName = null, string KeyStorePassword = null, string KeystoreAlias = null, string KeyStorePrivateKeyPassword = null, string TypeKeystore = null, string TrustStoreName = null, string TrustStorePassword = null, string TruststoreAlias = null, string TypeTruststore = null, string UriAdicional = null, StatusEnum? Status = null)
         {
@@ -94,9 +94,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo do Banco.
+        /// C\u00F3digo do Banco.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do Banco.</value>
+        /// <value>C\u00F3digo do Banco.</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     

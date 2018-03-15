@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoAjusteResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoAjusteResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do tipo de ajuste..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste..</param>
+        /// <param name="Id">C\u00F3digo identificador do tipo de ajuste..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de ajuste..</param>
 
         public TipoAjusteResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo de ajuste.
+        /// C\u00F3digo identificador do tipo de ajuste.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo de ajuste.</value>
+        /// <value>C\u00F3digo identificador do tipo de ajuste.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+        /// Descri\u00E7\u00E3o do tipo de ajuste.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de ajuste.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
+    /// Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
     /// </summary>
     [DataContract]
     public partial class AntecipacaoSimuladaDetalhesResponse :  IEquatable<AntecipacaoSimuladaDetalhesResponse>
@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="QuantidadeParcelas">Quantidade de parcelas do plano de parcelamento simulado..</param>
         /// <param name="ValorParcelas">Valor total das parcelas do plano de parcelamento..</param>
         /// <param name="ValorDesconto">Valor do desconto para o plano de parcelamento..</param>
-        /// <param name="ValorParcelasDesconto">Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto..</param>
+        /// <param name="ValorParcelasDesconto">Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto..</param>
 
         public AntecipacaoSimuladaDetalhesResponse(int? QuantidadeParcelas = null, double? ValorParcelas = null, double? ValorDesconto = null, double? ValorParcelasDesconto = null)
         {
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public double? ValorDesconto { get; set; }
     
         /// <summary>
-        /// Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.
+        /// Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
         /// </summary>
-        /// <value>Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.</value>
+        /// <value>Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.</value>
         [DataMember(Name="valorParcelasDesconto", EmitDefaultValue=false)]
         public double? ValorParcelasDesconto { get; set; }
     

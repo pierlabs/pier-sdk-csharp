@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de operadora telef\u00C3\u00B4nica
+    /// Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
     /// </summary>
     [DataContract]
     public partial class FantasiaBasicaResponse :  IEquatable<FantasiaBasicaResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FantasiaBasicaResponse" /> class.
         /// Initializes a new instance of the <see cref="FantasiaBasicaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identificador da fantasia b\u00C3\u00A1sica.</param>
-        /// <param name="Nome">Nome da fantasia b\u00C3\u00A1sica.</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o da fantasia b\u00C3\u00A1sica.</param>
+        /// <param name="Id">Identificador da fantasia b\u00E1sica.</param>
+        /// <param name="Nome">Nome da fantasia b\u00E1sica.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica.</param>
 
         public FantasiaBasicaResponse(long? Id = null, string Nome = null, string Descricao = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador da fantasia b\u00C3\u00A1sica
+        /// Identificador da fantasia b\u00E1sica
         /// </summary>
-        /// <value>Identificador da fantasia b\u00C3\u00A1sica</value>
+        /// <value>Identificador da fantasia b\u00E1sica</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome da fantasia b\u00C3\u00A1sica
+        /// Nome da fantasia b\u00E1sica
         /// </summary>
-        /// <value>Nome da fantasia b\u00C3\u00A1sica</value>
+        /// <value>Nome da fantasia b\u00E1sica</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da fantasia b\u00C3\u00A1sica
+        /// Descri\u00E7\u00E3o da fantasia b\u00E1sica
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da fantasia b\u00C3\u00A1sica</value>
+        /// <value>Descri\u00E7\u00E3o da fantasia b\u00E1sica</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

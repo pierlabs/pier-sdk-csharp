@@ -23,11 +23,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ControleVencimentoResponse" />class.
         /// </summary>
         /// <param name="DataVencimento"> Indica a data de vencimento das faturas.</param>
-        /// <param name="DataPrevistaCorte"> Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas.</param>
-        /// <param name="DataHoraRealizacaoCorte">Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas.</param>
-        /// <param name="DataPrevistaFaturamento">Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento.</param>
+        /// <param name="DataPrevistaCorte"> Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas.</param>
+        /// <param name="DataHoraRealizacaoCorte">Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas.</param>
+        /// <param name="DataPrevistaFaturamento">Indica a data prevista para a realiza\u00E7\u00E3o do faturamento.</param>
         /// <param name="DataHoraRealizacaoFaturamento">Indica a data e a hora que fora realizado o faturamento.</param>
-        /// <param name="DataRealVencimento">Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento.</param>
+        /// <param name="DataRealVencimento">Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento.</param>
 
         public ControleVencimentoResponse(string DataVencimento = null, string DataPrevistaCorte = null, string DataHoraRealizacaoCorte = null, string DataPrevistaFaturamento = null, string DataHoraRealizacaoFaturamento = null, string DataRealVencimento = null)
         {
@@ -49,23 +49,23 @@ namespace Conductor.Pier.Model
         public string DataVencimento { get; set; }
     
         /// <summary>
-        ///  Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+        ///  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
         /// </summary>
-        /// <value> Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas</value>
+        /// <value> Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas</value>
         [DataMember(Name="dataPrevistaCorte", EmitDefaultValue=false)]
         public string DataPrevistaCorte { get; set; }
     
         /// <summary>
-        /// Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+        /// Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
         /// </summary>
-        /// <value>Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas</value>
+        /// <value>Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas</value>
         [DataMember(Name="dataHoraRealizacaoCorte", EmitDefaultValue=false)]
         public string DataHoraRealizacaoCorte { get; set; }
     
         /// <summary>
-        /// Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento
+        /// Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
         /// </summary>
-        /// <value>Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento</value>
+        /// <value>Indica a data prevista para a realiza\u00E7\u00E3o do faturamento</value>
         [DataMember(Name="dataPrevistaFaturamento", EmitDefaultValue=false)]
         public string DataPrevistaFaturamento { get; set; }
     
@@ -77,9 +77,9 @@ namespace Conductor.Pier.Model
         public string DataHoraRealizacaoFaturamento { get; set; }
     
         /// <summary>
-        /// Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento
+        /// Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
         /// </summary>
-        /// <value>Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento</value>
+        /// <value>Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento</value>
         [DataMember(Name="dataRealVencimento", EmitDefaultValue=false)]
         public string DataRealVencimento { get; set; }
     

@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTerminalResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoTerminalResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id)..</param>
-        /// <param name="DescricaoTerminal">Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id)..</param>
+        /// <param name="DescricaoTerminal">Descri\u00E7\u00E3o do Tipo Terminal..</param>
 
         public TipoTerminalResponse(long? Id = null, string DescricaoTerminal = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal.
+        /// Descri\u00E7\u00E3o do Tipo Terminal.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal.</value>
+        /// <value>Descri\u00E7\u00E3o do Tipo Terminal.</value>
         [DataMember(Name="descricaoTerminal", EmitDefaultValue=false)]
         public string DescricaoTerminal { get; set; }
     

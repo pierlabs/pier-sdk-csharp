@@ -18,10 +18,10 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
@@ -30,10 +30,10 @@ namespace Conductor.Pier.Api
         ParametroProdutoResponse ConfigurarTaxaAntecipacaoUsingPOST (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
   
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
@@ -42,164 +42,164 @@ namespace Conductor.Pier.Api
         ApiResponse<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoUsingPOSTWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
         
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>ParametroProdutoResponse</returns>
         ParametroProdutoResponse ConsultarTaxaAntecipacaoUsingGET (long? id, string tipoTransacao);
   
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>ApiResponse of ParametroProdutoResponse</returns>
         ApiResponse<ParametroProdutoResponse> ConsultarTaxaAntecipacaoUsingGETWithHttpInfo (long? id, string tipoTransacao);
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>AntecipacaoResponse</returns>
         AntecipacaoResponse EfetivarAntecipacaoUsingPOST (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
   
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
         ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>AntecipacaoResponse</returns>
         AntecipacaoResponse EfetivarAntecipacoesUsingPOST (long? idConta, string complemento = null);
   
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
         ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesUsingPOSTWithHttpInfo (long? idConta, string complemento = null);
         
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis
+        /// Listar compras com parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Lista as compras antecip\u00E1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>PageCompraResponse</returns>
-        PageCompraResponse ListarUsingGET11 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        PageCompraResponse ListarUsingGET12 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
   
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis
+        /// Listar compras com parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Lista as compras antecip\u00E1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        ApiResponse<PageCompraResponse> ListarUsingGET11WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        ApiResponse<PageCompraResponse> ListarUsingGET12WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+        /// Simular antecipa\u00E7\u00E3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>AntecipacaoSimuladaResponse</returns>
         AntecipacaoSimuladaResponse SimularAntecipacaoUsingGET (long? idConta, long? id, string complemento = null);
   
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+        /// Simular antecipa\u00E7\u00E3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
         ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoUsingGETWithHttpInfo (long? idConta, long? id, string complemento = null);
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>AntecipacaoSimuladaLoteResponse</returns>
         AntecipacaoSimuladaLoteResponse SimularAntecipacoesUsingGET (long? idConta, string complemento = null);
   
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
         ApiResponse<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesUsingGETWithHttpInfo (long? idConta, string complemento = null);
         
@@ -208,10 +208,10 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
@@ -220,10 +220,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoUsingPOSTAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
 
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
@@ -232,164 +232,164 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoUsingPOSTAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
         
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ParametroProdutoResponse</returns>
         System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoUsingGETAsync (long? id, string tipoTransacao);
 
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoUsingGETAsyncWithHttpInfo (long? id, string tipoTransacao);
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
         System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoUsingPOSTAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
         System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesUsingPOSTAsync (long? idConta, string complemento = null);
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo (long? idConta, string complemento = null);
         
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis
+        /// Listar compras com parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Lista as compras antecip\u00E1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET11Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET12Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
 
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis
+        /// Listar compras com parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Lista as compras antecip\u00E1veis de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET11AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET12AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+        /// Simular antecipa\u00E7\u00E3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
         System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoUsingGETAsync (long? idConta, long? id, string complemento = null);
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+        /// Simular antecipa\u00E7\u00E3o de parcelas
         /// </summary>
         /// <remarks>
-        /// Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoUsingGETAsyncWithHttpInfo (long? idConta, long? id, string complemento = null);
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
         System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesUsingGETAsync (long? idConta, string complemento = null);
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
         /// </summary>
         /// <remarks>
-        /// O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesUsingGETAsyncWithHttpInfo (long? idConta, string complemento = null);
         
@@ -486,7 +486,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param> 
@@ -499,7 +499,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param> 
@@ -579,7 +579,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
@@ -593,7 +593,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
@@ -668,11 +668,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param> 
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param> 
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param> 
         /// <returns>ParametroProdutoResponse</returns>
         public ParametroProdutoResponse ConsultarTaxaAntecipacaoUsingGET (long? id, string tipoTransacao)
         {
@@ -681,11 +681,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param> 
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param> 
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param> 
         /// <returns>ApiResponse of ParametroProdutoResponse</returns>
         public ApiResponse< ParametroProdutoResponse > ConsultarTaxaAntecipacaoUsingGETWithHttpInfo (long? id, string tipoTransacao)
         {
@@ -755,11 +755,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ParametroProdutoResponse</returns>
         public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoUsingGETAsync (long? id, string tipoTransacao)
         {
@@ -769,11 +769,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Produto</param>
-        /// <param name="tipoTransacao">Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)</param>
+        /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoUsingGETAsyncWithHttpInfo (long? id, string tipoTransacao)
         {
@@ -838,13 +838,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param> 
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>AntecipacaoResponse</returns>
         public AntecipacaoResponse EfetivarAntecipacaoUsingPOST (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
@@ -853,13 +853,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param> 
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
         public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoUsingPOSTWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
@@ -935,13 +935,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
         public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoUsingPOSTAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
@@ -951,13 +951,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoUsingPOSTAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
@@ -1026,11 +1026,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>AntecipacaoResponse</returns>
         public AntecipacaoResponse EfetivarAntecipacoesUsingPOST (long? idConta, string complemento = null)
         {
@@ -1039,11 +1039,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
         public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesUsingPOSTWithHttpInfo (long? idConta, string complemento = null)
         {
@@ -1109,11 +1109,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
         public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesUsingPOSTAsync (long? idConta, string complemento = null)
         {
@@ -1123,11 +1123,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesUsingPOSTAsyncWithHttpInfo (long? idConta, string complemento = null)
         {
@@ -1190,43 +1190,43 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Listar compras com parcelas antecip\u00E1veis Lista as compras antecip\u00E1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param> 
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param> 
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param> 
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param> 
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param> 
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param> 
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
         /// <returns>PageCompraResponse</returns>
-        public PageCompraResponse ListarUsingGET11 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public PageCompraResponse ListarUsingGET12 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = ListarUsingGET11WithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = ListarUsingGET12WithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Listar compras com parcelas antecip\u00E1veis Lista as compras antecip\u00E1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param> 
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param> 
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param> 
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param> 
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param> 
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param> 
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        public ApiResponse< PageCompraResponse > ListarUsingGET11WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public ApiResponse< PageCompraResponse > ListarUsingGET12WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->ListarUsingGET11");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->ListarUsingGET12");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1279,9 +1279,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1291,42 +1291,42 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Listar compras com parcelas antecip\u00E1veis Lista as compras antecip\u00E1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        public async System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET11Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET12Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = await ListarUsingGET12AsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Listar compras com parcelas antecip\u00C3\u00A1veis Lista as compras antecip\u00C3\u00A1veis de uma conta.
+        /// Listar compras com parcelas antecip\u00E1veis Lista as compras antecip\u00E1veis de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta da Compra.</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCompra">C\u00C3\u00B3digo identificador da Compra. (optional)</param>
-        /// <param name="parcelada">Indica se a compra \u00C3\u00A9 parcelada. (optional)</param>
-        /// <param name="juros">Indica se a compra \u00C3\u00A9 com ou sem juros. (optional)</param>
-        /// <param name="tipoOrigemTransacao">Indica se a compra \u00C3\u00A9 ON-US ou OFF-US (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra.</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra. (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada. (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros. (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET11AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET12AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET11");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET12");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1379,9 +1379,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1390,12 +1390,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>AntecipacaoSimuladaResponse</returns>
         public AntecipacaoSimuladaResponse SimularAntecipacaoUsingGET (long? idConta, long? id, string complemento = null)
         {
@@ -1404,12 +1404,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
         public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoUsingGETWithHttpInfo (long? idConta, long? id, string complemento = null)
         {
@@ -1480,12 +1480,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
         public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoUsingGETAsync (long? idConta, long? id, string complemento = null)
         {
@@ -1495,12 +1495,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoUsingGETAsyncWithHttpInfo (long? idConta, long? id, string complemento = null)
         {
@@ -1566,11 +1566,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>AntecipacaoSimuladaLoteResponse</returns>
         public AntecipacaoSimuladaLoteResponse SimularAntecipacoesUsingGET (long? idConta, string complemento = null)
         {
@@ -1579,11 +1579,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param> 
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
         public ApiResponse< AntecipacaoSimuladaLoteResponse > SimularAntecipacoesUsingGETWithHttpInfo (long? idConta, string complemento = null)
         {
@@ -1649,11 +1649,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
         public async System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesUsingGETAsync (long? idConta, string complemento = null)
         {
@@ -1663,11 +1663,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="complemento">Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesUsingGETAsyncWithHttpInfo (long? idConta, string complemento = null)
         {

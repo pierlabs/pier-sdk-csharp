@@ -21,10 +21,10 @@ namespace Conductor.Pier.Api
         /// Alterar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
+        /// <param name="id">C\u00F3digo identificador do Webhook</param>
         /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>WebHookResponse</returns>
@@ -34,10 +34,10 @@ namespace Conductor.Pier.Api
         /// Alterar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
+        /// <param name="id">C\u00F3digo identificador do Webhook</param>
         /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
@@ -47,63 +47,63 @@ namespace Conductor.Pier.Api
         /// Consultar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse ConsultarUsingGET44 (long? id);
+        WebHookResponse ConsultarUsingGET45 (long? id);
   
         /// <summary>
         /// Consultar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> ConsultarUsingGET44WithHttpInfo (long? id);
+        ApiResponse<WebHookResponse> ConsultarUsingGET45WithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os Webhooks
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>PageWebHookResponse</returns>
-        PageWebHookResponse ListarUsingGET53 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        PageWebHookResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
   
         /// <summary>
         /// Lista os Webhooks
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>ApiResponse of PageWebHookResponse</returns>
-        ApiResponse<PageWebHookResponse> ListarUsingGET53WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        ApiResponse<PageWebHookResponse> ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param>
@@ -114,7 +114,7 @@ namespace Conductor.Pier.Api
         /// Salvar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param>
@@ -129,10 +129,10 @@ namespace Conductor.Pier.Api
         /// Alterar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
+        /// <param name="id">C\u00F3digo identificador do Webhook</param>
         /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of WebHookResponse</returns>
@@ -142,10 +142,10 @@ namespace Conductor.Pier.Api
         /// Alterar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
+        /// <param name="id">C\u00F3digo identificador do Webhook</param>
         /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
@@ -155,63 +155,63 @@ namespace Conductor.Pier.Api
         /// Consultar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET44Async (long? id);
+        System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET45Async (long? id);
 
         /// <summary>
         /// Consultar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET45AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os Webhooks
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of PageWebHookResponse</returns>
-        System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET53Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
 
         /// <summary>
         /// Lista os Webhooks
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET53AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
+        System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null);
         
         /// <summary>
         /// Salvar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param>
@@ -222,7 +222,7 @@ namespace Conductor.Pier.Api
         /// Salvar Webhook
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param>
@@ -322,10 +322,10 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Alterar Webhook Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param> 
+        /// <param name="id">C\u00F3digo identificador do Webhook</param> 
         /// <param name="webhook">webhook</param> 
         /// <param name="status">Status (optional)</param> 
         /// <returns>WebHookResponse</returns>
@@ -336,10 +336,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Alterar Webhook Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param> 
+        /// <param name="id">C\u00F3digo identificador do Webhook</param> 
         /// <param name="webhook">webhook</param> 
         /// <param name="status">Status (optional)</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
@@ -418,10 +418,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Alterar Webhook Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
+        /// <param name="id">C\u00F3digo identificador do Webhook</param>
         /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of WebHookResponse</returns>
@@ -433,10 +433,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar Webhook Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
+        /// Alterar Webhook Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo identificador do Webhook</param>
+        /// <param name="id">C\u00F3digo identificador do Webhook</param>
         /// <param name="webhook">webhook</param>
         /// <param name="status">Status (optional)</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
@@ -510,29 +510,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Consultar Webhook Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse ConsultarUsingGET44 (long? id)
+        public WebHookResponse ConsultarUsingGET45 (long? id)
         {
-             ApiResponse<WebHookResponse> localVarResponse = ConsultarUsingGET44WithHttpInfo(id);
+             ApiResponse<WebHookResponse> localVarResponse = ConsultarUsingGET45WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Consultar Webhook Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > ConsultarUsingGET44WithHttpInfo (long? id)
+        public ApiResponse< WebHookResponse > ConsultarUsingGET45WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->ConsultarUsingGET44");
+                throw new ApiException(400, "Missing required parameter 'id' when calling WebhookApi->ConsultarUsingGET45");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -578,9 +578,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -590,28 +590,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Consultar Webhook Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET44Async (long? id)
+        public async System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET45Async (long? id)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await ConsultarUsingGET44AsyncWithHttpInfo(id);
+             ApiResponse<WebHookResponse> localVarResponse = await ConsultarUsingGET45AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consultar Webhook Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
+        /// Consultar Webhook Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET45AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET44");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET45");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -657,9 +657,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -668,36 +668,36 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Lista os Webhooks Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Id do WebHook (optional)</param> 
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param> 
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
         /// <returns>PageWebHookResponse</returns>
-        public PageWebHookResponse ListarUsingGET53 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public PageWebHookResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHookResponse> localVarResponse = ListarUsingGET53WithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
+             ApiResponse<PageWebHookResponse> localVarResponse = ListarUsingGET55WithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Lista os Webhooks Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="id">Id do WebHook (optional)</param> 
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param> 
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param> 
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param> 
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param> 
         /// <returns>ApiResponse of PageWebHookResponse</returns>
-        public ApiResponse< PageWebHookResponse > ListarUsingGET53WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public ApiResponse< PageWebHookResponse > ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
             
     
@@ -750,9 +750,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageWebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -762,37 +762,37 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Lista os Webhooks Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of PageWebHookResponse</returns>
-        public async System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET53Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public async System.Threading.Tasks.Task<PageWebHookResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
-             ApiResponse<PageWebHookResponse> localVarResponse = await ListarUsingGET53AsyncWithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
+             ApiResponse<PageWebHookResponse> localVarResponse = await ListarUsingGET55AsyncWithHttpInfo(sort, page, limit, id, tipoEvento, metodo, url);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os Webhooks Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+        /// Lista os Webhooks Este m\u00E9todo permite que sejam listados os webhooks existentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="id">Id do WebHook (optional)</param>
         /// <param name="tipoEvento">TipoEvento a ser chamado pelo WebHook (optional)</param>
-        /// <param name="metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (optional)</param>
+        /// <param name="metodo">M\u00E9todo que a ser chamado pelo WebHook (optional)</param>
         /// <param name="url">URL que a ser consumida pelo WebHook (optional)</param>
         /// <returns>Task of ApiResponse (PageWebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET53AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageWebHookResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string tipoEvento = null, string metodo = null, string url = null)
         {
             
     
@@ -845,9 +845,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageWebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -856,7 +856,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Salvar Webhook Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param> 
@@ -868,7 +868,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Salvar Webhook Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param> 
@@ -942,7 +942,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Salvar Webhook Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param>
@@ -955,7 +955,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Salvar Webhook Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+        /// Salvar Webhook Este m\u00E9todo permite que seja adicionado um novo webhook
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhook">webhook</param>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Response de par\u00C3\u00A2metros do arquivo.
+    /// Objeto Response de par\u00E2metros do arquivo.
     /// </summary>
     [DataContract]
     public partial class ArquivoParametroResponse :  IEquatable<ArquivoParametroResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoParametroResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoParametroResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo..</param>
         /// <param name="NomeCampo">Nome que identifica o detalhe do arquivo (required).</param>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo do nomeCampo (required).</param>
+        /// <param name="Conteudo">Conte\u00FAdo do nomeCampo (required).</param>
 
         public ArquivoParametroResponse(long? Id = null, string NomeCampo = null, string Conteudo = null)
         {
@@ -52,9 +52,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -66,9 +66,9 @@ namespace Conductor.Pier.Model
         public string NomeCampo { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do nomeCampo
+        /// Conte\u00FAdo do nomeCampo
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do nomeCampo</value>
+        /// <value>Conte\u00FAdo do nomeCampo</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

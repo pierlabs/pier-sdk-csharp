@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+    /// Representa\u00E7\u00E3o da resposta do recurso Operacao
     /// </summary>
     [DataContract]
     public partial class DetalheOperacaoResponse :  IEquatable<DetalheOperacaoResponse>
@@ -22,25 +22,25 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalheOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalheOperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador.</param>
-        /// <param name="CodigoProcessamentoCancelamento">C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador.</param>
-        /// <param name="NomeOperacao">Nome da opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DescricaoOperacao">Descri\u00C3\u00A7\u00C3\u00A3o da opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="PlanoMinimo">Quantidade m\u00C3\u00ADnima de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="PlanoMaximo">Quantidade M\u00C3\u00A1ximo de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="ValorMinimo"> Valor m\u00C3\u00ADnimo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="ValorMaximo"> Valor m\u00C3\u00A1ximo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="FlagCobraJuros">Flag indicativa para crobran\u00C3\u00A7a de juros.</param>
-        /// <param name="TaxaJuros">Valor do juros a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre juros.</param>
-        /// <param name="FlagCobraTarifa">Flag indicativa para crobran\u00C3\u00A7a de tarifas.</param>
-        /// <param name="TaxaTarifa">Valor da tarifa a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre tarifas.</param>
+        /// <param name="IdOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o.</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador.</param>
+        /// <param name="CodigoProcessamentoCancelamento">C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador.</param>
+        /// <param name="NomeOperacao">Nome da opera\u00E7\u00E3o.</param>
+        /// <param name="DescricaoOperacao">Descri\u00E7\u00E3o da opera\u00E7\u00E3o.</param>
+        /// <param name="PlanoMinimo">Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o.</param>
+        /// <param name="PlanoMaximo">Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o.</param>
+        /// <param name="ValorMinimo"> Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o.</param>
+        /// <param name="ValorMaximo"> Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o.</param>
+        /// <param name="FlagCobraJuros">Flag indicativa para crobran\u00E7a de juros.</param>
+        /// <param name="TaxaJuros">Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros.</param>
+        /// <param name="FlagCobraTarifa">Flag indicativa para crobran\u00E7a de tarifas.</param>
+        /// <param name="TaxaTarifa">Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas.</param>
         /// <param name="ValorTac">Valor da taxa de abertura de conta.</param>
         /// <param name="PercentualTac">Percentual da taxa de abertura de conta.</param>
-        /// <param name="ValorOperacao">Valor da opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="Carencia">Quantidade de meses para car\u00C3\u00AAncia.</param>
-        /// <param name="ExcedentePermitido">Valor excedente permitido para opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="FlagPermitirParcelamento">Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas.</param>
+        /// <param name="ValorOperacao">Valor da opera\u00E7\u00E3o.</param>
+        /// <param name="Carencia">Quantidade de meses para car\u00EAncia.</param>
+        /// <param name="ExcedentePermitido">Valor excedente permitido para opera\u00E7\u00E3o.</param>
+        /// <param name="FlagPermitirParcelamento">Permitir transa\u00E7\u00F5es parceladas.</param>
 
         public DetalheOperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, string DescricaoOperacao = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, bool? FlagCobraJuros = null, double? TaxaJuros = null, bool? FlagCobraTarifa = null, double? TaxaTarifa = null, double? ValorTac = null, double? PercentualTac = null, double? ValorOperacao = null, int? Carencia = null, double? ExcedentePermitido = null, bool? FlagPermitirParcelamento = null)
         {
@@ -68,93 +68,93 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo que identifica a opera\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo que identifica a opera\u00E7\u00E3o</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+        /// C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador</value>
+        /// <value>C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+        /// C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador</value>
+        /// <value>C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador</value>
         [DataMember(Name="codigoProcessamentoCancelamento", EmitDefaultValue=false)]
         public string CodigoProcessamentoCancelamento { get; set; }
     
         /// <summary>
-        /// Nome da opera\u00C3\u00A7\u00C3\u00A3o
+        /// Nome da opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Nome da opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Nome da opera\u00E7\u00E3o</value>
         [DataMember(Name="nomeOperacao", EmitDefaultValue=false)]
         public string NomeOperacao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da opera\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o da opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o da opera\u00E7\u00E3o</value>
         [DataMember(Name="descricaoOperacao", EmitDefaultValue=false)]
         public string DescricaoOperacao { get; set; }
     
         /// <summary>
-        /// Quantidade m\u00C3\u00ADnima de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o
+        /// Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Quantidade m\u00C3\u00ADnima de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o</value>
         [DataMember(Name="planoMinimo", EmitDefaultValue=false)]
         public int? PlanoMinimo { get; set; }
     
         /// <summary>
-        /// Quantidade M\u00C3\u00A1ximo de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o
+        /// Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Quantidade M\u00C3\u00A1ximo de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     
         /// <summary>
-        ///  Valor m\u00C3\u00ADnimo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o
+        ///  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
         /// </summary>
-        /// <value> Valor m\u00C3\u00ADnimo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value> Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o</value>
         [DataMember(Name="valorMinimo", EmitDefaultValue=false)]
         public double? ValorMinimo { get; set; }
     
         /// <summary>
-        ///  Valor m\u00C3\u00A1ximo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o
+        ///  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
         /// </summary>
-        /// <value> Valor m\u00C3\u00A1ximo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value> Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o</value>
         [DataMember(Name="valorMaximo", EmitDefaultValue=false)]
         public double? ValorMaximo { get; set; }
     
         /// <summary>
-        /// Flag indicativa para crobran\u00C3\u00A7a de juros
+        /// Flag indicativa para crobran\u00E7a de juros
         /// </summary>
-        /// <value>Flag indicativa para crobran\u00C3\u00A7a de juros</value>
+        /// <value>Flag indicativa para crobran\u00E7a de juros</value>
         [DataMember(Name="flagCobraJuros", EmitDefaultValue=false)]
         public bool? FlagCobraJuros { get; set; }
     
         /// <summary>
-        /// Valor do juros a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre juros
+        /// Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
         /// </summary>
-        /// <value>Valor do juros a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre juros</value>
+        /// <value>Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// Flag indicativa para crobran\u00C3\u00A7a de tarifas
+        /// Flag indicativa para crobran\u00E7a de tarifas
         /// </summary>
-        /// <value>Flag indicativa para crobran\u00C3\u00A7a de tarifas</value>
+        /// <value>Flag indicativa para crobran\u00E7a de tarifas</value>
         [DataMember(Name="flagCobraTarifa", EmitDefaultValue=false)]
         public bool? FlagCobraTarifa { get; set; }
     
         /// <summary>
-        /// Valor da tarifa a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre tarifas
+        /// Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
         /// </summary>
-        /// <value>Valor da tarifa a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre tarifas</value>
+        /// <value>Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas</value>
         [DataMember(Name="taxaTarifa", EmitDefaultValue=false)]
         public double? TaxaTarifa { get; set; }
     
@@ -173,30 +173,30 @@ namespace Conductor.Pier.Model
         public double? PercentualTac { get; set; }
     
         /// <summary>
-        /// Valor da opera\u00C3\u00A7\u00C3\u00A3o
+        /// Valor da opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Valor da opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Valor da opera\u00E7\u00E3o</value>
         [DataMember(Name="valorOperacao", EmitDefaultValue=false)]
         public double? ValorOperacao { get; set; }
     
         /// <summary>
-        /// Quantidade de meses para car\u00C3\u00AAncia
+        /// Quantidade de meses para car\u00EAncia
         /// </summary>
-        /// <value>Quantidade de meses para car\u00C3\u00AAncia</value>
+        /// <value>Quantidade de meses para car\u00EAncia</value>
         [DataMember(Name="carencia", EmitDefaultValue=false)]
         public int? Carencia { get; set; }
     
         /// <summary>
-        /// Valor excedente permitido para opera\u00C3\u00A7\u00C3\u00A3o
+        /// Valor excedente permitido para opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Valor excedente permitido para opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Valor excedente permitido para opera\u00E7\u00E3o</value>
         [DataMember(Name="excedentePermitido", EmitDefaultValue=false)]
         public double? ExcedentePermitido { get; set; }
     
         /// <summary>
-        /// Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+        /// Permitir transa\u00E7\u00F5es parceladas
         /// </summary>
-        /// <value>Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas</value>
+        /// <value>Permitir transa\u00E7\u00F5es parceladas</value>
         [DataMember(Name="flagPermitirParcelamento", EmitDefaultValue=false)]
         public bool? FlagPermitirParcelamento { get; set; }
     

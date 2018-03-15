@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// TipoEvento de notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>TipoEvento de notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Status de envio da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Status de envio da notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -67,16 +67,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// TipoEvento de notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>TipoEvento de notifica\u00E7\u00E3o</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Status de envio da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Status de envio da notifica\u00E7\u00E3o</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -84,23 +84,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoSMSResponse" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoSMSResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo Identificador..</param>
-        /// <param name="Nsu">N\u00C3\u00BAmero sequencial \u00C3\u00BAnico..</param>
-        /// <param name="IdEmissor">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id)..</param>
-        /// <param name="TipoEvento">TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="Status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
-        /// <param name="DescricaoStatus">Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
+        /// <param name="Id">C\u00F3digo Identificador..</param>
+        /// <param name="Nsu">N\u00FAmero sequencial \u00FAnico..</param>
+        /// <param name="IdEmissor">C\u00F3digo de identifica\u00E7\u00E3o do emissor (id)..</param>
+        /// <param name="TipoEvento">TipoEvento de notifica\u00E7\u00E3o.</param>
+        /// <param name="Status">Status de envio da notifica\u00E7\u00E3o (required).</param>
+        /// <param name="DescricaoStatus">Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o (required).</param>
+        /// <param name="IdPessoa">C\u00F3digo identificado da pessoa (required).</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta (required).</param>
         /// <param name="Celular">Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999 (required).</param>
         /// <param name="Operadora">Apresenta a operadora do celular a ser eviado o SMS (required).</param>
-        /// <param name="Conteudo">Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado (required).</param>
-        /// <param name="Resposta">Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada (required).</param>
-        /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
-        /// <param name="QuantidadeTentativasEnvio">Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
-        /// <param name="DataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (required).</param>
+        /// <param name="Conteudo">Apresenta o texto da notifica\u00E7\u00E3o a ser enviado (required).</param>
+        /// <param name="Resposta">Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada (required).</param>
+        /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o (required).</param>
+        /// <param name="QuantidadeTentativasEnvio">Quantidade de tentativas e envio da notifica\u00E7\u00E3o (required).</param>
+        /// <param name="DataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (required).</param>
         /// <param name="DataAlteracaoStatus">Apresenta a data e em que o Stattjus do registro foi modificado (required).</param>
-        /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
+        /// <param name="Protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es.</param>
 
         public NotificacaoSMSResponse(long? Id = null, long? Nsu = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, string DataAgendamento = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null, string DataAlteracaoStatus = null, string Protocolo = null)
         {
@@ -222,44 +222,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo Identificador.
+        /// C\u00F3digo Identificador.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo Identificador.</value>
+        /// <value>C\u00F3digo Identificador.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+        /// N\u00FAmero sequencial \u00FAnico.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.</value>
+        /// <value>N\u00FAmero sequencial \u00FAnico.</value>
         [DataMember(Name="nsu", EmitDefaultValue=false)]
         public long? Nsu { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o</value>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificado da pessoa
+        /// C\u00F3digo identificado da pessoa
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificado da pessoa</value>
+        /// <value>C\u00F3digo identificado da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
@@ -278,37 +278,37 @@ namespace Conductor.Pier.Model
         public string Operadora { get; set; }
     
         /// <summary>
-        /// Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+        /// Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
         /// </summary>
-        /// <value>Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado</value>
+        /// <value>Apresenta o texto da notifica\u00E7\u00E3o a ser enviado</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+        /// Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
         /// </summary>
-        /// <value>Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada</value>
+        /// <value>Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada</value>
         [DataMember(Name="resposta", EmitDefaultValue=false)]
         public string Resposta { get; set; }
     
         /// <summary>
-        /// Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
         public string DataAgendamento { get; set; }
     
         /// <summary>
-        /// Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Quantidade de tentativas e envio da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Quantidade de tentativas e envio da notifica\u00E7\u00E3o</value>
         [DataMember(Name="quantidadeTentativasEnvio", EmitDefaultValue=false)]
         public int? QuantidadeTentativasEnvio { get; set; }
     
         /// <summary>
-        /// Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+        /// Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
         /// </summary>
-        /// <value>Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado</value>
+        /// <value>Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
@@ -320,9 +320,9 @@ namespace Conductor.Pier.Model
         public string DataAlteracaoStatus { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es</value>
+        /// <value>N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     

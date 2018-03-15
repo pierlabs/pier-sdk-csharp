@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o das Taxas de Refinanciamento
+    /// Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
     /// </summary>
     [DataContract]
     public partial class TaxasRefinanciamentoResponse :  IEquatable<TaxasRefinanciamentoResponse>
@@ -30,20 +30,20 @@ namespace Conductor.Pier.Model
         /// <param name="IdPlanoCreditoTaxa">ID do plano credito taxa.</param>
         /// <param name="DataEntrada">Data de entrada.</param>
         /// <param name="Vencimento">Vencimento das taxas.</param>
-        /// <param name="RecuperacaoEncargosFinanceiros">Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro.</param>
-        /// <param name="ComissaoGarantia">Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia.</param>
-        /// <param name="Agenciamento">Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento.</param>
-        /// <param name="TaxaMaximaProximoPeriodo">Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo.</param>
+        /// <param name="RecuperacaoEncargosFinanceiros">Recupera\u00E7\u00E3o de encargos financeiro.</param>
+        /// <param name="ComissaoGarantia">Descri\u00E7\u00E3o da comiss\u00E3o de garantia.</param>
+        /// <param name="Agenciamento">Descri\u00E7\u00E3o do agenciamento.</param>
+        /// <param name="TaxaMaximaProximoPeriodo">Taxa m\u00E1xima do proximo per\u00EDodo.</param>
         /// <param name="TaxaEncargosFinanciamento">Taxa de encargos do financiamento.</param>
-        /// <param name="TaxaMaximaSaque">Taxa m\u00C3\u00A1xima de saque.</param>
+        /// <param name="TaxaMaximaSaque">Taxa m\u00E1xima de saque.</param>
         /// <param name="TaxaSaque">Taxa de saque.</param>
-        /// <param name="TaxaMaximaCompraJuros">Taxa m\u00C3\u00A1xima de compras juros.</param>
+        /// <param name="TaxaMaximaCompraJuros">Taxa m\u00E1xima de compras juros.</param>
         /// <param name="TaxaCompraJuros">Taxa de juros compra.</param>
         /// <param name="TaxaPermanencia">Taxa de permanencia.</param>
         /// <param name="TaxaRefinanciamento">Taxa de permanencia.</param>
         /// <param name="TaxaRecuperacaoRefinanciamento">Taxa de permanencia.</param>
         /// <param name="TaxaPercCalcPagamentoMinimo">Taxa Percelamento pagamento minimo.</param>
-        /// <param name="PlanoTaxaDefault">Plano de taxa padr\u00C3\u00A3o.</param>
+        /// <param name="PlanoTaxaDefault">Plano de taxa padr\u00E3o.</param>
 
         public TaxasRefinanciamentoResponse(long? Id = null, long? IdConta = null, long? IdProduto = null, long? IdPlanoConta = null, long? IdPlanoPct = null, long? IdPlanoCreditoTaxa = null, string DataEntrada = null, string Vencimento = null, double? RecuperacaoEncargosFinanceiros = null, double? ComissaoGarantia = null, double? Agenciamento = null, double? TaxaMaximaProximoPeriodo = null, double? TaxaEncargosFinanciamento = null, double? TaxaMaximaSaque = null, double? TaxaSaque = null, double? TaxaMaximaCompraJuros = null, double? TaxaCompraJuros = null, double? TaxaPermanencia = null, double? TaxaRefinanciamento = null, double? TaxaRecuperacaoRefinanciamento = null, double? TaxaPercCalcPagamentoMinimo = null, int? PlanoTaxaDefault = null)
         {
@@ -130,30 +130,30 @@ namespace Conductor.Pier.Model
         public string Vencimento { get; set; }
     
         /// <summary>
-        /// Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro
+        /// Recupera\u00E7\u00E3o de encargos financeiro
         /// </summary>
-        /// <value>Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro</value>
+        /// <value>Recupera\u00E7\u00E3o de encargos financeiro</value>
         [DataMember(Name="recuperacaoEncargosFinanceiros", EmitDefaultValue=false)]
         public double? RecuperacaoEncargosFinanceiros { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia
+        /// Descri\u00E7\u00E3o da comiss\u00E3o de garantia
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia</value>
+        /// <value>Descri\u00E7\u00E3o da comiss\u00E3o de garantia</value>
         [DataMember(Name="comissaoGarantia", EmitDefaultValue=false)]
         public double? ComissaoGarantia { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento
+        /// Descri\u00E7\u00E3o do agenciamento
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento</value>
+        /// <value>Descri\u00E7\u00E3o do agenciamento</value>
         [DataMember(Name="agenciamento", EmitDefaultValue=false)]
         public double? Agenciamento { get; set; }
     
         /// <summary>
-        /// Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo
+        /// Taxa m\u00E1xima do proximo per\u00EDodo
         /// </summary>
-        /// <value>Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo</value>
+        /// <value>Taxa m\u00E1xima do proximo per\u00EDodo</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     
@@ -165,9 +165,9 @@ namespace Conductor.Pier.Model
         public double? TaxaEncargosFinanciamento { get; set; }
     
         /// <summary>
-        /// Taxa m\u00C3\u00A1xima de saque
+        /// Taxa m\u00E1xima de saque
         /// </summary>
-        /// <value>Taxa m\u00C3\u00A1xima de saque</value>
+        /// <value>Taxa m\u00E1xima de saque</value>
         [DataMember(Name="taxaMaximaSaque", EmitDefaultValue=false)]
         public double? TaxaMaximaSaque { get; set; }
     
@@ -179,9 +179,9 @@ namespace Conductor.Pier.Model
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// Taxa m\u00C3\u00A1xima de compras juros
+        /// Taxa m\u00E1xima de compras juros
         /// </summary>
-        /// <value>Taxa m\u00C3\u00A1xima de compras juros</value>
+        /// <value>Taxa m\u00E1xima de compras juros</value>
         [DataMember(Name="taxaMaximaCompraJuros", EmitDefaultValue=false)]
         public double? TaxaMaximaCompraJuros { get; set; }
     
@@ -221,9 +221,9 @@ namespace Conductor.Pier.Model
         public double? TaxaPercCalcPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// Plano de taxa padr\u00C3\u00A3o
+        /// Plano de taxa padr\u00E3o
         /// </summary>
-        /// <value>Plano de taxa padr\u00C3\u00A3o</value>
+        /// <value>Plano de taxa padr\u00E3o</value>
         [DataMember(Name="planoTaxaDefault", EmitDefaultValue=false)]
         public int? PlanoTaxaDefault { get; set; }
     

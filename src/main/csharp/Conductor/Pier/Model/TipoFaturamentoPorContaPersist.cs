@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaPersist" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaPersist" />class.
         /// </summary>
-        /// <param name="Status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (required).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada. (required).</param>
-        /// <param name="IdTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada. (required).</param>
-        /// <param name="DataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;..</param>
-        /// <param name="DataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;..</param>
-        /// <param name="ModificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (required).</param>
+        /// <param name="Status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (required).</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada. (required).</param>
+        /// <param name="IdTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada. (required).</param>
+        /// <param name="DataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;..</param>
+        /// <param name="DataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;..</param>
+        /// <param name="ModificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (required).</param>
 
         public TipoFaturamentoPorContaPersist(bool? Status = null, long? IdConta = null, long? IdTipoFaturamento = null, string DataHoraInclusao = null, string DataHoraCancelamento = null, string ModificadoPor = null)
         {
@@ -74,44 +74,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
+        /// Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
         /// </summary>
-        /// <value>Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.</value>
+        /// <value>Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public bool? Status { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.</value>
         [DataMember(Name="idTipoFaturamento", EmitDefaultValue=false)]
         public long? IdTipoFaturamento { get; set; }
     
         /// <summary>
-        /// Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+        /// Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
         /// </summary>
-        /// <value>Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.</value>
+        /// <value>Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+        /// Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
         /// </summary>
-        /// <value>Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.</value>
+        /// <value>Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.</value>
         [DataMember(Name="dataHoraCancelamento", EmitDefaultValue=false)]
         public string DataHoraCancelamento { get; set; }
     
         /// <summary>
-        /// Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+        /// Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
         /// </summary>
-        /// <value>Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.</value>
+        /// <value>Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.</value>
         [DataMember(Name="modificadoPor", EmitDefaultValue=false)]
         public string ModificadoPor { get; set; }
     

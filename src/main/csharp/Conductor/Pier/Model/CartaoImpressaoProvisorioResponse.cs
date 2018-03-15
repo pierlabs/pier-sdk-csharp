@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto cart\u00C3\u00A3o provis\u00C3\u00B3rio
+    /// Objeto cart\u00E3o provis\u00F3rio
     /// </summary>
     [DataContract]
     public partial class CartaoImpressaoProvisorioResponse :  IEquatable<CartaoImpressaoProvisorioResponse>
@@ -23,12 +23,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoImpressaoProvisorioResponse" />class.
         /// </summary>
         /// <param name="FlagVirtual">FlagVirtual.</param>
-        /// <param name="IdConta">Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence..</param>
-        /// <param name="IdPessoa">Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado..</param>
-        /// <param name="IdCartao">Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado..</param>
-        /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
-        /// <param name="NomePlastico">Apresenta o nome do Portador do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataValidade">Apresenta a data de Validade do Cart\u00C3\u00A3o..</param>
+        /// <param name="IdConta">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence..</param>
+        /// <param name="IdPessoa">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado..</param>
+        /// <param name="IdCartao">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado..</param>
+        /// <param name="NumeroCartao">Apresenta o n\u00FAmero do cart\u00E3o..</param>
+        /// <param name="NomePlastico">Apresenta o nome do Portador do Cart\u00E3o..</param>
+        /// <param name="DataValidade">Apresenta a data de Validade do Cart\u00E3o..</param>
 
         public CartaoImpressaoProvisorioResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, string NumeroCartao = null, string NomePlastico = null, string DataValidade = null)
         {
@@ -50,44 +50,44 @@ namespace Conductor.Pier.Model
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
         /// </summary>
-        /// <value>Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
         /// </summary>
-        /// <value>Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
         /// </summary>
-        /// <value>Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+        /// Apresenta o n\u00FAmero do cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta o n\u00FAmero do cart\u00E3o.</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+        /// Apresenta o nome do Portador do Cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta o nome do Portador do Cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta o nome do Portador do Cart\u00E3o.</value>
         [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
         public string NomePlastico { get; set; }
     
         /// <summary>
-        /// Apresenta a data de Validade do Cart\u00C3\u00A3o.
+        /// Apresenta a data de Validade do Cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta a data de Validade do Cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta a data de Validade do Cart\u00E3o.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     

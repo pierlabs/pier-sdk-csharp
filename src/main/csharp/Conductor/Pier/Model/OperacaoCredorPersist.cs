@@ -78,18 +78,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OperacaoCredorPersist" /> class.
         /// Initializes a new instance of the <see cref="OperacaoCredorPersist" />class.
         /// </summary>
-        /// <param name="IdOperacao">Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="IdOperacao">Apresenta o id da Opera\u00E7\u00E3o..</param>
         /// <param name="IdCredor">Apresenta o id do Credor..</param>
-        /// <param name="IdsProduto">Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas..</param>
-        /// <param name="RemuneracaoPercentual">Remunera\u00C3\u00A7\u00C3\u00A3o Percentual..</param>
-        /// <param name="RemuneracaoFixa">Remunera\u00C3\u00A7\u00C3\u00A3o Fixa..</param>
+        /// <param name="IdsProduto">Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas..</param>
+        /// <param name="RemuneracaoPercentual">Remunera\u00E7\u00E3o Percentual..</param>
+        /// <param name="RemuneracaoFixa">Remunera\u00E7\u00E3o Fixa..</param>
         /// <param name="Periodicidade">Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))..</param>
         /// <param name="VencimentoPrimeiraParcela">Vencimento da primeira parcela..</param>
         /// <param name="DiasAfastamento">Dias afastamento..</param>
         /// <param name="FatorMultiplicador">Fator multiplicador (FORA_AGENDA(0), AGENDA(1))..</param>
         /// <param name="FlagTaxaFixada">Flag taxa fixada..</param>
-        /// <param name="PlanoMinimo">Plano m\u00C3\u00ADnimo da regra..</param>
-        /// <param name="PlanoMaximo">Plano m\u00C3\u00A1ximo da regra..</param>
+        /// <param name="PlanoMinimo">Plano m\u00EDnimo da regra..</param>
+        /// <param name="PlanoMaximo">Plano m\u00E1ximo da regra..</param>
 
         public OperacaoCredorPersist(long? IdOperacao = null, long? IdCredor = null, List<long?> IdsProduto = null, double? RemuneracaoPercentual = null, double? RemuneracaoFixa = null, PeriodicidadeEnum? Periodicidade = null, int? VencimentoPrimeiraParcela = null, int? DiasAfastamento = null, FatorMultiplicadorEnum? FatorMultiplicador = null, bool? FlagTaxaFixada = null, int? PlanoMinimo = null, int? PlanoMaximo = null)
         {
@@ -110,9 +110,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta o id da Opera\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta o id da Opera\u00E7\u00E3o.</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
@@ -124,23 +124,23 @@ namespace Conductor.Pier.Model
         public long? IdCredor { get; set; }
     
         /// <summary>
-        /// Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas.
+        /// Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.
         /// </summary>
-        /// <value>Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas.</value>
+        /// <value>Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.</value>
         [DataMember(Name="idsProduto", EmitDefaultValue=false)]
         public List<long?> IdsProduto { get; set; }
     
         /// <summary>
-        /// Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+        /// Remunera\u00E7\u00E3o Percentual.
         /// </summary>
-        /// <value>Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.</value>
+        /// <value>Remunera\u00E7\u00E3o Percentual.</value>
         [DataMember(Name="remuneracaoPercentual", EmitDefaultValue=false)]
         public double? RemuneracaoPercentual { get; set; }
     
         /// <summary>
-        /// Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+        /// Remunera\u00E7\u00E3o Fixa.
         /// </summary>
-        /// <value>Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.</value>
+        /// <value>Remunera\u00E7\u00E3o Fixa.</value>
         [DataMember(Name="remuneracaoFixa", EmitDefaultValue=false)]
         public double? RemuneracaoFixa { get; set; }
     
@@ -166,16 +166,16 @@ namespace Conductor.Pier.Model
         public bool? FlagTaxaFixada { get; set; }
     
         /// <summary>
-        /// Plano m\u00C3\u00ADnimo da regra.
+        /// Plano m\u00EDnimo da regra.
         /// </summary>
-        /// <value>Plano m\u00C3\u00ADnimo da regra.</value>
+        /// <value>Plano m\u00EDnimo da regra.</value>
         [DataMember(Name="planoMinimo", EmitDefaultValue=false)]
         public int? PlanoMinimo { get; set; }
     
         /// <summary>
-        /// Plano m\u00C3\u00A1ximo da regra.
+        /// Plano m\u00E1ximo da regra.
         /// </summary>
-        /// <value>Plano m\u00C3\u00A1ximo da regra.</value>
+        /// <value>Plano m\u00E1ximo da regra.</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     

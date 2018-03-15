@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.
+    /// Objeto ArquivoParametros para persist\u00EAncia de dados.
     /// </summary>
     [DataContract]
     public partial class ArquivoDetalhesPersist :  IEquatable<ArquivoDetalhesPersist>
@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoDetalhesPersist" />class.
         /// </summary>
         /// <param name="NomeCampo">Nome que identifica o detalhe do arquivo (required).</param>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo do nomeCampo (required).</param>
+        /// <param name="Conteudo">Conte\u00FAdo do nomeCampo (required).</param>
 
         public ArquivoDetalhesPersist(string NomeCampo = null, string Conteudo = null)
         {
@@ -57,9 +57,9 @@ namespace Conductor.Pier.Model
         public string NomeCampo { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do nomeCampo
+        /// Conte\u00FAdo do nomeCampo
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do nomeCampo</value>
+        /// <value>Conte\u00FAdo do nomeCampo</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

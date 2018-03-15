@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+    /// Transfer\u00EAncia banc\u00E1ria
     /// </summary>
     [DataContract]
     public partial class TransferenciaBancariaResponse :  IEquatable<TransferenciaBancariaResponse>
@@ -23,37 +23,37 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaBancariaResponse" />class.
         /// </summary>
         /// <param name="Nsuorigem">Nsuorigem.</param>
-        /// <param name="IdAutorizacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id).</param>
-        /// <param name="IdTransferencia">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id).</param>
-        /// <param name="CodigoAutorizacao">C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DataAutorizacao">Data da autoriza\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="IdAutorizacao">C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id).</param>
+        /// <param name="IdTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id).</param>
+        /// <param name="CodigoAutorizacao">C\u00F3digo da autoriza\u00E7\u00E3o.</param>
+        /// <param name="DataAutorizacao">Data da autoriza\u00E7\u00E3o.</param>
         /// <param name="Origem">Origem.</param>
         /// <param name="Valor">Valor.</param>
-        /// <param name="IdOperacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id).</param>
+        /// <param name="IdOperacao">C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id).</param>
         /// <param name="Terminal">Terminal.</param>
-        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
-        /// <param name="DataCompra">Data da transfer\u00C3\u00AAncia.</param>
-        /// <param name="ValorCompra">Valor da transfer\u00C3\u00AAncia.</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de parcelas.</param>
+        /// <param name="IdCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
+        /// <param name="DataCompra">Data da transfer\u00EAncia.</param>
+        /// <param name="ValorCompra">Valor da transfer\u00EAncia.</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de parcelas.</param>
         /// <param name="ValorParcela">Valor da parcela.</param>
-        /// <param name="IdEstabelecimento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).</param>
         /// <param name="DataMovimento">Data do movimento.</param>
-        /// <param name="ValorContrato">Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.</param>
+        /// <param name="ValorContrato">Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.</param>
         /// <param name="TaxaJuros">Percentual de juros.</param>
         /// <param name="ValorIOF">Valor do IOF.</param>
         /// <param name="ValorTAC">Valor da TAC.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="ValorEntrada">Valor da entrada (primeira parcela).</param>
         /// <param name="DataVencimentoReal">Data do vencimento real da fatura.</param>
-        /// <param name="DataVencimentoPadrao">Dia do vencimento padr\u00C3\u00A3o da fatura.</param>
-        /// <param name="IdContaPortador">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id).</param>
+        /// <param name="DataVencimentoPadrao">Dia do vencimento padr\u00E3o da fatura.</param>
+        /// <param name="IdContaPortador">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id).</param>
         /// <param name="NumeroEstabelecimento">Atributo que representa o numero do estabelecimento..</param>
         /// <param name="ValorTaxaSaque">Valor da taxa saque..</param>
-        /// <param name="Banco">C\u00C3\u00B3digo do Banco.</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da Ag\u00C3\u00AAncia.</param>
-        /// <param name="DigitoAgencia">D\u00C3\u00ADgito da Ag\u00C3\u00AAncia.</param>
-        /// <param name="NumeroConta">N\u00C3\u00BAmero da Conta.</param>
-        /// <param name="DigitoConta">D\u00C3\u00ADgito da Conta.</param>
+        /// <param name="Banco">C\u00F3digo do Banco.</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da Ag\u00EAncia.</param>
+        /// <param name="DigitoAgencia">D\u00EDgito da Ag\u00EAncia.</param>
+        /// <param name="NumeroConta">N\u00FAmero da Conta.</param>
+        /// <param name="DigitoConta">D\u00EDgito da Conta.</param>
         /// <param name="FlagContaPoupanca">Tipo da Conta.</param>
         /// <param name="DocumentoFavorecido">Documento do Favorecido.</param>
         /// <param name="NomeFavorecido">Nome do Favorecido.</param>
@@ -106,30 +106,30 @@ namespace Conductor.Pier.Model
         public long? Nsuorigem { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)</value>
         [DataMember(Name="idAutorizacao", EmitDefaultValue=false)]
         public long? IdAutorizacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)</value>
         [DataMember(Name="idTransferencia", EmitDefaultValue=false)]
         public long? IdTransferencia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo da autoriza\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo da autoriza\u00E7\u00E3o</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// Data da autoriza\u00C3\u00A7\u00C3\u00A3o
+        /// Data da autoriza\u00E7\u00E3o
         /// </summary>
-        /// <value>Data da autoriza\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Data da autoriza\u00E7\u00E3o</value>
         [DataMember(Name="dataAutorizacao", EmitDefaultValue=false)]
         public string DataAutorizacao { get; set; }
     
@@ -148,9 +148,9 @@ namespace Conductor.Pier.Model
         public double? Valor { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
@@ -162,30 +162,30 @@ namespace Conductor.Pier.Model
         public string Terminal { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Data da transfer\u00C3\u00AAncia
+        /// Data da transfer\u00EAncia
         /// </summary>
-        /// <value>Data da transfer\u00C3\u00AAncia</value>
+        /// <value>Data da transfer\u00EAncia</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
         public string DataCompra { get; set; }
     
         /// <summary>
-        /// Valor da transfer\u00C3\u00AAncia
+        /// Valor da transfer\u00EAncia
         /// </summary>
-        /// <value>Valor da transfer\u00C3\u00AAncia</value>
+        /// <value>Valor da transfer\u00EAncia</value>
         [DataMember(Name="valorCompra", EmitDefaultValue=false)]
         public double? ValorCompra { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de parcelas
+        /// N\u00FAmero de parcelas
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de parcelas</value>
+        /// <value>N\u00FAmero de parcelas</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
@@ -197,9 +197,9 @@ namespace Conductor.Pier.Model
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
@@ -211,9 +211,9 @@ namespace Conductor.Pier.Model
         public string DataMovimento { get; set; }
     
         /// <summary>
-        /// Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+        /// Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
         /// </summary>
-        /// <value>Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque</value>
+        /// <value>Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque</value>
         [DataMember(Name="valorContrato", EmitDefaultValue=false)]
         public double? ValorContrato { get; set; }
     
@@ -239,9 +239,9 @@ namespace Conductor.Pier.Model
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
@@ -260,16 +260,16 @@ namespace Conductor.Pier.Model
         public string DataVencimentoReal { get; set; }
     
         /// <summary>
-        /// Dia do vencimento padr\u00C3\u00A3o da fatura
+        /// Dia do vencimento padr\u00E3o da fatura
         /// </summary>
-        /// <value>Dia do vencimento padr\u00C3\u00A3o da fatura</value>
+        /// <value>Dia do vencimento padr\u00E3o da fatura</value>
         [DataMember(Name="dataVencimentoPadrao", EmitDefaultValue=false)]
         public string DataVencimentoPadrao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)</value>
         [DataMember(Name="idContaPortador", EmitDefaultValue=false)]
         public long? IdContaPortador { get; set; }
     
@@ -288,37 +288,37 @@ namespace Conductor.Pier.Model
         public double? ValorTaxaSaque { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do Banco
+        /// C\u00F3digo do Banco
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do Banco</value>
+        /// <value>C\u00F3digo do Banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+        /// N\u00FAmero da Ag\u00EAncia
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da Ag\u00C3\u00AAncia</value>
+        /// <value>N\u00FAmero da Ag\u00EAncia</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public string NumeroAgencia { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+        /// D\u00EDgito da Ag\u00EAncia
         /// </summary>
-        /// <value>D\u00C3\u00ADgito da Ag\u00C3\u00AAncia</value>
+        /// <value>D\u00EDgito da Ag\u00EAncia</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da Conta
+        /// N\u00FAmero da Conta
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da Conta</value>
+        /// <value>N\u00FAmero da Conta</value>
         [DataMember(Name="numeroConta", EmitDefaultValue=false)]
         public string NumeroConta { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito da Conta
+        /// D\u00EDgito da Conta
         /// </summary>
-        /// <value>D\u00C3\u00ADgito da Conta</value>
+        /// <value>D\u00EDgito da Conta</value>
         [DataMember(Name="digitoConta", EmitDefaultValue=false)]
         public string DigitoConta { get; set; }
     

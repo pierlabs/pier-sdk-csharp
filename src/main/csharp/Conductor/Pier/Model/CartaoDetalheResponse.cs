@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Cart\u00C3\u00A3o com mais informa\u00C3\u00A7\u00C3\u00B5es
+    /// Objeto Cart\u00E3o com mais informa\u00E7\u00F5es
     /// </summary>
     [DataContract]
     public partial class CartaoDetalheResponse :  IEquatable<CartaoDetalheResponse>
@@ -22,30 +22,30 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o..</param>
-        /// <param name="FlagTitular">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional)..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence.</param>
-        /// <param name="SequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence..</param>
-        /// <param name="IdStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataStatus">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
-        /// <param name="IdEstagio">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o..</param>
-        /// <param name="DataEstagio">Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver..</param>
-        /// <param name="NumeroBin">N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o..</param>
-        /// <param name="NumeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
-        /// <param name="NumeroCartaoHash">N\u00C3\u00BAmero do cart\u00C3\u00A3o hash..</param>
-        /// <param name="NumeroCartaoCriptografado">N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado..</param>
-        /// <param name="DataEmissao">Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o..</param>
-        /// <param name="DataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver..</param>
-        /// <param name="CartaoVirtual">Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False)..</param>
-        /// <param name="ImpressaoAvulsa">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial..</param>
-        /// <param name="DataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica..</param>
-        /// <param name="NomeArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver..</param>
-        /// <param name="DescricaoTipoCartao">Descreve o tipo do cart\u00C3\u00A3o..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence..</param>
-        /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o..</param>
-        /// <param name="TipoCartao">Indica o identificador do tipo do cart\u00C3\u00A3o..</param>
-        /// <param name="CodigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o..</param>
+        /// <param name="FlagTitular">Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional)..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence.</param>
+        /// <param name="SequencialCartao">N\u00FAmero sequencial do cart\u00E3o.</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence..</param>
+        /// <param name="IdStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o..</param>
+        /// <param name="DataStatus">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver..</param>
+        /// <param name="IdEstagio">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o..</param>
+        /// <param name="DataEstagio">Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver..</param>
+        /// <param name="NumeroBin">N\u00FAmero do bin do cart\u00E3o..</param>
+        /// <param name="NumeroCartao">Apresenta o n\u00FAmero do cart\u00E3o..</param>
+        /// <param name="NumeroCartaoHash">N\u00FAmero do cart\u00E3o hash..</param>
+        /// <param name="NumeroCartaoCriptografado">N\u00FAmero do cart\u00E3o criptografado..</param>
+        /// <param name="DataEmissao">Apresenta a data de emiss\u00E3o do cart\u00E3o..</param>
+        /// <param name="DataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver..</param>
+        /// <param name="CartaoVirtual">Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False)..</param>
+        /// <param name="ImpressaoAvulsa">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial..</param>
+        /// <param name="DataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica..</param>
+        /// <param name="NomeArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver..</param>
+        /// <param name="DescricaoTipoCartao">Descreve o tipo do cart\u00E3o..</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence..</param>
+        /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00E3o..</param>
+        /// <param name="TipoCartao">Indica o identificador do tipo do cart\u00E3o..</param>
+        /// <param name="CodigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade..</param>
 
         public CartaoDetalheResponse(long? Id = null, int? FlagTitular = null, long? IdPessoa = null, int? SequencialCartao = null, long? IdConta = null, long? IdStatus = null, string DataStatus = null, long? IdEstagio = null, string DataEstagio = null, long? NumeroBin = null, string NumeroCartao = null, long? NumeroCartaoHash = null, string NumeroCartaoCriptografado = null, string DataEmissao = null, string DataValidade = null, int? CartaoVirtual = null, int? ImpressaoAvulsa = null, string DataImpressao = null, string NomeArquivoImpressao = null, string DescricaoTipoCartao = null, long? IdProduto = null, string NomeImpresso = null, long? TipoCartao = null, string CodigoDesbloqueio = null)
         {
@@ -78,170 +78,170 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional).
+        /// Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).
         /// </summary>
-        /// <value>Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (1: Titular, 0: Adicional).</value>
+        /// <value>Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).</value>
         [DataMember(Name="flagTitular", EmitDefaultValue=false)]
         public int? FlagTitular { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+        /// N\u00FAmero sequencial do cart\u00E3o
         /// </summary>
-        /// <value>N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o</value>
+        /// <value>N\u00FAmero sequencial do cart\u00E3o</value>
         [DataMember(Name="sequencialCartao", EmitDefaultValue=false)]
         public int? SequencialCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o.</value>
         [DataMember(Name="idStatus", EmitDefaultValue=false)]
         public long? IdStatus { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+        /// Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
         /// </summary>
-        /// <value>Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
+        /// <value>Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.</value>
         [DataMember(Name="dataStatus", EmitDefaultValue=false)]
         public string DataStatus { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o.</value>
         [DataMember(Name="idEstagio", EmitDefaultValue=false)]
         public long? IdEstagio { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+        /// Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver.
         /// </summary>
-        /// <value>Apresenta a data em que o idEstagio atual do cart\u00C3\u00A3o fora aplicado, quando houver.</value>
+        /// <value>Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver.</value>
         [DataMember(Name="dataEstagio", EmitDefaultValue=false)]
         public string DataEstagio { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o.
+        /// N\u00FAmero do bin do cart\u00E3o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do bin do cart\u00C3\u00A3o.</value>
+        /// <value>N\u00FAmero do bin do cart\u00E3o.</value>
         [DataMember(Name="numeroBin", EmitDefaultValue=false)]
         public long? NumeroBin { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+        /// Apresenta o n\u00FAmero do cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta o n\u00FAmero do cart\u00E3o.</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o hash.
+        /// N\u00FAmero do cart\u00E3o hash.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o hash.</value>
+        /// <value>N\u00FAmero do cart\u00E3o hash.</value>
         [DataMember(Name="numeroCartaoHash", EmitDefaultValue=false)]
         public long? NumeroCartaoHash { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado.
+        /// N\u00FAmero do cart\u00E3o criptografado.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado.</value>
+        /// <value>N\u00FAmero do cart\u00E3o criptografado.</value>
         [DataMember(Name="numeroCartaoCriptografado", EmitDefaultValue=false)]
         public string NumeroCartaoCriptografado { get; set; }
     
         /// <summary>
-        /// Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o.
+        /// Apresenta a data de emiss\u00E3o do cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta a data de emiss\u00C3\u00A3o do cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta a data de emiss\u00E3o do cart\u00E3o.</value>
         [DataMember(Name="dataEmissao", EmitDefaultValue=false)]
         public string DataEmissao { get; set; }
     
         /// <summary>
-        /// Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
+        /// Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.
         /// </summary>
-        /// <value>Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.</value>
+        /// <value>Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False).
+        /// Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False).
         /// </summary>
-        /// <value>Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual. Sendo: (1: True, 0: False).</value>
+        /// <value>Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False).</value>
         [DataMember(Name="cartaoVirtual", EmitDefaultValue=false)]
         public int? CartaoVirtual { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+        /// Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.
         /// </summary>
-        /// <value>Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.</value>
+        /// <value>Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.</value>
         [DataMember(Name="impressaoAvulsa", EmitDefaultValue=false)]
         public int? ImpressaoAvulsa { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+        /// Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.
         /// </summary>
-        /// <value>Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.</value>
+        /// <value>Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.</value>
         [DataMember(Name="dataImpressao", EmitDefaultValue=false)]
         public string DataImpressao { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+        /// Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.
         /// </summary>
-        /// <value>Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.</value>
+        /// <value>Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.</value>
         [DataMember(Name="nomeArquivoImpressao", EmitDefaultValue=false)]
         public string NomeArquivoImpressao { get; set; }
     
         /// <summary>
-        /// Descreve o tipo do cart\u00C3\u00A3o.
+        /// Descreve o tipo do cart\u00E3o.
         /// </summary>
-        /// <value>Descreve o tipo do cart\u00C3\u00A3o.</value>
+        /// <value>Descreve o tipo do cart\u00E3o.</value>
         [DataMember(Name="descricaoTipoCartao", EmitDefaultValue=false)]
         public string DescricaoTipoCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Apresenta o nome impresso no cart\u00C3\u00A3o.
+        /// Apresenta o nome impresso no cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta o nome impresso no cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta o nome impresso no cart\u00E3o.</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Indica o identificador do tipo do cart\u00C3\u00A3o.
+        /// Indica o identificador do tipo do cart\u00E3o.
         /// </summary>
-        /// <value>Indica o identificador do tipo do cart\u00C3\u00A3o.</value>
+        /// <value>Indica o identificador do tipo do cart\u00E3o.</value>
         [DataMember(Name="tipoCartao", EmitDefaultValue=false)]
         public long? TipoCartao { get; set; }
     
         /// <summary>
-        /// Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+        /// Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.
         /// </summary>
-        /// <value>Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.</value>
+        /// <value>Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.</value>
         [DataMember(Name="codigoDesbloqueio", EmitDefaultValue=false)]
         public string CodigoDesbloqueio { get; set; }
     

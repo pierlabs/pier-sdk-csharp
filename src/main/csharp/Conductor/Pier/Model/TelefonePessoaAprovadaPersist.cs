@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" /> class.
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" />class.
         /// </summary>
-        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). (required).</param>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone (id). (required).</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone. (required).</param>
-        /// <param name="Ramal">N\u00C3\u00BAmero do ramal..</param>
+        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id). (required).</param>
+        /// <param name="Ddd">C\u00F3digo DDD do telefone (id). (required).</param>
+        /// <param name="Telefone">N\u00FAmero do telefone. (required).</param>
+        /// <param name="Ramal">N\u00FAmero do ramal..</param>
 
         public TelefonePessoaAprovadaPersist(long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -62,30 +62,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo DDD do telefone (id).
+        /// C\u00F3digo DDD do telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo DDD do telefone (id).</value>
+        /// <value>C\u00F3digo DDD do telefone (id).</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do telefone.
+        /// N\u00FAmero do telefone.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do telefone.</value>
+        /// <value>N\u00FAmero do telefone.</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do ramal.
+        /// N\u00FAmero do ramal.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do ramal.</value>
+        /// <value>N\u00FAmero do ramal.</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
+    /// Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
     /// </summary>
     [DataContract]
     public partial class DocumentoParametrosRequest :  IEquatable<DocumentoParametrosRequest>
@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="IdTemplateDocumento">ID para o template do documento..</param>
         /// <param name="Nome">Nome para o arquivo..</param>
-        /// <param name="ParametrosConteudo">Lista de par\u00C3\u00A2metros para montagem do documento..</param>
+        /// <param name="ParametrosConteudo">Lista de par\u00E2metros para montagem do documento..</param>
 
         public DocumentoParametrosRequest(long? IdTemplateDocumento = null, string Nome = null, List<PropriedadeDocumentoRequest> ParametrosConteudo = null)
         {
@@ -50,9 +50,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Lista de par\u00C3\u00A2metros para montagem do documento.
+        /// Lista de par\u00E2metros para montagem do documento.
         /// </summary>
-        /// <value>Lista de par\u00C3\u00A2metros para montagem do documento.</value>
+        /// <value>Lista de par\u00E2metros para montagem do documento.</value>
         [DataMember(Name="parametrosConteudo", EmitDefaultValue=false)]
         public List<PropriedadeDocumentoRequest> ParametrosConteudo { get; set; }
     

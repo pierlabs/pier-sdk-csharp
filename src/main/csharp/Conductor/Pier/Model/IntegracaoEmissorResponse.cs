@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta do recurso de inclus\u00C3\u00A3o de registro para integra\u00C3\u00A7\u00C3\u00A3o
+    /// Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class IntegracaoEmissorResponse :  IEquatable<IntegracaoEmissorResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegracaoEmissorResponse" /> class.
         /// Initializes a new instance of the <see cref="IntegracaoEmissorResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor..</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta..</param>
-        /// <param name="IdArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor..</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta..</param>
+        /// <param name="IdArquivo">C\u00F3digo de identifica\u00E7\u00E3o do arquivo..</param>
         /// <param name="Status">Status do registro..</param>
-        /// <param name="DataInclusao">Data de inclus\u00C3\u00A3o do registro..</param>
-        /// <param name="DataAlteracao">Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro..</param>
+        /// <param name="DataInclusao">Data de inclus\u00E3o do registro..</param>
+        /// <param name="DataAlteracao">Data da ultima altera\u00E7\u00E3o do registro..</param>
 
         public IntegracaoEmissorResponse(long? Id = null, long? IdConta = null, long? IdArquivo = null, string Status = null, string DataInclusao = null, string DataAlteracao = null)
         {
@@ -42,23 +42,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do registro na tabela Integra\u00C3\u00A7\u00C3\u00A3oEmissor.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do arquivo.</value>
         [DataMember(Name="idArquivo", EmitDefaultValue=false)]
         public long? IdArquivo { get; set; }
     
@@ -70,16 +70,16 @@ namespace Conductor.Pier.Model
         public string Status { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00C3\u00A3o do registro.
+        /// Data de inclus\u00E3o do registro.
         /// </summary>
-        /// <value>Data de inclus\u00C3\u00A3o do registro.</value>
+        /// <value>Data de inclus\u00E3o do registro.</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+        /// Data da ultima altera\u00E7\u00E3o do registro.
         /// </summary>
-        /// <value>Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.</value>
+        /// <value>Data da ultima altera\u00E7\u00E3o do registro.</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     

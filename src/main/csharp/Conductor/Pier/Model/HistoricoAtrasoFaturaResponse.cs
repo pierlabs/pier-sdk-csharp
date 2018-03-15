@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Hist\u00C3\u00B3rico Pagamento Fatura Atraso
+    /// Hist\u00F3rico Pagamento Fatura Atraso
     /// </summary>
     [DataContract]
     public partial class HistoricoAtrasoFaturaResponse :  IEquatable<HistoricoAtrasoFaturaResponse>

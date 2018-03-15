@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso aviso viagens
+    /// Representa\u00E7\u00E3o da resposta do recurso aviso viagens
     /// </summary>
     [DataContract]
     public partial class AvisoViagemResponse :  IEquatable<AvisoViagemResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AvisoViagemResponse" /> class.
         /// Initializes a new instance of the <see cref="AvisoViagemResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id).</param>
-        /// <param name="IdCartao">C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id).</param>
-        /// <param name="CodigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id).</param>
+        /// <param name="Id">C\u00F3digo identificador \u00FAnico do aviso viagem na base (id).</param>
+        /// <param name="IdCartao">C\u00F3digo identificador do cart\u00E3o na base (id).</param>
+        /// <param name="CodigoPais">Codigo identificador do pa\u00EDs na base (id).</param>
         /// <param name="DataInicio">Data inicio do aviso viagem.</param>
         /// <param name="DataFim">Data fim do aviso viagem.</param>
-        /// <param name="FlagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o.</param>
+        /// <param name="FlagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o.</param>
 
         public AvisoViagemResponse(long? Id = null, long? IdCartao = null, string CodigoPais = null, string DataInicio = null, string DataFim = null, int? FlagAtivo = null)
         {
@@ -42,23 +42,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)
+        /// C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)</value>
+        /// <value>C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)
+        /// C\u00F3digo identificador do cart\u00E3o na base (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)</value>
+        /// <value>C\u00F3digo identificador do cart\u00E3o na base (id)</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Codigo identificador do pa\u00C3\u00ADs na base (id)
+        /// Codigo identificador do pa\u00EDs na base (id)
         /// </summary>
-        /// <value>Codigo identificador do pa\u00C3\u00ADs na base (id)</value>
+        /// <value>Codigo identificador do pa\u00EDs na base (id)</value>
         [DataMember(Name="codigoPais", EmitDefaultValue=false)]
         public string CodigoPais { get; set; }
     
@@ -77,9 +77,9 @@ namespace Conductor.Pier.Model
         public string DataFim { get; set; }
     
         /// <summary>
-        /// Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+        /// Identifica se o aviso viagem esta ativo ou n\u00E3o
         /// </summary>
-        /// <value>Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o</value>
+        /// <value>Identifica se o aviso viagem esta ativo ou n\u00E3o</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     

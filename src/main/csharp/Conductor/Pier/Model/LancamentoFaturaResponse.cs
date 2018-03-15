@@ -22,31 +22,31 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LancamentoFaturaResponse" /> class.
         /// Initializes a new instance of the <see cref="LancamentoFaturaResponse" />class.
         /// </summary>
-        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DescricaoTipoTransacao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="IdTipoEvento">C\u00C3\u00B3digo identificador do tipo do evento.</param>
-        /// <param name="DescricaoTipoEvento">Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento.</param>
-        /// <param name="IdEvento">C\u00C3\u00B3digo identificador do evento.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta..</param>
-        /// <param name="Complemento">Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento.</param>
+        /// <param name="IdTransacao">C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
+        /// <param name="DescricaoTipoTransacao">Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o.</param>
+        /// <param name="IdTipoEvento">C\u00F3digo identificador do tipo do evento.</param>
+        /// <param name="DescricaoTipoEvento">Descri\u00E7\u00E3o do tipo do evento.</param>
+        /// <param name="IdEvento">C\u00F3digo identificador do evento.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta..</param>
+        /// <param name="Complemento">Descri\u00E7\u00E3o complementar do evento.</param>
         /// <param name="ValorBRL">Valor em reais.</param>
         /// <param name="ValorUSD">Valor em dolar.</param>
-        /// <param name="NumeroParcela">N\u00C3\u00BAmero da parcela.</param>
+        /// <param name="NumeroParcela">N\u00FAmero da parcela.</param>
         /// <param name="QuantidadeParcelas">Quantidade de parcelas.</param>
-        /// <param name="DataHoraTransacao">Data da transa\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="DataHoraTransacao">Data da transa\u00E7\u00E3o.</param>
         /// <param name="NomeEstabelecimento">Nome do estabelecimento.</param>
-        /// <param name="DescricaoEstabelecimento">Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento.</param>
+        /// <param name="DescricaoEstabelecimento">Descri\u00E7\u00E3o do estabelecimento.</param>
         /// <param name="NomeFantasiaEstabelecimento">Nome fantasia do estabelecimento.</param>
-        /// <param name="FlagCredito">Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito.</param>
-        /// <param name="IdMCC">C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes).</param>
-        /// <param name="IdGrupoMCC">C\u00C3\u00B3digo identificador do grupo MCC.</param>
-        /// <param name="DescricaoGrupoMCC">Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC.</param>
-        /// <param name="Titular">Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta.</param>
-        /// <param name="NomePortador">Nome impresso no cart\u00C3\u00A3o.</param>
-        /// <param name="NumeroCartaoMascarado">N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado.</param>
-        /// <param name="FlagSolicitouContestacao">Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="FlagCredito">Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito.</param>
+        /// <param name="IdMCC">C\u00F3digo identificador do MCC (Merchant Category Codes).</param>
+        /// <param name="IdGrupoMCC">C\u00F3digo identificador do grupo MCC.</param>
+        /// <param name="DescricaoGrupoMCC">Descri\u00E7\u00E3o do grupo MCC.</param>
+        /// <param name="Titular">Indica se o portador do cart\u00E3o \u00E9 o titular da conta.</param>
+        /// <param name="NomePortador">Nome impresso no cart\u00E3o.</param>
+        /// <param name="NumeroCartaoMascarado">N\u00FAmero do cart\u00E3o mascarado.</param>
+        /// <param name="FlagSolicitouContestacao">Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
         /// <param name="ValorTaxaEmbarque">Valor da taxa de embarque.</param>
-        /// <param name="DescricaoAbreviada">Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="DescricaoAbreviada">Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o.</param>
 
         public LancamentoFaturaResponse(long? IdTransacao = null, string DescricaoTipoTransacao = null, long? IdTipoEvento = null, string DescricaoTipoEvento = null, long? IdEvento = null, long? IdConta = null, string Complemento = null, double? ValorBRL = null, double? ValorUSD = null, int? NumeroParcela = null, int? QuantidadeParcelas = null, string DataHoraTransacao = null, string NomeEstabelecimento = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, bool? FlagCredito = null, long? IdMCC = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, bool? Titular = null, string NomePortador = null, string NumeroCartaoMascarado = null, bool? FlagSolicitouContestacao = null, double? ValorTaxaEmbarque = null, string DescricaoAbreviada = null)
         {
@@ -80,51 +80,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoTipoTransacao", EmitDefaultValue=false)]
         public string DescricaoTipoTransacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo do evento
+        /// C\u00F3digo identificador do tipo do evento
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo do evento</value>
+        /// <value>C\u00F3digo identificador do tipo do evento</value>
         [DataMember(Name="idTipoEvento", EmitDefaultValue=false)]
         public long? IdTipoEvento { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+        /// Descri\u00E7\u00E3o do tipo do evento
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento</value>
+        /// <value>Descri\u00E7\u00E3o do tipo do evento</value>
         [DataMember(Name="descricaoTipoEvento", EmitDefaultValue=false)]
         public string DescricaoTipoEvento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do evento
+        /// C\u00F3digo identificador do evento
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do evento</value>
+        /// <value>C\u00F3digo identificador do evento</value>
         [DataMember(Name="idEvento", EmitDefaultValue=false)]
         public long? IdEvento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+        /// Descri\u00E7\u00E3o complementar do evento
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento</value>
+        /// <value>Descri\u00E7\u00E3o complementar do evento</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
@@ -143,9 +143,9 @@ namespace Conductor.Pier.Model
         public double? ValorUSD { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da parcela
+        /// N\u00FAmero da parcela
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da parcela</value>
+        /// <value>N\u00FAmero da parcela</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public int? NumeroParcela { get; set; }
     
@@ -157,9 +157,9 @@ namespace Conductor.Pier.Model
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// Data da transa\u00C3\u00A7\u00C3\u00A3o
+        /// Data da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Data da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Data da transa\u00E7\u00E3o</value>
         [DataMember(Name="dataHoraTransacao", EmitDefaultValue=false)]
         public string DataHoraTransacao { get; set; }
     
@@ -171,9 +171,9 @@ namespace Conductor.Pier.Model
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+        /// Descri\u00E7\u00E3o do estabelecimento
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento</value>
+        /// <value>Descri\u00E7\u00E3o do estabelecimento</value>
         [DataMember(Name="descricaoEstabelecimento", EmitDefaultValue=false)]
         public string DescricaoEstabelecimento { get; set; }
     
@@ -185,58 +185,58 @@ namespace Conductor.Pier.Model
         public string NomeFantasiaEstabelecimento { get; set; }
     
         /// <summary>
-        /// Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+        /// Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
         /// </summary>
-        /// <value>Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito</value>
+        /// <value>Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public bool? FlagCredito { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+        /// C\u00F3digo identificador do MCC (Merchant Category Codes)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)</value>
+        /// <value>C\u00F3digo identificador do MCC (Merchant Category Codes)</value>
         [DataMember(Name="idMCC", EmitDefaultValue=false)]
         public long? IdMCC { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do grupo MCC
+        /// C\u00F3digo identificador do grupo MCC
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do grupo MCC</value>
+        /// <value>C\u00F3digo identificador do grupo MCC</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public long? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+        /// Descri\u00E7\u00E3o do grupo MCC
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC</value>
+        /// <value>Descri\u00E7\u00E3o do grupo MCC</value>
         [DataMember(Name="descricaoGrupoMCC", EmitDefaultValue=false)]
         public string DescricaoGrupoMCC { get; set; }
     
         /// <summary>
-        /// Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+        /// Indica se o portador do cart\u00E3o \u00E9 o titular da conta
         /// </summary>
-        /// <value>Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta</value>
+        /// <value>Indica se o portador do cart\u00E3o \u00E9 o titular da conta</value>
         [DataMember(Name="titular", EmitDefaultValue=false)]
         public bool? Titular { get; set; }
     
         /// <summary>
-        /// Nome impresso no cart\u00C3\u00A3o
+        /// Nome impresso no cart\u00E3o
         /// </summary>
-        /// <value>Nome impresso no cart\u00C3\u00A3o</value>
+        /// <value>Nome impresso no cart\u00E3o</value>
         [DataMember(Name="nomePortador", EmitDefaultValue=false)]
         public string NomePortador { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+        /// N\u00FAmero do cart\u00E3o mascarado
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado</value>
+        /// <value>N\u00FAmero do cart\u00E3o mascarado</value>
         [DataMember(Name="numeroCartaoMascarado", EmitDefaultValue=false)]
         public string NumeroCartaoMascarado { get; set; }
     
         /// <summary>
-        /// Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+        /// Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o</value>
         [DataMember(Name="flagSolicitouContestacao", EmitDefaultValue=false)]
         public bool? FlagSolicitouContestacao { get; set; }
     
@@ -248,9 +248,9 @@ namespace Conductor.Pier.Model
         public double? ValorTaxaEmbarque { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoAbreviada", EmitDefaultValue=false)]
         public string DescricaoAbreviada { get; set; }
     

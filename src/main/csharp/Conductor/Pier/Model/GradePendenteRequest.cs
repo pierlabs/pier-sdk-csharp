@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GradePendenteRequest" /> class.
         /// Initializes a new instance of the <see cref="GradePendenteRequest" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta..</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta..</param>
         /// <param name="DataBase">Data do ajuste no formato yyyy-MM-dd..</param>
 
         public GradePendenteRequest(long? IdConta = null, string DataBase = null)
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta.
+        /// C\u00F3digo identificador da conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta.</value>
+        /// <value>C\u00F3digo identificador da conta.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     

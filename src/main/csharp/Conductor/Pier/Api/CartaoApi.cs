@@ -18,180 +18,180 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>string</returns>
         string AlterarAlterarSenhaUsingPUT (long? id, string senha);
   
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha);
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param>
         /// <returns>HistoricoImpressaoCartaoResponse</returns>
         HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao);
   
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param>
         /// <returns>ApiResponse of HistoricoImpressaoCartaoResponse</returns>
         ApiResponse<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao);
         
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa);
   
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o bloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse BloquearUsingPOST (long? id, long? idStatus, string observacao);
   
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o bloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> BloquearUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>string</returns>
         string CadastrarAlterarSenhaUsingPOST (long? id, string senha);
   
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha);
         
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+        /// Realiza o cancelamento de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse CancelarUsingPOST (long? id, long? idStatus, string observacao);
   
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+        /// Realiza o cancelamento de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> CancelarUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>DadosCartaoImpressaoResponse</returns>
         DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id);
   
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>ApiResponse of DadosCartaoImpressaoResponse</returns>
         ApiResponse<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o
+        /// Consultar Detalhes do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -199,10 +199,10 @@ namespace Conductor.Pier.Api
         DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id);
   
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o
+        /// Consultar Detalhes do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -210,496 +210,496 @@ namespace Conductor.Pier.Api
         ApiResponse<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os limites do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
         LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id);
   
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os limites do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
         ApiResponse<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param>
         /// <returns>LoteCartoesPrePagosResponse</returns>
         LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id);
   
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param>
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
         ApiResponse<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os dados do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>PortadorResponse</returns>
         PortadorResponse ConsultarPortadorUsingGET (long? id);
   
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os dados do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>ApiResponse of PortadorResponse</returns>
         ApiResponse<PortadorResponse> ConsultarPortadorUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>CartaoDetalheResponse</returns>
-        CartaoDetalheResponse ConsultarUsingGET8 (long? id);
+        CartaoDetalheResponse ConsultarUsingGET9 (long? id);
   
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>ApiResponse of CartaoDetalheResponse</returns>
-        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET8WithHttpInfo (long? id);
+        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET9WithHttpInfo (long? id);
         
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id);
   
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse DesbloquearUsingPOST (long? id);
   
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> DesbloquearUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>LoteCartoesPrePagosResponse</returns>
         LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
   
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
         ApiResponse<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
         
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o
+        /// Gerar uma nova via de Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse GerarNovaViaUsingPOST (long? id);
   
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o
+        /// Gerar uma nova via de Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> GerarNovaViaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Object</returns>
         Object LancarTarifaSegundaViaUsingPOST (long? id);
   
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> LancarTarifaSegundaViaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param>
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>PageLoteCartoesPrePagosResponse</returns>
         PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
   
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param>
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>ApiResponse of PageLoteCartoesPrePagosResponse</returns>
         ApiResponse<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
         
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+        /// Lista os Cart\u00F5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param>
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param>
         /// <returns>PageCartaoResponse</returns>
-        PageCartaoResponse ListarUsingGET10 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        PageCartaoResponse ListarUsingGET11 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
   
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+        /// Lista os Cart\u00F5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param>
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param>
         /// <returns>ApiResponse of PageCartaoResponse</returns>
-        ApiResponse<PageCartaoResponse> ListarUsingGET10WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        ApiResponse<PageCartaoResponse> ListarUsingGET11WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>CartaoResponse</returns>
         CartaoResponse ReativarUsingPOST (long? id);
   
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> ReativarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
         /// <returns>string</returns>
         string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV);
   
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
         
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>ValidaCartaoResponse</returns>
         ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
   
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>ValidaCartaoResponse</returns>
         ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
   
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param>
         /// <returns>ValidaCartaoResponse</returns>
         ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma);
   
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         ApiResponse<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma);
         
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o
+        /// Permite validar a senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
         /// <returns>ValidaSenhaCartaoResponse</returns>
         ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha);
   
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o
+        /// Permite validar a senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
         /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
         ApiResponse<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETWithHttpInfo (long? id, string senha);
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param>
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param>
         /// <returns>ValidaCartaoResponse</returns>
         ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2);
   
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param>
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         ApiResponse<ValidaCartaoResponse> ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
         
@@ -708,180 +708,180 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha);
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param>
         /// <returns>Task of HistoricoImpressaoCartaoResponse</returns>
         System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao);
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param>
         /// <returns>Task of ApiResponse (HistoricoImpressaoCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao);
         
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa);
 
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa
         /// </summary>
         /// <remarks>
-        /// Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o bloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPOSTAsync (long? id, long? idStatus, string observacao);
 
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o bloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha);
 
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+        /// Realiza o cadastro da senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+        /// Realiza o cancelamento de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> CancelarUsingPOSTAsync (long? id, long? idStatus, string observacao);
 
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+        /// Realiza o cancelamento de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of DadosCartaoImpressaoResponse</returns>
         System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id);
 
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (DadosCartaoImpressaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o
+        /// Consultar Detalhes do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -889,10 +889,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id);
 
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o
+        /// Consultar Detalhes do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -900,496 +900,496 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os limites do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
         System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id);
 
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os limites do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
         System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id);
 
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os dados do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of PortadorResponse</returns>
         System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id);
 
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o
+        /// Apresenta os dados do Portador do Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (PortadorResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET8Async (long? id);
+        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET9Async (long? id);
 
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET8AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
         System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
 
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
         
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o
+        /// Gerar uma nova via de Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o
+        /// Gerar uma nova via de Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> LancarTarifaSegundaViaUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param>
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of PageLoteCartoesPrePagosResponse</returns>
         System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
 
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param>
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (PageLoteCartoesPrePagosResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
         
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+        /// Lista os Cart\u00F5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param>
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param>
         /// <returns>Task of PageCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET10Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET11Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
 
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+        /// Lista os Cart\u00F5es gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param>
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET10AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET11AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         System.Threading.Tasks.Task<CartaoResponse> ReativarUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> ReativarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV);
 
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
         
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
 
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
 
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma);
 
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma);
         
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o
+        /// Permite validar a senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
         /// <returns>Task of ValidaSenhaCartaoResponse</returns>
         System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha);
 
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o
+        /// Permite validar a senha de um Cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
         /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param>
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2);
 
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param>
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
         
@@ -1486,10 +1486,10 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
         /// <returns>string</returns>
         public string AlterarAlterarSenhaUsingPUT (long? id, string senha)
@@ -1499,10 +1499,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha)
@@ -1573,10 +1573,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha)
@@ -1587,10 +1587,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha)
@@ -1656,11 +1656,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param> 
         /// <returns>HistoricoImpressaoCartaoResponse</returns>
         public HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao)
         {
@@ -1669,11 +1669,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param> 
         /// <returns>ApiResponse of HistoricoImpressaoCartaoResponse</returns>
         public ApiResponse< HistoricoImpressaoCartaoResponse > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao)
         {
@@ -1743,11 +1743,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param>
         /// <returns>Task of HistoricoImpressaoCartaoResponse</returns>
         public async System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao)
         {
@@ -1757,11 +1757,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
+        /// Realiza a altera\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o Este m\u00E9todo permite que uma Aplica\u00E7\u00E3o que realize a impress\u00E3o de cart\u00F5es possa indicar que um determinado idCartao fora impresso ou est\u00E1 em processo de impress\u00E3o. Para isso, basta informar o respectivo c\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00EDdo a ele. Por padr\u00E3o, cart\u00F5es provis\u00F3rios ou que j\u00E1 tenham sido inclu\u00EDdos em um arquivo para impress\u00E3o via gr\u00E1fica ter\u00E3o esta requisi\u00E7\u00E3o negada, se utilizada.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatusImpressao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatusImpressao">C\u00F3digo de Identifica\u00E7\u00E3o do Status Impress\u00E3o (Id).</param>
         /// <returns>Task of ApiResponse (HistoricoImpressaoCartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao)
         {
@@ -1826,11 +1826,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa)
         {
@@ -1839,11 +1839,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa)
         {
@@ -1913,11 +1913,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa)
         {
@@ -1927,11 +1927,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+        /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma pessoa Esta m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma pessoa para que esta passe a ser a portadora titular dele.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa)
         {
@@ -1996,12 +1996,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o bloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param> 
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param> 
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse BloquearUsingPOST (long? id, long? idStatus, string observacao)
         {
@@ -2010,12 +2010,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o bloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param> 
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param> 
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > BloquearUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao)
         {
@@ -2090,12 +2090,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o bloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPOSTAsync (long? id, long? idStatus, string observacao)
         {
@@ -2105,12 +2105,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o bloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o bloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio (tempor\u00E1rio) ou do cancelamento (definitivo) de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio.</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
         {
@@ -2178,10 +2178,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
         /// <returns>string</returns>
         public string CadastrarAlterarSenhaUsingPOST (long? id, string senha)
@@ -2191,10 +2191,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha)
@@ -2265,10 +2265,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha)
@@ -2279,10 +2279,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro da senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+        /// Realiza o cadastro da senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser cadastrada ou alterada.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha)
@@ -2348,12 +2348,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o cancelamento de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param> 
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param> 
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse CancelarUsingPOST (long? id, long? idStatus, string observacao)
         {
@@ -2362,12 +2362,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o cancelamento de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param> 
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param> 
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > CancelarUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao)
         {
@@ -2442,12 +2442,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o cancelamento de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> CancelarUsingPOSTAsync (long? id, long? idStatus, string observacao)
         {
@@ -2457,12 +2457,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cancelamento de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+        /// Realiza o cancelamento de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
-        /// <param name="idStatus">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.</param>
-        /// <param name="observacao">Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
+        /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o.</param>
+        /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento.</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
         {
@@ -2530,10 +2530,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>DadosCartaoImpressaoResponse</returns>
         public DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id)
         {
@@ -2542,10 +2542,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of DadosCartaoImpressaoResponse</returns>
         public ApiResponse< DadosCartaoImpressaoResponse > ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id)
         {
@@ -2610,10 +2610,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of DadosCartaoImpressaoResponse</returns>
         public async System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id)
         {
@@ -2623,10 +2623,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+        /// Consultar os dados de impress\u00E3o de um Cart\u00E3o Esse recurso permite consultar os dados de impress\u00E3o de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (DadosCartaoImpressaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -2688,7 +2688,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Consultar Detalhes do Cart\u00E3o Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
@@ -2700,7 +2700,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Consultar Detalhes do Cart\u00E3o Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
@@ -2768,7 +2768,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Consultar Detalhes do Cart\u00E3o Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -2781,7 +2781,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consultar Detalhes do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+        /// Consultar Detalhes do Cart\u00E3o Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -2846,10 +2846,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os limites do Portador do Cart\u00E3o Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
         public LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id)
         {
@@ -2858,10 +2858,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os limites do Portador do Cart\u00E3o Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
         public ApiResponse< LimiteDisponibilidadeResponse > ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id)
         {
@@ -2926,10 +2926,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os limites do Portador do Cart\u00E3o Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
         public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id)
         {
@@ -2939,10 +2939,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os limites do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os limites do Portador do Cart\u00E3o Este m\u00E9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00E3o, seja ele o titular da conta ou um adicional, a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -3004,10 +3004,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param> 
         /// <returns>LoteCartoesPrePagosResponse</returns>
         public LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id)
         {
@@ -3016,10 +3016,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param> 
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
         public ApiResponse< LoteCartoesPrePagosResponse > ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id)
         {
@@ -3084,10 +3084,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
         public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id)
         {
@@ -3097,10 +3097,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
+        /// Permite consultar um determinado Lote de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite consultar os cart\u00F5es pr\u00E9-pagos existentes na base do emissor atrav\u00E9s do id do lote.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -3162,10 +3162,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os dados do Portador do Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>PortadorResponse</returns>
         public PortadorResponse ConsultarPortadorUsingGET (long? id)
         {
@@ -3174,10 +3174,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os dados do Portador do Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of PortadorResponse</returns>
         public ApiResponse< PortadorResponse > ConsultarPortadorUsingGETWithHttpInfo (long? id)
         {
@@ -3242,10 +3242,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os dados do Portador do Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of PortadorResponse</returns>
         public async System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id)
         {
@@ -3255,10 +3255,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Apresenta os dados do Portador do Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+        /// Apresenta os dados do Portador do Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es do Portador de um determinado Cart\u00E3o a partir do c\u00F3digo de identifica\u00E7\u00E3o do Cart\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (PortadorResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -3320,29 +3320,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>CartaoDetalheResponse</returns>
-        public CartaoDetalheResponse ConsultarUsingGET8 (long? id)
+        public CartaoDetalheResponse ConsultarUsingGET9 (long? id)
         {
-             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET8WithHttpInfo(id);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET9WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of CartaoDetalheResponse</returns>
-        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET8WithHttpInfo (long? id)
+        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET9WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->ConsultarUsingGET8");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->ConsultarUsingGET9");
             
     
             var localVarPath = "/api/cartoes/{id}";
@@ -3388,9 +3388,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3400,28 +3400,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET8Async (long? id)
+        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET9Async (long? id)
         {
-             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET8AsyncWithHttpInfo(id);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado Cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es b\u00E1sicas de um determinado Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET8AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET8");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET9");
             
     
             var localVarPath = "/api/cartoes/{id}";
@@ -3467,9 +3467,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3478,10 +3478,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id)
         {
@@ -3490,10 +3490,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id)
         {
@@ -3558,10 +3558,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id)
         {
@@ -3571,10 +3571,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -3636,10 +3636,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse DesbloquearUsingPOST (long? id)
         {
@@ -3648,10 +3648,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > DesbloquearUsingPOSTWithHttpInfo (long? id)
         {
@@ -3716,10 +3716,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPOSTAsync (long? id)
         {
@@ -3729,10 +3729,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza o desbloqueio de um determinado Cart\u00E3o Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -3794,16 +3794,16 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param> 
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param> 
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param> 
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param> 
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>LoteCartoesPrePagosResponse</returns>
         public LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
@@ -3812,16 +3812,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param> 
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param> 
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param> 
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param> 
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
         public ApiResponse< LoteCartoesPrePagosResponse > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
@@ -3888,16 +3888,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
         public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
@@ -3907,16 +3907,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+        /// Permite gerar um novo Lote de Cart\u00F5es Pr\u00E9-Pago Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00F5es Pr\u00E9-Pagos, de forma n\u00E3o nominal, os quais poder\u00E3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00E9m de definir quantos cart\u00F5es dever\u00E3o ser gerados, ser\u00E1 poss\u00EDvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00E3o, a Imagem e o Endere\u00E7o para entrega dos Cart\u00F5es presentes no lote gerado. Por padr\u00E3o, todos os cart\u00F5es ser\u00E3o associados a um idPessoa fict\u00EDcio e receber\u00E1 um idConta \u00FAnico para cada um deles. Feito isso, os Cart\u00F5es gerados por esta opera\u00E7\u00E3o seguir\u00E3o os mesmos processos de impress\u00E3o via gr\u00E1fica previamente definidos entre o Emissor e a Conductor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
@@ -3982,10 +3982,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Gerar uma nova via de Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse GerarNovaViaUsingPOST (long? id)
         {
@@ -3994,10 +3994,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Gerar uma nova via de Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > GerarNovaViaUsingPOSTWithHttpInfo (long? id)
         {
@@ -4062,10 +4062,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Gerar uma nova via de Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id)
         {
@@ -4075,10 +4075,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Gerar uma nova via de Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+        /// Gerar uma nova via de Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -4140,10 +4140,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>Object</returns>
         public Object LancarTarifaSegundaViaUsingPOST (long? id)
         {
@@ -4152,10 +4152,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > LancarTarifaSegundaViaUsingPOSTWithHttpInfo (long? id)
         {
@@ -4220,10 +4220,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> LancarTarifaSegundaViaUsingPOSTAsync (long? id)
         {
@@ -4233,10 +4233,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+        /// Adiciona tarifa de ajuste da segunda via do cart\u00E3o Esse recurso permite adicionar tar\u00EDfa de ajuste pela emiss\u00E3o da segunda via do cart\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -4298,22 +4298,22 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param> 
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param> 
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param> 
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param> 
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param> 
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param> 
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param> 
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param> 
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>PageLoteCartoesPrePagosResponse</returns>
         public PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
@@ -4322,22 +4322,22 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param> 
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param> 
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param> 
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param> 
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param> 
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param> 
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param> 
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param> 
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param> 
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param> 
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param> 
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param> 
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param> 
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param> 
         /// <returns>ApiResponse of PageLoteCartoesPrePagosResponse</returns>
         public ApiResponse< PageLoteCartoesPrePagosResponse > ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
@@ -4410,22 +4410,22 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param>
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of PageLoteCartoesPrePagosResponse</returns>
         public async System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
@@ -4435,22 +4435,22 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+        /// Permite listar os Lotes de Cart\u00F5es Pr\u00E9-Pago Este m\u00E9todo permite que sejam listados os cart\u00F5es pr\u00E9-pagos existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id). (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (optional)</param>
-        /// <param name="idTipoCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idImagem">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). (optional)</param>
-        /// <param name="idEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). (optional)</param>
-        /// <param name="quantidadeCartoes">N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. (optional)</param>
-        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. (optional)</param>
-        /// <param name="usuarioCadastro">Nome do Usu\u00C3\u00A1rio que criou o Lote. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id). (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (optional)</param>
+        /// <param name="idTipoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idImagem">C\u00F3digo de Identifica\u00E7\u00E3o da Imagem (id). (optional)</param>
+        /// <param name="idEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id). (optional)</param>
+        /// <param name="quantidadeCartoes">N\u00FAmero de cart\u00F5es existentes no Lote. (optional)</param>
+        /// <param name="dataCadastro">Data de Cadastro do Lote de Cart\u00F5es N\u00E3o Nominais. (optional)</param>
+        /// <param name="usuarioCadastro">Nome do Usu\u00E1rio que criou o Lote. (optional)</param>
         /// <param name="statusProcessamento">Indica o Status de Processamento do Lote. (optional)</param>
-        /// <param name="identificadorExterno">N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). (optional)</param>
+        /// <param name="identificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor). (optional)</param>
         /// <returns>Task of ApiResponse (PageLoteCartoesPrePagosResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
@@ -4522,64 +4522,64 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Lista os Cart\u00F5es gerados pelo Emissor Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param> 
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param> 
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param> 
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param> 
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param> 
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param> 
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param> 
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param> 
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param> 
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param> 
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param> 
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param> 
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param> 
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param> 
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param> 
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param> 
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param> 
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param> 
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param> 
         /// <returns>PageCartaoResponse</returns>
-        public PageCartaoResponse ListarUsingGET10 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public PageCartaoResponse ListarUsingGET11 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
-             ApiResponse<PageCartaoResponse> localVarResponse = ListarUsingGET10WithHttpInfo(sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
+             ApiResponse<PageCartaoResponse> localVarResponse = ListarUsingGET11WithHttpInfo(sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Lista os Cart\u00F5es gerados pelo Emissor Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param> 
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param> 
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param> 
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param> 
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param> 
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param> 
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param> 
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param> 
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param> 
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param> 
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param> 
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param> 
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param> 
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param> 
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param> 
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param> 
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param> 
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param> 
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param> 
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param> 
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param> 
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param> 
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param> 
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param> 
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param> 
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param> 
         /// <returns>ApiResponse of PageCartaoResponse</returns>
-        public ApiResponse< PageCartaoResponse > ListarUsingGET10WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public ApiResponse< PageCartaoResponse > ListarUsingGET11WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
             
     
@@ -4646,9 +4646,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4658,65 +4658,65 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Lista os Cart\u00F5es gerados pelo Emissor Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param>
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param>
         /// <returns>Task of PageCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET10Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public async System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET11Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
-             ApiResponse<PageCartaoResponse> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
+             ApiResponse<PageCartaoResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os Cart\u00C3\u00B5es gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+        /// Lista os Cart\u00F5es gerados pelo Emissor Este m\u00E9todo permite que sejam listados os cart\u00F5es existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idStatusCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idEstagioCartao">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="idPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) (optional)</param>
-        /// <param name="idProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). (optional)</param>
-        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
-        /// <param name="numeroCartao">Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00C3\u00A3o. (optional)</param>
-        /// <param name="dataGeracao">Apresenta a data em que o cart\u00C3\u00A3o foi gerado. (optional)</param>
-        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. (optional)</param>
-        /// <param name="dataValidade">Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. (optional)</param>
-        /// <param name="dataImpressao">Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. (optional)</param>
-        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. (optional)</param>
-        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. (optional)</param>
-        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. (optional)</param>
-        /// <param name="codigoDesbloqueio">Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. (optional)</param>
-        /// <param name="sequencialCartao">N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idStatusCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idEstagioCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o (id). (optional)</param>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id) (optional)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence (id). (optional)</param>
+        /// <param name="tipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). (optional)</param>
+        /// <param name="numeroCartao">Apresenta o n\u00FAmero do cart\u00E3o. (optional)</param>
+        /// <param name="nomeImpresso">Apresenta o nome impresso no cart\u00E3o. (optional)</param>
+        /// <param name="dataGeracao">Apresenta a data em que o cart\u00E3o foi gerado. (optional)</param>
+        /// <param name="dataStatusCartao">Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataEstagioCartao">Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver. (optional)</param>
+        /// <param name="dataValidade">Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver. (optional)</param>
+        /// <param name="dataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica. (optional)</param>
+        /// <param name="arquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver. (optional)</param>
+        /// <param name="flagImpressaoOrigemComercial">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial. (optional)</param>
+        /// <param name="flagProvisorio">Quando ativa, indica que o cart\u00E3o \u00E9 provis\u00F3rio. Ou seja, \u00E9 um cart\u00E3o para uso tempor\u00E1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00E3o definitivo. (optional)</param>
+        /// <param name="codigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade. (optional)</param>
+        /// <param name="sequencialCartao">N\u00FAmero sequencial do cart\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET10AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET11AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
         {
             
     
@@ -4783,9 +4783,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4794,10 +4794,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>CartaoResponse</returns>
         public CartaoResponse ReativarUsingPOST (long? id)
         {
@@ -4806,10 +4806,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
         public ApiResponse< CartaoResponse > ReativarUsingPOSTWithHttpInfo (long? id)
         {
@@ -4874,10 +4874,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of CartaoResponse</returns>
         public async System.Threading.Tasks.Task<CartaoResponse> ReativarUsingPOSTAsync (long? id)
         {
@@ -4887,10 +4887,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Realiza a reativa\u00E7\u00E3o de um determinado Cart\u00E3o Este m\u00E9todo permite a realiza\u00E7\u00E3o da reativa\u00E7\u00E3o de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> ReativarUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -4952,10 +4952,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <param name="validaCVV">validaCVV</param> 
         /// <returns>string</returns>
         public string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV)
@@ -4965,10 +4965,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <param name="validaCVV">validaCVV</param> 
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
@@ -5045,10 +5045,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV)
@@ -5059,10 +5059,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar CVV do cart\u00C3\u00A3o Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+        /// Validar CVV do cart\u00E3o Esse recurso permite a valida\u00E7\u00E3o do cvv de um cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="validaCVV">validaCVV</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
@@ -5134,13 +5134,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param> 
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param> 
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param> 
         /// <returns>ValidaCartaoResponse</returns>
         public ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5149,13 +5149,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param> 
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param> 
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5235,13 +5235,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5251,13 +5251,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos em um cart\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5328,13 +5328,13 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param> 
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param> 
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param> 
         /// <returns>ValidaCartaoResponse</returns>
         public ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5343,13 +5343,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param> 
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param> 
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param> 
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param> 
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5429,13 +5429,13 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5445,13 +5445,13 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+        /// Permite validar os dados impressos de um cartao n\u00E3o bandeirado Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="nomePortador">Nome do portador do cart\u00C3\u00A3o</param>
-        /// <param name="dataValidade">Data de validade do cart\u00C3\u00A3o no formato yyyy-MM</param>
-        /// <param name="codigoSeguranca">C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="nomePortador">Nome do portador do cart\u00E3o</param>
+        /// <param name="dataValidade">Data de validade do cart\u00E3o no formato yyyy-MM</param>
+        /// <param name="codigoSeguranca">C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
@@ -5522,11 +5522,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55 Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55 Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param> 
         /// <returns>ValidaCartaoResponse</returns>
         public ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma)
         {
@@ -5535,11 +5535,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55 Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55 Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         public ApiResponse< ValidaCartaoResponse > ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma)
         {
@@ -5609,11 +5609,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55 Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55 Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma)
         {
@@ -5623,11 +5623,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55 Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55 Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="criptograma">Criptograma do cart\u00C3\u00A3o no formato de55</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="criptograma">Criptograma do cart\u00E3o no formato de55</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma)
         {
@@ -5692,10 +5692,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Permite validar a senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <param name="senha">Senha para ser validada.</param> 
         /// <returns>ValidaSenhaCartaoResponse</returns>
         public ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha)
@@ -5705,10 +5705,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Permite validar a senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param> 
         /// <param name="senha">Senha para ser validada.</param> 
         /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
         public ApiResponse< ValidaSenhaCartaoResponse > ValidarSenhaUsingGETWithHttpInfo (long? id, string senha)
@@ -5779,10 +5779,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Permite validar a senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
         /// <returns>Task of ValidaSenhaCartaoResponse</returns>
         public async System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha)
@@ -5793,10 +5793,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar a senha de um Cart\u00C3\u00A3o Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
+        /// Permite validar a senha de um Cart\u00E3o Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</param>
         /// <param name="senha">Senha para ser validada.</param>
         /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha)
@@ -5862,12 +5862,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param> 
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param> 
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param> 
         /// <returns>ValidaCartaoResponse</returns>
         public ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2)
         {
@@ -5876,12 +5876,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param> 
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param> 
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param> 
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param> 
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param> 
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
         public ApiResponse< ValidaCartaoResponse > ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
         {
@@ -5956,12 +5956,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param>
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
         public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2)
         {
@@ -5971,12 +5971,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+        /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir da leitura da tarja magn\u00E9tica do mesmo. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.</param>
-        /// <param name="trilha1">Trilha 1 do cart\u00C3\u00A3o a ser validado</param>
-        /// <param name="trilha2">Trilha 2 do cart\u00C3\u00A3o a ser validado</param>
+        /// <param name="numeroCartao">N\u00FAmero do cart\u00E3o a ser validado.</param>
+        /// <param name="trilha1">Trilha 1 do cart\u00E3o a ser validado</param>
+        /// <param name="trilha2">Trilha 2 do cart\u00E3o a ser validado</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
         {

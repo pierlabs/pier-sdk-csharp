@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id).</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id).</param>
         /// <param name="Nome">Apresenta o Nome do Socio.</param>
-        /// <param name="Cpf">N\u00C3\u00BAmero do CPF, quando PF..</param>
+        /// <param name="Cpf">N\u00FAmero do CPF, quando PF..</param>
         /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd..</param>
-        /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado)..</param>
-        /// <param name="NumeroIdentidade">N\u00C3\u00BAmero da Identidade..</param>
-        /// <param name="OrgaoExpedidorIdentidade">Org\u00C3\u00A3o expedidor do RG..</param>
+        /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado)..</param>
+        /// <param name="NumeroIdentidade">N\u00FAmero da Identidade..</param>
+        /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor do RG..</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
-        /// <param name="DataEmissaoIdentidade">Data emiss\u00C3\u00A3o da Identidade.</param>
-        /// <param name="EstadoCivil">Estado civil do s\u00C3\u00B3cio.</param>
-        /// <param name="Profissao">Profiss\u00C3\u00A3o do s\u00C3\u00B3cio.</param>
-        /// <param name="Nacionalidade">Nacionalidade do s\u00C3\u00B3cio.</param>
-        /// <param name="Email">Email do s\u00C3\u00B3cio.</param>
-        /// <param name="Telefones">Informa os telefones do s\u00C3\u00B3cio.</param>
+        /// <param name="DataEmissaoIdentidade">Data emiss\u00E3o da Identidade.</param>
+        /// <param name="EstadoCivil">Estado civil do s\u00F3cio.</param>
+        /// <param name="Profissao">Profiss\u00E3o do s\u00F3cio.</param>
+        /// <param name="Nacionalidade">Nacionalidade do s\u00F3cio.</param>
+        /// <param name="Email">Email do s\u00F3cio.</param>
+        /// <param name="Telefones">Informa os telefones do s\u00F3cio.</param>
 
         public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
         {
@@ -58,9 +58,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -72,9 +72,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CPF, quando PF.
+        /// N\u00FAmero do CPF, quando PF.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CPF, quando PF.</value>
+        /// <value>N\u00FAmero do CPF, quando PF.</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
@@ -86,23 +86,23 @@ namespace Conductor.Pier.Model
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da Identidade.
+        /// N\u00FAmero da Identidade.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da Identidade.</value>
+        /// <value>N\u00FAmero da Identidade.</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Org\u00C3\u00A3o expedidor do RG.
+        /// Org\u00E3o expedidor do RG.
         /// </summary>
-        /// <value>Org\u00C3\u00A3o expedidor do RG.</value>
+        /// <value>Org\u00E3o expedidor do RG.</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
@@ -114,44 +114,44 @@ namespace Conductor.Pier.Model
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Data emiss\u00C3\u00A3o da Identidade
+        /// Data emiss\u00E3o da Identidade
         /// </summary>
-        /// <value>Data emiss\u00C3\u00A3o da Identidade</value>
+        /// <value>Data emiss\u00E3o da Identidade</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// Estado civil do s\u00C3\u00B3cio
+        /// Estado civil do s\u00F3cio
         /// </summary>
-        /// <value>Estado civil do s\u00C3\u00B3cio</value>
+        /// <value>Estado civil do s\u00F3cio</value>
         [DataMember(Name="estadoCivil", EmitDefaultValue=false)]
         public string EstadoCivil { get; set; }
     
         /// <summary>
-        /// Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+        /// Profiss\u00E3o do s\u00F3cio
         /// </summary>
-        /// <value>Profiss\u00C3\u00A3o do s\u00C3\u00B3cio</value>
+        /// <value>Profiss\u00E3o do s\u00F3cio</value>
         [DataMember(Name="profissao", EmitDefaultValue=false)]
         public string Profissao { get; set; }
     
         /// <summary>
-        /// Nacionalidade do s\u00C3\u00B3cio
+        /// Nacionalidade do s\u00F3cio
         /// </summary>
-        /// <value>Nacionalidade do s\u00C3\u00B3cio</value>
+        /// <value>Nacionalidade do s\u00F3cio</value>
         [DataMember(Name="nacionalidade", EmitDefaultValue=false)]
         public string Nacionalidade { get; set; }
     
         /// <summary>
-        /// Email do s\u00C3\u00B3cio
+        /// Email do s\u00F3cio
         /// </summary>
-        /// <value>Email do s\u00C3\u00B3cio</value>
+        /// <value>Email do s\u00F3cio</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Informa os telefones do s\u00C3\u00B3cio
+        /// Informa os telefones do s\u00F3cio
         /// </summary>
-        /// <value>Informa os telefones do s\u00C3\u00B3cio</value>
+        /// <value>Informa os telefones do s\u00F3cio</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefonePessoaAprovadaResponse> Telefones { get; set; }
     

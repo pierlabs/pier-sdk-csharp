@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOportunidade
+    /// Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade
     /// </summary>
     [DataContract]
     public partial class TipoOportunidadeResponse :  IEquatable<TipoOportunidadeResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOportunidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOportunidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do TipoOportunidade (required).</param>
+        /// <param name="Id">C\u00F3digo identificador do TipoOportunidade (required).</param>
         /// <param name="Descricao">Descricao do TipoOportunidade (required).</param>
-        /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo (required).</param>
+        /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00E1 ativo (required).</param>
 
         public TipoOportunidadeResponse(long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -60,9 +60,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do TipoOportunidade
+        /// C\u00F3digo identificador do TipoOportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do TipoOportunidade</value>
+        /// <value>C\u00F3digo identificador do TipoOportunidade</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -74,9 +74,9 @@ namespace Conductor.Pier.Model
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+        /// Flag que representa se o tipo oportunidade est\u00E1 ativo
         /// </summary>
-        /// <value>Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo</value>
+        /// <value>Flag que representa se o tipo oportunidade est\u00E1 ativo</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

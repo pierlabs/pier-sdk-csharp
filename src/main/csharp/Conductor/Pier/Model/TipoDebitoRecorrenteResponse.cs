@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente
+    /// Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
     /// </summary>
     [DataContract]
     public partial class TipoDebitoRecorrenteResponse :  IEquatable<TipoDebitoRecorrenteResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoDebitoRecorrenteResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoDebitoRecorrenteResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id)..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente..</param>
-        /// <param name="Valor">Valor do tipo de d\u00C3\u00A9bito recorrente..</param>
-        /// <param name="FlagAtivo">Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente..</param>
+        /// <param name="Valor">Valor do tipo de d\u00E9bito recorrente..</param>
+        /// <param name="FlagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo..</param>
 
         public TipoDebitoRecorrenteResponse(long? Id = null, string Descricao = null, double? Valor = null, bool? FlagAtivo = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
+        /// Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Valor do tipo de d\u00C3\u00A9bito recorrente.
+        /// Valor do tipo de d\u00E9bito recorrente.
         /// </summary>
-        /// <value>Valor do tipo de d\u00C3\u00A9bito recorrente.</value>
+        /// <value>Valor do tipo de d\u00E9bito recorrente.</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+        /// Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
         /// </summary>
-        /// <value>Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.</value>
+        /// <value>Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

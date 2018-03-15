@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CampanhaUpdate" />class.
         /// </summary>
         /// <param name="Nome">Nome da campanha.</param>
-        /// <param name="IdTipoCampanha">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo da campanha..</param>
+        /// <param name="IdTipoCampanha">C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha..</param>
         /// <param name="PlanosCampanhas">Lista com os planos de campanha.</param>
 
         public CampanhaUpdate(string Nome = null, long? IdTipoCampanha = null, List<PlanoCampanhaUpdate> PlanosCampanhas = null)
@@ -43,9 +43,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo da campanha.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo da campanha.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.</value>
         [DataMember(Name="idTipoCampanha", EmitDefaultValue=false)]
         public long? IdTipoCampanha { get; set; }
     

@@ -25,7 +25,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>FaturaDetalheResponse</returns>
         FaturaDetalheResponse ConsultarFaturaUsingGET1 (string dataVencimento, long? idConta);
   
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of FaturaDetalheResponse</returns>
         ApiResponse<FaturaDetalheResponse> ConsultarFaturaUsingGET1WithHttpInfo (string dataVencimento, long? idConta);
         
@@ -48,11 +48,11 @@ namespace Conductor.Pier.Api
         /// Lista os planos de parcelamento da fatura de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PagePlanoParcelamentoResponse</returns>
         PagePlanoParcelamentoResponse ConsultarLancamentosFuturosFaturaUsingGET1 (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null);
   
@@ -63,37 +63,37 @@ namespace Conductor.Pier.Api
         /// Lista os planos de parcelamento da fatura de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PagePlanoParcelamentoResponse</returns>
         ApiResponse<PagePlanoParcelamentoResponse> ConsultarLancamentosFuturosFaturaUsingGET1WithHttpInfo (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail
+        /// Envia 2\u00AA via de fatura por E-mail
         /// </summary>
         /// <remarks>
         /// Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param>
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>Object</returns>
         Object EnviarFaturaEmailUsingPOST (long? id, string dataVencimento, string email = null);
   
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail
+        /// Envia 2\u00AA via de fatura por E-mail
         /// </summary>
         /// <remarks>
         /// Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param>
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> EnviarFaturaEmailUsingPOSTWithHttpInfo (long? id, string dataVencimento, string email = null);
         
@@ -104,11 +104,11 @@ namespace Conductor.Pier.Api
         /// Lista faturas de um cliente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageFaturaResponse</returns>
         PageFaturaResponse ListarFaturasUsingGET1 (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
   
@@ -119,11 +119,11 @@ namespace Conductor.Pier.Api
         /// Lista faturas de um cliente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageFaturaResponse</returns>
         ApiResponse<PageFaturaResponse> ListarFaturasUsingGET1WithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -131,10 +131,10 @@ namespace Conductor.Pier.Api
         /// Permite visualizar o extrato da fatura em formato PDF
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
         /// <returns>Object</returns>
         Object VisualizarDocumentoUsingGET (long? id, string dataVencimento);
@@ -143,10 +143,10 @@ namespace Conductor.Pier.Api
         /// Permite visualizar o extrato da fatura em formato PDF
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> VisualizarDocumentoUsingGETWithHttpInfo (long? id, string dataVencimento);
@@ -163,7 +163,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of FaturaDetalheResponse</returns>
         System.Threading.Tasks.Task<FaturaDetalheResponse> ConsultarFaturaUsingGET1Async (string dataVencimento, long? idConta);
 
@@ -175,7 +175,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (FaturaDetalheResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaturaDetalheResponse>> ConsultarFaturaUsingGET1AsyncWithHttpInfo (string dataVencimento, long? idConta);
         
@@ -186,11 +186,11 @@ namespace Conductor.Pier.Api
         /// Lista os planos de parcelamento da fatura de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PagePlanoParcelamentoResponse</returns>
         System.Threading.Tasks.Task<PagePlanoParcelamentoResponse> ConsultarLancamentosFuturosFaturaUsingGET1Async (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null);
 
@@ -201,37 +201,37 @@ namespace Conductor.Pier.Api
         /// Lista os planos de parcelamento da fatura de uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PagePlanoParcelamentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PagePlanoParcelamentoResponse>> ConsultarLancamentosFuturosFaturaUsingGET1AsyncWithHttpInfo (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail
+        /// Envia 2\u00AA via de fatura por E-mail
         /// </summary>
         /// <remarks>
         /// Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param>
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> EnviarFaturaEmailUsingPOSTAsync (long? id, string dataVencimento, string email = null);
 
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail
+        /// Envia 2\u00AA via de fatura por E-mail
         /// </summary>
         /// <remarks>
         /// Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param>
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EnviarFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento, string email = null);
         
@@ -242,11 +242,11 @@ namespace Conductor.Pier.Api
         /// Lista faturas de um cliente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageFaturaResponse</returns>
         System.Threading.Tasks.Task<PageFaturaResponse> ListarFaturasUsingGET1Async (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
 
@@ -257,11 +257,11 @@ namespace Conductor.Pier.Api
         /// Lista faturas de um cliente.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageFaturaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageFaturaResponse>> ListarFaturasUsingGET1AsyncWithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null);
         
@@ -269,10 +269,10 @@ namespace Conductor.Pier.Api
         /// Permite visualizar o extrato da fatura em formato PDF
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> VisualizarDocumentoUsingGETAsync (long? id, string dataVencimento);
@@ -281,10 +281,10 @@ namespace Conductor.Pier.Api
         /// Permite visualizar o extrato da fatura em formato PDF
         /// </summary>
         /// <remarks>
-        /// Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarDocumentoUsingGETAsyncWithHttpInfo (long? id, string dataVencimento);
@@ -386,7 +386,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>FaturaDetalheResponse</returns>
         public FaturaDetalheResponse ConsultarFaturaUsingGET1 (string dataVencimento, long? idConta)
         {
@@ -399,7 +399,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of FaturaDetalheResponse</returns>
         public ApiResponse< FaturaDetalheResponse > ConsultarFaturaUsingGET1WithHttpInfo (string dataVencimento, long? idConta)
         {
@@ -473,7 +473,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of FaturaDetalheResponse</returns>
         public async System.Threading.Tasks.Task<FaturaDetalheResponse> ConsultarFaturaUsingGET1Async (string dataVencimento, long? idConta)
         {
@@ -487,7 +487,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataVencimento">Data Vencimento</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (FaturaDetalheResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FaturaDetalheResponse>> ConsultarFaturaUsingGET1AsyncWithHttpInfo (string dataVencimento, long? idConta)
         {
@@ -555,11 +555,11 @@ namespace Conductor.Pier.Api
         /// Listar planos de parcelamento Lista os planos de parcelamento da fatura de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PagePlanoParcelamentoResponse</returns>
         public PagePlanoParcelamentoResponse ConsultarLancamentosFuturosFaturaUsingGET1 (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -571,11 +571,11 @@ namespace Conductor.Pier.Api
         /// Listar planos de parcelamento Lista os planos de parcelamento da fatura de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PagePlanoParcelamentoResponse</returns>
         public ApiResponse< PagePlanoParcelamentoResponse > ConsultarLancamentosFuturosFaturaUsingGET1WithHttpInfo (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -651,11 +651,11 @@ namespace Conductor.Pier.Api
         /// Listar planos de parcelamento Lista os planos de parcelamento da fatura de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PagePlanoParcelamentoResponse</returns>
         public async System.Threading.Tasks.Task<PagePlanoParcelamentoResponse> ConsultarLancamentosFuturosFaturaUsingGET1Async (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -668,11 +668,11 @@ namespace Conductor.Pier.Api
         /// Listar planos de parcelamento Lista os planos de parcelamento da fatura de uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00C3\u00A3o das faturas</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="dataVencimentoPadrao">Indica a data de vencimento padr\u00E3o das faturas</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PagePlanoParcelamentoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PagePlanoParcelamentoResponse>> ConsultarLancamentosFuturosFaturaUsingGET1AsyncWithHttpInfo (long? id, string dataVencimentoPadrao, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -740,12 +740,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
+        /// Envia 2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param> 
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param> 
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param> 
         /// <returns>Object</returns>
         public Object EnviarFaturaEmailUsingPOST (long? id, string dataVencimento, string email = null)
         {
@@ -754,12 +754,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
+        /// Envia 2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param> 
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param> 
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > EnviarFaturaEmailUsingPOSTWithHttpInfo (long? id, string dataVencimento, string email = null)
         {
@@ -830,12 +830,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
+        /// Envia 2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param>
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> EnviarFaturaEmailUsingPOSTAsync (long? id, string dataVencimento, string email = null)
         {
@@ -845,12 +845,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Envia 2\u00C2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
+        /// Envia 2\u00AA via de fatura por E-mail Envia a segunda via da fatura para o e-mail informado/cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura (yyyy-MM-dd).</param>
-        /// <param name="email">E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. (optional)</param>
+        /// <param name="email">E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> EnviarFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string dataVencimento, string email = null)
         {
@@ -919,11 +919,11 @@ namespace Conductor.Pier.Api
         /// Listar faturas de um cliente. Lista faturas de um cliente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageFaturaResponse</returns>
         public PageFaturaResponse ListarFaturasUsingGET1 (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -935,11 +935,11 @@ namespace Conductor.Pier.Api
         /// Listar faturas de um cliente. Lista faturas de um cliente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageFaturaResponse</returns>
         public ApiResponse< PageFaturaResponse > ListarFaturasUsingGET1WithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1011,11 +1011,11 @@ namespace Conductor.Pier.Api
         /// Listar faturas de um cliente. Lista faturas de um cliente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageFaturaResponse</returns>
         public async System.Threading.Tasks.Task<PageFaturaResponse> ListarFaturasUsingGET1Async (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1028,11 +1028,11 @@ namespace Conductor.Pier.Api
         /// Listar faturas de um cliente. Lista faturas de um cliente.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="situacaoProcessamento">Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (optional, default to TODAS)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageFaturaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageFaturaResponse>> ListarFaturasUsingGET1AsyncWithHttpInfo (long? idConta, string situacaoProcessamento = null, List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1098,10 +1098,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param> 
         /// <returns>Object</returns>
         public Object VisualizarDocumentoUsingGET (long? id, string dataVencimento)
@@ -1111,10 +1111,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > VisualizarDocumentoUsingGETWithHttpInfo (long? id, string dataVencimento)
@@ -1185,10 +1185,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> VisualizarDocumentoUsingGETAsync (long? id, string dataVencimento)
@@ -1199,10 +1199,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+        /// Permite visualizar o extrato da fatura em formato PDF Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="dataVencimento">Data de Vencimento da fatura.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarDocumentoUsingGETAsyncWithHttpInfo (long? id, string dataVencimento)

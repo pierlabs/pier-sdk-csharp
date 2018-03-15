@@ -21,7 +21,7 @@ namespace Conductor.Pier.Api
         /// Alterar Faturamento
         /// </summary>
         /// <remarks>
-        /// Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -33,7 +33,7 @@ namespace Conductor.Pier.Api
         /// Alterar Faturamento
         /// </summary>
         /// <remarks>
-        /// Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -42,10 +42,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoFaturamentoResponse> AlterarTipoFaturamentoUsingPUTWithHttpInfo (long? id, TipoFaturamentoPersist tipoFaturamentoPersist);
         
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param>
@@ -53,10 +53,10 @@ namespace Conductor.Pier.Api
         TipoFaturamentoPorContaResponse CadastrarFaturamentoPorContaUsingPOST (TipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist);
   
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param>
@@ -67,7 +67,7 @@ namespace Conductor.Pier.Api
         /// Adiciona um novo faturamento
         /// </summary>
         /// <remarks>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param>
@@ -78,7 +78,7 @@ namespace Conductor.Pier.Api
         /// Adiciona um novo faturamento
         /// </summary>
         /// <remarks>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param>
@@ -108,10 +108,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoFaturamentoResponse> ConsultarTipoFaturamentoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -120,10 +120,10 @@ namespace Conductor.Pier.Api
         TipoFaturamentoPorContaResponse DesativarFaturamentoPorContaUsingPOST (long? id, string modificadoPor);
   
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -132,10 +132,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoFaturamentoPorContaResponse> DesativarFaturamentoPorContaUsingPOSTWithHttpInfo (long? id, string modificadoPor);
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -143,10 +143,10 @@ namespace Conductor.Pier.Api
         TipoFaturamentoResponse DesativarTipoFaturamentoUsingPOST (long? id);
   
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -154,42 +154,42 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoFaturamentoResponse> DesativarTipoFaturamentoUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param>
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param>
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param>
         /// <returns>PageTipoFaturamentoPorContaResponse</returns>
         PageTipoFaturamentoPorContaResponse ListarFaturamentoPorContaUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null);
   
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param>
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param>
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param>
         /// <returns>ApiResponse of PageTipoFaturamentoPorContaResponse</returns>
         ApiResponse<PageTipoFaturamentoPorContaResponse> ListarFaturamentoPorContaUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null);
         
@@ -197,16 +197,16 @@ namespace Conductor.Pier.Api
         /// Lista Tipos de Faturamento
         /// </summary>
         /// <remarks>
-        /// Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param>
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param>
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param>
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param>
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param>
         /// <returns>PageTipoFaturamentoResponse</returns>
         PageTipoFaturamentoResponse ListarTipoFaturamentoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null);
   
@@ -214,16 +214,16 @@ namespace Conductor.Pier.Api
         /// Lista Tipos de Faturamento
         /// </summary>
         /// <remarks>
-        /// Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param>
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param>
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param>
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param>
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param>
         /// <returns>ApiResponse of PageTipoFaturamentoResponse</returns>
         ApiResponse<PageTipoFaturamentoResponse> ListarTipoFaturamentoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null);
         
@@ -235,7 +235,7 @@ namespace Conductor.Pier.Api
         /// Alterar Faturamento
         /// </summary>
         /// <remarks>
-        /// Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -247,7 +247,7 @@ namespace Conductor.Pier.Api
         /// Alterar Faturamento
         /// </summary>
         /// <remarks>
-        /// Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -256,10 +256,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoFaturamentoResponse>> AlterarTipoFaturamentoUsingPUTAsyncWithHttpInfo (long? id, TipoFaturamentoPersist tipoFaturamentoPersist);
         
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param>
@@ -267,10 +267,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TipoFaturamentoPorContaResponse> CadastrarFaturamentoPorContaUsingPOSTAsync (TipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist);
 
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param>
@@ -281,7 +281,7 @@ namespace Conductor.Pier.Api
         /// Adiciona um novo faturamento
         /// </summary>
         /// <remarks>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param>
@@ -292,7 +292,7 @@ namespace Conductor.Pier.Api
         /// Adiciona um novo faturamento
         /// </summary>
         /// <remarks>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param>
@@ -322,10 +322,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoFaturamentoResponse>> ConsultarTipoFaturamentoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -334,10 +334,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TipoFaturamentoPorContaResponse> DesativarFaturamentoPorContaUsingPOSTAsync (long? id, string modificadoPor);
 
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -346,10 +346,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoFaturamentoPorContaResponse>> DesativarFaturamentoPorContaUsingPOSTAsyncWithHttpInfo (long? id, string modificadoPor);
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -357,10 +357,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TipoFaturamentoResponse> DesativarTipoFaturamentoUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
         /// </summary>
         /// <remarks>
-        /// Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -368,42 +368,42 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoFaturamentoResponse>> DesativarTipoFaturamentoUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param>
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param>
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param>
         /// <returns>Task of PageTipoFaturamentoPorContaResponse</returns>
         System.Threading.Tasks.Task<PageTipoFaturamentoPorContaResponse> ListarFaturamentoPorContaUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null);
 
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param>
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param>
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoFaturamentoPorContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTipoFaturamentoPorContaResponse>> ListarFaturamentoPorContaUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null);
         
@@ -411,16 +411,16 @@ namespace Conductor.Pier.Api
         /// Lista Tipos de Faturamento
         /// </summary>
         /// <remarks>
-        /// Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param>
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param>
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param>
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param>
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param>
         /// <returns>Task of PageTipoFaturamentoResponse</returns>
         System.Threading.Tasks.Task<PageTipoFaturamentoResponse> ListarTipoFaturamentoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null);
 
@@ -428,16 +428,16 @@ namespace Conductor.Pier.Api
         /// Lista Tipos de Faturamento
         /// </summary>
         /// <remarks>
-        /// Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param>
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param>
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param>
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param>
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoFaturamentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTipoFaturamentoResponse>> ListarTipoFaturamentoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null);
         
@@ -534,7 +534,7 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Alterar Faturamento Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar Faturamento Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -547,7 +547,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar Faturamento Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar Faturamento Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -627,7 +627,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar Faturamento Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar Faturamento Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -641,7 +641,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar Faturamento Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+        /// Alterar Faturamento Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -716,7 +716,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param> 
@@ -728,7 +728,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param> 
@@ -802,7 +802,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param>
@@ -815,7 +815,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+        /// Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPorContaPersist">tipoFaturamentoPorContaPersist</param>
@@ -886,7 +886,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Adiciona um novo faturamento Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona um novo faturamento Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param> 
@@ -898,7 +898,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona um novo faturamento Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona um novo faturamento Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param> 
@@ -972,7 +972,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Adiciona um novo faturamento Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona um novo faturamento Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param>
@@ -985,7 +985,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Adiciona um novo faturamento Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+        /// Adiciona um novo faturamento Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoFaturamentoPersist">tipoFaturamentoPersist</param>
@@ -1214,7 +1214,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -1227,7 +1227,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -1307,7 +1307,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -1321,7 +1321,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -1396,7 +1396,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -1408,7 +1408,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param> 
@@ -1476,7 +1476,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -1489,7 +1489,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+        /// Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id</param>
@@ -1554,19 +1554,19 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param> 
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param> 
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param> 
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param> 
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param> 
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param> 
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param> 
         /// <returns>PageTipoFaturamentoPorContaResponse</returns>
         public PageTipoFaturamentoPorContaResponse ListarFaturamentoPorContaUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null)
         {
@@ -1575,19 +1575,19 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param> 
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param> 
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param> 
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param> 
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param> 
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param> 
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param> 
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param> 
         /// <returns>ApiResponse of PageTipoFaturamentoPorContaResponse</returns>
         public ApiResponse< PageTipoFaturamentoPorContaResponse > ListarFaturamentoPorContaUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null)
         {
@@ -1657,19 +1657,19 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param>
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param>
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param>
         /// <returns>Task of PageTipoFaturamentoPorContaResponse</returns>
         public async System.Threading.Tasks.Task<PageTipoFaturamentoPorContaResponse> ListarFaturamentoPorContaUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null)
         {
@@ -1679,19 +1679,19 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+        /// Lista as configura\u00E7\u00F5es de tipos de faturamento por conta Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamentoPorConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="status">Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). (optional)</param>
-        /// <param name="dataHoraInclusao">Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
-        /// <param name="modificadoPor">Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamentoPorConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="status">Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). (optional)</param>
+        /// <param name="dataHoraInclusao">Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="dataHoraCancelamento">Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. (optional)</param>
+        /// <param name="modificadoPor">Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoFaturamentoPorContaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTipoFaturamentoPorContaResponse>> ListarFaturamentoPorContaUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamentoPorConta = null, bool? status = null, long? idConta = null, long? idTipoFaturamento = null, string dataHoraInclusao = null, string dataHoraCancelamento = null, string modificadoPor = null)
         {
@@ -1760,16 +1760,16 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista Tipos de Faturamento Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista Tipos de Faturamento Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param> 
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param> 
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param> 
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param> 
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param> 
         /// <returns>PageTipoFaturamentoResponse</returns>
         public PageTipoFaturamentoResponse ListarTipoFaturamentoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null)
         {
@@ -1778,16 +1778,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista Tipos de Faturamento Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista Tipos de Faturamento Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param> 
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param> 
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param> 
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param> 
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param> 
         /// <returns>ApiResponse of PageTipoFaturamentoResponse</returns>
         public ApiResponse< PageTipoFaturamentoResponse > ListarTipoFaturamentoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null)
         {
@@ -1854,16 +1854,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista Tipos de Faturamento Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista Tipos de Faturamento Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param>
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param>
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param>
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param>
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param>
         /// <returns>Task of PageTipoFaturamentoResponse</returns>
         public async System.Threading.Tasks.Task<PageTipoFaturamentoResponse> ListarTipoFaturamentoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null)
         {
@@ -1873,16 +1873,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista Tipos de Faturamento Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+        /// Lista Tipos de Faturamento Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idTipoFaturamento">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (optional)</param>
-        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (optional)</param>
-        /// <param name="idConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de faturamento. (optional)</param>
+        /// <param name="flagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (optional)</param>
+        /// <param name="idConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoFaturamentoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTipoFaturamentoResponse>> ListarTipoFaturamentoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoFaturamento = null, string descricao = null, bool? flagApenasDemonstrativo = null, long? idConvenio = null)
         {

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Parametros de requisi\u00C3\u00A7\u00C3\u00A3o da gera\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o embossing
+    /// Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
     /// </summary>
     [DataContract]
     public partial class CartaoEmbossingRequest :  IEquatable<CartaoEmbossingRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" /> class.
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" />class.
         /// </summary>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id).</param>
-        /// <param name="IdTipoPlastico">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id)..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id).</param>
+        /// <param name="IdTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)..</param>
 
         public CartaoEmbossingRequest(long? IdPessoa = null, long? IdTipoPlastico = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)</value>
         [DataMember(Name="id_pessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).</value>
         [DataMember(Name="id_tipo_plastico", EmitDefaultValue=false)]
         public long? IdTipoPlastico { get; set; }
     

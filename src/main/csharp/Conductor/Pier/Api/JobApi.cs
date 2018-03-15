@@ -24,7 +24,7 @@ namespace Conductor.Pier.Api
         /// Este recurso adiciona o job ao agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>JobResponse</returns>
         JobResponse AtivarJobUsingPOST (long? id);
   
@@ -35,7 +35,7 @@ namespace Conductor.Pier.Api
         /// Este recurso adiciona o job ao agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>ApiResponse of JobResponse</returns>
         ApiResponse<JobResponse> AtivarJobUsingPOSTWithHttpInfo (long? id);
         
@@ -46,7 +46,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite atualizar os dados de um job cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <param name="descricao">descricao.</param>
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite atualizar os dados de um job cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <param name="descricao">descricao.</param>
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// Este recurso retira o job do agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>JobResponse</returns>
         JobResponse DesativarJobUsingPOST (long? id);
   
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// Este recurso retira o job do agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>ApiResponse of JobResponse</returns>
         ApiResponse<JobResponse> DesativarJobUsingPOSTWithHttpInfo (long? id);
         
@@ -97,13 +97,13 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param>
         /// <param name="cron">Cron do Job (optional)</param>
         /// <param name="status">Status do Job (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageJobResponse</returns>
-        PageJobResponse ListarUsingGET24 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        PageJobResponse ListarUsingGET26 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar Jobs
@@ -113,13 +113,13 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param>
         /// <param name="cron">Cron do Job (optional)</param>
         /// <param name="status">Status do Job (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageJobResponse</returns>
-        ApiResponse<PageJobResponse> ListarUsingGET24WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        ApiResponse<PageJobResponse> ListarUsingGET26WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastrar Job
@@ -158,7 +158,7 @@ namespace Conductor.Pier.Api
         /// Este recurso adiciona o job ao agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of JobResponse</returns>
         System.Threading.Tasks.Task<JobResponse> AtivarJobUsingPOSTAsync (long? id);
 
@@ -169,7 +169,7 @@ namespace Conductor.Pier.Api
         /// Este recurso adiciona o job ao agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JobResponse>> AtivarJobUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -180,7 +180,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite atualizar os dados de um job cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <param name="descricao">descricao.</param>
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
@@ -194,7 +194,7 @@ namespace Conductor.Pier.Api
         /// Este recurso permite atualizar os dados de um job cadastrado.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <param name="descricao">descricao.</param>
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
@@ -208,7 +208,7 @@ namespace Conductor.Pier.Api
         /// Este recurso retira o job do agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of JobResponse</returns>
         System.Threading.Tasks.Task<JobResponse> DesativarJobUsingPOSTAsync (long? id);
 
@@ -219,7 +219,7 @@ namespace Conductor.Pier.Api
         /// Este recurso retira o job do agendador de tarefas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JobResponse>> DesativarJobUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -231,13 +231,13 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param>
         /// <param name="cron">Cron do Job (optional)</param>
         /// <param name="status">Status do Job (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageJobResponse</returns>
-        System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET24Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET26Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar Jobs
@@ -247,13 +247,13 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param>
         /// <param name="cron">Cron do Job (optional)</param>
         /// <param name="status">Status do Job (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET24AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET26AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastrar Job
@@ -377,7 +377,7 @@ namespace Conductor.Pier.Api
         /// Ativar Job Este recurso adiciona o job ao agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param> 
         /// <returns>JobResponse</returns>
         public JobResponse AtivarJobUsingPOST (long? id)
         {
@@ -389,7 +389,7 @@ namespace Conductor.Pier.Api
         /// Ativar Job Este recurso adiciona o job ao agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param> 
         /// <returns>ApiResponse of JobResponse</returns>
         public ApiResponse< JobResponse > AtivarJobUsingPOSTWithHttpInfo (long? id)
         {
@@ -457,7 +457,7 @@ namespace Conductor.Pier.Api
         /// Ativar Job Este recurso adiciona o job ao agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of JobResponse</returns>
         public async System.Threading.Tasks.Task<JobResponse> AtivarJobUsingPOSTAsync (long? id)
         {
@@ -470,7 +470,7 @@ namespace Conductor.Pier.Api
         /// Ativar Job Este recurso adiciona o job ao agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> AtivarJobUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -535,7 +535,7 @@ namespace Conductor.Pier.Api
         /// Atualizar Job Este recurso permite atualizar os dados de um job cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param> 
         /// <param name="descricao">descricao.</param> 
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
@@ -550,7 +550,7 @@ namespace Conductor.Pier.Api
         /// Atualizar Job Este recurso permite atualizar os dados de um job cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param> 
         /// <param name="descricao">descricao.</param> 
         /// <param name="cron">Cron do Job.</param> 
         /// <param name="groovy">groovy</param> 
@@ -642,7 +642,7 @@ namespace Conductor.Pier.Api
         /// Atualizar Job Este recurso permite atualizar os dados de um job cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <param name="descricao">descricao.</param>
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
@@ -658,7 +658,7 @@ namespace Conductor.Pier.Api
         /// Atualizar Job Este recurso permite atualizar os dados de um job cadastrado.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <param name="descricao">descricao.</param>
         /// <param name="cron">Cron do Job.</param>
         /// <param name="groovy">groovy</param>
@@ -741,7 +741,7 @@ namespace Conductor.Pier.Api
         /// Desativar Job Este recurso retira o job do agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param> 
         /// <returns>JobResponse</returns>
         public JobResponse DesativarJobUsingPOST (long? id)
         {
@@ -753,7 +753,7 @@ namespace Conductor.Pier.Api
         /// Desativar Job Este recurso retira o job do agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param> 
         /// <returns>ApiResponse of JobResponse</returns>
         public ApiResponse< JobResponse > DesativarJobUsingPOSTWithHttpInfo (long? id)
         {
@@ -821,7 +821,7 @@ namespace Conductor.Pier.Api
         /// Desativar Job Este recurso retira o job do agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of JobResponse</returns>
         public async System.Threading.Tasks.Task<JobResponse> DesativarJobUsingPOSTAsync (long? id)
         {
@@ -834,7 +834,7 @@ namespace Conductor.Pier.Api
         /// Desativar Job Este recurso retira o job do agendador de tarefas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JobResponse>> DesativarJobUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -900,15 +900,15 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param> 
         /// <param name="cron">Cron do Job (optional)</param> 
         /// <param name="status">Status do Job (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageJobResponse</returns>
-        public PageJobResponse ListarUsingGET24 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public PageJobResponse ListarUsingGET26 (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageJobResponse> localVarResponse = ListarUsingGET24WithHttpInfo(groovy, descricao, cron, status, page, limit);
+             ApiResponse<PageJobResponse> localVarResponse = ListarUsingGET26WithHttpInfo(groovy, descricao, cron, status, page, limit);
              return localVarResponse.Data;
         }
 
@@ -917,13 +917,13 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param> 
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param> 
         /// <param name="cron">Cron do Job (optional)</param> 
         /// <param name="status">Status do Job (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageJobResponse</returns>
-        public ApiResponse< PageJobResponse > ListarUsingGET24WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public ApiResponse< PageJobResponse > ListarUsingGET26WithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -975,9 +975,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -991,15 +991,15 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param>
         /// <param name="cron">Cron do Job (optional)</param>
         /// <param name="status">Status do Job (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageJobResponse</returns>
-        public async System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET24Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageJobResponse> ListarUsingGET26Async (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageJobResponse> localVarResponse = await ListarUsingGET24AsyncWithHttpInfo(groovy, descricao, cron, status, page, limit);
+             ApiResponse<PageJobResponse> localVarResponse = await ListarUsingGET26AsyncWithHttpInfo(groovy, descricao, cron, status, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1009,13 +1009,13 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groovy">Script Groovy do Job (optional)</param>
-        /// <param name="descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Job (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do Job (optional)</param>
         /// <param name="cron">Cron do Job (optional)</param>
         /// <param name="status">Status do Job (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET24AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageJobResponse>> ListarUsingGET26AsyncWithHttpInfo (string groovy = null, string descricao = null, string cron = null, string status = null, int? page = null, int? limit = null)
         {
             
     
@@ -1067,9 +1067,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageJobResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

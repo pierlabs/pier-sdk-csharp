@@ -21,16 +21,16 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Object</returns>
@@ -40,62 +40,62 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Object</returns>
         Object AtivarEnvioFaturaEmailUsingPOST (long? id);
   
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Object</returns>
         Object DesativarEnvioFaturaEmailUsingPOST (long? id);
   
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
@@ -106,9 +106,9 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageAnuidadeResponse</returns>
         PageAnuidadeResponse ListarAnuidadesUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
@@ -119,9 +119,9 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageAnuidadeResponse</returns>
         ApiResponse<PageAnuidadeResponse> ListarAnuidadesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -132,9 +132,9 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageOperadoraResponse</returns>
         PageOperadoraResponse ListarOperadorasTelefonicasUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
@@ -145,9 +145,9 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageOperadoraResponse</returns>
         ApiResponse<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -159,16 +159,16 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of Object</returns>
@@ -178,62 +178,62 @@ namespace Conductor.Pier.Api
         /// Atribuir Anuidade
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id);
 
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id);
 
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
-        /// Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -244,9 +244,9 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageAnuidadeResponse</returns>
         System.Threading.Tasks.Task<PageAnuidadeResponse> ListarAnuidadesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
@@ -257,9 +257,9 @@ namespace Conductor.Pier.Api
         /// Lista as anuidades
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageAnuidadeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageAnuidadeResponse>> ListarAnuidadesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -270,9 +270,9 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageOperadoraResponse</returns>
         System.Threading.Tasks.Task<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
@@ -283,9 +283,9 @@ namespace Conductor.Pier.Api
         /// Lista as operadoras.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageOperadoraResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -382,16 +382,16 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
         /// <returns>Object</returns>
@@ -402,16 +402,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
@@ -490,16 +490,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of Object</returns>
@@ -511,16 +511,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00C3\u00BAmero do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
@@ -594,10 +594,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>Object</returns>
         public Object AtivarEnvioFaturaEmailUsingPOST (long? id)
         {
@@ -606,10 +606,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id)
         {
@@ -674,10 +674,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id)
         {
@@ -687,10 +687,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        ///  Ativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+        ///  Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -752,10 +752,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>Object</returns>
         public Object DesativarEnvioFaturaEmailUsingPOST (long? id)
         {
@@ -764,10 +764,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param> 
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id)
         {
@@ -832,10 +832,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id)
         {
@@ -845,10 +845,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desativa o servi\u00C3\u00A7o de envio de fatura por email Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+        /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -913,9 +913,9 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageAnuidadeResponse</returns>
         public PageAnuidadeResponse ListarAnuidadesUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -927,9 +927,9 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageAnuidadeResponse</returns>
         public ApiResponse< PageAnuidadeResponse > ListarAnuidadesUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -995,9 +995,9 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageAnuidadeResponse</returns>
         public async System.Threading.Tasks.Task<PageAnuidadeResponse> ListarAnuidadesUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1010,9 +1010,9 @@ namespace Conductor.Pier.Api
         /// Listar Anuidades Lista as anuidades
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageAnuidadeResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageAnuidadeResponse>> ListarAnuidadesUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1077,9 +1077,9 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageOperadoraResponse</returns>
         public PageOperadoraResponse ListarOperadorasTelefonicasUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1091,9 +1091,9 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageOperadoraResponse</returns>
         public ApiResponse< PageOperadoraResponse > ListarOperadorasTelefonicasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1159,9 +1159,9 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageOperadoraResponse</returns>
         public async System.Threading.Tasks.Task<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -1174,9 +1174,9 @@ namespace Conductor.Pier.Api
         /// Listar Operadoras Lista as operadoras.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageOperadoraResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {

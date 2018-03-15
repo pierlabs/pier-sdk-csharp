@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+    /// Transfer\u00EAncia banc\u00E1ria
     /// </summary>
     [DataContract]
     public partial class TransferenciaBancariaPersist :  IEquatable<TransferenciaBancariaPersist>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaBancariaPersist" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaBancariaPersist" />class.
         /// </summary>
-        /// <param name="ValorCompra">Valor da transfer\u00C3\u00AAncia (required).</param>
-        /// <param name="Valor">Valor da transfer\u00C3\u00AAncia (required).</param>
-        /// <param name="DocumentoFavorecido">N\u00C3\u00BAmero do CPF ou CNPJ. (required).</param>
-        /// <param name="Banco">C\u00C3\u00B3digo do banco (required).</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (required).</param>
-        /// <param name="DigitoAgencia">D\u00C3\u00ADgito da ag\u00C3\u00AAncia.</param>
-        /// <param name="NumeroConta">N\u00C3\u00BAmero da conta (required).</param>
-        /// <param name="DigitoConta">D\u00C3\u00ADgito da conta.</param>
-        /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente) (required).</param>
-        /// <param name="NomeFavorecido">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. (required).</param>
+        /// <param name="ValorCompra">Valor da transfer\u00EAncia (required).</param>
+        /// <param name="Valor">Valor da transfer\u00EAncia (required).</param>
+        /// <param name="DocumentoFavorecido">N\u00FAmero do CPF ou CNPJ. (required).</param>
+        /// <param name="Banco">C\u00F3digo do banco (required).</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia (required).</param>
+        /// <param name="DigitoAgencia">D\u00EDgito da ag\u00EAncia.</param>
+        /// <param name="NumeroConta">N\u00FAmero da conta (required).</param>
+        /// <param name="DigitoConta">D\u00EDgito da conta.</param>
+        /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente) (required).</param>
+        /// <param name="NomeFavorecido">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;. (required).</param>
 
         public TransferenciaBancariaPersist(double? ValorCompra = null, double? Valor = null, string DocumentoFavorecido = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagContaPoupanca = null, string NomeFavorecido = null)
         {
@@ -114,72 +114,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Valor da transfer\u00C3\u00AAncia
+        /// Valor da transfer\u00EAncia
         /// </summary>
-        /// <value>Valor da transfer\u00C3\u00AAncia</value>
+        /// <value>Valor da transfer\u00EAncia</value>
         [DataMember(Name="valorCompra", EmitDefaultValue=false)]
         public double? ValorCompra { get; set; }
     
         /// <summary>
-        /// Valor da transfer\u00C3\u00AAncia
+        /// Valor da transfer\u00EAncia
         /// </summary>
-        /// <value>Valor da transfer\u00C3\u00AAncia</value>
+        /// <value>Valor da transfer\u00EAncia</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CPF ou CNPJ.
+        /// N\u00FAmero do CPF ou CNPJ.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CPF ou CNPJ.</value>
+        /// <value>N\u00FAmero do CPF ou CNPJ.</value>
         [DataMember(Name="documentoFavorecido", EmitDefaultValue=false)]
         public string DocumentoFavorecido { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do banco
+        /// C\u00F3digo do banco
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do banco</value>
+        /// <value>C\u00F3digo do banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+        /// N\u00FAmero da ag\u00EAncia
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia</value>
+        /// <value>N\u00FAmero da ag\u00EAncia</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public string NumeroAgencia { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+        /// D\u00EDgito da ag\u00EAncia
         /// </summary>
-        /// <value>D\u00C3\u00ADgito da ag\u00C3\u00AAncia</value>
+        /// <value>D\u00EDgito da ag\u00EAncia</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da conta
+        /// N\u00FAmero da conta
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta</value>
+        /// <value>N\u00FAmero da conta</value>
         [DataMember(Name="numeroConta", EmitDefaultValue=false)]
         public string NumeroConta { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito da conta
+        /// D\u00EDgito da conta
         /// </summary>
-        /// <value>D\u00C3\u00ADgito da conta</value>
+        /// <value>D\u00EDgito da conta</value>
         [DataMember(Name="digitoConta", EmitDefaultValue=false)]
         public string DigitoConta { get; set; }
     
         /// <summary>
-        /// Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+        /// Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
         /// </summary>
-        /// <value>Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)</value>
+        /// <value>Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)</value>
         [DataMember(Name="flagContaPoupanca", EmitDefaultValue=false)]
         public int? FlagContaPoupanca { get; set; }
     
         /// <summary>
-        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.
         /// </summary>
-        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.</value>
+        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.</value>
         [DataMember(Name="nomeFavorecido", EmitDefaultValue=false)]
         public string NomeFavorecido { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
+    /// Representa\u00E7\u00E3o do recurso Usuario
     /// </summary>
     [DataContract]
     public partial class UsuarioResponse :  IEquatable<UsuarioResponse>
     { 
     
         /// <summary>
-        /// Status do Usu\u00C3\u00A1rio
+        /// Status do Usu\u00E1rio
         /// </summary>
-        /// <value>Status do Usu\u00C3\u00A1rio</value>
+        /// <value>Status do Usu\u00E1rio</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do Usu\u00C3\u00A1rio
+        /// Status do Usu\u00E1rio
         /// </summary>
-        /// <value>Status do Usu\u00C3\u00A1rio</value>
+        /// <value>Status do Usu\u00E1rio</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,16 +44,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioResponse" /> class.
         /// Initializes a new instance of the <see cref="UsuarioResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do Usu\u00C3\u00A1rio.</param>
-        /// <param name="Nome">Nome do Usu\u00C3\u00A1rio.</param>
-        /// <param name="Login">Login do Usu\u00C3\u00A1rio (required).</param>
-        /// <param name="IdEmissor">Id do emissor do usu\u00C3\u00A1rio.</param>
-        /// <param name="Cpf">CPF do Usu\u00C3\u00A1rio.</param>
-        /// <param name="Email">Email do Usu\u00C3\u00A1rio (required).</param>
-        /// <param name="Status">Status do Usu\u00C3\u00A1rio.</param>
-        /// <param name="DataCriacao">Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio.</param>
-        /// <param name="DataModificacao">Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio.</param>
-        /// <param name="TentativasIncorretas">N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas.</param>
+        /// <param name="Id">Id do Usu\u00E1rio.</param>
+        /// <param name="Nome">Nome do Usu\u00E1rio.</param>
+        /// <param name="Login">Login do Usu\u00E1rio (required).</param>
+        /// <param name="IdEmissor">Id do emissor do usu\u00E1rio.</param>
+        /// <param name="Cpf">CPF do Usu\u00E1rio.</param>
+        /// <param name="Email">Email do Usu\u00E1rio (required).</param>
+        /// <param name="Status">Status do Usu\u00E1rio.</param>
+        /// <param name="DataCriacao">Data de cria\u00E7\u00E3o do Usu\u00E1rio.</param>
+        /// <param name="DataModificacao">Data de modifica\u00E7\u00E3o do Usu\u00E1rio.</param>
+        /// <param name="TentativasIncorretas">N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas.</param>
 
         public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, string DataCriacao = null, string DataModificacao = null, long? TentativasIncorretas = null)
         {
@@ -88,65 +88,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do Usu\u00C3\u00A1rio
+        /// Id do Usu\u00E1rio
         /// </summary>
-        /// <value>Id do Usu\u00C3\u00A1rio</value>
+        /// <value>Id do Usu\u00E1rio</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do Usu\u00C3\u00A1rio
+        /// Nome do Usu\u00E1rio
         /// </summary>
-        /// <value>Nome do Usu\u00C3\u00A1rio</value>
+        /// <value>Nome do Usu\u00E1rio</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Login do Usu\u00C3\u00A1rio
+        /// Login do Usu\u00E1rio
         /// </summary>
-        /// <value>Login do Usu\u00C3\u00A1rio</value>
+        /// <value>Login do Usu\u00E1rio</value>
         [DataMember(Name="login", EmitDefaultValue=false)]
         public string Login { get; set; }
     
         /// <summary>
-        /// Id do emissor do usu\u00C3\u00A1rio
+        /// Id do emissor do usu\u00E1rio
         /// </summary>
-        /// <value>Id do emissor do usu\u00C3\u00A1rio</value>
+        /// <value>Id do emissor do usu\u00E1rio</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// CPF do Usu\u00C3\u00A1rio
+        /// CPF do Usu\u00E1rio
         /// </summary>
-        /// <value>CPF do Usu\u00C3\u00A1rio</value>
+        /// <value>CPF do Usu\u00E1rio</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Email do Usu\u00C3\u00A1rio
+        /// Email do Usu\u00E1rio
         /// </summary>
-        /// <value>Email do Usu\u00C3\u00A1rio</value>
+        /// <value>Email do Usu\u00E1rio</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+        /// Data de cria\u00E7\u00E3o do Usu\u00E1rio
         /// </summary>
-        /// <value>Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio</value>
+        /// <value>Data de cria\u00E7\u00E3o do Usu\u00E1rio</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public string DataCriacao { get; set; }
     
         /// <summary>
-        /// Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+        /// Data de modifica\u00E7\u00E3o do Usu\u00E1rio
         /// </summary>
-        /// <value>Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio</value>
+        /// <value>Data de modifica\u00E7\u00E3o do Usu\u00E1rio</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
         public string DataModificacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
+        /// N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas</value>
+        /// <value>N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas</value>
         [DataMember(Name="tentativasIncorretas", EmitDefaultValue=false)]
         public long? TentativasIncorretas { get; set; }
     

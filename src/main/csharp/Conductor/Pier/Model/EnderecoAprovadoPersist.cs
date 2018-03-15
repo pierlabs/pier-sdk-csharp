@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Endere\u00C3\u00A7o Aprovado
+    /// Objeto Endere\u00E7o Aprovado
     /// </summary>
     [DataContract]
     public partial class EnderecoAprovadoPersist :  IEquatable<EnderecoAprovadoPersist>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoAprovadoPersist" /> class.
         /// Initializes a new instance of the <see cref="EnderecoAprovadoPersist" />class.
         /// </summary>
-        /// <param name="IdTipoEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) (required).</param>
-        /// <param name="Cep">Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
+        /// <param name="IdTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (required).</param>
+        /// <param name="Cep">Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
         /// <param name="Logradouro">Apresenta o nome do Logradouro.</param>
-        /// <param name="Numero">Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o.</param>
-        /// <param name="Complemento">Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o.</param>
-        /// <param name="PontoReferencia">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o.</param>
+        /// <param name="Numero">Apresenta o n\u00FAmero do endere\u00E7o.</param>
+        /// <param name="Complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o.</param>
+        /// <param name="PontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o.</param>
         /// <param name="Bairro">Apresenta nome do bairro.</param>
         /// <param name="Cidade">Apresenta nome da cidade (required).</param>
         /// <param name="Uf">Apresenta sigla da Unidade Federativa (required).</param>
         /// <param name="Pais">Apresenta nome do Pais.</param>
-        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia (required).</param>
+        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia (required).</param>
 
         public EnderecoAprovadoPersist(long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null)
         {
@@ -84,16 +84,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)</value>
         [DataMember(Name="idTipoEndereco", EmitDefaultValue=false)]
         public long? IdTipoEndereco { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
+        /// Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;
         /// </summary>
-        /// <value>Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
+        /// <value>Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
@@ -105,23 +105,23 @@ namespace Conductor.Pier.Model
         public string Logradouro { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+        /// Apresenta o n\u00FAmero do endere\u00E7o
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o</value>
+        /// <value>Apresenta o n\u00FAmero do endere\u00E7o</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
         public int? Numero { get; set; }
     
         /// <summary>
-        /// Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+        /// Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
         /// </summary>
-        /// <value>Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o</value>
+        /// <value>Apresenta descri\u00E7oes complementares referente ao endere\u00E7o</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+        /// Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
         /// </summary>
-        /// <value>Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o</value>
+        /// <value>Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o</value>
         [DataMember(Name="pontoReferencia", EmitDefaultValue=false)]
         public string PontoReferencia { get; set; }
     
@@ -154,9 +154,9 @@ namespace Conductor.Pier.Model
         public string Pais { get; set; }
     
         /// <summary>
-        /// Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia
+        /// Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
         /// </summary>
-        /// <value>Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia</value>
+        /// <value>Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia</value>
         [DataMember(Name="enderecoCorrespondencia", EmitDefaultValue=false)]
         public bool? EnderecoCorrespondencia { get; set; }
     

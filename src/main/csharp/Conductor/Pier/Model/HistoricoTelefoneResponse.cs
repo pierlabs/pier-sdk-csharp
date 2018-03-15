@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoTelefoneResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoTelefoneResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id)..</param>
-        /// <param name="Telefone">Apresenta o N\u00C3\u00BAmero do telefone..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)..</param>
+        /// <param name="Telefone">Apresenta o N\u00FAmero do telefone..</param>
         /// <param name="IdTipoTelefone">Apresenta o id do tipo do telefone..</param>
-        /// <param name="TipoTelefone">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone..</param>
+        /// <param name="TipoTelefone">Apresenta a descri\u00E7\u00E3o do tipo do telefone..</param>
         /// <param name="DataModificacao">Apresenta a data que o telefone fora alterado..</param>
 
         public HistoricoTelefoneResponse(long? Id = null, string Telefone = null, long? IdTipoTelefone = null, string TipoTelefone = null, string DataModificacao = null)
@@ -40,16 +40,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Apresenta o N\u00C3\u00BAmero do telefone.
+        /// Apresenta o N\u00FAmero do telefone.
         /// </summary>
-        /// <value>Apresenta o N\u00C3\u00BAmero do telefone.</value>
+        /// <value>Apresenta o N\u00FAmero do telefone.</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
@@ -61,9 +61,9 @@ namespace Conductor.Pier.Model
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.
+        /// Apresenta a descri\u00E7\u00E3o do tipo do telefone.
         /// </summary>
-        /// <value>Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.</value>
+        /// <value>Apresenta a descri\u00E7\u00E3o do tipo do telefone.</value>
         [DataMember(Name="tipoTelefone", EmitDefaultValue=false)]
         public string TipoTelefone { get; set; }
     

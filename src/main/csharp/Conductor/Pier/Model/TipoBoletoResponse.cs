@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoBoletoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoBoletoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do tipo de boleto..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto..</param>
-        /// <param name="Banco">C\u00C3\u00B3digo identificador do banco..</param>
-        /// <param name="FaixaNossoNumero">Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero..</param>
-        /// <param name="MinNossoNumero">N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero..</param>
-        /// <param name="MaxNossoNumero">N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero..</param>
-        /// <param name="TamNossoNumero">Tamanho do nosso n\u00C3\u00BAmero..</param>
-        /// <param name="UltimoNossoNumero">\u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado..</param>
+        /// <param name="Id">C\u00F3digo identificador do tipo de boleto..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de boleto..</param>
+        /// <param name="Banco">C\u00F3digo identificador do banco..</param>
+        /// <param name="FaixaNossoNumero">Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero..</param>
+        /// <param name="MinNossoNumero">N\u00FAmero minimo para o nosso n\u00FAmero..</param>
+        /// <param name="MaxNossoNumero">N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero..</param>
+        /// <param name="TamNossoNumero">Tamanho do nosso n\u00FAmero..</param>
+        /// <param name="UltimoNossoNumero">\u00DAltimo nosso n\u00FAmero utilizado..</param>
 
         public TipoBoletoResponse(long? Id = null, string Descricao = null, long? Banco = null, int? FaixaNossoNumero = null, double? MinNossoNumero = null, double? MaxNossoNumero = null, int? TamNossoNumero = null, double? UltimoNossoNumero = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo de boleto.
+        /// C\u00F3digo identificador do tipo de boleto.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo de boleto.</value>
+        /// <value>C\u00F3digo identificador do tipo de boleto.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+        /// Descri\u00E7\u00E3o do tipo de boleto.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de boleto.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do banco.
+        /// C\u00F3digo identificador do banco.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do banco.</value>
+        /// <value>C\u00F3digo identificador do banco.</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
+        /// Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.
         /// </summary>
-        /// <value>Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.</value>
+        /// <value>Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.</value>
         [DataMember(Name="faixaNossoNumero", EmitDefaultValue=false)]
         public int? FaixaNossoNumero { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
+        /// N\u00FAmero minimo para o nosso n\u00FAmero.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.</value>
+        /// <value>N\u00FAmero minimo para o nosso n\u00FAmero.</value>
         [DataMember(Name="minNossoNumero", EmitDefaultValue=false)]
         public double? MinNossoNumero { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
+        /// N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.</value>
+        /// <value>N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.</value>
         [DataMember(Name="maxNossoNumero", EmitDefaultValue=false)]
         public double? MaxNossoNumero { get; set; }
     
         /// <summary>
-        /// Tamanho do nosso n\u00C3\u00BAmero.
+        /// Tamanho do nosso n\u00FAmero.
         /// </summary>
-        /// <value>Tamanho do nosso n\u00C3\u00BAmero.</value>
+        /// <value>Tamanho do nosso n\u00FAmero.</value>
         [DataMember(Name="tamNossoNumero", EmitDefaultValue=false)]
         public int? TamNossoNumero { get; set; }
     
         /// <summary>
-        /// \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
+        /// \u00DAltimo nosso n\u00FAmero utilizado.
         /// </summary>
-        /// <value>\u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.</value>
+        /// <value>\u00DAltimo nosso n\u00FAmero utilizado.</value>
         [DataMember(Name="ultimoNossoNumero", EmitDefaultValue=false)]
         public double? UltimoNossoNumero { get; set; }
     

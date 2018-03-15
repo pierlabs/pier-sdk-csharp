@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
     /// </summary>
     [DataContract]
     public partial class EmprestimoPessoalRequest :  IEquatable<EmprestimoPessoalRequest>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EmprestimoPessoalRequest" /> class.
         /// Initializes a new instance of the <see cref="EmprestimoPessoalRequest" />class.
         /// </summary>
-        /// <param name="ValorSolicitado">Valor do empr\u00C3\u00A9stimo/financiamento (required).</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero total de parcelas do empr\u00C3\u00A9stimo/financiamento (required).</param>
+        /// <param name="ValorSolicitado">Valor do empr\u00E9stimo/financiamento (required).</param>
+        /// <param name="NumeroParcelas">N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento (required).</param>
         /// <param name="TaxaJuros">Valor percentual da taxa de juros a ser aplicada (required).</param>
-        /// <param name="PeriodoTaxa">Per\u00C3\u00ADodo de aplica da taxa de juros (required).</param>
-        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas (required).</param>
-        /// <param name="NumeroMesesCarencia">N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela.</param>
+        /// <param name="PeriodoTaxa">Per\u00EDodo de aplica da taxa de juros (required).</param>
+        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00E7\u00E3o do valor das parcelas (required).</param>
+        /// <param name="NumeroMesesCarencia">N\u00FAmero de meses para cobran\u00E7a da primeira parcela.</param>
 
         public EmprestimoPessoalRequest(double? ValorSolicitado = null, int? NumeroParcelas = null, double? TaxaJuros = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, int? NumeroMesesCarencia = null)
         {
@@ -82,16 +82,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Valor do empr\u00C3\u00A9stimo/financiamento
+        /// Valor do empr\u00E9stimo/financiamento
         /// </summary>
-        /// <value>Valor do empr\u00C3\u00A9stimo/financiamento</value>
+        /// <value>Valor do empr\u00E9stimo/financiamento</value>
         [DataMember(Name="valorSolicitado", EmitDefaultValue=false)]
         public double? ValorSolicitado { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero total de parcelas do empr\u00C3\u00A9stimo/financiamento
+        /// N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento
         /// </summary>
-        /// <value>N\u00C3\u00BAmero total de parcelas do empr\u00C3\u00A9stimo/financiamento</value>
+        /// <value>N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
@@ -103,23 +103,23 @@ namespace Conductor.Pier.Model
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// Per\u00C3\u00ADodo de aplica da taxa de juros
+        /// Per\u00EDodo de aplica da taxa de juros
         /// </summary>
-        /// <value>Per\u00C3\u00ADodo de aplica da taxa de juros</value>
+        /// <value>Per\u00EDodo de aplica da taxa de juros</value>
         [DataMember(Name="periodoTaxa", EmitDefaultValue=false)]
         public string PeriodoTaxa { get; set; }
     
         /// <summary>
-        /// Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+        /// Sistema para amortiza\u00E7\u00E3o do valor das parcelas
         /// </summary>
-        /// <value>Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas</value>
+        /// <value>Sistema para amortiza\u00E7\u00E3o do valor das parcelas</value>
         [DataMember(Name="sistemaAmortizacao", EmitDefaultValue=false)]
         public string SistemaAmortizacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
+        /// N\u00FAmero de meses para cobran\u00E7a da primeira parcela
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela</value>
+        /// <value>N\u00FAmero de meses para cobran\u00E7a da primeira parcela</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     

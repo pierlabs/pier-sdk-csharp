@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+    /// Objeto de Notifica\u00E7\u00E3o EMAIL
     /// </summary>
     [DataContract]
     public partial class TemplateNotificacaoResponse :  IEquatable<TemplateNotificacaoResponse>
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+        /// Tipo da notifica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Tipo da notifica\u00E7\u00E3o.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoNotificacaoEnum {
             
@@ -71,9 +71,9 @@ namespace Conductor.Pier.Model
         public TipoLayoutEnum? TipoLayout { get; set; }
     
         /// <summary>
-        /// Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+        /// Tipo da notifica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Tipo da notifica\u00E7\u00E3o.</value>
         [DataMember(Name="tipoNotificacao", EmitDefaultValue=false)]
         public TipoNotificacaoEnum? TipoNotificacao { get; set; }
     
@@ -81,15 +81,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TemplateNotificacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="TemplateNotificacaoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo Identificador..</param>
-        /// <param name="IdConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail..</param>
+        /// <param name="Id">C\u00F3digo Identificador..</param>
+        /// <param name="IdConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail..</param>
         /// <param name="TipoLayout">Tipo do layout de e-mail..</param>
-        /// <param name="TipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="TemplatePadrao">Template padr\u00C3\u00A3o..</param>
+        /// <param name="TipoNotificacao">Tipo da notifica\u00E7\u00E3o..</param>
+        /// <param name="TemplatePadrao">Template padr\u00E3o..</param>
         /// <param name="Remetente">Remetente..</param>
         /// <param name="Assunto">Assunto do e-mail..</param>
-        /// <param name="DataInclusao">Data da inclus\u00C3\u00A3o..</param>
-        /// <param name="DataAlteracao">Data altera\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="DataInclusao">Data da inclus\u00E3o..</param>
+        /// <param name="DataAlteracao">Data altera\u00E7\u00E3o..</param>
 
         public TemplateNotificacaoResponse(long? Id = null, long? IdConfiguracaoEmail = null, TipoLayoutEnum? TipoLayout = null, TipoNotificacaoEnum? TipoNotificacao = null, string TemplatePadrao = null, string Remetente = null, string Assunto = null, string DataInclusao = null, string DataAlteracao = null)
         {
@@ -107,23 +107,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo Identificador.
+        /// C\u00F3digo Identificador.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo Identificador.</value>
+        /// <value>C\u00F3digo Identificador.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.</value>
         [DataMember(Name="idConfiguracaoEmail", EmitDefaultValue=false)]
         public long? IdConfiguracaoEmail { get; set; }
     
         /// <summary>
-        /// Template padr\u00C3\u00A3o.
+        /// Template padr\u00E3o.
         /// </summary>
-        /// <value>Template padr\u00C3\u00A3o.</value>
+        /// <value>Template padr\u00E3o.</value>
         [DataMember(Name="templatePadrao", EmitDefaultValue=false)]
         public string TemplatePadrao { get; set; }
     
@@ -142,16 +142,16 @@ namespace Conductor.Pier.Model
         public string Assunto { get; set; }
     
         /// <summary>
-        /// Data da inclus\u00C3\u00A3o.
+        /// Data da inclus\u00E3o.
         /// </summary>
-        /// <value>Data da inclus\u00C3\u00A3o.</value>
+        /// <value>Data da inclus\u00E3o.</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data altera\u00C3\u00A7\u00C3\u00A3o.
+        /// Data altera\u00E7\u00E3o.
         /// </summary>
-        /// <value>Data altera\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Data altera\u00E7\u00E3o.</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     

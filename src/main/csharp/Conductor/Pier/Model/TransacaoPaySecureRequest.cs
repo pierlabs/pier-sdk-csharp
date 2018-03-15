@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
     /// </summary>
     [DataContract]
     public partial class TransacaoPaySecureRequest :  IEquatable<TransacaoPaySecureRequest>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoPaySecureRequest" /> class.
         /// Initializes a new instance of the <see cref="TransacaoPaySecureRequest" />class.
         /// </summary>
-        /// <param name="DataHoraTransacao">Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0.</param>
+        /// <param name="DataHoraTransacao">Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0.</param>
         /// <param name="NumeroCartao">Numero do cartao (criptografado).</param>
-        /// <param name="IdCartao">Id do cart\u00C3\u00A3o.</param>
-        /// <param name="Valor">Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local.</param>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado)..</param>
-        /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado)..</param>
-        /// <param name="Origem">Origem da transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
-        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM (required).</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV). (required).</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de Parcelas. (required).</param>
-        /// <param name="CodigoSegurancaCartao">C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado). (required).</param>
-        /// <param name="Sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros..</param>
+        /// <param name="IdCartao">Id do cart\u00E3o.</param>
+        /// <param name="Valor">Valor da transa\u00E7\u00E3o em moeda local.</param>
+        /// <param name="NsuOrigem">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado)..</param>
+        /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado)..</param>
+        /// <param name="Origem">Origem da transa\u00E7\u00E3o.</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o. (required).</param>
+        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00E3o. Ex: AAMM (required).</param>
+        /// <param name="NumeroEstabelecimento">N\u00FAmero do Estabelecimento (N\u00FAmero+DV). (required).</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de Parcelas. (required).</param>
+        /// <param name="CodigoSegurancaCartao">C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado). (required).</param>
+        /// <param name="Sort">Tipo de ordena\u00E7\u00E3o dos registros..</param>
 
         public TransacaoPaySecureRequest(string DataHoraTransacao = null, string NumeroCartao = null, long? IdCartao = null, double? Valor = null, string NsuOrigem = null, string NomePortadorCartao = null, string Origem = null, string TerminalRequisitante = null, string CodigoProcessamento = null, string DataValidadeCartao = null, string NumeroEstabelecimento = null, long? NumeroParcelas = null, string CodigoSegurancaCartao = null, List<string> Sort = null)
         {
@@ -106,9 +106,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0
+        /// Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
         /// </summary>
-        /// <value>Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0</value>
+        /// <value>Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0</value>
         [DataMember(Name="dataHoraTransacao", EmitDefaultValue=false)]
         public string DataHoraTransacao { get; set; }
     
@@ -120,86 +120,86 @@ namespace Conductor.Pier.Model
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Id do cart\u00C3\u00A3o
+        /// Id do cart\u00E3o
         /// </summary>
-        /// <value>Id do cart\u00C3\u00A3o</value>
+        /// <value>Id do cart\u00E3o</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local
+        /// Valor da transa\u00E7\u00E3o em moeda local
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local</value>
+        /// <value>Valor da transa\u00E7\u00E3o em moeda local</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).
+        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).
+        /// Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
         /// </summary>
-        /// <value>Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).</value>
+        /// <value>Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).</value>
         [DataMember(Name="nomePortadorCartao", EmitDefaultValue=false)]
         public string NomePortadorCartao { get; set; }
     
         /// <summary>
-        /// Origem da transa\u00C3\u00A7\u00C3\u00A3o
+        /// Origem da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Origem da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Origem da transa\u00E7\u00E3o</value>
         [DataMember(Name="origem", EmitDefaultValue=false)]
         public string Origem { get; set; }
     
         /// <summary>
-        /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+        /// Apresenta a identifica\u00E7\u00E3o do terminal requisitante
         /// </summary>
-        /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
+        /// <value>Apresenta a identifica\u00E7\u00E3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+        /// Data de Validade do Cart\u00E3o. Ex: AAMM
         /// </summary>
-        /// <value>Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM</value>
+        /// <value>Data de Validade do Cart\u00E3o. Ex: AAMM</value>
         [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
         public string DataValidadeCartao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+        /// N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).</value>
+        /// <value>N\u00FAmero do Estabelecimento (N\u00FAmero+DV).</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public string NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de Parcelas.
+        /// N\u00FAmero de Parcelas.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de Parcelas.</value>
+        /// <value>N\u00FAmero de Parcelas.</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public long? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).
+        /// C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).</value>
+        /// <value>C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).</value>
         [DataMember(Name="codigoSegurancaCartao", EmitDefaultValue=false)]
         public string CodigoSegurancaCartao { get; set; }
     
         /// <summary>
-        /// Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+        /// Tipo de ordena\u00E7\u00E3o dos registros.
         /// </summary>
-        /// <value>Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.</value>
+        /// <value>Tipo de ordena\u00E7\u00E3o dos registros.</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<string> Sort { get; set; }
     

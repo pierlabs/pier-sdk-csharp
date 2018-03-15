@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoDetalhesResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoDetalhesResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). (required).</param>
-        /// <param name="Nome">Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. (required).</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (required).</param>
+        /// <param name="Nome">Descri\u00E7\u00E3o do Nome do Produto. (required).</param>
         /// <param name="Status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (required).</param>
-        /// <param name="IdFantasiaBasica">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence..</param>
-        /// <param name="FantasiaBasica">Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence..</param>
-        /// <param name="UsoExterior">Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior..</param>
+        /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence..</param>
+        /// <param name="FantasiaBasica">Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence..</param>
+        /// <param name="UsoExterior">Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior..</param>
 
         public ProdutoDetalhesResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, string FantasiaBasica = null, bool? UsoExterior = null)
         {
@@ -66,16 +66,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+        /// Descri\u00E7\u00E3o do Nome do Produto.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.</value>
+        /// <value>Descri\u00E7\u00E3o do Nome do Produto.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
@@ -87,23 +87,23 @@ namespace Conductor.Pier.Model
         public int? Status { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.
+        /// Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.</value>
+        /// <value>Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.</value>
         [DataMember(Name="fantasiaBasica", EmitDefaultValue=false)]
         public string FantasiaBasica { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+        /// Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.</value>
+        /// <value>Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.</value>
         [DataMember(Name="usoExterior", EmitDefaultValue=false)]
         public bool? UsoExterior { get; set; }
     

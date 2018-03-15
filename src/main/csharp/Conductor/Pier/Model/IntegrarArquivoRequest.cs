@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+    /// Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
     /// </summary>
     [DataContract]
     public partial class IntegrarArquivoRequest :  IEquatable<IntegrarArquivoRequest>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegrarArquivoRequest" /> class.
         /// Initializes a new instance of the <see cref="IntegrarArquivoRequest" />class.
         /// </summary>
-        /// <param name="Cpf">CPF do cliente de Arquivos a serem integrados.</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o.</param>
 
-        public IntegrarArquivoRequest(string Cpf = null)
+        public IntegrarArquivoRequest(string NumeroReceitaFederal = null)
         {
-            this.Cpf = Cpf;
+            this.NumeroReceitaFederal = NumeroReceitaFederal;
             
         }
         
     
         /// <summary>
-        /// CPF do cliente de Arquivos a serem integrados
+        /// N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
         /// </summary>
-        /// <value>CPF do cliente de Arquivos a serem integrados</value>
-        [DataMember(Name="cpf", EmitDefaultValue=false)]
-        public string Cpf { get; set; }
+        /// <value>N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o</value>
+        [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
+        public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -46,7 +46,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntegrarArquivoRequest {\n");
-            sb.Append("  Cpf: ").Append(Cpf).Append("\n");
+            sb.Append("  NumeroReceitaFederal: ").Append(NumeroReceitaFederal).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -85,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Cpf == other.Cpf ||
-                    this.Cpf != null &&
-                    this.Cpf.Equals(other.Cpf)
+                    this.NumeroReceitaFederal == other.NumeroReceitaFederal ||
+                    this.NumeroReceitaFederal != null &&
+                    this.NumeroReceitaFederal.Equals(other.NumeroReceitaFederal)
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Cpf != null)
-                    hash = hash * 59 + this.Cpf.GetHashCode();
+                if (this.NumeroReceitaFederal != null)
+                    hash = hash * 59 + this.NumeroReceitaFederal.GetHashCode();
                 
                 return hash;
             }

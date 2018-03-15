@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+    /// Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoResponse :  IEquatable<PlanoParcelamentoResponse>
@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">Identificador do parcelamento.</param>
         /// <param name="DataFechamentoFatura">Data de fechamento da fatura.</param>
-        /// <param name="DataVencimentoPadrao">Data de vencimento padr\u00C3\u00A3o.</param>
+        /// <param name="DataVencimentoPadrao">Data de vencimento padr\u00E3o.</param>
         /// <param name="ValorTotalFatura">Valor total da fatura.</param>
         /// <param name="QuantidadeParcelas">Quantidade de parcelas.</param>
         /// <param name="ValorParcela">Valor da parcela.</param>
@@ -34,15 +34,16 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTotalRefinanciamento">Valor total de refinanciamento.</param>
         /// <param name="ValorIOF">Valor do IOF.</param>
         /// <param name="ValorTAC">Valor do TAC.</param>
-        /// <param name="StatusAdesao">Status da ades\u00C3\u00A3o.</param>
-        /// <param name="DataInclusao">Data de inclus\u00C3\u00A3o.</param>
-        /// <param name="DataProcessamentoAdesao">Data de processamento da ades\u00C3\u00A3o.</param>
+        /// <param name="StatusAdesao">Status da ades\u00E3o.</param>
+        /// <param name="DataInclusao">Data de inclus\u00E3o.</param>
+        /// <param name="DataProcessamentoAdesao">Data de processamento da ades\u00E3o.</param>
         /// <param name="IdConta">Identificador da conta.</param>
-        /// <param name="DescricaoServicoTipo">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o.</param>
+        /// <param name="IdServicoTipo">C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o.</param>
+        /// <param name="DescricaoServicoTipo">Descri\u00E7\u00E3o do tipo de servi\u00E7o.</param>
         /// <param name="ComEntrada">Indica se a fatura foi com entrada.</param>
         /// <param name="NomeCampanha">Nome da campanha.</param>
 
-        public PlanoParcelamentoResponse(long? Id = null, string DataFechamentoFatura = null, string DataVencimentoPadrao = null, double? ValorTotalFatura = null, int? QuantidadeParcelas = null, double? ValorParcela = null, double? ValorEntrada = null, double? TaxaRefinanciamento = null, double? CustoEfetivoTotal = null, double? ValorTotalRefinanciamento = null, double? ValorIOF = null, double? ValorTAC = null, int? StatusAdesao = null, string DataInclusao = null, string DataProcessamentoAdesao = null, long? IdConta = null, string DescricaoServicoTipo = null, bool? ComEntrada = null, string NomeCampanha = null)
+        public PlanoParcelamentoResponse(long? Id = null, string DataFechamentoFatura = null, string DataVencimentoPadrao = null, double? ValorTotalFatura = null, int? QuantidadeParcelas = null, double? ValorParcela = null, double? ValorEntrada = null, double? TaxaRefinanciamento = null, double? CustoEfetivoTotal = null, double? ValorTotalRefinanciamento = null, double? ValorIOF = null, double? ValorTAC = null, int? StatusAdesao = null, string DataInclusao = null, string DataProcessamentoAdesao = null, long? IdConta = null, long? IdServicoTipo = null, string DescricaoServicoTipo = null, bool? ComEntrada = null, string NomeCampanha = null)
         {
             this.Id = Id;
             this.DataFechamentoFatura = DataFechamentoFatura;
@@ -60,6 +61,7 @@ namespace Conductor.Pier.Model
             this.DataInclusao = DataInclusao;
             this.DataProcessamentoAdesao = DataProcessamentoAdesao;
             this.IdConta = IdConta;
+            this.IdServicoTipo = IdServicoTipo;
             this.DescricaoServicoTipo = DescricaoServicoTipo;
             this.ComEntrada = ComEntrada;
             this.NomeCampanha = NomeCampanha;
@@ -82,9 +84,9 @@ namespace Conductor.Pier.Model
         public string DataFechamentoFatura { get; set; }
     
         /// <summary>
-        /// Data de vencimento padr\u00C3\u00A3o
+        /// Data de vencimento padr\u00E3o
         /// </summary>
-        /// <value>Data de vencimento padr\u00C3\u00A3o</value>
+        /// <value>Data de vencimento padr\u00E3o</value>
         [DataMember(Name="dataVencimentoPadrao", EmitDefaultValue=false)]
         public string DataVencimentoPadrao { get; set; }
     
@@ -152,23 +154,23 @@ namespace Conductor.Pier.Model
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// Status da ades\u00C3\u00A3o
+        /// Status da ades\u00E3o
         /// </summary>
-        /// <value>Status da ades\u00C3\u00A3o</value>
+        /// <value>Status da ades\u00E3o</value>
         [DataMember(Name="statusAdesao", EmitDefaultValue=false)]
         public int? StatusAdesao { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00C3\u00A3o
+        /// Data de inclus\u00E3o
         /// </summary>
-        /// <value>Data de inclus\u00C3\u00A3o</value>
+        /// <value>Data de inclus\u00E3o</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data de processamento da ades\u00C3\u00A3o
+        /// Data de processamento da ades\u00E3o
         /// </summary>
-        /// <value>Data de processamento da ades\u00C3\u00A3o</value>
+        /// <value>Data de processamento da ades\u00E3o</value>
         [DataMember(Name="dataProcessamentoAdesao", EmitDefaultValue=false)]
         public string DataProcessamentoAdesao { get; set; }
     
@@ -180,9 +182,16 @@ namespace Conductor.Pier.Model
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o</value>
+        [DataMember(Name="idServicoTipo", EmitDefaultValue=false)]
+        public long? IdServicoTipo { get; set; }
+    
+        /// <summary>
+        /// Descri\u00E7\u00E3o do tipo de servi\u00E7o
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o do tipo de servi\u00E7o</value>
         [DataMember(Name="descricaoServicoTipo", EmitDefaultValue=false)]
         public string DescricaoServicoTipo { get; set; }
     
@@ -224,6 +233,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
             sb.Append("  DataProcessamentoAdesao: ").Append(DataProcessamentoAdesao).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdServicoTipo: ").Append(IdServicoTipo).Append("\n");
             sb.Append("  DescricaoServicoTipo: ").Append(DescricaoServicoTipo).Append("\n");
             sb.Append("  ComEntrada: ").Append(ComEntrada).Append("\n");
             sb.Append("  NomeCampanha: ").Append(NomeCampanha).Append("\n");
@@ -345,6 +355,11 @@ namespace Conductor.Pier.Model
                     this.IdConta.Equals(other.IdConta)
                 ) && 
                 (
+                    this.IdServicoTipo == other.IdServicoTipo ||
+                    this.IdServicoTipo != null &&
+                    this.IdServicoTipo.Equals(other.IdServicoTipo)
+                ) && 
+                (
                     this.DescricaoServicoTipo == other.DescricaoServicoTipo ||
                     this.DescricaoServicoTipo != null &&
                     this.DescricaoServicoTipo.Equals(other.DescricaoServicoTipo)
@@ -420,6 +435,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdServicoTipo != null)
+                    hash = hash * 59 + this.IdServicoTipo.GetHashCode();
                 
                 if (this.DescricaoServicoTipo != null)
                     hash = hash * 59 + this.DescricaoServicoTipo.GetHashCode();

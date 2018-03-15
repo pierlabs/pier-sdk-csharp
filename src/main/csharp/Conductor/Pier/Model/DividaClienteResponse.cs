@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// D\u00C3\u00ADvida do cliente
+    /// D\u00EDvida do cliente
     /// </summary>
     [DataContract]
     public partial class DividaClienteResponse :  IEquatable<DividaClienteResponse>
@@ -22,22 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DividaClienteResponse" /> class.
         /// Initializes a new instance of the <see cref="DividaClienteResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).</param>
-        /// <param name="DataVencimentoFaturaAtraso">Data de vencimento da cobran\u00C3\u00A7a.</param>
-        /// <param name="QuantidadeDiasAtraso">Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="DataVencimentoFaturaAtraso">Data de vencimento da cobran\u00E7a.</param>
+        /// <param name="QuantidadeDiasAtraso">Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a.</param>
         /// <param name="DataVencimentoAcordo">Data de vencimento do acordo.</param>
-        /// <param name="QuantidadeDiasAtrasoCorrigido">Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo.</param>
-        /// <param name="ValorSaldoDevedor">Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a.</param>
-        /// <param name="TaxaCorrecao">Percentual de corre\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="ValorCorrecao">Valor da corre\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="QuantidadeDiasAtrasoCorrigido">Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo.</param>
+        /// <param name="ValorSaldoDevedor">Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a.</param>
+        /// <param name="TaxaCorrecao">Percentual de corre\u00E7\u00E3o.</param>
+        /// <param name="ValorCorrecao">Valor da corre\u00E7\u00E3o.</param>
         /// <param name="ValorIOF">Valor do IOF devido.</param>
-        /// <param name="ValorSaldoCorrigido">Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo.</param>
-        /// <param name="IdStatusConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id).</param>
-        /// <param name="DescricaoStatusConta">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta.</param>
-        /// <param name="IdStatusAcordo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id).</param>
-        /// <param name="DescricaoStatusAcordo">Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo.</param>
-        /// <param name="IdEscritorioCobranca">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a.</param>
-        /// <param name="NomeEscritorioCobranca">Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a.</param>
+        /// <param name="ValorSaldoCorrigido">Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo.</param>
+        /// <param name="IdStatusConta">C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id).</param>
+        /// <param name="DescricaoStatusConta">Descri\u00E7\u00E3o do status da conta.</param>
+        /// <param name="IdStatusAcordo">C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id).</param>
+        /// <param name="DescricaoStatusAcordo">Descri\u00E7\u00E3o do status do acordo.</param>
+        /// <param name="IdEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a.</param>
+        /// <param name="NomeEscritorioCobranca">Nome do escrit\u00F3rio de cobran\u00E7a.</param>
         /// <param name="EmailPessoaConta">Email do devedor.</param>
 
         public DividaClienteResponse(long? Id = null, string DataVencimentoFaturaAtraso = null, long? QuantidadeDiasAtraso = null, string DataVencimentoAcordo = null, long? QuantidadeDiasAtrasoCorrigido = null, double? ValorSaldoDevedor = null, double? TaxaCorrecao = null, double? ValorCorrecao = null, double? ValorIOF = null, double? ValorSaldoCorrigido = null, long? IdStatusConta = null, string DescricaoStatusConta = null, long? IdStatusAcordo = null, string DescricaoStatusAcordo = null, long? IdEscritorioCobranca = null, string NomeEscritorioCobranca = null, string EmailPessoaConta = null)
@@ -64,23 +64,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Data de vencimento da cobran\u00C3\u00A7a
+        /// Data de vencimento da cobran\u00E7a
         /// </summary>
-        /// <value>Data de vencimento da cobran\u00C3\u00A7a</value>
+        /// <value>Data de vencimento da cobran\u00E7a</value>
         [DataMember(Name="dataVencimentoFaturaAtraso", EmitDefaultValue=false)]
         public string DataVencimentoFaturaAtraso { get; set; }
     
         /// <summary>
-        /// Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+        /// Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
         /// </summary>
-        /// <value>Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a</value>
+        /// <value>Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a</value>
         [DataMember(Name="quantidadeDiasAtraso", EmitDefaultValue=false)]
         public long? QuantidadeDiasAtraso { get; set; }
     
@@ -92,30 +92,30 @@ namespace Conductor.Pier.Model
         public string DataVencimentoAcordo { get; set; }
     
         /// <summary>
-        /// Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo
+        /// Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
         /// </summary>
-        /// <value>Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo</value>
+        /// <value>Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo</value>
         [DataMember(Name="quantidadeDiasAtrasoCorrigido", EmitDefaultValue=false)]
         public long? QuantidadeDiasAtrasoCorrigido { get; set; }
     
         /// <summary>
-        /// Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+        /// Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
         /// </summary>
-        /// <value>Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a</value>
+        /// <value>Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a</value>
         [DataMember(Name="valorSaldoDevedor", EmitDefaultValue=false)]
         public double? ValorSaldoDevedor { get; set; }
     
         /// <summary>
-        /// Percentual de corre\u00C3\u00A7\u00C3\u00A3o
+        /// Percentual de corre\u00E7\u00E3o
         /// </summary>
-        /// <value>Percentual de corre\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Percentual de corre\u00E7\u00E3o</value>
         [DataMember(Name="taxaCorrecao", EmitDefaultValue=false)]
         public double? TaxaCorrecao { get; set; }
     
         /// <summary>
-        /// Valor da corre\u00C3\u00A7\u00C3\u00A3o
+        /// Valor da corre\u00E7\u00E3o
         /// </summary>
-        /// <value>Valor da corre\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Valor da corre\u00E7\u00E3o</value>
         [DataMember(Name="valorCorrecao", EmitDefaultValue=false)]
         public double? ValorCorrecao { get; set; }
     
@@ -127,51 +127,51 @@ namespace Conductor.Pier.Model
         public double? ValorIOF { get; set; }
     
         /// <summary>
-        /// Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo
+        /// Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
         /// </summary>
-        /// <value>Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo</value>
+        /// <value>Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo</value>
         [DataMember(Name="valorSaldoCorrigido", EmitDefaultValue=false)]
         public double? ValorSaldoCorrigido { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+        /// Descri\u00E7\u00E3o do status da conta
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da conta</value>
+        /// <value>Descri\u00E7\u00E3o do status da conta</value>
         [DataMember(Name="descricaoStatusConta", EmitDefaultValue=false)]
         public string DescricaoStatusConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)</value>
         [DataMember(Name="idStatusAcordo", EmitDefaultValue=false)]
         public long? IdStatusAcordo { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo
+        /// Descri\u00E7\u00E3o do status do acordo
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo</value>
+        /// <value>Descri\u00E7\u00E3o do status do acordo</value>
         [DataMember(Name="descricaoStatusAcordo", EmitDefaultValue=false)]
         public string DescricaoStatusAcordo { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+        /// C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a</value>
         [DataMember(Name="idEscritorioCobranca", EmitDefaultValue=false)]
         public long? IdEscritorioCobranca { get; set; }
     
         /// <summary>
-        /// Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+        /// Nome do escrit\u00F3rio de cobran\u00E7a
         /// </summary>
-        /// <value>Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a</value>
+        /// <value>Nome do escrit\u00F3rio de cobran\u00E7a</value>
         [DataMember(Name="nomeEscritorioCobranca", EmitDefaultValue=false)]
         public string NomeEscritorioCobranca { get; set; }
     

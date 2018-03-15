@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Nome do tipoEvento da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Nome do tipoEvento da notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Status de envio da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Status de envio da notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -85,16 +85,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Nome do tipoEvento da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Nome do tipoEvento da notifica\u00E7\u00E3o</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Status de envio da notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Status de envio da notifica\u00E7\u00E3o</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -110,16 +110,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoPushResponse" />class.
         /// </summary>
         /// <param name="DataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo..</param>
-        /// <param name="IdEmissor">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id)..</param>
-        /// <param name="TipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="Status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
-        /// <param name="TokenDispositivo">Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token) (required).</param>
-        /// <param name="Titulo">T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada. (required).</param>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada. (required).</param>
+        /// <param name="IdEmissor">C\u00F3digo de identifica\u00E7\u00E3o do emissor (id)..</param>
+        /// <param name="TipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o.</param>
+        /// <param name="Status">Status de envio da notifica\u00E7\u00E3o.</param>
+        /// <param name="IdPessoa">C\u00F3digo identificado da pessoa (required).</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta (required).</param>
+        /// <param name="TokenDispositivo">Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token) (required).</param>
+        /// <param name="Titulo">T\u00EDtulo da notifica\u00E7\u00E3o enviada. (required).</param>
+        /// <param name="Conteudo">Conte\u00FAdo da notifica\u00E7\u00E3o enviada. (required).</param>
         /// <param name="Plataforma">Nome do Sistema Operacional a qual foi enviado o Push..</param>
-        /// <param name="Protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es.</param>
+        /// <param name="Protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es.</param>
 
         public NotificacaoPushResponse(string DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
         {
@@ -186,51 +186,51 @@ namespace Conductor.Pier.Model
         public string DataEnvio { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificado da pessoa
+        /// C\u00F3digo identificado da pessoa
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificado da pessoa</value>
+        /// <value>C\u00F3digo identificado da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+        /// Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
         /// </summary>
-        /// <value>Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)</value>
+        /// <value>Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)</value>
         [DataMember(Name="tokenDispositivo", EmitDefaultValue=false)]
         public string TokenDispositivo { get; set; }
     
         /// <summary>
-        /// T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+        /// T\u00EDtulo da notifica\u00E7\u00E3o enviada.
         /// </summary>
-        /// <value>T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.</value>
+        /// <value>T\u00EDtulo da notifica\u00E7\u00E3o enviada.</value>
         [DataMember(Name="titulo", EmitDefaultValue=false)]
         public string Titulo { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+        /// Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.</value>
+        /// <value>Conte\u00FAdo da notifica\u00E7\u00E3o enviada.</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es</value>
+        /// <value>N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     

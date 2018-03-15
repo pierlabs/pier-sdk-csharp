@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusOportunidade
+    /// Representa\u00E7\u00E3o da resposta do recurso StatusOportunidade
     /// </summary>
     [DataContract]
     public partial class StatusOportunidadeResponse :  IEquatable<StatusOportunidadeResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusOportunidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusOportunidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do StatusOportunidade.</param>
-        /// <param name="IdTipoOportunidade">C\u00C3\u00B3digo identificador do TipoOportunidade.</param>
+        /// <param name="Id">C\u00F3digo identificador do StatusOportunidade.</param>
+        /// <param name="IdTipoOportunidade">C\u00F3digo identificador do TipoOportunidade.</param>
         /// <param name="Nome">Nome do status oportunidade.</param>
         /// <param name="Descricao">Descricao do StatusOportunidade.</param>
-        /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo.</param>
+        /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00E1 ativo.</param>
 
         public StatusOportunidadeResponse(long? Id = null, long? IdTipoOportunidade = null, string Nome = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -40,16 +40,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do StatusOportunidade
+        /// C\u00F3digo identificador do StatusOportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do StatusOportunidade</value>
+        /// <value>C\u00F3digo identificador do StatusOportunidade</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do TipoOportunidade
+        /// C\u00F3digo identificador do TipoOportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do TipoOportunidade</value>
+        /// <value>C\u00F3digo identificador do TipoOportunidade</value>
         [DataMember(Name="idTipoOportunidade", EmitDefaultValue=false)]
         public long? IdTipoOportunidade { get; set; }
     
@@ -68,9 +68,9 @@ namespace Conductor.Pier.Model
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+        /// Flag que representa se o tipo oportunidade est\u00E1 ativo
         /// </summary>
-        /// <value>Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo</value>
+        /// <value>Flag que representa se o tipo oportunidade est\u00E1 ativo</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

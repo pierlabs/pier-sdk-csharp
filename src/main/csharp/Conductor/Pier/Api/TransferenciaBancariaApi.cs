@@ -18,208 +18,254 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador
+        /// Atualiza conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param>
         /// <param name="update">update</param>
         /// <returns>ContaBancariaPortadorResponse</returns>
         ContaBancariaPortadorResponse AtualizarUsingPUT1 (long? id, ContaBancariaPortadorUpdate update);
   
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador
+        /// Atualiza conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
         ApiResponse<ContaBancariaPortadorResponse> AtualizarUsingPUT1WithHttpInfo (long? id, ContaBancariaPortadorUpdate update);
         
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>string</returns>
+        string CancelarTransferenciaCreditoContaBancariaUsingPOST (long? idTransferencia);
+  
+        /// <summary>
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> CancelarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo (long? idTransferencia);
+        
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>string</returns>
+        string ConfirmarTransferenciaCreditoContaBancariaUsingPOST (long? idTransferencia);
+  
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo (long? idTransferencia);
+        
+        /// <summary>
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+        /// </summary>
+        /// <remarks>
+        /// Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
         /// <returns>TransferenciaCreditoContaBancariaResponse</returns>
         TransferenciaCreditoContaBancariaResponse ConsultarTransferenciaBancariaUsingGET (long? idTransferencia);
   
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
         /// <returns>ApiResponse of TransferenciaCreditoContaBancariaResponse</returns>
         ApiResponse<TransferenciaCreditoContaBancariaResponse> ConsultarTransferenciaBancariaUsingGETWithHttpInfo (long? idTransferencia);
         
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador
+        /// Consulta conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param>
         /// <returns>ContaBancariaPortadorResponse</returns>
-        ContaBancariaPortadorResponse ConsultarUsingGET11 (long? id);
+        ContaBancariaPortadorResponse ConsultarUsingGET12 (long? id);
   
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador
+        /// Consulta conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param>
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        ApiResponse<ContaBancariaPortadorResponse> ConsultarUsingGET11WithHttpInfo (long? id);
+        ApiResponse<ContaBancariaPortadorResponse> ConsultarUsingGET12WithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
         /// <returns>TransferenciaBancariaResponse</returns>
-        TransferenciaBancariaResponse ConsultarUsingGET40 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        TransferenciaBancariaResponse ConsultarUsingGET41 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
   
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET40WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET41WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param>
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param>
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param>
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param>
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param>
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param>
         /// <returns>PageTransferenciaCreditoContaBancariaResponse</returns>
-        PageTransferenciaCreditoContaBancariaResponse ListarTransferenciaBancariaUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null);
+        PageTransferenciaCreditoContaBancariaResponse ListarTransferenciaBancariaUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null);
   
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param>
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param>
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param>
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param>
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param>
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaCreditoContaBancariaResponse</returns>
-        ApiResponse<PageTransferenciaCreditoContaBancariaResponse> ListarTransferenciaBancariaUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null);
+        ApiResponse<PageTransferenciaCreditoContaBancariaResponse> ListarTransferenciaBancariaUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null);
         
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador
+        /// Lista contas banc\u00E1rias portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param>
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param>
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param>
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param>
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param>
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param>
         /// <param name="favorecido">Nome do favorecido (optional)</param>
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageContaBancariaPortadorResponse</returns>
-        PageContaBancariaPortadorResponse ListarUsingGET14 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageContaBancariaPortadorResponse ListarUsingGET15 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador
+        /// Lista contas banc\u00E1rias portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param>
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param>
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param>
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param>
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param>
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param>
         /// <param name="favorecido">Nome do favorecido (optional)</param>
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageContaBancariaPortadorResponse</returns>
-        ApiResponse<PageContaBancariaPortadorResponse> ListarUsingGET14WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageContaBancariaPortadorResponse> ListarUsingGET15WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        PageTransferenciaBancariaResponse ListarUsingGET47 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageTransferenciaBancariaResponse ListarUsingGET49 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET47WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET49WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador
+        /// Cadastra uma conta banc\u00E1ria do portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -227,10 +273,10 @@ namespace Conductor.Pier.Api
         ContaBancariaPortadorResponse SalvarUsingPOST8 (ContaBancariaPortadorPersist persist);
   
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador
+        /// Cadastra uma conta banc\u00E1ria do portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -238,10 +284,10 @@ namespace Conductor.Pier.Api
         ApiResponse<ContaBancariaPortadorResponse> SalvarUsingPOST8WithHttpInfo (ContaBancariaPortadorPersist persist);
         
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -249,10 +295,10 @@ namespace Conductor.Pier.Api
         PlanoParcelamentoTransferenciaCreditoContaBancariaResponse SimularTransferenciaBancariaUsingPOST (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest request);
   
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -260,10 +306,10 @@ namespace Conductor.Pier.Api
         ApiResponse<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse> SimularTransferenciaBancariaUsingPOSTWithHttpInfo (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest request);
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -271,10 +317,10 @@ namespace Conductor.Pier.Api
         TransferenciaCreditoContaBancariaResponse TransferenciaCreditoContaBancariaUsingPOST (TransferenciaCreditoContaBancariaPersist persist);
   
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -282,10 +328,10 @@ namespace Conductor.Pier.Api
         ApiResponse<TransferenciaCreditoContaBancariaResponse> TransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo (TransferenciaCreditoContaBancariaPersist persist);
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -294,10 +340,10 @@ namespace Conductor.Pier.Api
         TransferenciaBancariaResponse TransferirUsingPOST (long? id, TransferenciaBancariaPersist transferenciaBancariaPersist);
   
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -310,208 +356,254 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador
+        /// Atualiza conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
         System.Threading.Tasks.Task<ContaBancariaPortadorResponse> AtualizarUsingPUT1Async (long? id, ContaBancariaPortadorUpdate update);
 
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador
+        /// Atualiza conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, ContaBancariaPortadorUpdate update);
         
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> CancelarTransferenciaCreditoContaBancariaUsingPOSTAsync (long? idTransferencia);
+
+        /// <summary>
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> CancelarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo (long? idTransferencia);
+        
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTAsync (long? idTransferencia);
+
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo (long? idTransferencia);
+        
+        /// <summary>
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+        /// </summary>
+        /// <remarks>
+        /// Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
         /// <returns>Task of TransferenciaCreditoContaBancariaResponse</returns>
         System.Threading.Tasks.Task<TransferenciaCreditoContaBancariaResponse> ConsultarTransferenciaBancariaUsingGETAsync (long? idTransferencia);
 
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
         /// <returns>Task of ApiResponse (TransferenciaCreditoContaBancariaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransferenciaCreditoContaBancariaResponse>> ConsultarTransferenciaBancariaUsingGETAsyncWithHttpInfo (long? idTransferencia);
         
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador
+        /// Consulta conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET11Async (long? id);
+        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET12Async (long? id);
 
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador
+        /// Consulta conta banc\u00E1ria portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET11AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET40Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET41Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
 
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET40AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET41AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param>
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param>
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param>
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param>
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param>
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param>
         /// <returns>Task of PageTransferenciaCreditoContaBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaCreditoContaBancariaResponse> ListarTransferenciaBancariaUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null);
+        System.Threading.Tasks.Task<PageTransferenciaCreditoContaBancariaResponse> ListarTransferenciaBancariaUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null);
 
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param>
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param>
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param>
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param>
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param>
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaCreditoContaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaCreditoContaBancariaResponse>> ListarTransferenciaBancariaUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaCreditoContaBancariaResponse>> ListarTransferenciaBancariaUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null);
         
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador
+        /// Lista contas banc\u00E1rias portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param>
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param>
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param>
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param>
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param>
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param>
         /// <param name="favorecido">Nome do favorecido (optional)</param>
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET14Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET15Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador
+        /// Lista contas banc\u00E1rias portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param>
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param>
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param>
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param>
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param>
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param>
         /// <param name="favorecido">Nome do favorecido (optional)</param>
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET14AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET15AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET47Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET49Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET47AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET49AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador
+        /// Cadastra uma conta banc\u00E1ria do portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -519,10 +611,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ContaBancariaPortadorResponse> SalvarUsingPOST8Async (ContaBancariaPortadorPersist persist);
 
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador
+        /// Cadastra uma conta banc\u00E1ria do portador
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -530,10 +622,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> SalvarUsingPOST8AsyncWithHttpInfo (ContaBancariaPortadorPersist persist);
         
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -541,10 +633,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse> SimularTransferenciaBancariaUsingPOSTAsync (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest request);
 
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -552,10 +644,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse>> SimularTransferenciaBancariaUsingPOSTAsyncWithHttpInfo (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest request);
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -563,10 +655,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransferenciaCreditoContaBancariaResponse> TransferenciaCreditoContaBancariaUsingPOSTAsync (TransferenciaCreditoContaBancariaPersist persist);
 
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -574,10 +666,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransferenciaCreditoContaBancariaResponse>> TransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo (TransferenciaCreditoContaBancariaPersist persist);
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -586,10 +678,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<TransferenciaBancariaResponse> TransferirUsingPOSTAsync (long? id, TransferenciaBancariaPersist transferenciaBancariaPersist);
 
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
         /// </summary>
         /// <remarks>
-        /// Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -690,10 +782,10 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Atualiza conta banc\u00E1ria portador Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ContaBancariaPortadorResponse</returns>
         public ContaBancariaPortadorResponse AtualizarUsingPUT1 (long? id, ContaBancariaPortadorUpdate update)
@@ -703,10 +795,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Atualiza conta banc\u00E1ria portador Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
         public ApiResponse< ContaBancariaPortadorResponse > AtualizarUsingPUT1WithHttpInfo (long? id, ContaBancariaPortadorUpdate update)
@@ -783,10 +875,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Atualiza conta banc\u00E1ria portador Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
         public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> AtualizarUsingPUT1Async (long? id, ContaBancariaPortadorUpdate update)
@@ -797,10 +889,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atualiza conta banc\u00C3\u00A1ria portador Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+        /// Atualiza conta banc\u00E1ria portador Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, ContaBancariaPortadorUpdate update)
@@ -872,10 +964,326 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
+        /// <returns>string</returns>
+        public string CancelarTransferenciaCreditoContaBancariaUsingPOST (long? idTransferencia)
+        {
+             ApiResponse<string> localVarResponse = CancelarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo(idTransferencia);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > CancelarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo (long? idTransferencia)
+        {
+            
+            // verify the required parameter 'idTransferencia' is set
+            if (idTransferencia == null)
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling TransferenciaBancariaApi->CancelarTransferenciaCreditoContaBancariaUsingPOST");
+            
+    
+            var localVarPath = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idTransferencia != null) localVarPathParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> CancelarTransferenciaCreditoContaBancariaUsingPOSTAsync (long? idTransferencia)
+        {
+             ApiResponse<string> localVarResponse = await CancelarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo(idTransferencia);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> CancelarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo (long? idTransferencia)
+        {
+            // verify the required parameter 'idTransferencia' is set
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling CancelarTransferenciaCreditoContaBancariaUsingPOST");
+            
+    
+            var localVarPath = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idTransferencia != null) localVarPathParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
+        /// <returns>string</returns>
+        public string ConfirmarTransferenciaCreditoContaBancariaUsingPOST (long? idTransferencia)
+        {
+             ApiResponse<string> localVarResponse = ConfirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo(idTransferencia);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > ConfirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo (long? idTransferencia)
+        {
+            
+            // verify the required parameter 'idTransferencia' is set
+            if (idTransferencia == null)
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling TransferenciaBancariaApi->ConfirmarTransferenciaCreditoContaBancariaUsingPOST");
+            
+    
+            var localVarPath = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idTransferencia != null) localVarPathParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConfirmarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConfirmarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTAsync (long? idTransferencia)
+        {
+             ApiResponse<string> localVarResponse = await ConfirmarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo(idTransferencia);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o. Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo (long? idTransferencia)
+        {
+            // verify the required parameter 'idTransferencia' is set
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConfirmarTransferenciaCreditoContaBancariaUsingPOST");
+            
+    
+            var localVarPath = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idTransferencia != null) localVarPathParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConfirmarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConfirmarTransferenciaCreditoContaBancariaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
         /// <returns>TransferenciaCreditoContaBancariaResponse</returns>
         public TransferenciaCreditoContaBancariaResponse ConsultarTransferenciaBancariaUsingGET (long? idTransferencia)
         {
@@ -884,10 +1292,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
         /// <returns>ApiResponse of TransferenciaCreditoContaBancariaResponse</returns>
         public ApiResponse< TransferenciaCreditoContaBancariaResponse > ConsultarTransferenciaBancariaUsingGETWithHttpInfo (long? idTransferencia)
         {
@@ -952,10 +1360,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
         /// <returns>Task of TransferenciaCreditoContaBancariaResponse</returns>
         public async System.Threading.Tasks.Task<TransferenciaCreditoContaBancariaResponse> ConsultarTransferenciaBancariaUsingGETAsync (long? idTransferencia)
         {
@@ -965,10 +1373,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
+        /// Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
         /// <returns>Task of ApiResponse (TransferenciaCreditoContaBancariaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TransferenciaCreditoContaBancariaResponse>> ConsultarTransferenciaBancariaUsingGETAsyncWithHttpInfo (long? idTransferencia)
         {
@@ -1030,29 +1438,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta conta banc\u00E1ria portador Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param> 
         /// <returns>ContaBancariaPortadorResponse</returns>
-        public ContaBancariaPortadorResponse ConsultarUsingGET11 (long? id)
+        public ContaBancariaPortadorResponse ConsultarUsingGET12 (long? id)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = ConsultarUsingGET11WithHttpInfo(id);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta conta banc\u00E1ria portador Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param> 
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        public ApiResponse< ContaBancariaPortadorResponse > ConsultarUsingGET11WithHttpInfo (long? id)
+        public ApiResponse< ContaBancariaPortadorResponse > ConsultarUsingGET12WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ConsultarUsingGET11");
+                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ConsultarUsingGET12");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -1098,9 +1506,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1110,28 +1518,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta conta banc\u00E1ria portador Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET11Async (long? id)
+        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET12Async (long? id)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await ConsultarUsingGET11AsyncWithHttpInfo(id);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consulta conta banc\u00C3\u00A1ria portador Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Consulta conta banc\u00E1ria portador Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET11AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET11");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -1177,9 +1585,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1188,37 +1596,37 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param> 
         /// <returns>TransferenciaBancariaResponse</returns>
-        public TransferenciaBancariaResponse ConsultarUsingGET40 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public TransferenciaBancariaResponse ConsultarUsingGET41 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET40WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET41WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param> 
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param> 
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param> 
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET40WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET41WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ConsultarUsingGET40");
+                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ConsultarUsingGET41");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling TransferenciaBancariaApi->ConsultarUsingGET40");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling TransferenciaBancariaApi->ConsultarUsingGET41");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -1266,9 +1674,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1278,34 +1686,34 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET40Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET41Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET40AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET41AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+        /// Consultar uma transfer\u00EAncia banc\u00E1ria para um banco Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idTransferencia">Id Transfer\u00C3\u00AAncia</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
+        /// <param name="idTransferencia">Id Transfer\u00EAncia</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET40AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET41AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET40");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET41");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET40");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET41");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -1353,9 +1761,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1364,34 +1772,36 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param> 
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param> 
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param> 
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param> 
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param> 
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param> 
         /// <returns>PageTransferenciaCreditoContaBancariaResponse</returns>
-        public PageTransferenciaCreditoContaBancariaResponse ListarTransferenciaBancariaUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null)
+        public PageTransferenciaCreditoContaBancariaResponse ListarTransferenciaBancariaUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null)
         {
-             ApiResponse<PageTransferenciaCreditoContaBancariaResponse> localVarResponse = ListarTransferenciaBancariaUsingGETWithHttpInfo(sort, page, limit, idConta, dataSolicitacaoInicial, dataSolicitacaoFinal);
+             ApiResponse<PageTransferenciaCreditoContaBancariaResponse> localVarResponse = ListarTransferenciaBancariaUsingGETWithHttpInfo(sort, page, limit, idConta, dataSolicitacaoInicial, dataSolicitacaoFinal, status);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param> 
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param> 
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param> 
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param> 
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param> 
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaCreditoContaBancariaResponse</returns>
-        public ApiResponse< PageTransferenciaCreditoContaBancariaResponse > ListarTransferenciaBancariaUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null)
+        public ApiResponse< PageTransferenciaCreditoContaBancariaResponse > ListarTransferenciaBancariaUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null)
         {
             
     
@@ -1428,6 +1838,7 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (dataSolicitacaoInicial != null) localVarQueryParams.Add("dataSolicitacaoInicial", Configuration.ApiClient.ParameterToString(dataSolicitacaoInicial)); // query parameter
             if (dataSolicitacaoFinal != null) localVarQueryParams.Add("dataSolicitacaoFinal", Configuration.ApiClient.ParameterToString(dataSolicitacaoFinal)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             
             
             
@@ -1455,35 +1866,37 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param>
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param>
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param>
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param>
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param>
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param>
         /// <returns>Task of PageTransferenciaCreditoContaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaCreditoContaBancariaResponse> ListarTransferenciaBancariaUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaCreditoContaBancariaResponse> ListarTransferenciaBancariaUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null)
         {
-             ApiResponse<PageTransferenciaCreditoContaBancariaResponse> localVarResponse = await ListarTransferenciaBancariaUsingGETAsyncWithHttpInfo(sort, page, limit, idConta, dataSolicitacaoInicial, dataSolicitacaoFinal);
+             ApiResponse<PageTransferenciaCreditoContaBancariaResponse> localVarResponse = await ListarTransferenciaBancariaUsingGETAsyncWithHttpInfo(sort, page, limit, idConta, dataSolicitacaoInicial, dataSolicitacaoFinal, status);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+        /// Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta. (optional)</param>
-        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia. (optional)</param>
-        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta. (optional)</param>
+        /// <param name="dataSolicitacaoInicial">Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia. (optional)</param>
+        /// <param name="dataSolicitacaoFinal">Data final da solicita\u00E7\u00E3o de transfer\u00EAncia (optional)</param>
+        /// <param name="status">C\u00F3digo do status do processamento (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaCreditoContaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaCreditoContaBancariaResponse>> ListarTransferenciaBancariaUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaCreditoContaBancariaResponse>> ListarTransferenciaBancariaUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataSolicitacaoInicial = null, string dataSolicitacaoFinal = null, int? status = null)
         {
             
     
@@ -1520,6 +1933,7 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (dataSolicitacaoInicial != null) localVarQueryParams.Add("dataSolicitacaoInicial", Configuration.ApiClient.ParameterToString(dataSolicitacaoInicial)); // query parameter
             if (dataSolicitacaoFinal != null) localVarQueryParams.Add("dataSolicitacaoFinal", Configuration.ApiClient.ParameterToString(dataSolicitacaoFinal)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
             
             
             
@@ -1546,44 +1960,44 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Lista contas banc\u00E1rias portador Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param> 
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param> 
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param> 
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param> 
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param> 
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param> 
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param> 
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param> 
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param> 
         /// <param name="favorecido">Nome do favorecido (optional)</param> 
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageContaBancariaPortadorResponse</returns>
-        public PageContaBancariaPortadorResponse ListarUsingGET14 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageContaBancariaPortadorResponse ListarUsingGET15 (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = ListarUsingGET14WithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
+             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = ListarUsingGET15WithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Lista contas banc\u00E1rias portador Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param> 
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param> 
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param> 
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param> 
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param> 
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param> 
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param> 
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param> 
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param> 
         /// <param name="favorecido">Nome do favorecido (optional)</param> 
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageContaBancariaPortadorResponse</returns>
-        public ApiResponse< PageContaBancariaPortadorResponse > ListarUsingGET14WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageContaBancariaPortadorResponse > ListarUsingGET15WithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -1640,9 +2054,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1652,45 +2066,45 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Lista contas banc\u00E1rias portador Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param>
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param>
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param>
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param>
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param>
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param>
         /// <param name="favorecido">Nome do favorecido (optional)</param>
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET14Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET15Async (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = await ListarUsingGET14AsyncWithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
+             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(idConta, nomeAgencia, numeroAgencia, numeroConta, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista contas banc\u00C3\u00A1rias portador Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+        /// Lista contas banc\u00E1rias portador Esse recurso permite listar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idConta">C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o (optional)</param>
-        /// <param name="nomeAgencia">Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia (optional)</param>
-        /// <param name="numeroConta">N\u00C3\u00BAmero da conta (optional)</param>
-        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED) (optional)</param>
-        /// <param name="idPessoaFisica">C\u00C3\u00B3digo da pessoa (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da conta cart\u00E3o (optional)</param>
+        /// <param name="nomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroConta">N\u00FAmero da conta (optional)</param>
+        /// <param name="flagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED) (optional)</param>
+        /// <param name="idPessoaFisica">C\u00F3digo da pessoa (optional)</param>
         /// <param name="favorecido">Nome do favorecido (optional)</param>
         /// <param name="numeroReceiraFederal">Documento do favorecido (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET14AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET15AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, string numeroAgencia = null, string numeroConta = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -1747,9 +2161,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1758,37 +2172,37 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        public PageTransferenciaBancariaResponse ListarUsingGET47 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageTransferenciaBancariaResponse ListarUsingGET49 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET47WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET49WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET47WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET49WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ListarUsingGET47");
+                throw new ApiException(400, "Missing required parameter 'id' when calling TransferenciaBancariaApi->ListarUsingGET49");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -1838,9 +2252,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1850,36 +2264,36 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET47Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET49Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET47AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET49AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+        /// Listar as transfer\u00EAncias banc\u00E1rias realizadas Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
-        /// <param name="idContaBancariaDestino">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idContaBancariaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET47AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET49AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET47");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET49");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -1929,9 +2343,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1940,7 +2354,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Cadastra uma conta banc\u00E1ria do portador Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -1952,7 +2366,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Cadastra uma conta banc\u00E1ria do portador Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2026,7 +2440,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Cadastra uma conta banc\u00E1ria do portador Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2039,7 +2453,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastra uma conta banc\u00C3\u00A1ria do portador Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+        /// Cadastra uma conta banc\u00E1ria do portador Esse recurso permite cadastrar contas banc\u00E1rias do portador.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2110,7 +2524,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -2122,7 +2536,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -2196,7 +2610,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -2209,7 +2623,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+        /// Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -2280,7 +2694,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2292,7 +2706,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2366,7 +2780,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2379,7 +2793,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2450,7 +2864,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -2463,7 +2877,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
@@ -2543,7 +2957,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
@@ -2557,7 +2971,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+        /// Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>

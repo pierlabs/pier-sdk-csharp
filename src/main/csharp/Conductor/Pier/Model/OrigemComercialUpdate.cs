@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial
+    /// Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial
     /// </summary>
     [DataContract]
     public partial class OrigemComercialUpdate :  IEquatable<OrigemComercialUpdate>
@@ -45,26 +45,26 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OrigemComercialUpdate" />class.
         /// </summary>
         /// <param name="Nome">Nome da origem comercial.</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o da origem comercial.</param>
         /// <param name="IdEstabelecimento">Identificador do estabelecimento.</param>
         /// <param name="IdTipoOrigemComercial">Identificador do tipo de origem comercial.</param>
         /// <param name="IdGrupoOrigemComercial">Identificador do grupo de origem comercial.</param>
         /// <param name="Status">Indica o status da origem comercial.</param>
-        /// <param name="FlagPreAprovado">Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="FlagAprovacaoImediata">Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata.</param>
-        /// <param name="NomeFantasiaPlastico">Nome fantasia impresso no pl\u00C3\u00A1stico.</param>
-        /// <param name="FlagCartaoProvisorio">Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio.</param>
-        /// <param name="FlagCartaoDefinitivo">Indica se permite cart\u00C3\u00A3o definitivo.</param>
-        /// <param name="Usuario">Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="Senha">Senha para autentica\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="FlagOrigemExterna">Indica se \u00C3\u00A9 origem externa.</param>
-        /// <param name="FlagModificado">Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o.</param>
+        /// <param name="FlagPreAprovado">Indica se permite pr\u00E9 aprova\u00E7\u00E3o.</param>
+        /// <param name="FlagAprovacaoImediata">Indica se permite aprova\u00E7\u00E3o imediata.</param>
+        /// <param name="NomeFantasiaPlastico">Nome fantasia impresso no pl\u00E1stico.</param>
+        /// <param name="FlagCartaoProvisorio">Indica se permite cart\u00E3o provis\u00F3rio.</param>
+        /// <param name="FlagCartaoDefinitivo">Indica se permite cart\u00E3o definitivo.</param>
+        /// <param name="Usuario">Usu\u00E1rio para autentica\u00E7\u00E3o.</param>
+        /// <param name="Senha">Senha para autentica\u00E7\u00E3o.</param>
+        /// <param name="FlagOrigemExterna">Indica se \u00E9 origem externa.</param>
+        /// <param name="FlagModificado">Indica se h\u00E1 modifica\u00E7\u00E3o.</param>
         /// <param name="FlagEnviaFaturaUsuario">Indica se envia fatura.</param>
-        /// <param name="FlagCreditoFaturamento">Indica se permite cr\u00C3\u00A9dito de faturamento.</param>
-        /// <param name="FlagConcedeLimiteProvisorio">Indica se concede limite provis\u00C3\u00B3rio.</param>
+        /// <param name="FlagCreditoFaturamento">Indica se permite cr\u00E9dito de faturamento.</param>
+        /// <param name="FlagConcedeLimiteProvisorio">Indica se concede limite provis\u00F3rio.</param>
         /// <param name="FlagDigitalizarDoc">Indica se digitaliza documento.</param>
         /// <param name="FlagEmbossingLoja">Indica se realiza embossing em loja.</param>
-        /// <param name="FlagConsultaPrevia">Indica se realiza consulta pr\u00C3\u00A9via.</param>
+        /// <param name="FlagConsultaPrevia">Indica se realiza consulta pr\u00E9via.</param>
         /// <param name="TipoPessoa">Tipo de pessoa.</param>
 
         public OrigemComercialUpdate(string Nome = null, string Descricao = null, long? IdEstabelecimento = null, long? IdTipoOrigemComercial = null, long? IdGrupoOrigemComercial = null, int? Status = null, bool? FlagPreAprovado = null, bool? FlagAprovacaoImediata = null, string NomeFantasiaPlastico = null, bool? FlagCartaoProvisorio = null, bool? FlagCartaoDefinitivo = null, string Usuario = null, string Senha = null, bool? FlagOrigemExterna = null, bool? FlagModificado = null, bool? FlagEnviaFaturaUsuario = null, bool? FlagCreditoFaturamento = null, bool? FlagConcedeLimiteProvisorio = null, bool? FlagDigitalizarDoc = null, bool? FlagEmbossingLoja = null, bool? FlagConsultaPrevia = null, TipoPessoaEnum? TipoPessoa = null)
@@ -103,9 +103,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+        /// Descri\u00E7\u00E3o da origem comercial
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial</value>
+        /// <value>Descri\u00E7\u00E3o da origem comercial</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
@@ -138,65 +138,65 @@ namespace Conductor.Pier.Model
         public int? Status { get; set; }
     
         /// <summary>
-        /// Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+        /// Indica se permite pr\u00E9 aprova\u00E7\u00E3o
         /// </summary>
-        /// <value>Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Indica se permite pr\u00E9 aprova\u00E7\u00E3o</value>
         [DataMember(Name="flagPreAprovado", EmitDefaultValue=false)]
         public bool? FlagPreAprovado { get; set; }
     
         /// <summary>
-        /// Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+        /// Indica se permite aprova\u00E7\u00E3o imediata
         /// </summary>
-        /// <value>Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata</value>
+        /// <value>Indica se permite aprova\u00E7\u00E3o imediata</value>
         [DataMember(Name="flagAprovacaoImediata", EmitDefaultValue=false)]
         public bool? FlagAprovacaoImediata { get; set; }
     
         /// <summary>
-        /// Nome fantasia impresso no pl\u00C3\u00A1stico
+        /// Nome fantasia impresso no pl\u00E1stico
         /// </summary>
-        /// <value>Nome fantasia impresso no pl\u00C3\u00A1stico</value>
+        /// <value>Nome fantasia impresso no pl\u00E1stico</value>
         [DataMember(Name="nomeFantasiaPlastico", EmitDefaultValue=false)]
         public string NomeFantasiaPlastico { get; set; }
     
         /// <summary>
-        /// Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+        /// Indica se permite cart\u00E3o provis\u00F3rio
         /// </summary>
-        /// <value>Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio</value>
+        /// <value>Indica se permite cart\u00E3o provis\u00F3rio</value>
         [DataMember(Name="flagCartaoProvisorio", EmitDefaultValue=false)]
         public bool? FlagCartaoProvisorio { get; set; }
     
         /// <summary>
-        /// Indica se permite cart\u00C3\u00A3o definitivo
+        /// Indica se permite cart\u00E3o definitivo
         /// </summary>
-        /// <value>Indica se permite cart\u00C3\u00A3o definitivo</value>
+        /// <value>Indica se permite cart\u00E3o definitivo</value>
         [DataMember(Name="flagCartaoDefinitivo", EmitDefaultValue=false)]
         public bool? FlagCartaoDefinitivo { get; set; }
     
         /// <summary>
-        /// Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+        /// Usu\u00E1rio para autentica\u00E7\u00E3o
         /// </summary>
-        /// <value>Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Usu\u00E1rio para autentica\u00E7\u00E3o</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+        /// Senha para autentica\u00E7\u00E3o
         /// </summary>
-        /// <value>Senha para autentica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Senha para autentica\u00E7\u00E3o</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     
         /// <summary>
-        /// Indica se \u00C3\u00A9 origem externa
+        /// Indica se \u00E9 origem externa
         /// </summary>
-        /// <value>Indica se \u00C3\u00A9 origem externa</value>
+        /// <value>Indica se \u00E9 origem externa</value>
         [DataMember(Name="flagOrigemExterna", EmitDefaultValue=false)]
         public bool? FlagOrigemExterna { get; set; }
     
         /// <summary>
-        /// Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+        /// Indica se h\u00E1 modifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Indica se h\u00E1 modifica\u00E7\u00E3o</value>
         [DataMember(Name="flagModificado", EmitDefaultValue=false)]
         public bool? FlagModificado { get; set; }
     
@@ -208,16 +208,16 @@ namespace Conductor.Pier.Model
         public bool? FlagEnviaFaturaUsuario { get; set; }
     
         /// <summary>
-        /// Indica se permite cr\u00C3\u00A9dito de faturamento
+        /// Indica se permite cr\u00E9dito de faturamento
         /// </summary>
-        /// <value>Indica se permite cr\u00C3\u00A9dito de faturamento</value>
+        /// <value>Indica se permite cr\u00E9dito de faturamento</value>
         [DataMember(Name="flagCreditoFaturamento", EmitDefaultValue=false)]
         public bool? FlagCreditoFaturamento { get; set; }
     
         /// <summary>
-        /// Indica se concede limite provis\u00C3\u00B3rio
+        /// Indica se concede limite provis\u00F3rio
         /// </summary>
-        /// <value>Indica se concede limite provis\u00C3\u00B3rio</value>
+        /// <value>Indica se concede limite provis\u00F3rio</value>
         [DataMember(Name="flagConcedeLimiteProvisorio", EmitDefaultValue=false)]
         public bool? FlagConcedeLimiteProvisorio { get; set; }
     
@@ -236,9 +236,9 @@ namespace Conductor.Pier.Model
         public bool? FlagEmbossingLoja { get; set; }
     
         /// <summary>
-        /// Indica se realiza consulta pr\u00C3\u00A9via
+        /// Indica se realiza consulta pr\u00E9via
         /// </summary>
-        /// <value>Indica se realiza consulta pr\u00C3\u00A9via</value>
+        /// <value>Indica se realiza consulta pr\u00E9via</value>
         [DataMember(Name="flagConsultaPrevia", EmitDefaultValue=false)]
         public bool? FlagConsultaPrevia { get; set; }
     

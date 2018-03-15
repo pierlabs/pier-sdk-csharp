@@ -22,19 +22,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdicionalResponse" /> class.
         /// Initializes a new instance of the <see cref="AdicionalResponse" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional.</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional.</param>
+        /// <param name="IdPessoa">C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional.</param>
         /// <param name="Nome">Nome completo do Adicional.</param>
-        /// <param name="NomeImpresso">Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.</param>
-        /// <param name="NumeroReceitaFederal">N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.</param>
+        /// <param name="NomeImpresso">Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero do CPF ou CNPJ do Adicional.</param>
         /// <param name="DataNascimento">Data de Nascimento do Adicional.</param>
-        /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado)..</param>
-        /// <param name="NumeroIdentidade">N\u00C3\u00BAmero do Documento de Identidade do Adicional.</param>
-        /// <param name="OrgaoExpedidorIdentidade">Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.</param>
+        /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado)..</param>
+        /// <param name="NumeroIdentidade">N\u00FAmero do Documento de Identidade do Adicional.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.</param>
-        /// <param name="DataEmissaoIdentidade">Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional.</param>
-        /// <param name="IdParentesco">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.</param>
-        /// <param name="FlagAtivo">Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0.</param>
+        /// <param name="DataEmissaoIdentidade">Data de emiss\u00E3o do Documento de Identidade do Adicional.</param>
+        /// <param name="IdParentesco">C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.</param>
+        /// <param name="FlagAtivo">Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0.</param>
         /// <param name="DataCadastroPortador">Indica a data de cadastro do adicional.</param>
         /// <param name="DataCancelamentoPortador">Indica a data de cancelamento do adicional.</param>
 
@@ -60,16 +60,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional
+        /// C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional
+        /// C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
@@ -81,16 +81,16 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o
+        /// Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
         /// </summary>
-        /// <value>Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o</value>
+        /// <value>Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CPF ou CNPJ do Adicional
+        /// N\u00FAmero do CPF ou CNPJ do Adicional
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CPF ou CNPJ do Adicional</value>
+        /// <value>N\u00FAmero do CPF ou CNPJ do Adicional</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
@@ -102,23 +102,23 @@ namespace Conductor.Pier.Model
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Documento de Identidade do Adicional
+        /// N\u00FAmero do Documento de Identidade do Adicional
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Documento de Identidade do Adicional</value>
+        /// <value>N\u00FAmero do Documento de Identidade do Adicional</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional
+        /// Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
         /// </summary>
-        /// <value>Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional</value>
+        /// <value>Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
@@ -130,23 +130,23 @@ namespace Conductor.Pier.Model
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional
+        /// Data de emiss\u00E3o do Documento de Identidade do Adicional
         /// </summary>
-        /// <value>Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional</value>
+        /// <value>Data de emiss\u00E3o do Documento de Identidade do Adicional</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+        /// C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+        /// Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
         /// </summary>
-        /// <value>Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0</value>
+        /// <value>Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     

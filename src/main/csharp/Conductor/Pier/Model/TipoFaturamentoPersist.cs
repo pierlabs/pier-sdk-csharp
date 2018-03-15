@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoPersist" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoPersist" />class.
         /// </summary>
-        /// <param name="Descricao">Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. (required).</param>
-        /// <param name="FlagApenasDemonstrativo">Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. (required).</param>
-        /// <param name="IdConvenio">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do convenio relacionado ao tipo de faturamento..</param>
+        /// <param name="Descricao">Desci\u00E7\u00E3o do tipo de faturamento. (required).</param>
+        /// <param name="FlagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. (required).</param>
+        /// <param name="IdConvenio">C\u00F3digo de identifica\u00E7\u00E3o do convenio relacionado ao tipo de faturamento..</param>
 
         public TipoFaturamentoPersist(string Descricao = null, bool? FlagApenasDemonstrativo = null, long? IdConvenio = null)
         {
@@ -52,23 +52,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
+        /// Desci\u00E7\u00E3o do tipo de faturamento.
         /// </summary>
-        /// <value>Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.</value>
+        /// <value>Desci\u00E7\u00E3o do tipo de faturamento.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
+        /// Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
         /// </summary>
-        /// <value>Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.</value>
+        /// <value>Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.</value>
         [DataMember(Name="flagApenasDemonstrativo", EmitDefaultValue=false)]
         public bool? FlagApenasDemonstrativo { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do convenio relacionado ao tipo de faturamento.
+        /// C\u00F3digo de identifica\u00E7\u00E3o do convenio relacionado ao tipo de faturamento.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do convenio relacionado ao tipo de faturamento.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do convenio relacionado ao tipo de faturamento.</value>
         [DataMember(Name="idConvenio", EmitDefaultValue=false)]
         public long? IdConvenio { get; set; }
     

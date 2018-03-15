@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para cadastrar grupo econ\u00C3\u00B4mico
+    /// Par\u00E2metros de requisi\u00E7\u00E3o para cadastrar grupo econ\u00F4mico
     /// </summary>
     [DataContract]
     public partial class GrupoEconomicoDTO :  IEquatable<GrupoEconomicoDTO>
@@ -115,16 +115,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GrupoEconomicoDTO" /> class.
         /// Initializes a new instance of the <see cref="GrupoEconomicoDTO" />class.
         /// </summary>
-        /// <param name="RazaoSocial">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica (required).</param>
+        /// <param name="RazaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica (required).</param>
         /// <param name="NomeCredor">Nome do credor.</param>
-        /// <param name="NumeroReceitaFederal">N\u00C3\u00BAmero da Receita Federal (required).</param>
-        /// <param name="InscricaoEstadual">N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual.</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero da Receita Federal (required).</param>
+        /// <param name="InscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual.</param>
         /// <param name="Contato">Nome da pessoa para entrar em contato.</param>
-        /// <param name="Banco">C\u00C3\u00B3digo do banco.</param>
-        /// <param name="Agencia">Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica.</param>
-        /// <param name="DigitoAgencia">D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia.</param>
-        /// <param name="ContaCorrente">C\u00C3\u00B3digo da Conta Corrente.</param>
-        /// <param name="DigitoContaCorrente">D\u00C3\u00ADgito Verificador da Conta Corrente.</param>
+        /// <param name="Banco">C\u00F3digo do banco.</param>
+        /// <param name="Agencia">C\u00F3digo da ag\u00EAncia.</param>
+        /// <param name="DigitoAgencia">D\u00EDgito verificador da ag\u00EAncia.</param>
+        /// <param name="ContaCorrente">C\u00F3digo da Conta Corrente.</param>
+        /// <param name="DigitoContaCorrente">D\u00EDgito Verificador da Conta Corrente.</param>
         /// <param name="Periodicidade">Periodicidade do pagamento (required).</param>
         /// <param name="PagamentoSemanal">Dia para pagamento semanal.</param>
         /// <param name="PagamentoMensal">Dia da data para o pagamento mensal.</param>
@@ -133,6 +133,7 @@ namespace Conductor.Pier.Model
         /// <param name="PagamentoDecendialTerceiro">Dia da data para o terceiro pagamento decendial.</param>
         /// <param name="PagamentoQuinzenalPrimeiro">Dia da data para o primeiro pagamento quinzenal.</param>
         /// <param name="PagamentoQuinzenalSegundo">Dia da data para o segundo pagamento quinzenal.</param>
+        /// <param name="IdCredorRAV">Identificador do credor RAV (required).</param>
         /// <param name="PercentualRAV">Valor percentual do RAV do credor (required).</param>
         /// <param name="RecebeRAV">Indica se o credor recebe RAV e o tipo.</param>
         /// <param name="PercentualMultiplica">Percentual Multiplica.</param>
@@ -140,7 +141,7 @@ namespace Conductor.Pier.Model
         /// <param name="TaxaBanco">Taxa do Banco.</param>
         /// <param name="LimiteRAV">Valor limite do RAV.</param>
 
-        public GrupoEconomicoDTO(string RazaoSocial = null, string NomeCredor = null, string NumeroReceitaFederal = null, string InscricaoEstadual = null, string Contato = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, PeriodicidadeEnum? Periodicidade = null, PagamentoSemanalEnum? PagamentoSemanal = null, int? PagamentoMensal = null, int? PagamentoDecendialPrimeiro = null, int? PagamentoDecendialSegundo = null, int? PagamentoDecendialTerceiro = null, int? PagamentoQuinzenalPrimeiro = null, int? PagamentoQuinzenalSegundo = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdm = null, double? TaxaBanco = null, double? LimiteRAV = null)
+        public GrupoEconomicoDTO(string RazaoSocial = null, string NomeCredor = null, string NumeroReceitaFederal = null, string InscricaoEstadual = null, string Contato = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, PeriodicidadeEnum? Periodicidade = null, PagamentoSemanalEnum? PagamentoSemanal = null, int? PagamentoMensal = null, int? PagamentoDecendialPrimeiro = null, int? PagamentoDecendialSegundo = null, int? PagamentoDecendialTerceiro = null, int? PagamentoQuinzenalPrimeiro = null, int? PagamentoQuinzenalSegundo = null, long? IdCredorRAV = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdm = null, double? TaxaBanco = null, double? LimiteRAV = null)
         {
             // to ensure "RazaoSocial" is required (not null)
             if (RazaoSocial == null)
@@ -168,6 +169,15 @@ namespace Conductor.Pier.Model
             else
             {
                 this.Periodicidade = Periodicidade;
+            }
+            // to ensure "IdCredorRAV" is required (not null)
+            if (IdCredorRAV == null)
+            {
+                throw new InvalidDataException("IdCredorRAV is a required property for GrupoEconomicoDTO and cannot be null");
+            }
+            else
+            {
+                this.IdCredorRAV = IdCredorRAV;
             }
             // to ensure "PercentualRAV" is required (not null)
             if (PercentualRAV == null)
@@ -203,9 +213,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+        /// Raz\u00E3o social da pessoa jur\u00EDdica
         /// </summary>
-        /// <value>Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica</value>
+        /// <value>Raz\u00E3o social da pessoa jur\u00EDdica</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
@@ -217,16 +227,16 @@ namespace Conductor.Pier.Model
         public string NomeCredor { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da Receita Federal
+        /// N\u00FAmero da Receita Federal
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da Receita Federal</value>
+        /// <value>N\u00FAmero da Receita Federal</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+        /// N\u00FAmero da inscri\u00E7\u00E3o estadual
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual</value>
+        /// <value>N\u00FAmero da inscri\u00E7\u00E3o estadual</value>
         [DataMember(Name="inscricaoEstadual", EmitDefaultValue=false)]
         public string InscricaoEstadual { get; set; }
     
@@ -238,37 +248,37 @@ namespace Conductor.Pier.Model
         public string Contato { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do banco
+        /// C\u00F3digo do banco
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do banco</value>
+        /// <value>C\u00F3digo do banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public int? Banco { get; set; }
     
         /// <summary>
-        /// Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+        /// C\u00F3digo da ag\u00EAncia
         /// </summary>
-        /// <value>Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica</value>
+        /// <value>C\u00F3digo da ag\u00EAncia</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public int? Agencia { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+        /// D\u00EDgito verificador da ag\u00EAncia
         /// </summary>
-        /// <value>D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia</value>
+        /// <value>D\u00EDgito verificador da ag\u00EAncia</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo da Conta Corrente
+        /// C\u00F3digo da Conta Corrente
         /// </summary>
-        /// <value>C\u00C3\u00B3digo da Conta Corrente</value>
+        /// <value>C\u00F3digo da Conta Corrente</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// D\u00C3\u00ADgito Verificador da Conta Corrente
+        /// D\u00EDgito Verificador da Conta Corrente
         /// </summary>
-        /// <value>D\u00C3\u00ADgito Verificador da Conta Corrente</value>
+        /// <value>D\u00EDgito Verificador da Conta Corrente</value>
         [DataMember(Name="digitoContaCorrente", EmitDefaultValue=false)]
         public string DigitoContaCorrente { get; set; }
     
@@ -313,6 +323,13 @@ namespace Conductor.Pier.Model
         /// <value>Dia da data para o segundo pagamento quinzenal</value>
         [DataMember(Name="pagamentoQuinzenalSegundo", EmitDefaultValue=false)]
         public int? PagamentoQuinzenalSegundo { get; set; }
+    
+        /// <summary>
+        /// Identificador do credor RAV
+        /// </summary>
+        /// <value>Identificador do credor RAV</value>
+        [DataMember(Name="idCredorRAV", EmitDefaultValue=false)]
+        public long? IdCredorRAV { get; set; }
     
         /// <summary>
         /// Valor percentual do RAV do credor
@@ -375,6 +392,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PagamentoDecendialTerceiro: ").Append(PagamentoDecendialTerceiro).Append("\n");
             sb.Append("  PagamentoQuinzenalPrimeiro: ").Append(PagamentoQuinzenalPrimeiro).Append("\n");
             sb.Append("  PagamentoQuinzenalSegundo: ").Append(PagamentoQuinzenalSegundo).Append("\n");
+            sb.Append("  IdCredorRAV: ").Append(IdCredorRAV).Append("\n");
             sb.Append("  PercentualRAV: ").Append(PercentualRAV).Append("\n");
             sb.Append("  RecebeRAV: ").Append(RecebeRAV).Append("\n");
             sb.Append("  PercentualMultiplica: ").Append(PercentualMultiplica).Append("\n");
@@ -509,6 +527,11 @@ namespace Conductor.Pier.Model
                     this.PagamentoQuinzenalSegundo.Equals(other.PagamentoQuinzenalSegundo)
                 ) && 
                 (
+                    this.IdCredorRAV == other.IdCredorRAV ||
+                    this.IdCredorRAV != null &&
+                    this.IdCredorRAV.Equals(other.IdCredorRAV)
+                ) && 
+                (
                     this.PercentualRAV == other.PercentualRAV ||
                     this.PercentualRAV != null &&
                     this.PercentualRAV.Equals(other.PercentualRAV)
@@ -605,6 +628,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.PagamentoQuinzenalSegundo != null)
                     hash = hash * 59 + this.PagamentoQuinzenalSegundo.GetHashCode();
+                
+                if (this.IdCredorRAV != null)
+                    hash = hash * 59 + this.IdCredorRAV.GetHashCode();
                 
                 if (this.PercentualRAV != null)
                     hash = hash * 59 + this.PercentualRAV.GetHashCode();

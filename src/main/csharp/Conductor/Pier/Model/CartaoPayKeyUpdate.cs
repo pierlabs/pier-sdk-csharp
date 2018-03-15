@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso de atualiza\u00C3\u00A7\u00C3\u00A3o de chave
+    /// Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave
     /// </summary>
     [DataContract]
     public partial class CartaoPayKeyUpdate :  IEquatable<CartaoPayKeyUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoPayKeyUpdate" /> class.
         /// Initializes a new instance of the <see cref="CartaoPayKeyUpdate" />class.
         /// </summary>
-        /// <param name="ChaveCriptograma">Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada (required).</param>
+        /// <param name="ChaveCriptograma">Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada (required).</param>
 
         public CartaoPayKeyUpdate(string ChaveCriptograma = null)
         {
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada
+        /// Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
         /// </summary>
-        /// <value>Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada</value>
+        /// <value>Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada</value>
         [DataMember(Name="chaveCriptograma", EmitDefaultValue=false)]
         public string ChaveCriptograma { get; set; }
     

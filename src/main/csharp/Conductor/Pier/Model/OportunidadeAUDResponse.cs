@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades
+    /// Representa\u00E7\u00E3o da resposta do recurso Oportunidades
     /// </summary>
     [DataContract]
     public partial class OportunidadeAUDResponse :  IEquatable<OportunidadeAUDResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OportunidadeAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="OportunidadeAUDResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador da oportunidade.</param>
-        /// <param name="IdTipoOportunidade">C\u00C3\u00B3digo identificador do tipo oportunidade.</param>
-        /// <param name="IdStatusOportunidade">C\u00C3\u00B3digo identificador do status oportunidade.</param>
+        /// <param name="Id">C\u00F3digo identificador da oportunidade.</param>
+        /// <param name="IdTipoOportunidade">C\u00F3digo identificador do tipo oportunidade.</param>
+        /// <param name="IdStatusOportunidade">C\u00F3digo identificador do status oportunidade.</param>
         /// <param name="DataCadastro">Data cadastro da oportunidade..</param>
-        /// <param name="DataAtualizacao">Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade..</param>
-        /// <param name="NumeroReceitaFederal">N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade.</param>
-        /// <param name="DataInicioVigencia">In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade.</param>
-        /// <param name="DataFimVigencia">fim da vig\u00C3\u00AAncia da oportunidade.</param>
-        /// <param name="FlagAtivo">Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa.</param>
+        /// <param name="DataAtualizacao">Data atualiza\u00E7\u00E3o da oportunidade..</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade.</param>
+        /// <param name="DataInicioVigencia">In\u00EDcio da vig\u00EAncia da oportunidade.</param>
+        /// <param name="DataFimVigencia">fim da vig\u00EAncia da oportunidade.</param>
+        /// <param name="FlagAtivo">Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa.</param>
         /// <param name="Detalhes">Lista de detalhes da oportunidade.</param>
         /// <param name="RevDate">Data da auditoria.</param>
         /// <param name="RevType">Tipo da auditoria.</param>
@@ -56,23 +56,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da oportunidade
+        /// C\u00F3digo identificador da oportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da oportunidade</value>
+        /// <value>C\u00F3digo identificador da oportunidade</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do tipo oportunidade
+        /// C\u00F3digo identificador do tipo oportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do tipo oportunidade</value>
+        /// <value>C\u00F3digo identificador do tipo oportunidade</value>
         [DataMember(Name="idTipoOportunidade", EmitDefaultValue=false)]
         public long? IdTipoOportunidade { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do status oportunidade
+        /// C\u00F3digo identificador do status oportunidade
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do status oportunidade</value>
+        /// <value>C\u00F3digo identificador do status oportunidade</value>
         [DataMember(Name="idStatusOportunidade", EmitDefaultValue=false)]
         public long? IdStatusOportunidade { get; set; }
     
@@ -84,37 +84,37 @@ namespace Conductor.Pier.Model
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+        /// Data atualiza\u00E7\u00E3o da oportunidade.
         /// </summary>
-        /// <value>Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.</value>
+        /// <value>Data atualiza\u00E7\u00E3o da oportunidade.</value>
         [DataMember(Name="dataAtualizacao", EmitDefaultValue=false)]
         public string DataAtualizacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+        /// N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
         /// </summary>
-        /// <value>N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade</value>
+        /// <value>N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+        /// In\u00EDcio da vig\u00EAncia da oportunidade
         /// </summary>
-        /// <value>In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade</value>
+        /// <value>In\u00EDcio da vig\u00EAncia da oportunidade</value>
         [DataMember(Name="dataInicioVigencia", EmitDefaultValue=false)]
         public string DataInicioVigencia { get; set; }
     
         /// <summary>
-        /// fim da vig\u00C3\u00AAncia da oportunidade
+        /// fim da vig\u00EAncia da oportunidade
         /// </summary>
-        /// <value>fim da vig\u00C3\u00AAncia da oportunidade</value>
+        /// <value>fim da vig\u00EAncia da oportunidade</value>
         [DataMember(Name="dataFimVigencia", EmitDefaultValue=false)]
         public string DataFimVigencia { get; set; }
     
         /// <summary>
-        /// Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+        /// Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
         /// </summary>
-        /// <value>Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa</value>
+        /// <value>Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

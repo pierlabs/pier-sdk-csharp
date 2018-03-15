@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+    /// Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
     /// </summary>
     [DataContract]
     public partial class ParcelamentoTransferenciaResponse :  IEquatable<ParcelamentoTransferenciaResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParcelamentoTransferenciaResponse" /> class.
         /// Initializes a new instance of the <see cref="ParcelamentoTransferenciaResponse" />class.
         /// </summary>
-        /// <param name="NumeroParcela">N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis..</param>
+        /// <param name="NumeroParcela">N\u00FAmero de parcelas dispon\u00EDveis..</param>
         /// <param name="ValorParcelas">Valor das demais parcelas..</param>
         /// <param name="ValorTotal">Valor total do financiamento..</param>
-        /// <param name="ValorTAC">Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="ValorIOF">IOF.</param>
+        /// <param name="ValorTAC">Valor da tarifa de contrata\u00E7\u00E3o..</param>
+        /// <param name="ValorIOF">IOF calculado para o cliente.</param>
         /// <param name="TaxaJuros">Valor da taxa de juros..</param>
         /// <param name="CetAnual">CET anual..</param>
 
@@ -44,9 +44,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+        /// N\u00FAmero de parcelas dispon\u00EDveis.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.</value>
+        /// <value>N\u00FAmero de parcelas dispon\u00EDveis.</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public int? NumeroParcela { get; set; }
     
@@ -65,16 +65,16 @@ namespace Conductor.Pier.Model
         public double? ValorTotal { get; set; }
     
         /// <summary>
-        /// Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+        /// Valor da tarifa de contrata\u00E7\u00E3o.
         /// </summary>
-        /// <value>Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Valor da tarifa de contrata\u00E7\u00E3o.</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// IOF
+        /// IOF calculado para o cliente
         /// </summary>
-        /// <value>IOF</value>
+        /// <value>IOF calculado para o cliente</value>
         [DataMember(Name="valorIOF", EmitDefaultValue=false)]
         public double? ValorIOF { get; set; }
     

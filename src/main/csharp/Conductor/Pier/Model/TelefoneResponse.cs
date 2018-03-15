@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneResponse" /> class.
         /// Initializes a new instance of the <see cref="TelefoneResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone..</param>
-        /// <param name="IdTipoTelefone">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence..</param>
-        /// <param name="Ddd">C\u00C3\u00B3digo DDD do telefone..</param>
-        /// <param name="Telefone">N\u00C3\u00BAmero do telefone..</param>
-        /// <param name="Ramal">N\u00C3\u00BAmero do ramal..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone..</param>
+        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence..</param>
+        /// <param name="Ddd">C\u00F3digo DDD do telefone..</param>
+        /// <param name="Telefone">N\u00FAmero do telefone..</param>
+        /// <param name="Ramal">N\u00FAmero do ramal..</param>
         /// <param name="Status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo.</param>
 
         public TelefoneResponse(long? Id = null, long? IdTipoTelefone = null, long? IdPessoa = null, string Ddd = null, string Telefone = null, string Ramal = null, int? Status = null)
@@ -44,44 +44,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo DDD do telefone.
+        /// C\u00F3digo DDD do telefone.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo DDD do telefone.</value>
+        /// <value>C\u00F3digo DDD do telefone.</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do telefone.
+        /// N\u00FAmero do telefone.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do telefone.</value>
+        /// <value>N\u00FAmero do telefone.</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do ramal.
+        /// N\u00FAmero do ramal.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do ramal.</value>
+        /// <value>N\u00FAmero do ramal.</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

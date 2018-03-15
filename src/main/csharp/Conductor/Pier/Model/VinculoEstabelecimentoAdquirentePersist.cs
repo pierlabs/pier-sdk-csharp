@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="IdEstabelecimento">Apresenta o id do estabelecimento. (required).</param>
         /// <param name="IdAdquirente">Apresenta o id do adquirente. (required).</param>
-        /// <param name="CodigoEstabelecimentoAdquirente">Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente. (required).</param>
+        /// <param name="CodigoEstabelecimentoAdquirente">Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente. (required).</param>
 
         public VinculoEstabelecimentoAdquirentePersist(long? IdEstabelecimento = null, long? IdAdquirente = null, string CodigoEstabelecimentoAdquirente = null)
         {
@@ -74,9 +74,9 @@ namespace Conductor.Pier.Model
         public long? IdAdquirente { get; set; }
     
         /// <summary>
-        /// Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+        /// Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
         /// </summary>
-        /// <value>Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.</value>
+        /// <value>Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.</value>
         [DataMember(Name="codigoEstabelecimentoAdquirente", EmitDefaultValue=false)]
         public string CodigoEstabelecimentoAdquirente { get; set; }
     

@@ -22,37 +22,37 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaFisicaAprovadaResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaFisicaAprovadaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id).</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id).</param>
         /// <param name="Nome">Apresenta o nome completo da pessoa fisica. (required).</param>
-        /// <param name="NomeMae">Apresenta o nome da m\u00C3\u00A3e da pessoa fisica.</param>
+        /// <param name="NomeMae">Apresenta o nome da m\u00E3e da pessoa fisica.</param>
         /// <param name="DataNascimento">Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd..</param>
-        /// <param name="Sexo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino)..</param>
-        /// <param name="Cpf">N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF) (required).</param>
-        /// <param name="NumeroIdentidade">N\u00C3\u00BAmero da identidade..</param>
-        /// <param name="OrgaoExpedidorIdentidade">Org\u00C3\u00A3o expedidor da Identidade..</param>
+        /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino)..</param>
+        /// <param name="Cpf">N\u00FAmero do Cadastro de Pessoa Fisica (CPF) (required).</param>
+        /// <param name="NumeroIdentidade">N\u00FAmero da identidade..</param>
+        /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor da Identidade..</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
-        /// <param name="DataEmissaoIdentidade">Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd.</param>
+        /// <param name="DataEmissaoIdentidade">Data emiss\u00E3o da Identidade no formato aaaa-MM-dd.</param>
         /// <param name="IdEstadoCivil">Id Estado civil da pessoa fisica.</param>
-        /// <param name="IdProfissao">Profiss\u00C3\u00A3o da pessoa fisica.</param>
-        /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica.</param>
+        /// <param name="IdProfissao">Profiss\u00E3o da pessoa fisica.</param>
+        /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica.</param>
         /// <param name="IdNacionalidade">Id Nacionalidade da pessoa fisica.</param>
         /// <param name="IdOrigemComercial">Id da origem comercial (required).</param>
         /// <param name="IdProduto">Id do produto (required).</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
-        /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia..</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente..</param>
         /// <param name="Email">Email da pessoa fisica.</param>
         /// <param name="DiaVencimento">Dia vencimento (required).</param>
-        /// <param name="NomeImpresso">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
+        /// <param name="NomeImpresso">Nome que deve ser impresso no cart\u00E3o.</param>
         /// <param name="NomeEmpresa">Nome da empresa.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada.</param>
-        /// <param name="IdProposta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada.</param>
+        /// <param name="IdProposta">C\u00F3digo de identifica\u00E7\u00E3o da proposta.</param>
         /// <param name="CanalEntrada">Indica o canal pelo qual o cadastro do cliente foi realizado.</param>
-        /// <param name="ValorPontuacao">Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0).</param>
+        /// <param name="ValorPontuacao">Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0).</param>
         /// <param name="Telefones">Apresenta os telefones da empresa.</param>
-        /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros (required).</param>
+        /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros (required).</param>
         /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
-        /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es (required).</param>
-        /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras (required).</param>
+        /// <param name="LimiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es (required).</param>
+        /// <param name="LimiteParcelas">Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras (required).</param>
         /// <param name="LimiteConsignado">Valor do limite de margem consignado (required).</param>
 
         public PessoaFisicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null)
@@ -174,9 +174,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -188,9 +188,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+        /// Apresenta o nome da m\u00E3e da pessoa fisica
         /// </summary>
-        /// <value>Apresenta o nome da m\u00C3\u00A3e da pessoa fisica</value>
+        /// <value>Apresenta o nome da m\u00E3e da pessoa fisica</value>
         [DataMember(Name="nomeMae", EmitDefaultValue=false)]
         public string NomeMae { get; set; }
     
@@ -202,30 +202,30 @@ namespace Conductor.Pier.Model
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino).</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF)
+        /// N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Cadastro de Pessoa Fisica (CPF)</value>
+        /// <value>N\u00FAmero do Cadastro de Pessoa Fisica (CPF)</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da identidade.
+        /// N\u00FAmero da identidade.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da identidade.</value>
+        /// <value>N\u00FAmero da identidade.</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Org\u00C3\u00A3o expedidor da Identidade.
+        /// Org\u00E3o expedidor da Identidade.
         /// </summary>
-        /// <value>Org\u00C3\u00A3o expedidor da Identidade.</value>
+        /// <value>Org\u00E3o expedidor da Identidade.</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
@@ -237,9 +237,9 @@ namespace Conductor.Pier.Model
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
+        /// Data emiss\u00E3o da Identidade no formato aaaa-MM-dd
         /// </summary>
-        /// <value>Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd</value>
+        /// <value>Data emiss\u00E3o da Identidade no formato aaaa-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
@@ -251,16 +251,16 @@ namespace Conductor.Pier.Model
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// Profiss\u00C3\u00A3o da pessoa fisica
+        /// Profiss\u00E3o da pessoa fisica
         /// </summary>
-        /// <value>Profiss\u00C3\u00A3o da pessoa fisica</value>
+        /// <value>Profiss\u00E3o da pessoa fisica</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public string IdProfissao { get; set; }
     
         /// <summary>
-        /// Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+        /// Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
         /// </summary>
-        /// <value>Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica</value>
+        /// <value>Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica</value>
         [DataMember(Name="idNaturezaOcupacao", EmitDefaultValue=false)]
         public long? IdNaturezaOcupacao { get; set; }
     
@@ -286,16 +286,16 @@ namespace Conductor.Pier.Model
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+        /// N\u00FAmero da ag\u00EAncia.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
+        /// <value>N\u00FAmero da ag\u00EAncia.</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da conta corrente.
+        /// N\u00FAmero da conta corrente.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta corrente.</value>
+        /// <value>N\u00FAmero da conta corrente.</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
@@ -314,9 +314,9 @@ namespace Conductor.Pier.Model
         public int? DiaVencimento { get; set; }
     
         /// <summary>
-        /// Nome que deve ser impresso no cart\u00C3\u00A3o
+        /// Nome que deve ser impresso no cart\u00E3o
         /// </summary>
-        /// <value>Nome que deve ser impresso no cart\u00C3\u00A3o</value>
+        /// <value>Nome que deve ser impresso no cart\u00E3o</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
@@ -328,16 +328,16 @@ namespace Conductor.Pier.Model
         public string NomeEmpresa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+        /// C\u00F3digo de identifica\u00E7\u00E3o da proposta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da proposta</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
@@ -349,9 +349,9 @@ namespace Conductor.Pier.Model
         public string CanalEntrada { get; set; }
     
         /// <summary>
-        /// Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+        /// Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
         /// </summary>
-        /// <value>Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)</value>
+        /// <value>Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)</value>
         [DataMember(Name="valorPontuacao", EmitDefaultValue=false)]
         public int? ValorPontuacao { get; set; }
     
@@ -363,9 +363,9 @@ namespace Conductor.Pier.Model
         public List<TelefonePessoaAprovadaResponse> Telefones { get; set; }
     
         /// <summary>
-        /// Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+        /// Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
         /// </summary>
-        /// <value>Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros</value>
+        /// <value>Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros</value>
         [DataMember(Name="enderecos", EmitDefaultValue=false)]
         public List<EnderecoAprovadoResponse> Enderecos { get; set; }
     
@@ -377,16 +377,16 @@ namespace Conductor.Pier.Model
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+        /// Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
         /// </summary>
-        /// <value>Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es</value>
+        /// <value>Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es</value>
         [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
         public double? LimiteMaximo { get; set; }
     
         /// <summary>
-        /// Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+        /// Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
         /// </summary>
-        /// <value>Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras</value>
+        /// <value>Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     

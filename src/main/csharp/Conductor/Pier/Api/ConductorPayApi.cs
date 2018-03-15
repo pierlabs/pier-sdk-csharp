@@ -18,120 +18,120 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>CartaoPayAtualizarChaveResponse</returns>
         CartaoPayAtualizarChaveResponse AtualizarChaveUsingPOST (string deviceId, long? id);
   
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>ApiResponse of CartaoPayAtualizarChaveResponse</returns>
         ApiResponse<CartaoPayAtualizarChaveResponse> AtualizarChaveUsingPOSTWithHttpInfo (string deviceId, long? id);
         
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o
+        /// Atualiza os dados do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>CartaoPayResponse</returns>
         CartaoPayResponse AtualizarUsingPUT (string deviceId, long? id, CartaoPayUpdate update);
   
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o
+        /// Atualiza os dados do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of CartaoPayResponse</returns>
         ApiResponse<CartaoPayResponse> AtualizarUsingPUTWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update);
         
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>CartaoPayConfirmarChaveResponse</returns>
         CartaoPayConfirmarChaveResponse ConfirmaAtualizacaoChaveUsingPOST (string deviceId, long? id, CartaoPayKeyUpdate update);
   
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of CartaoPayConfirmarChaveResponse</returns>
         ApiResponse<CartaoPayConfirmarChaveResponse> ConfirmaAtualizacaoChaveUsingPOSTWithHttpInfo (string deviceId, long? id, CartaoPayKeyUpdate update);
         
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>CartaoPayDetalheResponse</returns>
-        CartaoPayDetalheResponse ConsultarUsingGET7 (string deviceId, long? id);
+        CartaoPayDetalheResponse ConsultarUsingGET8 (string deviceId, long? id);
   
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET7WithHttpInfo (string deviceId, long? id);
+        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET8WithHttpInfo (string deviceId, long? id);
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
         List<Object> ListarCodigosRespostaUsingGET ();
   
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// Lista os modos entradas
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -151,27 +151,27 @@ namespace Conductor.Pier.Api
         /// Lista os modos entradas
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarModosEntradaUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
         List<Object> ListarOperacoesUsingGET ();
   
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -181,7 +181,7 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -191,69 +191,69 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarTiposTerminaisUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Lista os tipos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
         List<Object> ListarTiposTransacoesUsingGET ();
   
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Lista os tipos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarTiposTransacoesUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados
+        /// Lista os cart\u00F5es cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param>
         /// <returns>PageCartaoPayResponse</returns>
-        PageCartaoPayResponse ListarUsingGET9 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        PageCartaoPayResponse ListarUsingGET10 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
   
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados
+        /// Lista os cart\u00F5es cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param>
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        ApiResponse<PageCartaoPayResponse> ListarUsingGET9WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        ApiResponse<PageCartaoPayResponse> ListarUsingGET10WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+        /// Cria\u00E7\u00E3o de cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
@@ -262,10 +262,10 @@ namespace Conductor.Pier.Api
         CartaoPayCadastroResponse SalvarUsingPOST6 (string deviceId, CartaoPayPersist persist);
   
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+        /// Cria\u00E7\u00E3o de cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
@@ -278,120 +278,120 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of CartaoPayAtualizarChaveResponse</returns>
         System.Threading.Tasks.Task<CartaoPayAtualizarChaveResponse> AtualizarChaveUsingPOSTAsync (string deviceId, long? id);
 
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoPayAtualizarChaveResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoPayAtualizarChaveResponse>> AtualizarChaveUsingPOSTAsyncWithHttpInfo (string deviceId, long? id);
         
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o
+        /// Atualiza os dados do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of CartaoPayResponse</returns>
         System.Threading.Tasks.Task<CartaoPayResponse> AtualizarUsingPUTAsync (string deviceId, long? id, CartaoPayUpdate update);
 
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o
+        /// Atualiza os dados do cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (CartaoPayResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoPayResponse>> AtualizarUsingPUTAsyncWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update);
         
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of CartaoPayConfirmarChaveResponse</returns>
         System.Threading.Tasks.Task<CartaoPayConfirmarChaveResponse> ConfirmaAtualizacaoChaveUsingPOSTAsync (string deviceId, long? id, CartaoPayKeyUpdate update);
 
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (CartaoPayConfirmarChaveResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoPayConfirmarChaveResponse>> ConfirmaAtualizacaoChaveUsingPOSTAsyncWithHttpInfo (string deviceId, long? id, CartaoPayKeyUpdate update);
         
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET7Async (string deviceId, long? id);
+        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET8Async (string deviceId, long? id);
 
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o
+        /// Apresenta os dados de um determinado cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET7AsyncWithHttpInfo (string deviceId, long? id);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET8AsyncWithHttpInfo (string deviceId, long? id);
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
         System.Threading.Tasks.Task<List<Object>> ListarCodigosRespostaUsingGETAsync ();
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -401,7 +401,7 @@ namespace Conductor.Pier.Api
         /// Lista os modos entradas
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -411,27 +411,27 @@ namespace Conductor.Pier.Api
         /// Lista os modos entradas
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarModosEntradaUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
         System.Threading.Tasks.Task<List<Object>> ListarOperacoesUsingGETAsync ();
 
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es
+        /// Lista as opera\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -441,7 +441,7 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -451,69 +451,69 @@ namespace Conductor.Pier.Api
         /// Lista os tipos de terminais
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposTerminaisUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Lista os tipos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
         System.Threading.Tasks.Task<List<Object>> ListarTiposTransacoesUsingGETAsync ();
 
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+        /// Lista os tipos de transa\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposTransacoesUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados
+        /// Lista os cart\u00F5es cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET9Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET10Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
 
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados
+        /// Lista os cart\u00F5es cadastrados
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET9AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET10AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+        /// Cria\u00E7\u00E3o de cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
@@ -522,10 +522,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST6Async (string deviceId, CartaoPayPersist persist);
 
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+        /// Cria\u00E7\u00E3o de cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
@@ -626,11 +626,11 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>CartaoPayAtualizarChaveResponse</returns>
         public CartaoPayAtualizarChaveResponse AtualizarChaveUsingPOST (string deviceId, long? id)
         {
@@ -639,11 +639,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of CartaoPayAtualizarChaveResponse</returns>
         public ApiResponse< CartaoPayAtualizarChaveResponse > AtualizarChaveUsingPOSTWithHttpInfo (string deviceId, long? id)
         {
@@ -713,11 +713,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of CartaoPayAtualizarChaveResponse</returns>
         public async System.Threading.Tasks.Task<CartaoPayAtualizarChaveResponse> AtualizarChaveUsingPOSTAsync (string deviceId, long? id)
         {
@@ -727,11 +727,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+        /// Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoPayAtualizarChaveResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoPayAtualizarChaveResponse>> AtualizarChaveUsingPOSTAsyncWithHttpInfo (string deviceId, long? id)
         {
@@ -796,11 +796,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Atualiza os dados do cart\u00E3o Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>CartaoPayResponse</returns>
         public CartaoPayResponse AtualizarUsingPUT (string deviceId, long? id, CartaoPayUpdate update)
@@ -810,11 +810,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Atualiza os dados do cart\u00E3o Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of CartaoPayResponse</returns>
         public ApiResponse< CartaoPayResponse > AtualizarUsingPUTWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update)
@@ -896,11 +896,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Atualiza os dados do cart\u00E3o Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of CartaoPayResponse</returns>
         public async System.Threading.Tasks.Task<CartaoPayResponse> AtualizarUsingPUTAsync (string deviceId, long? id, CartaoPayUpdate update)
@@ -911,11 +911,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Atualiza os dados do cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+        /// Atualiza os dados do cart\u00E3o Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (CartaoPayResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoPayResponse>> AtualizarUsingPUTAsyncWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update)
@@ -990,11 +990,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>CartaoPayConfirmarChaveResponse</returns>
         public CartaoPayConfirmarChaveResponse ConfirmaAtualizacaoChaveUsingPOST (string deviceId, long? id, CartaoPayKeyUpdate update)
@@ -1004,11 +1004,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of CartaoPayConfirmarChaveResponse</returns>
         public ApiResponse< CartaoPayConfirmarChaveResponse > ConfirmaAtualizacaoChaveUsingPOSTWithHttpInfo (string deviceId, long? id, CartaoPayKeyUpdate update)
@@ -1090,11 +1090,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of CartaoPayConfirmarChaveResponse</returns>
         public async System.Threading.Tasks.Task<CartaoPayConfirmarChaveResponse> ConfirmaAtualizacaoChaveUsingPOSTAsync (string deviceId, long? id, CartaoPayKeyUpdate update)
@@ -1105,11 +1105,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (CartaoPayConfirmarChaveResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CartaoPayConfirmarChaveResponse>> ConfirmaAtualizacaoChaveUsingPOSTAsyncWithHttpInfo (string deviceId, long? id, CartaoPayKeyUpdate update)
@@ -1184,35 +1184,35 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>CartaoPayDetalheResponse</returns>
-        public CartaoPayDetalheResponse ConsultarUsingGET7 (string deviceId, long? id)
+        public CartaoPayDetalheResponse ConsultarUsingGET8 (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET7WithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET8WithHttpInfo(deviceId, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param> 
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param> 
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET7WithHttpInfo (string deviceId, long? id)
+        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET8WithHttpInfo (string deviceId, long? id)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->ConsultarUsingGET7");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConductorPayApi->ConsultarUsingGET8");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ConductorPayApi->ConsultarUsingGET7");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ConductorPayApi->ConsultarUsingGET8");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1259,9 +1259,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1271,32 +1271,32 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET7Async (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET8Async (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET8AsyncWithHttpInfo(deviceId, id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de um determinado cart\u00C3\u00A3o Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+        /// Apresenta os dados de um determinado cart\u00E3o Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
-        /// <param name="id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).</param>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET7AsyncWithHttpInfo (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET8AsyncWithHttpInfo (string deviceId, long? id)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET7");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET8");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET7");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET8");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1343,9 +1343,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1354,7 +1354,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -1365,7 +1365,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -1427,7 +1427,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -1439,7 +1439,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+        /// Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -1500,7 +1500,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -1511,7 +1511,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -1573,7 +1573,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -1585,7 +1585,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os modos entradas Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -1646,7 +1646,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista as opera\u00E7\u00F5es Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -1657,7 +1657,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista as opera\u00E7\u00F5es Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -1719,7 +1719,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista as opera\u00E7\u00F5es Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -1731,7 +1731,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista as opera\u00C3\u00A7\u00C3\u00B5es Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+        /// Lista as opera\u00E7\u00F5es Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -1792,7 +1792,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os tipos de terminais Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Lista os tipos de terminais Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -1803,7 +1803,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os tipos de terminais Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Lista os tipos de terminais Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -1865,7 +1865,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os tipos de terminais Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Lista os tipos de terminais Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -1877,7 +1877,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os tipos de terminais Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+        /// Lista os tipos de terminais Este m\u00E9todo retorna a lista dos tipos de terminais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -1938,7 +1938,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Lista os tipos de transa\u00E7\u00F5es Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -1949,7 +1949,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Lista os tipos de transa\u00E7\u00F5es Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -2011,7 +2011,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Lista os tipos de transa\u00E7\u00F5es Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -2023,7 +2023,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+        /// Lista os tipos de transa\u00E7\u00F5es Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -2084,34 +2084,34 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Lista os cart\u00F5es cadastrados Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param> 
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param> 
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param> 
         /// <returns>PageCartaoPayResponse</returns>
-        public PageCartaoPayResponse ListarUsingGET9 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public PageCartaoPayResponse ListarUsingGET10 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET9WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET10WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Lista os cart\u00F5es cadastrados Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param> 
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param> 
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param> 
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param> 
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        public ApiResponse< PageCartaoPayResponse > ListarUsingGET9WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public ApiResponse< PageCartaoPayResponse > ListarUsingGET10WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
             
     
@@ -2163,9 +2163,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2175,35 +2175,35 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Lista os cart\u00F5es cadastrados Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET9Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET10Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET9AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os cart\u00C3\u00B5es cadastrados Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+        /// Lista os cart\u00F5es cadastrados Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado (optional)</param>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="status">Status do cart\u00C3\u00A3o tokenizado (optional)</param>
-        /// <param name="numeroCartao">Numero do cart\u00C3\u00A3o tokenizado (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="status">Status do cart\u00E3o tokenizado (optional)</param>
+        /// <param name="numeroCartao">Numero do cart\u00E3o tokenizado (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET9AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET10AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
             
     
@@ -2255,9 +2255,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2266,7 +2266,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Cria\u00E7\u00E3o de cart\u00E3o Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
@@ -2279,7 +2279,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Cria\u00E7\u00E3o de cart\u00E3o Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param> 
@@ -2359,7 +2359,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Cria\u00E7\u00E3o de cart\u00E3o Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>
@@ -2373,7 +2373,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+        /// Cria\u00E7\u00E3o de cart\u00E3o Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device id criptografado</param>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Autoriza\u00C3\u00A7\u00C3\u00A3o
+    /// Objeto de Requisi\u00E7\u00E3o de Autoriza\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class AutorizacaoOnUsRequest :  IEquatable<AutorizacaoOnUsRequest>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AutorizacaoOnUsRequest" /> class.
         /// Initializes a new instance of the <see cref="AutorizacaoOnUsRequest" />class.
         /// </summary>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de Parcelas. (required).</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
-        /// <param name="CodigoSegurancaCartao">C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o..</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
-        /// <param name="NumeroRealCartao">N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o. (required).</param>
-        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM (required).</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV). (required).</param>
+        /// <param name="NsuOrigem">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou. (required).</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de Parcelas. (required).</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o. (required).</param>
+        /// <param name="CodigoSegurancaCartao">C\u00F3digo de Seguran\u00E7a do Cart\u00E3o..</param>
+        /// <param name="ValorTransacao">Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos. (required).</param>
+        /// <param name="NumeroRealCartao">N\u00FAmero Real do Cart\u00E3o. (required).</param>
+        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00E3o. Ex: AAMM (required).</param>
+        /// <param name="NumeroEstabelecimento">N\u00FAmero do Estabelecimento (N\u00FAmero+DV). (required).</param>
         /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
 
         public AutorizacaoOnUsRequest(string NsuOrigem = null, long? NumeroParcelas = null, string CodigoProcessamento = null, string CodigoSegurancaCartao = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
         {
@@ -122,58 +122,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de Parcelas.
+        /// N\u00FAmero de Parcelas.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de Parcelas.</value>
+        /// <value>N\u00FAmero de Parcelas.</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public long? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+        /// C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.</value>
         [DataMember(Name="codigoSegurancaCartao", EmitDefaultValue=false)]
         public string CodigoSegurancaCartao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+        /// Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.</value>
+        /// <value>Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+        /// N\u00FAmero Real do Cart\u00E3o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.</value>
+        /// <value>N\u00FAmero Real do Cart\u00E3o.</value>
         [DataMember(Name="numeroRealCartao", EmitDefaultValue=false)]
         public string NumeroRealCartao { get; set; }
     
         /// <summary>
-        /// Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+        /// Data de Validade do Cart\u00E3o. Ex: AAMM
         /// </summary>
-        /// <value>Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM</value>
+        /// <value>Data de Validade do Cart\u00E3o. Ex: AAMM</value>
         [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
         public string DataValidadeCartao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+        /// N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).</value>
+        /// <value>N\u00FAmero do Estabelecimento (N\u00FAmero+DV).</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
@@ -185,9 +185,9 @@ namespace Conductor.Pier.Model
         public string DataHoraTerminal { get; set; }
     
         /// <summary>
-        /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+        /// Apresenta a identifica\u00E7\u00E3o do terminal requisitante
         /// </summary>
-        /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
+        /// <value>Apresenta a identifica\u00E7\u00E3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     

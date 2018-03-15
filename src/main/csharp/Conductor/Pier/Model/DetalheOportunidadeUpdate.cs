@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalheOportunidadeUpdate" /> class.
         /// Initializes a new instance of the <see cref="DetalheOportunidadeUpdate" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do detalhe.</param>
-        /// <param name="NomeCampo">Nome do conte\u00C3\u00BAdo.</param>
-        /// <param name="Conteudo">Conte\u00C3\u00BAdo do detalhe.</param>
+        /// <param name="Id">C\u00F3digo identificador do detalhe.</param>
+        /// <param name="NomeCampo">Nome do conte\u00FAdo.</param>
+        /// <param name="Conteudo">Conte\u00FAdo do detalhe.</param>
 
         public DetalheOportunidadeUpdate(long? Id = null, string NomeCampo = null, string Conteudo = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do detalhe
+        /// C\u00F3digo identificador do detalhe
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do detalhe</value>
+        /// <value>C\u00F3digo identificador do detalhe</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do conte\u00C3\u00BAdo
+        /// Nome do conte\u00FAdo
         /// </summary>
-        /// <value>Nome do conte\u00C3\u00BAdo</value>
+        /// <value>Nome do conte\u00FAdo</value>
         [DataMember(Name="nomeCampo", EmitDefaultValue=false)]
         public string NomeCampo { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do detalhe
+        /// Conte\u00FAdo do detalhe
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do detalhe</value>
+        /// <value>Conte\u00FAdo do detalhe</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta da requisi\u00C3\u00A7\u00C3\u00A3o para atualizar a chave do criptograma
+    /// Resposta da requisi\u00E7\u00E3o para atualizar a chave do criptograma
     /// </summary>
     [DataContract]
     public partial class CartaoPayAtualizarChaveResponse :  IEquatable<CartaoPayAtualizarChaveResponse>
     { 
     
         /// <summary>
-        /// Status do cart\u00C3\u00A3o
+        /// Status do cart\u00E3o
         /// </summary>
-        /// <value>Status do cart\u00C3\u00A3o</value>
+        /// <value>Status do cart\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do cart\u00C3\u00A3o
+        /// Status do cart\u00E3o
         /// </summary>
-        /// <value>Status do cart\u00C3\u00A3o</value>
+        /// <value>Status do cart\u00E3o</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -47,14 +47,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoPayAtualizarChaveResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoPayAtualizarChaveResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do cart\u00C3\u00A3o.</param>
-        /// <param name="NumeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado.</param>
-        /// <param name="DataValidadeCartao">Data de validade do cart\u00C3\u00A3o.</param>
-        /// <param name="NomeImpresso">Nome impresso no cart\u00C3\u00A3o criptografado.</param>
-        /// <param name="IdEntidade">Identificador do emissor do cart\u00C3\u00A3o.</param>
-        /// <param name="NomeEntidade">Nome do emissor do cart\u00C3\u00A3o.</param>
-        /// <param name="Status">Status do cart\u00C3\u00A3o.</param>
-        /// <param name="ChaveCriptograma">Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptograda.</param>
+        /// <param name="Id">Id do cart\u00E3o.</param>
+        /// <param name="NumeroCartao">N\u00FAmero do cart\u00E3o real criptografado.</param>
+        /// <param name="DataValidadeCartao">Data de validade do cart\u00E3o.</param>
+        /// <param name="NomeImpresso">Nome impresso no cart\u00E3o criptografado.</param>
+        /// <param name="IdEntidade">Identificador do emissor do cart\u00E3o.</param>
+        /// <param name="NomeEntidade">Nome do emissor do cart\u00E3o.</param>
+        /// <param name="Status">Status do cart\u00E3o.</param>
+        /// <param name="ChaveCriptograma">Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptograda.</param>
 
         public CartaoPayAtualizarChaveResponse(long? Id = null, string NumeroCartao = null, string DataValidadeCartao = null, string NomeImpresso = null, long? IdEntidade = null, string NomeEntidade = null, StatusEnum? Status = null, string ChaveCriptograma = null)
         {
@@ -71,51 +71,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do cart\u00C3\u00A3o
+        /// Id do cart\u00E3o
         /// </summary>
-        /// <value>Id do cart\u00C3\u00A3o</value>
+        /// <value>Id do cart\u00E3o</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado
+        /// N\u00FAmero do cart\u00E3o real criptografado
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado</value>
+        /// <value>N\u00FAmero do cart\u00E3o real criptografado</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Data de validade do cart\u00C3\u00A3o
+        /// Data de validade do cart\u00E3o
         /// </summary>
-        /// <value>Data de validade do cart\u00C3\u00A3o</value>
+        /// <value>Data de validade do cart\u00E3o</value>
         [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
         public string DataValidadeCartao { get; set; }
     
         /// <summary>
-        /// Nome impresso no cart\u00C3\u00A3o criptografado
+        /// Nome impresso no cart\u00E3o criptografado
         /// </summary>
-        /// <value>Nome impresso no cart\u00C3\u00A3o criptografado</value>
+        /// <value>Nome impresso no cart\u00E3o criptografado</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Identificador do emissor do cart\u00C3\u00A3o
+        /// Identificador do emissor do cart\u00E3o
         /// </summary>
-        /// <value>Identificador do emissor do cart\u00C3\u00A3o</value>
+        /// <value>Identificador do emissor do cart\u00E3o</value>
         [DataMember(Name="idEntidade", EmitDefaultValue=false)]
         public long? IdEntidade { get; set; }
     
         /// <summary>
-        /// Nome do emissor do cart\u00C3\u00A3o
+        /// Nome do emissor do cart\u00E3o
         /// </summary>
-        /// <value>Nome do emissor do cart\u00C3\u00A3o</value>
+        /// <value>Nome do emissor do cart\u00E3o</value>
         [DataMember(Name="nomeEntidade", EmitDefaultValue=false)]
         public string NomeEntidade { get; set; }
     
         /// <summary>
-        /// Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptograda
+        /// Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptograda
         /// </summary>
-        /// <value>Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptograda</value>
+        /// <value>Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptograda</value>
         [DataMember(Name="chaveCriptograma", EmitDefaultValue=false)]
         public string ChaveCriptograma { get; set; }
     

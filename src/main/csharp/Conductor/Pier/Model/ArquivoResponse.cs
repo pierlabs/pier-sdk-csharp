@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.</param>
-        /// <param name="IdTipoArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo.</param>
-        /// <param name="NomeTipoArquivo">Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo.</param>
-        /// <param name="IdStatusArquivo">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo.</param>
-        /// <param name="NomeStatusArquivo">Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do arquivo.</param>
+        /// <param name="IdTipoArquivo">C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo.</param>
+        /// <param name="NomeTipoArquivo">Descri\u00E7\u00E3o do tipo do arquivo.</param>
+        /// <param name="IdStatusArquivo">C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo.</param>
+        /// <param name="NomeStatusArquivo">Desci\u00E7\u00E3o do status do arquivo.</param>
         /// <param name="Nome">Nome do arquivo.</param>
-        /// <param name="Extensao">Formato/Extens\u00C3\u00A3o do arquivo.</param>
-        /// <param name="DataInclusao">Data de inclus\u00C3\u00A3o do arquivo..</param>
-        /// <param name="DataAlteracao">Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo..</param>
-        /// <param name="Detalhes">Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo..</param>
+        /// <param name="Extensao">Formato/Extens\u00E3o do arquivo.</param>
+        /// <param name="DataInclusao">Data de inclus\u00E3o do arquivo..</param>
+        /// <param name="DataAlteracao">Data da \u00FAltima altera\u00E7\u00E3o do aquivo..</param>
+        /// <param name="Detalhes">Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo..</param>
 
         public ArquivoResponse(long? Id = null, long? IdTipoArquivo = null, string NomeTipoArquivo = null, long? IdStatusArquivo = null, string NomeStatusArquivo = null, string Nome = null, string Extensao = null, string DataInclusao = null, string DataAlteracao = null, List<ArquivoParametroResponse> Detalhes = null)
         {
@@ -50,37 +50,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+        /// C\u00F3digo de identifica\u00E7\u00E3o do arquivo
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do arquivo</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
+        /// C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo</value>
         [DataMember(Name="idTipoArquivo", EmitDefaultValue=false)]
         public long? IdTipoArquivo { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+        /// Descri\u00E7\u00E3o do tipo do arquivo
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo</value>
+        /// <value>Descri\u00E7\u00E3o do tipo do arquivo</value>
         [DataMember(Name="nomeTipoArquivo", EmitDefaultValue=false)]
         public string NomeTipoArquivo { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+        /// C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo</value>
         [DataMember(Name="idStatusArquivo", EmitDefaultValue=false)]
         public long? IdStatusArquivo { get; set; }
     
         /// <summary>
-        /// Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+        /// Desci\u00E7\u00E3o do status do arquivo
         /// </summary>
-        /// <value>Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo</value>
+        /// <value>Desci\u00E7\u00E3o do status do arquivo</value>
         [DataMember(Name="nomeStatusArquivo", EmitDefaultValue=false)]
         public string NomeStatusArquivo { get; set; }
     
@@ -92,30 +92,30 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Formato/Extens\u00C3\u00A3o do arquivo
+        /// Formato/Extens\u00E3o do arquivo
         /// </summary>
-        /// <value>Formato/Extens\u00C3\u00A3o do arquivo</value>
+        /// <value>Formato/Extens\u00E3o do arquivo</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00C3\u00A3o do arquivo.
+        /// Data de inclus\u00E3o do arquivo.
         /// </summary>
-        /// <value>Data de inclus\u00C3\u00A3o do arquivo.</value>
+        /// <value>Data de inclus\u00E3o do arquivo.</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+        /// Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
         /// </summary>
-        /// <value>Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.</value>
+        /// <value>Data da \u00FAltima altera\u00E7\u00E3o do aquivo.</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     
         /// <summary>
-        /// Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
+        /// Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
         /// </summary>
-        /// <value>Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.</value>
+        /// <value>Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.</value>
         [DataMember(Name="detalhes", EmitDefaultValue=false)]
         public List<ArquivoParametroResponse> Detalhes { get; set; }
     

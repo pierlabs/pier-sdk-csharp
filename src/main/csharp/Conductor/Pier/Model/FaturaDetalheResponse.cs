@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+        /// Situa\u00E7\u00E3o de Processamento da fatura.
         /// </summary>
-        /// <value>Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.</value>
+        /// <value>Situa\u00E7\u00E3o de Processamento da fatura.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SituacaoProcessamentoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+        /// Situa\u00E7\u00E3o de Processamento da fatura.
         /// </summary>
-        /// <value>Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.</value>
+        /// <value>Situa\u00E7\u00E3o de Processamento da fatura.</value>
         [DataMember(Name="situacaoProcessamento", EmitDefaultValue=false)]
         public SituacaoProcessamentoEnum? SituacaoProcessamento { get; set; }
     
@@ -47,15 +47,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaDetalheResponse" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta..</param>
-        /// <param name="SituacaoProcessamento">Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura..</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta..</param>
+        /// <param name="SituacaoProcessamento">Situa\u00E7\u00E3o de Processamento da fatura..</param>
         /// <param name="PagamentoEfetuado">Status de pagamento efetuado..</param>
         /// <param name="DataVencimentoFatura">Data de vencimento da fatura..</param>
         /// <param name="DataVencimentoReal">Data de vencimento real da fatura..</param>
         /// <param name="DataFechamento">Data de fechamento da fatura..</param>
         /// <param name="ValorTotal">Valor total da fatura..</param>
-        /// <param name="ValorPagamentoMinimo">Valor do pagamento m\u00C3\u00ADnimo..</param>
-        /// <param name="LancamentosFaturaResponse">Lista de lan\u00C3\u00A7amentos da fatura..</param>
+        /// <param name="ValorPagamentoMinimo">Valor do pagamento m\u00EDnimo..</param>
+        /// <param name="LancamentosFaturaResponse">Lista de lan\u00E7amentos da fatura..</param>
         /// <param name="SaldoAnterior">Valor do saldo anterior..</param>
 
         public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null)
@@ -75,9 +75,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta.</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
@@ -117,16 +117,16 @@ namespace Conductor.Pier.Model
         public double? ValorTotal { get; set; }
     
         /// <summary>
-        /// Valor do pagamento m\u00C3\u00ADnimo.
+        /// Valor do pagamento m\u00EDnimo.
         /// </summary>
-        /// <value>Valor do pagamento m\u00C3\u00ADnimo.</value>
+        /// <value>Valor do pagamento m\u00EDnimo.</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// Lista de lan\u00C3\u00A7amentos da fatura.
+        /// Lista de lan\u00E7amentos da fatura.
         /// </summary>
-        /// <value>Lista de lan\u00C3\u00A7amentos da fatura.</value>
+        /// <value>Lista de lan\u00E7amentos da fatura.</value>
         [DataMember(Name="lancamentosFaturaResponse", EmitDefaultValue=false)]
         public List<LancamentoFaturaResponse> LancamentosFaturaResponse { get; set; }
     

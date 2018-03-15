@@ -21,32 +21,32 @@ namespace Conductor.Pier.Api
         /// Consultar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse ConsultarUsingGET4 (long? id);
+        AvisoViagemResponse ConsultarUsingGET5 (long? id);
   
         /// <summary>
         /// Consultar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> ConsultarUsingGET4WithHttpInfo (long? id);
+        ApiResponse<AvisoViagemResponse> ConsultarUsingGET5WithHttpInfo (long? id);
         
         /// <summary>
         /// Desabilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>AvisoViagemResponse</returns>
         AvisoViagemResponse DesabilitarUsingPOST (long? id);
   
@@ -54,10 +54,10 @@ namespace Conductor.Pier.Api
         /// Desabilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
         ApiResponse<AvisoViagemResponse> DesabilitarUsingPOSTWithHttpInfo (long? id);
         
@@ -65,10 +65,10 @@ namespace Conductor.Pier.Api
         /// Habilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>AvisoViagemResponse</returns>
         AvisoViagemResponse HabilitarUsingPOST (long? id);
   
@@ -76,10 +76,10 @@ namespace Conductor.Pier.Api
         /// Habilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
         ApiResponse<AvisoViagemResponse> HabilitarUsingPOSTWithHttpInfo (long? id);
         
@@ -87,47 +87,47 @@ namespace Conductor.Pier.Api
         /// Lista os avisos viagens gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param>
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param>
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param>
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <returns>PageAvisoViagemResponse</returns>
-        PageAvisoViagemResponse ListarUsingGET6 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        PageAvisoViagemResponse ListarUsingGET7 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
   
         /// <summary>
         /// Lista os avisos viagens gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param>
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param>
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param>
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <returns>ApiResponse of PageAvisoViagemResponse</returns>
-        ApiResponse<PageAvisoViagemResponse> ListarUsingGET6WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        ApiResponse<PageAvisoViagemResponse> ListarUsingGET7WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
         
         /// <summary>
         /// Realiza o cadastro de um novo Aviso Viagem
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>AvisoViagemResponse</returns>
@@ -137,11 +137,11 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo Aviso Viagem
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
@@ -155,32 +155,32 @@ namespace Conductor.Pier.Api
         /// Consultar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET4Async (long? id);
+        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET5Async (long? id);
 
         /// <summary>
         /// Consultar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET4AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desabilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of AvisoViagemResponse</returns>
         System.Threading.Tasks.Task<AvisoViagemResponse> DesabilitarUsingPOSTAsync (long? id);
 
@@ -188,10 +188,10 @@ namespace Conductor.Pier.Api
         /// Desabilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> DesabilitarUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -199,10 +199,10 @@ namespace Conductor.Pier.Api
         /// Habilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of AvisoViagemResponse</returns>
         System.Threading.Tasks.Task<AvisoViagemResponse> HabilitarUsingPOSTAsync (long? id);
 
@@ -210,10 +210,10 @@ namespace Conductor.Pier.Api
         /// Habilitar um aviso viagem de acordo com o id passado
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> HabilitarUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -221,47 +221,47 @@ namespace Conductor.Pier.Api
         /// Lista os avisos viagens gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param>
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param>
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param>
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <returns>Task of PageAvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET6Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET7Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
 
         /// <summary>
         /// Lista os avisos viagens gerados pelo Emissor
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param>
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param>
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param>
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageAvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET6AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET7AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
         
         /// <summary>
         /// Realiza o cadastro de um novo Aviso Viagem
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of AvisoViagemResponse</returns>
@@ -271,11 +271,11 @@ namespace Conductor.Pier.Api
         /// Realiza o cadastro de um novo Aviso Viagem
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
@@ -374,29 +374,29 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Consultar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Consultar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse ConsultarUsingGET4 (long? id)
+        public AvisoViagemResponse ConsultarUsingGET5 (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarUsingGET4WithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consultar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Consultar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > ConsultarUsingGET4WithHttpInfo (long? id)
+        public ApiResponse< AvisoViagemResponse > ConsultarUsingGET5WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->ConsultarUsingGET4");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->ConsultarUsingGET5");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -442,9 +442,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -454,28 +454,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consultar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Consultar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET4Async (long? id)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET5Async (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarUsingGET4AsyncWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consultar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+        /// Consultar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET4AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET4");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -521,9 +521,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -532,10 +532,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param> 
         /// <returns>AvisoViagemResponse</returns>
         public AvisoViagemResponse DesabilitarUsingPOST (long? id)
         {
@@ -544,10 +544,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
         public ApiResponse< AvisoViagemResponse > DesabilitarUsingPOSTWithHttpInfo (long? id)
         {
@@ -612,10 +612,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of AvisoViagemResponse</returns>
         public async System.Threading.Tasks.Task<AvisoViagemResponse> DesabilitarUsingPOSTAsync (long? id)
         {
@@ -625,10 +625,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+        /// Desabilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> DesabilitarUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -690,10 +690,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param> 
         /// <returns>AvisoViagemResponse</returns>
         public AvisoViagemResponse HabilitarUsingPOST (long? id)
         {
@@ -702,10 +702,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
         public ApiResponse< AvisoViagemResponse > HabilitarUsingPOSTWithHttpInfo (long? id)
         {
@@ -770,10 +770,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of AvisoViagemResponse</returns>
         public async System.Threading.Tasks.Task<AvisoViagemResponse> HabilitarUsingPOSTAsync (long? id)
         {
@@ -783,10 +783,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+        /// Habilitar um aviso viagem de acordo com o id passado Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> HabilitarUsingPOSTAsyncWithHttpInfo (long? id)
         {
@@ -848,38 +848,38 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os avisos viagens gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Lista os avisos viagens gerados pelo Emissor Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param> 
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param> 
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param> 
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param> 
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param> 
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param> 
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param> 
         /// <returns>PageAvisoViagemResponse</returns>
-        public PageAvisoViagemResponse ListarUsingGET6 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public PageAvisoViagemResponse ListarUsingGET7 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
-             ApiResponse<PageAvisoViagemResponse> localVarResponse = ListarUsingGET6WithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
+             ApiResponse<PageAvisoViagemResponse> localVarResponse = ListarUsingGET7WithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os avisos viagens gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Lista os avisos viagens gerados pelo Emissor Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param> 
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param> 
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param> 
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param> 
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param> 
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param> 
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param> 
         /// <returns>ApiResponse of PageAvisoViagemResponse</returns>
-        public ApiResponse< PageAvisoViagemResponse > ListarUsingGET6WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public ApiResponse< PageAvisoViagemResponse > ListarUsingGET7WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
             
     
@@ -933,9 +933,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -945,39 +945,39 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os avisos viagens gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Lista os avisos viagens gerados pelo Emissor Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param>
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param>
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param>
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <returns>Task of PageAvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET6Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET7Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
-             ApiResponse<PageAvisoViagemResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
+             ApiResponse<PageAvisoViagemResponse> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os avisos viagens gerados pelo Emissor Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+        /// Lista os avisos viagens gerados pelo Emissor Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id) (optional)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id) (optional)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id) (optional)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem (optional)</param>
         /// <param name="dataFim">Data fim do aviso viagem (optional)</param>
-        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o (optional)</param>
+        /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageAvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET6AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET7AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
             
     
@@ -1031,9 +1031,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1042,11 +1042,11 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param> 
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param> 
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param> 
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param> 
         /// <param name="dataInicio">Data inicio do aviso viagem</param> 
         /// <param name="dataFim">Data fim do aviso viagem</param> 
         /// <returns>AvisoViagemResponse</returns>
@@ -1057,11 +1057,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param> 
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param> 
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param> 
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param> 
         /// <param name="dataInicio">Data inicio do aviso viagem</param> 
         /// <param name="dataFim">Data fim do aviso viagem</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
@@ -1143,11 +1143,11 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of AvisoViagemResponse</returns>
@@ -1159,11 +1159,11 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+        /// Realiza o cadastro de um novo Aviso Viagem Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idCartao">C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)</param>
-        /// <param name="codigoPais">Codigo identificador do pa\u00C3\u00ADs na base (id)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cart\u00E3o na base (id)</param>
+        /// <param name="codigoPais">Codigo identificador do pa\u00EDs na base (id)</param>
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>

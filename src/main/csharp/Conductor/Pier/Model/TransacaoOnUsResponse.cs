@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
+    /// Objeto de Resposta de Autoriza\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class TransacaoOnUsResponse :  IEquatable<TransacaoOnUsResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoOnUsResponse" /> class.
         /// Initializes a new instance of the <see cref="TransacaoOnUsResponse" />class.
         /// </summary>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou..</param>
-        /// <param name="NsuAutorizacao">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="PlanoDeParcelamento">Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="CodigoAutorizacao">C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador..</param>
-        /// <param name="NumeroMascaradoCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado..</param>
-        /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
+        /// <param name="NsuOrigem">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou..</param>
+        /// <param name="NsuAutorizacao">N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o..</param>
+        /// <param name="PlanoDeParcelamento">Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o..</param>
+        /// <param name="CodigoAutorizacao">C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador..</param>
+        /// <param name="NumeroMascaradoCartao">N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado..</param>
+        /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o..</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
 
         public TransacaoOnUsResponse(string NsuOrigem = null, string NsuAutorizacao = null, List<MapOfstringAndstring> PlanoDeParcelamento = null, string CodigoAutorizacao = null, string NumeroMascaradoCartao = null, string NomePortadorCartao = null, string TerminalRequisitante = null)
         {
@@ -52,51 +52,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.</value>
         [DataMember(Name="nsuAutorizacao", EmitDefaultValue=false)]
         public string NsuAutorizacao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.</value>
         [DataMember(Name="planoDeParcelamento", EmitDefaultValue=false)]
         public List<MapOfstringAndstring> PlanoDeParcelamento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
+        /// C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.</value>
+        /// <value>C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+        /// N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.</value>
+        /// <value>N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.</value>
         [DataMember(Name="numeroMascaradoCartao", EmitDefaultValue=false)]
         public string NumeroMascaradoCartao { get; set; }
     
         /// <summary>
-        /// Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
+        /// Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.</value>
         [DataMember(Name="nomePortadorCartao", EmitDefaultValue=false)]
         public string NomePortadorCartao { get; set; }
     
         /// <summary>
-        /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+        /// Apresenta a identifica\u00E7\u00E3o do terminal requisitante
         /// </summary>
-        /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
+        /// <value>Apresenta a identifica\u00E7\u00E3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha
+    /// Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
     /// </summary>
     [DataContract]
     public partial class PlanoCampanhaResponse :  IEquatable<PlanoCampanhaResponse>
@@ -25,7 +25,7 @@ namespace Conductor.Pier.Model
         /// <param name="Id">Identificador do plano de campanha.</param>
         /// <param name="Parcelas">Quantidade de parcelas.</param>
         /// <param name="Taxa">Taxa de juros.</param>
-        /// <param name="Usuario">Nome do usu\u00C3\u00A1rio.</param>
+        /// <param name="Usuario">Nome do usu\u00E1rio.</param>
 
         public PlanoCampanhaResponse(long? Id = null, int? Parcelas = null, double? Taxa = null, string Usuario = null)
         {
@@ -59,9 +59,9 @@ namespace Conductor.Pier.Model
         public double? Taxa { get; set; }
     
         /// <summary>
-        /// Nome do usu\u00C3\u00A1rio
+        /// Nome do usu\u00E1rio
         /// </summary>
-        /// <value>Nome do usu\u00C3\u00A1rio</value>
+        /// <value>Nome do usu\u00E1rio</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     

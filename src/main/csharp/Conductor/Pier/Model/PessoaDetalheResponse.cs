@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaDetalheResponse" />class.
         /// </summary>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo identificador da pessoa.</param>
-        /// <param name="NomeMae">Apresenta o nome da m\u00C3\u00A3e da pessoa fisica.</param>
+        /// <param name="IdPessoa">C\u00F3digo identificador da pessoa.</param>
+        /// <param name="NomeMae">Apresenta o nome da m\u00E3e da pessoa fisica.</param>
         /// <param name="IdEstadoCivil">Id Estado civil da pessoa fisica.</param>
-        /// <param name="IdProfissao">Profiss\u00C3\u00A3o da pessoa fisica.</param>
-        /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica.</param>
+        /// <param name="IdProfissao">Profiss\u00E3o da pessoa fisica.</param>
+        /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica.</param>
         /// <param name="IdNacionalidade">Id Nacionalidade da pessoa fisica.</param>
-        /// <param name="NumeroBanco">N\u00C3\u00BAmero do banco..</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
-        /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
+        /// <param name="NumeroBanco">N\u00FAmero do banco..</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia..</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente..</param>
         /// <param name="Email">Email da pessoa fisica.</param>
-        /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
+        /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00E3o.</param>
 
         public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
         {
@@ -52,16 +52,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da pessoa
+        /// C\u00F3digo identificador da pessoa
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da pessoa</value>
+        /// <value>C\u00F3digo identificador da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+        /// Apresenta o nome da m\u00E3e da pessoa fisica
         /// </summary>
-        /// <value>Apresenta o nome da m\u00C3\u00A3e da pessoa fisica</value>
+        /// <value>Apresenta o nome da m\u00E3e da pessoa fisica</value>
         [DataMember(Name="nomeMae", EmitDefaultValue=false)]
         public string NomeMae { get; set; }
     
@@ -73,16 +73,16 @@ namespace Conductor.Pier.Model
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// Profiss\u00C3\u00A3o da pessoa fisica
+        /// Profiss\u00E3o da pessoa fisica
         /// </summary>
-        /// <value>Profiss\u00C3\u00A3o da pessoa fisica</value>
+        /// <value>Profiss\u00E3o da pessoa fisica</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public string IdProfissao { get; set; }
     
         /// <summary>
-        /// Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+        /// Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
         /// </summary>
-        /// <value>Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica</value>
+        /// <value>Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica</value>
         [DataMember(Name="idNaturezaOcupacao", EmitDefaultValue=false)]
         public long? IdNaturezaOcupacao { get; set; }
     
@@ -94,23 +94,23 @@ namespace Conductor.Pier.Model
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do banco.
+        /// N\u00FAmero do banco.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do banco.</value>
+        /// <value>N\u00FAmero do banco.</value>
         [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
         public int? NumeroBanco { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+        /// N\u00FAmero da ag\u00EAncia.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
+        /// <value>N\u00FAmero da ag\u00EAncia.</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da conta corrente.
+        /// N\u00FAmero da conta corrente.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta corrente.</value>
+        /// <value>N\u00FAmero da conta corrente.</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
@@ -122,9 +122,9 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Nome que deve ser impresso no cart\u00C3\u00A3o
+        /// Nome que deve ser impresso no cart\u00E3o
         /// </summary>
-        /// <value>Nome que deve ser impresso no cart\u00C3\u00A3o</value>
+        /// <value>Nome que deve ser impresso no cart\u00E3o</value>
         [DataMember(Name="nomeEmpresa", EmitDefaultValue=false)]
         public string NomeEmpresa { get; set; }
     

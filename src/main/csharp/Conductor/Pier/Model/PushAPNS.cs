@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+    /// Objeto Push Notifica\u00E7\u00E3o APNS
     /// </summary>
     [DataContract]
     public partial class PushAPNS :  IEquatable<PushAPNS>
     { 
     
         /// <summary>
-        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
@@ -47,14 +47,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PushAPNS" /> class.
         /// Initializes a new instance of the <see cref="PushAPNS" />class.
         /// </summary>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
-        /// <param name="TokenDispositivo">Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push. (required).</param>
-        /// <param name="Certificado">Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64. (required).</param>
-        /// <param name="Senha">Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. (required).</param>
-        /// <param name="Titulo">Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o. (required).</param>
-        /// <param name="Conteudo">Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado. (required).</param>
-        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
+        /// <param name="IdPessoa">C\u00F3digo identificado da pessoa (required).</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta (required).</param>
+        /// <param name="TokenDispositivo">Apresenta o token do dispositivo que dever\u00E1 receber o push. (required).</param>
+        /// <param name="Certificado">Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64. (required).</param>
+        /// <param name="Senha">Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. (required).</param>
+        /// <param name="Titulo">Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o. (required).</param>
+        /// <param name="Conteudo">Apresenta o texto da notifica\u00E7\u00E3o a ser enviado. (required).</param>
+        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o (required).</param>
         /// <param name="Icone">Apresenta o nome do icone a ser apresentado no push..</param>
         /// <param name="Som">Apresenta o cor do icone a ser apresentado no push.</param>
 
@@ -139,51 +139,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificado da pessoa
+        /// C\u00F3digo identificado da pessoa
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificado da pessoa</value>
+        /// <value>C\u00F3digo identificado da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+        /// Apresenta o token do dispositivo que dever\u00E1 receber o push.
         /// </summary>
-        /// <value>Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.</value>
+        /// <value>Apresenta o token do dispositivo que dever\u00E1 receber o push.</value>
         [DataMember(Name="tokenDispositivo", EmitDefaultValue=false)]
         public string TokenDispositivo { get; set; }
     
         /// <summary>
-        /// Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+        /// Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
         /// </summary>
-        /// <value>Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.</value>
+        /// <value>Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.</value>
         [DataMember(Name="certificado", EmitDefaultValue=false)]
         public string Certificado { get; set; }
     
         /// <summary>
-        /// Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+        /// Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
         /// </summary>
-        /// <value>Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.</value>
+        /// <value>Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     
         /// <summary>
-        /// Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.</value>
         [DataMember(Name="titulo", EmitDefaultValue=false)]
         public string Titulo { get; set; }
     
         /// <summary>
-        /// Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+        /// Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
         /// </summary>
-        /// <value>Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.</value>
+        /// <value>Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

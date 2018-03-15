@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00C3\u00A2metros de resposta de risco de fraude
+    /// Par\u00E2metros de resposta de risco de fraude
     /// </summary>
     [DataContract]
     public partial class RiscoFraudeResponse :  IEquatable<RiscoFraudeResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="RiscoFraudeResponse" /> class.
         /// Initializes a new instance of the <see cref="RiscoFraudeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude.</param>
-        /// <param name="IdTipoResolucao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
-        /// <param name="DescricaoTipoResolucao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
-        /// <param name="FlagAltoRisco">Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.</param>
-        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DataTransacao">Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada.</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
-        /// <param name="NomeEstabelecimento">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude.</param>
+        /// <param name="IdTipoResolucao">C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro.</param>
+        /// <param name="DescricaoTipoResolucao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro.</param>
+        /// <param name="FlagAltoRisco">Quando ativa, indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="IdCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.</param>
+        /// <param name="IdTransacao">C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
+        /// <param name="DataTransacao">Data em que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada.</param>
+        /// <param name="ValorTransacao">Valor da transa\u00E7\u00E3o classificada com risco de fraude.</param>
+        /// <param name="NomeEstabelecimento">Valor da transa\u00E7\u00E3o classificada com risco de fraude.</param>
 
         public RiscoFraudeResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdTransacao = null, string DataTransacao = null, double? ValorTransacao = null, string NomeEstabelecimento = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+        /// C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro</value>
         [DataMember(Name="idTipoResolucao", EmitDefaultValue=false)]
         public long? IdTipoResolucao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+        /// Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro</value>
         [DataMember(Name="descricaoTipoResolucao", EmitDefaultValue=false)]
         public string DescricaoTipoResolucao { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+        /// Quando ativa, indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
         /// </summary>
-        /// <value>Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas</value>
+        /// <value>Quando ativa, indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas</value>
         [DataMember(Name="flagAltoRisco", EmitDefaultValue=false)]
         public bool? FlagAltoRisco { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+        /// C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+        /// Data em que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
         /// </summary>
-        /// <value>Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada</value>
+        /// <value>Data em que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada</value>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
         public string DataTransacao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Valor da transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude</value>
+        /// <value>Valor da transa\u00E7\u00E3o classificada com risco de fraude</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Valor da transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude</value>
+        /// <value>Valor da transa\u00E7\u00E3o classificada com risco de fraude</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     

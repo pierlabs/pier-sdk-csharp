@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+    /// Representa\u00E7\u00E3o da resposta para o recurso de Documento
     /// </summary>
     [DataContract]
     public partial class DocumentoDetalhadoResponse :  IEquatable<DocumentoDetalhadoResponse>
@@ -25,8 +25,8 @@ namespace Conductor.Pier.Model
         /// <param name="Id">ID do Documento..</param>
         /// <param name="IdTemplateDocumento">ID do Template de Documento associado..</param>
         /// <param name="Nome">Nome do Documento..</param>
-        /// <param name="Documento">Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64..</param>
-        /// <param name="Extensao">Extens\u00C3\u00A3o do Documento..</param>
+        /// <param name="Documento">Representa\u00E7\u00E3o do documento em Base64..</param>
+        /// <param name="Extensao">Extens\u00E3o do Documento..</param>
         /// <param name="DocumentoDetalhes">Detalhamento do documento..</param>
 
         public DocumentoDetalhadoResponse(long? Id = null, long? IdTemplateDocumento = null, string Nome = null, string Documento = null, string Extensao = null, List<DocumentoDetalheResponse> DocumentoDetalhes = null)
@@ -63,16 +63,16 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+        /// Representa\u00E7\u00E3o do documento em Base64.
         /// </summary>
-        /// <value>Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.</value>
+        /// <value>Representa\u00E7\u00E3o do documento em Base64.</value>
         [DataMember(Name="documento", EmitDefaultValue=false)]
         public string Documento { get; set; }
     
         /// <summary>
-        /// Extens\u00C3\u00A3o do Documento.
+        /// Extens\u00E3o do Documento.
         /// </summary>
-        /// <value>Extens\u00C3\u00A3o do Documento.</value>
+        /// <value>Extens\u00E3o do Documento.</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     

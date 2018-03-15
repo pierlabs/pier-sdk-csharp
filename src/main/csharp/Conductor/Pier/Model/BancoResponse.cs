@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BancoResponse" /> class.
         /// Initializes a new instance of the <see cref="BancoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id)..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id)..</param>
         /// <param name="Nome">Nome do banco.</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do banco.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do banco.</param>
         /// <param name="DigitoBanco">Digito do banco.</param>
 
         public BancoResponse(long? Id = null, string Nome = null, string Descricao = null, string DigitoBanco = null)
@@ -38,9 +38,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -52,9 +52,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do banco
+        /// Descri\u00E7\u00E3o do banco
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do banco</value>
+        /// <value>Descri\u00E7\u00E3o do banco</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

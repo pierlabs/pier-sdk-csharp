@@ -24,8 +24,8 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">Identificador do dispositivo..</param>
         /// <param name="Token">Token do dispositivo..</param>
-        /// <param name="IdAplicacaoMobile">Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="IdUsuario">Identificador do usu\u00C3\u00A1rio..</param>
+        /// <param name="IdAplicacaoMobile">Identificador da Aplica\u00E7\u00E3o..</param>
+        /// <param name="IdUsuario">Identificador do usu\u00E1rio..</param>
 
         public DispositivoResponse(long? Id = null, string Token = null, long? IdAplicacaoMobile = null, long? IdUsuario = null)
         {
@@ -52,16 +52,16 @@ namespace Conductor.Pier.Model
         public string Token { get; set; }
     
         /// <summary>
-        /// Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o.
+        /// Identificador da Aplica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Identificador da Aplica\u00E7\u00E3o.</value>
         [DataMember(Name="idAplicacaoMobile", EmitDefaultValue=false)]
         public long? IdAplicacaoMobile { get; set; }
     
         /// <summary>
-        /// Identificador do usu\u00C3\u00A1rio.
+        /// Identificador do usu\u00E1rio.
         /// </summary>
-        /// <value>Identificador do usu\u00C3\u00A1rio.</value>
+        /// <value>Identificador do usu\u00E1rio.</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     

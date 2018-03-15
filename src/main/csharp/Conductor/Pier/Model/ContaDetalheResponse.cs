@@ -22,31 +22,31 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id)..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id)..</param>
-        /// <param name="Nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id)..</param>
-        /// <param name="IdOrigemComercial">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta..</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o de conta (id)..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)..</param>
+        /// <param name="Nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;..</param>
+        /// <param name="IdProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)..</param>
+        /// <param name="IdOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta..</param>
         /// <param name="NomeOrigemComercial">Nome da origem comercial.</param>
-        /// <param name="IdFantasiaBasica">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id)..</param>
+        /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id)..</param>
         /// <param name="NomeFantasiaBasica">Nome da Fantasia Basica.</param>
-        /// <param name="IdStatusConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta..</param>
-        /// <param name="StatusConta">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta.</param>
+        /// <param name="IdStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta..</param>
+        /// <param name="StatusConta">Descri\u00E7\u00E3o do status da conta.</param>
         /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
         /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
-        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela..</param>
+        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela..</param>
         /// <param name="ValorRenda">Valor da renda comprovada..</param>
-        /// <param name="DataCadastro">Apresenta a data em que o cart\u00C3\u00A3o foi gerado..</param>
-        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
-        /// <param name="DataHoraUltimaCompra">Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento..</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
-        /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
+        /// <param name="DataCadastro">Apresenta a data em que o cart\u00E3o foi gerado..</param>
+        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento..</param>
+        /// <param name="DataHoraUltimaCompra">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento..</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia..</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente..</param>
         /// <param name="FormaEnvioFatura">Forma de envio da fatura..</param>
-        /// <param name="Titular">Apresenta se a pessoa \u00C3\u00A9 titular da conta..</param>
-        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui..</param>
-        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional..</param>
-        /// <param name="SaldoDisponivelGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais..</param>
-        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento..</param>
+        /// <param name="Titular">Apresenta se a pessoa \u00E9 titular da conta..</param>
+        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui..</param>
+        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional..</param>
+        /// <param name="SaldoDisponivelGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais..</param>
+        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento..</param>
         /// <param name="DiasAtraso">Apresenta a quantidade de dias que a conta esta em atraso.</param>
 
         public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null)
@@ -82,37 +82,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o de conta (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.
         /// </summary>
-        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.</value>
+        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+        /// C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
@@ -124,9 +124,9 @@ namespace Conductor.Pier.Model
         public string NomeOrigemComercial { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia Basica (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     
@@ -138,16 +138,16 @@ namespace Conductor.Pier.Model
         public string NomeFantasiaBasica { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+        /// Descri\u00E7\u00E3o do status da conta
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da conta</value>
+        /// <value>Descri\u00E7\u00E3o do status da conta</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
@@ -166,9 +166,9 @@ namespace Conductor.Pier.Model
         public int? MelhorDiaCompra { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+        /// Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
         /// </summary>
-        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.</value>
+        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
         public string DataStatusConta { get; set; }
     
@@ -180,37 +180,37 @@ namespace Conductor.Pier.Model
         public double? ValorRenda { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+        /// Apresenta a data em que o cart\u00E3o foi gerado.
         /// </summary>
-        /// <value>Apresenta a data em que o cart\u00C3\u00A3o foi gerado.</value>
+        /// <value>Apresenta a data em que o cart\u00E3o foi gerado.</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+        /// Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
         /// </summary>
-        /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
+        /// <value>Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
         public string DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
-        /// Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+        /// Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
         /// </summary>
-        /// <value>Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.</value>
+        /// <value>Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.</value>
         [DataMember(Name="dataHoraUltimaCompra", EmitDefaultValue=false)]
         public string DataHoraUltimaCompra { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+        /// N\u00FAmero da ag\u00EAncia.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
+        /// <value>N\u00FAmero da ag\u00EAncia.</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da conta corrente.
+        /// N\u00FAmero da conta corrente.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta corrente.</value>
+        /// <value>N\u00FAmero da conta corrente.</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
@@ -222,37 +222,37 @@ namespace Conductor.Pier.Model
         public string FormaEnvioFatura { get; set; }
     
         /// <summary>
-        /// Apresenta se a pessoa \u00C3\u00A9 titular da conta.
+        /// Apresenta se a pessoa \u00E9 titular da conta.
         /// </summary>
-        /// <value>Apresenta se a pessoa \u00C3\u00A9 titular da conta.</value>
+        /// <value>Apresenta se a pessoa \u00E9 titular da conta.</value>
         [DataMember(Name="titular", EmitDefaultValue=false)]
         public bool? Titular { get; set; }
     
         /// <summary>
-        /// Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+        /// Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
         /// </summary>
-        /// <value>Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.</value>
+        /// <value>Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.</value>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.</value>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     

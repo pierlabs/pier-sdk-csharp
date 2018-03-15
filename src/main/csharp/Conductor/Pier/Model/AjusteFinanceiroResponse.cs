@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AjusteFinanceiroResponse" /> class.
         /// Initializes a new instance of the <see cref="AjusteFinanceiroResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id).</param>
-        /// <param name="IdTipoAjuste">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id).</param>
+        /// <param name="IdTipoAjuste">C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).</param>
         /// <param name="DataAjuste">Data do ajuste.</param>
         /// <param name="Valor">Valor do ajuste.</param>
-        /// <param name="IdentificadorExterno">Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra..</param>
+        /// <param name="IdentificadorExterno">Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra..</param>
         /// <param name="Status">Status do ajuste..</param>
 
         public AjusteFinanceiroResponse(long? Id = null, long? IdTipoAjuste = null, long? IdConta = null, string DataAjuste = null, double? Valor = null, string IdentificadorExterno = null, long? Status = null)
@@ -44,23 +44,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+        /// C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste</value>
         [DataMember(Name="idTipoAjuste", EmitDefaultValue=false)]
         public long? IdTipoAjuste { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
@@ -79,9 +79,9 @@ namespace Conductor.Pier.Model
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+        /// Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.</value>
+        /// <value>Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.</value>
         [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
         public string IdentificadorExterno { get; set; }
     

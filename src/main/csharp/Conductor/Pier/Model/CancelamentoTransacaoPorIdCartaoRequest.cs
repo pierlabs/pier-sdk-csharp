@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o por idCartao
+    /// Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o por idCartao
     /// </summary>
     [DataContract]
     public partial class CancelamentoTransacaoPorIdCartaoRequest :  IEquatable<CancelamentoTransacaoPorIdCartaoRequest>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CancelamentoTransacaoPorIdCartaoRequest" /> class.
         /// Initializes a new instance of the <see cref="CancelamentoTransacaoPorIdCartaoRequest" />class.
         /// </summary>
-        /// <param name="NsuOrigem">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
-        /// <param name="NsuOrigemTransacaoCancelada">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada. (required).</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o. (required).</param>
-        /// <param name="DataHoraTransacaoCancelada">Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
-        /// <param name="NsuAutorizacaoTransacaoCancelada">N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou. (required).</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos. (required).</param>
-        /// <param name="NumeroEstabelecimento">N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV). (required).</param>
+        /// <param name="NsuOrigem">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou. (required).</param>
+        /// <param name="NsuOrigemTransacaoCancelada">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada. (required).</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o. (required).</param>
+        /// <param name="DataHoraTransacaoCancelada">Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="NsuAutorizacaoTransacaoCancelada">N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou. (required).</param>
+        /// <param name="ValorTransacao">Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos. (required).</param>
+        /// <param name="NumeroEstabelecimento">N\u00FAmero do Estabelecimento (N\u00FAmero+DV). (required).</param>
         /// <param name="DataHoraTerminal">Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante (required).</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de Parcelas. (required).</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de Parcelas. (required).</param>
 
         public CancelamentoTransacaoPorIdCartaoRequest(string NsuOrigem = null, string NsuOrigemTransacaoCancelada = null, string CodigoProcessamento = null, string DataHoraTransacaoCancelada = null, string NsuAutorizacaoTransacaoCancelada = null, double? ValorTransacao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroParcelas = null)
         {
@@ -130,51 +130,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.</value>
         [DataMember(Name="nsuOrigemTransacaoCancelada", EmitDefaultValue=false)]
         public string NsuOrigemTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+        /// Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
         /// </summary>
-        /// <value>Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
+        /// <value>Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTransacaoCancelada", EmitDefaultValue=false)]
         public string DataHoraTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+        /// N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.</value>
         [DataMember(Name="nsuAutorizacaoTransacaoCancelada", EmitDefaultValue=false)]
         public string NsuAutorizacaoTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+        /// Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.</value>
+        /// <value>Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+        /// N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).</value>
+        /// <value>N\u00FAmero do Estabelecimento (N\u00FAmero+DV).</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
@@ -186,16 +186,16 @@ namespace Conductor.Pier.Model
         public string DataHoraTerminal { get; set; }
     
         /// <summary>
-        /// Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+        /// Apresenta a identifica\u00E7\u00E3o do terminal requisitante
         /// </summary>
-        /// <value>Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante</value>
+        /// <value>Apresenta a identifica\u00E7\u00E3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de Parcelas.
+        /// N\u00FAmero de Parcelas.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de Parcelas.</value>
+        /// <value>N\u00FAmero de Parcelas.</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public long? NumeroParcelas { get; set; }
     

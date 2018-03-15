@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalhesFaturaConsignadaResponse" />class.
         /// </summary>
         /// <param name="FaturaConsignadaResponse">Apresenta os detalhes da fatura.</param>
-        /// <param name="Transacoes">Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura..</param>
+        /// <param name="Transacoes">Apresenta as transa\u00E7\u00F5es relacionadas a fatura..</param>
 
         public DetalhesFaturaConsignadaResponse(FaturaConsignadaResponse FaturaConsignadaResponse = null, List<TransacoesCorrentesResponse> Transacoes = null)
         {
@@ -41,9 +41,9 @@ namespace Conductor.Pier.Model
         public FaturaConsignadaResponse FaturaConsignadaResponse { get; set; }
     
         /// <summary>
-        /// Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+        /// Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
         /// </summary>
-        /// <value>Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.</value>
+        /// <value>Apresenta as transa\u00E7\u00F5es relacionadas a fatura.</value>
         [DataMember(Name="transacoes", EmitDefaultValue=false)]
         public List<TransacoesCorrentesResponse> Transacoes { get; set; }
     

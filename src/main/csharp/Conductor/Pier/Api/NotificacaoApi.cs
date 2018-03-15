@@ -18,62 +18,62 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Altera configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <param name="persist">persist</param>
         /// <returns>ConfiguracaoEmailResponse</returns>
         ConfiguracaoEmailResponse AlterarConfiguracaoUsingPUT (long? id, ConfiguracaoEmailPersist persist);
   
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Altera configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
         ApiResponse<ConfiguracaoEmailResponse> AlterarConfiguracaoUsingPUTWithHttpInfo (long? id, ConfiguracaoEmailPersist persist);
         
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Alterar template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
         TemplateNotificacaoDetalheResponse AlterarTemplateNotificacaoUsingPUT (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
   
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Alterar template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
         ApiResponse<TemplateNotificacaoDetalheResponse> AlterarTemplateNotificacaoUsingPUTWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
@@ -84,7 +84,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="status">Status (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="textoStatus">TextoStatus (optional)</param>
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="status">Status (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="textoStatus">TextoStatus (optional)</param>
@@ -108,98 +108,98 @@ namespace Conductor.Pier.Api
         ApiResponse<NotificacaoSMSResponse> AtualizarSMSUsingPOSTWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
         
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+        /// Consulta configura\u00E7\u00E3o de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>ConfiguracaoEmailResponse</returns>
         ConfiguracaoEmailResponse ConsultarConfiguracaoUsingGET (long? id);
   
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+        /// Consulta configura\u00E7\u00E3o de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
         ApiResponse<ConfiguracaoEmailResponse> ConsultarConfiguracaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>CodigoSegurancaResponse</returns>
         CodigoSegurancaResponse ConsultarPorEmailUsingGET (long? id);
   
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
         ApiResponse<CodigoSegurancaResponse> ConsultarPorEmailUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>CodigoSegurancaResponse</returns>
         CodigoSegurancaResponse ConsultarPorSMSUsingGET (long? id);
   
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
         ApiResponse<CodigoSegurancaResponse> ConsultarPorSMSUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Consulta template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
         TemplateNotificacaoDetalheResponse ConsultarTemplateNotificacaoUsingGET (long? id);
   
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Consulta template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
         ApiResponse<TemplateNotificacaoDetalheResponse> ConsultarTemplateNotificacaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
@@ -207,10 +207,10 @@ namespace Conductor.Pier.Api
         string GerarTokenEMAILUsingPOST (string email);
   
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
@@ -218,10 +218,10 @@ namespace Conductor.Pier.Api
         ApiResponse<string> GerarTokenEMAILUsingPOSTWithHttpInfo (string email);
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -229,10 +229,10 @@ namespace Conductor.Pier.Api
         string GerarTokenSMSUsingPOST (CodigoSegurancaSMSPersist persist);
   
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -240,80 +240,80 @@ namespace Conductor.Pier.Api
         ApiResponse<string> GerarTokenSMSUsingPOSTWithHttpInfo (CodigoSegurancaSMSPersist persist);
         
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+        /// Lista configura\u00E7\u00F5es de E-mails
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageConfiguracaoEmailResponse</returns>
         PageConfiguracaoEmailResponse ListarConfiguracaoUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+        /// Lista configura\u00E7\u00F5es de E-mails
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
         ApiResponse<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageCodigoSegurancaResponse</returns>
         PageCodigoSegurancaResponse ListarPorEmailUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
         ApiResponse<PageCodigoSegurancaResponse> ListarPorEmailUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageCodigoSegurancaResponse</returns>
         PageCodigoSegurancaResponse ListarPorSMSUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
         ApiResponse<PageCodigoSegurancaResponse> ListarPorSMSUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -324,14 +324,14 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
         /// <returns>PagePushResponse</returns>
         PagePushResponse ListarPushUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
   
@@ -342,14 +342,14 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
         /// <returns>ApiResponse of PagePushResponse</returns>
         ApiResponse<PagePushResponse> ListarPushUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
         
@@ -360,15 +360,15 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param>
         /// <returns>PageSMSResponse</returns>
         PageSMSResponse ListarSMSUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
   
@@ -379,69 +379,69 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of PageSMSResponse</returns>
         ApiResponse<PageSMSResponse> ListarSMSUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// Lista templates de notifica\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageTemplateNotificacaoResponse</returns>
         PageTemplateNotificacaoResponse ListarTemplateNotificacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// Lista templates de notifica\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageTemplateNotificacaoResponse</returns>
         ApiResponse<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os tipos templates de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
         List<Object> ListarTiposLayoutsUsingGET ();
   
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os tipos templates de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
         ApiResponse<List<Object>> ListarTiposLayoutsUsingGETWithHttpInfo ();
         
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -449,10 +449,10 @@ namespace Conductor.Pier.Api
         Object NotificacaoEmailUsingPOST (NotificacaoEmailRequest request);
   
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -460,10 +460,10 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> NotificacaoEmailUsingPOSTWithHttpInfo (NotificacaoEmailRequest request);
         
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -471,10 +471,10 @@ namespace Conductor.Pier.Api
         string ReenviarTokenSMSUsingPOST (CodigoSegurancaSMSPersist persist);
   
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -485,10 +485,10 @@ namespace Conductor.Pier.Api
         /// Responder SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>NotificacaoSMSResponse</returns>
@@ -498,20 +498,20 @@ namespace Conductor.Pier.Api
         /// Responder SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
         ApiResponse<NotificacaoSMSResponse> ResponderSMSGetUsingGETWithHttpInfo (string nsu = null, string data = null, string resposta = null);
         
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Salva configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -519,10 +519,10 @@ namespace Conductor.Pier.Api
         ConfiguracaoEmailResponse SalvarConfiguracaoUsingPOST (ConfiguracaoEmailPersist persist);
   
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Salva configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -533,7 +533,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push FCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -544,7 +544,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push FCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -555,7 +555,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push GCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -566,7 +566,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push GCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -577,7 +577,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push APNS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -588,7 +588,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push APNS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -618,44 +618,44 @@ namespace Conductor.Pier.Api
         ApiResponse<NotificacaoResponse> SalvarSMSUsingPOSTWithHttpInfo (List<NotificacaoSMSBody> listaSMS);
         
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Salva template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
         TemplateNotificacaoDetalheResponse SalvarTemplateNotificacaoUsingPOST (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
   
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Salva template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
         ApiResponse<TemplateNotificacaoDetalheResponse> SalvarTemplateNotificacaoUsingPOSTWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -663,10 +663,10 @@ namespace Conductor.Pier.Api
         string ValidarTokenEMAILUsingPOST (CodigoSegurancaEMAILPersist request);
   
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -674,10 +674,10 @@ namespace Conductor.Pier.Api
         ApiResponse<string> ValidarTokenEMAILUsingPOSTWithHttpInfo (CodigoSegurancaEMAILPersist request);
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -685,10 +685,10 @@ namespace Conductor.Pier.Api
         string ValidarTokenSMSUsingPOST (CodigoSegurancaSMSRequest request);
   
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -700,62 +700,62 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Altera configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ConfiguracaoEmailResponse</returns>
         System.Threading.Tasks.Task<ConfiguracaoEmailResponse> AlterarConfiguracaoUsingPUTAsync (long? id, ConfiguracaoEmailPersist persist);
 
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Altera configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> AlterarConfiguracaoUsingPUTAsyncWithHttpInfo (long? id, ConfiguracaoEmailPersist persist);
         
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Alterar template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
         System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> AlterarTemplateNotificacaoUsingPUTAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
 
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Alterar template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
@@ -766,7 +766,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="status">Status (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="textoStatus">TextoStatus (optional)</param>
@@ -781,7 +781,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar o status do SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="status">Status (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="textoStatus">TextoStatus (optional)</param>
@@ -790,98 +790,98 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> AtualizarSMSUsingPOSTAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
         
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+        /// Consulta configura\u00E7\u00E3o de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ConfiguracaoEmailResponse</returns>
         System.Threading.Tasks.Task<ConfiguracaoEmailResponse> ConsultarConfiguracaoUsingGETAsync (long? id);
 
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+        /// Consulta configura\u00E7\u00E3o de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> ConsultarConfiguracaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of CodigoSegurancaResponse</returns>
         System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorEmailUsingGETAsync (long? id);
 
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorEmailUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of CodigoSegurancaResponse</returns>
         System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorSMSUsingGETAsync (long? id);
 
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorSMSUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Consulta template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
         System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> ConsultarTemplateNotificacaoUsingGETAsync (long? id);
 
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Consulta template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> ConsultarTemplateNotificacaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
@@ -889,10 +889,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<string> GerarTokenEMAILUsingPOSTAsync (string email);
 
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
@@ -900,10 +900,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> GerarTokenEMAILUsingPOSTAsyncWithHttpInfo (string email);
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -911,10 +911,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<string> GerarTokenSMSUsingPOSTAsync (CodigoSegurancaSMSPersist persist);
 
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -922,80 +922,80 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> GerarTokenSMSUsingPOSTAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist);
         
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+        /// Lista configura\u00E7\u00F5es de E-mails
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageConfiguracaoEmailResponse</returns>
         System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+        /// Lista configura\u00E7\u00F5es de E-mails
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageCodigoSegurancaResponse</returns>
         System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorEmailUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorEmailUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageCodigoSegurancaResponse</returns>
         System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorSMSUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorSMSUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
@@ -1006,14 +1006,14 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
         /// <returns>Task of PagePushResponse</returns>
         System.Threading.Tasks.Task<PagePushResponse> ListarPushUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
 
@@ -1024,14 +1024,14 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os Pushes do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
         /// <returns>Task of ApiResponse (PagePushResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PagePushResponse>> ListarPushUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null);
         
@@ -1042,15 +1042,15 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param>
         /// <returns>Task of PageSMSResponse</returns>
         System.Threading.Tasks.Task<PageSMSResponse> ListarSMSUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
 
@@ -1061,69 +1061,69 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite listar os SMS do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageSMSResponse>> ListarSMSUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null);
         
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// Lista templates de notifica\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTemplateNotificacaoResponse</returns>
         System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+        /// Lista templates de notifica\u00E7\u00F5es
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTemplateNotificacaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os tipos templates de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
         System.Threading.Tasks.Task<List<Object>> ListarTiposLayoutsUsingGETAsync ();
 
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Lista os tipos templates de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposLayoutsUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -1131,10 +1131,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<Object> NotificacaoEmailUsingPOSTAsync (NotificacaoEmailRequest request);
 
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -1142,10 +1142,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> NotificacaoEmailUsingPOSTAsyncWithHttpInfo (NotificacaoEmailRequest request);
         
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -1153,10 +1153,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<string> ReenviarTokenSMSUsingPOSTAsync (CodigoSegurancaSMSPersist persist);
 
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -1167,10 +1167,10 @@ namespace Conductor.Pier.Api
         /// Responder SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
@@ -1180,20 +1180,20 @@ namespace Conductor.Pier.Api
         /// Responder SMS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSGetUsingGETAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null);
         
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Salva configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -1201,10 +1201,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ConfiguracaoEmailResponse> SalvarConfiguracaoUsingPOSTAsync (ConfiguracaoEmailPersist persist);
 
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+        /// Salva configura\u00E7\u00F5es de E-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -1215,7 +1215,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push FCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -1226,7 +1226,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push FCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -1237,7 +1237,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push GCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -1248,7 +1248,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push GCM
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -1259,7 +1259,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push APNS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -1270,7 +1270,7 @@ namespace Conductor.Pier.Api
         /// Enviar Push APNS
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -1300,44 +1300,44 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<NotificacaoResponse>> SalvarSMSUsingPOSTAsyncWithHttpInfo (List<NotificacaoSMSBody> listaSMS);
         
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Salva template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
         System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> SalvarTemplateNotificacaoUsingPOSTAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
 
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Salva template de notifica\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -1345,10 +1345,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<string> ValidarTokenEMAILUsingPOSTAsync (CodigoSegurancaEMAILPersist request);
 
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -1356,10 +1356,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> ValidarTokenEMAILUsingPOSTAsyncWithHttpInfo (CodigoSegurancaEMAILPersist request);
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -1367,10 +1367,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<string> ValidarTokenSMSUsingPOSTAsync (CodigoSegurancaSMSRequest request);
 
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -1470,10 +1470,10 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ConfiguracaoEmailResponse</returns>
         public ConfiguracaoEmailResponse AlterarConfiguracaoUsingPUT (long? id, ConfiguracaoEmailPersist persist)
@@ -1483,10 +1483,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
         public ApiResponse< ConfiguracaoEmailResponse > AlterarConfiguracaoUsingPUTWithHttpInfo (long? id, ConfiguracaoEmailPersist persist)
@@ -1563,10 +1563,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ConfiguracaoEmailResponse</returns>
         public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> AlterarConfiguracaoUsingPUTAsync (long? id, ConfiguracaoEmailPersist persist)
@@ -1577,10 +1577,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> AlterarConfiguracaoUsingPUTAsyncWithHttpInfo (long? id, ConfiguracaoEmailPersist persist)
@@ -1652,17 +1652,17 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Alterar template de notifica\u00E7\u00E3o Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param> 
         /// <param name="conteudo">Template HTML</param> 
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param> 
         /// <param name="remetente">Remetente (optional)</param> 
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param> 
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param> 
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param> 
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
         public TemplateNotificacaoDetalheResponse AlterarTemplateNotificacaoUsingPUT (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -1671,17 +1671,17 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Alterar template de notifica\u00E7\u00E3o Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param> 
         /// <param name="conteudo">Template HTML</param> 
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param> 
         /// <param name="remetente">Remetente (optional)</param> 
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param> 
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param> 
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param> 
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
         public ApiResponse< TemplateNotificacaoDetalheResponse > AlterarTemplateNotificacaoUsingPUTWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -1763,17 +1763,17 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Alterar template de notifica\u00E7\u00E3o Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
         public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> AlterarTemplateNotificacaoUsingPUTAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -1783,17 +1783,17 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Alterar template de notifica\u00E7\u00E3o Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> AlterarTemplateNotificacaoUsingPUTAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -1873,7 +1873,7 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param> 
         /// <param name="status">Status (optional)</param> 
         /// <param name="data">Data (optional)</param> 
         /// <param name="textoStatus">TextoStatus (optional)</param> 
@@ -1889,7 +1889,7 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param> 
         /// <param name="status">Status (optional)</param> 
         /// <param name="data">Data (optional)</param> 
         /// <param name="textoStatus">TextoStatus (optional)</param> 
@@ -1961,7 +1961,7 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="status">Status (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="textoStatus">TextoStatus (optional)</param>
@@ -1978,7 +1978,7 @@ namespace Conductor.Pier.Api
         /// Atualizar SMS Esse recurso permite atualizar o status do SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="status">Status (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="textoStatus">TextoStatus (optional)</param>
@@ -2046,10 +2046,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta configura\u00E7\u00E3o de E-mail Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <returns>ConfiguracaoEmailResponse</returns>
         public ConfiguracaoEmailResponse ConsultarConfiguracaoUsingGET (long? id)
         {
@@ -2058,10 +2058,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta configura\u00E7\u00E3o de E-mail Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
         public ApiResponse< ConfiguracaoEmailResponse > ConsultarConfiguracaoUsingGETWithHttpInfo (long? id)
         {
@@ -2126,10 +2126,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta configura\u00E7\u00E3o de E-mail Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ConfiguracaoEmailResponse</returns>
         public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> ConsultarConfiguracaoUsingGETAsync (long? id)
         {
@@ -2139,10 +2139,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta configura\u00E7\u00E3o de E-mail Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> ConsultarConfiguracaoUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -2204,10 +2204,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <returns>CodigoSegurancaResponse</returns>
         public CodigoSegurancaResponse ConsultarPorEmailUsingGET (long? id)
         {
@@ -2216,10 +2216,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
         public ApiResponse< CodigoSegurancaResponse > ConsultarPorEmailUsingGETWithHttpInfo (long? id)
         {
@@ -2284,10 +2284,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of CodigoSegurancaResponse</returns>
         public async System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorEmailUsingGETAsync (long? id)
         {
@@ -2297,10 +2297,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorEmailUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -2362,10 +2362,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <returns>CodigoSegurancaResponse</returns>
         public CodigoSegurancaResponse ConsultarPorSMSUsingGET (long? id)
         {
@@ -2374,10 +2374,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param> 
         /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
         public ApiResponse< CodigoSegurancaResponse > ConsultarPorSMSUsingGETWithHttpInfo (long? id)
         {
@@ -2442,10 +2442,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of CodigoSegurancaResponse</returns>
         public async System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorSMSUsingGETAsync (long? id)
         {
@@ -2455,10 +2455,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.</param>
         /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorSMSUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -2520,10 +2520,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta template de notifica\u00E7\u00E3o Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param> 
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
         public TemplateNotificacaoDetalheResponse ConsultarTemplateNotificacaoUsingGET (long? id)
         {
@@ -2532,10 +2532,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta template de notifica\u00E7\u00E3o Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param> 
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
         public ApiResponse< TemplateNotificacaoDetalheResponse > ConsultarTemplateNotificacaoUsingGETWithHttpInfo (long? id)
         {
@@ -2600,10 +2600,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta template de notifica\u00E7\u00E3o Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
         public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> ConsultarTemplateNotificacaoUsingGETAsync (long? id)
         {
@@ -2613,10 +2613,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+        /// Consulta template de notifica\u00E7\u00E3o Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> ConsultarTemplateNotificacaoUsingGETAsyncWithHttpInfo (long? id)
         {
@@ -2678,7 +2678,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param> 
@@ -2690,7 +2690,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param> 
@@ -2764,7 +2764,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
@@ -2777,7 +2777,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
@@ -2848,7 +2848,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2860,7 +2860,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -2934,7 +2934,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -2947,7 +2947,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -3018,12 +3018,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageConfiguracaoEmailResponse</returns>
         public PageConfiguracaoEmailResponse ListarConfiguracaoUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3032,12 +3032,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
         public ApiResponse< PageConfiguracaoEmailResponse > ListarConfiguracaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3100,12 +3100,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageConfiguracaoEmailResponse</returns>
         public async System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3115,12 +3115,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3182,12 +3182,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageCodigoSegurancaResponse</returns>
         public PageCodigoSegurancaResponse ListarPorEmailUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3196,12 +3196,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
         public ApiResponse< PageCodigoSegurancaResponse > ListarPorEmailUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3264,12 +3264,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageCodigoSegurancaResponse</returns>
         public async System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorEmailUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3279,12 +3279,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorEmailUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3346,12 +3346,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageCodigoSegurancaResponse</returns>
         public PageCodigoSegurancaResponse ListarPorSMSUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3360,12 +3360,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
         public ApiResponse< PageCodigoSegurancaResponse > ListarPorSMSUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3428,12 +3428,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageCodigoSegurancaResponse</returns>
         public async System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorSMSUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3443,12 +3443,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorSMSUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3513,14 +3513,14 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param> 
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param> 
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param> 
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param> 
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param> 
         /// <returns>PagePushResponse</returns>
         public PagePushResponse ListarPushUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
@@ -3532,14 +3532,14 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param> 
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param> 
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param> 
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param> 
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param> 
         /// <returns>ApiResponse of PagePushResponse</returns>
         public ApiResponse< PagePushResponse > ListarPushUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
@@ -3610,14 +3610,14 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
         /// <returns>Task of PagePushResponse</returns>
         public async System.Threading.Tasks.Task<PagePushResponse> ListarPushUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
@@ -3630,14 +3630,14 @@ namespace Conductor.Pier.Api
         /// Listar Push Esse recurso permite listar os Pushes do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="dataEnvio">Apresenta a data e em que o registro foi enviado para o dispositivo. (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
         /// <param name="plataforma">Plataforma de Push notifications. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
         /// <returns>Task of ApiResponse (PagePushResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PagePushResponse>> ListarPushUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataEnvio = null, string tipoEvento = null, string status = null, string plataforma = null, string protocolo = null)
         {
@@ -3707,15 +3707,15 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param> 
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param> 
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param> 
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param> 
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param> 
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param> 
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param> 
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param> 
         /// <returns>PageSMSResponse</returns>
         public PageSMSResponse ListarSMSUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
@@ -3727,15 +3727,15 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param> 
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param> 
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param> 
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param> 
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param> 
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param> 
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param> 
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param> 
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of PageSMSResponse</returns>
         public ApiResponse< PageSMSResponse > ListarSMSUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
@@ -3807,15 +3807,15 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param>
         /// <returns>Task of PageSMSResponse</returns>
         public async System.Threading.Tasks.Task<PageSMSResponse> ListarSMSUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
@@ -3828,15 +3828,15 @@ namespace Conductor.Pier.Api
         /// Listar SMS Esse recurso permite listar os SMS do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado (optional)</param>
-        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="status">Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
-        /// <param name="operadora">Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. (optional)</param>
-        /// <param name="protocolo">N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es (optional)</param>
-        /// <param name="nsu">Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (optional)</param>
+        /// <param name="tipoEvento">Nome do tipoEvento da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="status">Status de envio da notifica\u00E7\u00E3o (optional)</param>
+        /// <param name="operadora">Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada. (optional)</param>
+        /// <param name="protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es (optional)</param>
+        /// <param name="nsu">Apresenta o nsu da notifica\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageSMSResponse>> ListarSMSUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInclusao = null, string tipoEvento = null, string status = null, string operadora = null, string protocolo = null, long? nsu = null)
         {
@@ -3904,12 +3904,12 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Lista templates de notifica\u00E7\u00F5es Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageTemplateNotificacaoResponse</returns>
         public PageTemplateNotificacaoResponse ListarTemplateNotificacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3918,12 +3918,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Lista templates de notifica\u00E7\u00F5es Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageTemplateNotificacaoResponse</returns>
         public ApiResponse< PageTemplateNotificacaoResponse > ListarTemplateNotificacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -3986,12 +3986,12 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Lista templates de notifica\u00E7\u00F5es Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageTemplateNotificacaoResponse</returns>
         public async System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -4001,12 +4001,12 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+        /// Lista templates de notifica\u00E7\u00F5es Esse recurso permite listar templates notifica\u00E7\u00F5es.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTemplateNotificacaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
@@ -4068,7 +4068,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Lista os tipos templates de notifica\u00E7\u00E3o Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
@@ -4079,7 +4079,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Lista os tipos templates de notifica\u00E7\u00E3o Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
@@ -4141,7 +4141,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Lista os tipos templates de notifica\u00E7\u00E3o Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
@@ -4153,7 +4153,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+        /// Lista os tipos templates de notifica\u00E7\u00E3o Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
@@ -4214,7 +4214,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -4226,7 +4226,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -4300,7 +4300,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -4313,7 +4313,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -4384,7 +4384,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -4396,7 +4396,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -4470,7 +4470,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -4483,7 +4483,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+        /// Reenviar c\u00F3digo de seguran\u00E7a por sms Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -4554,10 +4554,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param> 
         /// <param name="data">Data (optional)</param> 
         /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>NotificacaoSMSResponse</returns>
@@ -4568,10 +4568,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param> 
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param> 
         /// <param name="data">Data (optional)</param> 
         /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
@@ -4636,10 +4636,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
@@ -4651,10 +4651,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+        /// Responder SMS Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nsu">Seu n\u00C3\u00BAmero (optional)</param>
+        /// <param name="nsu">Seu n\u00FAmero (optional)</param>
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
@@ -4718,7 +4718,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -4730,7 +4730,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
@@ -4804,7 +4804,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -4817,7 +4817,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
@@ -4888,7 +4888,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
@@ -4900,7 +4900,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
@@ -4974,7 +4974,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -4987,7 +4987,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+        /// Enviar Push FCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -5058,7 +5058,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
@@ -5070,7 +5070,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
@@ -5144,7 +5144,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -5157,7 +5157,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+        /// Enviar Push GCM Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -5228,7 +5228,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
@@ -5240,7 +5240,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
@@ -5314,7 +5314,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -5327,7 +5327,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+        /// Enviar Push APNS Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
@@ -5568,16 +5568,16 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Salva template de notifica\u00E7\u00E3o Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param> 
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param> 
         /// <param name="remetente">Remetente (optional)</param> 
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param> 
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param> 
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param> 
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
         public TemplateNotificacaoDetalheResponse SalvarTemplateNotificacaoUsingPOST (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -5586,16 +5586,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Salva template de notifica\u00E7\u00E3o Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param> 
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param> 
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param> 
         /// <param name="tipoLayout">Tipo do layout. (optional)</param> 
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param> 
         /// <param name="remetente">Remetente (optional)</param> 
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param> 
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param> 
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param> 
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param> 
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
         public ApiResponse< TemplateNotificacaoDetalheResponse > SalvarTemplateNotificacaoUsingPOSTWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -5672,16 +5672,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Salva template de notifica\u00E7\u00E3o Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
         public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> SalvarTemplateNotificacaoUsingPOSTAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -5691,16 +5691,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Salva template de notifica\u00C3\u00A7\u00C3\u00A3o Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+        /// Salva template de notifica\u00E7\u00E3o Esse recurso salvar template notifica\u00E7\u00F5e.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conteudo">Template HTML</param>
-        /// <param name="idConfiguracaoEmail">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. (optional)</param>
+        /// <param name="idConfiguracaoEmail">C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL. (optional)</param>
         /// <param name="tipoLayout">Tipo do layout. (optional)</param>
-        /// <param name="tipoNotificacao">Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
+        /// <param name="tipoNotificacao">Tipo da notifica\u00E7\u00E3o. (optional)</param>
         /// <param name="remetente">Remetente (optional)</param>
-        /// <param name="assunto">Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. (optional)</param>
-        /// <param name="templatePadrao">Template Padr\u00C3\u00A3o. (optional)</param>
+        /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o. (optional)</param>
+        /// <param name="templatePadrao">Template Padr\u00E3o. (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> SalvarTemplateNotificacaoUsingPOSTAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
@@ -5774,7 +5774,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -5786,7 +5786,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -5860,7 +5860,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -5873,7 +5873,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -5944,7 +5944,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -5956,7 +5956,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
@@ -6030,7 +6030,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
@@ -6043,7 +6043,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+        /// Validar c\u00F3digo de seguran\u00E7a enviado por sms Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>

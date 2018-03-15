@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para conta banc\u00C3\u00A1ria
+    /// Transfer\u00EAncia de cr\u00E9dito para conta banc\u00E1ria
     /// </summary>
     [DataContract]
     public partial class TransferenciaCreditoContaBancariaPersist :  IEquatable<TransferenciaCreditoContaBancariaPersist>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaPersist" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaPersist" />class.
         /// </summary>
-        /// <param name="NsuOrigem">Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou. (required).</param>
+        /// <param name="NsuOrigem">Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou. (required).</param>
         /// <param name="IdCartao">Representa o Identificador do Cartao. (required).</param>
-        /// <param name="IdContaBancaria">Representa o Identificador da conta banc\u00C3\u00A1ria. (required).</param>
-        /// <param name="Valor">Representa o Valor da transfer\u00C3\u00AAncia. (required).</param>
-        /// <param name="NumeroParcelas">Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido. (required).</param>
-        /// <param name="NumeroMesesCarencia">Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia. (required).</param>
+        /// <param name="IdContaBancaria">Representa o Identificador da conta banc\u00E1ria. (required).</param>
+        /// <param name="Valor">Representa o Valor da transfer\u00EAncia. (required).</param>
+        /// <param name="NumeroParcelas">Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido. (required).</param>
+        /// <param name="NumeroMesesCarencia">Representa o N\u00FAmero de Meses concedido como car\u00EAncia. (required).</param>
         /// <param name="DataHoraTerminal">Representa a Data e hora do terminal requisitante. (required).</param>
-        /// <param name="TerminalRequisitante">Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante. (required).</param>
-        /// <param name="NumeroEstabelecimento">Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento. (required).</param>
+        /// <param name="TerminalRequisitante">Representa a identifica\u00E7\u00E3o do terminal requisitante. (required).</param>
+        /// <param name="NumeroEstabelecimento">Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento. (required).</param>
 
         public TransferenciaCreditoContaBancariaPersist(long? NsuOrigem = null, long? IdCartao = null, long? IdContaBancaria = null, double? Valor = null, long? NumeroParcelas = null, int? NumeroMesesCarencia = null, string DataHoraTerminal = null, string TerminalRequisitante = null, string NumeroEstabelecimento = null)
         {
@@ -120,9 +120,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+        /// Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
         /// </summary>
-        /// <value>Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.</value>
+        /// <value>Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public long? NsuOrigem { get; set; }
     
@@ -134,30 +134,30 @@ namespace Conductor.Pier.Model
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Representa o Identificador da conta banc\u00C3\u00A1ria.
+        /// Representa o Identificador da conta banc\u00E1ria.
         /// </summary>
-        /// <value>Representa o Identificador da conta banc\u00C3\u00A1ria.</value>
+        /// <value>Representa o Identificador da conta banc\u00E1ria.</value>
         [DataMember(Name="idContaBancaria", EmitDefaultValue=false)]
         public long? IdContaBancaria { get; set; }
     
         /// <summary>
-        /// Representa o Valor da transfer\u00C3\u00AAncia.
+        /// Representa o Valor da transfer\u00EAncia.
         /// </summary>
-        /// <value>Representa o Valor da transfer\u00C3\u00AAncia.</value>
+        /// <value>Representa o Valor da transfer\u00EAncia.</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.
+        /// Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.
         /// </summary>
-        /// <value>Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.</value>
+        /// <value>Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public long? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+        /// Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
         /// </summary>
-        /// <value>Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.</value>
+        /// <value>Representa o N\u00FAmero de Meses concedido como car\u00EAncia.</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     
@@ -169,16 +169,16 @@ namespace Conductor.Pier.Model
         public string DataHoraTerminal { get; set; }
     
         /// <summary>
-        /// Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.
+        /// Representa a identifica\u00E7\u00E3o do terminal requisitante.
         /// </summary>
-        /// <value>Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.</value>
+        /// <value>Representa a identifica\u00E7\u00E3o do terminal requisitante.</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     
         /// <summary>
-        /// Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
+        /// Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.
         /// </summary>
-        /// <value>Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.</value>
+        /// <value>Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public string NumeroEstabelecimento { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Template
+    /// Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template
     /// </summary>
     [DataContract]
     public partial class TipoTemplateResponse :  IEquatable<TipoTemplateResponse>
@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">ID do Tipo de Template..</param>
         /// <param name="Nome">Nome do Tipo de Template..</param>
-        /// <param name="Descricao">Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template..</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do Tipo de Template..</param>
         /// <param name="Sigla">Sigla do Tipo de Template..</param>
 
         public TipoTemplateResponse(long? Id = null, string Nome = null, string Descricao = null, string Sigla = null)
@@ -52,9 +52,9 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.
+        /// Descri\u00E7\u00E3o do Tipo de Template.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.</value>
+        /// <value>Descri\u00E7\u00E3o do Tipo de Template.</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

@@ -22,33 +22,33 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="RiscoFraudeDetalhadoResponse" /> class.
         /// Initializes a new instance of the <see cref="RiscoFraudeDetalhadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude.</param>
-        /// <param name="IdTipoResolucao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
-        /// <param name="DescricaoTipoResolucao">Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro.</param>
-        /// <param name="FlagAltoRisco">Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas.</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.</param>
-        /// <param name="IdCartao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto.</param>
-        /// <param name="IdTransacao">C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DataTransacao">Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada.</param>
-        /// <param name="ValorTransacao">Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.</param>
-        /// <param name="CodigoMoedaOrigem">C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="ValorOrigem">Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem.</param>
-        /// <param name="CodigoMoedaDestino">C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="ValorDestino">Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino.</param>
-        /// <param name="NomeEstabelecimento">Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada.</param>
-        /// <param name="IdPais">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs.</param>
-        /// <param name="CodigoRespostaAutorizador">C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DescricaoRespostaAutorizador">Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="CodigoRespostaFraude">C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DescricaoRespostaFraude">Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="OrigemTransacao">Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc).</param>
-        /// <param name="CodigoModoEntradaTerminal">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="DescricaoModoEntradaTerminal">Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="Cpf">N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica.</param>
-        /// <param name="Cnpj">N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica.</param>
-        /// <param name="Email">Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o.</param>
-        /// <param name="Telefones">Lista de telefones associados ao portador do Cart\u00C3\u00A3o.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude.</param>
+        /// <param name="IdTipoResolucao">C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro.</param>
+        /// <param name="DescricaoTipoResolucao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro.</param>
+        /// <param name="FlagAltoRisco">Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="IdCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.</param>
+        /// <param name="IdProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto.</param>
+        /// <param name="IdTransacao">C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
+        /// <param name="DataTransacao">Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada.</param>
+        /// <param name="ValorTransacao">Valor da transa\u00E7\u00E3o classificada com risco de fraude.</param>
+        /// <param name="CodigoMoedaOrigem">C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o.</param>
+        /// <param name="ValorOrigem">Valor da transa\u00E7\u00E3o na moeda de origem.</param>
+        /// <param name="CodigoMoedaDestino">C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o.</param>
+        /// <param name="ValorDestino">Valor da transa\u00E7\u00E3o na moeda de destino.</param>
+        /// <param name="NomeEstabelecimento">Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada.</param>
+        /// <param name="IdPais">C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs.</param>
+        /// <param name="CodigoRespostaAutorizador">C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o.</param>
+        /// <param name="DescricaoRespostaAutorizador">Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o.</param>
+        /// <param name="CodigoRespostaFraude">C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o.</param>
+        /// <param name="DescricaoRespostaFraude">Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o.</param>
+        /// <param name="OrigemTransacao">Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc).</param>
+        /// <param name="CodigoModoEntradaTerminal">C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o.</param>
+        /// <param name="DescricaoModoEntradaTerminal">Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o.</param>
+        /// <param name="Cpf">N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica.</param>
+        /// <param name="Cnpj">N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica.</param>
+        /// <param name="Email">Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o.</param>
+        /// <param name="Telefones">Lista de telefones associados ao portador do Cart\u00E3o.</param>
 
         public RiscoFraudeDetalhadoResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdProduto = null, long? IdTransacao = null, string DataTransacao = null, double? ValorTransacao = null, string CodigoMoedaOrigem = null, double? ValorOrigem = null, string CodigoMoedaDestino = null, double? ValorDestino = null, string NomeEstabelecimento = null, string IdPais = null, string CodigoRespostaAutorizador = null, string DescricaoRespostaAutorizador = null, string CodigoRespostaFraude = null, string DescricaoRespostaFraude = null, string OrigemTransacao = null, string CodigoModoEntradaTerminal = null, string DescricaoModoEntradaTerminal = null, string Cpf = null, string Cnpj = null, string Email = null, List<TelefoneResponse> Telefones = null)
         {
@@ -84,191 +84,191 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+        /// C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro</value>
         [DataMember(Name="idTipoResolucao", EmitDefaultValue=false)]
         public long? IdTipoResolucao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+        /// Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro</value>
         [DataMember(Name="descricaoTipoResolucao", EmitDefaultValue=false)]
         public string DescricaoTipoResolucao { get; set; }
     
         /// <summary>
-        /// Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+        /// Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
         /// </summary>
-        /// <value>Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas</value>
+        /// <value>Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas</value>
         [DataMember(Name="flagAltoRisco", EmitDefaultValue=false)]
         public bool? FlagAltoRisco { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+        /// C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
+        /// C\u00F3digo de identifica\u00E7\u00E3o do produto
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do produto</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+        /// Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
         /// </summary>
-        /// <value>Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada</value>
+        /// <value>Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada</value>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
         public string DataTransacao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+        /// Valor da transa\u00E7\u00E3o classificada com risco de fraude
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude</value>
+        /// <value>Valor da transa\u00E7\u00E3o classificada com risco de fraude</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoMoedaOrigem", EmitDefaultValue=false)]
         public string CodigoMoedaOrigem { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+        /// Valor da transa\u00E7\u00E3o na moeda de origem
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem</value>
+        /// <value>Valor da transa\u00E7\u00E3o na moeda de origem</value>
         [DataMember(Name="valorOrigem", EmitDefaultValue=false)]
         public double? ValorOrigem { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoMoedaDestino", EmitDefaultValue=false)]
         public string CodigoMoedaDestino { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
+        /// Valor da transa\u00E7\u00E3o na moeda de destino
         /// </summary>
-        /// <value>Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino</value>
+        /// <value>Valor da transa\u00E7\u00E3o na moeda de destino</value>
         [DataMember(Name="valorDestino", EmitDefaultValue=false)]
         public double? ValorDestino { get; set; }
     
         /// <summary>
-        /// Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada
+        /// Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
         /// </summary>
-        /// <value>Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada</value>
+        /// <value>Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs</value>
         [DataMember(Name="idPais", EmitDefaultValue=false)]
         public string IdPais { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoRespostaAutorizador", EmitDefaultValue=false)]
         public string CodigoRespostaAutorizador { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoRespostaAutorizador", EmitDefaultValue=false)]
         public string DescricaoRespostaAutorizador { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoRespostaFraude", EmitDefaultValue=false)]
         public string CodigoRespostaFraude { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoRespostaFraude", EmitDefaultValue=false)]
         public string DescricaoRespostaFraude { get; set; }
     
         /// <summary>
-        /// Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc)
+        /// Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
         /// </summary>
-        /// <value>Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc)</value>
+        /// <value>Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)</value>
         [DataMember(Name="origemTransacao", EmitDefaultValue=false)]
         public string OrigemTransacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoModoEntradaTerminal", EmitDefaultValue=false)]
         public string CodigoModoEntradaTerminal { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+        /// Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoModoEntradaTerminal", EmitDefaultValue=false)]
         public string DescricaoModoEntradaTerminal { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+        /// N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica</value>
+        /// <value>N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+        /// N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica</value>
+        /// <value>N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica</value>
         [DataMember(Name="cnpj", EmitDefaultValue=false)]
         public string Cnpj { get; set; }
     
         /// <summary>
-        /// Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+        /// Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
         /// </summary>
-        /// <value>Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o</value>
+        /// <value>Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+        /// Lista de telefones associados ao portador do Cart\u00E3o
         /// </summary>
-        /// <value>Lista de telefones associados ao portador do Cart\u00C3\u00A3o</value>
+        /// <value>Lista de telefones associados ao portador do Cart\u00E3o</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefoneResponse> Telefones { get; set; }
     

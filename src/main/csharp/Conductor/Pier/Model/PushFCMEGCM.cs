@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Notifica\u00C3\u00A7\u00C3\u00A3o Push FCM e GCM
+    /// Objeto Notifica\u00E7\u00E3o Push FCM e GCM
     /// </summary>
     [DataContract]
     public partial class PushFCMEGCM :  IEquatable<PushFCMEGCM>
     { 
     
         /// <summary>
-        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+        /// Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
         /// </summary>
-        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
@@ -47,16 +47,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PushFCMEGCM" /> class.
         /// Initializes a new instance of the <see cref="PushFCMEGCM" />class.
         /// </summary>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo identificado da pessoa (required).</param>
-        /// <param name="IdConta">C\u00C3\u00B3digo identificador da conta (required).</param>
-        /// <param name="TokenDispositivo">Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push. (required).</param>
-        /// <param name="TokenServidor">Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google. (required).</param>
-        /// <param name="Titulo">Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o. (required).</param>
-        /// <param name="Conteudo">Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado. (required).</param>
-        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o (required).</param>
+        /// <param name="IdPessoa">C\u00F3digo identificado da pessoa (required).</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta (required).</param>
+        /// <param name="TokenDispositivo">Apresenta o token do dispositivo que dever\u00E1 receber o push. (required).</param>
+        /// <param name="TokenServidor">Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google. (required).</param>
+        /// <param name="Titulo">Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o. (required).</param>
+        /// <param name="Conteudo">Apresenta o texto da notifica\u00E7\u00E3o a ser enviado. (required).</param>
+        /// <param name="TipoEvento">Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o (required).</param>
         /// <param name="Icone">Apresenta o nome do icone a ser apresentado no push..</param>
         /// <param name="Som">Apresenta o cor do icone a ser apresentado no push.</param>
-        /// <param name="Cor">Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000..</param>
+        /// <param name="Cor">Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000..</param>
 
         public PushFCMEGCM(long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string TokenServidor = null, string Titulo = null, string Conteudo = null, TipoEventoEnum? TipoEvento = null, string Icone = null, string Som = null, string Cor = null)
         {
@@ -131,44 +131,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificado da pessoa
+        /// C\u00F3digo identificado da pessoa
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificado da pessoa</value>
+        /// <value>C\u00F3digo identificado da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da conta
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da conta</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+        /// Apresenta o token do dispositivo que dever\u00E1 receber o push.
         /// </summary>
-        /// <value>Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.</value>
+        /// <value>Apresenta o token do dispositivo que dever\u00E1 receber o push.</value>
         [DataMember(Name="tokenDispositivo", EmitDefaultValue=false)]
         public string TokenDispositivo { get; set; }
     
         /// <summary>
-        /// Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google.
+        /// Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google.
         /// </summary>
-        /// <value>Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google.</value>
+        /// <value>Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google.</value>
         [DataMember(Name="tokenServidor", EmitDefaultValue=false)]
         public string TokenServidor { get; set; }
     
         /// <summary>
-        /// Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.</value>
         [DataMember(Name="titulo", EmitDefaultValue=false)]
         public string Titulo { get; set; }
     
         /// <summary>
-        /// Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+        /// Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
         /// </summary>
-        /// <value>Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.</value>
+        /// <value>Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
@@ -187,9 +187,9 @@ namespace Conductor.Pier.Model
         public string Som { get; set; }
     
         /// <summary>
-        /// Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000.
+        /// Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000.
         /// </summary>
-        /// <value>Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000.</value>
+        /// <value>Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000.</value>
         [DataMember(Name="cor", EmitDefaultValue=false)]
         public string Cor { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Base
+    /// Representa\u00E7\u00E3o do recurso Base
     /// </summary>
     [DataContract]
     public partial class BaseResponse :  IEquatable<BaseResponse>
@@ -22,18 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BaseResponse" /> class.
         /// Initializes a new instance of the <see cref="BaseResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador da base (required).</param>
+        /// <param name="Id">C\u00F3digo identificador da base (required).</param>
         /// <param name="Servidor">IP do servidor (required).</param>
-        /// <param name="Usuario">Nome do usu\u00C3\u00A1rio (required).</param>
-        /// <param name="Senha">Senha (required).</param>
+        /// <param name="Usuario">Nome do usu\u00E1rio (required).</param>
         /// <param name="NomeBase">Nome da base (required).</param>
         /// <param name="SenhaCriptografada">senha Criptografada (required).</param>
-        /// <param name="Domain">Dom\u00C3\u00ADnio da base (required).</param>
+        /// <param name="Domain">Dom\u00EDnio da base (required).</param>
         /// <param name="NomeBaseControleAcesso">Nome da base de controle acesso (required).</param>
-        /// <param name="IdEmissor">C\u00C3\u00B3digo do identificador do emissor.</param>
+        /// <param name="IdEmissor">C\u00F3digo do identificador do emissor.</param>
         /// <param name="ServidorControleAcesso">Servidor do controle de acesso (required).</param>
+        /// <param name="NomeBaseUsuarios">Nome da base de usu\u00E1rios (required).</param>
+        /// <param name="ServidorUsuarios">Servidor do controle de acesso (required).</param>
+        /// <param name="FlagCluster">Flag Cluester.</param>
 
-        public BaseResponse(long? Id = null, string Servidor = null, string Usuario = null, string Senha = null, string NomeBase = null, bool? SenhaCriptografada = null, string Domain = null, string NomeBaseControleAcesso = null, long? IdEmissor = null, string ServidorControleAcesso = null)
+        public BaseResponse(long? Id = null, string Servidor = null, string Usuario = null, string NomeBase = null, bool? SenhaCriptografada = null, string Domain = null, string NomeBaseControleAcesso = null, long? IdEmissor = null, string ServidorControleAcesso = null, string NomeBaseUsuarios = null, string ServidorUsuarios = null, bool? FlagCluster = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -61,15 +63,6 @@ namespace Conductor.Pier.Model
             else
             {
                 this.Usuario = Usuario;
-            }
-            // to ensure "Senha" is required (not null)
-            if (Senha == null)
-            {
-                throw new InvalidDataException("Senha is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.Senha = Senha;
             }
             // to ensure "NomeBase" is required (not null)
             if (NomeBase == null)
@@ -116,15 +109,34 @@ namespace Conductor.Pier.Model
             {
                 this.ServidorControleAcesso = ServidorControleAcesso;
             }
+            // to ensure "NomeBaseUsuarios" is required (not null)
+            if (NomeBaseUsuarios == null)
+            {
+                throw new InvalidDataException("NomeBaseUsuarios is a required property for BaseResponse and cannot be null");
+            }
+            else
+            {
+                this.NomeBaseUsuarios = NomeBaseUsuarios;
+            }
+            // to ensure "ServidorUsuarios" is required (not null)
+            if (ServidorUsuarios == null)
+            {
+                throw new InvalidDataException("ServidorUsuarios is a required property for BaseResponse and cannot be null");
+            }
+            else
+            {
+                this.ServidorUsuarios = ServidorUsuarios;
+            }
             this.IdEmissor = IdEmissor;
+            this.FlagCluster = FlagCluster;
             
         }
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da base
+        /// C\u00F3digo identificador da base
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da base</value>
+        /// <value>C\u00F3digo identificador da base</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
@@ -136,18 +148,11 @@ namespace Conductor.Pier.Model
         public string Servidor { get; set; }
     
         /// <summary>
-        /// Nome do usu\u00C3\u00A1rio
+        /// Nome do usu\u00E1rio
         /// </summary>
-        /// <value>Nome do usu\u00C3\u00A1rio</value>
+        /// <value>Nome do usu\u00E1rio</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
-    
-        /// <summary>
-        /// Senha
-        /// </summary>
-        /// <value>Senha</value>
-        [DataMember(Name="senha", EmitDefaultValue=false)]
-        public string Senha { get; set; }
     
         /// <summary>
         /// Nome da base
@@ -164,9 +169,9 @@ namespace Conductor.Pier.Model
         public bool? SenhaCriptografada { get; set; }
     
         /// <summary>
-        /// Dom\u00C3\u00ADnio da base
+        /// Dom\u00EDnio da base
         /// </summary>
-        /// <value>Dom\u00C3\u00ADnio da base</value>
+        /// <value>Dom\u00EDnio da base</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
     
@@ -178,9 +183,9 @@ namespace Conductor.Pier.Model
         public string NomeBaseControleAcesso { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do identificador do emissor
+        /// C\u00F3digo do identificador do emissor
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do identificador do emissor</value>
+        /// <value>C\u00F3digo do identificador do emissor</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
@@ -190,6 +195,27 @@ namespace Conductor.Pier.Model
         /// <value>Servidor do controle de acesso</value>
         [DataMember(Name="servidorControleAcesso", EmitDefaultValue=false)]
         public string ServidorControleAcesso { get; set; }
+    
+        /// <summary>
+        /// Nome da base de usu\u00E1rios
+        /// </summary>
+        /// <value>Nome da base de usu\u00E1rios</value>
+        [DataMember(Name="nomeBaseUsuarios", EmitDefaultValue=false)]
+        public string NomeBaseUsuarios { get; set; }
+    
+        /// <summary>
+        /// Servidor do controle de acesso
+        /// </summary>
+        /// <value>Servidor do controle de acesso</value>
+        [DataMember(Name="servidorUsuarios", EmitDefaultValue=false)]
+        public string ServidorUsuarios { get; set; }
+    
+        /// <summary>
+        /// Flag Cluester
+        /// </summary>
+        /// <value>Flag Cluester</value>
+        [DataMember(Name="flagCluster", EmitDefaultValue=false)]
+        public bool? FlagCluster { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -202,13 +228,15 @@ namespace Conductor.Pier.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Servidor: ").Append(Servidor).Append("\n");
             sb.Append("  Usuario: ").Append(Usuario).Append("\n");
-            sb.Append("  Senha: ").Append(Senha).Append("\n");
             sb.Append("  NomeBase: ").Append(NomeBase).Append("\n");
             sb.Append("  SenhaCriptografada: ").Append(SenhaCriptografada).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  NomeBaseControleAcesso: ").Append(NomeBaseControleAcesso).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  ServidorControleAcesso: ").Append(ServidorControleAcesso).Append("\n");
+            sb.Append("  NomeBaseUsuarios: ").Append(NomeBaseUsuarios).Append("\n");
+            sb.Append("  ServidorUsuarios: ").Append(ServidorUsuarios).Append("\n");
+            sb.Append("  FlagCluster: ").Append(FlagCluster).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -262,11 +290,6 @@ namespace Conductor.Pier.Model
                     this.Usuario.Equals(other.Usuario)
                 ) && 
                 (
-                    this.Senha == other.Senha ||
-                    this.Senha != null &&
-                    this.Senha.Equals(other.Senha)
-                ) && 
-                (
                     this.NomeBase == other.NomeBase ||
                     this.NomeBase != null &&
                     this.NomeBase.Equals(other.NomeBase)
@@ -295,6 +318,21 @@ namespace Conductor.Pier.Model
                     this.ServidorControleAcesso == other.ServidorControleAcesso ||
                     this.ServidorControleAcesso != null &&
                     this.ServidorControleAcesso.Equals(other.ServidorControleAcesso)
+                ) && 
+                (
+                    this.NomeBaseUsuarios == other.NomeBaseUsuarios ||
+                    this.NomeBaseUsuarios != null &&
+                    this.NomeBaseUsuarios.Equals(other.NomeBaseUsuarios)
+                ) && 
+                (
+                    this.ServidorUsuarios == other.ServidorUsuarios ||
+                    this.ServidorUsuarios != null &&
+                    this.ServidorUsuarios.Equals(other.ServidorUsuarios)
+                ) && 
+                (
+                    this.FlagCluster == other.FlagCluster ||
+                    this.FlagCluster != null &&
+                    this.FlagCluster.Equals(other.FlagCluster)
                 );
         }
 
@@ -319,9 +357,6 @@ namespace Conductor.Pier.Model
                 if (this.Usuario != null)
                     hash = hash * 59 + this.Usuario.GetHashCode();
                 
-                if (this.Senha != null)
-                    hash = hash * 59 + this.Senha.GetHashCode();
-                
                 if (this.NomeBase != null)
                     hash = hash * 59 + this.NomeBase.GetHashCode();
                 
@@ -339,6 +374,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.ServidorControleAcesso != null)
                     hash = hash * 59 + this.ServidorControleAcesso.GetHashCode();
+                
+                if (this.NomeBaseUsuarios != null)
+                    hash = hash * 59 + this.NomeBaseUsuarios.GetHashCode();
+                
+                if (this.ServidorUsuarios != null)
+                    hash = hash * 59 + this.ServidorUsuarios.GetHashCode();
+                
+                if (this.FlagCluster != null)
+                    hash = hash * 59 + this.FlagCluster.GetHashCode();
                 
                 return hash;
             }

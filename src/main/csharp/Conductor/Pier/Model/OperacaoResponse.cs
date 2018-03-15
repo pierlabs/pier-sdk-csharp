@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+    /// Representa\u00E7\u00E3o da resposta do recurso Operacao
     /// </summary>
     [DataContract]
     public partial class OperacaoResponse :  IEquatable<OperacaoResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="OperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdOperacao">C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="CodigoProcessamento">C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador.</param>
-        /// <param name="CodigoProcessamentoCancelamento">C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador.</param>
-        /// <param name="NomeOperacao">Nome da opera\u00C3\u00A7\u00C3\u00A3o.</param>
-        /// <param name="FlagCobraJuros">Flag indicativa para crobran\u00C3\u00A7a de juros.</param>
-        /// <param name="FlagCobraTarifa">Flag indicativa para crobran\u00C3\u00A7a de tarifas.</param>
-        /// <param name="Carencia">Quantidade de meses para car\u00C3\u00AAncia.</param>
-        /// <param name="FlagPermitirParcelamento">Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas.</param>
+        /// <param name="IdOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o.</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador.</param>
+        /// <param name="CodigoProcessamentoCancelamento">C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador.</param>
+        /// <param name="NomeOperacao">Nome da opera\u00E7\u00E3o.</param>
+        /// <param name="FlagCobraJuros">Flag indicativa para crobran\u00E7a de juros.</param>
+        /// <param name="FlagCobraTarifa">Flag indicativa para crobran\u00E7a de tarifas.</param>
+        /// <param name="Carencia">Quantidade de meses para car\u00EAncia.</param>
+        /// <param name="FlagPermitirParcelamento">Permitir transa\u00E7\u00F5es parceladas.</param>
 
         public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+        /// C\u00F3digo que identifica a opera\u00E7\u00E3o
         /// </summary>
-        /// <value>C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>C\u00F3digo que identifica a opera\u00E7\u00E3o</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+        /// C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador</value>
+        /// <value>C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+        /// C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador</value>
+        /// <value>C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador</value>
         [DataMember(Name="codigoProcessamentoCancelamento", EmitDefaultValue=false)]
         public string CodigoProcessamentoCancelamento { get; set; }
     
         /// <summary>
-        /// Nome da opera\u00C3\u00A7\u00C3\u00A3o
+        /// Nome da opera\u00E7\u00E3o
         /// </summary>
-        /// <value>Nome da opera\u00C3\u00A7\u00C3\u00A3o</value>
+        /// <value>Nome da opera\u00E7\u00E3o</value>
         [DataMember(Name="nomeOperacao", EmitDefaultValue=false)]
         public string NomeOperacao { get; set; }
     
         /// <summary>
-        /// Flag indicativa para crobran\u00C3\u00A7a de juros
+        /// Flag indicativa para crobran\u00E7a de juros
         /// </summary>
-        /// <value>Flag indicativa para crobran\u00C3\u00A7a de juros</value>
+        /// <value>Flag indicativa para crobran\u00E7a de juros</value>
         [DataMember(Name="flagCobraJuros", EmitDefaultValue=false)]
         public bool? FlagCobraJuros { get; set; }
     
         /// <summary>
-        /// Flag indicativa para crobran\u00C3\u00A7a de tarifas
+        /// Flag indicativa para crobran\u00E7a de tarifas
         /// </summary>
-        /// <value>Flag indicativa para crobran\u00C3\u00A7a de tarifas</value>
+        /// <value>Flag indicativa para crobran\u00E7a de tarifas</value>
         [DataMember(Name="flagCobraTarifa", EmitDefaultValue=false)]
         public bool? FlagCobraTarifa { get; set; }
     
         /// <summary>
-        /// Quantidade de meses para car\u00C3\u00AAncia
+        /// Quantidade de meses para car\u00EAncia
         /// </summary>
-        /// <value>Quantidade de meses para car\u00C3\u00AAncia</value>
+        /// <value>Quantidade de meses para car\u00EAncia</value>
         [DataMember(Name="carencia", EmitDefaultValue=false)]
         public int? Carencia { get; set; }
     
         /// <summary>
-        /// Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+        /// Permitir transa\u00E7\u00F5es parceladas
         /// </summary>
-        /// <value>Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas</value>
+        /// <value>Permitir transa\u00E7\u00F5es parceladas</value>
         [DataMember(Name="flagPermitirParcelamento", EmitDefaultValue=false)]
         public bool? FlagPermitirParcelamento { get; set; }
     

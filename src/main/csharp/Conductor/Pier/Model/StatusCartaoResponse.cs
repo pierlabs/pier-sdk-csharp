@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
+    /// Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
     /// </summary>
     [DataContract]
     public partial class StatusCartaoResponse :  IEquatable<StatusCartaoResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id)  (required).</param>
-        /// <param name="Nome">Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o. (required).</param>
-        /// <param name="PermiteDesbloquear">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
-        /// <param name="PermiteAtribuirComoBloqueio">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
-        /// <param name="PermiteAtribuirComoCancelamento">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
-        /// <param name="CobrarTarifaAoEmitirNovaVia">Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id)  (required).</param>
+        /// <param name="Nome">Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o. (required).</param>
+        /// <param name="PermiteDesbloquear">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteAtribuirComoBloqueio">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="PermiteAtribuirComoCancelamento">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo..</param>
+        /// <param name="CobrarTarifaAoEmitirNovaVia">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo..</param>
 
         public StatusCartaoResponse(long? Id = null, string Nome = null, int? PermiteDesbloquear = null, int? PermiteAtribuirComoBloqueio = null, int? PermiteAtribuirComoCancelamento = null, int? CobrarTarifaAoEmitirNovaVia = null)
         {
@@ -58,44 +58,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) </value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) </value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+        /// Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
         /// </summary>
-        /// <value>Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.</value>
+        /// <value>Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</value>
         [DataMember(Name="permiteDesbloquear", EmitDefaultValue=false)]
         public int? PermiteDesbloquear { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</value>
         [DataMember(Name="permiteAtribuirComoBloqueio", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoBloqueio { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</value>
         [DataMember(Name="permiteAtribuirComoCancelamento", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoCancelamento { get; set; }
     
         /// <summary>
-        /// Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
         /// </summary>
-        /// <value>Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.</value>
+        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</value>
         [DataMember(Name="cobrarTarifaAoEmitirNovaVia", EmitDefaultValue=false)]
         public int? CobrarTarifaAoEmitirNovaVia { get; set; }
     

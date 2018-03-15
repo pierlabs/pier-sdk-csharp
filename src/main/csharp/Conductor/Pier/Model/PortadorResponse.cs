@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PortadorResponse" /> class.
         /// Initializes a new instance of the <see cref="PortadorResponse" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)..</param>
-        /// <param name="IdProduto">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id)..</param>
-        /// <param name="IdParentesco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id).</param>
-        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
-        /// <param name="NomeImpresso">Apresenta o nome a ser impresso no cart\u00C3\u00A3o..</param>
-        /// <param name="IdTipoCartao">Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta..</param>
-        /// <param name="FlagAtivo">Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o..</param>
-        /// <param name="DataCadastroPortador">Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="DataCancelamentoPortador">Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o..</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)..</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)..</param>
+        /// <param name="IdParentesco">C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id).</param>
+        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)..</param>
+        /// <param name="NomeImpresso">Apresenta o nome a ser impresso no cart\u00E3o..</param>
+        /// <param name="IdTipoCartao">Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta..</param>
+        /// <param name="FlagAtivo">Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o..</param>
+        /// <param name="DataCadastroPortador">Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o..</param>
+        /// <param name="DataCancelamentoPortador">Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o..</param>
 
         public PortadorResponse(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdTipoCartao = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
+        /// Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
         /// </summary>
-        /// <value>Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</value>
+        /// <value>Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</value>
         [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
         public string TipoPortador { get; set; }
     
         /// <summary>
-        /// Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+        /// Apresenta o nome a ser impresso no cart\u00E3o.
         /// </summary>
-        /// <value>Apresenta o nome a ser impresso no cart\u00C3\u00A3o.</value>
+        /// <value>Apresenta o nome a ser impresso no cart\u00E3o.</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+        /// Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
         /// </summary>
-        /// <value>Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.</value>
+        /// <value>Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+        /// Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
         /// </summary>
-        /// <value>Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.</value>
+        /// <value>Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.</value>
         [DataMember(Name="dataCadastroPortador", EmitDefaultValue=false)]
         public string DataCadastroPortador { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+        /// Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
         /// </summary>
-        /// <value>Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.</value>
         [DataMember(Name="dataCancelamentoPortador", EmitDefaultValue=false)]
         public string DataCancelamentoPortador { get; set; }
     

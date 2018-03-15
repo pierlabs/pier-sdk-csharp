@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+    /// Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse :  IEquatable<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaResponse" />class.
         /// </summary>
-        /// <param name="NumeroMascaradoCartao">N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado..</param>
+        /// <param name="NumeroMascaradoCartao">N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado..</param>
         /// <param name="VencimentoPrimeiraParcela">Data de vencimento da primeira parcela..</param>
-        /// <param name="ValorTransacao">Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque..</param>
-        /// <param name="NumeroMesesCarencia">N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia..</param>
+        /// <param name="ValorTransacao">Valor da solicita\u00E7\u00E3o de saque..</param>
+        /// <param name="NumeroMesesCarencia">N\u00FAmero de meses para car\u00EAncia..</param>
         /// <param name="Parcelas">Lista com os planos de parcelamento..</param>
 
         public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse(string NumeroMascaradoCartao = null, string VencimentoPrimeiraParcela = null, double? ValorTransacao = null, int? NumeroMesesCarencia = null, List<ParcelamentoTransferenciaResponse> Parcelas = null)
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+        /// N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.</value>
+        /// <value>N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.</value>
         [DataMember(Name="numeroMascaradoCartao", EmitDefaultValue=false)]
         public string NumeroMascaradoCartao { get; set; }
     
@@ -54,16 +54,16 @@ namespace Conductor.Pier.Model
         public string VencimentoPrimeiraParcela { get; set; }
     
         /// <summary>
-        /// Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+        /// Valor da solicita\u00E7\u00E3o de saque.
         /// </summary>
-        /// <value>Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.</value>
+        /// <value>Valor da solicita\u00E7\u00E3o de saque.</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+        /// N\u00FAmero de meses para car\u00EAncia.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.</value>
+        /// <value>N\u00FAmero de meses para car\u00EAncia.</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     

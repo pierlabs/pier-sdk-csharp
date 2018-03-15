@@ -24,7 +24,7 @@ namespace Conductor.Pier.Api
         /// Este recurso registra uma cobranca emitido.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
         /// <returns>BoletoResponse</returns>
         BoletoResponse RegistrarBoletoUsingPOST (long? id);
   
@@ -35,7 +35,7 @@ namespace Conductor.Pier.Api
         /// Este recurso registra uma cobranca emitido.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
         /// <returns>ApiResponse of BoletoResponse</returns>
         ApiResponse<BoletoResponse> RegistrarBoletoUsingPOSTWithHttpInfo (long? id);
         
@@ -50,7 +50,7 @@ namespace Conductor.Pier.Api
         /// Este recurso registra uma cobranca emitido.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
         /// <returns>Task of BoletoResponse</returns>
         System.Threading.Tasks.Task<BoletoResponse> RegistrarBoletoUsingPOSTAsync (long? id);
 
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Api
         /// Este recurso registra uma cobranca emitido.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> RegistrarBoletoUsingPOSTAsyncWithHttpInfo (long? id);
         
@@ -161,7 +161,7 @@ namespace Conductor.Pier.Api
         /// Registra uma cobranca na entidade banco relacionada a cobranca informado. Este recurso registra uma cobranca emitido.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param> 
         /// <returns>BoletoResponse</returns>
         public BoletoResponse RegistrarBoletoUsingPOST (long? id)
         {
@@ -173,7 +173,7 @@ namespace Conductor.Pier.Api
         /// Registra uma cobranca na entidade banco relacionada a cobranca informado. Este recurso registra uma cobranca emitido.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param> 
         /// <returns>ApiResponse of BoletoResponse</returns>
         public ApiResponse< BoletoResponse > RegistrarBoletoUsingPOSTWithHttpInfo (long? id)
         {
@@ -241,7 +241,7 @@ namespace Conductor.Pier.Api
         /// Registra uma cobranca na entidade banco relacionada a cobranca informado. Este recurso registra uma cobranca emitido.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
         /// <returns>Task of BoletoResponse</returns>
         public async System.Threading.Tasks.Task<BoletoResponse> RegistrarBoletoUsingPOSTAsync (long? id)
         {
@@ -254,7 +254,7 @@ namespace Conductor.Pier.Api
         /// Registra uma cobranca na entidade banco relacionada a cobranca informado. Este recurso registra uma cobranca emitido.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> RegistrarBoletoUsingPOSTAsyncWithHttpInfo (long? id)
         {

@@ -22,28 +22,28 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaJuridicaAprovadaPersist" /> class.
         /// Initializes a new instance of the <see cref="PessoaJuridicaAprovadaPersist" />class.
         /// </summary>
-        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)&#39;. (required).</param>
+        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;. (required).</param>
         /// <param name="NomeFantasia">Apresenta o nome fantasia da empresa..</param>
-        /// <param name="Cnpj">N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ) (required).</param>
-        /// <param name="InscricaoEstadual">N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE)..</param>
+        /// <param name="Cnpj">N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ) (required).</param>
+        /// <param name="InscricaoEstadual">N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE)..</param>
         /// <param name="DataAberturaEmpresa">Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd. (required).</param>
         /// <param name="IdOrigemComercial">Id da origem comercial (required).</param>
         /// <param name="IdProduto">Id do produto (required).</param>
-        /// <param name="NumeroAgencia">N\u00C3\u00BAmero da ag\u00C3\u00AAncia..</param>
-        /// <param name="NumeroContaCorrente">N\u00C3\u00BAmero da conta corrente..</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia..</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente..</param>
         /// <param name="Email">Email da empresa.</param>
         /// <param name="DiaVencimento">Dia vencimento (required).</param>
-        /// <param name="NomeImpresso">Nome que deve ser impresso no cart\u00C3\u00A3o.</param>
+        /// <param name="NomeImpresso">Nome que deve ser impresso no cart\u00E3o.</param>
         /// <param name="ValorRenda">Apresenta o valor da renda compravada.</param>
         /// <param name="CanalEntrada">Indica o canal pelo qual o cadastro do cliente foi realizado.</param>
-        /// <param name="ValorPontuacao">Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0).</param>
+        /// <param name="ValorPontuacao">Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0).</param>
         /// <param name="Telefones">Apresenta os telefones da empresa.</param>
-        /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros (required).</param>
-        /// <param name="Socios">Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista.</param>
-        /// <param name="ReferenciasComerciais">Apresenta os dados das refer\u00C3\u00AAncias comerciais.</param>
+        /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros (required).</param>
+        /// <param name="Socios">Apresenta os dados dos s\u00F3cios da empresa, caso exista.</param>
+        /// <param name="ReferenciasComerciais">Apresenta os dados das refer\u00EAncias comerciais.</param>
         /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
-        /// <param name="LimiteMaximo">Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es (required).</param>
-        /// <param name="LimiteParcelas">Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras (required).</param>
+        /// <param name="LimiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es (required).</param>
+        /// <param name="LimiteParcelas">Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras (required).</param>
 
         public PessoaJuridicaAprovadaPersist(string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, List<PessoaPersist> Socios = null, List<RefenciaComercialAprovadoPersist> ReferenciasComerciais = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null)
         {
@@ -154,9 +154,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)&#39;.
+        /// Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;.
         /// </summary>
-        /// <value>Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)&#39;.</value>
+        /// <value>Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;.</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
@@ -168,16 +168,16 @@ namespace Conductor.Pier.Model
         public string NomeFantasia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+        /// N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)</value>
+        /// <value>N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)</value>
         [DataMember(Name="cnpj", EmitDefaultValue=false)]
         public string Cnpj { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+        /// N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).</value>
+        /// <value>N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).</value>
         [DataMember(Name="inscricaoEstadual", EmitDefaultValue=false)]
         public string InscricaoEstadual { get; set; }
     
@@ -203,16 +203,16 @@ namespace Conductor.Pier.Model
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+        /// N\u00FAmero da ag\u00EAncia.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da ag\u00C3\u00AAncia.</value>
+        /// <value>N\u00FAmero da ag\u00EAncia.</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero da conta corrente.
+        /// N\u00FAmero da conta corrente.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero da conta corrente.</value>
+        /// <value>N\u00FAmero da conta corrente.</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
@@ -231,9 +231,9 @@ namespace Conductor.Pier.Model
         public int? DiaVencimento { get; set; }
     
         /// <summary>
-        /// Nome que deve ser impresso no cart\u00C3\u00A3o
+        /// Nome que deve ser impresso no cart\u00E3o
         /// </summary>
-        /// <value>Nome que deve ser impresso no cart\u00C3\u00A3o</value>
+        /// <value>Nome que deve ser impresso no cart\u00E3o</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
@@ -252,9 +252,9 @@ namespace Conductor.Pier.Model
         public string CanalEntrada { get; set; }
     
         /// <summary>
-        /// Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+        /// Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
         /// </summary>
-        /// <value>Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)</value>
+        /// <value>Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)</value>
         [DataMember(Name="valorPontuacao", EmitDefaultValue=false)]
         public int? ValorPontuacao { get; set; }
     
@@ -266,23 +266,23 @@ namespace Conductor.Pier.Model
         public List<TelefonePessoaAprovadaPersist> Telefones { get; set; }
     
         /// <summary>
-        /// Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+        /// Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
         /// </summary>
-        /// <value>Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros</value>
+        /// <value>Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros</value>
         [DataMember(Name="enderecos", EmitDefaultValue=false)]
         public List<EnderecoAprovadoPersist> Enderecos { get; set; }
     
         /// <summary>
-        /// Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+        /// Apresenta os dados dos s\u00F3cios da empresa, caso exista
         /// </summary>
-        /// <value>Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista</value>
+        /// <value>Apresenta os dados dos s\u00F3cios da empresa, caso exista</value>
         [DataMember(Name="socios", EmitDefaultValue=false)]
         public List<PessoaPersist> Socios { get; set; }
     
         /// <summary>
-        /// Apresenta os dados das refer\u00C3\u00AAncias comerciais
+        /// Apresenta os dados das refer\u00EAncias comerciais
         /// </summary>
-        /// <value>Apresenta os dados das refer\u00C3\u00AAncias comerciais</value>
+        /// <value>Apresenta os dados das refer\u00EAncias comerciais</value>
         [DataMember(Name="referenciasComerciais", EmitDefaultValue=false)]
         public List<RefenciaComercialAprovadoPersist> ReferenciasComerciais { get; set; }
     
@@ -294,16 +294,16 @@ namespace Conductor.Pier.Model
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+        /// Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
         /// </summary>
-        /// <value>Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es</value>
+        /// <value>Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es</value>
         [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
         public double? LimiteMaximo { get; set; }
     
         /// <summary>
-        /// Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+        /// Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
         /// </summary>
-        /// <value>Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras</value>
+        /// <value>Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     

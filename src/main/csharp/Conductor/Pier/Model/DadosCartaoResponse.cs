@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Dados Cart\u00C3\u00A3o
+    /// Objeto Dados Cart\u00E3o
     /// </summary>
     [DataContract]
     public partial class DadosCartaoResponse :  IEquatable<DadosCartaoResponse>
@@ -23,18 +23,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosCartaoResponse" />class.
         /// </summary>
         /// <param name="FlagVirtual">FlagVirtual.</param>
-        /// <param name="NumeroCartao">N\u00C3\u00BAmero do cart\u00C3\u00A3o..</param>
+        /// <param name="NumeroCartao">N\u00FAmero do cart\u00E3o..</param>
         /// <param name="DataValidade">Data de validade..</param>
-        /// <param name="Cvv2">CVV2 do cart\u00C3\u00A3o..</param>
+        /// <param name="Cvv2">CVV2 do cart\u00E3o..</param>
         /// <param name="NomePlastico">Nome do portador..</param>
         /// <param name="IdConta">Identificador da conta do portador..</param>
-        /// <param name="IdCartao">Identificador da cart\u00C3\u00A3o do portador..</param>
-        /// <param name="NumeroAgencia">Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel..</param>
-        /// <param name="NumeroContaCorente">Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel..</param>
+        /// <param name="IdCartao">Identificador da cart\u00E3o do portador..</param>
+        /// <param name="NumeroAgencia">Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel..</param>
+        /// <param name="NumeroContaCorente">Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel..</param>
         /// <param name="IdStatusConta">Status da conta do portador..</param>
-        /// <param name="StatusConta">Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador..</param>
-        /// <param name="IdStatusCartao">Status do cart\u00C3\u00A3o..</param>
-        /// <param name="StatusCartao">Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o..</param>
+        /// <param name="StatusConta">Descri\u00E7\u00E3o do status da conta do portador..</param>
+        /// <param name="IdStatusCartao">Status do cart\u00E3o..</param>
+        /// <param name="StatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o..</param>
 
         public DadosCartaoResponse(int? FlagVirtual = null, string NumeroCartao = null, string DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, int? NumeroAgencia = null, string NumeroContaCorente = null, long? IdStatusConta = null, string StatusConta = null, long? IdStatusCartao = null, string StatusCartao = null)
         {
@@ -62,9 +62,9 @@ namespace Conductor.Pier.Model
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero do cart\u00C3\u00A3o.
+        /// N\u00FAmero do cart\u00E3o.
         /// </summary>
-        /// <value>N\u00C3\u00BAmero do cart\u00C3\u00A3o.</value>
+        /// <value>N\u00FAmero do cart\u00E3o.</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
@@ -76,9 +76,9 @@ namespace Conductor.Pier.Model
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// CVV2 do cart\u00C3\u00A3o.
+        /// CVV2 do cart\u00E3o.
         /// </summary>
-        /// <value>CVV2 do cart\u00C3\u00A3o.</value>
+        /// <value>CVV2 do cart\u00E3o.</value>
         [DataMember(Name="cvv2", EmitDefaultValue=false)]
         public string Cvv2 { get; set; }
     
@@ -97,23 +97,23 @@ namespace Conductor.Pier.Model
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identificador da cart\u00C3\u00A3o do portador.
+        /// Identificador da cart\u00E3o do portador.
         /// </summary>
-        /// <value>Identificador da cart\u00C3\u00A3o do portador.</value>
+        /// <value>Identificador da cart\u00E3o do portador.</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+        /// Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.</value>
+        /// <value>Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+        /// Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.</value>
+        /// <value>Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.</value>
         [DataMember(Name="numeroContaCorente", EmitDefaultValue=false)]
         public string NumeroContaCorente { get; set; }
     
@@ -125,23 +125,23 @@ namespace Conductor.Pier.Model
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+        /// Descri\u00E7\u00E3o do status da conta do portador.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.</value>
+        /// <value>Descri\u00E7\u00E3o do status da conta do portador.</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
         /// <summary>
-        /// Status do cart\u00C3\u00A3o.
+        /// Status do cart\u00E3o.
         /// </summary>
-        /// <value>Status do cart\u00C3\u00A3o.</value>
+        /// <value>Status do cart\u00E3o.</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+        /// Descri\u00E7\u00E3o do status do cart\u00E3o.
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.</value>
+        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o.</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     

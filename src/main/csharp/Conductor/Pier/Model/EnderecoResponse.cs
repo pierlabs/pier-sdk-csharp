@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Endere\u00C3\u00A7o
+    /// Objeto Endere\u00E7o
     /// </summary>
     [DataContract]
     public partial class EnderecoResponse :  IEquatable<EnderecoResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoResponse" /> class.
         /// Initializes a new instance of the <see cref="EnderecoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)..</param>
-        /// <param name="IdPessoa">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id).</param>
-        /// <param name="IdTipoEndereco">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id).</param>
-        /// <param name="Cep">Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)..</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id).</param>
+        /// <param name="IdTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id).</param>
+        /// <param name="Cep">Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
         /// <param name="Logradouro">Apresenta o nome do Logradouro.</param>
-        /// <param name="Numero">Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o.</param>
-        /// <param name="Complemento">Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o.</param>
-        /// <param name="PontoReferencia">Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o.</param>
+        /// <param name="Numero">Apresenta o n\u00FAmero do endere\u00E7o.</param>
+        /// <param name="Complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o.</param>
+        /// <param name="PontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o.</param>
         /// <param name="Bairro">Apresenta nome do bairro.</param>
         /// <param name="Cidade">Apresenta nome da cidade.</param>
         /// <param name="Uf">Apresenta sigla da Unidade Federativa.</param>
         /// <param name="Pais">Apresenta nome do Pais.</param>
-        /// <param name="DataInclusao">Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o.</param>
-        /// <param name="DataUltimaAtualizacao">Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao.</param>
+        /// <param name="DataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o.</param>
+        /// <param name="DataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao.</param>
 
         public EnderecoResponse(long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null)
         {
@@ -58,30 +58,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)</value>
         [DataMember(Name="idTipoEndereco", EmitDefaultValue=false)]
         public long? IdTipoEndereco { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
+        /// Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;
         /// </summary>
-        /// <value>Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
+        /// <value>Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
@@ -93,23 +93,23 @@ namespace Conductor.Pier.Model
         public string Logradouro { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+        /// Apresenta o n\u00FAmero do endere\u00E7o
         /// </summary>
-        /// <value>Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o</value>
+        /// <value>Apresenta o n\u00FAmero do endere\u00E7o</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
         public int? Numero { get; set; }
     
         /// <summary>
-        /// Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+        /// Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
         /// </summary>
-        /// <value>Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o</value>
+        /// <value>Apresenta descri\u00E7oes complementares referente ao endere\u00E7o</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+        /// Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
         /// </summary>
-        /// <value>Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o</value>
+        /// <value>Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o</value>
         [DataMember(Name="pontoReferencia", EmitDefaultValue=false)]
         public string PontoReferencia { get; set; }
     
@@ -142,16 +142,16 @@ namespace Conductor.Pier.Model
         public string Pais { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+        /// Apresenta a data em que fora cadastrado o Endere\u00E7o
         /// </summary>
-        /// <value>Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o</value>
+        /// <value>Apresenta a data em que fora cadastrado o Endere\u00E7o</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+        /// Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
         /// </summary>
-        /// <value>Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao</value>
+        /// <value>Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao</value>
         [DataMember(Name="dataUltimaAtualizacao", EmitDefaultValue=false)]
         public string DataUltimaAtualizacao { get; set; }
     

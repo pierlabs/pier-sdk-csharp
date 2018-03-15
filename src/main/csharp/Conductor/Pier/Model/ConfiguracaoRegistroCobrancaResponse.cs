@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.
+    /// Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoRegistroCobrancaResponse :  IEquatable<ConfiguracaoRegistroCobrancaResponse>
     { 
     
         /// <summary>
-        /// Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+        /// Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
         /// </summary>
-        /// <value>Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.</value>
+        /// <value>Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+        /// Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
         /// </summary>
-        /// <value>Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.</value>
+        /// <value>Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,9 +44,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoRegistroCobrancaResponse" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoRegistroCobrancaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="IdEmissor">C\u00C3\u00B3digo do emissor..</param>
-        /// <param name="CodigoBanco">C\u00C3\u00B3digo do Banco..</param>
+        /// <param name="Id">C\u00F3digo identificador da configura\u00E7\u00E3o..</param>
+        /// <param name="IdEmissor">C\u00F3digo do emissor..</param>
+        /// <param name="CodigoBanco">C\u00F3digo do Banco..</param>
         /// <param name="Uri">URL de acesso ao banco..</param>
         /// <param name="KeyStoreName">Caminho do certificado digital do emissor..</param>
         /// <param name="KeyStorePassword">Senha do certificado digital do emissor..</param>
@@ -58,7 +58,7 @@ namespace Conductor.Pier.Model
         /// <param name="TruststoreAlias">Alias do certificado digital do banco..</param>
         /// <param name="TypeTruststore">Tipo do certificado digital do banco..</param>
         /// <param name="UriAdicional">URL adicional de acesso ao banco..</param>
-        /// <param name="Status">Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa..</param>
+        /// <param name="Status">Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa..</param>
 
         public ConfiguracaoRegistroCobrancaResponse(long? Id = null, long? IdEmissor = null, long? CodigoBanco = null, string Uri = null, string KeyStoreName = null, string KeyStorePassword = null, string KeystoreAlias = null, string KeyStorePrivateKeyPassword = null, string TypeKeystore = null, string TrustStoreName = null, string TrustStorePassword = null, string TruststoreAlias = null, string TypeTruststore = null, string UriAdicional = null, StatusEnum? Status = null)
         {
@@ -82,23 +82,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.
+        /// C\u00F3digo identificador da configura\u00E7\u00E3o.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>C\u00F3digo identificador da configura\u00E7\u00E3o.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do emissor.
+        /// C\u00F3digo do emissor.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do emissor.</value>
+        /// <value>C\u00F3digo do emissor.</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// C\u00C3\u00B3digo do Banco.
+        /// C\u00F3digo do Banco.
         /// </summary>
-        /// <value>C\u00C3\u00B3digo do Banco.</value>
+        /// <value>C\u00F3digo do Banco.</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     

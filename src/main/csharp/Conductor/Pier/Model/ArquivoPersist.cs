@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Arquivo para persist\u00C3\u00AAncia de dados.
+    /// Objeto Arquivo para persist\u00EAncia de dados.
     /// </summary>
     [DataContract]
     public partial class ArquivoPersist :  IEquatable<ArquivoPersist>
     { 
     
         /// <summary>
-        /// Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+        /// Tipo de comunica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Tipo de comunica\u00E7\u00E3o.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoComunicacaoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+        /// Tipo de comunica\u00E7\u00E3o.
         /// </summary>
-        /// <value>Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.</value>
+        /// <value>Tipo de comunica\u00E7\u00E3o.</value>
         [DataMember(Name="tipoComunicacao", EmitDefaultValue=false)]
         public TipoComunicacaoEnum? TipoComunicacao { get; set; }
     
@@ -45,11 +45,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoPersist" />class.
         /// </summary>
         /// <param name="IdTipoArquivo">Tipo do arquivo.</param>
-        /// <param name="Arquivo">Conte\u00C3\u00BAdo do arquivo convertido em Base 64 (required).</param>
+        /// <param name="Arquivo">Conte\u00FAdo do arquivo convertido em Base 64 (required).</param>
         /// <param name="Nome">Nome do arquivo..</param>
-        /// <param name="Extensao">Formato/extens\u00C3\u00A3o do arquivo..</param>
-        /// <param name="TipoComunicacao">Tipo de comunica\u00C3\u00A7\u00C3\u00A3o..</param>
-        /// <param name="Detalhes">Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo (required).</param>
+        /// <param name="Extensao">Formato/extens\u00E3o do arquivo..</param>
+        /// <param name="TipoComunicacao">Tipo de comunica\u00E7\u00E3o..</param>
+        /// <param name="Detalhes">Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo (required).</param>
 
         public ArquivoPersist(long? IdTipoArquivo = null, string Arquivo = null, string Nome = null, string Extensao = null, TipoComunicacaoEnum? TipoComunicacao = null, List<ArquivoDetalhesPersist> Detalhes = null)
         {
@@ -87,9 +87,9 @@ namespace Conductor.Pier.Model
         public long? IdTipoArquivo { get; set; }
     
         /// <summary>
-        /// Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+        /// Conte\u00FAdo do arquivo convertido em Base 64
         /// </summary>
-        /// <value>Conte\u00C3\u00BAdo do arquivo convertido em Base 64</value>
+        /// <value>Conte\u00FAdo do arquivo convertido em Base 64</value>
         [DataMember(Name="arquivo", EmitDefaultValue=false)]
         public string Arquivo { get; set; }
     
@@ -101,16 +101,16 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
-        /// Formato/extens\u00C3\u00A3o do arquivo.
+        /// Formato/extens\u00E3o do arquivo.
         /// </summary>
-        /// <value>Formato/extens\u00C3\u00A3o do arquivo.</value>
+        /// <value>Formato/extens\u00E3o do arquivo.</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
+        /// Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
         /// </summary>
-        /// <value>Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo</value>
+        /// <value>Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo</value>
         [DataMember(Name="detalhes", EmitDefaultValue=false)]
         public List<ArquivoDetalhesPersist> Detalhes { get; set; }
     

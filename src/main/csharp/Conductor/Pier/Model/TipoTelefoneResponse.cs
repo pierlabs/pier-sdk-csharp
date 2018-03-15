@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTelefoneResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoTelefoneResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)..</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)..</param>
         /// <param name="Nome">Nome do Tipo do Telefone.</param>
 
         public TipoTelefoneResponse(long? Id = null, string Nome = null)
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
         /// </summary>
-        /// <value>C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

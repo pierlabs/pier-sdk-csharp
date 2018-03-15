@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso token
+    /// Representa\u00E7\u00E3o do recurso token
     /// </summary>
     [DataContract]
     public partial class TokenResponse :  IEquatable<TokenResponse>
@@ -47,20 +47,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TokenResponse" /> class.
         /// Initializes a new instance of the <see cref="TokenResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00C3\u00B3digo identificador do token.</param>
-        /// <param name="Token">Token.</param>
-        /// <param name="_Base">C\u00C3\u00B3digo identificador da base.</param>
+        /// <param name="Id">C\u00F3digo identificador do token.</param>
+        /// <param name="_Base">C\u00F3digo identificador da base.</param>
         /// <param name="Owner">Owner do token.</param>
         /// <param name="Status">Status do token.</param>
-        /// <param name="CriadoPor">Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token.</param>
-        /// <param name="DataCriacao">Data de cria\u00C3\u00A7\u00C3\u00A3o do token.</param>
-        /// <param name="AlteradoPor">Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token.</param>
-        /// <param name="DataModificacao">Data de modifica\u00C3\u00A7\u00C3\u00A3o do token.</param>
+        /// <param name="CriadoPor">Descri\u00E7\u00E3o de quem criou o token.</param>
+        /// <param name="DataCriacao">Data de cria\u00E7\u00E3o do token.</param>
+        /// <param name="AlteradoPor">Descri\u00E7\u00E3o de quem alterou o token.</param>
+        /// <param name="DataModificacao">Data de modifica\u00E7\u00E3o do token.</param>
 
-        public TokenResponse(long? Id = null, string Token = null, long? _Base = null, string Owner = null, StatusEnum? Status = null, string CriadoPor = null, DateTime? DataCriacao = null, string AlteradoPor = null, DateTime? DataModificacao = null)
+        public TokenResponse(long? Id = null, long? _Base = null, string Owner = null, StatusEnum? Status = null, string CriadoPor = null, DateTime? DataCriacao = null, string AlteradoPor = null, DateTime? DataModificacao = null)
         {
             this.Id = Id;
-            this.Token = Token;
             this._Base = _Base;
             this.Owner = Owner;
             this.Status = Status;
@@ -73,23 +71,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00C3\u00B3digo identificador do token
+        /// C\u00F3digo identificador do token
         /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador do token</value>
+        /// <value>C\u00F3digo identificador do token</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Token
+        /// C\u00F3digo identificador da base
         /// </summary>
-        /// <value>Token</value>
-        [DataMember(Name="token", EmitDefaultValue=false)]
-        public string Token { get; set; }
-    
-        /// <summary>
-        /// C\u00C3\u00B3digo identificador da base
-        /// </summary>
-        /// <value>C\u00C3\u00B3digo identificador da base</value>
+        /// <value>C\u00F3digo identificador da base</value>
         [DataMember(Name="base", EmitDefaultValue=false)]
         public long? _Base { get; set; }
     
@@ -101,30 +92,30 @@ namespace Conductor.Pier.Model
         public string Owner { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
+        /// Descri\u00E7\u00E3o de quem criou o token
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token</value>
+        /// <value>Descri\u00E7\u00E3o de quem criou o token</value>
         [DataMember(Name="criadoPor", EmitDefaultValue=false)]
         public string CriadoPor { get; set; }
     
         /// <summary>
-        /// Data de cria\u00C3\u00A7\u00C3\u00A3o do token
+        /// Data de cria\u00E7\u00E3o do token
         /// </summary>
-        /// <value>Data de cria\u00C3\u00A7\u00C3\u00A3o do token</value>
+        /// <value>Data de cria\u00E7\u00E3o do token</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public DateTime? DataCriacao { get; set; }
     
         /// <summary>
-        /// Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
+        /// Descri\u00E7\u00E3o de quem alterou o token
         /// </summary>
-        /// <value>Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token</value>
+        /// <value>Descri\u00E7\u00E3o de quem alterou o token</value>
         [DataMember(Name="alteradoPor", EmitDefaultValue=false)]
         public string AlteradoPor { get; set; }
     
         /// <summary>
-        /// Data de modifica\u00C3\u00A7\u00C3\u00A3o do token
+        /// Data de modifica\u00E7\u00E3o do token
         /// </summary>
-        /// <value>Data de modifica\u00C3\u00A7\u00C3\u00A3o do token</value>
+        /// <value>Data de modifica\u00E7\u00E3o do token</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
         public DateTime? DataModificacao { get; set; }
     
@@ -137,7 +128,6 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class TokenResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("  _Base: ").Append(_Base).Append("\n");
             sb.Append("  Owner: ").Append(Owner).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -186,11 +176,6 @@ namespace Conductor.Pier.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.Token == other.Token ||
-                    this.Token != null &&
-                    this.Token.Equals(other.Token)
                 ) && 
                 (
                     this._Base == other._Base ||
@@ -243,9 +228,6 @@ namespace Conductor.Pier.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Token != null)
-                    hash = hash * 59 + this.Token.GetHashCode();
                 
                 if (this._Base != null)
                     hash = hash * 59 + this._Base.GetHashCode();

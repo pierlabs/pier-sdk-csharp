@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+    /// Resposta do recurso de simular empr\u00E9stimos/financiamentos
     /// </summary>
     [DataContract]
     public partial class EmprestimoPessoalResponse :  IEquatable<EmprestimoPessoalResponse>
@@ -23,13 +23,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EmprestimoPessoalResponse" />class.
         /// </summary>
         /// <param name="PlanosParcelamentos">PlanosParcelamentos.</param>
-        /// <param name="ValorSolicitado">Valor solicitado do empr\u00C3\u00A9stimo/financiamento.</param>
-        /// <param name="ValorMaximoSolicitacao">Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela.</param>
-        /// <param name="NumeroParcelas">N\u00C3\u00BAmero de parcelas solicitado.</param>
-        /// <param name="ValorMaximoParcela">Limite m\u00C3\u00A1ximo de parcela permitido.</param>
+        /// <param name="ValorSolicitado">Valor solicitado do empr\u00E9stimo/financiamento.</param>
+        /// <param name="ValorMaximoSolicitacao">Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela.</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de parcelas solicitado.</param>
+        /// <param name="ValorMaximoParcela">Limite m\u00E1ximo de parcela permitido.</param>
         /// <param name="DataPrimeiraParcela">Data do desconto da primeira parcela.</param>
-        /// <param name="PeriodoTaxa">Per\u00C3\u00ADodo de aplica da taxa de juros.</param>
-        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas.</param>
+        /// <param name="PeriodoTaxa">Per\u00EDodo de aplica da taxa de juros.</param>
+        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00E7\u00E3o do valor das parcelas.</param>
         /// <param name="TaxaJuros">Valor percentual da taxa de juros a ser aplicada.</param>
 
         public EmprestimoPessoalResponse(List<PlanoParcelamentoEmprestimoResponse> PlanosParcelamentos = null, double? ValorSolicitado = null, double? ValorMaximoSolicitacao = null, int? NumeroParcelas = null, double? ValorMaximoParcela = null, string DataPrimeiraParcela = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, double? TaxaJuros = null)
@@ -54,30 +54,30 @@ namespace Conductor.Pier.Model
         public List<PlanoParcelamentoEmprestimoResponse> PlanosParcelamentos { get; set; }
     
         /// <summary>
-        /// Valor solicitado do empr\u00C3\u00A9stimo/financiamento
+        /// Valor solicitado do empr\u00E9stimo/financiamento
         /// </summary>
-        /// <value>Valor solicitado do empr\u00C3\u00A9stimo/financiamento</value>
+        /// <value>Valor solicitado do empr\u00E9stimo/financiamento</value>
         [DataMember(Name="valorSolicitado", EmitDefaultValue=false)]
         public double? ValorSolicitado { get; set; }
     
         /// <summary>
-        /// Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+        /// Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
         /// </summary>
-        /// <value>Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela</value>
+        /// <value>Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela</value>
         [DataMember(Name="valorMaximoSolicitacao", EmitDefaultValue=false)]
         public double? ValorMaximoSolicitacao { get; set; }
     
         /// <summary>
-        /// N\u00C3\u00BAmero de parcelas solicitado
+        /// N\u00FAmero de parcelas solicitado
         /// </summary>
-        /// <value>N\u00C3\u00BAmero de parcelas solicitado</value>
+        /// <value>N\u00FAmero de parcelas solicitado</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// Limite m\u00C3\u00A1ximo de parcela permitido
+        /// Limite m\u00E1ximo de parcela permitido
         /// </summary>
-        /// <value>Limite m\u00C3\u00A1ximo de parcela permitido</value>
+        /// <value>Limite m\u00E1ximo de parcela permitido</value>
         [DataMember(Name="valorMaximoParcela", EmitDefaultValue=false)]
         public double? ValorMaximoParcela { get; set; }
     
@@ -89,16 +89,16 @@ namespace Conductor.Pier.Model
         public string DataPrimeiraParcela { get; set; }
     
         /// <summary>
-        /// Per\u00C3\u00ADodo de aplica da taxa de juros
+        /// Per\u00EDodo de aplica da taxa de juros
         /// </summary>
-        /// <value>Per\u00C3\u00ADodo de aplica da taxa de juros</value>
+        /// <value>Per\u00EDodo de aplica da taxa de juros</value>
         [DataMember(Name="periodoTaxa", EmitDefaultValue=false)]
         public string PeriodoTaxa { get; set; }
     
         /// <summary>
-        /// Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+        /// Sistema para amortiza\u00E7\u00E3o do valor das parcelas
         /// </summary>
-        /// <value>Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas</value>
+        /// <value>Sistema para amortiza\u00E7\u00E3o do valor das parcelas</value>
         [DataMember(Name="sistemaAmortizacao", EmitDefaultValue=false)]
         public string SistemaAmortizacao { get; set; }
     

@@ -24,7 +24,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar plataforma mobile.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param>
         /// <param name="update">update</param>
         /// <returns>PlataformaMobileResponse</returns>
         PlataformaMobileResponse AtualizarUsingPUT1 (long? id, PlataformaMobileUpdate update);
@@ -36,7 +36,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar plataforma mobile.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of PlataformaMobileResponse</returns>
         ApiResponse<PlataformaMobileResponse> AtualizarUsingPUT1WithHttpInfo (long? id, PlataformaMobileUpdate update);
@@ -45,29 +45,29 @@ namespace Conductor.Pier.Api
         /// Lista as plataformas mobile cadastradas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>PagePlataformaMobileResponse</returns>
-        PagePlataformaMobileResponse ListarUsingGET31 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        PagePlataformaMobileResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
   
         /// <summary>
         /// Lista as plataformas mobile cadastradas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET31WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -102,7 +102,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar plataforma mobile.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of PlataformaMobileResponse</returns>
         System.Threading.Tasks.Task<PlataformaMobileResponse> AtualizarUsingPUT1Async (long? id, PlataformaMobileUpdate update);
@@ -114,7 +114,7 @@ namespace Conductor.Pier.Api
         /// Esse recurso permite atualizar plataforma mobile.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, PlataformaMobileUpdate update);
@@ -123,29 +123,29 @@ namespace Conductor.Pier.Api
         /// Lista as plataformas mobile cadastradas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET31Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
 
         /// <summary>
         /// Lista as plataformas mobile cadastradas
         /// </summary>
         /// <remarks>
-        /// Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET31AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// Cadastra Plataforma Mobile
@@ -265,7 +265,7 @@ namespace Conductor.Pier.Api
         /// Atualiza Plataforma Mobile Esse recurso permite atualizar plataforma mobile.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>PlataformaMobileResponse</returns>
         public PlataformaMobileResponse AtualizarUsingPUT1 (long? id, PlataformaMobileUpdate update)
@@ -278,7 +278,7 @@ namespace Conductor.Pier.Api
         /// Atualiza Plataforma Mobile Esse recurso permite atualizar plataforma mobile.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of PlataformaMobileResponse</returns>
         public ApiResponse< PlataformaMobileResponse > AtualizarUsingPUT1WithHttpInfo (long? id, PlataformaMobileUpdate update)
@@ -358,7 +358,7 @@ namespace Conductor.Pier.Api
         /// Atualiza Plataforma Mobile Esse recurso permite atualizar plataforma mobile.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of PlataformaMobileResponse</returns>
         public async System.Threading.Tasks.Task<PlataformaMobileResponse> AtualizarUsingPUT1Async (long? id, PlataformaMobileUpdate update)
@@ -372,7 +372,7 @@ namespace Conductor.Pier.Api
         /// Atualiza Plataforma Mobile Esse recurso permite atualizar plataforma mobile.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, PlataformaMobileUpdate update)
@@ -444,30 +444,30 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as plataformas mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Lista as plataformas mobile cadastradas Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param> 
         /// <returns>PagePlataformaMobileResponse</returns>
-        public PagePlataformaMobileResponse ListarUsingGET31 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public PagePlataformaMobileResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET31WithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET33WithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista as plataformas mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Lista as plataformas mobile cadastradas Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param> 
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param> 
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param> 
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET31WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -517,9 +517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -529,31 +529,31 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Lista as plataformas mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Lista as plataformas mobile cadastradas Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET31Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET31AsyncWithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET33AsyncWithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista as plataformas mobile cadastradas Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+        /// Lista as plataformas mobile cadastradas Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. (optional)</param>
-        /// <param name="page">P\u00C3\u00A1gina solicitada (Default = 0) (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) (optional)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros. (optional)</param>
+        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <param name="nome">Nome da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET31AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -603,9 +603,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
+    /// Representa\u00E7\u00E3o do recurso WebHook
     /// </summary>
     [DataContract]
     public partial class WebHookResponse :  IEquatable<WebHookResponse>
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// M\u00C3\u00A9todo que a ser chamado pelo WebHook
+        /// M\u00E9todo que a ser chamado pelo WebHook
         /// </summary>
-        /// <value>M\u00C3\u00A9todo que a ser chamado pelo WebHook</value>
+        /// <value>M\u00E9todo que a ser chamado pelo WebHook</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MetodoEnum {
             
@@ -80,9 +80,9 @@ namespace Conductor.Pier.Model
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// M\u00C3\u00A9todo que a ser chamado pelo WebHook
+        /// M\u00E9todo que a ser chamado pelo WebHook
         /// </summary>
-        /// <value>M\u00C3\u00A9todo que a ser chamado pelo WebHook</value>
+        /// <value>M\u00E9todo que a ser chamado pelo WebHook</value>
         [DataMember(Name="metodo", EmitDefaultValue=false)]
         public MetodoEnum? Metodo { get; set; }
     
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">Id do WebHook (required).</param>
         /// <param name="TipoEvento">TipoEvento a ser chamado pelo WebHook (required).</param>
-        /// <param name="Metodo">M\u00C3\u00A9todo que a ser chamado pelo WebHook (required).</param>
+        /// <param name="Metodo">M\u00E9todo que a ser chamado pelo WebHook (required).</param>
         /// <param name="Url">URL que a ser consumida pelo WebHook (required).</param>
         /// <param name="Status">Status do WebHook (required).</param>
 
