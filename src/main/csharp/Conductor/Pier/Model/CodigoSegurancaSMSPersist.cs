@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
+    /// {{{codigo_seguranca_s_m_s_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaSMSPersist :  IEquatable<CodigoSegurancaSMSPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSPersist" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSPersist" />class.
         /// </summary>
-        /// <param name="Ddd">DDD do n\u00FAmero de telefone para envio do sms..</param>
-        /// <param name="Telefone">N\u00FAmero do telefone para envio do sms..</param>
+        /// <param name="Ddd">{{{codigo_seguranca_s_m_s_persist_ddd_value}}}.</param>
+        /// <param name="Telefone">{{{codigo_seguranca_s_m_s_persist_telefone_value}}}.</param>
 
         public CodigoSegurancaSMSPersist(string Ddd = null, string Telefone = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// DDD do n\u00FAmero de telefone para envio do sms.
+        /// {{{codigo_seguranca_s_m_s_persist_ddd_value}}}
         /// </summary>
-        /// <value>DDD do n\u00FAmero de telefone para envio do sms.</value>
+        /// <value>{{{codigo_seguranca_s_m_s_persist_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do telefone para envio do sms.
+        /// {{{codigo_seguranca_s_m_s_persist_telefone_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do telefone para envio do sms.</value>
+        /// <value>{{{codigo_seguranca_s_m_s_persist_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     

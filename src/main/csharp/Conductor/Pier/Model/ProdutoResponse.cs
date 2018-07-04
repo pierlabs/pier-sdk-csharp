@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Produto
+    /// {{{produto_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ProdutoResponse :  IEquatable<ProdutoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). (required).</param>
-        /// <param name="Nome">Descri\u00E7\u00E3o do Nome do Produto. (required).</param>
-        /// <param name="Status">Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). (required).</param>
-        /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence..</param>
+        /// <param name="Id">{{{produto_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{produto_response_nome_value}}} (required).</param>
+        /// <param name="Status">{{{produto_response_status_value}}} (required).</param>
+        /// <param name="IdFantasiaBasica">{{{produto_response_id_fantasia_basica_value}}}.</param>
 
         public ProdutoResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null)
         {
@@ -62,30 +62,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+        /// {{{produto_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</value>
+        /// <value>{{{produto_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do Nome do Produto.
+        /// {{{produto_response_nome_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do Nome do Produto.</value>
+        /// <value>{{{produto_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+        /// {{{produto_response_status_value}}}
         /// </summary>
-        /// <value>Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).</value>
+        /// <value>{{{produto_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+        /// {{{produto_response_id_fantasia_basica_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.</value>
+        /// <value>{{{produto_response_id_fantasia_basica_value}}}</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     

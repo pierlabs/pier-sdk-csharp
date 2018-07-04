@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o
+    /// {{{tipo_endereco_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoEnderecoResponse :  IEquatable<TipoEnderecoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoEnderecoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoEnderecoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id).</param>
-        /// <param name="Nome">Nome do Tipo do Endere\u00E7o.</param>
+        /// <param name="Id">{{{tipo_endereco_response_id_value}}}.</param>
+        /// <param name="Nome">{{{tipo_endereco_response_nome_value}}}.</param>
 
         public TipoEnderecoResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+        /// {{{tipo_endereco_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)</value>
+        /// <value>{{{tipo_endereco_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do Tipo do Endere\u00E7o
+        /// {{{tipo_endereco_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do Tipo do Endere\u00E7o</value>
+        /// <value>{{{tipo_endereco_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

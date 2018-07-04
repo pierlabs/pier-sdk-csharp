@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso TipoOportunidadeAUD
+    /// {{{tipo_oportunidade_a_u_d_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoOportunidadeAUDResponse :  IEquatable<TipoOportunidadeAUDResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOportunidadeAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOportunidadeAUDResponse" />class.
         /// </summary>
-        /// <param name="Rev">C\u00F3digo identificador da auditoria dos tipos oportunidades.</param>
-        /// <param name="RevType">C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades.</param>
-        /// <param name="RevDate">Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades.</param>
-        /// <param name="Id">C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o.</param>
-        /// <param name="FlagAtivo">Atributo que representa se o tipo oportunidade est\u00E1 ativo.</param>
+        /// <param name="Rev">{{{tipo_oportunidade_a_u_d_response_rev_value}}}.</param>
+        /// <param name="RevType">{{{tipo_oportunidade_a_u_d_response_rev_type_value}}}.</param>
+        /// <param name="RevDate">{{{tipo_oportunidade_a_u_d_response_rev_date_value}}}.</param>
+        /// <param name="Id">{{{tipo_oportunidade_a_u_d_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_oportunidade_a_u_d_response_descricao_value}}}.</param>
+        /// <param name="FlagAtivo">{{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}.</param>
 
         public TipoOportunidadeAUDResponse(long? Rev = null, long? RevType = null, string RevDate = null, long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador da auditoria dos tipos oportunidades
+        /// {{{tipo_oportunidade_a_u_d_response_rev_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da auditoria dos tipos oportunidades</value>
+        /// <value>{{{tipo_oportunidade_a_u_d_response_rev_value}}}</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
         /// <summary>
-        /// C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+        /// {{{tipo_oportunidade_a_u_d_response_rev_type_value}}}
         /// </summary>
-        /// <value>C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades</value>
+        /// <value>{{{tipo_oportunidade_a_u_d_response_rev_type_value}}}</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public long? RevType { get; set; }
     
         /// <summary>
-        /// Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+        /// {{{tipo_oportunidade_a_u_d_response_rev_date_value}}}
         /// </summary>
-        /// <value>Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades</value>
+        /// <value>{{{tipo_oportunidade_a_u_d_response_rev_date_value}}}</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
         public string RevDate { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+        /// {{{tipo_oportunidade_a_u_d_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o</value>
+        /// <value>{{{tipo_oportunidade_a_u_d_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+        /// {{{tipo_oportunidade_a_u_d_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o</value>
+        /// <value>{{{tipo_oportunidade_a_u_d_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Atributo que representa se o tipo oportunidade est\u00E1 ativo
+        /// {{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Atributo que representa se o tipo oportunidade est\u00E1 ativo</value>
+        /// <value>{{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

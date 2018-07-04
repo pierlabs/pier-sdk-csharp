@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o
+    /// {{{transacao_pay_query_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TransacaoPayQueryResponse :  IEquatable<TransacaoPayQueryResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoPayQueryResponse" /> class.
         /// Initializes a new instance of the <see cref="TransacaoPayQueryResponse" />class.
         /// </summary>
-        /// <param name="Codigo">Resultado de consulta de conta.</param>
-        /// <param name="Descricao">Mensagem descrevendo resposta..</param>
+        /// <param name="Codigo">{{{transacao_pay_query_response_codigo_value}}}.</param>
+        /// <param name="Descricao">{{{transacao_pay_query_response_descricao_value}}}.</param>
 
         public TransacaoPayQueryResponse(string Codigo = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Resultado de consulta de conta
+        /// {{{transacao_pay_query_response_codigo_value}}}
         /// </summary>
-        /// <value>Resultado de consulta de conta</value>
+        /// <value>{{{transacao_pay_query_response_codigo_value}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public string Codigo { get; set; }
     
         /// <summary>
-        /// Mensagem descrevendo resposta.
+        /// {{{transacao_pay_query_response_descricao_value}}}
         /// </summary>
-        /// <value>Mensagem descrevendo resposta.</value>
+        /// <value>{{{transacao_pay_query_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

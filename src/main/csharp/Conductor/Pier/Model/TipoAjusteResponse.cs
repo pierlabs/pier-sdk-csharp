@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Tipo de ajuste
+    /// {{{tipo_ajuste_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoAjusteResponse :  IEquatable<TipoAjusteResponse>
@@ -22,30 +22,39 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoAjusteResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoAjusteResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador do tipo de ajuste..</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de ajuste..</param>
+        /// <param name="Id">{{{tipo_ajuste_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_ajuste_response_descricao_value}}}.</param>
+        /// <param name="Transacoes">{{{tipo_ajuste_response_transacoes_value}}}.</param>
 
-        public TipoAjusteResponse(long? Id = null, string Descricao = null)
+        public TipoAjusteResponse(long? Id = null, string Descricao = null, List<TipoTransacaoAjusteResponse> Transacoes = null)
         {
             this.Id = Id;
             this.Descricao = Descricao;
+            this.Transacoes = Transacoes;
             
         }
         
     
         /// <summary>
-        /// C\u00F3digo identificador do tipo de ajuste.
+        /// {{{tipo_ajuste_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do tipo de ajuste.</value>
+        /// <value>{{{tipo_ajuste_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo de ajuste.
+        /// {{{tipo_ajuste_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo de ajuste.</value>
+        /// <value>{{{tipo_ajuste_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
+    
+        /// <summary>
+        /// {{{tipo_ajuste_response_transacoes_value}}}
+        /// </summary>
+        /// <value>{{{tipo_ajuste_response_transacoes_value}}}</value>
+        [DataMember(Name="transacoes", EmitDefaultValue=false)]
+        public List<TipoTransacaoAjusteResponse> Transacoes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -57,6 +66,7 @@ namespace Conductor.Pier.Model
             sb.Append("class TipoAjusteResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
+            sb.Append("  Transacoes: ").Append(Transacoes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -103,6 +113,11 @@ namespace Conductor.Pier.Model
                     this.Descricao == other.Descricao ||
                     this.Descricao != null &&
                     this.Descricao.Equals(other.Descricao)
+                ) && 
+                (
+                    this.Transacoes == other.Transacoes ||
+                    this.Transacoes != null &&
+                    this.Transacoes.SequenceEqual(other.Transacoes)
                 );
         }
 
@@ -123,6 +138,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();
+                
+                if (this.Transacoes != null)
+                    hash = hash * 59 + this.Transacoes.GetHashCode();
                 
                 return hash;
             }

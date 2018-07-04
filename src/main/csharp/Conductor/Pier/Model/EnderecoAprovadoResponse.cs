@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Endere\u00E7o Aprovado
+    /// {{{endereco_aprovado_response_description}}}
     /// </summary>
     [DataContract]
     public partial class EnderecoAprovadoResponse :  IEquatable<EnderecoAprovadoResponse>
@@ -22,18 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="EnderecoAprovadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).</param>
-        /// <param name="IdTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id).</param>
-        /// <param name="Cep">Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
-        /// <param name="Logradouro">Apresenta o nome do Logradouro.</param>
-        /// <param name="Numero">Apresenta o n\u00FAmero do endere\u00E7o.</param>
-        /// <param name="Complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o.</param>
-        /// <param name="PontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o.</param>
-        /// <param name="Bairro">Apresenta nome do bairro.</param>
-        /// <param name="Cidade">Apresenta nome da cidade.</param>
-        /// <param name="Uf">Apresenta sigla da Unidade Federativa.</param>
-        /// <param name="Pais">Apresenta nome do Pais.</param>
-        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia.</param>
+        /// <param name="Id">{{{endereco_aprovado_response_id_value}}}.</param>
+        /// <param name="IdTipoEndereco">{{{endereco_aprovado_response_id_tipo_endereco_value}}}.</param>
+        /// <param name="Cep">{{{endereco_aprovado_response_cep_value}}}.</param>
+        /// <param name="Logradouro">{{{endereco_aprovado_response_logradouro_value}}}.</param>
+        /// <param name="Numero">{{{endereco_aprovado_response_numero_value}}}.</param>
+        /// <param name="Complemento">{{{endereco_aprovado_response_complemento_value}}}.</param>
+        /// <param name="PontoReferencia">{{{endereco_aprovado_response_ponto_referencia_value}}}.</param>
+        /// <param name="Bairro">{{{endereco_aprovado_response_bairro_value}}}.</param>
+        /// <param name="Cidade">{{{endereco_aprovado_response_cidade_value}}}.</param>
+        /// <param name="Uf">{{{endereco_aprovado_response_uf_value}}}.</param>
+        /// <param name="Pais">{{{endereco_aprovado_response_pais_value}}}.</param>
+        /// <param name="EnderecoCorrespondencia">{{{endereco_aprovado_response_endereco_correspondencia_value}}}.</param>
 
         public EnderecoAprovadoResponse(long? Id = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null)
         {
@@ -54,86 +54,86 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+        /// {{{endereco_aprovado_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</value>
+        /// <value>{{{endereco_aprovado_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+        /// {{{endereco_aprovado_response_id_tipo_endereco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)</value>
+        /// <value>{{{endereco_aprovado_response_id_tipo_endereco_value}}}</value>
         [DataMember(Name="idTipoEndereco", EmitDefaultValue=false)]
         public long? IdTipoEndereco { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;
+        /// {{{endereco_aprovado_response_cep_value}}}
         /// </summary>
-        /// <value>Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
+        /// <value>{{{endereco_aprovado_response_cep_value}}}</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do Logradouro
+        /// {{{endereco_aprovado_response_logradouro_value}}}
         /// </summary>
-        /// <value>Apresenta o nome do Logradouro</value>
+        /// <value>{{{endereco_aprovado_response_logradouro_value}}}</value>
         [DataMember(Name="logradouro", EmitDefaultValue=false)]
         public string Logradouro { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00FAmero do endere\u00E7o
+        /// {{{endereco_aprovado_response_numero_value}}}
         /// </summary>
-        /// <value>Apresenta o n\u00FAmero do endere\u00E7o</value>
+        /// <value>{{{endereco_aprovado_response_numero_value}}}</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
         public int? Numero { get; set; }
     
         /// <summary>
-        /// Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+        /// {{{endereco_aprovado_response_complemento_value}}}
         /// </summary>
-        /// <value>Apresenta descri\u00E7oes complementares referente ao endere\u00E7o</value>
+        /// <value>{{{endereco_aprovado_response_complemento_value}}}</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+        /// {{{endereco_aprovado_response_ponto_referencia_value}}}
         /// </summary>
-        /// <value>Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o</value>
+        /// <value>{{{endereco_aprovado_response_ponto_referencia_value}}}</value>
         [DataMember(Name="pontoReferencia", EmitDefaultValue=false)]
         public string PontoReferencia { get; set; }
     
         /// <summary>
-        /// Apresenta nome do bairro
+        /// {{{endereco_aprovado_response_bairro_value}}}
         /// </summary>
-        /// <value>Apresenta nome do bairro</value>
+        /// <value>{{{endereco_aprovado_response_bairro_value}}}</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// Apresenta nome da cidade
+        /// {{{endereco_aprovado_response_cidade_value}}}
         /// </summary>
-        /// <value>Apresenta nome da cidade</value>
+        /// <value>{{{endereco_aprovado_response_cidade_value}}}</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// Apresenta sigla da Unidade Federativa
+        /// {{{endereco_aprovado_response_uf_value}}}
         /// </summary>
-        /// <value>Apresenta sigla da Unidade Federativa</value>
+        /// <value>{{{endereco_aprovado_response_uf_value}}}</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// Apresenta nome do Pais
+        /// {{{endereco_aprovado_response_pais_value}}}
         /// </summary>
-        /// <value>Apresenta nome do Pais</value>
+        /// <value>{{{endereco_aprovado_response_pais_value}}}</value>
         [DataMember(Name="pais", EmitDefaultValue=false)]
         public string Pais { get; set; }
     
         /// <summary>
-        /// Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
+        /// {{{endereco_aprovado_response_endereco_correspondencia_value}}}
         /// </summary>
-        /// <value>Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia</value>
+        /// <value>{{{endereco_aprovado_response_endereco_correspondencia_value}}}</value>
         [DataMember(Name="enderecoCorrespondencia", EmitDefaultValue=false)]
         public bool? EnderecoCorrespondencia { get; set; }
     

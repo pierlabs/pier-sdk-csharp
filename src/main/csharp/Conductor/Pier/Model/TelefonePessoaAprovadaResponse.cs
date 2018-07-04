@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Telefone Pessoa Aprovada
+    /// {{{telefone_pessoa_aprovada_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TelefonePessoaAprovadaResponse :  IEquatable<TelefonePessoaAprovadaResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaResponse" /> class.
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).</param>
-        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)..</param>
-        /// <param name="Ddd">C\u00F3digo DDD do telefone (id)..</param>
-        /// <param name="Telefone">N\u00FAmero do telefone..</param>
-        /// <param name="Ramal">N\u00FAmero do ramal..</param>
+        /// <param name="Id">{{{telefone_pessoa_aprovada_response_id_value}}}.</param>
+        /// <param name="IdTipoTelefone">{{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}.</param>
+        /// <param name="Ddd">{{{telefone_pessoa_aprovada_response_ddd_value}}}.</param>
+        /// <param name="Telefone">{{{telefone_pessoa_aprovada_response_telefone_value}}}.</param>
+        /// <param name="Ramal">{{{telefone_pessoa_aprovada_response_ramal_value}}}.</param>
 
         public TelefonePessoaAprovadaResponse(long? Id = null, long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+        /// {{{telefone_pessoa_aprovada_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</value>
+        /// <value>{{{telefone_pessoa_aprovada_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+        /// {{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).</value>
+        /// <value>{{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// C\u00F3digo DDD do telefone (id).
+        /// {{{telefone_pessoa_aprovada_response_ddd_value}}}
         /// </summary>
-        /// <value>C\u00F3digo DDD do telefone (id).</value>
+        /// <value>{{{telefone_pessoa_aprovada_response_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do telefone.
+        /// {{{telefone_pessoa_aprovada_response_telefone_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do telefone.</value>
+        /// <value>{{{telefone_pessoa_aprovada_response_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do ramal.
+        /// {{{telefone_pessoa_aprovada_response_ramal_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do ramal.</value>
+        /// <value>{{{telefone_pessoa_aprovada_response_ramal_value}}}</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

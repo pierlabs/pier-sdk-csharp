@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Dispositivo Mobile
+    /// {{{dispositivo_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DispositivoResponse :  IEquatable<DispositivoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DispositivoResponse" /> class.
         /// Initializes a new instance of the <see cref="DispositivoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identificador do dispositivo..</param>
-        /// <param name="Token">Token do dispositivo..</param>
-        /// <param name="IdAplicacaoMobile">Identificador da Aplica\u00E7\u00E3o..</param>
-        /// <param name="IdUsuario">Identificador do usu\u00E1rio..</param>
+        /// <param name="Id">{{{dispositivo_response_id_value}}}.</param>
+        /// <param name="Token">{{{dispositivo_response_token_value}}}.</param>
+        /// <param name="IdAplicacaoMobile">{{{dispositivo_response_id_aplicacao_mobile_value}}}.</param>
+        /// <param name="IdUsuario">{{{dispositivo_response_id_usuario_value}}}.</param>
 
         public DispositivoResponse(long? Id = null, string Token = null, long? IdAplicacaoMobile = null, long? IdUsuario = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador do dispositivo.
+        /// {{{dispositivo_response_id_value}}}
         /// </summary>
-        /// <value>Identificador do dispositivo.</value>
+        /// <value>{{{dispositivo_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Token do dispositivo.
+        /// {{{dispositivo_response_token_value}}}
         /// </summary>
-        /// <value>Token do dispositivo.</value>
+        /// <value>{{{dispositivo_response_token_value}}}</value>
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
     
         /// <summary>
-        /// Identificador da Aplica\u00E7\u00E3o.
+        /// {{{dispositivo_response_id_aplicacao_mobile_value}}}
         /// </summary>
-        /// <value>Identificador da Aplica\u00E7\u00E3o.</value>
+        /// <value>{{{dispositivo_response_id_aplicacao_mobile_value}}}</value>
         [DataMember(Name="idAplicacaoMobile", EmitDefaultValue=false)]
         public long? IdAplicacaoMobile { get; set; }
     
         /// <summary>
-        /// Identificador do usu\u00E1rio.
+        /// {{{dispositivo_response_id_usuario_value}}}
         /// </summary>
-        /// <value>Identificador do usu\u00E1rio.</value>
+        /// <value>{{{dispositivo_response_id_usuario_value}}}</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     

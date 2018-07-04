@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador.
+    /// {{{dados_portador_request_description}}}
     /// </summary>
     [DataContract]
     public partial class DadosPortadorRequest :  IEquatable<DadosPortadorRequest>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosPortadorRequest" /> class.
         /// Initializes a new instance of the <see cref="DadosPortadorRequest" />class.
         /// </summary>
-        /// <param name="Cartao">N\u00FAmero do cart\u00E3o. (required).</param>
-        /// <param name="Cpf">N\u00FAmero do CPF. (required).</param>
-        /// <param name="Nome">Nome do portador..</param>
-        /// <param name="DataNascimento">Data de nascimento do portador do cart\u00E3o..</param>
-        /// <param name="CepResidencial">CEP da resid\u00EAncia do portador da conta. (required).</param>
-        /// <param name="Email">E-mail do portador do cart\u00E3o. (required).</param>
-        /// <param name="Ddd">DDD do n\u00FAmero de telefone do portador do cart\u00E3o..</param>
-        /// <param name="Telefone">N\u00FAmero do telefone do portador do cart\u00E3o..</param>
+        /// <param name="Cartao">{{{dados_portador_request_cartao_value}}} (required).</param>
+        /// <param name="Cpf">{{{dados_portador_request_cpf_value}}} (required).</param>
+        /// <param name="Nome">{{{dados_portador_request_nome_value}}}.</param>
+        /// <param name="DataNascimento">{{{dados_portador_request_data_nascimento_value}}}.</param>
+        /// <param name="CepResidencial">{{{dados_portador_request_cep_residencial_value}}} (required).</param>
+        /// <param name="Email">{{{dados_portador_request_email_value}}} (required).</param>
+        /// <param name="Ddd">{{{dados_portador_request_ddd_value}}}.</param>
+        /// <param name="Telefone">{{{dados_portador_request_telefone_value}}}.</param>
 
         public DadosPortadorRequest(string Cartao = null, string Cpf = null, string Nome = null, string DataNascimento = null, string CepResidencial = null, string Email = null, string Ddd = null, string Telefone = null)
         {
@@ -78,58 +78,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00FAmero do cart\u00E3o.
+        /// {{{dados_portador_request_cartao_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do cart\u00E3o.</value>
+        /// <value>{{{dados_portador_request_cartao_value}}}</value>
         [DataMember(Name="cartao", EmitDefaultValue=false)]
         public string Cartao { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do CPF.
+        /// {{{dados_portador_request_cpf_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do CPF.</value>
+        /// <value>{{{dados_portador_request_cpf_value}}}</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Nome do portador.
+        /// {{{dados_portador_request_nome_value}}}
         /// </summary>
-        /// <value>Nome do portador.</value>
+        /// <value>{{{dados_portador_request_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Data de nascimento do portador do cart\u00E3o.
+        /// {{{dados_portador_request_data_nascimento_value}}}
         /// </summary>
-        /// <value>Data de nascimento do portador do cart\u00E3o.</value>
+        /// <value>{{{dados_portador_request_data_nascimento_value}}}</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// CEP da resid\u00EAncia do portador da conta.
+        /// {{{dados_portador_request_cep_residencial_value}}}
         /// </summary>
-        /// <value>CEP da resid\u00EAncia do portador da conta.</value>
+        /// <value>{{{dados_portador_request_cep_residencial_value}}}</value>
         [DataMember(Name="cepResidencial", EmitDefaultValue=false)]
         public string CepResidencial { get; set; }
     
         /// <summary>
-        /// E-mail do portador do cart\u00E3o.
+        /// {{{dados_portador_request_email_value}}}
         /// </summary>
-        /// <value>E-mail do portador do cart\u00E3o.</value>
+        /// <value>{{{dados_portador_request_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// DDD do n\u00FAmero de telefone do portador do cart\u00E3o.
+        /// {{{dados_portador_request_ddd_value}}}
         /// </summary>
-        /// <value>DDD do n\u00FAmero de telefone do portador do cart\u00E3o.</value>
+        /// <value>{{{dados_portador_request_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do telefone do portador do cart\u00E3o.
+        /// {{{dados_portador_request_telefone_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do telefone do portador do cart\u00E3o.</value>
+        /// <value>{{{dados_portador_request_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     

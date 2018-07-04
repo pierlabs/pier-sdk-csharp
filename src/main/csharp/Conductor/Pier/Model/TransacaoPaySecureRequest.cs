@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
+    /// {{{transacao_pay_secure_request_description}}}
     /// </summary>
     [DataContract]
     public partial class TransacaoPaySecureRequest :  IEquatable<TransacaoPaySecureRequest>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoPaySecureRequest" /> class.
         /// Initializes a new instance of the <see cref="TransacaoPaySecureRequest" />class.
         /// </summary>
-        /// <param name="DataHoraTransacao">Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0.</param>
-        /// <param name="NumeroCartao">Numero do cartao (criptografado).</param>
-        /// <param name="IdCartao">Id do cart\u00E3o.</param>
-        /// <param name="Valor">Valor da transa\u00E7\u00E3o em moeda local.</param>
-        /// <param name="NsuOrigem">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado)..</param>
-        /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado)..</param>
-        /// <param name="Origem">Origem da transa\u00E7\u00E3o.</param>
-        /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
-        /// <param name="CodigoProcessamento">C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o. (required).</param>
-        /// <param name="DataValidadeCartao">Data de Validade do Cart\u00E3o. Ex: AAMM (required).</param>
-        /// <param name="NumeroEstabelecimento">N\u00FAmero do Estabelecimento (N\u00FAmero+DV). (required).</param>
-        /// <param name="NumeroParcelas">N\u00FAmero de Parcelas. (required).</param>
-        /// <param name="CodigoSegurancaCartao">C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado). (required).</param>
-        /// <param name="Sort">Tipo de ordena\u00E7\u00E3o dos registros..</param>
+        /// <param name="DataHoraTransacao">{{{transacao_pay_secure_request_data_hora_transacao_value}}}.</param>
+        /// <param name="NumeroCartao">{{{transacao_pay_generic_request_numero_cartao_value}}}.</param>
+        /// <param name="IdCartao">{{{transacao_pay_generic_request_id_cartao_value}}}.</param>
+        /// <param name="Valor">{{{transacao_pay_secure_request_valor_value}}}.</param>
+        /// <param name="NsuOrigem">{{{transacao_pay_secure_request_nsu_origem_value}}}.</param>
+        /// <param name="NomePortadorCartao">{{{transacao_pay_secure_request_nome_portador_cartao_value}}}.</param>
+        /// <param name="Origem">{{{transacao_pay_generic_request_origem_value}}}.</param>
+        /// <param name="TerminalRequisitante">{{{transacao_pay_secure_request_terminal_requisitante_value}}} (required).</param>
+        /// <param name="CodigoProcessamento">{{{transacao_pay_secure_request_codigo_processamento_value}}} (required).</param>
+        /// <param name="DataValidadeCartao">{{{transacao_pay_secure_request_data_validade_cartao_value}}} (required).</param>
+        /// <param name="NumeroEstabelecimento">{{{transacao_pay_secure_request_numero_estabelecimento_value}}} (required).</param>
+        /// <param name="NumeroParcelas">{{{transacao_pay_secure_request_numero_parcelas_value}}} (required).</param>
+        /// <param name="CodigoSegurancaCartao">{{{transacao_pay_secure_request_codigo_seguranca_cartao_value}}} (required).</param>
+        /// <param name="Sort">{{{global_menssagem_sort_sort}}}.</param>
 
         public TransacaoPaySecureRequest(string DataHoraTransacao = null, string NumeroCartao = null, long? IdCartao = null, double? Valor = null, string NsuOrigem = null, string NomePortadorCartao = null, string Origem = null, string TerminalRequisitante = null, string CodigoProcessamento = null, string DataValidadeCartao = null, string NumeroEstabelecimento = null, long? NumeroParcelas = null, string CodigoSegurancaCartao = null, List<string> Sort = null)
         {
@@ -106,100 +106,100 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
+        /// {{{transacao_pay_secure_request_data_hora_transacao_value}}}
         /// </summary>
-        /// <value>Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0</value>
+        /// <value>{{{transacao_pay_secure_request_data_hora_transacao_value}}}</value>
         [DataMember(Name="dataHoraTransacao", EmitDefaultValue=false)]
         public string DataHoraTransacao { get; set; }
     
         /// <summary>
-        /// Numero do cartao (criptografado)
+        /// {{{transacao_pay_generic_request_numero_cartao_value}}}
         /// </summary>
-        /// <value>Numero do cartao (criptografado)</value>
+        /// <value>{{{transacao_pay_generic_request_numero_cartao_value}}}</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Id do cart\u00E3o
+        /// {{{transacao_pay_generic_request_id_cartao_value}}}
         /// </summary>
-        /// <value>Id do cart\u00E3o</value>
+        /// <value>{{{transacao_pay_generic_request_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00E7\u00E3o em moeda local
+        /// {{{transacao_pay_secure_request_valor_value}}}
         /// </summary>
-        /// <value>Valor da transa\u00E7\u00E3o em moeda local</value>
+        /// <value>{{{transacao_pay_secure_request_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
+        /// {{{transacao_pay_secure_request_nsu_origem_value}}}
         /// </summary>
-        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).</value>
+        /// <value>{{{transacao_pay_secure_request_nsu_origem_value}}}</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
+        /// {{{transacao_pay_secure_request_nome_portador_cartao_value}}}
         /// </summary>
-        /// <value>Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).</value>
+        /// <value>{{{transacao_pay_secure_request_nome_portador_cartao_value}}}</value>
         [DataMember(Name="nomePortadorCartao", EmitDefaultValue=false)]
         public string NomePortadorCartao { get; set; }
     
         /// <summary>
-        /// Origem da transa\u00E7\u00E3o
+        /// {{{transacao_pay_generic_request_origem_value}}}
         /// </summary>
-        /// <value>Origem da transa\u00E7\u00E3o</value>
+        /// <value>{{{transacao_pay_generic_request_origem_value}}}</value>
         [DataMember(Name="origem", EmitDefaultValue=false)]
         public string Origem { get; set; }
     
         /// <summary>
-        /// Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+        /// {{{transacao_pay_secure_request_terminal_requisitante_value}}}
         /// </summary>
-        /// <value>Apresenta a identifica\u00E7\u00E3o do terminal requisitante</value>
+        /// <value>{{{transacao_pay_secure_request_terminal_requisitante_value}}}</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
+        /// {{{transacao_pay_secure_request_codigo_processamento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.</value>
+        /// <value>{{{transacao_pay_secure_request_codigo_processamento_value}}}</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// Data de Validade do Cart\u00E3o. Ex: AAMM
+        /// {{{transacao_pay_secure_request_data_validade_cartao_value}}}
         /// </summary>
-        /// <value>Data de Validade do Cart\u00E3o. Ex: AAMM</value>
+        /// <value>{{{transacao_pay_secure_request_data_validade_cartao_value}}}</value>
         [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
         public string DataValidadeCartao { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
+        /// {{{transacao_pay_secure_request_numero_estabelecimento_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do Estabelecimento (N\u00FAmero+DV).</value>
+        /// <value>{{{transacao_pay_secure_request_numero_estabelecimento_value}}}</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public string NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// N\u00FAmero de Parcelas.
+        /// {{{transacao_pay_secure_request_numero_parcelas_value}}}
         /// </summary>
-        /// <value>N\u00FAmero de Parcelas.</value>
+        /// <value>{{{transacao_pay_secure_request_numero_parcelas_value}}}</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public long? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
+        /// {{{transacao_pay_secure_request_codigo_seguranca_cartao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).</value>
+        /// <value>{{{transacao_pay_secure_request_codigo_seguranca_cartao_value}}}</value>
         [DataMember(Name="codigoSegurancaCartao", EmitDefaultValue=false)]
         public string CodigoSegurancaCartao { get; set; }
     
         /// <summary>
-        /// Tipo de ordena\u00E7\u00E3o dos registros.
+        /// {{{global_menssagem_sort_sort}}}
         /// </summary>
-        /// <value>Tipo de ordena\u00E7\u00E3o dos registros.</value>
+        /// <value>{{{global_menssagem_sort_sort}}}</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<string> Sort { get; set; }
     

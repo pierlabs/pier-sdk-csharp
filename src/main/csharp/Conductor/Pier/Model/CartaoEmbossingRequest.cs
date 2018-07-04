@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
+    /// {{{cartao_embossing_request_description}}}
     /// </summary>
     [DataContract]
     public partial class CartaoEmbossingRequest :  IEquatable<CartaoEmbossingRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" /> class.
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" />class.
         /// </summary>
-        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id).</param>
-        /// <param name="IdTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)..</param>
+        /// <param name="IdPessoa">{{{cartao_embossing_request_id_pessoa_value}}}.</param>
+        /// <param name="IdTipoPlastico">{{{cartao_embossing_request_id_tipo_plastico_value}}}.</param>
 
         public CartaoEmbossingRequest(long? IdPessoa = null, long? IdTipoPlastico = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
+        /// {{{cartao_embossing_request_id_pessoa_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)</value>
+        /// <value>{{{cartao_embossing_request_id_pessoa_value}}}</value>
         [DataMember(Name="id_pessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
+        /// {{{cartao_embossing_request_id_tipo_plastico_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).</value>
+        /// <value>{{{cartao_embossing_request_id_tipo_plastico_value}}}</value>
         [DataMember(Name="id_tipo_plastico", EmitDefaultValue=false)]
         public long? IdTipoPlastico { get; set; }
     

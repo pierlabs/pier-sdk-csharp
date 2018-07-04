@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Fatura
+    /// {{{tipo_boleto_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoBoletoResponse :  IEquatable<TipoBoletoResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoBoletoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoBoletoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador do tipo de boleto..</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de boleto..</param>
-        /// <param name="Banco">C\u00F3digo identificador do banco..</param>
-        /// <param name="FaixaNossoNumero">Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero..</param>
-        /// <param name="MinNossoNumero">N\u00FAmero minimo para o nosso n\u00FAmero..</param>
-        /// <param name="MaxNossoNumero">N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero..</param>
-        /// <param name="TamNossoNumero">Tamanho do nosso n\u00FAmero..</param>
-        /// <param name="UltimoNossoNumero">\u00DAltimo nosso n\u00FAmero utilizado..</param>
+        /// <param name="Id">{{{tipo_boleto_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_boleto_response_descricao_value}}}.</param>
+        /// <param name="Banco">{{{tipo_boleto_response_banco_value}}}.</param>
+        /// <param name="FaixaNossoNumero">{{{tipo_boleto_response_faixa_nosso_numero_value}}}.</param>
+        /// <param name="MinNossoNumero">{{{tipo_boleto_response_min_nosso_numero_value}}}.</param>
+        /// <param name="MaxNossoNumero">{{{tipo_boleto_response_max_nosso_numero_value}}}.</param>
+        /// <param name="TamNossoNumero">{{{tipo_boleto_response_tam_nosso_numero_value}}}.</param>
+        /// <param name="UltimoNossoNumero">{{{tipo_boleto_response_ultimo_nosso_numero_value}}}.</param>
 
         public TipoBoletoResponse(long? Id = null, string Descricao = null, long? Banco = null, int? FaixaNossoNumero = null, double? MinNossoNumero = null, double? MaxNossoNumero = null, int? TamNossoNumero = null, double? UltimoNossoNumero = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do tipo de boleto.
+        /// {{{tipo_boleto_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do tipo de boleto.</value>
+        /// <value>{{{tipo_boleto_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo de boleto.
+        /// {{{tipo_boleto_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo de boleto.</value>
+        /// <value>{{{tipo_boleto_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador do banco.
+        /// {{{tipo_boleto_response_banco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do banco.</value>
+        /// <value>{{{tipo_boleto_response_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.
+        /// {{{tipo_boleto_response_faixa_nosso_numero_value}}}
         /// </summary>
-        /// <value>Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.</value>
+        /// <value>{{{tipo_boleto_response_faixa_nosso_numero_value}}}</value>
         [DataMember(Name="faixaNossoNumero", EmitDefaultValue=false)]
         public int? FaixaNossoNumero { get; set; }
     
         /// <summary>
-        /// N\u00FAmero minimo para o nosso n\u00FAmero.
+        /// {{{tipo_boleto_response_min_nosso_numero_value}}}
         /// </summary>
-        /// <value>N\u00FAmero minimo para o nosso n\u00FAmero.</value>
+        /// <value>{{{tipo_boleto_response_min_nosso_numero_value}}}</value>
         [DataMember(Name="minNossoNumero", EmitDefaultValue=false)]
         public double? MinNossoNumero { get; set; }
     
         /// <summary>
-        /// N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.
+        /// {{{tipo_boleto_response_max_nosso_numero_value}}}
         /// </summary>
-        /// <value>N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.</value>
+        /// <value>{{{tipo_boleto_response_max_nosso_numero_value}}}</value>
         [DataMember(Name="maxNossoNumero", EmitDefaultValue=false)]
         public double? MaxNossoNumero { get; set; }
     
         /// <summary>
-        /// Tamanho do nosso n\u00FAmero.
+        /// {{{tipo_boleto_response_tam_nosso_numero_value}}}
         /// </summary>
-        /// <value>Tamanho do nosso n\u00FAmero.</value>
+        /// <value>{{{tipo_boleto_response_tam_nosso_numero_value}}}</value>
         [DataMember(Name="tamNossoNumero", EmitDefaultValue=false)]
         public int? TamNossoNumero { get; set; }
     
         /// <summary>
-        /// \u00DAltimo nosso n\u00FAmero utilizado.
+        /// {{{tipo_boleto_response_ultimo_nosso_numero_value}}}
         /// </summary>
-        /// <value>\u00DAltimo nosso n\u00FAmero utilizado.</value>
+        /// <value>{{{tipo_boleto_response_ultimo_nosso_numero_value}}}</value>
         [DataMember(Name="ultimoNossoNumero", EmitDefaultValue=false)]
         public double? UltimoNossoNumero { get; set; }
     

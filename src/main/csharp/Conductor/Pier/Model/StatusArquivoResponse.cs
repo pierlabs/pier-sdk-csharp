@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Response do status arquivo.
+    /// {{{status_arquivo_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusArquivoResponse :  IEquatable<StatusArquivoResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusArquivoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusArquivoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo.</param>
-        /// <param name="Nome">Nome do status do arquivo.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do status do arquivo.</param>
+        /// <param name="Id">{{{status_arquivo_response_id_value}}}.</param>
+        /// <param name="Nome">{{{status_arquivo_response_nome_value}}}.</param>
+        /// <param name="Descricao">{{{status_arquivo_response_descricao_value}}}.</param>
 
         public StatusArquivoResponse(long? Id = null, string Nome = null, string Descricao = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
+        /// {{{status_arquivo_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo</value>
+        /// <value>{{{status_arquivo_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do status do arquivo
+        /// {{{status_arquivo_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do status do arquivo</value>
+        /// <value>{{{status_arquivo_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do status do arquivo
+        /// {{{status_arquivo_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do status do arquivo</value>
+        /// <value>{{{status_arquivo_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

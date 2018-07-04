@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Base
+    /// {{{base_response_description}}}
     /// </summary>
     [DataContract]
     public partial class BaseResponse :  IEquatable<BaseResponse>
@@ -22,198 +22,118 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BaseResponse" /> class.
         /// Initializes a new instance of the <see cref="BaseResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador da base (required).</param>
-        /// <param name="Servidor">IP do servidor (required).</param>
-        /// <param name="Usuario">Nome do usu\u00E1rio (required).</param>
-        /// <param name="NomeBase">Nome da base (required).</param>
-        /// <param name="SenhaCriptografada">senha Criptografada (required).</param>
-        /// <param name="Domain">Dom\u00EDnio da base (required).</param>
-        /// <param name="NomeBaseControleAcesso">Nome da base de controle acesso (required).</param>
-        /// <param name="IdEmissor">C\u00F3digo do identificador do emissor.</param>
-        /// <param name="ServidorControleAcesso">Servidor do controle de acesso (required).</param>
-        /// <param name="NomeBaseUsuarios">Nome da base de usu\u00E1rios (required).</param>
-        /// <param name="ServidorUsuarios">Servidor do controle de acesso (required).</param>
-        /// <param name="FlagCluster">Flag Cluester.</param>
+        /// <param name="Id">{{{base_dto_id_value}}}.</param>
+        /// <param name="Servidor">{{{base_dto_servidor_value}}}.</param>
+        /// <param name="Usuario">{{{base_dto_usuario_value}}}.</param>
+        /// <param name="NomeBase">{{{base_dto_nome_base_value}}}.</param>
+        /// <param name="Domain">{{{base_dto_domain_value}}}.</param>
+        /// <param name="SenhaCriptografada">{{{base_dto_senha_criptografada_value}}}.</param>
+        /// <param name="NomeBaseControleAcesso">{{{base_dto_nome_base_controle_acesso_value}}}.</param>
+        /// <param name="IdEmissor">{{{base_dto_id_emissor_value}}}.</param>
+        /// <param name="ServidorControleAcesso">{{{base_dto_servidor_controle_acesso_value}}}.</param>
+        /// <param name="NomeBaseUsuarios">{{{base_dto_nome_base_usuarios_value}}}.</param>
+        /// <param name="ServidorUsuarios">{{{base_dto_servidor_usuarios_value}}}.</param>
+        /// <param name="FlagCluster">{{{base_dto_flag_cluster_value}}}.</param>
 
-        public BaseResponse(long? Id = null, string Servidor = null, string Usuario = null, string NomeBase = null, bool? SenhaCriptografada = null, string Domain = null, string NomeBaseControleAcesso = null, long? IdEmissor = null, string ServidorControleAcesso = null, string NomeBaseUsuarios = null, string ServidorUsuarios = null, bool? FlagCluster = null)
+        public BaseResponse(long? Id = null, string Servidor = null, string Usuario = null, string NomeBase = null, string Domain = null, bool? SenhaCriptografada = null, string NomeBaseControleAcesso = null, long? IdEmissor = null, string ServidorControleAcesso = null, string NomeBaseUsuarios = null, string ServidorUsuarios = null, bool? FlagCluster = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            // to ensure "Servidor" is required (not null)
-            if (Servidor == null)
-            {
-                throw new InvalidDataException("Servidor is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.Servidor = Servidor;
-            }
-            // to ensure "Usuario" is required (not null)
-            if (Usuario == null)
-            {
-                throw new InvalidDataException("Usuario is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.Usuario = Usuario;
-            }
-            // to ensure "NomeBase" is required (not null)
-            if (NomeBase == null)
-            {
-                throw new InvalidDataException("NomeBase is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.NomeBase = NomeBase;
-            }
-            // to ensure "SenhaCriptografada" is required (not null)
-            if (SenhaCriptografada == null)
-            {
-                throw new InvalidDataException("SenhaCriptografada is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.SenhaCriptografada = SenhaCriptografada;
-            }
-            // to ensure "Domain" is required (not null)
-            if (Domain == null)
-            {
-                throw new InvalidDataException("Domain is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.Domain = Domain;
-            }
-            // to ensure "NomeBaseControleAcesso" is required (not null)
-            if (NomeBaseControleAcesso == null)
-            {
-                throw new InvalidDataException("NomeBaseControleAcesso is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.NomeBaseControleAcesso = NomeBaseControleAcesso;
-            }
-            // to ensure "ServidorControleAcesso" is required (not null)
-            if (ServidorControleAcesso == null)
-            {
-                throw new InvalidDataException("ServidorControleAcesso is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.ServidorControleAcesso = ServidorControleAcesso;
-            }
-            // to ensure "NomeBaseUsuarios" is required (not null)
-            if (NomeBaseUsuarios == null)
-            {
-                throw new InvalidDataException("NomeBaseUsuarios is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.NomeBaseUsuarios = NomeBaseUsuarios;
-            }
-            // to ensure "ServidorUsuarios" is required (not null)
-            if (ServidorUsuarios == null)
-            {
-                throw new InvalidDataException("ServidorUsuarios is a required property for BaseResponse and cannot be null");
-            }
-            else
-            {
-                this.ServidorUsuarios = ServidorUsuarios;
-            }
+            this.Id = Id;
+            this.Servidor = Servidor;
+            this.Usuario = Usuario;
+            this.NomeBase = NomeBase;
+            this.Domain = Domain;
+            this.SenhaCriptografada = SenhaCriptografada;
+            this.NomeBaseControleAcesso = NomeBaseControleAcesso;
             this.IdEmissor = IdEmissor;
+            this.ServidorControleAcesso = ServidorControleAcesso;
+            this.NomeBaseUsuarios = NomeBaseUsuarios;
+            this.ServidorUsuarios = ServidorUsuarios;
             this.FlagCluster = FlagCluster;
             
         }
         
     
         /// <summary>
-        /// C\u00F3digo identificador da base
+        /// {{{base_dto_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da base</value>
+        /// <value>{{{base_dto_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// IP do servidor
+        /// {{{base_dto_servidor_value}}}
         /// </summary>
-        /// <value>IP do servidor</value>
+        /// <value>{{{base_dto_servidor_value}}}</value>
         [DataMember(Name="servidor", EmitDefaultValue=false)]
         public string Servidor { get; set; }
     
         /// <summary>
-        /// Nome do usu\u00E1rio
+        /// {{{base_dto_usuario_value}}}
         /// </summary>
-        /// <value>Nome do usu\u00E1rio</value>
+        /// <value>{{{base_dto_usuario_value}}}</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// Nome da base
+        /// {{{base_dto_nome_base_value}}}
         /// </summary>
-        /// <value>Nome da base</value>
+        /// <value>{{{base_dto_nome_base_value}}}</value>
         [DataMember(Name="nomeBase", EmitDefaultValue=false)]
         public string NomeBase { get; set; }
     
         /// <summary>
-        /// senha Criptografada
+        /// {{{base_dto_domain_value}}}
         /// </summary>
-        /// <value>senha Criptografada</value>
-        [DataMember(Name="senhaCriptografada", EmitDefaultValue=false)]
-        public bool? SenhaCriptografada { get; set; }
-    
-        /// <summary>
-        /// Dom\u00EDnio da base
-        /// </summary>
-        /// <value>Dom\u00EDnio da base</value>
+        /// <value>{{{base_dto_domain_value}}}</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
     
         /// <summary>
-        /// Nome da base de controle acesso
+        /// {{{base_dto_senha_criptografada_value}}}
         /// </summary>
-        /// <value>Nome da base de controle acesso</value>
+        /// <value>{{{base_dto_senha_criptografada_value}}}</value>
+        [DataMember(Name="senhaCriptografada", EmitDefaultValue=false)]
+        public bool? SenhaCriptografada { get; set; }
+    
+        /// <summary>
+        /// {{{base_dto_nome_base_controle_acesso_value}}}
+        /// </summary>
+        /// <value>{{{base_dto_nome_base_controle_acesso_value}}}</value>
         [DataMember(Name="nomeBaseControleAcesso", EmitDefaultValue=false)]
         public string NomeBaseControleAcesso { get; set; }
     
         /// <summary>
-        /// C\u00F3digo do identificador do emissor
+        /// {{{base_dto_id_emissor_value}}}
         /// </summary>
-        /// <value>C\u00F3digo do identificador do emissor</value>
+        /// <value>{{{base_dto_id_emissor_value}}}</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// Servidor do controle de acesso
+        /// {{{base_dto_servidor_controle_acesso_value}}}
         /// </summary>
-        /// <value>Servidor do controle de acesso</value>
+        /// <value>{{{base_dto_servidor_controle_acesso_value}}}</value>
         [DataMember(Name="servidorControleAcesso", EmitDefaultValue=false)]
         public string ServidorControleAcesso { get; set; }
     
         /// <summary>
-        /// Nome da base de usu\u00E1rios
+        /// {{{base_dto_nome_base_usuarios_value}}}
         /// </summary>
-        /// <value>Nome da base de usu\u00E1rios</value>
+        /// <value>{{{base_dto_nome_base_usuarios_value}}}</value>
         [DataMember(Name="nomeBaseUsuarios", EmitDefaultValue=false)]
         public string NomeBaseUsuarios { get; set; }
     
         /// <summary>
-        /// Servidor do controle de acesso
+        /// {{{base_dto_servidor_usuarios_value}}}
         /// </summary>
-        /// <value>Servidor do controle de acesso</value>
+        /// <value>{{{base_dto_servidor_usuarios_value}}}</value>
         [DataMember(Name="servidorUsuarios", EmitDefaultValue=false)]
         public string ServidorUsuarios { get; set; }
     
         /// <summary>
-        /// Flag Cluester
+        /// {{{base_dto_flag_cluster_value}}}
         /// </summary>
-        /// <value>Flag Cluester</value>
+        /// <value>{{{base_dto_flag_cluster_value}}}</value>
         [DataMember(Name="flagCluster", EmitDefaultValue=false)]
         public bool? FlagCluster { get; set; }
     
@@ -229,8 +149,8 @@ namespace Conductor.Pier.Model
             sb.Append("  Servidor: ").Append(Servidor).Append("\n");
             sb.Append("  Usuario: ").Append(Usuario).Append("\n");
             sb.Append("  NomeBase: ").Append(NomeBase).Append("\n");
-            sb.Append("  SenhaCriptografada: ").Append(SenhaCriptografada).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
+            sb.Append("  SenhaCriptografada: ").Append(SenhaCriptografada).Append("\n");
             sb.Append("  NomeBaseControleAcesso: ").Append(NomeBaseControleAcesso).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  ServidorControleAcesso: ").Append(ServidorControleAcesso).Append("\n");
@@ -295,14 +215,14 @@ namespace Conductor.Pier.Model
                     this.NomeBase.Equals(other.NomeBase)
                 ) && 
                 (
-                    this.SenhaCriptografada == other.SenhaCriptografada ||
-                    this.SenhaCriptografada != null &&
-                    this.SenhaCriptografada.Equals(other.SenhaCriptografada)
-                ) && 
-                (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
+                ) && 
+                (
+                    this.SenhaCriptografada == other.SenhaCriptografada ||
+                    this.SenhaCriptografada != null &&
+                    this.SenhaCriptografada.Equals(other.SenhaCriptografada)
                 ) && 
                 (
                     this.NomeBaseControleAcesso == other.NomeBaseControleAcesso ||
@@ -360,11 +280,11 @@ namespace Conductor.Pier.Model
                 if (this.NomeBase != null)
                     hash = hash * 59 + this.NomeBase.GetHashCode();
                 
-                if (this.SenhaCriptografada != null)
-                    hash = hash * 59 + this.SenhaCriptografada.GetHashCode();
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
+                
+                if (this.SenhaCriptografada != null)
+                    hash = hash * 59 + this.SenhaCriptografada.GetHashCode();
                 
                 if (this.NomeBaseControleAcesso != null)
                     hash = hash * 59 + this.NomeBaseControleAcesso.GetHashCode();

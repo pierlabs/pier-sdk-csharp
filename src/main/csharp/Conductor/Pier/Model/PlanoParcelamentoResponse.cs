@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
+    /// {{{plano_parcelamento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoResponse :  IEquatable<PlanoParcelamentoResponse>
@@ -22,26 +22,26 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identificador do parcelamento.</param>
-        /// <param name="DataFechamentoFatura">Data de fechamento da fatura.</param>
-        /// <param name="DataVencimentoPadrao">Data de vencimento padr\u00E3o.</param>
-        /// <param name="ValorTotalFatura">Valor total da fatura.</param>
-        /// <param name="QuantidadeParcelas">Quantidade de parcelas.</param>
-        /// <param name="ValorParcela">Valor da parcela.</param>
-        /// <param name="ValorEntrada">Valor de entrada.</param>
-        /// <param name="TaxaRefinanciamento">Taxa de refinanciamento.</param>
-        /// <param name="CustoEfetivoTotal">Custo efetivo total.</param>
-        /// <param name="ValorTotalRefinanciamento">Valor total de refinanciamento.</param>
-        /// <param name="ValorIOF">Valor do IOF.</param>
-        /// <param name="ValorTAC">Valor do TAC.</param>
-        /// <param name="StatusAdesao">Status da ades\u00E3o.</param>
-        /// <param name="DataInclusao">Data de inclus\u00E3o.</param>
-        /// <param name="DataProcessamentoAdesao">Data de processamento da ades\u00E3o.</param>
-        /// <param name="IdConta">Identificador da conta.</param>
-        /// <param name="IdServicoTipo">C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o.</param>
-        /// <param name="DescricaoServicoTipo">Descri\u00E7\u00E3o do tipo de servi\u00E7o.</param>
-        /// <param name="ComEntrada">Indica se a fatura foi com entrada.</param>
-        /// <param name="NomeCampanha">Nome da campanha.</param>
+        /// <param name="Id">{{{plano_parcelamento_response_id_value}}}.</param>
+        /// <param name="DataFechamentoFatura">{{{plano_parcelamento_response_data_fechamento_fatura_value}}}.</param>
+        /// <param name="DataVencimentoPadrao">{{{plano_parcelamento_response_data_vencimento_padrao_value}}}.</param>
+        /// <param name="ValorTotalFatura">{{{plano_parcelamento_response_valor_total_fatura_value}}}.</param>
+        /// <param name="QuantidadeParcelas">{{{plano_parcelamento_response_quantidade_parcelas_value}}}.</param>
+        /// <param name="ValorParcela">{{{plano_parcelamento_response_valor_parcela_value}}}.</param>
+        /// <param name="ValorEntrada">{{{plano_parcelamento_response_valor_entrada_value}}}.</param>
+        /// <param name="TaxaRefinanciamento">{{{plano_parcelamento_response_taxa_refinanciamento_value}}}.</param>
+        /// <param name="CustoEfetivoTotal">{{{plano_parcelamento_response_custo_efetivo_total_value}}}.</param>
+        /// <param name="ValorTotalRefinanciamento">{{{plano_parcelamento_response_valor_total_refinanciamento_value}}}.</param>
+        /// <param name="ValorIOF">{{{plano_parcelamento_response_valor_i_o_f_value}}}.</param>
+        /// <param name="ValorTAC">{{{plano_parcelamento_response_valor_t_a_c_value}}}.</param>
+        /// <param name="StatusAdesao">{{{plano_parcelamento_response_status_adesao_value}}}.</param>
+        /// <param name="DataInclusao">{{{plano_parcelamento_response_data_inclusao_value}}}.</param>
+        /// <param name="DataProcessamentoAdesao">{{{plano_parcelamento_response_data_processamento_adesao_value}}}.</param>
+        /// <param name="IdConta">{{{plano_parcelamento_response_id_conta_value}}}.</param>
+        /// <param name="IdServicoTipo">{{{plano_parcelamento_response_id_servico_tipo_value}}}.</param>
+        /// <param name="DescricaoServicoTipo">{{{plano_parcelamento_response_descricao_servico_tipo_value}}}.</param>
+        /// <param name="ComEntrada">{{{plano_parcelamento_response_com_entrada_value}}}.</param>
+        /// <param name="NomeCampanha">{{{plano_parcelamento_response_nome_campanha_value}}}.</param>
 
         public PlanoParcelamentoResponse(long? Id = null, string DataFechamentoFatura = null, string DataVencimentoPadrao = null, double? ValorTotalFatura = null, int? QuantidadeParcelas = null, double? ValorParcela = null, double? ValorEntrada = null, double? TaxaRefinanciamento = null, double? CustoEfetivoTotal = null, double? ValorTotalRefinanciamento = null, double? ValorIOF = null, double? ValorTAC = null, int? StatusAdesao = null, string DataInclusao = null, string DataProcessamentoAdesao = null, long? IdConta = null, long? IdServicoTipo = null, string DescricaoServicoTipo = null, bool? ComEntrada = null, string NomeCampanha = null)
         {
@@ -70,142 +70,142 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador do parcelamento
+        /// {{{plano_parcelamento_response_id_value}}}
         /// </summary>
-        /// <value>Identificador do parcelamento</value>
+        /// <value>{{{plano_parcelamento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Data de fechamento da fatura
+        /// {{{plano_parcelamento_response_data_fechamento_fatura_value}}}
         /// </summary>
-        /// <value>Data de fechamento da fatura</value>
+        /// <value>{{{plano_parcelamento_response_data_fechamento_fatura_value}}}</value>
         [DataMember(Name="dataFechamentoFatura", EmitDefaultValue=false)]
         public string DataFechamentoFatura { get; set; }
     
         /// <summary>
-        /// Data de vencimento padr\u00E3o
+        /// {{{plano_parcelamento_response_data_vencimento_padrao_value}}}
         /// </summary>
-        /// <value>Data de vencimento padr\u00E3o</value>
+        /// <value>{{{plano_parcelamento_response_data_vencimento_padrao_value}}}</value>
         [DataMember(Name="dataVencimentoPadrao", EmitDefaultValue=false)]
         public string DataVencimentoPadrao { get; set; }
     
         /// <summary>
-        /// Valor total da fatura
+        /// {{{plano_parcelamento_response_valor_total_fatura_value}}}
         /// </summary>
-        /// <value>Valor total da fatura</value>
+        /// <value>{{{plano_parcelamento_response_valor_total_fatura_value}}}</value>
         [DataMember(Name="valorTotalFatura", EmitDefaultValue=false)]
         public double? ValorTotalFatura { get; set; }
     
         /// <summary>
-        /// Quantidade de parcelas
+        /// {{{plano_parcelamento_response_quantidade_parcelas_value}}}
         /// </summary>
-        /// <value>Quantidade de parcelas</value>
+        /// <value>{{{plano_parcelamento_response_quantidade_parcelas_value}}}</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// Valor da parcela
+        /// {{{plano_parcelamento_response_valor_parcela_value}}}
         /// </summary>
-        /// <value>Valor da parcela</value>
+        /// <value>{{{plano_parcelamento_response_valor_parcela_value}}}</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// Valor de entrada
+        /// {{{plano_parcelamento_response_valor_entrada_value}}}
         /// </summary>
-        /// <value>Valor de entrada</value>
+        /// <value>{{{plano_parcelamento_response_valor_entrada_value}}}</value>
         [DataMember(Name="valorEntrada", EmitDefaultValue=false)]
         public double? ValorEntrada { get; set; }
     
         /// <summary>
-        /// Taxa de refinanciamento
+        /// {{{plano_parcelamento_response_taxa_refinanciamento_value}}}
         /// </summary>
-        /// <value>Taxa de refinanciamento</value>
+        /// <value>{{{plano_parcelamento_response_taxa_refinanciamento_value}}}</value>
         [DataMember(Name="taxaRefinanciamento", EmitDefaultValue=false)]
         public double? TaxaRefinanciamento { get; set; }
     
         /// <summary>
-        /// Custo efetivo total
+        /// {{{plano_parcelamento_response_custo_efetivo_total_value}}}
         /// </summary>
-        /// <value>Custo efetivo total</value>
+        /// <value>{{{plano_parcelamento_response_custo_efetivo_total_value}}}</value>
         [DataMember(Name="custoEfetivoTotal", EmitDefaultValue=false)]
         public double? CustoEfetivoTotal { get; set; }
     
         /// <summary>
-        /// Valor total de refinanciamento
+        /// {{{plano_parcelamento_response_valor_total_refinanciamento_value}}}
         /// </summary>
-        /// <value>Valor total de refinanciamento</value>
+        /// <value>{{{plano_parcelamento_response_valor_total_refinanciamento_value}}}</value>
         [DataMember(Name="valorTotalRefinanciamento", EmitDefaultValue=false)]
         public double? ValorTotalRefinanciamento { get; set; }
     
         /// <summary>
-        /// Valor do IOF
+        /// {{{plano_parcelamento_response_valor_i_o_f_value}}}
         /// </summary>
-        /// <value>Valor do IOF</value>
+        /// <value>{{{plano_parcelamento_response_valor_i_o_f_value}}}</value>
         [DataMember(Name="valorIOF", EmitDefaultValue=false)]
         public double? ValorIOF { get; set; }
     
         /// <summary>
-        /// Valor do TAC
+        /// {{{plano_parcelamento_response_valor_t_a_c_value}}}
         /// </summary>
-        /// <value>Valor do TAC</value>
+        /// <value>{{{plano_parcelamento_response_valor_t_a_c_value}}}</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// Status da ades\u00E3o
+        /// {{{plano_parcelamento_response_status_adesao_value}}}
         /// </summary>
-        /// <value>Status da ades\u00E3o</value>
+        /// <value>{{{plano_parcelamento_response_status_adesao_value}}}</value>
         [DataMember(Name="statusAdesao", EmitDefaultValue=false)]
         public int? StatusAdesao { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00E3o
+        /// {{{plano_parcelamento_response_data_inclusao_value}}}
         /// </summary>
-        /// <value>Data de inclus\u00E3o</value>
+        /// <value>{{{plano_parcelamento_response_data_inclusao_value}}}</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data de processamento da ades\u00E3o
+        /// {{{plano_parcelamento_response_data_processamento_adesao_value}}}
         /// </summary>
-        /// <value>Data de processamento da ades\u00E3o</value>
+        /// <value>{{{plano_parcelamento_response_data_processamento_adesao_value}}}</value>
         [DataMember(Name="dataProcessamentoAdesao", EmitDefaultValue=false)]
         public string DataProcessamentoAdesao { get; set; }
     
         /// <summary>
-        /// Identificador da conta
+        /// {{{plano_parcelamento_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identificador da conta</value>
+        /// <value>{{{plano_parcelamento_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+        /// {{{plano_parcelamento_response_id_servico_tipo_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o</value>
+        /// <value>{{{plano_parcelamento_response_id_servico_tipo_value}}}</value>
         [DataMember(Name="idServicoTipo", EmitDefaultValue=false)]
         public long? IdServicoTipo { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo de servi\u00E7o
+        /// {{{plano_parcelamento_response_descricao_servico_tipo_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo de servi\u00E7o</value>
+        /// <value>{{{plano_parcelamento_response_descricao_servico_tipo_value}}}</value>
         [DataMember(Name="descricaoServicoTipo", EmitDefaultValue=false)]
         public string DescricaoServicoTipo { get; set; }
     
         /// <summary>
-        /// Indica se a fatura foi com entrada
+        /// {{{plano_parcelamento_response_com_entrada_value}}}
         /// </summary>
-        /// <value>Indica se a fatura foi com entrada</value>
+        /// <value>{{{plano_parcelamento_response_com_entrada_value}}}</value>
         [DataMember(Name="comEntrada", EmitDefaultValue=false)]
         public bool? ComEntrada { get; set; }
     
         /// <summary>
-        /// Nome da campanha
+        /// {{{plano_parcelamento_response_nome_campanha_value}}}
         /// </summary>
-        /// <value>Nome da campanha</value>
+        /// <value>{{{plano_parcelamento_response_nome_campanha_value}}}</value>
         [DataMember(Name="nomeCampanha", EmitDefaultValue=false)]
         public string NomeCampanha { get; set; }
     

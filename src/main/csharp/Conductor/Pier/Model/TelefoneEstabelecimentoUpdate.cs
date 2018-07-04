@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Telefone
+    /// {{{telefone_estabelecimento_update_description}}}
     /// </summary>
     [DataContract]
     public partial class TelefoneEstabelecimentoUpdate :  IEquatable<TelefoneEstabelecimentoUpdate>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoUpdate" /> class.
         /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoUpdate" />class.
         /// </summary>
-        /// <param name="Ddd">C\u00F3digo DDD do telefone. (required).</param>
-        /// <param name="Telefone">N\u00FAmero do telefone. (required).</param>
-        /// <param name="Ramal">N\u00FAmero do ramal..</param>
+        /// <param name="Ddd">{{{telefone_estabelecimento_update_ddd_value}}} (required).</param>
+        /// <param name="Telefone">{{{telefone_estabelecimento_update_telefone_value}}} (required).</param>
+        /// <param name="Ramal">{{{telefone_estabelecimento_update_ramal_value}}}.</param>
 
         public TelefoneEstabelecimentoUpdate(string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -52,23 +52,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo DDD do telefone.
+        /// {{{telefone_estabelecimento_update_ddd_value}}}
         /// </summary>
-        /// <value>C\u00F3digo DDD do telefone.</value>
+        /// <value>{{{telefone_estabelecimento_update_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do telefone.
+        /// {{{telefone_estabelecimento_update_telefone_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do telefone.</value>
+        /// <value>{{{telefone_estabelecimento_update_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do ramal.
+        /// {{{telefone_estabelecimento_update_ramal_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do ramal.</value>
+        /// <value>{{{telefone_estabelecimento_update_ramal_value}}}</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

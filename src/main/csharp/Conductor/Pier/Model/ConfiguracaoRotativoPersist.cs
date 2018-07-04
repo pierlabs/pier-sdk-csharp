@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Configura\u00E7\u00E3o Rotativo
+    /// {{{configuracao_rotativo_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoRotativoPersist :  IEquatable<ConfiguracaoRotativoPersist>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoRotativoPersist" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoRotativoPersist" />class.
         /// </summary>
-        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto)..</param>
-        /// <param name="CompoeOfertaValorRotativo">Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento..</param>
-        /// <param name="CompoeOfertaValorNaoFinanciavel">Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento..</param>
-        /// <param name="CompoeOfertaValorNovosLancamentos">Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento.</param>
-        /// <param name="RecalculaParcelamentoParaEntradaMaior">Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado.</param>
-        /// <param name="MinimoParcelasRecalculoParcelamento">Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento..</param>
-        /// <param name="RecalculaParcelamento">Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto.</param>
-        /// <param name="NumeroMinimoOfertas">N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta..</param>
-        /// <param name="AceitaPagamentoMaiorQueEntrada">Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento.</param>
-        /// <param name="AntecipaParcelamentosAbertos">Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto..</param>
-        /// <param name="ValorMinimoParcela">Valor m\u00EDnimo da parcela que deve ser aceito na oferta..</param>
-        /// <param name="PercentualLimitarValorMinimoParcela">Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela..</param>
-        /// <param name="IdRegraCampanha">C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha..</param>
-        /// <param name="ParcelarApenasMinimo">Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es..</param>
-        /// <param name="Usuario">Nome do usu\u00E1rio.</param>
+        /// <param name="IdProduto">{{{configuracao_rotativo_persist_id_produto_value}}}.</param>
+        /// <param name="CompoeOfertaValorRotativo">{{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}.</param>
+        /// <param name="CompoeOfertaValorNaoFinanciavel">{{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}.</param>
+        /// <param name="CompoeOfertaValorNovosLancamentos">{{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}.</param>
+        /// <param name="RecalculaParcelamentoParaEntradaMaior">{{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}.</param>
+        /// <param name="MinimoParcelasRecalculoParcelamento">{{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}.</param>
+        /// <param name="RecalculaParcelamento">{{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}.</param>
+        /// <param name="NumeroMinimoOfertas">{{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}.</param>
+        /// <param name="AceitaPagamentoMaiorQueEntrada">{{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}.</param>
+        /// <param name="AntecipaParcelamentosAbertos">{{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}.</param>
+        /// <param name="ValorMinimoParcela">{{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}.</param>
+        /// <param name="PercentualLimitarValorMinimoParcela">{{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}.</param>
+        /// <param name="IdRegraCampanha">{{{configuracao_rotativo_persist_id_regra_campanha_value}}}.</param>
+        /// <param name="ParcelarApenasMinimo">{{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}.</param>
+        /// <param name="Usuario">{{{configuracao_rotativo_persist_usuario_value}}}.</param>
 
         public ConfiguracaoRotativoPersist(long? IdProduto = null, bool? CompoeOfertaValorRotativo = null, bool? CompoeOfertaValorNaoFinanciavel = null, bool? CompoeOfertaValorNovosLancamentos = null, bool? RecalculaParcelamentoParaEntradaMaior = null, bool? MinimoParcelasRecalculoParcelamento = null, bool? RecalculaParcelamento = null, bool? NumeroMinimoOfertas = null, bool? AceitaPagamentoMaiorQueEntrada = null, bool? AntecipaParcelamentosAbertos = null, double? ValorMinimoParcela = null, double? PercentualLimitarValorMinimoParcela = null, long? IdRegraCampanha = null, bool? ParcelarApenasMinimo = null, string Usuario = null)
         {
@@ -60,107 +60,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
+        /// {{{configuracao_rotativo_persist_id_produto_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).</value>
+        /// <value>{{{configuracao_rotativo_persist_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.
+        /// {{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.</value>
+        /// <value>{{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}</value>
         [DataMember(Name="compoeOfertaValorRotativo", EmitDefaultValue=false)]
         public bool? CompoeOfertaValorRotativo { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
+        /// {{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.</value>
+        /// <value>{{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}</value>
         [DataMember(Name="compoeOfertaValorNaoFinanciavel", EmitDefaultValue=false)]
         public bool? CompoeOfertaValorNaoFinanciavel { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
+        /// {{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento</value>
+        /// <value>{{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}</value>
         [DataMember(Name="compoeOfertaValorNovosLancamentos", EmitDefaultValue=false)]
         public bool? CompoeOfertaValorNovosLancamentos { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado
+        /// {{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado</value>
+        /// <value>{{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}</value>
         [DataMember(Name="recalculaParcelamentoParaEntradaMaior", EmitDefaultValue=false)]
         public bool? RecalculaParcelamentoParaEntradaMaior { get; set; }
     
         /// <summary>
-        /// Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
+        /// {{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}
         /// </summary>
-        /// <value>Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.</value>
+        /// <value>{{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}</value>
         [DataMember(Name="minimoParcelasRecalculoParcelamento", EmitDefaultValue=false)]
         public bool? MinimoParcelasRecalculoParcelamento { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
+        /// {{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto</value>
+        /// <value>{{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}</value>
         [DataMember(Name="recalculaParcelamento", EmitDefaultValue=false)]
         public bool? RecalculaParcelamento { get; set; }
     
         /// <summary>
-        /// N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
+        /// {{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}
         /// </summary>
-        /// <value>N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.</value>
+        /// <value>{{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}</value>
         [DataMember(Name="numeroMinimoOfertas", EmitDefaultValue=false)]
         public bool? NumeroMinimoOfertas { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
+        /// {{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento</value>
+        /// <value>{{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}</value>
         [DataMember(Name="aceitaPagamentoMaiorQueEntrada", EmitDefaultValue=false)]
         public bool? AceitaPagamentoMaiorQueEntrada { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.
+        /// {{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.</value>
+        /// <value>{{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}</value>
         [DataMember(Name="antecipaParcelamentosAbertos", EmitDefaultValue=false)]
         public bool? AntecipaParcelamentosAbertos { get; set; }
     
         /// <summary>
-        /// Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
+        /// {{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}
         /// </summary>
-        /// <value>Valor m\u00EDnimo da parcela que deve ser aceito na oferta.</value>
+        /// <value>{{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}</value>
         [DataMember(Name="valorMinimoParcela", EmitDefaultValue=false)]
         public double? ValorMinimoParcela { get; set; }
     
         /// <summary>
-        /// Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.
+        /// {{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}
         /// </summary>
-        /// <value>Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.</value>
+        /// <value>{{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}</value>
         [DataMember(Name="percentualLimitarValorMinimoParcela", EmitDefaultValue=false)]
         public double? PercentualLimitarValorMinimoParcela { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
+        /// {{{configuracao_rotativo_persist_id_regra_campanha_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.</value>
+        /// <value>{{{configuracao_rotativo_persist_id_regra_campanha_value}}}</value>
         [DataMember(Name="idRegraCampanha", EmitDefaultValue=false)]
         public long? IdRegraCampanha { get; set; }
     
         /// <summary>
-        /// Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
+        /// {{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}
         /// </summary>
-        /// <value>Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.</value>
+        /// <value>{{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}</value>
         [DataMember(Name="parcelarApenasMinimo", EmitDefaultValue=false)]
         public bool? ParcelarApenasMinimo { get; set; }
     
         /// <summary>
-        /// Nome do usu\u00E1rio
+        /// {{{configuracao_rotativo_persist_usuario_value}}}
         /// </summary>
-        /// <value>Nome do usu\u00E1rio</value>
+        /// <value>{{{configuracao_rotativo_persist_usuario_value}}}</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta
+    /// {{{maquineta_update_description}}}
     /// </summary>
     [DataContract]
     public partial class MaquinetaUpdate :  IEquatable<MaquinetaUpdate>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MaquinetaUpdate" /> class.
         /// Initializes a new instance of the <see cref="MaquinetaUpdate" />class.
         /// </summary>
-        /// <param name="IdTerminal">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id). (required).</param>
-        /// <param name="IdTipoMaquineta">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id). (required).</param>
-        /// <param name="Valor">Valor de Manuten\u00E7\u00E3o da Maquineta. (required).</param>
-        /// <param name="DataHoraImplantacao">Data da implanta\u00E7\u00E3o da Maquineta. (required).</param>
+        /// <param name="IdTerminal">{{{maquineta_update_id_terminal_value}}} (required).</param>
+        /// <param name="IdTipoMaquineta">{{{maquineta_update_id_tipo_maquineta_value}}} (required).</param>
+        /// <param name="Valor">{{{maquineta_update_valor_value}}} (required).</param>
+        /// <param name="DataHoraImplantacao">{{{maquineta_update_data_hora_implantacao_value}}} (required).</param>
 
         public MaquinetaUpdate(long? IdTerminal = null, long? IdTipoMaquineta = null, double? Valor = null, string DataHoraImplantacao = null)
         {
@@ -70,30 +70,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+        /// {{{maquineta_update_id_terminal_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</value>
+        /// <value>{{{maquineta_update_id_terminal_value}}}</value>
         [DataMember(Name="idTerminal", EmitDefaultValue=false)]
         public long? IdTerminal { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
+        /// {{{maquineta_update_id_tipo_maquineta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).</value>
+        /// <value>{{{maquineta_update_id_tipo_maquineta_value}}}</value>
         [DataMember(Name="idTipoMaquineta", EmitDefaultValue=false)]
         public long? IdTipoMaquineta { get; set; }
     
         /// <summary>
-        /// Valor de Manuten\u00E7\u00E3o da Maquineta.
+        /// {{{maquineta_update_valor_value}}}
         /// </summary>
-        /// <value>Valor de Manuten\u00E7\u00E3o da Maquineta.</value>
+        /// <value>{{{maquineta_update_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Data da implanta\u00E7\u00E3o da Maquineta.
+        /// {{{maquineta_update_data_hora_implantacao_value}}}
         /// </summary>
-        /// <value>Data da implanta\u00E7\u00E3o da Maquineta.</value>
+        /// <value>{{{maquineta_update_data_hora_implantacao_value}}}</value>
         [DataMember(Name="dataHoraImplantacao", EmitDefaultValue=false)]
         public string DataHoraImplantacao { get; set; }
     

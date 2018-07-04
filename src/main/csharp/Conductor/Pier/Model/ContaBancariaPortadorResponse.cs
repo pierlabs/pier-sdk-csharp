@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// 
+    /// {{{conta_bancaria_portador_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ContaBancariaPortadorResponse :  IEquatable<ContaBancariaPortadorResponse>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaBancariaPortadorResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaBancariaPortadorResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador da conta banc\u00E1ria.</param>
-        /// <param name="IdConta">C\u00F3digo identificador da conta cart\u00E3o.</param>
-        /// <param name="NomeAgencia">Descri\u00E7\u00E3o da ag\u00EAncia.</param>
-        /// <param name="Banco">C\u00F3digo do banco.</param>
-        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia.</param>
-        /// <param name="DigitoAgencia">D\u00EDgito da ag\u00EAncia.</param>
-        /// <param name="NumeroConta">N\u00FAmero da conta.</param>
-        /// <param name="DigitoConta">D\u00EDgito da conta.</param>
-        /// <param name="FlagAtivo">Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa).</param>
-        /// <param name="FlagContaOrigemDoc">Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED).</param>
-        /// <param name="IdPessoaFisica">C\u00F3digo da pessoa.</param>
-        /// <param name="FlagContaPoupanca">Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente).</param>
-        /// <param name="Favorecido">Nome do favorecido.</param>
-        /// <param name="NumeroReceiraFederal">Documento do favorecido.</param>
-        /// <param name="Titularidade">Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular.</param>
+        /// <param name="Id">{{{conta_bancaria_portador_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{conta_bancaria_portador_response_id_conta_value}}}.</param>
+        /// <param name="NomeAgencia">{{{conta_bancaria_portador_response_nome_agencia_value}}}.</param>
+        /// <param name="Banco">{{{conta_bancaria_portador_response_banco_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{conta_bancaria_portador_response_numero_agencia_value}}}.</param>
+        /// <param name="DigitoAgencia">{{{conta_bancaria_portador_response_digito_agencia_value}}}.</param>
+        /// <param name="NumeroConta">{{{conta_bancaria_portador_response_numero_conta_value}}}.</param>
+        /// <param name="DigitoConta">{{{conta_bancaria_portador_response_digito_conta_value}}}.</param>
+        /// <param name="FlagAtivo">{{{conta_bancaria_portador_response_flag_ativo_value}}}.</param>
+        /// <param name="FlagContaOrigemDoc">{{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}.</param>
+        /// <param name="IdPessoaFisica">{{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}.</param>
+        /// <param name="FlagContaPoupanca">{{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}.</param>
+        /// <param name="Favorecido">{{{conta_bancaria_portador_response_favorecido_value}}}.</param>
+        /// <param name="NumeroReceiraFederal">{{{conta_bancaria_portador_response_numero_receira_federal_value}}}.</param>
+        /// <param name="Titularidade">{{{conta_bancaria_portador_response_titularidade_value}}}.</param>
 
         public ContaBancariaPortadorResponse(long? Id = null, long? IdConta = null, string NomeAgencia = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, int? FlagAtivo = null, int? FlagContaOrigemDoc = null, long? IdPessoaFisica = null, int? FlagContaPoupanca = null, string Favorecido = null, string NumeroReceiraFederal = null, int? Titularidade = null)
         {
@@ -60,107 +60,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador da conta banc\u00E1ria
+        /// {{{conta_bancaria_portador_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da conta banc\u00E1ria</value>
+        /// <value>{{{conta_bancaria_portador_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador da conta cart\u00E3o
+        /// {{{conta_bancaria_portador_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da conta cart\u00E3o</value>
+        /// <value>{{{conta_bancaria_portador_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o da ag\u00EAncia
+        /// {{{conta_bancaria_portador_response_nome_agencia_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o da ag\u00EAncia</value>
+        /// <value>{{{conta_bancaria_portador_response_nome_agencia_value}}}</value>
         [DataMember(Name="nomeAgencia", EmitDefaultValue=false)]
         public string NomeAgencia { get; set; }
     
         /// <summary>
-        /// C\u00F3digo do banco
+        /// {{{conta_bancaria_portador_response_banco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo do banco</value>
+        /// <value>{{{conta_bancaria_portador_response_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da ag\u00EAncia
+        /// {{{conta_bancaria_portador_response_numero_agencia_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da ag\u00EAncia</value>
+        /// <value>{{{conta_bancaria_portador_response_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public string NumeroAgencia { get; set; }
     
         /// <summary>
-        /// D\u00EDgito da ag\u00EAncia
+        /// {{{conta_bancaria_portador_response_digito_agencia_value}}}
         /// </summary>
-        /// <value>D\u00EDgito da ag\u00EAncia</value>
+        /// <value>{{{conta_bancaria_portador_response_digito_agencia_value}}}</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da conta
+        /// {{{conta_bancaria_portador_response_numero_conta_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da conta</value>
+        /// <value>{{{conta_bancaria_portador_response_numero_conta_value}}}</value>
         [DataMember(Name="numeroConta", EmitDefaultValue=false)]
         public string NumeroConta { get; set; }
     
         /// <summary>
-        /// D\u00EDgito da conta
+        /// {{{conta_bancaria_portador_response_digito_conta_value}}}
         /// </summary>
-        /// <value>D\u00EDgito da conta</value>
+        /// <value>{{{conta_bancaria_portador_response_digito_conta_value}}}</value>
         [DataMember(Name="digitoConta", EmitDefaultValue=false)]
         public string DigitoConta { get; set; }
     
         /// <summary>
-        /// Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
+        /// {{{conta_bancaria_portador_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)</value>
+        /// <value>{{{conta_bancaria_portador_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     
         /// <summary>
-        /// Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+        /// {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}
         /// </summary>
-        /// <value>Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)</value>
+        /// <value>{{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}</value>
         [DataMember(Name="flagContaOrigemDoc", EmitDefaultValue=false)]
         public int? FlagContaOrigemDoc { get; set; }
     
         /// <summary>
-        /// C\u00F3digo da pessoa
+        /// {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}
         /// </summary>
-        /// <value>C\u00F3digo da pessoa</value>
+        /// <value>{{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}</value>
         [DataMember(Name="idPessoaFisica", EmitDefaultValue=false)]
         public long? IdPessoaFisica { get; set; }
     
         /// <summary>
-        /// Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
+        /// {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}
         /// </summary>
-        /// <value>Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)</value>
+        /// <value>{{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}</value>
         [DataMember(Name="flagContaPoupanca", EmitDefaultValue=false)]
         public int? FlagContaPoupanca { get; set; }
     
         /// <summary>
-        /// Nome do favorecido
+        /// {{{conta_bancaria_portador_response_favorecido_value}}}
         /// </summary>
-        /// <value>Nome do favorecido</value>
+        /// <value>{{{conta_bancaria_portador_response_favorecido_value}}}</value>
         [DataMember(Name="favorecido", EmitDefaultValue=false)]
         public string Favorecido { get; set; }
     
         /// <summary>
-        /// Documento do favorecido
+        /// {{{conta_bancaria_portador_response_numero_receira_federal_value}}}
         /// </summary>
-        /// <value>Documento do favorecido</value>
+        /// <value>{{{conta_bancaria_portador_response_numero_receira_federal_value}}}</value>
         [DataMember(Name="numeroReceiraFederal", EmitDefaultValue=false)]
         public string NumeroReceiraFederal { get; set; }
     
         /// <summary>
-        /// Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
+        /// {{{conta_bancaria_portador_response_titularidade_value}}}
         /// </summary>
-        /// <value>Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular</value>
+        /// <value>{{{conta_bancaria_portador_response_titularidade_value}}}</value>
         [DataMember(Name="titularidade", EmitDefaultValue=false)]
         public int? Titularidade { get; set; }
     

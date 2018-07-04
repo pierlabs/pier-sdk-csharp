@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
+    /// {{{cartao_pay_update_description}}}
     /// </summary>
     [DataContract]
     public partial class CartaoPayUpdate :  IEquatable<CartaoPayUpdate>
     { 
     
         /// <summary>
-        /// Status do cart\u00E3o
+        /// {{{cartao_pay_update_status_value}}}
         /// </summary>
-        /// <value>Status do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_update_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do cart\u00E3o
+        /// {{{cartao_pay_update_status_value}}}
         /// </summary>
-        /// <value>Status do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_update_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -47,7 +47,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoPayUpdate" /> class.
         /// Initializes a new instance of the <see cref="CartaoPayUpdate" />class.
         /// </summary>
-        /// <param name="Status">Status do cart\u00E3o (required).</param>
+        /// <param name="Status">{{{cartao_pay_update_status_value}}} (required).</param>
 
         public CartaoPayUpdate(StatusEnum? Status = null)
         {

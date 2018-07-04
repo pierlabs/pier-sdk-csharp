@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses
+    /// {{{pais_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PaisResponse :  IEquatable<PaisResponse>
     { 
     
         /// <summary>
-        /// Continente no qual o pa\u00EDs faz parte
+        /// {{{pais_response_continente_value}}}
         /// </summary>
-        /// <value>Continente no qual o pa\u00EDs faz parte</value>
+        /// <value>{{{pais_response_continente_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ContinenteEnum {
             
@@ -49,9 +49,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Continente no qual o pa\u00EDs faz parte
+        /// {{{pais_response_continente_value}}}
         /// </summary>
-        /// <value>Continente no qual o pa\u00EDs faz parte</value>
+        /// <value>{{{pais_response_continente_value}}}</value>
         [DataMember(Name="continente", EmitDefaultValue=false)]
         public ContinenteEnum? Continente { get; set; }
     
@@ -59,12 +59,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PaisResponse" /> class.
         /// Initializes a new instance of the <see cref="PaisResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador \u00FAnico do pa\u00EDs na base.</param>
-        /// <param name="Codigo">C\u00F3digo identificador do pa\u00EDs.</param>
-        /// <param name="Sigla">Sigla do pa\u00EDs.</param>
-        /// <param name="Descricao">Nome do pa\u00EDs.</param>
-        /// <param name="Continente">Continente no qual o pa\u00EDs faz parte.</param>
-        /// <param name="FlagAtivo">Atributo que representa se o pa\u00EDs est\u00E1 ativo.</param>
+        /// <param name="Id">{{{pais_response_id_value}}}.</param>
+        /// <param name="Codigo">{{{pais_response_codigo_value}}}.</param>
+        /// <param name="Sigla">{{{pais_response_sigla_value}}}.</param>
+        /// <param name="Descricao">{{{pais_response_descricao_value}}}.</param>
+        /// <param name="Continente">{{{pais_response_continente_value}}}.</param>
+        /// <param name="FlagAtivo">{{{pais_response_flag_ativo_value}}}.</param>
 
         public PaisResponse(long? Id = null, string Codigo = null, string Sigla = null, string Descricao = null, ContinenteEnum? Continente = null, bool? FlagAtivo = null)
         {
@@ -79,37 +79,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador \u00FAnico do pa\u00EDs na base
+        /// {{{pais_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador \u00FAnico do pa\u00EDs na base</value>
+        /// <value>{{{pais_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador do pa\u00EDs
+        /// {{{pais_response_codigo_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do pa\u00EDs</value>
+        /// <value>{{{pais_response_codigo_value}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public string Codigo { get; set; }
     
         /// <summary>
-        /// Sigla do pa\u00EDs
+        /// {{{pais_response_sigla_value}}}
         /// </summary>
-        /// <value>Sigla do pa\u00EDs</value>
+        /// <value>{{{pais_response_sigla_value}}}</value>
         [DataMember(Name="sigla", EmitDefaultValue=false)]
         public string Sigla { get; set; }
     
         /// <summary>
-        /// Nome do pa\u00EDs
+        /// {{{pais_response_descricao_value}}}
         /// </summary>
-        /// <value>Nome do pa\u00EDs</value>
+        /// <value>{{{pais_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Atributo que representa se o pa\u00EDs est\u00E1 ativo
+        /// {{{pais_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Atributo que representa se o pa\u00EDs est\u00E1 ativo</value>
+        /// <value>{{{pais_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

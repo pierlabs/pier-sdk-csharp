@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
+    /// {{{historico_eventos_response_description}}}
     /// </summary>
     [DataContract]
     public partial class HistoricoEventosResponse :  IEquatable<HistoricoEventosResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoEventosResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoEventosResponse" />class.
         /// </summary>
-        /// <param name="IdHistorico">C\u00F3digo identificador do evento (required).</param>
-        /// <param name="DataHistorico">Data do evento (required).</param>
-        /// <param name="TipoHistorico">Nome do campo alterado (required).</param>
-        /// <param name="ValorAnterior">Valor anterior a modifica\u00E7\u00E3o.</param>
-        /// <param name="ValorAtribuido">Valor atribu\u00EDdo na modifica\u00E7\u00E3o (required).</param>
+        /// <param name="IdHistorico">{{{historico_eventos_response_id_historico_value}}} (required).</param>
+        /// <param name="DataHistorico">{{{historico_eventos_response_data_historico_value}}} (required).</param>
+        /// <param name="TipoHistorico">{{{historico_eventos_response_tipo_historico_value}}} (required).</param>
+        /// <param name="ValorAnterior">{{{historico_eventos_response_valor_anterior_value}}}.</param>
+        /// <param name="ValorAtribuido">{{{historico_eventos_response_valor_atribuido_value}}} (required).</param>
 
         public HistoricoEventosResponse(long? IdHistorico = null, string DataHistorico = null, string TipoHistorico = null, string ValorAnterior = null, string ValorAtribuido = null)
         {
@@ -72,37 +72,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do evento
+        /// {{{historico_eventos_response_id_historico_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do evento</value>
+        /// <value>{{{historico_eventos_response_id_historico_value}}}</value>
         [DataMember(Name="idHistorico", EmitDefaultValue=false)]
         public long? IdHistorico { get; set; }
     
         /// <summary>
-        /// Data do evento
+        /// {{{historico_eventos_response_data_historico_value}}}
         /// </summary>
-        /// <value>Data do evento</value>
+        /// <value>{{{historico_eventos_response_data_historico_value}}}</value>
         [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
         public string DataHistorico { get; set; }
     
         /// <summary>
-        /// Nome do campo alterado
+        /// {{{historico_eventos_response_tipo_historico_value}}}
         /// </summary>
-        /// <value>Nome do campo alterado</value>
+        /// <value>{{{historico_eventos_response_tipo_historico_value}}}</value>
         [DataMember(Name="tipoHistorico", EmitDefaultValue=false)]
         public string TipoHistorico { get; set; }
     
         /// <summary>
-        /// Valor anterior a modifica\u00E7\u00E3o
+        /// {{{historico_eventos_response_valor_anterior_value}}}
         /// </summary>
-        /// <value>Valor anterior a modifica\u00E7\u00E3o</value>
+        /// <value>{{{historico_eventos_response_valor_anterior_value}}}</value>
         [DataMember(Name="valorAnterior", EmitDefaultValue=false)]
         public string ValorAnterior { get; set; }
     
         /// <summary>
-        /// Valor atribu\u00EDdo na modifica\u00E7\u00E3o
+        /// {{{historico_eventos_response_valor_atribuido_value}}}
         /// </summary>
-        /// <value>Valor atribu\u00EDdo na modifica\u00E7\u00E3o</value>
+        /// <value>{{{historico_eventos_response_valor_atribuido_value}}}</value>
         [DataMember(Name="valorAtribuido", EmitDefaultValue=false)]
         public string ValorAtribuido { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Push
+    /// {{{page_push_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PagePushResponse :  IEquatable<PagePushResponse>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PagePushResponse(List<NotificacaoPushResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PagePushResponse(List<NotificacaoPushResponseValue> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<NotificacaoPushResponse> Content { get; set; }
+        public List<NotificacaoPushResponseValue> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First

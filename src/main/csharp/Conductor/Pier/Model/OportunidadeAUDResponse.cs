@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso Oportunidades
+    /// {{{oportunidade_a_u_d_response_description}}}
     /// </summary>
     [DataContract]
     public partial class OportunidadeAUDResponse :  IEquatable<OportunidadeAUDResponse>
@@ -22,19 +22,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OportunidadeAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="OportunidadeAUDResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador da oportunidade.</param>
-        /// <param name="IdTipoOportunidade">C\u00F3digo identificador do tipo oportunidade.</param>
-        /// <param name="IdStatusOportunidade">C\u00F3digo identificador do status oportunidade.</param>
-        /// <param name="DataCadastro">Data cadastro da oportunidade..</param>
-        /// <param name="DataAtualizacao">Data atualiza\u00E7\u00E3o da oportunidade..</param>
-        /// <param name="NumeroReceitaFederal">N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade.</param>
-        /// <param name="DataInicioVigencia">In\u00EDcio da vig\u00EAncia da oportunidade.</param>
-        /// <param name="DataFimVigencia">fim da vig\u00EAncia da oportunidade.</param>
-        /// <param name="FlagAtivo">Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa.</param>
-        /// <param name="Detalhes">Lista de detalhes da oportunidade.</param>
-        /// <param name="RevDate">Data da auditoria.</param>
-        /// <param name="RevType">Tipo da auditoria.</param>
-        /// <param name="Rev">Identificador da auditoria.</param>
+        /// <param name="Id">{{{oportunidade_a_u_d_response_id_value}}}.</param>
+        /// <param name="IdTipoOportunidade">{{{oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}.</param>
+        /// <param name="IdStatusOportunidade">{{{oportunidade_a_u_d_response_id_status_oportunidade_value}}}.</param>
+        /// <param name="DataCadastro">{{{oportunidade_a_u_d_response_data_cadastro_value}}}.</param>
+        /// <param name="DataAtualizacao">{{{oportunidade_a_u_d_response_data_atualizacao_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{oportunidade_a_u_d_response_numero_receita_federal_value}}}.</param>
+        /// <param name="DataInicioVigencia">{{{oportunidade_a_u_d_response_data_inicio_vigencia_value}}}.</param>
+        /// <param name="DataFimVigencia">{{{oportunidade_a_u_d_response_data_fim_vigencia_value}}}.</param>
+        /// <param name="FlagAtivo">{{{oportunidade_a_u_d_response_flag_ativo_value}}}.</param>
+        /// <param name="Detalhes">{{{oportunidade_a_u_d_response_detalhes_value}}}.</param>
+        /// <param name="RevDate">{{{oportunidade_a_u_d_response_rev_date_value}}}.</param>
+        /// <param name="RevType">{{{oportunidade_a_u_d_response_rev_type_value}}}.</param>
+        /// <param name="Rev">{{{oportunidade_a_u_d_response_rev_value}}}.</param>
 
         public OportunidadeAUDResponse(long? Id = null, long? IdTipoOportunidade = null, long? IdStatusOportunidade = null, string DataCadastro = null, string DataAtualizacao = null, string NumeroReceitaFederal = null, string DataInicioVigencia = null, string DataFimVigencia = null, bool? FlagAtivo = null, List<CdtDetalheOportunidadeAUD> Detalhes = null, string RevDate = null, long? RevType = null, long? Rev = null)
         {
@@ -56,93 +56,93 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador da oportunidade
+        /// {{{oportunidade_a_u_d_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador do tipo oportunidade
+        /// {{{oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do tipo oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}</value>
         [DataMember(Name="idTipoOportunidade", EmitDefaultValue=false)]
         public long? IdTipoOportunidade { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador do status oportunidade
+        /// {{{oportunidade_a_u_d_response_id_status_oportunidade_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do status oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_id_status_oportunidade_value}}}</value>
         [DataMember(Name="idStatusOportunidade", EmitDefaultValue=false)]
         public long? IdStatusOportunidade { get; set; }
     
         /// <summary>
-        /// Data cadastro da oportunidade.
+        /// {{{oportunidade_a_u_d_response_data_cadastro_value}}}
         /// </summary>
-        /// <value>Data cadastro da oportunidade.</value>
+        /// <value>{{{oportunidade_a_u_d_response_data_cadastro_value}}}</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Data atualiza\u00E7\u00E3o da oportunidade.
+        /// {{{oportunidade_a_u_d_response_data_atualizacao_value}}}
         /// </summary>
-        /// <value>Data atualiza\u00E7\u00E3o da oportunidade.</value>
+        /// <value>{{{oportunidade_a_u_d_response_data_atualizacao_value}}}</value>
         [DataMember(Name="dataAtualizacao", EmitDefaultValue=false)]
         public string DataAtualizacao { get; set; }
     
         /// <summary>
-        /// N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+        /// {{{oportunidade_a_u_d_response_numero_receita_federal_value}}}
         /// </summary>
-        /// <value>N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_numero_receita_federal_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// In\u00EDcio da vig\u00EAncia da oportunidade
+        /// {{{oportunidade_a_u_d_response_data_inicio_vigencia_value}}}
         /// </summary>
-        /// <value>In\u00EDcio da vig\u00EAncia da oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_data_inicio_vigencia_value}}}</value>
         [DataMember(Name="dataInicioVigencia", EmitDefaultValue=false)]
         public string DataInicioVigencia { get; set; }
     
         /// <summary>
-        /// fim da vig\u00EAncia da oportunidade
+        /// {{{oportunidade_a_u_d_response_data_fim_vigencia_value}}}
         /// </summary>
-        /// <value>fim da vig\u00EAncia da oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_data_fim_vigencia_value}}}</value>
         [DataMember(Name="dataFimVigencia", EmitDefaultValue=false)]
         public string DataFimVigencia { get; set; }
     
         /// <summary>
-        /// Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
+        /// {{{oportunidade_a_u_d_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa</value>
+        /// <value>{{{oportunidade_a_u_d_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     
         /// <summary>
-        /// Lista de detalhes da oportunidade
+        /// {{{oportunidade_a_u_d_response_detalhes_value}}}
         /// </summary>
-        /// <value>Lista de detalhes da oportunidade</value>
+        /// <value>{{{oportunidade_a_u_d_response_detalhes_value}}}</value>
         [DataMember(Name="detalhes", EmitDefaultValue=false)]
         public List<CdtDetalheOportunidadeAUD> Detalhes { get; set; }
     
         /// <summary>
-        /// Data da auditoria
+        /// {{{oportunidade_a_u_d_response_rev_date_value}}}
         /// </summary>
-        /// <value>Data da auditoria</value>
+        /// <value>{{{oportunidade_a_u_d_response_rev_date_value}}}</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
         public string RevDate { get; set; }
     
         /// <summary>
-        /// Tipo da auditoria
+        /// {{{oportunidade_a_u_d_response_rev_type_value}}}
         /// </summary>
-        /// <value>Tipo da auditoria</value>
+        /// <value>{{{oportunidade_a_u_d_response_rev_type_value}}}</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public long? RevType { get; set; }
     
         /// <summary>
-        /// Identificador da auditoria
+        /// {{{oportunidade_a_u_d_response_rev_value}}}
         /// </summary>
-        /// <value>Identificador da auditoria</value>
+        /// <value>{{{oportunidade_a_u_d_response_rev_value}}}</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
