@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de WebHooks
+    /// {{{page_web_hook_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageWebHookResponse :  IEquatable<PageWebHookResponse>

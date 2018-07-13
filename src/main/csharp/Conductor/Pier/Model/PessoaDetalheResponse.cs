@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// PessoaDetalheResponse
+    /// {{{pessoa_detalhe_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PessoaDetalheResponse :  IEquatable<PessoaDetalheResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaDetalheResponse" />class.
         /// </summary>
-        /// <param name="IdPessoa">C\u00F3digo identificador da pessoa.</param>
-        /// <param name="NomeMae">Apresenta o nome da m\u00E3e da pessoa fisica.</param>
-        /// <param name="IdEstadoCivil">Id Estado civil da pessoa fisica.</param>
-        /// <param name="IdProfissao">Profiss\u00E3o da pessoa fisica.</param>
-        /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica.</param>
-        /// <param name="IdNacionalidade">Id Nacionalidade da pessoa fisica.</param>
-        /// <param name="NumeroBanco">N\u00FAmero do banco..</param>
-        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia..</param>
-        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente..</param>
-        /// <param name="Email">Email da pessoa fisica.</param>
-        /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00E3o.</param>
+        /// <param name="IdPessoa">{{{pessoa_detalhe_response_id_pessoa_value}}}.</param>
+        /// <param name="NomeMae">{{{pessoa_detalhe_response_nome_mae_value}}}.</param>
+        /// <param name="IdEstadoCivil">{{{pessoa_detalhe_response_id_estado_civil_value}}}.</param>
+        /// <param name="IdProfissao">{{{pessoa_detalhe_response_id_profissao_value}}}.</param>
+        /// <param name="IdNaturezaOcupacao">{{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}.</param>
+        /// <param name="IdNacionalidade">{{{pessoa_detalhe_response_id_nacionalidade_value}}}.</param>
+        /// <param name="NumeroBanco">{{{pessoa_detalhe_response_numero_banco_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{pessoa_detalhe_response_numero_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{pessoa_detalhe_response_numero_conta_corrente_value}}}.</param>
+        /// <param name="Email">{{{pessoa_detalhe_response_email_value}}}.</param>
+        /// <param name="NomeEmpresa">{{{pessoa_detalhe_response_nome_empresa_value}}}.</param>
 
         public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
         {
@@ -52,79 +52,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador da pessoa
+        /// {{{pessoa_detalhe_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da pessoa</value>
+        /// <value>{{{pessoa_detalhe_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Apresenta o nome da m\u00E3e da pessoa fisica
+        /// {{{pessoa_detalhe_response_nome_mae_value}}}
         /// </summary>
-        /// <value>Apresenta o nome da m\u00E3e da pessoa fisica</value>
+        /// <value>{{{pessoa_detalhe_response_nome_mae_value}}}</value>
         [DataMember(Name="nomeMae", EmitDefaultValue=false)]
         public string NomeMae { get; set; }
     
         /// <summary>
-        /// Id Estado civil da pessoa fisica
+        /// {{{pessoa_detalhe_response_id_estado_civil_value}}}
         /// </summary>
-        /// <value>Id Estado civil da pessoa fisica</value>
+        /// <value>{{{pessoa_detalhe_response_id_estado_civil_value}}}</value>
         [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// Profiss\u00E3o da pessoa fisica
+        /// {{{pessoa_detalhe_response_id_profissao_value}}}
         /// </summary>
-        /// <value>Profiss\u00E3o da pessoa fisica</value>
+        /// <value>{{{pessoa_detalhe_response_id_profissao_value}}}</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public string IdProfissao { get; set; }
     
         /// <summary>
-        /// Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+        /// {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
         /// </summary>
-        /// <value>Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica</value>
+        /// <value>{{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}</value>
         [DataMember(Name="idNaturezaOcupacao", EmitDefaultValue=false)]
         public long? IdNaturezaOcupacao { get; set; }
     
         /// <summary>
-        /// Id Nacionalidade da pessoa fisica
+        /// {{{pessoa_detalhe_response_id_nacionalidade_value}}}
         /// </summary>
-        /// <value>Id Nacionalidade da pessoa fisica</value>
+        /// <value>{{{pessoa_detalhe_response_id_nacionalidade_value}}}</value>
         [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do banco.
+        /// {{{pessoa_detalhe_response_numero_banco_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do banco.</value>
+        /// <value>{{{pessoa_detalhe_response_numero_banco_value}}}</value>
         [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
         public int? NumeroBanco { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da ag\u00EAncia.
+        /// {{{pessoa_detalhe_response_numero_agencia_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da ag\u00EAncia.</value>
+        /// <value>{{{pessoa_detalhe_response_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da conta corrente.
+        /// {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da conta corrente.</value>
+        /// <value>{{{pessoa_detalhe_response_numero_conta_corrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// Email da pessoa fisica
+        /// {{{pessoa_detalhe_response_email_value}}}
         /// </summary>
-        /// <value>Email da pessoa fisica</value>
+        /// <value>{{{pessoa_detalhe_response_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Nome que deve ser impresso no cart\u00E3o
+        /// {{{pessoa_detalhe_response_nome_empresa_value}}}
         /// </summary>
-        /// <value>Nome que deve ser impresso no cart\u00E3o</value>
+        /// <value>{{{pessoa_detalhe_response_nome_empresa_value}}}</value>
         [DataMember(Name="nomeEmpresa", EmitDefaultValue=false)]
         public string NomeEmpresa { get; set; }
     

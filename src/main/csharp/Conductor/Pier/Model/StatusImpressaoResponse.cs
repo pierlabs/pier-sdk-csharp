@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Status Impress\u00E3o
+    /// {{{status_impressao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusImpressaoResponse :  IEquatable<StatusImpressaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusImpressaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusImpressaoResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do est\u00E1gio cart\u00E3o.</param>
-        /// <param name="Nome">Nome do status impress\u00E3o.</param>
+        /// <param name="Id">{{{status_impressao_response_id_value}}}.</param>
+        /// <param name="Nome">{{{status_impressao_response_nome_value}}}.</param>
 
         public StatusImpressaoResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do est\u00E1gio cart\u00E3o
+        /// {{{status_impressao_response_id_value}}}
         /// </summary>
-        /// <value>Id do est\u00E1gio cart\u00E3o</value>
+        /// <value>{{{status_impressao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do status impress\u00E3o
+        /// {{{status_impressao_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do status impress\u00E3o</value>
+        /// <value>{{{status_impressao_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

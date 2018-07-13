@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
+    /// {{{transacao_pay_query_request_description}}}
     /// </summary>
     [DataContract]
     public partial class TransacaoPayQueryRequest :  IEquatable<TransacaoPayQueryRequest>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoPayQueryRequest" /> class.
         /// Initializes a new instance of the <see cref="TransacaoPayQueryRequest" />class.
         /// </summary>
-        /// <param name="NumeroCartao">Numero do cartao (criptografado).</param>
-        /// <param name="IdCartao">Id do cart\u00E3o.</param>
-        /// <param name="Origem">Origem.</param>
-        /// <param name="Sort">Tipo de ordena\u00E7\u00E3o dos registros..</param>
+        /// <param name="NumeroCartao">{{{transacao_pay_generic_request_numero_cartao_value}}}.</param>
+        /// <param name="IdCartao">{{{transacao_pay_generic_request_id_cartao_value}}}.</param>
+        /// <param name="Origem">{{{transacao_pay_query_request_origem_value}}}.</param>
+        /// <param name="Sort">{{{global_menssagem_sort_sort}}}.</param>
 
         public TransacaoPayQueryRequest(string NumeroCartao = null, long? IdCartao = null, string Origem = null, List<string> Sort = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Numero do cartao (criptografado)
+        /// {{{transacao_pay_generic_request_numero_cartao_value}}}
         /// </summary>
-        /// <value>Numero do cartao (criptografado)</value>
+        /// <value>{{{transacao_pay_generic_request_numero_cartao_value}}}</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Id do cart\u00E3o
+        /// {{{transacao_pay_generic_request_id_cartao_value}}}
         /// </summary>
-        /// <value>Id do cart\u00E3o</value>
+        /// <value>{{{transacao_pay_generic_request_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Origem
+        /// {{{transacao_pay_query_request_origem_value}}}
         /// </summary>
-        /// <value>Origem</value>
+        /// <value>{{{transacao_pay_query_request_origem_value}}}</value>
         [DataMember(Name="origem", EmitDefaultValue=false)]
         public string Origem { get; set; }
     
         /// <summary>
-        /// Tipo de ordena\u00E7\u00E3o dos registros.
+        /// {{{global_menssagem_sort_sort}}}
         /// </summary>
-        /// <value>Tipo de ordena\u00E7\u00E3o dos registros.</value>
+        /// <value>{{{global_menssagem_sort_sort}}}</value>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<string> Sort { get; set; }
     

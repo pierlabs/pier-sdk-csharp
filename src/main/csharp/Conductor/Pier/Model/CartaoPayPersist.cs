@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
+    /// {{{cartao_pay_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class CartaoPayPersist :  IEquatable<CartaoPayPersist>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoPayPersist" /> class.
         /// Initializes a new instance of the <see cref="CartaoPayPersist" />class.
         /// </summary>
-        /// <param name="NumeroCartao">N\u00FAmero do cart\u00E3o criptografado (required).</param>
-        /// <param name="DataValidade">Data de validade do cart\u00E3o.</param>
-        /// <param name="Cvv">CVV do cart\u00E3o criptografado.</param>
-        /// <param name="NumeroReceitaFederal">CPF do portador do cart\u00E3o criptografado.</param>
-        /// <param name="NomeImpresso">Nome impresso no cart\u00E3o criptografado.</param>
-        /// <param name="ChavePublicaDevice">Chave p\u00FAblica do dispositivo criptografada (required).</param>
+        /// <param name="NumeroCartao">{{{cartao_pay_persist_numero_cartao_value}}} (required).</param>
+        /// <param name="DataValidade">{{{cartao_pay_persist_data_validade_value}}}.</param>
+        /// <param name="Cvv">{{{cartao_pay_persist_cvv_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{cartao_pay_persist_numero_receita_federal_value}}}.</param>
+        /// <param name="NomeImpresso">{{{cartao_pay_persist_nome_impresso_value}}}.</param>
+        /// <param name="ChavePublicaDevice">{{{cartao_pay_persist_chave_publica_device_value}}} (required).</param>
 
         public CartaoPayPersist(string NumeroCartao = null, string DataValidade = null, string Cvv = null, string NumeroReceitaFederal = null, string NomeImpresso = null, string ChavePublicaDevice = null)
         {
@@ -58,44 +58,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// N\u00FAmero do cart\u00E3o criptografado
+        /// {{{cartao_pay_persist_numero_cartao_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do cart\u00E3o criptografado</value>
+        /// <value>{{{cartao_pay_persist_numero_cartao_value}}}</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Data de validade do cart\u00E3o
+        /// {{{cartao_pay_persist_data_validade_value}}}
         /// </summary>
-        /// <value>Data de validade do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_persist_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// CVV do cart\u00E3o criptografado
+        /// {{{cartao_pay_persist_cvv_value}}}
         /// </summary>
-        /// <value>CVV do cart\u00E3o criptografado</value>
+        /// <value>{{{cartao_pay_persist_cvv_value}}}</value>
         [DataMember(Name="cvv", EmitDefaultValue=false)]
         public string Cvv { get; set; }
     
         /// <summary>
-        /// CPF do portador do cart\u00E3o criptografado
+        /// {{{cartao_pay_persist_numero_receita_federal_value}}}
         /// </summary>
-        /// <value>CPF do portador do cart\u00E3o criptografado</value>
+        /// <value>{{{cartao_pay_persist_numero_receita_federal_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Nome impresso no cart\u00E3o criptografado
+        /// {{{cartao_pay_persist_nome_impresso_value}}}
         /// </summary>
-        /// <value>Nome impresso no cart\u00E3o criptografado</value>
+        /// <value>{{{cartao_pay_persist_nome_impresso_value}}}</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Chave p\u00FAblica do dispositivo criptografada
+        /// {{{cartao_pay_persist_chave_publica_device_value}}}
         /// </summary>
-        /// <value>Chave p\u00FAblica do dispositivo criptografada</value>
+        /// <value>{{{cartao_pay_persist_chave_publica_device_value}}}</value>
         [DataMember(Name="chavePublicaDevice", EmitDefaultValue=false)]
         public string ChavePublicaDevice { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta da requisi\u00E7\u00E3o de listagem de cart\u00E3o
+    /// {{{cartao_pay_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CartaoPayResponse :  IEquatable<CartaoPayResponse>
     { 
     
         /// <summary>
-        /// Status do cart\u00E3o
+        /// {{{cartao_pay_base_response_status_value}}}
         /// </summary>
-        /// <value>Status do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_base_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do cart\u00E3o
+        /// {{{cartao_pay_base_response_status_value}}}
         /// </summary>
-        /// <value>Status do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_base_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -47,14 +47,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoPayResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoPayResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do cart\u00E3o.</param>
-        /// <param name="NumeroCartao">N\u00FAmero do cart\u00E3o real criptografado.</param>
-        /// <param name="DataValidadeCartao">Data de validade do cart\u00E3o.</param>
-        /// <param name="NomeImpresso">Nome impresso no cart\u00E3o criptografado.</param>
-        /// <param name="IdEntidade">Identificador do emissor do cart\u00E3o.</param>
-        /// <param name="NomeEntidade">Nome do emissor do cart\u00E3o.</param>
-        /// <param name="Status">Status do cart\u00E3o.</param>
-        /// <param name="DataValidadeChaveCriptograma">Data de validade da chave do criptograma.</param>
+        /// <param name="Id">{{{cartao_pay_base_response_id_value}}}.</param>
+        /// <param name="NumeroCartao">{{{cartao_pay_base_response_numero_cartao_value}}}.</param>
+        /// <param name="DataValidadeCartao">{{{cartao_pay_base_response_data_validade_cartao_value}}}.</param>
+        /// <param name="NomeImpresso">{{{cartao_pay_base_response_nome_impresso_value}}}.</param>
+        /// <param name="IdEntidade">{{{cartao_pay_base_response_id_entidade_value}}}.</param>
+        /// <param name="NomeEntidade">{{{cartao_pay_base_response_nome_entidade_value}}}.</param>
+        /// <param name="Status">{{{cartao_pay_base_response_status_value}}}.</param>
+        /// <param name="DataValidadeChaveCriptograma">{{{cartao_pay_response_data_validade_chave_criptograma_value}}}.</param>
 
         public CartaoPayResponse(long? Id = null, string NumeroCartao = null, string DataValidadeCartao = null, string NomeImpresso = null, long? IdEntidade = null, string NomeEntidade = null, StatusEnum? Status = null, string DataValidadeChaveCriptograma = null)
         {
@@ -71,51 +71,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do cart\u00E3o
+        /// {{{cartao_pay_base_response_id_value}}}
         /// </summary>
-        /// <value>Id do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_base_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do cart\u00E3o real criptografado
+        /// {{{cartao_pay_base_response_numero_cartao_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do cart\u00E3o real criptografado</value>
+        /// <value>{{{cartao_pay_base_response_numero_cartao_value}}}</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Data de validade do cart\u00E3o
+        /// {{{cartao_pay_base_response_data_validade_cartao_value}}}
         /// </summary>
-        /// <value>Data de validade do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_base_response_data_validade_cartao_value}}}</value>
         [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
         public string DataValidadeCartao { get; set; }
     
         /// <summary>
-        /// Nome impresso no cart\u00E3o criptografado
+        /// {{{cartao_pay_base_response_nome_impresso_value}}}
         /// </summary>
-        /// <value>Nome impresso no cart\u00E3o criptografado</value>
+        /// <value>{{{cartao_pay_base_response_nome_impresso_value}}}</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Identificador do emissor do cart\u00E3o
+        /// {{{cartao_pay_base_response_id_entidade_value}}}
         /// </summary>
-        /// <value>Identificador do emissor do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_base_response_id_entidade_value}}}</value>
         [DataMember(Name="idEntidade", EmitDefaultValue=false)]
         public long? IdEntidade { get; set; }
     
         /// <summary>
-        /// Nome do emissor do cart\u00E3o
+        /// {{{cartao_pay_base_response_nome_entidade_value}}}
         /// </summary>
-        /// <value>Nome do emissor do cart\u00E3o</value>
+        /// <value>{{{cartao_pay_base_response_nome_entidade_value}}}</value>
         [DataMember(Name="nomeEntidade", EmitDefaultValue=false)]
         public string NomeEntidade { get; set; }
     
         /// <summary>
-        /// Data de validade da chave do criptograma
+        /// {{{cartao_pay_response_data_validade_chave_criptograma_value}}}
         /// </summary>
-        /// <value>Data de validade da chave do criptograma</value>
+        /// <value>{{{cartao_pay_response_data_validade_chave_criptograma_value}}}</value>
         [DataMember(Name="dataValidadeChaveCriptograma", EmitDefaultValue=false)]
         public string DataValidadeChaveCriptograma { get; set; }
     

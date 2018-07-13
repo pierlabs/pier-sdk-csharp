@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso WebHook
+    /// {{{web_hook_response_description}}}
     /// </summary>
     [DataContract]
     public partial class WebHookResponse :  IEquatable<WebHookResponse>
     { 
     
         /// <summary>
-        /// TipoEvento a ser chamado pelo WebHook
+        /// {{{web_hook_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>TipoEvento a ser chamado pelo WebHook</value>
+        /// <value>{{{web_hook_response_tipo_evento_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// M\u00E9todo que a ser chamado pelo WebHook
+        /// {{{web_hook_response_metodo_value}}}
         /// </summary>
-        /// <value>M\u00E9todo que a ser chamado pelo WebHook</value>
+        /// <value>{{{web_hook_response_metodo_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MetodoEnum {
             
@@ -58,9 +58,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do WebHook
+        /// {{{web_hook_response_status_value}}}
         /// </summary>
-        /// <value>Status do WebHook</value>
+        /// <value>{{{web_hook_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -73,23 +73,23 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// TipoEvento a ser chamado pelo WebHook
+        /// {{{web_hook_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>TipoEvento a ser chamado pelo WebHook</value>
+        /// <value>{{{web_hook_response_tipo_evento_value}}}</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// M\u00E9todo que a ser chamado pelo WebHook
+        /// {{{web_hook_response_metodo_value}}}
         /// </summary>
-        /// <value>M\u00E9todo que a ser chamado pelo WebHook</value>
+        /// <value>{{{web_hook_response_metodo_value}}}</value>
         [DataMember(Name="metodo", EmitDefaultValue=false)]
         public MetodoEnum? Metodo { get; set; }
     
         /// <summary>
-        /// Status do WebHook
+        /// {{{web_hook_response_status_value}}}
         /// </summary>
-        /// <value>Status do WebHook</value>
+        /// <value>{{{web_hook_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -97,11 +97,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="WebHookResponse" /> class.
         /// Initializes a new instance of the <see cref="WebHookResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do WebHook (required).</param>
-        /// <param name="TipoEvento">TipoEvento a ser chamado pelo WebHook (required).</param>
-        /// <param name="Metodo">M\u00E9todo que a ser chamado pelo WebHook (required).</param>
-        /// <param name="Url">URL que a ser consumida pelo WebHook (required).</param>
-        /// <param name="Status">Status do WebHook (required).</param>
+        /// <param name="Id">{{{web_hook_response_id_value}}} (required).</param>
+        /// <param name="TipoEvento">{{{web_hook_response_tipo_evento_value}}} (required).</param>
+        /// <param name="Metodo">{{{web_hook_response_metodo_value}}} (required).</param>
+        /// <param name="Url">{{{web_hook_response_url_value}}} (required).</param>
+        /// <param name="Status">{{{web_hook_response_status_value}}} (required).</param>
 
         public WebHookResponse(long? Id = null, TipoEventoEnum? TipoEvento = null, MetodoEnum? Metodo = null, string Url = null, StatusEnum? Status = null)
         {
@@ -155,16 +155,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do WebHook
+        /// {{{web_hook_response_id_value}}}
         /// </summary>
-        /// <value>Id do WebHook</value>
+        /// <value>{{{web_hook_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// URL que a ser consumida pelo WebHook
+        /// {{{web_hook_response_url_value}}}
         /// </summary>
-        /// <value>URL que a ser consumida pelo WebHook</value>
+        /// <value>{{{web_hook_response_url_value}}}</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
     

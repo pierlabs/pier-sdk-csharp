@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso token
+    /// {{{token_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TokenResponse :  IEquatable<TokenResponse>
     { 
     
         /// <summary>
-        /// Status do token
+        /// {{{token_dto_status_value}}}
         /// </summary>
-        /// <value>Status do token</value>
+        /// <value>{{{token_dto_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do token
+        /// {{{token_dto_status_value}}}
         /// </summary>
-        /// <value>Status do token</value>
+        /// <value>{{{token_dto_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -47,16 +47,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TokenResponse" /> class.
         /// Initializes a new instance of the <see cref="TokenResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador do token.</param>
-        /// <param name="_Base">C\u00F3digo identificador da base.</param>
-        /// <param name="Owner">Owner do token.</param>
-        /// <param name="Status">Status do token.</param>
-        /// <param name="CriadoPor">Descri\u00E7\u00E3o de quem criou o token.</param>
-        /// <param name="DataCriacao">Data de cria\u00E7\u00E3o do token.</param>
-        /// <param name="AlteradoPor">Descri\u00E7\u00E3o de quem alterou o token.</param>
-        /// <param name="DataModificacao">Data de modifica\u00E7\u00E3o do token.</param>
+        /// <param name="Id">{{{token_dto_id_value}}}.</param>
+        /// <param name="_Base">{{{token_dto_base_value}}}.</param>
+        /// <param name="Owner">{{{token_dto_owner_value}}}.</param>
+        /// <param name="Status">{{{token_dto_status_value}}}.</param>
+        /// <param name="CriadoPor">{{{token_dto_criado_por_value}}}.</param>
+        /// <param name="DataCriacao">{{{token_dto_data_criacao_value}}}.</param>
+        /// <param name="AlteradoPor">{{{token_dto_alterado_por_value}}}.</param>
+        /// <param name="DataModificacao">{{{token_dto_data_modificacao_value}}}.</param>
 
-        public TokenResponse(long? Id = null, long? _Base = null, string Owner = null, StatusEnum? Status = null, string CriadoPor = null, DateTime? DataCriacao = null, string AlteradoPor = null, DateTime? DataModificacao = null)
+        public TokenResponse(long? Id = null, long? _Base = null, string Owner = null, StatusEnum? Status = null, string CriadoPor = null, string DataCriacao = null, string AlteradoPor = null, string DataModificacao = null)
         {
             this.Id = Id;
             this._Base = _Base;
@@ -71,53 +71,53 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do token
+        /// {{{token_dto_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do token</value>
+        /// <value>{{{token_dto_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador da base
+        /// {{{token_dto_base_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da base</value>
+        /// <value>{{{token_dto_base_value}}}</value>
         [DataMember(Name="base", EmitDefaultValue=false)]
         public long? _Base { get; set; }
     
         /// <summary>
-        /// Owner do token
+        /// {{{token_dto_owner_value}}}
         /// </summary>
-        /// <value>Owner do token</value>
+        /// <value>{{{token_dto_owner_value}}}</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public string Owner { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o de quem criou o token
+        /// {{{token_dto_criado_por_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o de quem criou o token</value>
+        /// <value>{{{token_dto_criado_por_value}}}</value>
         [DataMember(Name="criadoPor", EmitDefaultValue=false)]
         public string CriadoPor { get; set; }
     
         /// <summary>
-        /// Data de cria\u00E7\u00E3o do token
+        /// {{{token_dto_data_criacao_value}}}
         /// </summary>
-        /// <value>Data de cria\u00E7\u00E3o do token</value>
+        /// <value>{{{token_dto_data_criacao_value}}}</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
-        public DateTime? DataCriacao { get; set; }
+        public string DataCriacao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o de quem alterou o token
+        /// {{{token_dto_alterado_por_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o de quem alterou o token</value>
+        /// <value>{{{token_dto_alterado_por_value}}}</value>
         [DataMember(Name="alteradoPor", EmitDefaultValue=false)]
         public string AlteradoPor { get; set; }
     
         /// <summary>
-        /// Data de modifica\u00E7\u00E3o do token
+        /// {{{token_dto_data_modificacao_value}}}
         /// </summary>
-        /// <value>Data de modifica\u00E7\u00E3o do token</value>
+        /// <value>{{{token_dto_data_modificacao_value}}}</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
-        public DateTime? DataModificacao { get; set; }
+        public string DataModificacao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

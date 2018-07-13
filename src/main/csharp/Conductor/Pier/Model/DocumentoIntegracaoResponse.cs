@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o
+    /// {{{documento_integracao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DocumentoIntegracaoResponse :  IEquatable<DocumentoIntegracaoResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoIntegracaoResponse" /> class.
         /// Initializes a new instance of the <see cref="DocumentoIntegracaoResponse" />class.
         /// </summary>
-        /// <param name="Id">ID do Documento Integrado..</param>
-        /// <param name="IdTemplate">ID do Template de Documento associado..</param>
-        /// <param name="Nome">Nome do Documento..</param>
+        /// <param name="Id">{{{documento_integracao_response_id_value}}}.</param>
+        /// <param name="IdTemplate">{{{documento_integracao_response_id_template_value}}}.</param>
+        /// <param name="Nome">{{{documento_integracao_response_nome_value}}}.</param>
 
         public DocumentoIntegracaoResponse(long? Id = null, long? IdTemplate = null, string Nome = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID do Documento Integrado.
+        /// {{{documento_integracao_response_id_value}}}
         /// </summary>
-        /// <value>ID do Documento Integrado.</value>
+        /// <value>{{{documento_integracao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// ID do Template de Documento associado.
+        /// {{{documento_integracao_response_id_template_value}}}
         /// </summary>
-        /// <value>ID do Template de Documento associado.</value>
+        /// <value>{{{documento_integracao_response_id_template_value}}}</value>
         [DataMember(Name="idTemplate", EmitDefaultValue=false)]
         public long? IdTemplate { get; set; }
     
         /// <summary>
-        /// Nome do Documento.
+        /// {{{documento_integracao_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do Documento.</value>
+        /// <value>{{{documento_integracao_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

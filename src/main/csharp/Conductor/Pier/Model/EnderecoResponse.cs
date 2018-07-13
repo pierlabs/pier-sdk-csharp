@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Endere\u00E7o
+    /// {{{endereco_response_description}}}
     /// </summary>
     [DataContract]
     public partial class EnderecoResponse :  IEquatable<EnderecoResponse>
@@ -22,22 +22,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoResponse" /> class.
         /// Initializes a new instance of the <see cref="EnderecoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)..</param>
-        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id).</param>
-        /// <param name="IdTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id).</param>
-        /// <param name="Cep">Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;.</param>
-        /// <param name="Logradouro">Apresenta o nome do Logradouro.</param>
-        /// <param name="Numero">Apresenta o n\u00FAmero do endere\u00E7o.</param>
-        /// <param name="Complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o.</param>
-        /// <param name="PontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o.</param>
-        /// <param name="Bairro">Apresenta nome do bairro.</param>
-        /// <param name="Cidade">Apresenta nome da cidade.</param>
-        /// <param name="Uf">Apresenta sigla da Unidade Federativa.</param>
-        /// <param name="Pais">Apresenta nome do Pais.</param>
-        /// <param name="DataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o.</param>
-        /// <param name="DataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao.</param>
+        /// <param name="Id">{{{endereco_response_id_value}}}.</param>
+        /// <param name="IdPessoa">{{{endereco_response_id_pessoa_value}}}.</param>
+        /// <param name="IdTipoEndereco">{{{endereco_response_id_tipo_endereco_value}}}.</param>
+        /// <param name="Cep">{{{endereco_response_cep_value}}}.</param>
+        /// <param name="Logradouro">{{{endereco_response_logradouro_value}}}.</param>
+        /// <param name="Numero">{{{endereco_response_numero_value}}}.</param>
+        /// <param name="Complemento">{{{endereco_response_complemento_value}}}.</param>
+        /// <param name="PontoReferencia">{{{endereco_response_ponto_referencia_value}}}.</param>
+        /// <param name="Bairro">{{{endereco_response_bairro_value}}}.</param>
+        /// <param name="Cidade">{{{endereco_response_cidade_value}}}.</param>
+        /// <param name="Uf">{{{endereco_response_uf_value}}}.</param>
+        /// <param name="Pais">{{{endereco_response_pais_value}}}.</param>
+        /// <param name="DataInclusao">{{{endereco_response_data_inclusao_value}}}.</param>
+        /// <param name="DataUltimaAtualizacao">{{{endereco_response_data_ultima_atualizacao_value}}}.</param>
+        /// <param name="FlagCorrespondencia">{{{endereco_response_flag_correspondencia_value}}}.</param>
 
-        public EnderecoResponse(long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null)
+        public EnderecoResponse(long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null, bool? FlagCorrespondencia = null)
         {
             this.Id = Id;
             this.IdPessoa = IdPessoa;
@@ -53,107 +54,115 @@ namespace Conductor.Pier.Model
             this.Pais = Pais;
             this.DataInclusao = DataInclusao;
             this.DataUltimaAtualizacao = DataUltimaAtualizacao;
+            this.FlagCorrespondencia = FlagCorrespondencia;
             
         }
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+        /// {{{endereco_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).</value>
+        /// <value>{{{endereco_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+        /// {{{endereco_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)</value>
+        /// <value>{{{endereco_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+        /// {{{endereco_response_id_tipo_endereco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)</value>
+        /// <value>{{{endereco_response_id_tipo_endereco_value}}}</value>
         [DataMember(Name="idTipoEndereco", EmitDefaultValue=false)]
         public long? IdTipoEndereco { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;
+        /// {{{endereco_response_cep_value}}}
         /// </summary>
-        /// <value>Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;</value>
+        /// <value>{{{endereco_response_cep_value}}}</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do Logradouro
+        /// {{{endereco_response_logradouro_value}}}
         /// </summary>
-        /// <value>Apresenta o nome do Logradouro</value>
+        /// <value>{{{endereco_response_logradouro_value}}}</value>
         [DataMember(Name="logradouro", EmitDefaultValue=false)]
         public string Logradouro { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00FAmero do endere\u00E7o
+        /// {{{endereco_response_numero_value}}}
         /// </summary>
-        /// <value>Apresenta o n\u00FAmero do endere\u00E7o</value>
+        /// <value>{{{endereco_response_numero_value}}}</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
         public int? Numero { get; set; }
     
         /// <summary>
-        /// Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+        /// {{{endereco_response_complemento_value}}}
         /// </summary>
-        /// <value>Apresenta descri\u00E7oes complementares referente ao endere\u00E7o</value>
+        /// <value>{{{endereco_response_complemento_value}}}</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+        /// {{{endereco_response_ponto_referencia_value}}}
         /// </summary>
-        /// <value>Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o</value>
+        /// <value>{{{endereco_response_ponto_referencia_value}}}</value>
         [DataMember(Name="pontoReferencia", EmitDefaultValue=false)]
         public string PontoReferencia { get; set; }
     
         /// <summary>
-        /// Apresenta nome do bairro
+        /// {{{endereco_response_bairro_value}}}
         /// </summary>
-        /// <value>Apresenta nome do bairro</value>
+        /// <value>{{{endereco_response_bairro_value}}}</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// Apresenta nome da cidade
+        /// {{{endereco_response_cidade_value}}}
         /// </summary>
-        /// <value>Apresenta nome da cidade</value>
+        /// <value>{{{endereco_response_cidade_value}}}</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// Apresenta sigla da Unidade Federativa
+        /// {{{endereco_response_uf_value}}}
         /// </summary>
-        /// <value>Apresenta sigla da Unidade Federativa</value>
+        /// <value>{{{endereco_response_uf_value}}}</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// Apresenta nome do Pais
+        /// {{{endereco_response_pais_value}}}
         /// </summary>
-        /// <value>Apresenta nome do Pais</value>
+        /// <value>{{{endereco_response_pais_value}}}</value>
         [DataMember(Name="pais", EmitDefaultValue=false)]
         public string Pais { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que fora cadastrado o Endere\u00E7o
+        /// {{{endereco_response_data_inclusao_value}}}
         /// </summary>
-        /// <value>Apresenta a data em que fora cadastrado o Endere\u00E7o</value>
+        /// <value>{{{endereco_response_data_inclusao_value}}}</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
+        /// {{{endereco_response_data_ultima_atualizacao_value}}}
         /// </summary>
-        /// <value>Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao</value>
+        /// <value>{{{endereco_response_data_ultima_atualizacao_value}}}</value>
         [DataMember(Name="dataUltimaAtualizacao", EmitDefaultValue=false)]
         public string DataUltimaAtualizacao { get; set; }
+    
+        /// <summary>
+        /// {{{endereco_response_flag_correspondencia_value}}}
+        /// </summary>
+        /// <value>{{{endereco_response_flag_correspondencia_value}}}</value>
+        [DataMember(Name="flagCorrespondencia", EmitDefaultValue=false)]
+        public bool? FlagCorrespondencia { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -177,6 +186,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Pais: ").Append(Pais).Append("\n");
             sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
             sb.Append("  DataUltimaAtualizacao: ").Append(DataUltimaAtualizacao).Append("\n");
+            sb.Append("  FlagCorrespondencia: ").Append(FlagCorrespondencia).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -283,6 +293,11 @@ namespace Conductor.Pier.Model
                     this.DataUltimaAtualizacao == other.DataUltimaAtualizacao ||
                     this.DataUltimaAtualizacao != null &&
                     this.DataUltimaAtualizacao.Equals(other.DataUltimaAtualizacao)
+                ) && 
+                (
+                    this.FlagCorrespondencia == other.FlagCorrespondencia ||
+                    this.FlagCorrespondencia != null &&
+                    this.FlagCorrespondencia.Equals(other.FlagCorrespondencia)
                 );
         }
 
@@ -339,6 +354,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataUltimaAtualizacao != null)
                     hash = hash * 59 + this.DataUltimaAtualizacao.GetHashCode();
+                
+                if (this.FlagCorrespondencia != null)
+                    hash = hash * 59 + this.FlagCorrespondencia.GetHashCode();
                 
                 return hash;
             }

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
+    /// {{{alterar_produto_request_description}}}
     /// </summary>
     [DataContract]
     public partial class AlterarProdutoRequest :  IEquatable<AlterarProdutoRequest>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AlterarProdutoRequest" /> class.
         /// Initializes a new instance of the <see cref="AlterarProdutoRequest" />class.
         /// </summary>
-        /// <param name="IdProduto">C\u00F3digo identificador do produto. (required).</param>
-        /// <param name="IdOrigemComercial">C\u00F3digo identificador da origem comercial..</param>
-        /// <param name="IdEstabelecimento">Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta..</param>
-        /// <param name="IdPromotor">Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o..</param>
+        /// <param name="IdProduto">{{{alterar_produto_request_id_produto_value}}} (required).</param>
+        /// <param name="IdOrigemComercial">{{{alterar_produto_request_id_origem_comercial_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{alterar_produto_request_id_estabelecimento_value}}}.</param>
+        /// <param name="IdPromotor">{{{alterar_produto_request_id_promotor_value}}}.</param>
 
         public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null, long? IdEstabelecimento = null, long? IdPromotor = null)
         {
@@ -46,30 +46,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do produto.
+        /// {{{alterar_produto_request_id_produto_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do produto.</value>
+        /// <value>{{{alterar_produto_request_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador da origem comercial.
+        /// {{{alterar_produto_request_id_origem_comercial_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da origem comercial.</value>
+        /// <value>{{{alterar_produto_request_id_origem_comercial_value}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
+        /// {{{alterar_produto_request_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.</value>
+        /// <value>{{{alterar_produto_request_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o.
+        /// {{{alterar_produto_request_id_promotor_value}}}
         /// </summary>
-        /// <value>Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o.</value>
+        /// <value>{{{alterar_produto_request_id_promotor_value}}}</value>
         [DataMember(Name="idPromotor", EmitDefaultValue=false)]
         public long? IdPromotor { get; set; }
     

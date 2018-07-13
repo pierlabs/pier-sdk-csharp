@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso Operacao
+    /// {{{detalhe_operacao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DetalheOperacaoResponse :  IEquatable<DetalheOperacaoResponse>
@@ -22,25 +22,25 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalheOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalheOperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o.</param>
-        /// <param name="CodigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador.</param>
-        /// <param name="CodigoProcessamentoCancelamento">C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador.</param>
-        /// <param name="NomeOperacao">Nome da opera\u00E7\u00E3o.</param>
-        /// <param name="DescricaoOperacao">Descri\u00E7\u00E3o da opera\u00E7\u00E3o.</param>
-        /// <param name="PlanoMinimo">Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o.</param>
-        /// <param name="PlanoMaximo">Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o.</param>
-        /// <param name="ValorMinimo"> Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o.</param>
-        /// <param name="ValorMaximo"> Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o.</param>
-        /// <param name="FlagCobraJuros">Flag indicativa para crobran\u00E7a de juros.</param>
-        /// <param name="TaxaJuros">Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros.</param>
-        /// <param name="FlagCobraTarifa">Flag indicativa para crobran\u00E7a de tarifas.</param>
-        /// <param name="TaxaTarifa">Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas.</param>
-        /// <param name="ValorTac">Valor da taxa de abertura de conta.</param>
-        /// <param name="PercentualTac">Percentual da taxa de abertura de conta.</param>
-        /// <param name="ValorOperacao">Valor da opera\u00E7\u00E3o.</param>
-        /// <param name="Carencia">Quantidade de meses para car\u00EAncia.</param>
-        /// <param name="ExcedentePermitido">Valor excedente permitido para opera\u00E7\u00E3o.</param>
-        /// <param name="FlagPermitirParcelamento">Permitir transa\u00E7\u00F5es parceladas.</param>
+        /// <param name="IdOperacao">{{{detalhe_operacao_response_id_operacao_value}}}.</param>
+        /// <param name="CodigoProcessamento">{{{detalhe_operacao_response_codigo_processamento_value}}}.</param>
+        /// <param name="CodigoProcessamentoCancelamento">{{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}.</param>
+        /// <param name="NomeOperacao">{{{detalhe_operacao_response_nome_operacao_value}}}.</param>
+        /// <param name="DescricaoOperacao">{{{detalhe_operacao_response_descricao_operacao_value}}}.</param>
+        /// <param name="PlanoMinimo">{{{detalhe_operacao_response_plano_minimo_value}}}.</param>
+        /// <param name="PlanoMaximo">{{{detalhe_operacao_response_plano_maximo_value}}}.</param>
+        /// <param name="ValorMinimo">{{{detalhe_operacao_response_valor_minimo_value}}}.</param>
+        /// <param name="ValorMaximo">{{{detalhe_operacao_response_valor_maximo_value}}}.</param>
+        /// <param name="FlagCobraJuros">{{{detalhe_operacao_response_flag_cobra_juros_value}}}.</param>
+        /// <param name="TaxaJuros">{{{detalhe_operacao_response_taxa_juros_value}}}.</param>
+        /// <param name="FlagCobraTarifa">{{{detalhe_operacao_response_flag_cobra_tarifa_value}}}.</param>
+        /// <param name="TaxaTarifa">{{{detalhe_operacao_response_taxa_tarifa_value}}}.</param>
+        /// <param name="ValorTac">{{{detalhe_operacao_response_valor_tac_value}}}.</param>
+        /// <param name="PercentualTac">{{{detalhe_operacao_response_percentual_tac_value}}}.</param>
+        /// <param name="ValorOperacao">{{{detalhe_operacao_response_valor_operacao_value}}}.</param>
+        /// <param name="Carencia">{{{detalhe_operacao_response_carencia_value}}}.</param>
+        /// <param name="ExcedentePermitido">{{{detalhe_operacao_response_excedente_permitido_value}}}.</param>
+        /// <param name="FlagPermitirParcelamento">{{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}.</param>
 
         public DetalheOperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, string DescricaoOperacao = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, bool? FlagCobraJuros = null, double? TaxaJuros = null, bool? FlagCobraTarifa = null, double? TaxaTarifa = null, double? ValorTac = null, double? PercentualTac = null, double? ValorOperacao = null, int? Carencia = null, double? ExcedentePermitido = null, bool? FlagPermitirParcelamento = null)
         {
@@ -68,135 +68,135 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo que identifica a opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_id_operacao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo que identifica a opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_id_operacao_value}}}</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+        /// {{{detalhe_operacao_response_codigo_processamento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador</value>
+        /// <value>{{{detalhe_operacao_response_codigo_processamento_value}}}</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+        /// {{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador</value>
+        /// <value>{{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}</value>
         [DataMember(Name="codigoProcessamentoCancelamento", EmitDefaultValue=false)]
         public string CodigoProcessamentoCancelamento { get; set; }
     
         /// <summary>
-        /// Nome da opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_nome_operacao_value}}}
         /// </summary>
-        /// <value>Nome da opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_nome_operacao_value}}}</value>
         [DataMember(Name="nomeOperacao", EmitDefaultValue=false)]
         public string NomeOperacao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o da opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_descricao_operacao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o da opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_descricao_operacao_value}}}</value>
         [DataMember(Name="descricaoOperacao", EmitDefaultValue=false)]
         public string DescricaoOperacao { get; set; }
     
         /// <summary>
-        /// Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_plano_minimo_value}}}
         /// </summary>
-        /// <value>Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_plano_minimo_value}}}</value>
         [DataMember(Name="planoMinimo", EmitDefaultValue=false)]
         public int? PlanoMinimo { get; set; }
     
         /// <summary>
-        /// Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_plano_maximo_value}}}
         /// </summary>
-        /// <value>Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_plano_maximo_value}}}</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     
         /// <summary>
-        ///  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_valor_minimo_value}}}
         /// </summary>
-        /// <value> Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_valor_minimo_value}}}</value>
         [DataMember(Name="valorMinimo", EmitDefaultValue=false)]
         public double? ValorMinimo { get; set; }
     
         /// <summary>
-        ///  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_valor_maximo_value}}}
         /// </summary>
-        /// <value> Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_valor_maximo_value}}}</value>
         [DataMember(Name="valorMaximo", EmitDefaultValue=false)]
         public double? ValorMaximo { get; set; }
     
         /// <summary>
-        /// Flag indicativa para crobran\u00E7a de juros
+        /// {{{detalhe_operacao_response_flag_cobra_juros_value}}}
         /// </summary>
-        /// <value>Flag indicativa para crobran\u00E7a de juros</value>
+        /// <value>{{{detalhe_operacao_response_flag_cobra_juros_value}}}</value>
         [DataMember(Name="flagCobraJuros", EmitDefaultValue=false)]
         public bool? FlagCobraJuros { get; set; }
     
         /// <summary>
-        /// Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
+        /// {{{detalhe_operacao_response_taxa_juros_value}}}
         /// </summary>
-        /// <value>Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros</value>
+        /// <value>{{{detalhe_operacao_response_taxa_juros_value}}}</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// Flag indicativa para crobran\u00E7a de tarifas
+        /// {{{detalhe_operacao_response_flag_cobra_tarifa_value}}}
         /// </summary>
-        /// <value>Flag indicativa para crobran\u00E7a de tarifas</value>
+        /// <value>{{{detalhe_operacao_response_flag_cobra_tarifa_value}}}</value>
         [DataMember(Name="flagCobraTarifa", EmitDefaultValue=false)]
         public bool? FlagCobraTarifa { get; set; }
     
         /// <summary>
-        /// Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
+        /// {{{detalhe_operacao_response_taxa_tarifa_value}}}
         /// </summary>
-        /// <value>Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas</value>
+        /// <value>{{{detalhe_operacao_response_taxa_tarifa_value}}}</value>
         [DataMember(Name="taxaTarifa", EmitDefaultValue=false)]
         public double? TaxaTarifa { get; set; }
     
         /// <summary>
-        /// Valor da taxa de abertura de conta
+        /// {{{detalhe_operacao_response_valor_tac_value}}}
         /// </summary>
-        /// <value>Valor da taxa de abertura de conta</value>
+        /// <value>{{{detalhe_operacao_response_valor_tac_value}}}</value>
         [DataMember(Name="valorTac", EmitDefaultValue=false)]
         public double? ValorTac { get; set; }
     
         /// <summary>
-        /// Percentual da taxa de abertura de conta
+        /// {{{detalhe_operacao_response_percentual_tac_value}}}
         /// </summary>
-        /// <value>Percentual da taxa de abertura de conta</value>
+        /// <value>{{{detalhe_operacao_response_percentual_tac_value}}}</value>
         [DataMember(Name="percentualTac", EmitDefaultValue=false)]
         public double? PercentualTac { get; set; }
     
         /// <summary>
-        /// Valor da opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_valor_operacao_value}}}
         /// </summary>
-        /// <value>Valor da opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_valor_operacao_value}}}</value>
         [DataMember(Name="valorOperacao", EmitDefaultValue=false)]
         public double? ValorOperacao { get; set; }
     
         /// <summary>
-        /// Quantidade de meses para car\u00EAncia
+        /// {{{detalhe_operacao_response_carencia_value}}}
         /// </summary>
-        /// <value>Quantidade de meses para car\u00EAncia</value>
+        /// <value>{{{detalhe_operacao_response_carencia_value}}}</value>
         [DataMember(Name="carencia", EmitDefaultValue=false)]
         public int? Carencia { get; set; }
     
         /// <summary>
-        /// Valor excedente permitido para opera\u00E7\u00E3o
+        /// {{{detalhe_operacao_response_excedente_permitido_value}}}
         /// </summary>
-        /// <value>Valor excedente permitido para opera\u00E7\u00E3o</value>
+        /// <value>{{{detalhe_operacao_response_excedente_permitido_value}}}</value>
         [DataMember(Name="excedentePermitido", EmitDefaultValue=false)]
         public double? ExcedentePermitido { get; set; }
     
         /// <summary>
-        /// Permitir transa\u00E7\u00F5es parceladas
+        /// {{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}
         /// </summary>
-        /// <value>Permitir transa\u00E7\u00F5es parceladas</value>
+        /// <value>{{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}</value>
         [DataMember(Name="flagPermitirParcelamento", EmitDefaultValue=false)]
         public bool? FlagPermitirParcelamento { get; set; }
     

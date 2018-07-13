@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Job
+    /// {{{job_response_description}}}
     /// </summary>
     [DataContract]
     public partial class JobResponse :  IEquatable<JobResponse>
     { 
     
         /// <summary>
-        /// Status do Job no agendador de tarefas
+        /// {{{job_response_status_value}}}
         /// </summary>
-        /// <value>Status do Job no agendador de tarefas</value>
+        /// <value>{{{job_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do Job no agendador de tarefas
+        /// {{{job_response_status_value}}}
         /// </summary>
-        /// <value>Status do Job no agendador de tarefas</value>
+        /// <value>{{{job_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,11 +44,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="JobResponse" /> class.
         /// Initializes a new instance of the <see cref="JobResponse" />class.
         /// </summary>
-        /// <param name="Id">Identificador do Job.</param>
-        /// <param name="Descricao">Descricao do Job.</param>
-        /// <param name="Groovy">Script Groovy do Job.</param>
-        /// <param name="Cron">Cron do Job.</param>
-        /// <param name="Status">Status do Job no agendador de tarefas.</param>
+        /// <param name="Id">{{{job_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{job_response_descricao_value}}}.</param>
+        /// <param name="Groovy">{{{job_response_groovy_value}}}.</param>
+        /// <param name="Cron">{{{job_response_cron_value}}}.</param>
+        /// <param name="Status">{{{job_response_status_value}}}.</param>
 
         public JobResponse(long? Id = null, string Descricao = null, string Groovy = null, string Cron = null, StatusEnum? Status = null)
         {
@@ -62,30 +62,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador do Job
+        /// {{{job_response_id_value}}}
         /// </summary>
-        /// <value>Identificador do Job</value>
+        /// <value>{{{job_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descricao do Job
+        /// {{{job_response_descricao_value}}}
         /// </summary>
-        /// <value>Descricao do Job</value>
+        /// <value>{{{job_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Script Groovy do Job
+        /// {{{job_response_groovy_value}}}
         /// </summary>
-        /// <value>Script Groovy do Job</value>
+        /// <value>{{{job_response_groovy_value}}}</value>
         [DataMember(Name="groovy", EmitDefaultValue=false)]
         public string Groovy { get; set; }
     
         /// <summary>
-        /// Cron do Job
+        /// {{{job_response_cron_value}}}
         /// </summary>
-        /// <value>Cron do Job</value>
+        /// <value>{{{job_response_cron_value}}}</value>
         [DataMember(Name="cron", EmitDefaultValue=false)]
         public string Cron { get; set; }
     

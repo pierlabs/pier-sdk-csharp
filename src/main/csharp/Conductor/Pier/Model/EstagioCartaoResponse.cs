@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Est\u00E1gio Cart\u00E3o
+    /// {{{estagio_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class EstagioCartaoResponse :  IEquatable<EstagioCartaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EstagioCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="EstagioCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do est\u00E1gio cart\u00E3o (required).</param>
-        /// <param name="Nome">Nome do est\u00E1gio cart\u00E3o (required).</param>
+        /// <param name="Id">{{{estagio_cartao_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{estagio_cartao_response_nome_value}}} (required).</param>
 
         public EstagioCartaoResponse(long? Id = null, string Nome = null)
         {
@@ -50,16 +50,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do est\u00E1gio cart\u00E3o
+        /// {{{estagio_cartao_response_id_value}}}
         /// </summary>
-        /// <value>Id do est\u00E1gio cart\u00E3o</value>
+        /// <value>{{{estagio_cartao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do est\u00E1gio cart\u00E3o
+        /// {{{estagio_cartao_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do est\u00E1gio cart\u00E3o</value>
+        /// <value>{{{estagio_cartao_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

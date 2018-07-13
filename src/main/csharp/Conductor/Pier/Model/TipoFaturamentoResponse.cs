@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Faturamento
+    /// {{{tipo_faturamento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoFaturamentoResponse :  IEquatable<TipoFaturamentoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id)..</param>
-        /// <param name="Descricao">Desci\u00E7\u00E3o do tipo de faturamento..</param>
-        /// <param name="FlagApenasDemonstrativo">Flag que representa que o faturamento ser\u00E1 apenas demonstrativo..</param>
-        /// <param name="IdConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento..</param>
+        /// <param name="Id">{{{tipo_faturamento_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_faturamento_response_descricao_value}}}.</param>
+        /// <param name="FlagApenasDemonstrativo">{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}.</param>
+        /// <param name="IdConvenio">{{{tipo_faturamento_response_id_convenio_value}}}.</param>
 
         public TipoFaturamentoResponse(long? Id = null, string Descricao = null, bool? FlagApenasDemonstrativo = null, long? IdConvenio = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+        /// {{{tipo_faturamento_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).</value>
+        /// <value>{{{tipo_faturamento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Desci\u00E7\u00E3o do tipo de faturamento.
+        /// {{{tipo_faturamento_response_descricao_value}}}
         /// </summary>
-        /// <value>Desci\u00E7\u00E3o do tipo de faturamento.</value>
+        /// <value>{{{tipo_faturamento_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+        /// {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
         /// </summary>
-        /// <value>Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.</value>
+        /// <value>{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}</value>
         [DataMember(Name="flagApenasDemonstrativo", EmitDefaultValue=false)]
         public bool? FlagApenasDemonstrativo { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
+        /// {{{tipo_faturamento_response_id_convenio_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.</value>
+        /// <value>{{{tipo_faturamento_response_id_convenio_value}}}</value>
         [DataMember(Name="idConvenio", EmitDefaultValue=false)]
         public long? IdConvenio { get; set; }
     

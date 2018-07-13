@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Response da auditoria dos par\u00E2metros do arquivo.
+    /// {{{arquivo_parametro_a_u_d_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ArquivoParametroAUDResponse :  IEquatable<ArquivoParametroAUDResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoParametroAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoParametroAUDResponse" />class.
         /// </summary>
-        /// <param name="Rev">Identificador da auditoria arquivo.</param>
-        /// <param name="RevType">Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo).</param>
-        /// <param name="Id">Identificador do par\u00E2metro.</param>
-        /// <param name="Parametro">Nome do par\u00E2metro.</param>
-        /// <param name="Conteudo">Conte\u00FAdo do par\u00E2metro.</param>
-        /// <param name="DataHoraInclusao">Data de inclus\u00E3o do par\u00E2metro.</param>
-        /// <param name="DataHoraAlteracao">Data de altera\u00E7\u00E3o do par\u00E2metro.</param>
+        /// <param name="Rev">{{{arquivo_parametro_a_u_d_response_rev_value}}}.</param>
+        /// <param name="RevType">{{{arquivo_parametro_a_u_d_response_rev_type_value}}}.</param>
+        /// <param name="Id">{{{arquivo_parametro_a_u_d_response_id_value}}}.</param>
+        /// <param name="Parametro">{{{arquivo_parametro_a_u_d_response_parametro_value}}}.</param>
+        /// <param name="Conteudo">{{{arquivo_parametro_a_u_d_response_conteudo_value}}}.</param>
+        /// <param name="DataHoraInclusao">{{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}.</param>
+        /// <param name="DataHoraAlteracao">{{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}.</param>
 
         public ArquivoParametroAUDResponse(long? Rev = null, int? RevType = null, string Id = null, string Parametro = null, string Conteudo = null, string DataHoraInclusao = null, string DataHoraAlteracao = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador da auditoria arquivo
+        /// {{{arquivo_parametro_a_u_d_response_rev_value}}}
         /// </summary>
-        /// <value>Identificador da auditoria arquivo</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_rev_value}}}</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
         /// <summary>
-        /// Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+        /// {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
         /// </summary>
-        /// <value>Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_rev_type_value}}}</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public int? RevType { get; set; }
     
         /// <summary>
-        /// Identificador do par\u00E2metro
+        /// {{{arquivo_parametro_a_u_d_response_id_value}}}
         /// </summary>
-        /// <value>Identificador do par\u00E2metro</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
     
         /// <summary>
-        /// Nome do par\u00E2metro
+        /// {{{arquivo_parametro_a_u_d_response_parametro_value}}}
         /// </summary>
-        /// <value>Nome do par\u00E2metro</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_parametro_value}}}</value>
         [DataMember(Name="parametro", EmitDefaultValue=false)]
         public string Parametro { get; set; }
     
         /// <summary>
-        /// Conte\u00FAdo do par\u00E2metro
+        /// {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
         /// </summary>
-        /// <value>Conte\u00FAdo do par\u00E2metro</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00E3o do par\u00E2metro
+        /// {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
         /// </summary>
-        /// <value>Data de inclus\u00E3o do par\u00E2metro</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data de altera\u00E7\u00E3o do par\u00E2metro
+        /// {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
         /// </summary>
-        /// <value>Data de altera\u00E7\u00E3o do par\u00E2metro</value>
+        /// <value>{{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}</value>
         [DataMember(Name="dataHoraAlteracao", EmitDefaultValue=false)]
         public string DataHoraAlteracao { get; set; }
     

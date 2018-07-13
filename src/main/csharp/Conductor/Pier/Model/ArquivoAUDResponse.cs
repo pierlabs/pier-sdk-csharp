@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Response da auditoria do arquivo.
+    /// {{{arquivo_a_u_d_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ArquivoAUDResponse :  IEquatable<ArquivoAUDResponse>
@@ -22,19 +22,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoAUDResponse" />class.
         /// </summary>
-        /// <param name="Rev">Identificador da auditoria arquivo.</param>
-        /// <param name="RevType">Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo).</param>
-        /// <param name="Id">Identificador do arquivo auditado.</param>
-        /// <param name="Nome">Nome do arquivo auditado.</param>
-        /// <param name="IdRespostaAcessoDigital">Identificador da resposta da Acesso Digital.</param>
-        /// <param name="DataHoraRespostaAcessoDigital">Data de resposta da Acesso Digital.</param>
-        /// <param name="IdRespostaNeurotech">Identificador da resposta da Neurotech.</param>
-        /// <param name="DataHoraRespostaNeurotech">Data de resposta da Neurotech.</param>
-        /// <param name="Uri">Uri de acesso.</param>
-        /// <param name="DataHoraInclusao">Data de inclus\u00E3o do arquivo auditado.</param>
-        /// <param name="DataHoraAlteracao">Data de altera\u00E7\u00E3o do arquivo auditado.</param>
-        /// <param name="Extensao">Extens\u00E3o do arquivo auditado.</param>
-        /// <param name="Parametros">Lista  de par\u00E2metros do arquivo auditado.</param>
+        /// <param name="Rev">{{{arquivo_a_u_d_response_rev_value}}}.</param>
+        /// <param name="RevType">{{{arquivo_a_u_d_response_rev_type_value}}}.</param>
+        /// <param name="Id">{{{arquivo_a_u_d_response_id_value}}}.</param>
+        /// <param name="Nome">{{{arquivo_a_u_d_response_nome_value}}}.</param>
+        /// <param name="IdRespostaAcessoDigital">{{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}.</param>
+        /// <param name="DataHoraRespostaAcessoDigital">{{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}.</param>
+        /// <param name="IdRespostaNeurotech">{{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}.</param>
+        /// <param name="DataHoraRespostaNeurotech">{{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}.</param>
+        /// <param name="Uri">{{{arquivo_a_u_d_response_uri_value}}}.</param>
+        /// <param name="DataHoraInclusao">{{{arquivo_a_u_d_response_data_hora_inclusao_value}}}.</param>
+        /// <param name="DataHoraAlteracao">{{{arquivo_a_u_d_response_data_hora_alteracao_value}}}.</param>
+        /// <param name="Extensao">{{{arquivo_a_u_d_response_extensao_value}}}.</param>
+        /// <param name="Parametros">{{{arquivo_a_u_d_response_parametros_value}}}.</param>
 
         public ArquivoAUDResponse(long? Rev = null, int? RevType = null, long? Id = null, string Nome = null, string IdRespostaAcessoDigital = null, string DataHoraRespostaAcessoDigital = null, string IdRespostaNeurotech = null, string DataHoraRespostaNeurotech = null, string Uri = null, string DataHoraInclusao = null, string DataHoraAlteracao = null, string Extensao = null, List<ArquivoParametroAUDResponse> Parametros = null)
         {
@@ -56,93 +56,93 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identificador da auditoria arquivo
+        /// {{{arquivo_a_u_d_response_rev_value}}}
         /// </summary>
-        /// <value>Identificador da auditoria arquivo</value>
+        /// <value>{{{arquivo_a_u_d_response_rev_value}}}</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
         /// <summary>
-        /// Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+        /// {{{arquivo_a_u_d_response_rev_type_value}}}
         /// </summary>
-        /// <value>Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)</value>
+        /// <value>{{{arquivo_a_u_d_response_rev_type_value}}}</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public int? RevType { get; set; }
     
         /// <summary>
-        /// Identificador do arquivo auditado
+        /// {{{arquivo_a_u_d_response_id_value}}}
         /// </summary>
-        /// <value>Identificador do arquivo auditado</value>
+        /// <value>{{{arquivo_a_u_d_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do arquivo auditado
+        /// {{{arquivo_a_u_d_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do arquivo auditado</value>
+        /// <value>{{{arquivo_a_u_d_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Identificador da resposta da Acesso Digital
+        /// {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}
         /// </summary>
-        /// <value>Identificador da resposta da Acesso Digital</value>
+        /// <value>{{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}</value>
         [DataMember(Name="idRespostaAcessoDigital", EmitDefaultValue=false)]
         public string IdRespostaAcessoDigital { get; set; }
     
         /// <summary>
-        /// Data de resposta da Acesso Digital
+        /// {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}
         /// </summary>
-        /// <value>Data de resposta da Acesso Digital</value>
+        /// <value>{{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}</value>
         [DataMember(Name="dataHoraRespostaAcessoDigital", EmitDefaultValue=false)]
         public string DataHoraRespostaAcessoDigital { get; set; }
     
         /// <summary>
-        /// Identificador da resposta da Neurotech
+        /// {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}
         /// </summary>
-        /// <value>Identificador da resposta da Neurotech</value>
+        /// <value>{{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}</value>
         [DataMember(Name="idRespostaNeurotech", EmitDefaultValue=false)]
         public string IdRespostaNeurotech { get; set; }
     
         /// <summary>
-        /// Data de resposta da Neurotech
+        /// {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}
         /// </summary>
-        /// <value>Data de resposta da Neurotech</value>
+        /// <value>{{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}</value>
         [DataMember(Name="dataHoraRespostaNeurotech", EmitDefaultValue=false)]
         public string DataHoraRespostaNeurotech { get; set; }
     
         /// <summary>
-        /// Uri de acesso
+        /// {{{arquivo_a_u_d_response_uri_value}}}
         /// </summary>
-        /// <value>Uri de acesso</value>
+        /// <value>{{{arquivo_a_u_d_response_uri_value}}}</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00E3o do arquivo auditado
+        /// {{{arquivo_a_u_d_response_data_hora_inclusao_value}}}
         /// </summary>
-        /// <value>Data de inclus\u00E3o do arquivo auditado</value>
+        /// <value>{{{arquivo_a_u_d_response_data_hora_inclusao_value}}}</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data de altera\u00E7\u00E3o do arquivo auditado
+        /// {{{arquivo_a_u_d_response_data_hora_alteracao_value}}}
         /// </summary>
-        /// <value>Data de altera\u00E7\u00E3o do arquivo auditado</value>
+        /// <value>{{{arquivo_a_u_d_response_data_hora_alteracao_value}}}</value>
         [DataMember(Name="dataHoraAlteracao", EmitDefaultValue=false)]
         public string DataHoraAlteracao { get; set; }
     
         /// <summary>
-        /// Extens\u00E3o do arquivo auditado
+        /// {{{arquivo_a_u_d_response_extensao_value}}}
         /// </summary>
-        /// <value>Extens\u00E3o do arquivo auditado</value>
+        /// <value>{{{arquivo_a_u_d_response_extensao_value}}}</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// Lista  de par\u00E2metros do arquivo auditado
+        /// {{{arquivo_a_u_d_response_parametros_value}}}
         /// </summary>
-        /// <value>Lista  de par\u00E2metros do arquivo auditado</value>
+        /// <value>{{{arquivo_a_u_d_response_parametros_value}}}</value>
         [DataMember(Name="parametros", EmitDefaultValue=false)]
         public List<ArquivoParametroAUDResponse> Parametros { get; set; }
     

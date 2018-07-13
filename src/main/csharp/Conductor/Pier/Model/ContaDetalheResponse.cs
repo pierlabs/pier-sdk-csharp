@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto conta
+    /// {{{conta_detalhe_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ContaDetalheResponse :  IEquatable<ContaDetalheResponse>
@@ -22,32 +22,32 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o de conta (id)..</param>
-        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)..</param>
-        /// <param name="Nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;..</param>
-        /// <param name="IdProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)..</param>
-        /// <param name="IdOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta..</param>
-        /// <param name="NomeOrigemComercial">Nome da origem comercial.</param>
-        /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id)..</param>
-        /// <param name="NomeFantasiaBasica">Nome da Fantasia Basica.</param>
-        /// <param name="IdStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta..</param>
-        /// <param name="StatusConta">Descri\u00E7\u00E3o do status da conta.</param>
-        /// <param name="DiaVencimento">Apresenta o dia de vencimento..</param>
-        /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra..</param>
-        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela..</param>
-        /// <param name="ValorRenda">Valor da renda comprovada..</param>
-        /// <param name="DataCadastro">Apresenta a data em que o cart\u00E3o foi gerado..</param>
-        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento..</param>
-        /// <param name="DataHoraUltimaCompra">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento..</param>
-        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia..</param>
-        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente..</param>
-        /// <param name="FormaEnvioFatura">Forma de envio da fatura..</param>
-        /// <param name="Titular">Apresenta se a pessoa \u00E9 titular da conta..</param>
-        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui..</param>
-        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional..</param>
-        /// <param name="SaldoDisponivelGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais..</param>
-        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento..</param>
-        /// <param name="DiasAtraso">Apresenta a quantidade de dias que a conta esta em atraso.</param>
+        /// <param name="Id">{{{conta_detalhe_response_id_value}}}.</param>
+        /// <param name="IdPessoa">{{{conta_detalhe_response_id_pessoa_value}}}.</param>
+        /// <param name="Nome">{{{conta_detalhe_response_nome_value}}}.</param>
+        /// <param name="IdProduto">{{{conta_detalhe_response_id_produto_value}}}.</param>
+        /// <param name="IdOrigemComercial">{{{conta_detalhe_response_id_origem_comercial_value}}}.</param>
+        /// <param name="NomeOrigemComercial">{{{conta_detalhe_response_nome_origem_comercial_value}}}.</param>
+        /// <param name="IdFantasiaBasica">{{{conta_detalhe_response_id_fantasia_basica_value}}}.</param>
+        /// <param name="NomeFantasiaBasica">{{{conta_detalhe_response_nome_fantasia_basica_value}}}.</param>
+        /// <param name="IdStatusConta">{{{conta_detalhe_response_id_status_conta_value}}}.</param>
+        /// <param name="StatusConta">{{{conta_detalhe_response_status_conta_value}}}.</param>
+        /// <param name="DiaVencimento">{{{conta_detalhe_response_dia_vencimento_value}}}.</param>
+        /// <param name="MelhorDiaCompra">{{{conta_detalhe_response_melhor_dia_compra_value}}}.</param>
+        /// <param name="DataStatusConta">{{{conta_detalhe_response_data_status_conta_value}}}.</param>
+        /// <param name="ValorRenda">{{{conta_detalhe_response_valor_renda_value}}}.</param>
+        /// <param name="DataCadastro">{{{conta_detalhe_response_data_cadastro_value}}}.</param>
+        /// <param name="DataUltimaAlteracaoVencimento">{{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}.</param>
+        /// <param name="DataHoraUltimaCompra">{{{conta_detalhe_response_data_hora_ultima_compra_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{conta_detalhe_response_numero_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{conta_detalhe_response_numero_conta_corrente_value}}}.</param>
+        /// <param name="FormaEnvioFatura">{{{conta_detalhe_response_forma_envio_fatura_value}}}.</param>
+        /// <param name="Titular">{{{conta_detalhe_response_titular_value}}}.</param>
+        /// <param name="LimiteGlobal">{{{conta_detalhe_response_limite_global_value}}}.</param>
+        /// <param name="LimiteSaqueGlobal">{{{conta_detalhe_response_limite_saque_global_value}}}.</param>
+        /// <param name="SaldoDisponivelGlobal">{{{conta_detalhe_response_saldo_disponivel_global_value}}}.</param>
+        /// <param name="SaldoDisponivelSaque">{{{conta_detalhe_response_saldo_disponivel_saque_value}}}.</param>
+        /// <param name="DiasAtraso">{{{conta_detalhe_response_dias_atraso_value}}}.</param>
 
         public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null)
         {
@@ -82,184 +82,184 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+        /// {{{conta_detalhe_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o de conta (id).</value>
+        /// <value>{{{conta_detalhe_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+        /// {{{conta_detalhe_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).</value>
+        /// <value>{{{conta_detalhe_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.
+        /// {{{conta_detalhe_response_nome_value}}}
         /// </summary>
-        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.</value>
+        /// <value>{{{conta_detalhe_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+        /// {{{conta_detalhe_response_id_produto_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).</value>
+        /// <value>{{{conta_detalhe_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+        /// {{{conta_detalhe_response_id_origem_comercial_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.</value>
+        /// <value>{{{conta_detalhe_response_id_origem_comercial_value}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Nome da origem comercial
+        /// {{{conta_detalhe_response_nome_origem_comercial_value}}}
         /// </summary>
-        /// <value>Nome da origem comercial</value>
+        /// <value>{{{conta_detalhe_response_nome_origem_comercial_value}}}</value>
         [DataMember(Name="nomeOrigemComercial", EmitDefaultValue=false)]
         public string NomeOrigemComercial { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).
+        /// {{{conta_detalhe_response_id_fantasia_basica_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).</value>
+        /// <value>{{{conta_detalhe_response_id_fantasia_basica_value}}}</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     
         /// <summary>
-        /// Nome da Fantasia Basica
+        /// {{{conta_detalhe_response_nome_fantasia_basica_value}}}
         /// </summary>
-        /// <value>Nome da Fantasia Basica</value>
+        /// <value>{{{conta_detalhe_response_nome_fantasia_basica_value}}}</value>
         [DataMember(Name="nomeFantasiaBasica", EmitDefaultValue=false)]
         public string NomeFantasiaBasica { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+        /// {{{conta_detalhe_response_id_status_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.</value>
+        /// <value>{{{conta_detalhe_response_id_status_conta_value}}}</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do status da conta
+        /// {{{conta_detalhe_response_status_conta_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do status da conta</value>
+        /// <value>{{{conta_detalhe_response_status_conta_value}}}</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
         /// <summary>
-        /// Apresenta o dia de vencimento.
+        /// {{{conta_detalhe_response_dia_vencimento_value}}}
         /// </summary>
-        /// <value>Apresenta o dia de vencimento.</value>
+        /// <value>{{{conta_detalhe_response_dia_vencimento_value}}}</value>
         [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
         public int? DiaVencimento { get; set; }
     
         /// <summary>
-        /// Apresenta o melhor dia de compra.
+        /// {{{conta_detalhe_response_melhor_dia_compra_value}}}
         /// </summary>
-        /// <value>Apresenta o melhor dia de compra.</value>
+        /// <value>{{{conta_detalhe_response_melhor_dia_compra_value}}}</value>
         [DataMember(Name="melhorDiaCompra", EmitDefaultValue=false)]
         public int? MelhorDiaCompra { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+        /// {{{conta_detalhe_response_data_status_conta_value}}}
         /// </summary>
-        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.</value>
+        /// <value>{{{conta_detalhe_response_data_status_conta_value}}}</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
         public string DataStatusConta { get; set; }
     
         /// <summary>
-        /// Valor da renda comprovada.
+        /// {{{conta_detalhe_response_valor_renda_value}}}
         /// </summary>
-        /// <value>Valor da renda comprovada.</value>
+        /// <value>{{{conta_detalhe_response_valor_renda_value}}}</value>
         [DataMember(Name="valorRenda", EmitDefaultValue=false)]
         public double? ValorRenda { get; set; }
     
         /// <summary>
-        /// Apresenta a data em que o cart\u00E3o foi gerado.
+        /// {{{conta_detalhe_response_data_cadastro_value}}}
         /// </summary>
-        /// <value>Apresenta a data em que o cart\u00E3o foi gerado.</value>
+        /// <value>{{{conta_detalhe_response_data_cadastro_value}}}</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+        /// {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
         /// </summary>
-        /// <value>Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.</value>
+        /// <value>{{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
         public string DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
-        /// Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+        /// {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
         /// </summary>
-        /// <value>Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.</value>
+        /// <value>{{{conta_detalhe_response_data_hora_ultima_compra_value}}}</value>
         [DataMember(Name="dataHoraUltimaCompra", EmitDefaultValue=false)]
         public string DataHoraUltimaCompra { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da ag\u00EAncia.
+        /// {{{conta_detalhe_response_numero_agencia_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da ag\u00EAncia.</value>
+        /// <value>{{{conta_detalhe_response_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da conta corrente.
+        /// {{{conta_detalhe_response_numero_conta_corrente_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da conta corrente.</value>
+        /// <value>{{{conta_detalhe_response_numero_conta_corrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// Forma de envio da fatura.
+        /// {{{conta_detalhe_response_forma_envio_fatura_value}}}
         /// </summary>
-        /// <value>Forma de envio da fatura.</value>
+        /// <value>{{{conta_detalhe_response_forma_envio_fatura_value}}}</value>
         [DataMember(Name="formaEnvioFatura", EmitDefaultValue=false)]
         public string FormaEnvioFatura { get; set; }
     
         /// <summary>
-        /// Apresenta se a pessoa \u00E9 titular da conta.
+        /// {{{conta_detalhe_response_titular_value}}}
         /// </summary>
-        /// <value>Apresenta se a pessoa \u00E9 titular da conta.</value>
+        /// <value>{{{conta_detalhe_response_titular_value}}}</value>
         [DataMember(Name="titular", EmitDefaultValue=false)]
         public bool? Titular { get; set; }
     
         /// <summary>
-        /// Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
+        /// {{{conta_detalhe_response_limite_global_value}}}
         /// </summary>
-        /// <value>Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.</value>
+        /// <value>{{{conta_detalhe_response_limite_global_value}}}</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
+        /// {{{conta_detalhe_response_limite_saque_global_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.</value>
+        /// <value>{{{conta_detalhe_response_limite_saque_global_value}}}</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
+        /// {{{conta_detalhe_response_saldo_disponivel_global_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.</value>
+        /// <value>{{{conta_detalhe_response_saldo_disponivel_global_value}}}</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+        /// {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.</value>
+        /// <value>{{{conta_detalhe_response_saldo_disponivel_saque_value}}}</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// Apresenta a quantidade de dias que a conta esta em atraso
+        /// {{{conta_detalhe_response_dias_atraso_value}}}
         /// </summary>
-        /// <value>Apresenta a quantidade de dias que a conta esta em atraso</value>
+        /// <value>{{{conta_detalhe_response_dias_atraso_value}}}</value>
         [DataMember(Name="diasAtraso", EmitDefaultValue=false)]
         public long? DiasAtraso { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto SMS
+    /// {{{notificacao_s_m_s_response_description}}}
     /// </summary>
     [DataContract]
     public partial class NotificacaoSMSResponse :  IEquatable<NotificacaoSMSResponse>
     { 
     
         /// <summary>
-        /// TipoEvento de notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>TipoEvento de notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_tipo_evento_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status de envio da notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_status_value}}}
         /// </summary>
-        /// <value>Status de envio da notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -67,16 +67,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// TipoEvento de notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>TipoEvento de notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_tipo_evento_value}}}</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// Status de envio da notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_status_value}}}
         /// </summary>
-        /// <value>Status de envio da notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -84,23 +84,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoSMSResponse" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoSMSResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo Identificador..</param>
-        /// <param name="Nsu">N\u00FAmero sequencial \u00FAnico..</param>
-        /// <param name="IdEmissor">C\u00F3digo de identifica\u00E7\u00E3o do emissor (id)..</param>
-        /// <param name="TipoEvento">TipoEvento de notifica\u00E7\u00E3o.</param>
-        /// <param name="Status">Status de envio da notifica\u00E7\u00E3o (required).</param>
-        /// <param name="DescricaoStatus">Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o (required).</param>
-        /// <param name="IdPessoa">C\u00F3digo identificado da pessoa (required).</param>
-        /// <param name="IdConta">C\u00F3digo identificador da conta (required).</param>
-        /// <param name="Celular">Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999 (required).</param>
-        /// <param name="Operadora">Apresenta a operadora do celular a ser eviado o SMS (required).</param>
-        /// <param name="Conteudo">Apresenta o texto da notifica\u00E7\u00E3o a ser enviado (required).</param>
-        /// <param name="Resposta">Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada (required).</param>
-        /// <param name="DataAgendamento">Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o (required).</param>
-        /// <param name="QuantidadeTentativasEnvio">Quantidade de tentativas e envio da notifica\u00E7\u00E3o (required).</param>
-        /// <param name="DataInclusao">Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado (required).</param>
-        /// <param name="DataAlteracaoStatus">Apresenta a data e em que o Stattjus do registro foi modificado (required).</param>
-        /// <param name="Protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es.</param>
+        /// <param name="Id">{{{notificacao_s_m_s_response_id_value}}}.</param>
+        /// <param name="Nsu">{{{notificacao_s_m_s_response_nsu_value}}}.</param>
+        /// <param name="IdEmissor">{{{notificacao_s_m_s_response_id_emissor_value}}}.</param>
+        /// <param name="TipoEvento">{{{notificacao_s_m_s_response_tipo_evento_value}}}.</param>
+        /// <param name="Status">{{{notificacao_s_m_s_response_status_value}}} (required).</param>
+        /// <param name="DescricaoStatus">{{{notificacao_s_m_s_response_descricao_status_value}}} (required).</param>
+        /// <param name="IdPessoa">{{{notificacao_s_m_s_response_id_pessoa_value}}} (required).</param>
+        /// <param name="IdConta">{{{notificacao_s_m_s_response_id_conta_value}}} (required).</param>
+        /// <param name="Celular">{{{notificacao_s_m_s_response_celular_value}}} (required).</param>
+        /// <param name="Operadora">{{{notificacao_s_m_s_response_operadora_value}}} (required).</param>
+        /// <param name="Conteudo">{{{notificacao_s_m_s_response_conteudo_value}}} (required).</param>
+        /// <param name="Resposta">{{{notificacao_s_m_s_response_resposta_value}}} (required).</param>
+        /// <param name="DataAgendamento">{{{notificacao_s_m_s_response_data_agendamento_value}}} (required).</param>
+        /// <param name="QuantidadeTentativasEnvio">{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}} (required).</param>
+        /// <param name="DataInclusao">{{{notificacao_s_m_s_response_data_inclusao_value}}} (required).</param>
+        /// <param name="DataAlteracaoStatus">{{{notificacao_s_m_s_response_data_alteracao_status_value}}} (required).</param>
+        /// <param name="Protocolo">{{{notificacao_s_m_s_response_protocolo_value}}}.</param>
 
         public NotificacaoSMSResponse(long? Id = null, long? Nsu = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, string DataAgendamento = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null, string DataAlteracaoStatus = null, string Protocolo = null)
         {
@@ -222,107 +222,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo Identificador.
+        /// {{{notificacao_s_m_s_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo Identificador.</value>
+        /// <value>{{{notificacao_s_m_s_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// N\u00FAmero sequencial \u00FAnico.
+        /// {{{notificacao_s_m_s_response_nsu_value}}}
         /// </summary>
-        /// <value>N\u00FAmero sequencial \u00FAnico.</value>
+        /// <value>{{{notificacao_s_m_s_response_nsu_value}}}</value>
         [DataMember(Name="nsu", EmitDefaultValue=false)]
         public long? Nsu { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
+        /// {{{notificacao_s_m_s_response_id_emissor_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).</value>
+        /// <value>{{{notificacao_s_m_s_response_id_emissor_value}}}</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_descricao_status_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_descricao_status_value}}}</value>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificado da pessoa
+        /// {{{notificacao_s_m_s_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificado da pessoa</value>
+        /// <value>{{{notificacao_s_m_s_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador da conta
+        /// {{{notificacao_s_m_s_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da conta</value>
+        /// <value>{{{notificacao_s_m_s_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+        /// {{{notificacao_s_m_s_response_celular_value}}}
         /// </summary>
-        /// <value>Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999</value>
+        /// <value>{{{notificacao_s_m_s_response_celular_value}}}</value>
         [DataMember(Name="celular", EmitDefaultValue=false)]
         public string Celular { get; set; }
     
         /// <summary>
-        /// Apresenta a operadora do celular a ser eviado o SMS
+        /// {{{notificacao_s_m_s_response_operadora_value}}}
         /// </summary>
-        /// <value>Apresenta a operadora do celular a ser eviado o SMS</value>
+        /// <value>{{{notificacao_s_m_s_response_operadora_value}}}</value>
         [DataMember(Name="operadora", EmitDefaultValue=false)]
         public string Operadora { get; set; }
     
         /// <summary>
-        /// Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
+        /// {{{notificacao_s_m_s_response_conteudo_value}}}
         /// </summary>
-        /// <value>Apresenta o texto da notifica\u00E7\u00E3o a ser enviado</value>
+        /// <value>{{{notificacao_s_m_s_response_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
+        /// {{{notificacao_s_m_s_response_resposta_value}}}
         /// </summary>
-        /// <value>Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada</value>
+        /// <value>{{{notificacao_s_m_s_response_resposta_value}}}</value>
         [DataMember(Name="resposta", EmitDefaultValue=false)]
         public string Resposta { get; set; }
     
         /// <summary>
-        /// Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_data_agendamento_value}}}
         /// </summary>
-        /// <value>Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_data_agendamento_value}}}</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
         public string DataAgendamento { get; set; }
     
         /// <summary>
-        /// Quantidade de tentativas e envio da notifica\u00E7\u00E3o
+        /// {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
         /// </summary>
-        /// <value>Quantidade de tentativas e envio da notifica\u00E7\u00E3o</value>
+        /// <value>{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}</value>
         [DataMember(Name="quantidadeTentativasEnvio", EmitDefaultValue=false)]
         public int? QuantidadeTentativasEnvio { get; set; }
     
         /// <summary>
-        /// Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+        /// {{{notificacao_s_m_s_response_data_inclusao_value}}}
         /// </summary>
-        /// <value>Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado</value>
+        /// <value>{{{notificacao_s_m_s_response_data_inclusao_value}}}</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Apresenta a data e em que o Stattjus do registro foi modificado
+        /// {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
         /// </summary>
-        /// <value>Apresenta a data e em que o Stattjus do registro foi modificado</value>
+        /// <value>{{{notificacao_s_m_s_response_data_alteracao_status_value}}}</value>
         [DataMember(Name="dataAlteracaoStatus", EmitDefaultValue=false)]
         public string DataAlteracaoStatus { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+        /// {{{notificacao_s_m_s_response_protocolo_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es</value>
+        /// <value>{{{notificacao_s_m_s_response_protocolo_value}}}</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     
