@@ -220,6 +220,28 @@ namespace Conductor.Pier.Api
         ApiResponse<ContaResponse> BloquearUsingPOST1WithHttpInfo (long? id, long? idStatus, string authorization = null);
         
         /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param>
+        /// <returns>AdesaoPagamentoSabadoResponse</returns>
+        AdesaoPagamentoSabadoResponse CadastrarUsingPOST (long? id);
+  
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param>
+        /// <returns>ApiResponse of AdesaoPagamentoSabadoResponse</returns>
+        ApiResponse<AdesaoPagamentoSabadoResponse> CadastrarUsingPOSTWithHttpInfo (long? id);
+        
+        /// <summary>
         /// {{{conta_resource_cancelar}}}
         /// </summary>
         /// <remarks>
@@ -358,6 +380,30 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTaxasRefinanciamentoResponse> ConsultarTaxasTarifasUsingGETWithHttpInfo (long? id, string authorization = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param>
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param>
+        /// <returns>AdesaoPagamentoSabadoResponse</returns>
+        AdesaoPagamentoSabadoResponse ConsultarUsingGET1 (long? id, string dataVencimento);
+  
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param>
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param>
+        /// <returns>ApiResponse of AdesaoPagamentoSabadoResponse</returns>
+        ApiResponse<AdesaoPagamentoSabadoResponse> ConsultarUsingGET1WithHttpInfo (long? id, string dataVencimento);
+        
+        /// <summary>
         /// {{{conta_resource_consultar}}}
         /// </summary>
         /// <remarks>
@@ -367,7 +413,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ContaDetalheResponse</returns>
-        ContaDetalheResponse ConsultarUsingGET13 (long? id, string authorization = null);
+        ContaDetalheResponse ConsultarUsingGET14 (long? id, string authorization = null);
   
         /// <summary>
         /// {{{conta_resource_consultar}}}
@@ -379,7 +425,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        ApiResponse<ContaDetalheResponse> ConsultarUsingGET13WithHttpInfo (long? id, string authorization = null);
+        ApiResponse<ContaDetalheResponse> ConsultarUsingGET14WithHttpInfo (long? id, string authorization = null);
         
         /// <summary>
         /// {{{transferencia_resource_consultar}}}
@@ -391,7 +437,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>TransferenciaDetalheResponse</returns>
-        TransferenciaDetalheResponse ConsultarUsingGET48 (long? id, long? idTransferencia);
+        TransferenciaDetalheResponse ConsultarUsingGET49 (long? id, long? idTransferencia);
   
         /// <summary>
         /// {{{transferencia_resource_consultar}}}
@@ -403,7 +449,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET48WithHttpInfo (long? id, long? idTransferencia);
+        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET49WithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// {{{conta_resource_desativar_envio_fatura_email}}}
@@ -698,8 +744,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param>
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param>
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param>
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param>
         /// <returns>PageTransacoesCorrentesResponse</returns>
-        PageTransacoesCorrentesResponse ListarProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null);
+        PageTransacoesCorrentesResponse ListarProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
   
         /// <summary>
         /// {{{transacoes_correntes_resource_listar_processadas}}}
@@ -716,8 +763,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param>
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param>
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param>
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param>
         /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
-        ApiResponse<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null);
+        ApiResponse<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
         
         /// <summary>
         /// {{{conta_resource_listar}}}
@@ -1174,6 +1222,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearUsingPOST1AsyncWithHttpInfo (long? id, long? idStatus, string authorization = null);
         
         /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param>
+        /// <returns>Task of AdesaoPagamentoSabadoResponse</returns>
+        System.Threading.Tasks.Task<AdesaoPagamentoSabadoResponse> CadastrarUsingPOSTAsync (long? id);
+
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param>
+        /// <returns>Task of ApiResponse (AdesaoPagamentoSabadoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdesaoPagamentoSabadoResponse>> CadastrarUsingPOSTAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
         /// {{{conta_resource_cancelar}}}
         /// </summary>
         /// <remarks>
@@ -1312,6 +1382,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ConsultarTaxasTarifasUsingGETAsyncWithHttpInfo (long? id, string authorization = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param>
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param>
+        /// <returns>Task of AdesaoPagamentoSabadoResponse</returns>
+        System.Threading.Tasks.Task<AdesaoPagamentoSabadoResponse> ConsultarUsingGET1Async (long? id, string dataVencimento);
+
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param>
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param>
+        /// <returns>Task of ApiResponse (AdesaoPagamentoSabadoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdesaoPagamentoSabadoResponse>> ConsultarUsingGET1AsyncWithHttpInfo (long? id, string dataVencimento);
+        
+        /// <summary>
         /// {{{conta_resource_consultar}}}
         /// </summary>
         /// <remarks>
@@ -1321,7 +1415,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ContaDetalheResponse</returns>
-        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET13Async (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET14Async (long? id, string authorization = null);
 
         /// <summary>
         /// {{{conta_resource_consultar}}}
@@ -1333,7 +1427,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id, string authorization = null);
         
         /// <summary>
         /// {{{transferencia_resource_consultar}}}
@@ -1345,7 +1439,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET48Async (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET49Async (long? id, long? idTransferencia);
 
         /// <summary>
         /// {{{transferencia_resource_consultar}}}
@@ -1357,7 +1451,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET49AsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// {{{conta_resource_desativar_envio_fatura_email}}}
@@ -1652,8 +1746,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param>
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param>
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param>
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param>
         /// <returns>Task of PageTransacoesCorrentesResponse</returns>
-        System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null);
+        System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
 
         /// <summary>
         /// {{{transacoes_correntes_resource_listar_processadas}}}
@@ -1670,8 +1765,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param>
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param>
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param>
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
         
         /// <summary>
         /// {{{conta_resource_listar}}}
@@ -3324,6 +3420,164 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}} {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param> 
+        /// <returns>AdesaoPagamentoSabadoResponse</returns>
+        public AdesaoPagamentoSabadoResponse CadastrarUsingPOST (long? id)
+        {
+             ApiResponse<AdesaoPagamentoSabadoResponse> localVarResponse = CadastrarUsingPOSTWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}} {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param> 
+        /// <returns>ApiResponse of AdesaoPagamentoSabadoResponse</returns>
+        public ApiResponse< AdesaoPagamentoSabadoResponse > CadastrarUsingPOSTWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->CadastrarUsingPOST");
+            
+    
+            var localVarPath = "/api/adesoes-pagamentos-sabados";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AdesaoPagamentoSabadoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdesaoPagamentoSabadoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPagamentoSabadoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}} {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param>
+        /// <returns>Task of AdesaoPagamentoSabadoResponse</returns>
+        public async System.Threading.Tasks.Task<AdesaoPagamentoSabadoResponse> CadastrarUsingPOSTAsync (long? id)
+        {
+             ApiResponse<AdesaoPagamentoSabadoResponse> localVarResponse = await CadastrarUsingPOSTAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_cadastrar}}} {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}</param>
+        /// <returns>Task of ApiResponse (AdesaoPagamentoSabadoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AdesaoPagamentoSabadoResponse>> CadastrarUsingPOSTAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarUsingPOST");
+            
+    
+            var localVarPath = "/api/adesoes-pagamentos-sabados";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdesaoPagamentoSabadoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdesaoPagamentoSabadoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPagamentoSabadoResponse)));
+            
+        }
+        
+        /// <summary>
         /// {{{conta_resource_cancelar}}} {{{conta_resource_cancelar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4204,15 +4458,185 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}} {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param> 
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param> 
+        /// <returns>AdesaoPagamentoSabadoResponse</returns>
+        public AdesaoPagamentoSabadoResponse ConsultarUsingGET1 (long? id, string dataVencimento)
+        {
+             ApiResponse<AdesaoPagamentoSabadoResponse> localVarResponse = ConsultarUsingGET1WithHttpInfo(id, dataVencimento);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}} {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param> 
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param> 
+        /// <returns>ApiResponse of AdesaoPagamentoSabadoResponse</returns>
+        public ApiResponse< AdesaoPagamentoSabadoResponse > ConsultarUsingGET1WithHttpInfo (long? id, string dataVencimento)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET1");
+            
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null)
+                throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling GlobaltagcontaApi->ConsultarUsingGET1");
+            
+    
+            var localVarPath = "/api/adesoes-pagamentos-sabados";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AdesaoPagamentoSabadoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdesaoPagamentoSabadoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPagamentoSabadoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}} {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param>
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param>
+        /// <returns>Task of AdesaoPagamentoSabadoResponse</returns>
+        public async System.Threading.Tasks.Task<AdesaoPagamentoSabadoResponse> ConsultarUsingGET1Async (long? id, string dataVencimento)
+        {
+             ApiResponse<AdesaoPagamentoSabadoResponse> localVarResponse = await ConsultarUsingGET1AsyncWithHttpInfo(id, dataVencimento);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{aderir_pagamento_sabado_recurso_consultar}}} {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{aderir_pagamento_sabado_recurso_consultar_param_id}}}</param>
+        /// <param name="dataVencimento">{{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}</param>
+        /// <returns>Task of ApiResponse (AdesaoPagamentoSabadoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AdesaoPagamentoSabadoResponse>> ConsultarUsingGET1AsyncWithHttpInfo (long? id, string dataVencimento)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET1");
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling ConsultarUsingGET1");
+            
+    
+            var localVarPath = "/api/adesoes-pagamentos-sabados";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdesaoPagamentoSabadoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdesaoPagamentoSabadoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPagamentoSabadoResponse)));
+            
+        }
+        
+        /// <summary>
         /// {{{conta_resource_consultar}}} {{{conta_resource_consultar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param> 
         /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ContaDetalheResponse</returns>
-        public ContaDetalheResponse ConsultarUsingGET13 (long? id, string authorization = null)
+        public ContaDetalheResponse ConsultarUsingGET14 (long? id, string authorization = null)
         {
-             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarUsingGET13WithHttpInfo(id, authorization);
+             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(id, authorization);
              return localVarResponse.Data;
         }
 
@@ -4223,12 +4647,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param> 
         /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        public ApiResponse< ContaDetalheResponse > ConsultarUsingGET13WithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< ContaDetalheResponse > ConsultarUsingGET14WithHttpInfo (long? id, string authorization = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET13");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET14");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -4275,9 +4699,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4293,9 +4717,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ContaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET13Async (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarUsingGET14Async (long? id, string authorization = null)
         {
-             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarUsingGET13AsyncWithHttpInfo(id, authorization);
+             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(id, authorization);
              return localVarResponse.Data;
 
         }
@@ -4307,10 +4731,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id, string authorization = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET13");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET14");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -4357,9 +4781,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4374,9 +4798,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param> 
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param> 
         /// <returns>TransferenciaDetalheResponse</returns>
-        public TransferenciaDetalheResponse ConsultarUsingGET48 (long? id, long? idTransferencia)
+        public TransferenciaDetalheResponse ConsultarUsingGET49 (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET48WithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET49WithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
         }
 
@@ -4387,16 +4811,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param> 
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param> 
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET48WithHttpInfo (long? id, long? idTransferencia)
+        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET49WithHttpInfo (long? id, long? idTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET48");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET49");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagcontaApi->ConsultarUsingGET48");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagcontaApi->ConsultarUsingGET49");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -4443,9 +4867,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4461,9 +4885,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET48Async (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET49Async (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET48AsyncWithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET49AsyncWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
 
         }
@@ -4475,12 +4899,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET49AsyncWithHttpInfo (long? id, long? idTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET48");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET49");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET48");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET49");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -4527,9 +4951,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6345,10 +6769,11 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param> 
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param> 
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param> 
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param> 
         /// <returns>PageTransacoesCorrentesResponse</returns>
-        public PageTransacoesCorrentesResponse ListarProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null)
+        public PageTransacoesCorrentesResponse ListarProcessadasUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
         {
-             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = ListarProcessadasUsingGETWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao);
+             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = ListarProcessadasUsingGETWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, recuperaEncargos);
              return localVarResponse.Data;
         }
 
@@ -6364,8 +6789,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param> 
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param> 
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param> 
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param> 
         /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
-        public ApiResponse< PageTransacoesCorrentesResponse > ListarProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null)
+        public ApiResponse< PageTransacoesCorrentesResponse > ListarProcessadasUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
         {
             
             // verify the required parameter 'id' is set
@@ -6408,6 +6834,7 @@ namespace Conductor.Pier.Api
             if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
             if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
             if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
+            if (recuperaEncargos != null) localVarQueryParams.Add("recuperaEncargos", Configuration.ApiClient.ParameterToString(recuperaEncargos)); // query parameter
             
             
             
@@ -6446,10 +6873,11 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param>
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param>
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param>
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param>
         /// <returns>Task of PageTransacoesCorrentesResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null)
+        public async System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
         {
-             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = await ListarProcessadasUsingGETAsyncWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao);
+             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = await ListarProcessadasUsingGETAsyncWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, recuperaEncargos);
              return localVarResponse.Data;
 
         }
@@ -6466,8 +6894,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">{{{transacoes_processadas_request_data_inicio_value}}} (optional)</param>
         /// <param name="dataFim">{{{transacoes_processadas_request_data_fim_value}}} (optional)</param>
         /// <param name="idTipoTransacao">{{{transacoes_processadas_request_tipo_transacao}}} (optional)</param>
+        /// <param name="recuperaEncargos">{{{transacoes_processadas_request_recupera_encargos}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarProcessadasUsingGET");
@@ -6508,6 +6937,7 @@ namespace Conductor.Pier.Api
             if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
             if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
             if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
+            if (recuperaEncargos != null) localVarQueryParams.Add("recuperaEncargos", Configuration.ApiClient.ParameterToString(recuperaEncargos)); // query parameter
             
             
             

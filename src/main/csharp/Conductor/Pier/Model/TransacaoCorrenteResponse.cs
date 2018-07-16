@@ -40,8 +40,9 @@ namespace Conductor.Pier.Model
         /// <param name="TipoEstabelecimento">{{{transacao_corrente_response_tipo_estabelecimento_value}}}.</param>
         /// <param name="IdGrupoMCC">{{{transacao_corrente_response_id_grupo_m_c_c_value}}}.</param>
         /// <param name="FlagSolicitouContestacao">{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}.</param>
+        /// <param name="TipoTransacao">{{{transacao_corrente_response_tipo_transacao_value}}}.</param>
 
-        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null)
+        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null, int? TipoTransacao = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
             this.IdConta = IdConta;
@@ -61,6 +62,7 @@ namespace Conductor.Pier.Model
             this.TipoEstabelecimento = TipoEstabelecimento;
             this.IdGrupoMCC = IdGrupoMCC;
             this.FlagSolicitouContestacao = FlagSolicitouContestacao;
+            this.TipoTransacao = TipoTransacao;
             
         }
         
@@ -191,6 +193,13 @@ namespace Conductor.Pier.Model
         public int? FlagSolicitouContestacao { get; set; }
     
         /// <summary>
+        /// {{{transacao_corrente_response_tipo_transacao_value}}}
+        /// </summary>
+        /// <value>{{{transacao_corrente_response_tipo_transacao_value}}}</value>
+        [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
+        public int? TipoTransacao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -216,6 +225,7 @@ namespace Conductor.Pier.Model
             sb.Append("  TipoEstabelecimento: ").Append(TipoEstabelecimento).Append("\n");
             sb.Append("  IdGrupoMCC: ").Append(IdGrupoMCC).Append("\n");
             sb.Append("  FlagSolicitouContestacao: ").Append(FlagSolicitouContestacao).Append("\n");
+            sb.Append("  TipoTransacao: ").Append(TipoTransacao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -342,6 +352,11 @@ namespace Conductor.Pier.Model
                     this.FlagSolicitouContestacao == other.FlagSolicitouContestacao ||
                     this.FlagSolicitouContestacao != null &&
                     this.FlagSolicitouContestacao.Equals(other.FlagSolicitouContestacao)
+                ) && 
+                (
+                    this.TipoTransacao == other.TipoTransacao ||
+                    this.TipoTransacao != null &&
+                    this.TipoTransacao.Equals(other.TipoTransacao)
                 );
         }
 
@@ -410,6 +425,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagSolicitouContestacao != null)
                     hash = hash * 59 + this.FlagSolicitouContestacao.GetHashCode();
+                
+                if (this.TipoTransacao != null)
+                    hash = hash * 59 + this.TipoTransacao.GetHashCode();
                 
                 return hash;
             }

@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>TaxaJurosContaResponse</returns>
+        TaxaJurosContaResponse AtualizarTaxasJurosContasUsingPUT (long? id, TaxaJurosContaPersistValue update);
+  
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>ApiResponse of TaxaJurosContaResponse</returns>
+        ApiResponse<TaxaJurosContaResponse> AtualizarTaxasJurosContasUsingPUTWithHttpInfo (long? id, TaxaJurosContaPersistValue update);
+        
+        /// <summary>
         /// {{{conta_bancaria_resource_atualizar}}}
         /// </summary>
         /// <remarks>
@@ -86,6 +110,30 @@ namespace Conductor.Pier.Api
         ApiResponse<string> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTWithHttpInfo (long? idTransferencia);
         
         /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param>
+        /// <returns>TaxaJurosContaResponse</returns>
+        TaxaJurosContaResponse ConsultarTaxasJurosContasUsingGET (long? id, int? numeroMesesCarencia);
+  
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param>
+        /// <returns>ApiResponse of TaxaJurosContaResponse</returns>
+        ApiResponse<TaxaJurosContaResponse> ConsultarTaxasJurosContasUsingGETWithHttpInfo (long? id, int? numeroMesesCarencia);
+        
+        /// <summary>
         /// {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
         /// </summary>
         /// <remarks>
@@ -116,7 +164,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>ContaBancariaPortadorResponse</returns>
-        ContaBancariaPortadorResponse ConsultarUsingGET12 (long? id);
+        ContaBancariaPortadorResponse ConsultarUsingGET13 (long? id);
   
         /// <summary>
         /// {{{conta_bancaria_resource_consultar}}}
@@ -127,7 +175,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        ApiResponse<ContaBancariaPortadorResponse> ConsultarUsingGET12WithHttpInfo (long? id);
+        ApiResponse<ContaBancariaPortadorResponse> ConsultarUsingGET13WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -140,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>TransferenciaBancariaResponse</returns>
-        TransferenciaBancariaResponse ConsultarUsingGET47 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        TransferenciaBancariaResponse ConsultarUsingGET48 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
   
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -153,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET47WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET48WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
@@ -266,6 +314,30 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET59WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="persist">persist</param>
+        /// <returns>TaxaJurosContaResponse</returns>
+        TaxaJurosContaResponse SalvarTaxasJurosContasUsingPOST (long? id, TaxaJurosContaPersistValue persist);
+  
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of TaxaJurosContaResponse</returns>
+        ApiResponse<TaxaJurosContaResponse> SalvarTaxasJurosContasUsingPOSTWithHttpInfo (long? id, TaxaJurosContaPersistValue persist);
+        
+        /// <summary>
         /// {{{conta_bancaria_resource_salvar}}}
         /// </summary>
         /// <remarks>
@@ -360,6 +432,30 @@ namespace Conductor.Pier.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of TaxaJurosContaResponse</returns>
+        System.Threading.Tasks.Task<TaxaJurosContaResponse> AtualizarTaxasJurosContasUsingPUTAsync (long? id, TaxaJurosContaPersistValue update);
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (TaxaJurosContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaxaJurosContaResponse>> AtualizarTaxasJurosContasUsingPUTAsyncWithHttpInfo (long? id, TaxaJurosContaPersistValue update);
+        
+        /// <summary>
         /// {{{conta_bancaria_resource_atualizar}}}
         /// </summary>
         /// <remarks>
@@ -428,6 +524,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> ConfirmarTransferenciaCreditoContaBancariaUsingPOSTAsyncWithHttpInfo (long? idTransferencia);
         
         /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param>
+        /// <returns>Task of TaxaJurosContaResponse</returns>
+        System.Threading.Tasks.Task<TaxaJurosContaResponse> ConsultarTaxasJurosContasUsingGETAsync (long? id, int? numeroMesesCarencia);
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param>
+        /// <returns>Task of ApiResponse (TaxaJurosContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaxaJurosContaResponse>> ConsultarTaxasJurosContasUsingGETAsyncWithHttpInfo (long? id, int? numeroMesesCarencia);
+        
+        /// <summary>
         /// {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
         /// </summary>
         /// <remarks>
@@ -458,7 +578,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET12Async (long? id);
+        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET13Async (long? id);
 
         /// <summary>
         /// {{{conta_bancaria_resource_consultar}}}
@@ -469,7 +589,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -482,7 +602,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET47Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET48Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
 
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -495,7 +615,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
@@ -606,6 +726,30 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET59AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of TaxaJurosContaResponse</returns>
+        System.Threading.Tasks.Task<TaxaJurosContaResponse> SalvarTaxasJurosContasUsingPOSTAsync (long? id, TaxaJurosContaPersistValue persist);
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (TaxaJurosContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaxaJurosContaResponse>> SalvarTaxasJurosContasUsingPOSTAsyncWithHttpInfo (long? id, TaxaJurosContaPersistValue persist);
         
         /// <summary>
         /// {{{conta_bancaria_resource_salvar}}}
@@ -788,6 +932,188 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param> 
+        /// <param name="update">update</param> 
+        /// <returns>TaxaJurosContaResponse</returns>
+        public TaxaJurosContaResponse AtualizarTaxasJurosContasUsingPUT (long? id, TaxaJurosContaPersistValue update)
+        {
+             ApiResponse<TaxaJurosContaResponse> localVarResponse = AtualizarTaxasJurosContasUsingPUTWithHttpInfo(id, update);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param> 
+        /// <param name="update">update</param> 
+        /// <returns>ApiResponse of TaxaJurosContaResponse</returns>
+        public ApiResponse< TaxaJurosContaResponse > AtualizarTaxasJurosContasUsingPUTWithHttpInfo (long? id, TaxaJurosContaPersistValue update)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->AtualizarTaxasJurosContasUsingPUT");
+            
+            // verify the required parameter 'update' is set
+            if (update == null)
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagtransferenciabancariaApi->AtualizarTaxasJurosContasUsingPUT");
+            
+    
+            var localVarPath = "/api/contas/{id}/taxas-transferencias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTaxasJurosContasUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTaxasJurosContasUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TaxaJurosContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaxaJurosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaxaJurosContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of TaxaJurosContaResponse</returns>
+        public async System.Threading.Tasks.Task<TaxaJurosContaResponse> AtualizarTaxasJurosContasUsingPUTAsync (long? id, TaxaJurosContaPersistValue update)
+        {
+             ApiResponse<TaxaJurosContaResponse> localVarResponse = await AtualizarTaxasJurosContasUsingPUTAsyncWithHttpInfo(id, update);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (TaxaJurosContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TaxaJurosContaResponse>> AtualizarTaxasJurosContasUsingPUTAsyncWithHttpInfo (long? id, TaxaJurosContaPersistValue update)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarTaxasJurosContasUsingPUT");
+            // verify the required parameter 'update' is set
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarTaxasJurosContasUsingPUT");
+            
+    
+            var localVarPath = "/api/contas/{id}/taxas-transferencias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTaxasJurosContasUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTaxasJurosContasUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TaxaJurosContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaxaJurosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaxaJurosContaResponse)));
+            
+        }
         
         /// <summary>
         /// {{{conta_bancaria_resource_atualizar}}} {{{conta_bancaria_resource_atualizar_notes}}}
@@ -1288,6 +1614,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param> 
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param> 
+        /// <returns>TaxaJurosContaResponse</returns>
+        public TaxaJurosContaResponse ConsultarTaxasJurosContasUsingGET (long? id, int? numeroMesesCarencia)
+        {
+             ApiResponse<TaxaJurosContaResponse> localVarResponse = ConsultarTaxasJurosContasUsingGETWithHttpInfo(id, numeroMesesCarencia);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param> 
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param> 
+        /// <returns>ApiResponse of TaxaJurosContaResponse</returns>
+        public ApiResponse< TaxaJurosContaResponse > ConsultarTaxasJurosContasUsingGETWithHttpInfo (long? id, int? numeroMesesCarencia)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarTaxasJurosContasUsingGET");
+            
+            // verify the required parameter 'numeroMesesCarencia' is set
+            if (numeroMesesCarencia == null)
+                throw new ApiException(400, "Missing required parameter 'numeroMesesCarencia' when calling GlobaltagtransferenciabancariaApi->ConsultarTaxasJurosContasUsingGET");
+            
+    
+            var localVarPath = "/api/contas/{id}/taxas-transferencias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (numeroMesesCarencia != null) localVarQueryParams.Add("numeroMesesCarencia", Configuration.ApiClient.ParameterToString(numeroMesesCarencia)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxasJurosContasUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxasJurosContasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TaxaJurosContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaxaJurosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaxaJurosContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param>
+        /// <returns>Task of TaxaJurosContaResponse</returns>
+        public async System.Threading.Tasks.Task<TaxaJurosContaResponse> ConsultarTaxasJurosContasUsingGETAsync (long? id, int? numeroMesesCarencia)
+        {
+             ApiResponse<TaxaJurosContaResponse> localVarResponse = await ConsultarTaxasJurosContasUsingGETAsyncWithHttpInfo(id, numeroMesesCarencia);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="numeroMesesCarencia">numeroMesesCarencia</param>
+        /// <returns>Task of ApiResponse (TaxaJurosContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TaxaJurosContaResponse>> ConsultarTaxasJurosContasUsingGETAsyncWithHttpInfo (long? id, int? numeroMesesCarencia)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTaxasJurosContasUsingGET");
+            // verify the required parameter 'numeroMesesCarencia' is set
+            if (numeroMesesCarencia == null) throw new ApiException(400, "Missing required parameter 'numeroMesesCarencia' when calling ConsultarTaxasJurosContasUsingGET");
+            
+    
+            var localVarPath = "/api/contas/{id}/taxas-transferencias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (numeroMesesCarencia != null) localVarQueryParams.Add("numeroMesesCarencia", Configuration.ApiClient.ParameterToString(numeroMesesCarencia)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxasJurosContasUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxasJurosContasUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TaxaJurosContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaxaJurosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaxaJurosContaResponse)));
+            
+        }
+        
+        /// <summary>
         /// {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}} {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1451,9 +1947,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>ContaBancariaPortadorResponse</returns>
-        public ContaBancariaPortadorResponse ConsultarUsingGET12 (long? id)
+        public ContaBancariaPortadorResponse ConsultarUsingGET13 (long? id)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = ConsultarUsingGET13WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1463,12 +1959,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        public ApiResponse< ContaBancariaPortadorResponse > ConsultarUsingGET12WithHttpInfo (long? id)
+        public ApiResponse< ContaBancariaPortadorResponse > ConsultarUsingGET13WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET12");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET13");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -1514,9 +2010,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1531,9 +2027,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET12Async (long? id)
+        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET13Async (long? id)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await ConsultarUsingGET13AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1544,10 +2040,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET13");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -1593,9 +2089,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1611,9 +2107,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param> 
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param> 
         /// <returns>TransferenciaBancariaResponse</returns>
-        public TransferenciaBancariaResponse ConsultarUsingGET47 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public TransferenciaBancariaResponse ConsultarUsingGET48 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET47WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET48WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
         }
 
@@ -1625,16 +2121,16 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param> 
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param> 
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET47WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET48WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET47");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET48");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET47");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET48");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -1682,9 +2178,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1701,9 +2197,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET47Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET48Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET47AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET48AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
 
         }
@@ -1716,12 +2212,12 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET47");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET48");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET47");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET48");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -1769,9 +2265,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2370,6 +2866,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTransferenciaBancariaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaBancariaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>TaxaJurosContaResponse</returns>
+        public TaxaJurosContaResponse SalvarTaxasJurosContasUsingPOST (long? id, TaxaJurosContaPersistValue persist)
+        {
+             ApiResponse<TaxaJurosContaResponse> localVarResponse = SalvarTaxasJurosContasUsingPOSTWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of TaxaJurosContaResponse</returns>
+        public ApiResponse< TaxaJurosContaResponse > SalvarTaxasJurosContasUsingPOSTWithHttpInfo (long? id, TaxaJurosContaPersistValue persist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->SalvarTaxasJurosContasUsingPOST");
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagtransferenciabancariaApi->SalvarTaxasJurosContasUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/taxas-transferencias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTaxasJurosContasUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTaxasJurosContasUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TaxaJurosContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaxaJurosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaxaJurosContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of TaxaJurosContaResponse</returns>
+        public async System.Threading.Tasks.Task<TaxaJurosContaResponse> SalvarTaxasJurosContasUsingPOSTAsync (long? id, TaxaJurosContaPersistValue persist)
+        {
+             ApiResponse<TaxaJurosContaResponse> localVarResponse = await SalvarTaxasJurosContasUsingPOSTAsyncWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (TaxaJurosContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TaxaJurosContaResponse>> SalvarTaxasJurosContasUsingPOSTAsyncWithHttpInfo (long? id, TaxaJurosContaPersistValue persist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarTaxasJurosContasUsingPOST");
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarTaxasJurosContasUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/taxas-transferencias";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTaxasJurosContasUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTaxasJurosContasUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TaxaJurosContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaxaJurosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaxaJurosContaResponse)));
             
         }
         

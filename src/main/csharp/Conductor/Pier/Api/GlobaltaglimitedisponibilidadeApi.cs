@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse ConsultarUsingGET22 (long? idConta);
+        LimiteDisponibilidadeResponse ConsultarUsingGET23 (long? idConta);
   
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET22WithHttpInfo (long? idConta);
+        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET23WithHttpInfo (long? idConta);
         
         #endregion Synchronous Operations
         
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET22Async (long? idConta);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET23Async (long? idConta);
 
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -159,7 +159,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET22AsyncWithHttpInfo (long? idConta);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? idConta);
         
         #endregion Asynchronous Operations
         
@@ -495,9 +495,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse ConsultarUsingGET22 (long? idConta)
+        public LimiteDisponibilidadeResponse ConsultarUsingGET23 (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET22WithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET23WithHttpInfo(idConta);
              return localVarResponse.Data;
         }
 
@@ -507,12 +507,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET22WithHttpInfo (long? idConta)
+        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET23WithHttpInfo (long? idConta)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->ConsultarUsingGET22");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->ConsultarUsingGET23");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -558,9 +558,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -575,9 +575,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET22Async (long? idConta)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET23Async (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET22AsyncWithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET23AsyncWithHttpInfo(idConta);
              return localVarResponse.Data;
 
         }
@@ -588,10 +588,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET22AsyncWithHttpInfo (long? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? idConta)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET22");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET23");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -637,9 +637,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET22: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

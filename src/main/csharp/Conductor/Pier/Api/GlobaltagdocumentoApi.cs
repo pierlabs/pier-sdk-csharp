@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param>
         /// <returns>DocumentoDetalhadoResponse</returns>
-        DocumentoDetalhadoResponse ConsultarUsingGET16 (long? id);
+        DocumentoDetalhadoResponse ConsultarUsingGET17 (long? id);
   
         /// <summary>
         /// {{{documento_resource_consultar}}}
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of DocumentoDetalhadoResponse</returns>
-        ApiResponse<DocumentoDetalhadoResponse> ConsultarUsingGET16WithHttpInfo (long? id);
+        ApiResponse<DocumentoDetalhadoResponse> ConsultarUsingGET17WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_template_resource_consultar}}}
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param>
         /// <returns>DocumentoTemplateResponse</returns>
-        DocumentoTemplateResponse ConsultarUsingGET17 (long? id);
+        DocumentoTemplateResponse ConsultarUsingGET18 (long? id);
   
         /// <summary>
         /// {{{documento_template_resource_consultar}}}
@@ -107,7 +107,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        ApiResponse<DocumentoTemplateResponse> ConsultarUsingGET17WithHttpInfo (long? id);
+        ApiResponse<DocumentoTemplateResponse> ConsultarUsingGET18WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse ConsultarUsingGET46 (long? id);
+        TipoTemplateResponse ConsultarUsingGET47 (long? id);
   
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -129,7 +129,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> ConsultarUsingGET46WithHttpInfo (long? id);
+        ApiResponse<TipoTemplateResponse> ConsultarUsingGET47WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_resource_integrar}}}
@@ -366,7 +366,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param>
         /// <returns>Task of DocumentoDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarUsingGET16Async (long? id);
+        System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarUsingGET17Async (long? id);
 
         /// <summary>
         /// {{{documento_resource_consultar}}}
@@ -377,7 +377,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (DocumentoDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_template_resource_consultar}}}
@@ -388,7 +388,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        System.Threading.Tasks.Task<DocumentoTemplateResponse> ConsultarUsingGET17Async (long? id);
+        System.Threading.Tasks.Task<DocumentoTemplateResponse> ConsultarUsingGET18Async (long? id);
 
         /// <summary>
         /// {{{documento_template_resource_consultar}}}
@@ -399,7 +399,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> ConsultarUsingGET18AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET46Async (long? id);
+        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET47Async (long? id);
 
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -421,7 +421,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_resource_integrar}}}
@@ -1059,9 +1059,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param> 
         /// <returns>DocumentoDetalhadoResponse</returns>
-        public DocumentoDetalhadoResponse ConsultarUsingGET16 (long? id)
+        public DocumentoDetalhadoResponse ConsultarUsingGET17 (long? id)
         {
-             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = ConsultarUsingGET16WithHttpInfo(id);
+             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = ConsultarUsingGET17WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1071,12 +1071,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of DocumentoDetalhadoResponse</returns>
-        public ApiResponse< DocumentoDetalhadoResponse > ConsultarUsingGET16WithHttpInfo (long? id)
+        public ApiResponse< DocumentoDetalhadoResponse > ConsultarUsingGET17WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET16");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET17");
             
     
             var localVarPath = "/api/documentos/{id}";
@@ -1122,9 +1122,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1139,9 +1139,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param>
         /// <returns>Task of DocumentoDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarUsingGET16Async (long? id)
+        public async System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarUsingGET17Async (long? id)
         {
-             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = await ConsultarUsingGET16AsyncWithHttpInfo(id);
+             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = await ConsultarUsingGET17AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1152,10 +1152,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (DocumentoDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarUsingGET16AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET16");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET17");
             
     
             var localVarPath = "/api/documentos/{id}";
@@ -1201,9 +1201,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1217,9 +1217,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param> 
         /// <returns>DocumentoTemplateResponse</returns>
-        public DocumentoTemplateResponse ConsultarUsingGET17 (long? id)
+        public DocumentoTemplateResponse ConsultarUsingGET18 (long? id)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = ConsultarUsingGET17WithHttpInfo(id);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = ConsultarUsingGET18WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1229,12 +1229,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        public ApiResponse< DocumentoTemplateResponse > ConsultarUsingGET17WithHttpInfo (long? id)
+        public ApiResponse< DocumentoTemplateResponse > ConsultarUsingGET18WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET17");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET18");
             
     
             var localVarPath = "/api/templates-documentos/{id}";
@@ -1280,9 +1280,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1297,9 +1297,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> ConsultarUsingGET17Async (long? id)
+        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> ConsultarUsingGET18Async (long? id)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = await ConsultarUsingGET17AsyncWithHttpInfo(id);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = await ConsultarUsingGET18AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1310,10 +1310,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{documento_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> ConsultarUsingGET18AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET17");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET18");
             
     
             var localVarPath = "/api/templates-documentos/{id}";
@@ -1359,9 +1359,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1375,9 +1375,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse ConsultarUsingGET46 (long? id)
+        public TipoTemplateResponse ConsultarUsingGET47 (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarUsingGET46WithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarUsingGET47WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1387,12 +1387,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > ConsultarUsingGET46WithHttpInfo (long? id)
+        public ApiResponse< TipoTemplateResponse > ConsultarUsingGET47WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET46");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET47");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1438,9 +1438,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1455,9 +1455,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET46Async (long? id)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET47Async (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarUsingGET46AsyncWithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarUsingGET47AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1468,10 +1468,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET46");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET47");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1517,9 +1517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

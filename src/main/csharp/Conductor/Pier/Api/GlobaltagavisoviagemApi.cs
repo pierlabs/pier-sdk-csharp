@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse ConsultarUsingGET6 (long? id);
+        AvisoViagemResponse ConsultarUsingGET7 (long? id);
   
         /// <summary>
         /// {{{aviso_viagem_resource_consultar}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> ConsultarUsingGET6WithHttpInfo (long? id);
+        ApiResponse<AvisoViagemResponse> ConsultarUsingGET7WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{aviso_viagem_resource_desabilitar}}}
@@ -160,7 +160,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET6Async (long? id);
+        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET7Async (long? id);
 
         /// <summary>
         /// {{{aviso_viagem_resource_consultar}}}
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{aviso_viagem_resource_desabilitar}}}
@@ -379,9 +379,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse ConsultarUsingGET6 (long? id)
+        public AvisoViagemResponse ConsultarUsingGET7 (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarUsingGET6WithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarUsingGET7WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -391,12 +391,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > ConsultarUsingGET6WithHttpInfo (long? id)
+        public ApiResponse< AvisoViagemResponse > ConsultarUsingGET7WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagavisoviagemApi->ConsultarUsingGET6");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagavisoviagemApi->ConsultarUsingGET7");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -442,9 +442,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -459,9 +459,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET6Async (long? id)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET7Async (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -472,10 +472,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET7");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -521,9 +521,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

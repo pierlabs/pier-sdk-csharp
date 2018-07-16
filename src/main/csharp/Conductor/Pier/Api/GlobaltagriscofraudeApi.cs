@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse ConsultarUsingGET34 (long? id);
+        RiscoFraudeDetalhadoResponse ConsultarUsingGET35 (long? id);
   
         /// <summary>
         /// {{{risco_fraude_resource_consultar}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET34WithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET35WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}}
@@ -142,7 +142,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET34Async (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET35Async (long? id);
 
         /// <summary>
         /// {{{risco_fraude_resource_consultar}}}
@@ -153,7 +153,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET35AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}}
@@ -343,9 +343,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse ConsultarUsingGET34 (long? id)
+        public RiscoFraudeDetalhadoResponse ConsultarUsingGET35 (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET34WithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET35WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -355,12 +355,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET34WithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET35WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagriscofraudeApi->ConsultarUsingGET34");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagriscofraudeApi->ConsultarUsingGET35");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -406,9 +406,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -423,9 +423,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET34Async (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET35Async (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET34AsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET35AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -436,10 +436,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET35AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET34");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET35");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -485,9 +485,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

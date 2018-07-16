@@ -124,7 +124,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>OportunidadeResponse</returns>
-        OportunidadeResponse ConsultarUsingGET25 (long? id);
+        OportunidadeResponse ConsultarUsingGET26 (long? id);
   
         /// <summary>
         /// {{{oportunidade_resource_consultar}}}
@@ -135,7 +135,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of OportunidadeResponse</returns>
-        ApiResponse<OportunidadeResponse> ConsultarUsingGET25WithHttpInfo (long? id);
+        ApiResponse<OportunidadeResponse> ConsultarUsingGET26WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_oportunidade_resource_consultar}}}
@@ -146,7 +146,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>TipoOportunidadeResponse</returns>
-        TipoOportunidadeResponse ConsultarUsingGET44 (long? id);
+        TipoOportunidadeResponse ConsultarUsingGET45 (long? id);
   
         /// <summary>
         /// {{{tipo_oportunidade_resource_consultar}}}
@@ -157,7 +157,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoOportunidadeResponse</returns>
-        ApiResponse<TipoOportunidadeResponse> ConsultarUsingGET44WithHttpInfo (long? id);
+        ApiResponse<TipoOportunidadeResponse> ConsultarUsingGET45WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_oportunidade_resource_listar_auditorias_status}}}
@@ -568,7 +568,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of OportunidadeResponse</returns>
-        System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET25Async (long? id);
+        System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET26Async (long? id);
 
         /// <summary>
         /// {{{oportunidade_resource_consultar}}}
@@ -579,7 +579,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (OportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_oportunidade_resource_consultar}}}
@@ -590,7 +590,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoOportunidadeResponse</returns>
-        System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET44Async (long? id);
+        System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET45Async (long? id);
 
         /// <summary>
         /// {{{tipo_oportunidade_resource_consultar}}}
@@ -601,7 +601,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoOportunidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET45AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_oportunidade_resource_listar_auditorias_status}}}
@@ -1727,9 +1727,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param> 
         /// <returns>OportunidadeResponse</returns>
-        public OportunidadeResponse ConsultarUsingGET25 (long? id)
+        public OportunidadeResponse ConsultarUsingGET26 (long? id)
         {
-             ApiResponse<OportunidadeResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(id);
+             ApiResponse<OportunidadeResponse> localVarResponse = ConsultarUsingGET26WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1739,12 +1739,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of OportunidadeResponse</returns>
-        public ApiResponse< OportunidadeResponse > ConsultarUsingGET25WithHttpInfo (long? id)
+        public ApiResponse< OportunidadeResponse > ConsultarUsingGET26WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagoportunidadeApi->ConsultarUsingGET25");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagoportunidadeApi->ConsultarUsingGET26");
             
     
             var localVarPath = "/api/oportunidades/{id}";
@@ -1790,9 +1790,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<OportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1807,9 +1807,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of OportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET25Async (long? id)
+        public async System.Threading.Tasks.Task<OportunidadeResponse> ConsultarUsingGET26Async (long? id)
         {
-             ApiResponse<OportunidadeResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(id);
+             ApiResponse<OportunidadeResponse> localVarResponse = await ConsultarUsingGET26AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1820,10 +1820,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (OportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<OportunidadeResponse>> ConsultarUsingGET26AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET25");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET26");
             
     
             var localVarPath = "/api/oportunidades/{id}";
@@ -1869,9 +1869,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1885,9 +1885,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param> 
         /// <returns>TipoOportunidadeResponse</returns>
-        public TipoOportunidadeResponse ConsultarUsingGET44 (long? id)
+        public TipoOportunidadeResponse ConsultarUsingGET45 (long? id)
         {
-             ApiResponse<TipoOportunidadeResponse> localVarResponse = ConsultarUsingGET44WithHttpInfo(id);
+             ApiResponse<TipoOportunidadeResponse> localVarResponse = ConsultarUsingGET45WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1897,12 +1897,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoOportunidadeResponse</returns>
-        public ApiResponse< TipoOportunidadeResponse > ConsultarUsingGET44WithHttpInfo (long? id)
+        public ApiResponse< TipoOportunidadeResponse > ConsultarUsingGET45WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagoportunidadeApi->ConsultarUsingGET44");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagoportunidadeApi->ConsultarUsingGET45");
             
     
             var localVarPath = "/api/tipos-oportunidades/{id}";
@@ -1948,9 +1948,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1965,9 +1965,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoOportunidadeResponse</returns>
-        public async System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET44Async (long? id)
+        public async System.Threading.Tasks.Task<TipoOportunidadeResponse> ConsultarUsingGET45Async (long? id)
         {
-             ApiResponse<TipoOportunidadeResponse> localVarResponse = await ConsultarUsingGET44AsyncWithHttpInfo(id);
+             ApiResponse<TipoOportunidadeResponse> localVarResponse = await ConsultarUsingGET45AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1978,10 +1978,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_oportunidade_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoOportunidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoOportunidadeResponse>> ConsultarUsingGET45AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET44");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET45");
             
     
             var localVarPath = "/api/tipos-oportunidades/{id}";
@@ -2027,9 +2027,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoOportunidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

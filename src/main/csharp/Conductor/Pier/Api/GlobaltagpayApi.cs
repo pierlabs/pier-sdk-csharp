@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>CartaoPayDetalheResponse</returns>
-        CartaoPayDetalheResponse ConsultarUsingGET8 (string deviceId, long? id);
+        CartaoPayDetalheResponse ConsultarUsingGET9 (string deviceId, long? id);
   
         /// <summary>
         /// {{{cartao_pay_resource_consultar}}}
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET8WithHttpInfo (string deviceId, long? id);
+        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET9WithHttpInfo (string deviceId, long? id);
         
         /// <summary>
         /// {{{enum_pay_resource_listar_codigos_resposta}}}
@@ -363,7 +363,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET8Async (string deviceId, long? id);
+        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET9Async (string deviceId, long? id);
 
         /// <summary>
         /// {{{cartao_pay_resource_consultar}}}
@@ -375,7 +375,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET8AsyncWithHttpInfo (string deviceId, long? id);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (string deviceId, long? id);
         
         /// <summary>
         /// {{{enum_pay_resource_listar_codigos_resposta}}}
@@ -1190,9 +1190,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param> 
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param> 
         /// <returns>CartaoPayDetalheResponse</returns>
-        public CartaoPayDetalheResponse ConsultarUsingGET8 (string deviceId, long? id)
+        public CartaoPayDetalheResponse ConsultarUsingGET9 (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET8WithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET9WithHttpInfo(deviceId, id);
              return localVarResponse.Data;
         }
 
@@ -1203,16 +1203,16 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param> 
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET8WithHttpInfo (string deviceId, long? id)
+        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET9WithHttpInfo (string deviceId, long? id)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->ConsultarUsingGET8");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->ConsultarUsingGET9");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpayApi->ConsultarUsingGET8");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpayApi->ConsultarUsingGET9");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1259,9 +1259,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1277,9 +1277,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET8Async (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET9Async (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET8AsyncWithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(deviceId, id);
              return localVarResponse.Data;
 
         }
@@ -1291,12 +1291,12 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET8AsyncWithHttpInfo (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (string deviceId, long? id)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET8");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET9");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET8");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET9");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1343,9 +1343,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

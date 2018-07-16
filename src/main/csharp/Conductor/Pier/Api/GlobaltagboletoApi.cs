@@ -26,7 +26,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <returns>BoletoResponse</returns>
+<<<<<<< HEAD
         BoletoResponse ConsultarUsingGET33 (long? id);
+=======
+        BoletoResponse ConsultarUsingGET34 (long? id);
+>>>>>>> v2.68.0
   
         /// <summary>
         /// {{{boleto_resource_consultar}}}
@@ -37,7 +41,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of BoletoResponse</returns>
+<<<<<<< HEAD
         ApiResponse<BoletoResponse> ConsultarUsingGET33WithHttpInfo (long? id);
+=======
+        ApiResponse<BoletoResponse> ConsultarUsingGET34WithHttpInfo (long? id);
+>>>>>>> v2.68.0
         
         /// <summary>
         /// {{{boleto_resource_enviar_boleto_email}}}
@@ -176,7 +184,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <returns>Task of BoletoResponse</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET33Async (long? id);
+=======
+        System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET34Async (long? id);
+>>>>>>> v2.68.0
 
         /// <summary>
         /// {{{boleto_resource_consultar}}}
@@ -187,7 +199,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET33AsyncWithHttpInfo (long? id);
+=======
+        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id);
+>>>>>>> v2.68.0
         
         /// <summary>
         /// {{{boleto_resource_enviar_boleto_email}}}
@@ -411,9 +427,15 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param> 
         /// <returns>BoletoResponse</returns>
+<<<<<<< HEAD
         public BoletoResponse ConsultarUsingGET33 (long? id)
         {
              ApiResponse<BoletoResponse> localVarResponse = ConsultarUsingGET33WithHttpInfo(id);
+=======
+        public BoletoResponse ConsultarUsingGET34 (long? id)
+        {
+             ApiResponse<BoletoResponse> localVarResponse = ConsultarUsingGET34WithHttpInfo(id);
+>>>>>>> v2.68.0
              return localVarResponse.Data;
         }
 
@@ -423,12 +445,20 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of BoletoResponse</returns>
+<<<<<<< HEAD
         public ApiResponse< BoletoResponse > ConsultarUsingGET33WithHttpInfo (long? id)
+=======
+        public ApiResponse< BoletoResponse > ConsultarUsingGET34WithHttpInfo (long? id)
+>>>>>>> v2.68.0
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
+<<<<<<< HEAD
                 throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagboletoApi->ConsultarUsingGET33");
+=======
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagboletoApi->ConsultarUsingGET34");
+>>>>>>> v2.68.0
             
     
             var localVarPath = "/api/boletos/{id}";
@@ -474,9 +504,15 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> v2.68.0
     
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -491,9 +527,15 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <returns>Task of BoletoResponse</returns>
+<<<<<<< HEAD
         public async System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET33Async (long? id)
         {
              ApiResponse<BoletoResponse> localVarResponse = await ConsultarUsingGET33AsyncWithHttpInfo(id);
+=======
+        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET34Async (long? id)
+        {
+             ApiResponse<BoletoResponse> localVarResponse = await ConsultarUsingGET34AsyncWithHttpInfo(id);
+>>>>>>> v2.68.0
              return localVarResponse.Data;
 
         }
@@ -504,10 +546,17 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
+<<<<<<< HEAD
         public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET33AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET33");
+=======
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET34");
+>>>>>>> v2.68.0
             
     
             var localVarPath = "/api/boletos/{id}";
@@ -553,9 +602,15 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> v2.68.0
 
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

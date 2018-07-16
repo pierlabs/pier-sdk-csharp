@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>ParametroEmissorResponse</returns>
-        ParametroEmissorResponse ConsultarUsingGET26 (string codigo);
+        ParametroEmissorResponse ConsultarUsingGET27 (string codigo);
   
         /// <summary>
         /// {{{parametro_emissor_recurso}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>ApiResponse of ParametroEmissorResponse</returns>
-        ApiResponse<ParametroEmissorResponse> ConsultarUsingGET26WithHttpInfo (string codigo);
+        ApiResponse<ParametroEmissorResponse> ConsultarUsingGET27WithHttpInfo (string codigo);
         
         #endregion Synchronous Operations
         
@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ParametroEmissorResponse</returns>
-        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET26Async (string codigo);
+        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET27Async (string codigo);
 
         /// <summary>
         /// {{{parametro_emissor_recurso}}}
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET26AsyncWithHttpInfo (string codigo);
+        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET27AsyncWithHttpInfo (string codigo);
         
         #endregion Asynchronous Operations
         
@@ -163,9 +163,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param> 
         /// <returns>ParametroEmissorResponse</returns>
-        public ParametroEmissorResponse ConsultarUsingGET26 (string codigo)
+        public ParametroEmissorResponse ConsultarUsingGET27 (string codigo)
         {
-             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarUsingGET26WithHttpInfo(codigo);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarUsingGET27WithHttpInfo(codigo);
              return localVarResponse.Data;
         }
 
@@ -175,12 +175,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param> 
         /// <returns>ApiResponse of ParametroEmissorResponse</returns>
-        public ApiResponse< ParametroEmissorResponse > ConsultarUsingGET26WithHttpInfo (string codigo)
+        public ApiResponse< ParametroEmissorResponse > ConsultarUsingGET27WithHttpInfo (string codigo)
         {
             
             // verify the required parameter 'codigo' is set
             if (codigo == null)
-                throw new ApiException(400, "Missing required parameter 'codigo' when calling GlobaltagparametroemissorApi->ConsultarUsingGET26");
+                throw new ApiException(400, "Missing required parameter 'codigo' when calling GlobaltagparametroemissorApi->ConsultarUsingGET27");
             
     
             var localVarPath = "/api/parametros-emissor/{codigo}";
@@ -226,9 +226,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -243,9 +243,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ParametroEmissorResponse</returns>
-        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET26Async (string codigo)
+        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET27Async (string codigo)
         {
-             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarUsingGET26AsyncWithHttpInfo(codigo);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarUsingGET27AsyncWithHttpInfo(codigo);
              return localVarResponse.Data;
 
         }
@@ -256,10 +256,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET26AsyncWithHttpInfo (string codigo)
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET27AsyncWithHttpInfo (string codigo)
         {
             // verify the required parameter 'codigo' is set
-            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling ConsultarUsingGET26");
+            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling ConsultarUsingGET27");
             
     
             var localVarPath = "/api/parametros-emissor/{codigo}";
@@ -305,9 +305,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

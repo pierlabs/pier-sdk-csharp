@@ -333,7 +333,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoDetalheResponse</returns>
-        CartaoDetalheResponse ConsultarUsingGET9 (long? id, string authorization = null);
+        CartaoDetalheResponse ConsultarUsingGET10 (long? id, string authorization = null);
   
         /// <summary>
         /// {{{cartao_resource_consultar}}}
@@ -345,7 +345,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoDetalheResponse</returns>
-        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET9WithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET10WithHttpInfo (long? id, string authorization = null);
         
         /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}}
@@ -1125,7 +1125,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET9Async (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET10Async (long? id, string authorization = null);
 
         /// <summary>
         /// {{{cartao_resource_consultar}}}
@@ -1137,7 +1137,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET10AsyncWithHttpInfo (long? id, string authorization = null);
         
         /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}}
@@ -3784,9 +3784,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param> 
         /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoDetalheResponse</returns>
-        public CartaoDetalheResponse ConsultarUsingGET9 (long? id, string authorization = null)
+        public CartaoDetalheResponse ConsultarUsingGET10 (long? id, string authorization = null)
         {
-             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET9WithHttpInfo(id, authorization);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET10WithHttpInfo(id, authorization);
              return localVarResponse.Data;
         }
 
@@ -3797,12 +3797,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param> 
         /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoDetalheResponse</returns>
-        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET9WithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET10WithHttpInfo (long? id, string authorization = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcartaoApi->ConsultarUsingGET9");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcartaoApi->ConsultarUsingGET10");
             
     
             var localVarPath = "/api/cartoes/{id}";
@@ -3849,9 +3849,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3867,9 +3867,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET9Async (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET10Async (long? id, string authorization = null)
         {
-             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET10AsyncWithHttpInfo(id, authorization);
              return localVarResponse.Data;
 
         }
@@ -3881,10 +3881,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
         /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET10AsyncWithHttpInfo (long? id, string authorization = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET9");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET10");
             
     
             var localVarPath = "/api/cartoes/{id}";
@@ -3931,9 +3931,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

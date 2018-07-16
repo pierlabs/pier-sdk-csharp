@@ -58,7 +58,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param>
         /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse ConsultarUsingGET2 (long? id);
+        AjusteFinanceiroResponse ConsultarUsingGET3 (long? id);
   
         /// <summary>
         /// {{{ajuste_financeiro_resource_consultar}}}
@@ -69,7 +69,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> ConsultarUsingGET2WithHttpInfo (long? id);
+        ApiResponse<AjusteFinanceiroResponse> ConsultarUsingGET3WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{ajuste_financeiro_resource_listar}}}
@@ -152,7 +152,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET2Async (long? id);
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET3Async (long? id);
 
         /// <summary>
         /// {{{ajuste_financeiro_resource_consultar}}}
@@ -163,7 +163,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET2AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET3AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{ajuste_financeiro_resource_listar}}}
@@ -505,9 +505,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse ConsultarUsingGET2 (long? id)
+        public AjusteFinanceiroResponse ConsultarUsingGET3 (long? id)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = ConsultarUsingGET2WithHttpInfo(id);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = ConsultarUsingGET3WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -517,12 +517,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > ConsultarUsingGET2WithHttpInfo (long? id)
+        public ApiResponse< AjusteFinanceiroResponse > ConsultarUsingGET3WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagajustefinanceiroApi->ConsultarUsingGET2");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagajustefinanceiroApi->ConsultarUsingGET3");
             
     
             var localVarPath = "/api/ajustes-financeiros/{id}";
@@ -568,9 +568,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -585,9 +585,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET2Async (long? id)
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> ConsultarUsingGET3Async (long? id)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await ConsultarUsingGET2AsyncWithHttpInfo(id);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await ConsultarUsingGET3AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -598,10 +598,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{ajuste_financeiro_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET2AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> ConsultarUsingGET3AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET2");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET3");
             
     
             var localVarPath = "/api/ajustes-financeiros/{id}";
@@ -647,9 +647,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

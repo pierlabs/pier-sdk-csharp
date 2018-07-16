@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param>
         /// <returns>WebHookResponse</returns>
-        WebHookResponse ConsultarUsingGET52 (long? id);
+        WebHookResponse ConsultarUsingGET53 (long? id);
   
         /// <summary>
         /// {{{web_hook_resource_consultar}}}
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of WebHookResponse</returns>
-        ApiResponse<WebHookResponse> ConsultarUsingGET52WithHttpInfo (long? id);
+        ApiResponse<WebHookResponse> ConsultarUsingGET53WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{web_hook_resource_listar}}}
@@ -160,7 +160,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param>
         /// <returns>Task of WebHookResponse</returns>
-        System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET52Async (long? id);
+        System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET53Async (long? id);
 
         /// <summary>
         /// {{{web_hook_resource_consultar}}}
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET52AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET53AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{web_hook_resource_listar}}}
@@ -515,9 +515,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param> 
         /// <returns>WebHookResponse</returns>
-        public WebHookResponse ConsultarUsingGET52 (long? id)
+        public WebHookResponse ConsultarUsingGET53 (long? id)
         {
-             ApiResponse<WebHookResponse> localVarResponse = ConsultarUsingGET52WithHttpInfo(id);
+             ApiResponse<WebHookResponse> localVarResponse = ConsultarUsingGET53WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -527,12 +527,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of WebHookResponse</returns>
-        public ApiResponse< WebHookResponse > ConsultarUsingGET52WithHttpInfo (long? id)
+        public ApiResponse< WebHookResponse > ConsultarUsingGET53WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagwebhookApi->ConsultarUsingGET52");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagwebhookApi->ConsultarUsingGET53");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -578,9 +578,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET52: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET52: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -595,9 +595,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param>
         /// <returns>Task of WebHookResponse</returns>
-        public async System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET52Async (long? id)
+        public async System.Threading.Tasks.Task<WebHookResponse> ConsultarUsingGET53Async (long? id)
         {
-             ApiResponse<WebHookResponse> localVarResponse = await ConsultarUsingGET52AsyncWithHttpInfo(id);
+             ApiResponse<WebHookResponse> localVarResponse = await ConsultarUsingGET53AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -608,10 +608,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{web_hook_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (WebHookResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET52AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<WebHookResponse>> ConsultarUsingGET53AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET52");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET53");
             
     
             var localVarPath = "/api/webhooks/{id}";
@@ -657,9 +657,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET52: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET52: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WebHookResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

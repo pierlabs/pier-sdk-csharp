@@ -175,7 +175,11 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageControleSegurancaDispositivoResponse</returns>
+<<<<<<< HEAD
         PageControleSegurancaDispositivoResponse ConsultarUsingGET14 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+=======
+        PageControleSegurancaDispositivoResponse ConsultarUsingGET15 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+>>>>>>> v2.68.0
   
         /// <summary>
         /// {{{controle_seguranca_dispositivo_consultar}}}
@@ -189,7 +193,11 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageControleSegurancaDispositivoResponse</returns>
+<<<<<<< HEAD
         ApiResponse<PageControleSegurancaDispositivoResponse> ConsultarUsingGET14WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+=======
+        ApiResponse<PageControleSegurancaDispositivoResponse> ConsultarUsingGET15WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+>>>>>>> v2.68.0
         
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -200,7 +208,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>UsuarioResponse</returns>
+<<<<<<< HEAD
         UsuarioResponse ConsultarUsingGET50 (long? id);
+=======
+        UsuarioResponse ConsultarUsingGET51 (long? id);
+>>>>>>> v2.68.0
   
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -211,7 +223,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
+<<<<<<< HEAD
         ApiResponse<UsuarioResponse> ConsultarUsingGET50WithHttpInfo (long? id);
+=======
+        ApiResponse<UsuarioResponse> ConsultarUsingGET51WithHttpInfo (long? id);
+>>>>>>> v2.68.0
         
         /// <summary>
         /// {{{usuario_resource_desativar_usuario}}}
@@ -591,7 +607,11 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageControleSegurancaDispositivoResponse</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET14Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+=======
+        System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET15Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+>>>>>>> v2.68.0
 
         /// <summary>
         /// {{{controle_seguranca_dispositivo_consultar}}}
@@ -605,7 +625,11 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageControleSegurancaDispositivoResponse)</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+=======
+        System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+>>>>>>> v2.68.0
         
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -616,7 +640,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET50Async (long? id);
+=======
+        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET51Async (long? id);
+>>>>>>> v2.68.0
 
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -627,7 +655,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET50AsyncWithHttpInfo (long? id);
+=======
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET51AsyncWithHttpInfo (long? id);
+>>>>>>> v2.68.0
         
         /// <summary>
         /// {{{usuario_resource_desativar_usuario}}}
@@ -1984,9 +2016,15 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageControleSegurancaDispositivoResponse</returns>
+<<<<<<< HEAD
         public PageControleSegurancaDispositivoResponse ConsultarUsingGET14 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
              ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(idUsuario, sort, page, limit);
+=======
+        public PageControleSegurancaDispositivoResponse ConsultarUsingGET15 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = ConsultarUsingGET15WithHttpInfo(idUsuario, sort, page, limit);
+>>>>>>> v2.68.0
              return localVarResponse.Data;
         }
 
@@ -1999,12 +2037,20 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageControleSegurancaDispositivoResponse</returns>
+<<<<<<< HEAD
         public ApiResponse< PageControleSegurancaDispositivoResponse > ConsultarUsingGET14WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+=======
+        public ApiResponse< PageControleSegurancaDispositivoResponse > ConsultarUsingGET15WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+>>>>>>> v2.68.0
         {
             
             // verify the required parameter 'idUsuario' is set
             if (idUsuario == null)
+<<<<<<< HEAD
                 throw new ApiException(400, "Missing required parameter 'idUsuario' when calling GlobaltagusuarioApi->ConsultarUsingGET14");
+=======
+                throw new ApiException(400, "Missing required parameter 'idUsuario' when calling GlobaltagusuarioApi->ConsultarUsingGET15");
+>>>>>>> v2.68.0
             
     
             var localVarPath = "/api/controles-seguranca-dispositivos";
@@ -2053,9 +2099,15 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> v2.68.0
     
             return new ApiResponse<PageControleSegurancaDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2073,9 +2125,15 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageControleSegurancaDispositivoResponse</returns>
+<<<<<<< HEAD
         public async System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET14Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
              ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(idUsuario, sort, page, limit);
+=======
+        public async System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET15Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = await ConsultarUsingGET15AsyncWithHttpInfo(idUsuario, sort, page, limit);
+>>>>>>> v2.68.0
              return localVarResponse.Data;
 
         }
@@ -2089,10 +2147,17 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageControleSegurancaDispositivoResponse)</returns>
+<<<<<<< HEAD
         public async System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'idUsuario' is set
             if (idUsuario == null) throw new ApiException(400, "Missing required parameter 'idUsuario' when calling ConsultarUsingGET14");
+=======
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'idUsuario' is set
+            if (idUsuario == null) throw new ApiException(400, "Missing required parameter 'idUsuario' when calling ConsultarUsingGET15");
+>>>>>>> v2.68.0
             
     
             var localVarPath = "/api/controles-seguranca-dispositivos";
@@ -2141,9 +2206,15 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> v2.68.0
 
             return new ApiResponse<PageControleSegurancaDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2157,9 +2228,15 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param> 
         /// <returns>UsuarioResponse</returns>
+<<<<<<< HEAD
         public UsuarioResponse ConsultarUsingGET50 (long? id)
         {
              ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET50WithHttpInfo(id);
+=======
+        public UsuarioResponse ConsultarUsingGET51 (long? id)
+        {
+             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET51WithHttpInfo(id);
+>>>>>>> v2.68.0
              return localVarResponse.Data;
         }
 
@@ -2169,12 +2246,20 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
+<<<<<<< HEAD
         public ApiResponse< UsuarioResponse > ConsultarUsingGET50WithHttpInfo (long? id)
+=======
+        public ApiResponse< UsuarioResponse > ConsultarUsingGET51WithHttpInfo (long? id)
+>>>>>>> v2.68.0
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
+<<<<<<< HEAD
                 throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->ConsultarUsingGET50");
+=======
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->ConsultarUsingGET51");
+>>>>>>> v2.68.0
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -2220,9 +2305,15 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> v2.68.0
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2237,9 +2328,15 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
+<<<<<<< HEAD
         public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET50Async (long? id)
         {
              ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET50AsyncWithHttpInfo(id);
+=======
+        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET51Async (long? id)
+        {
+             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET51AsyncWithHttpInfo(id);
+>>>>>>> v2.68.0
              return localVarResponse.Data;
 
         }
@@ -2250,10 +2347,17 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
+<<<<<<< HEAD
         public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET50AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET50");
+=======
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET51AsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET51");
+>>>>>>> v2.68.0
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -2299,9 +2403,15 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> v2.68.0
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

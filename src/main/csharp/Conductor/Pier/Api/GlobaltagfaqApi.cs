@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>FaqResponse</returns>
-        FaqResponse ConsultarUsingGET20 (long? id);
+        FaqResponse ConsultarUsingGET21 (long? id);
   
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>ApiResponse of FaqResponse</returns>
-        ApiResponse<FaqResponse> ConsultarUsingGET20WithHttpInfo (long? id);
+        ApiResponse<FaqResponse> ConsultarUsingGET21WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of FaqResponse</returns>
-        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET20Async (long? id);
+        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET21Async (long? id);
 
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -235,7 +235,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -775,9 +775,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param> 
         /// <returns>FaqResponse</returns>
-        public FaqResponse ConsultarUsingGET20 (long? id)
+        public FaqResponse ConsultarUsingGET21 (long? id)
         {
-             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET20WithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET21WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -787,12 +787,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param> 
         /// <returns>ApiResponse of FaqResponse</returns>
-        public ApiResponse< FaqResponse > ConsultarUsingGET20WithHttpInfo (long? id)
+        public ApiResponse< FaqResponse > ConsultarUsingGET21WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->ConsultarUsingGET20");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->ConsultarUsingGET21");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -838,9 +838,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -855,9 +855,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of FaqResponse</returns>
-        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET20Async (long? id)
+        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET21Async (long? id)
         {
-             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET20AsyncWithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET21AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -868,10 +868,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET20");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET21");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -917,9 +917,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

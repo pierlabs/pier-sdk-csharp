@@ -29,8 +29,9 @@ namespace Conductor.Pier.Model
         /// <param name="Conteudo">{{{sms_envio_response_conteudo_value}}}.</param>
         /// <param name="QuantidadeTentativasEnvio">{{{sms_envio_response_quantidade_tentativas_envio_value}}}.</param>
         /// <param name="DataInclusao">{{{s_m_s_envio_response_data_inclusao_value}}}.</param>
+        /// <param name="Cpf">{{{sms_envio_response_cpf_value}}}.</param>
 
-        public SMSEnvioResponse(long? Id = null, string Status = null, long? IdConta = null, string Celular = null, string Conteudo = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null)
+        public SMSEnvioResponse(long? Id = null, string Status = null, long? IdConta = null, string Celular = null, string Conteudo = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null, string Cpf = null)
         {
             this.Id = Id;
             this.Status = Status;
@@ -39,6 +40,7 @@ namespace Conductor.Pier.Model
             this.Conteudo = Conteudo;
             this.QuantidadeTentativasEnvio = QuantidadeTentativasEnvio;
             this.DataInclusao = DataInclusao;
+            this.Cpf = Cpf;
             
         }
         
@@ -93,6 +95,13 @@ namespace Conductor.Pier.Model
         public string DataInclusao { get; set; }
     
         /// <summary>
+        /// {{{sms_envio_response_cpf_value}}}
+        /// </summary>
+        /// <value>{{{sms_envio_response_cpf_value}}}</value>
+        [DataMember(Name="cpf", EmitDefaultValue=false)]
+        public string Cpf { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +116,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Conteudo: ").Append(Conteudo).Append("\n");
             sb.Append("  QuantidadeTentativasEnvio: ").Append(QuantidadeTentativasEnvio).Append("\n");
             sb.Append("  DataInclusao: ").Append(DataInclusao).Append("\n");
+            sb.Append("  Cpf: ").Append(Cpf).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -178,6 +188,11 @@ namespace Conductor.Pier.Model
                     this.DataInclusao == other.DataInclusao ||
                     this.DataInclusao != null &&
                     this.DataInclusao.Equals(other.DataInclusao)
+                ) && 
+                (
+                    this.Cpf == other.Cpf ||
+                    this.Cpf != null &&
+                    this.Cpf.Equals(other.Cpf)
                 );
         }
 
@@ -213,6 +228,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataInclusao != null)
                     hash = hash * 59 + this.DataInclusao.GetHashCode();
+                
+                if (this.Cpf != null)
+                    hash = hash * 59 + this.Cpf.GetHashCode();
                 
                 return hash;
             }
