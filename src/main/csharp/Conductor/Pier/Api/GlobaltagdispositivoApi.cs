@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param>
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param>
         /// <returns>PageDispositivoResponse</returns>
-        PageDispositivoResponse ListarUsingGET20 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        PageDispositivoResponse ListarUsingGET21 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
   
         /// <summary>
         /// {{{dispositivo_resource_listar}}}
@@ -95,7 +95,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param>
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param>
         /// <returns>ApiResponse of PageDispositivoResponse</returns>
-        ApiResponse<PageDispositivoResponse> ListarUsingGET20WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        ApiResponse<PageDispositivoResponse> ListarUsingGET21WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// {{{dispositivo_resource_salvar}}}
@@ -106,7 +106,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>DispositivoResponse</returns>
-        DispositivoResponse SalvarUsingPOST10 (DispositivoPersistValue persist);
+        DispositivoResponse SalvarUsingPOST11 (DispositivoPersistValue persist);
   
         /// <summary>
         /// {{{dispositivo_resource_salvar}}}
@@ -117,7 +117,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of DispositivoResponse</returns>
-        ApiResponse<DispositivoResponse> SalvarUsingPOST10WithHttpInfo (DispositivoPersistValue persist);
+        ApiResponse<DispositivoResponse> SalvarUsingPOST11WithHttpInfo (DispositivoPersistValue persist);
         
         #endregion Synchronous Operations
         
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param>
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param>
         /// <returns>Task of PageDispositivoResponse</returns>
-        System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET20Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET21Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
 
         /// <summary>
         /// {{{dispositivo_resource_listar}}}
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param>
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageDispositivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET20AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET21AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null);
         
         /// <summary>
         /// {{{dispositivo_resource_salvar}}}
@@ -212,7 +212,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of DispositivoResponse</returns>
-        System.Threading.Tasks.Task<DispositivoResponse> SalvarUsingPOST10Async (DispositivoPersistValue persist);
+        System.Threading.Tasks.Task<DispositivoResponse> SalvarUsingPOST11Async (DispositivoPersistValue persist);
 
         /// <summary>
         /// {{{dispositivo_resource_salvar}}}
@@ -223,7 +223,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> SalvarUsingPOST10AsyncWithHttpInfo (DispositivoPersistValue persist);
+        System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> SalvarUsingPOST11AsyncWithHttpInfo (DispositivoPersistValue persist);
         
         #endregion Asynchronous Operations
         
@@ -646,9 +646,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param> 
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param> 
         /// <returns>PageDispositivoResponse</returns>
-        public PageDispositivoResponse ListarUsingGET20 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public PageDispositivoResponse ListarUsingGET21 (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivoResponse> localVarResponse = ListarUsingGET20WithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivoResponse> localVarResponse = ListarUsingGET21WithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
         }
 
@@ -665,7 +665,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param> 
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageDispositivoResponse</returns>
-        public ApiResponse< PageDispositivoResponse > ListarUsingGET20WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public ApiResponse< PageDispositivoResponse > ListarUsingGET21WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -719,9 +719,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -743,9 +743,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param>
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param>
         /// <returns>Task of PageDispositivoResponse</returns>
-        public async System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET20Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public async System.Threading.Tasks.Task<PageDispositivoResponse> ListarUsingGET21Async (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
-             ApiResponse<PageDispositivoResponse> localVarResponse = await ListarUsingGET20AsyncWithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
+             ApiResponse<PageDispositivoResponse> localVarResponse = await ListarUsingGET21AsyncWithHttpInfo(sort, page, limit, token, idUsuario, idAplicacaoMobile, dataCriacao, dataDesativacao);
              return localVarResponse.Data;
 
         }
@@ -763,7 +763,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCriacao">{{{dispositivo_request_data_criacao_value}}} (optional)</param>
         /// <param name="dataDesativacao">{{{dispositivo_request_data_desativacao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageDispositivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET20AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDispositivoResponse>> ListarUsingGET21AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string token = null, long? idUsuario = null, long? idAplicacaoMobile = null, string dataCriacao = null, string dataDesativacao = null)
         {
             
     
@@ -817,9 +817,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -833,9 +833,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>DispositivoResponse</returns>
-        public DispositivoResponse SalvarUsingPOST10 (DispositivoPersistValue persist)
+        public DispositivoResponse SalvarUsingPOST11 (DispositivoPersistValue persist)
         {
-             ApiResponse<DispositivoResponse> localVarResponse = SalvarUsingPOST10WithHttpInfo(persist);
+             ApiResponse<DispositivoResponse> localVarResponse = SalvarUsingPOST11WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -845,12 +845,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of DispositivoResponse</returns>
-        public ApiResponse< DispositivoResponse > SalvarUsingPOST10WithHttpInfo (DispositivoPersistValue persist)
+        public ApiResponse< DispositivoResponse > SalvarUsingPOST11WithHttpInfo (DispositivoPersistValue persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagdispositivoApi->SalvarUsingPOST10");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagdispositivoApi->SalvarUsingPOST11");
             
     
             var localVarPath = "/api/dispositivos";
@@ -902,9 +902,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -919,9 +919,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of DispositivoResponse</returns>
-        public async System.Threading.Tasks.Task<DispositivoResponse> SalvarUsingPOST10Async (DispositivoPersistValue persist)
+        public async System.Threading.Tasks.Task<DispositivoResponse> SalvarUsingPOST11Async (DispositivoPersistValue persist)
         {
-             ApiResponse<DispositivoResponse> localVarResponse = await SalvarUsingPOST10AsyncWithHttpInfo(persist);
+             ApiResponse<DispositivoResponse> localVarResponse = await SalvarUsingPOST11AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -932,10 +932,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DispositivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> SalvarUsingPOST10AsyncWithHttpInfo (DispositivoPersistValue persist)
+        public async System.Threading.Tasks.Task<ApiResponse<DispositivoResponse>> SalvarUsingPOST11AsyncWithHttpInfo (DispositivoPersistValue persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST10");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST11");
             
     
             var localVarPath = "/api/dispositivos";
@@ -987,9 +987,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

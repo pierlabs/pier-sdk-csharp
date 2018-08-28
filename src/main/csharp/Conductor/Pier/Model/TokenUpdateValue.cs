@@ -26,8 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="Owner">{{{token_dto_owner_value}}}.</param>
         /// <param name="CriadoPor">{{{token_dto_criado_por_value}}} (required).</param>
         /// <param name="AlteradoPor">{{{token_dto_alterado_por_value}}}.</param>
+        /// <param name="IdAplicacao">{{{token_dto_id_application_value}}}.</param>
 
-        public TokenUpdateValue(long? _Base = null, string Owner = null, string CriadoPor = null, string AlteradoPor = null)
+        public TokenUpdateValue(long? _Base = null, string Owner = null, string CriadoPor = null, string AlteradoPor = null, long? IdAplicacao = null)
         {
             // to ensure "CriadoPor" is required (not null)
             if (CriadoPor == null)
@@ -41,6 +42,7 @@ namespace Conductor.Pier.Model
             this._Base = _Base;
             this.Owner = Owner;
             this.AlteradoPor = AlteradoPor;
+            this.IdAplicacao = IdAplicacao;
             
         }
         
@@ -74,6 +76,13 @@ namespace Conductor.Pier.Model
         public string AlteradoPor { get; set; }
     
         /// <summary>
+        /// {{{token_dto_id_application_value}}}
+        /// </summary>
+        /// <value>{{{token_dto_id_application_value}}}</value>
+        [DataMember(Name="idAplicacao", EmitDefaultValue=false)]
+        public long? IdAplicacao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +94,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Owner: ").Append(Owner).Append("\n");
             sb.Append("  CriadoPor: ").Append(CriadoPor).Append("\n");
             sb.Append("  AlteradoPor: ").Append(AlteradoPor).Append("\n");
+            sb.Append("  IdAplicacao: ").Append(IdAplicacao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -141,6 +151,11 @@ namespace Conductor.Pier.Model
                     this.AlteradoPor == other.AlteradoPor ||
                     this.AlteradoPor != null &&
                     this.AlteradoPor.Equals(other.AlteradoPor)
+                ) && 
+                (
+                    this.IdAplicacao == other.IdAplicacao ||
+                    this.IdAplicacao != null &&
+                    this.IdAplicacao.Equals(other.IdAplicacao)
                 );
         }
 
@@ -167,6 +182,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.AlteradoPor != null)
                     hash = hash * 59 + this.AlteradoPor.GetHashCode();
+                
+                if (this.IdAplicacao != null)
+                    hash = hash * 59 + this.IdAplicacao.GetHashCode();
                 
                 return hash;
             }

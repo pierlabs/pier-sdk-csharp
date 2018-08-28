@@ -23,20 +23,44 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioPersistencia" />class.
         /// </summary>
         /// <param name="Nome">{{{usuario_persistencia_nome_descricao}}}.</param>
-        /// <param name="Login">{{{usuario_persistencia_login_descricao}}}.</param>
+        /// <param name="Login">{{{usuario_persistencia_login_descricao}}} (required).</param>
         /// <param name="Cpf">{{{usuario_persistencia_cpf_descricao}}}.</param>
-        /// <param name="Email">{{{usuario_persistencia_email_descricao}}}.</param>
-        /// <param name="Senha">{{{usuario_persistencia_senha_descricao}}}.</param>
+        /// <param name="Email">{{{usuario_persistencia_email_descricao}}} (required).</param>
+        /// <param name="Senha">{{{usuario_persistencia_senha_descricao}}} (required).</param>
         /// <param name="DataValidade">{{{usuario_persistencia_data_validade_descricao}}}.</param>
         /// <param name="IdPlataforma">{{{usuario_persistencia_id_plataforma_descricao}}}.</param>
 
         public UsuarioPersistencia(string Nome = null, string Login = null, string Cpf = null, string Email = null, string Senha = null, string DataValidade = null, long? IdPlataforma = null)
         {
+            // to ensure "Login" is required (not null)
+            if (Login == null)
+            {
+                throw new InvalidDataException("Login is a required property for UsuarioPersistencia and cannot be null");
+            }
+            else
+            {
+                this.Login = Login;
+            }
+            // to ensure "Email" is required (not null)
+            if (Email == null)
+            {
+                throw new InvalidDataException("Email is a required property for UsuarioPersistencia and cannot be null");
+            }
+            else
+            {
+                this.Email = Email;
+            }
+            // to ensure "Senha" is required (not null)
+            if (Senha == null)
+            {
+                throw new InvalidDataException("Senha is a required property for UsuarioPersistencia and cannot be null");
+            }
+            else
+            {
+                this.Senha = Senha;
+            }
             this.Nome = Nome;
-            this.Login = Login;
             this.Cpf = Cpf;
-            this.Email = Email;
-            this.Senha = Senha;
             this.DataValidade = DataValidade;
             this.IdPlataforma = IdPlataforma;
             

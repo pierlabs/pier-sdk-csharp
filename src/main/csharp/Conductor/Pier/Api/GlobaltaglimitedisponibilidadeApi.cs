@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse ConsultarUsingGET23 (long? idConta);
+        LimiteDisponibilidadeResponse ConsultarUsingGET25 (long? idConta);
   
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -85,7 +85,31 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET23WithHttpInfo (long? idConta);
+        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET25WithHttpInfo (long? idConta);
+        
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param>
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param>
+        /// <returns>LimiteDisponibilidadeResponse</returns>
+        LimiteDisponibilidadeResponse SensibilizarSaldoDisponivelGlobalUsingPOST (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal);
+  
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param>
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param>
+        /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
+        ApiResponse<LimiteDisponibilidadeResponse> SensibilizarSaldoDisponivelGlobalUsingPOSTWithHttpInfo (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal);
         
         #endregion Synchronous Operations
         
@@ -148,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET23Async (long? idConta);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET25Async (long? idConta);
 
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -159,7 +183,31 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? idConta);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? idConta);
+        
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param>
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param>
+        /// <returns>Task of LimiteDisponibilidadeResponse</returns>
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> SensibilizarSaldoDisponivelGlobalUsingPOSTAsync (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal);
+
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param>
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param>
+        /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> SensibilizarSaldoDisponivelGlobalUsingPOSTAsyncWithHttpInfo (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal);
         
         #endregion Asynchronous Operations
         
@@ -495,9 +543,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse ConsultarUsingGET23 (long? idConta)
+        public LimiteDisponibilidadeResponse ConsultarUsingGET25 (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET23WithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(idConta);
              return localVarResponse.Data;
         }
 
@@ -507,12 +555,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET23WithHttpInfo (long? idConta)
+        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET25WithHttpInfo (long? idConta)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->ConsultarUsingGET23");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->ConsultarUsingGET25");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -558,9 +606,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -575,9 +623,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET23Async (long? idConta)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET25Async (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET23AsyncWithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(idConta);
              return localVarResponse.Data;
 
         }
@@ -588,10 +636,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? idConta)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET23");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET25");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -637,9 +685,191 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LimiteDisponibilidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimiteDisponibilidadeResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}} {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param> 
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param> 
+        /// <returns>LimiteDisponibilidadeResponse</returns>
+        public LimiteDisponibilidadeResponse SensibilizarSaldoDisponivelGlobalUsingPOST (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal)
+        {
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = SensibilizarSaldoDisponivelGlobalUsingPOSTWithHttpInfo(id, sensibilizarSaldoGlobal);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}} {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param> 
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param> 
+        /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
+        public ApiResponse< LimiteDisponibilidadeResponse > SensibilizarSaldoDisponivelGlobalUsingPOSTWithHttpInfo (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltaglimitedisponibilidadeApi->SensibilizarSaldoDisponivelGlobalUsingPOST");
+            
+            // verify the required parameter 'sensibilizarSaldoGlobal' is set
+            if (sensibilizarSaldoGlobal == null)
+                throw new ApiException(400, "Missing required parameter 'sensibilizarSaldoGlobal' when calling GlobaltaglimitedisponibilidadeApi->SensibilizarSaldoDisponivelGlobalUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (sensibilizarSaldoGlobal.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(sensibilizarSaldoGlobal); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = sensibilizarSaldoGlobal; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SensibilizarSaldoDisponivelGlobalUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SensibilizarSaldoDisponivelGlobalUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LimiteDisponibilidadeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimiteDisponibilidadeResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}} {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param>
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param>
+        /// <returns>Task of LimiteDisponibilidadeResponse</returns>
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> SensibilizarSaldoDisponivelGlobalUsingPOSTAsync (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal)
+        {
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await SensibilizarSaldoDisponivelGlobalUsingPOSTAsyncWithHttpInfo(id, sensibilizarSaldoGlobal);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}} {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{sensibilizar_saldo_global_param_id}}}</param>
+        /// <param name="sensibilizarSaldoGlobal">sensibilizarSaldoGlobal</param>
+        /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> SensibilizarSaldoDisponivelGlobalUsingPOSTAsyncWithHttpInfo (long? id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SensibilizarSaldoDisponivelGlobalUsingPOST");
+            // verify the required parameter 'sensibilizarSaldoGlobal' is set
+            if (sensibilizarSaldoGlobal == null) throw new ApiException(400, "Missing required parameter 'sensibilizarSaldoGlobal' when calling SensibilizarSaldoDisponivelGlobalUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (sensibilizarSaldoGlobal.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(sensibilizarSaldoGlobal); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = sensibilizarSaldoGlobal; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SensibilizarSaldoDisponivelGlobalUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SensibilizarSaldoDisponivelGlobalUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

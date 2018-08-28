@@ -32,7 +32,10 @@ namespace Conductor.Pier.Model
             CodigoSeguranca,
             
             [EnumMember(Value = "OUTROS")]
-            Outros
+            Outros,
+            
+            [EnumMember(Value = "OTP_3D_SECURE")]
+            Otp3dSecure
         }
 
     
@@ -47,12 +50,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PushFCMGCMPersistValue" /> class.
         /// Initializes a new instance of the <see cref="PushFCMGCMPersistValue" />class.
         /// </summary>
-        /// <param name="IdPessoa">{{{push_f_c_m_g_c_m_persist_id_pessoa_value}}} (required).</param>
-        /// <param name="IdConta">{{{push_f_c_m_g_c_m_persist_id_conta_value}}} (required).</param>
-        /// <param name="TokenDispositivo">{{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}} (required).</param>
+        /// <param name="IdPessoa">{{{push_a_p_n_s_persist_id_pessoa_value}}} (required).</param>
+        /// <param name="IdConta">{{{push_a_p_n_s_persist_id_conta_value}}} (required).</param>
+        /// <param name="TokenDispositivo">{{{push_a_p_n_s_persist_token_dispositivo_value}}} (required).</param>
         /// <param name="TokenServidor">{{{push_f_c_m_g_c_m_persist_token_servidor_value}}} (required).</param>
-        /// <param name="Titulo">{{{push_f_c_m_g_c_m_persist_titulo_value}}} (required).</param>
-        /// <param name="Conteudo">{{{push_f_c_m_g_c_m_persist_conteudo_value}}} (required).</param>
+        /// <param name="Titulo">{{{push_a_p_n_s_persist_titulo_value}}} (required).</param>
+        /// <param name="Conteudo">{{{push_a_p_n_s_persist_conteudo_value}}} (required).</param>
         /// <param name="TipoEvento">{{{push_f_c_m_g_c_m_persist_tipo_evento_value}}} (required).</param>
         /// <param name="Icone">{{{push_f_c_m_g_c_m_persist_icone_value}}}.</param>
         /// <param name="Som">{{{push_f_c_m_g_c_m_persist_som_value}}}.</param>
@@ -131,23 +134,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}
+        /// {{{push_a_p_n_s_persist_id_pessoa_value}}}
         /// </summary>
-        /// <value>{{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}</value>
+        /// <value>{{{push_a_p_n_s_persist_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{push_f_c_m_g_c_m_persist_id_conta_value}}}
+        /// {{{push_a_p_n_s_persist_id_conta_value}}}
         /// </summary>
-        /// <value>{{{push_f_c_m_g_c_m_persist_id_conta_value}}}</value>
+        /// <value>{{{push_a_p_n_s_persist_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}
+        /// {{{push_a_p_n_s_persist_token_dispositivo_value}}}
         /// </summary>
-        /// <value>{{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}</value>
+        /// <value>{{{push_a_p_n_s_persist_token_dispositivo_value}}}</value>
         [DataMember(Name="tokenDispositivo", EmitDefaultValue=false)]
         public string TokenDispositivo { get; set; }
     
@@ -159,16 +162,16 @@ namespace Conductor.Pier.Model
         public string TokenServidor { get; set; }
     
         /// <summary>
-        /// {{{push_f_c_m_g_c_m_persist_titulo_value}}}
+        /// {{{push_a_p_n_s_persist_titulo_value}}}
         /// </summary>
-        /// <value>{{{push_f_c_m_g_c_m_persist_titulo_value}}}</value>
+        /// <value>{{{push_a_p_n_s_persist_titulo_value}}}</value>
         [DataMember(Name="titulo", EmitDefaultValue=false)]
         public string Titulo { get; set; }
     
         /// <summary>
-        /// {{{push_f_c_m_g_c_m_persist_conteudo_value}}}
+        /// {{{push_a_p_n_s_persist_conteudo_value}}}
         /// </summary>
-        /// <value>{{{push_f_c_m_g_c_m_persist_conteudo_value}}}</value>
+        /// <value>{{{push_a_p_n_s_persist_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

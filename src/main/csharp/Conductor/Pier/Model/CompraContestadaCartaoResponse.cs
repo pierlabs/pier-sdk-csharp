@@ -23,18 +23,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CompraContestadaCartaoResponse" />class.
         /// </summary>
         /// <param name="IdCartao">{{{compra_contestada_cartao_response_id_cartao_value}}}.</param>
+        /// <param name="AgingCompras">{{{compra_contestada_cartao_response_aging_compras_value}}}.</param>
         /// <param name="AgingContestacao">{{{compra_contestada_cartao_response_aging_contestacao_value}}}.</param>
         /// <param name="Cartao">{{{compra_contestada_cartao_response_cartao_value}}}.</param>
         /// <param name="Nome">{{{compra_contestada_cartao_response_nome_value}}}.</param>
         /// <param name="Bandeira">{{{compra_contestada_cartao_response_bandeira_value}}}.</param>
+        /// <param name="ValorCompra">{{{compra_contestada_cartao_response_valor_compra_value}}}.</param>
 
-        public CompraContestadaCartaoResponse(long? IdCartao = null, long? AgingContestacao = null, string Cartao = null, string Nome = null, string Bandeira = null)
+        public CompraContestadaCartaoResponse(long? IdCartao = null, long? AgingCompras = null, long? AgingContestacao = null, string Cartao = null, string Nome = null, string Bandeira = null, string ValorCompra = null)
         {
             this.IdCartao = IdCartao;
+            this.AgingCompras = AgingCompras;
             this.AgingContestacao = AgingContestacao;
             this.Cartao = Cartao;
             this.Nome = Nome;
             this.Bandeira = Bandeira;
+            this.ValorCompra = ValorCompra;
             
         }
         
@@ -45,6 +49,13 @@ namespace Conductor.Pier.Model
         /// <value>{{{compra_contestada_cartao_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
+    
+        /// <summary>
+        /// {{{compra_contestada_cartao_response_aging_compras_value}}}
+        /// </summary>
+        /// <value>{{{compra_contestada_cartao_response_aging_compras_value}}}</value>
+        [DataMember(Name="agingCompras", EmitDefaultValue=false)]
+        public long? AgingCompras { get; set; }
     
         /// <summary>
         /// {{{compra_contestada_cartao_response_aging_contestacao_value}}}
@@ -75,6 +86,13 @@ namespace Conductor.Pier.Model
         public string Bandeira { get; set; }
     
         /// <summary>
+        /// {{{compra_contestada_cartao_response_valor_compra_value}}}
+        /// </summary>
+        /// <value>{{{compra_contestada_cartao_response_valor_compra_value}}}</value>
+        [DataMember(Name="valorCompra", EmitDefaultValue=false)]
+        public string ValorCompra { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,10 +101,12 @@ namespace Conductor.Pier.Model
             var sb = new StringBuilder();
             sb.Append("class CompraContestadaCartaoResponse {\n");
             sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
+            sb.Append("  AgingCompras: ").Append(AgingCompras).Append("\n");
             sb.Append("  AgingContestacao: ").Append(AgingContestacao).Append("\n");
             sb.Append("  Cartao: ").Append(Cartao).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Bandeira: ").Append(Bandeira).Append("\n");
+            sb.Append("  ValorCompra: ").Append(ValorCompra).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -130,6 +150,11 @@ namespace Conductor.Pier.Model
                     this.IdCartao.Equals(other.IdCartao)
                 ) && 
                 (
+                    this.AgingCompras == other.AgingCompras ||
+                    this.AgingCompras != null &&
+                    this.AgingCompras.Equals(other.AgingCompras)
+                ) && 
+                (
                     this.AgingContestacao == other.AgingContestacao ||
                     this.AgingContestacao != null &&
                     this.AgingContestacao.Equals(other.AgingContestacao)
@@ -148,6 +173,11 @@ namespace Conductor.Pier.Model
                     this.Bandeira == other.Bandeira ||
                     this.Bandeira != null &&
                     this.Bandeira.Equals(other.Bandeira)
+                ) && 
+                (
+                    this.ValorCompra == other.ValorCompra ||
+                    this.ValorCompra != null &&
+                    this.ValorCompra.Equals(other.ValorCompra)
                 );
         }
 
@@ -166,6 +196,9 @@ namespace Conductor.Pier.Model
                 if (this.IdCartao != null)
                     hash = hash * 59 + this.IdCartao.GetHashCode();
                 
+                if (this.AgingCompras != null)
+                    hash = hash * 59 + this.AgingCompras.GetHashCode();
+                
                 if (this.AgingContestacao != null)
                     hash = hash * 59 + this.AgingContestacao.GetHashCode();
                 
@@ -177,6 +210,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Bandeira != null)
                     hash = hash * 59 + this.Bandeira.GetHashCode();
+                
+                if (this.ValorCompra != null)
+                    hash = hash * 59 + this.ValorCompra.GetHashCode();
                 
                 return hash;
             }

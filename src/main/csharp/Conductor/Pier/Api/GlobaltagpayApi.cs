@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>CartaoPayResponse</returns>
-        CartaoPayResponse AtualizarUsingPUT (string deviceId, long? id, CartaoPayUpdate update);
+        CartaoPayResponse AtualizarUsingPUT1 (string deviceId, long? id, CartaoPayUpdate update);
   
         /// <summary>
         /// {{{cartao_pay_resource_atualizar}}}
@@ -65,7 +65,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of CartaoPayResponse</returns>
-        ApiResponse<CartaoPayResponse> AtualizarUsingPUTWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update);
+        ApiResponse<CartaoPayResponse> AtualizarUsingPUT1WithHttpInfo (string deviceId, long? id, CartaoPayUpdate update);
         
         /// <summary>
         /// {{{cartao_pay_resource_confirma_atualizacao_chave}}}
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>CartaoPayDetalheResponse</returns>
-        CartaoPayDetalheResponse ConsultarUsingGET9 (string deviceId, long? id);
+        CartaoPayDetalheResponse ConsultarUsingGET11 (string deviceId, long? id);
   
         /// <summary>
         /// {{{cartao_pay_resource_consultar}}}
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET9WithHttpInfo (string deviceId, long? id);
+        ApiResponse<CartaoPayDetalheResponse> ConsultarUsingGET11WithHttpInfo (string deviceId, long? id);
         
         /// <summary>
         /// {{{enum_pay_resource_listar_codigos_resposta}}}
@@ -231,7 +231,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param>
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param>
         /// <returns>PageCartaoPayResponse</returns>
-        PageCartaoPayResponse ListarUsingGET10 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        PageCartaoPayResponse ListarUsingGET11 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
   
         /// <summary>
         /// {{{cartao_pay_resource_listar}}}
@@ -247,7 +247,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param>
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param>
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        ApiResponse<PageCartaoPayResponse> ListarUsingGET10WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        ApiResponse<PageCartaoPayResponse> ListarUsingGET11WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
         /// {{{cartao_pay_resource_salvar}}}
@@ -259,7 +259,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>CartaoPayCadastroResponse</returns>
-        CartaoPayCadastroResponse SalvarUsingPOST5 (string deviceId, CartaoPayPersist persist);
+        CartaoPayCadastroResponse SalvarUsingPOST6 (string deviceId, CartaoPayPersist persist);
   
         /// <summary>
         /// {{{cartao_pay_resource_salvar}}}
@@ -271,7 +271,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of CartaoPayCadastroResponse</returns>
-        ApiResponse<CartaoPayCadastroResponse> SalvarUsingPOST5WithHttpInfo (string deviceId, CartaoPayPersist persist);
+        ApiResponse<CartaoPayCadastroResponse> SalvarUsingPOST6WithHttpInfo (string deviceId, CartaoPayPersist persist);
         
         #endregion Synchronous Operations
         
@@ -312,7 +312,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of CartaoPayResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayResponse> AtualizarUsingPUTAsync (string deviceId, long? id, CartaoPayUpdate update);
+        System.Threading.Tasks.Task<CartaoPayResponse> AtualizarUsingPUT1Async (string deviceId, long? id, CartaoPayUpdate update);
 
         /// <summary>
         /// {{{cartao_pay_resource_atualizar}}}
@@ -325,7 +325,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (CartaoPayResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayResponse>> AtualizarUsingPUTAsyncWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update);
         
         /// <summary>
         /// {{{cartao_pay_resource_confirma_atualizacao_chave}}}
@@ -363,7 +363,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET9Async (string deviceId, long? id);
+        System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET11Async (string deviceId, long? id);
 
         /// <summary>
         /// {{{cartao_pay_resource_consultar}}}
@@ -375,7 +375,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (string deviceId, long? id);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET11AsyncWithHttpInfo (string deviceId, long? id);
         
         /// <summary>
         /// {{{enum_pay_resource_listar_codigos_resposta}}}
@@ -491,7 +491,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param>
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET10Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET11Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
 
         /// <summary>
         /// {{{cartao_pay_resource_listar}}}
@@ -507,7 +507,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param>
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET10AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET11AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null);
         
         /// <summary>
         /// {{{cartao_pay_resource_salvar}}}
@@ -519,7 +519,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of CartaoPayCadastroResponse</returns>
-        System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST5Async (string deviceId, CartaoPayPersist persist);
+        System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST6Async (string deviceId, CartaoPayPersist persist);
 
         /// <summary>
         /// {{{cartao_pay_resource_salvar}}}
@@ -531,7 +531,7 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (CartaoPayCadastroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST5AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST6AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -803,9 +803,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>CartaoPayResponse</returns>
-        public CartaoPayResponse AtualizarUsingPUT (string deviceId, long? id, CartaoPayUpdate update)
+        public CartaoPayResponse AtualizarUsingPUT1 (string deviceId, long? id, CartaoPayUpdate update)
         {
-             ApiResponse<CartaoPayResponse> localVarResponse = AtualizarUsingPUTWithHttpInfo(deviceId, id, update);
+             ApiResponse<CartaoPayResponse> localVarResponse = AtualizarUsingPUT1WithHttpInfo(deviceId, id, update);
              return localVarResponse.Data;
         }
 
@@ -817,20 +817,20 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of CartaoPayResponse</returns>
-        public ApiResponse< CartaoPayResponse > AtualizarUsingPUTWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update)
+        public ApiResponse< CartaoPayResponse > AtualizarUsingPUT1WithHttpInfo (string deviceId, long? id, CartaoPayUpdate update)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->AtualizarUsingPUT1");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpayApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpayApi->AtualizarUsingPUT1");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagpayApi->AtualizarUsingPUT");
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagpayApi->AtualizarUsingPUT1");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -884,9 +884,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -903,9 +903,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of CartaoPayResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayResponse> AtualizarUsingPUTAsync (string deviceId, long? id, CartaoPayUpdate update)
+        public async System.Threading.Tasks.Task<CartaoPayResponse> AtualizarUsingPUT1Async (string deviceId, long? id, CartaoPayUpdate update)
         {
-             ApiResponse<CartaoPayResponse> localVarResponse = await AtualizarUsingPUTAsyncWithHttpInfo(deviceId, id, update);
+             ApiResponse<CartaoPayResponse> localVarResponse = await AtualizarUsingPUT1AsyncWithHttpInfo(deviceId, id, update);
              return localVarResponse.Data;
 
         }
@@ -918,14 +918,14 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_pay_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (CartaoPayResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayResponse>> AtualizarUsingPUTAsyncWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (string deviceId, long? id, CartaoPayUpdate update)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling AtualizarUsingPUT");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling AtualizarUsingPUT1");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT1");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarUsingPUT");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarUsingPUT1");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -979,9 +979,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1190,9 +1190,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param> 
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param> 
         /// <returns>CartaoPayDetalheResponse</returns>
-        public CartaoPayDetalheResponse ConsultarUsingGET9 (string deviceId, long? id)
+        public CartaoPayDetalheResponse ConsultarUsingGET11 (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET9WithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = ConsultarUsingGET11WithHttpInfo(deviceId, id);
              return localVarResponse.Data;
         }
 
@@ -1203,16 +1203,16 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param> 
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of CartaoPayDetalheResponse</returns>
-        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET9WithHttpInfo (string deviceId, long? id)
+        public ApiResponse< CartaoPayDetalheResponse > ConsultarUsingGET11WithHttpInfo (string deviceId, long? id)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->ConsultarUsingGET9");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->ConsultarUsingGET11");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpayApi->ConsultarUsingGET9");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpayApi->ConsultarUsingGET11");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1259,9 +1259,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1277,9 +1277,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of CartaoPayDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET9Async (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<CartaoPayDetalheResponse> ConsultarUsingGET11Async (string deviceId, long? id)
         {
-             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(deviceId, id);
+             ApiResponse<CartaoPayDetalheResponse> localVarResponse = await ConsultarUsingGET11AsyncWithHttpInfo(deviceId, id);
              return localVarResponse.Data;
 
         }
@@ -1291,12 +1291,12 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_consultar_param_device_id}}}</param>
         /// <param name="id">{{{cartao_pay_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CartaoPayDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET9AsyncWithHttpInfo (string deviceId, long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayDetalheResponse>> ConsultarUsingGET11AsyncWithHttpInfo (string deviceId, long? id)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET9");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling ConsultarUsingGET11");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET9");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET11");
             
     
             var localVarPath = "/api/cartoes-tokenizados/{id}";
@@ -1343,9 +1343,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2094,9 +2094,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param> 
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param> 
         /// <returns>PageCartaoPayResponse</returns>
-        public PageCartaoPayResponse ListarUsingGET10 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public PageCartaoPayResponse ListarUsingGET11 (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET10WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = ListarUsingGET11WithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
         }
 
@@ -2111,7 +2111,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param> 
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageCartaoPayResponse</returns>
-        public ApiResponse< PageCartaoPayResponse > ListarUsingGET10WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public ApiResponse< PageCartaoPayResponse > ListarUsingGET11WithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
             
     
@@ -2163,9 +2163,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2185,9 +2185,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param>
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param>
         /// <returns>Task of PageCartaoPayResponse</returns>
-        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET10Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public async System.Threading.Tasks.Task<PageCartaoPayResponse> ListarUsingGET11Async (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
-             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
+             ApiResponse<PageCartaoPayResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(deviceId, sort, page, limit, status, numeroCartao);
              return localVarResponse.Data;
 
         }
@@ -2203,7 +2203,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{cartao_pay_request_status_value}}} (optional)</param>
         /// <param name="numeroCartao">{{{cartao_pay_request_numero_cartao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoPayResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET10AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoPayResponse>> ListarUsingGET11AsyncWithHttpInfo (string deviceId = null, List<string> sort = null, int? page = null, int? limit = null, string status = null, string numeroCartao = null)
         {
             
     
@@ -2255,9 +2255,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCartaoPayResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2272,9 +2272,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param> 
         /// <param name="persist">persist</param> 
         /// <returns>CartaoPayCadastroResponse</returns>
-        public CartaoPayCadastroResponse SalvarUsingPOST5 (string deviceId, CartaoPayPersist persist)
+        public CartaoPayCadastroResponse SalvarUsingPOST6 (string deviceId, CartaoPayPersist persist)
         {
-             ApiResponse<CartaoPayCadastroResponse> localVarResponse = SalvarUsingPOST5WithHttpInfo(deviceId, persist);
+             ApiResponse<CartaoPayCadastroResponse> localVarResponse = SalvarUsingPOST6WithHttpInfo(deviceId, persist);
              return localVarResponse.Data;
         }
 
@@ -2285,16 +2285,16 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of CartaoPayCadastroResponse</returns>
-        public ApiResponse< CartaoPayCadastroResponse > SalvarUsingPOST5WithHttpInfo (string deviceId, CartaoPayPersist persist)
+        public ApiResponse< CartaoPayCadastroResponse > SalvarUsingPOST6WithHttpInfo (string deviceId, CartaoPayPersist persist)
         {
             
             // verify the required parameter 'deviceId' is set
             if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->SalvarUsingPOST5");
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling GlobaltagpayApi->SalvarUsingPOST6");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagpayApi->SalvarUsingPOST5");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagpayApi->SalvarUsingPOST6");
             
     
             var localVarPath = "/api/cartoes-tokenizados";
@@ -2347,9 +2347,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoPayCadastroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2365,9 +2365,9 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of CartaoPayCadastroResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST5Async (string deviceId, CartaoPayPersist persist)
+        public async System.Threading.Tasks.Task<CartaoPayCadastroResponse> SalvarUsingPOST6Async (string deviceId, CartaoPayPersist persist)
         {
-             ApiResponse<CartaoPayCadastroResponse> localVarResponse = await SalvarUsingPOST5AsyncWithHttpInfo(deviceId, persist);
+             ApiResponse<CartaoPayCadastroResponse> localVarResponse = await SalvarUsingPOST6AsyncWithHttpInfo(deviceId, persist);
              return localVarResponse.Data;
 
         }
@@ -2379,12 +2379,12 @@ namespace Conductor.Pier.Api
         /// <param name="deviceId">{{{cartao_pay_resource_salvar_param_device_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (CartaoPayCadastroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST5AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoPayCadastroResponse>> SalvarUsingPOST6AsyncWithHttpInfo (string deviceId, CartaoPayPersist persist)
         {
             // verify the required parameter 'deviceId' is set
-            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling SalvarUsingPOST5");
+            if (deviceId == null) throw new ApiException(400, "Missing required parameter 'deviceId' when calling SalvarUsingPOST6");
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST5");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST6");
             
     
             var localVarPath = "/api/cartoes-tokenizados";
@@ -2437,9 +2437,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoPayCadastroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

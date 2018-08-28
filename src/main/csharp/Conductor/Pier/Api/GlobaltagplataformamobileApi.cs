@@ -53,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>PagePlataformaMobileResponse</returns>
-        PagePlataformaMobileResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        PagePlataformaMobileResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
   
         /// <summary>
         /// {{{plataforma_mobile_resource_listar}}}
@@ -67,7 +67,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// {{{plataforma_mobile_resource_salvar}}}
@@ -78,7 +78,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>PlataformaMobileResponse</returns>
-        PlataformaMobileResponse SalvarUsingPOST26 (PlataformaMobilePersistValue persist);
+        PlataformaMobileResponse SalvarUsingPOST27 (PlataformaMobilePersistValue persist);
   
         /// <summary>
         /// {{{plataforma_mobile_resource_salvar}}}
@@ -89,7 +89,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of PlataformaMobileResponse</returns>
-        ApiResponse<PlataformaMobileResponse> SalvarUsingPOST26WithHttpInfo (PlataformaMobilePersistValue persist);
+        ApiResponse<PlataformaMobileResponse> SalvarUsingPOST27WithHttpInfo (PlataformaMobilePersistValue persist);
         
         #endregion Synchronous Operations
         
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
 
         /// <summary>
         /// {{{plataforma_mobile_resource_listar}}}
@@ -145,7 +145,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// {{{plataforma_mobile_resource_salvar}}}
@@ -156,7 +156,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of PlataformaMobileResponse</returns>
-        System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST26Async (PlataformaMobilePersistValue persist);
+        System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST27Async (PlataformaMobilePersistValue persist);
 
         /// <summary>
         /// {{{plataforma_mobile_resource_salvar}}}
@@ -167,7 +167,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST26AsyncWithHttpInfo (PlataformaMobilePersistValue persist);
+        System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST27AsyncWithHttpInfo (PlataformaMobilePersistValue persist);
         
         #endregion Asynchronous Operations
         
@@ -452,9 +452,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param> 
         /// <returns>PagePlataformaMobileResponse</returns>
-        public PagePlataformaMobileResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public PagePlataformaMobileResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET40WithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET42WithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
         }
 
@@ -467,7 +467,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param> 
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -517,9 +517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -537,9 +537,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET40AsyncWithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET42AsyncWithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
 
         }
@@ -553,7 +553,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -603,9 +603,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -619,9 +619,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>PlataformaMobileResponse</returns>
-        public PlataformaMobileResponse SalvarUsingPOST26 (PlataformaMobilePersistValue persist)
+        public PlataformaMobileResponse SalvarUsingPOST27 (PlataformaMobilePersistValue persist)
         {
-             ApiResponse<PlataformaMobileResponse> localVarResponse = SalvarUsingPOST26WithHttpInfo(persist);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = SalvarUsingPOST27WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -631,12 +631,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of PlataformaMobileResponse</returns>
-        public ApiResponse< PlataformaMobileResponse > SalvarUsingPOST26WithHttpInfo (PlataformaMobilePersistValue persist)
+        public ApiResponse< PlataformaMobileResponse > SalvarUsingPOST27WithHttpInfo (PlataformaMobilePersistValue persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagplataformamobileApi->SalvarUsingPOST26");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagplataformamobileApi->SalvarUsingPOST27");
             
     
             var localVarPath = "/api/plataformas-mobile";
@@ -688,9 +688,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -705,9 +705,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of PlataformaMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST26Async (PlataformaMobilePersistValue persist)
+        public async System.Threading.Tasks.Task<PlataformaMobileResponse> SalvarUsingPOST27Async (PlataformaMobilePersistValue persist)
         {
-             ApiResponse<PlataformaMobileResponse> localVarResponse = await SalvarUsingPOST26AsyncWithHttpInfo(persist);
+             ApiResponse<PlataformaMobileResponse> localVarResponse = await SalvarUsingPOST27AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -718,10 +718,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (PlataformaMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST26AsyncWithHttpInfo (PlataformaMobilePersistValue persist)
+        public async System.Threading.Tasks.Task<ApiResponse<PlataformaMobileResponse>> SalvarUsingPOST27AsyncWithHttpInfo (PlataformaMobilePersistValue persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST26");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST27");
             
     
             var localVarPath = "/api/plataformas-mobile";
@@ -773,9 +773,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse ConsultarUsingGET7 (long? id);
+        AvisoViagemResponse ConsultarUsingGET8 (long? id);
   
         /// <summary>
         /// {{{aviso_viagem_resource_consultar}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> ConsultarUsingGET7WithHttpInfo (long? id);
+        ApiResponse<AvisoViagemResponse> ConsultarUsingGET8WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{aviso_viagem_resource_desabilitar}}}
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param>
         /// <returns>PageAvisoViagemResponse</returns>
-        PageAvisoViagemResponse ListarUsingGET8 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        PageAvisoViagemResponse ListarUsingGET9 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
   
         /// <summary>
         /// {{{aviso_viagem_resource_listar}}}
@@ -117,7 +117,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param>
         /// <returns>ApiResponse of PageAvisoViagemResponse</returns>
-        ApiResponse<PageAvisoViagemResponse> ListarUsingGET8WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        ApiResponse<PageAvisoViagemResponse> ListarUsingGET9WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
         
         /// <summary>
         /// {{{aviso_viagem_resource_salvar}}}
@@ -160,7 +160,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET7Async (long? id);
+        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET8Async (long? id);
 
         /// <summary>
         /// {{{aviso_viagem_resource_consultar}}}
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET8AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{aviso_viagem_resource_desabilitar}}}
@@ -233,7 +233,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of PageAvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET8Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET9Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
 
         /// <summary>
         /// {{{aviso_viagem_resource_listar}}}
@@ -251,7 +251,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageAvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET8AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET9AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null);
         
         /// <summary>
         /// {{{aviso_viagem_resource_salvar}}}
@@ -379,9 +379,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse ConsultarUsingGET7 (long? id)
+        public AvisoViagemResponse ConsultarUsingGET8 (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarUsingGET7WithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarUsingGET8WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -391,12 +391,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > ConsultarUsingGET7WithHttpInfo (long? id)
+        public ApiResponse< AvisoViagemResponse > ConsultarUsingGET8WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagavisoviagemApi->ConsultarUsingGET7");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagavisoviagemApi->ConsultarUsingGET8");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -442,9 +442,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -459,9 +459,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET7Async (long? id)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarUsingGET8Async (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarUsingGET8AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -472,10 +472,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{aviso_viagem_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarUsingGET8AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET7");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET8");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -521,9 +521,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -860,9 +860,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param> 
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param> 
         /// <returns>PageAvisoViagemResponse</returns>
-        public PageAvisoViagemResponse ListarUsingGET8 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public PageAvisoViagemResponse ListarUsingGET9 (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
-             ApiResponse<PageAvisoViagemResponse> localVarResponse = ListarUsingGET8WithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
+             ApiResponse<PageAvisoViagemResponse> localVarResponse = ListarUsingGET9WithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -879,7 +879,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param> 
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageAvisoViagemResponse</returns>
-        public ApiResponse< PageAvisoViagemResponse > ListarUsingGET8WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public ApiResponse< PageAvisoViagemResponse > ListarUsingGET9WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
             
     
@@ -933,9 +933,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -957,9 +957,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of PageAvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET8Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarUsingGET9Async (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
-             ApiResponse<PageAvisoViagemResponse> localVarResponse = await ListarUsingGET8AsyncWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
+             ApiResponse<PageAvisoViagemResponse> localVarResponse = await ListarUsingGET9AsyncWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -977,7 +977,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataFim">{{{aviso_viagem_request_data_fim_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{aviso_viagem_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageAvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET8AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarUsingGET9AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null)
         {
             
     
@@ -1031,9 +1031,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

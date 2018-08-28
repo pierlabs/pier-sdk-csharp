@@ -44,14 +44,24 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" />class.
         /// </summary>
+        /// <param name="Id">{{{parametro_produto_response_id_value}}} (required).</param>
         /// <param name="IdProduto">{{{parametro_produto_response_id_produto_value}}} (required).</param>
         /// <param name="TipoOrigemTransacao">{{{parametro_produto_response_tipo_origem_transacao_value}}} (required).</param>
         /// <param name="Descricao">{{{parametro_produto_response_descricao_value}}} (required).</param>
         /// <param name="ValorParametro">{{{parametro_produto_response_valor_parametro_value}}} (required).</param>
         /// <param name="DataValidade">{{{parametro_produto_response_data_validade_value}}} (required).</param>
 
-        public ParametroProdutoResponse(long? IdProduto = null, TipoOrigemTransacaoEnum? TipoOrigemTransacao = null, string Descricao = null, double? ValorParametro = null, string DataValidade = null)
+        public ParametroProdutoResponse(long? Id = null, long? IdProduto = null, TipoOrigemTransacaoEnum? TipoOrigemTransacao = null, string Descricao = null, double? ValorParametro = null, string DataValidade = null)
         {
+            // to ensure "Id" is required (not null)
+            if (Id == null)
+            {
+                throw new InvalidDataException("Id is a required property for ParametroProdutoResponse and cannot be null");
+            }
+            else
+            {
+                this.Id = Id;
+            }
             // to ensure "IdProduto" is required (not null)
             if (IdProduto == null)
             {
@@ -102,6 +112,13 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
+        /// {{{parametro_produto_response_id_value}}}
+        /// </summary>
+        /// <value>{{{parametro_produto_response_id_value}}}</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
+    
+        /// <summary>
         /// {{{parametro_produto_response_id_produto_value}}}
         /// </summary>
         /// <value>{{{parametro_produto_response_id_produto_value}}}</value>
@@ -137,6 +154,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ParametroProdutoResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  TipoOrigemTransacao: ").Append(TipoOrigemTransacao).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
@@ -180,6 +198,11 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
                     this.IdProduto == other.IdProduto ||
                     this.IdProduto != null &&
                     this.IdProduto.Equals(other.IdProduto)
@@ -217,6 +240,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.IdProduto != null)
                     hash = hash * 59 + this.IdProduto.GetHashCode();

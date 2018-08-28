@@ -56,8 +56,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdConta">{{{boleto_response_id_conta_value}}}.</param>
         /// <param name="EnderecoCobrancaBeneficiario">{{{boleto_response_endereco_cobranca_beneficiario_value}}}.</param>
         /// <param name="Status">{{{boleto_response_status_value}}}.</param>
+        /// <param name="BoletoRegistrado">{{{boleto_response_registrado_value}}}.</param>
 
-        public BoletoResponse(string NumeroDoDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null, long? Id = null, long? IdConta = null, string EnderecoCobrancaBeneficiario = null, long? Status = null)
+        public BoletoResponse(string NumeroDoDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null, long? Id = null, long? IdConta = null, string EnderecoCobrancaBeneficiario = null, long? Status = null, bool? BoletoRegistrado = null)
         {
             this.NumeroDoDocumento = NumeroDoDocumento;
             this.DataProcessamento = DataProcessamento;
@@ -93,6 +94,7 @@ namespace Conductor.Pier.Model
             this.IdConta = IdConta;
             this.EnderecoCobrancaBeneficiario = EnderecoCobrancaBeneficiario;
             this.Status = Status;
+            this.BoletoRegistrado = BoletoRegistrado;
             
         }
         
@@ -336,6 +338,13 @@ namespace Conductor.Pier.Model
         public long? Status { get; set; }
     
         /// <summary>
+        /// {{{boleto_response_registrado_value}}}
+        /// </summary>
+        /// <value>{{{boleto_response_registrado_value}}}</value>
+        [DataMember(Name="boletoRegistrado", EmitDefaultValue=false)]
+        public bool? BoletoRegistrado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -377,6 +386,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  EnderecoCobrancaBeneficiario: ").Append(EnderecoCobrancaBeneficiario).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  BoletoRegistrado: ").Append(BoletoRegistrado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -583,6 +593,11 @@ namespace Conductor.Pier.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) && 
+                (
+                    this.BoletoRegistrado == other.BoletoRegistrado ||
+                    this.BoletoRegistrado != null &&
+                    this.BoletoRegistrado.Equals(other.BoletoRegistrado)
                 );
         }
 
@@ -699,6 +714,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.BoletoRegistrado != null)
+                    hash = hash * 59 + this.BoletoRegistrado.GetHashCode();
                 
                 return hash;
             }

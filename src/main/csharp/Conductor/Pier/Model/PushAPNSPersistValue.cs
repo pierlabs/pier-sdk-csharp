@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// {{{push_a_p_n_s_persist_tipo_evento_value}}}
+        /// {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
         /// </summary>
-        /// <value>{{{push_a_p_n_s_persist_tipo_evento_value}}}</value>
+        /// <value>{{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -32,14 +32,17 @@ namespace Conductor.Pier.Model
             CodigoSeguranca,
             
             [EnumMember(Value = "OUTROS")]
-            Outros
+            Outros,
+            
+            [EnumMember(Value = "OTP_3D_SECURE")]
+            Otp3dSecure
         }
 
     
         /// <summary>
-        /// {{{push_a_p_n_s_persist_tipo_evento_value}}}
+        /// {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
         /// </summary>
-        /// <value>{{{push_a_p_n_s_persist_tipo_evento_value}}}</value>
+        /// <value>{{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
@@ -54,9 +57,9 @@ namespace Conductor.Pier.Model
         /// <param name="Senha">{{{push_a_p_n_s_persist_senha_value}}} (required).</param>
         /// <param name="Titulo">{{{push_a_p_n_s_persist_titulo_value}}} (required).</param>
         /// <param name="Conteudo">{{{push_a_p_n_s_persist_conteudo_value}}} (required).</param>
-        /// <param name="TipoEvento">{{{push_a_p_n_s_persist_tipo_evento_value}}} (required).</param>
-        /// <param name="Icone">{{{push_a_p_n_s_persist_icone_value}}}.</param>
-        /// <param name="Som">{{{push_a_p_n_s_persist_som_value}}}.</param>
+        /// <param name="TipoEvento">{{{push_f_c_m_g_c_m_persist_tipo_evento_value}}} (required).</param>
+        /// <param name="Icone">{{{push_f_c_m_g_c_m_persist_icone_value}}}.</param>
+        /// <param name="Som">{{{push_f_c_m_g_c_m_persist_som_value}}}.</param>
 
         public PushAPNSPersistValue(long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Certificado = null, string Senha = null, string Titulo = null, string Conteudo = null, TipoEventoEnum? TipoEvento = null, string Icone = null, string Som = null)
         {
@@ -188,16 +191,16 @@ namespace Conductor.Pier.Model
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// {{{push_a_p_n_s_persist_icone_value}}}
+        /// {{{push_f_c_m_g_c_m_persist_icone_value}}}
         /// </summary>
-        /// <value>{{{push_a_p_n_s_persist_icone_value}}}</value>
+        /// <value>{{{push_f_c_m_g_c_m_persist_icone_value}}}</value>
         [DataMember(Name="icone", EmitDefaultValue=false)]
         public string Icone { get; set; }
     
         /// <summary>
-        /// {{{push_a_p_n_s_persist_som_value}}}
+        /// {{{push_f_c_m_g_c_m_persist_som_value}}}
         /// </summary>
-        /// <value>{{{push_a_p_n_s_persist_som_value}}}</value>
+        /// <value>{{{push_f_c_m_g_c_m_persist_som_value}}}</value>
         [DataMember(Name="som", EmitDefaultValue=false)]
         public string Som { get; set; }
     

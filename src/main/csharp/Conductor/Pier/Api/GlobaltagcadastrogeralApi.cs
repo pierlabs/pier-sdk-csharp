@@ -42,6 +42,30 @@ namespace Conductor.Pier.Api
         ApiResponse<ConvenioResponse> AlterarConvenioUsingPUTWithHttpInfo (long? id, ConvenioPersist convenioPersist);
         
         /// <summary>
+        /// {{{vencimento_resource_alterar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{vencimento_resource_alterar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>ControleVencimentoResponse</returns>
+        ControleVencimentoResponse AlterarCorteUsingPUT (string dataVencimento, VencimentoUpdate update);
+  
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{vencimento_resource_alterar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>ApiResponse of ControleVencimentoResponse</returns>
+        ApiResponse<ControleVencimentoResponse> AlterarCorteUsingPUTWithHttpInfo (string dataVencimento, VencimentoUpdate update);
+        
+        /// <summary>
         /// {{{campanha_resource_alterar}}}
         /// </summary>
         /// <remarks>
@@ -258,7 +282,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param>
         /// <returns>ConfiguracaoRegistroCobrancaResponse</returns>
-        ConfiguracaoRegistroCobrancaResponse ConsultarUsingGET11 (long? id);
+        ConfiguracaoRegistroCobrancaResponse ConsultarUsingGET13 (long? id);
   
         /// <summary>
         /// {{{configuracao_registro_cobranca_resource_consultar}}}
@@ -269,7 +293,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of ConfiguracaoRegistroCobrancaResponse</returns>
-        ApiResponse<ConfiguracaoRegistroCobrancaResponse> ConsultarUsingGET11WithHttpInfo (long? id);
+        ApiResponse<ConfiguracaoRegistroCobrancaResponse> ConsultarUsingGET13WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{configuracao_rotativo_resource_consultar}}}
@@ -280,7 +304,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param>
         /// <returns>ConfiguracaoRotativoDetalheResponse</returns>
-        ConfiguracaoRotativoDetalheResponse ConsultarUsingGET12 (long? id);
+        ConfiguracaoRotativoDetalheResponse ConsultarUsingGET14 (long? id);
   
         /// <summary>
         /// {{{configuracao_rotativo_resource_consultar}}}
@@ -291,7 +315,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of ConfiguracaoRotativoDetalheResponse</returns>
-        ApiResponse<ConfiguracaoRotativoDetalheResponse> ConsultarUsingGET12WithHttpInfo (long? id);
+        ApiResponse<ConfiguracaoRotativoDetalheResponse> ConsultarUsingGET14WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{produto_resource_consultar}}}
@@ -302,7 +326,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param>
         /// <returns>ProdutoDetalhesResponse</returns>
-        ProdutoDetalhesResponse ConsultarUsingGET32 (long? id);
+        ProdutoDetalhesResponse ConsultarUsingGET34 (long? id);
   
         /// <summary>
         /// {{{produto_resource_consultar}}}
@@ -313,7 +337,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of ProdutoDetalhesResponse</returns>
-        ApiResponse<ProdutoDetalhesResponse> ConsultarUsingGET32WithHttpInfo (long? id);
+        ApiResponse<ProdutoDetalhesResponse> ConsultarUsingGET34WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_transacoes_ajuste_resource_consultar}}}
@@ -324,7 +348,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param>
         /// <returns>TipoAjusteResponse</returns>
-        TipoAjusteResponse ConsultarUsingGET41 (long? id);
+        TipoAjusteResponse ConsultarUsingGET43 (long? id);
   
         /// <summary>
         /// {{{tipo_transacoes_ajuste_resource_consultar}}}
@@ -335,7 +359,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoAjusteResponse</returns>
-        ApiResponse<TipoAjusteResponse> ConsultarUsingGET41WithHttpInfo (long? id);
+        ApiResponse<TipoAjusteResponse> ConsultarUsingGET43WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_boleto_resource_consultar}}}
@@ -351,7 +375,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param>
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param>
         /// <returns>PageTipoBoletoResponse</returns>
-        PageTipoBoletoResponse ConsultarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
+        PageTipoBoletoResponse ConsultarUsingGET44 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
   
         /// <summary>
         /// {{{tipo_boleto_resource_consultar}}}
@@ -367,7 +391,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param>
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoBoletoResponse</returns>
-        ApiResponse<PageTipoBoletoResponse> ConsultarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
+        ApiResponse<PageTipoBoletoResponse> ConsultarUsingGET44WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
         
         /// <summary>
         /// {{{tipo_endereco_resource_consultar}}}
@@ -378,7 +402,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param>
         /// <returns>TipoEnderecoResponse</returns>
-        TipoEnderecoResponse ConsultarUsingGET43 (long? id);
+        TipoEnderecoResponse ConsultarUsingGET45 (long? id);
   
         /// <summary>
         /// {{{tipo_endereco_resource_consultar}}}
@@ -389,7 +413,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoEnderecoResponse</returns>
-        ApiResponse<TipoEnderecoResponse> ConsultarUsingGET43WithHttpInfo (long? id);
+        ApiResponse<TipoEnderecoResponse> ConsultarUsingGET45WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_operacao_resource_consultar}}}
@@ -402,7 +426,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param>
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param>
         /// <returns>TipoOperacaoResponse</returns>
-        TipoOperacaoResponse ConsultarUsingGET44 (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
+        TipoOperacaoResponse ConsultarUsingGET46 (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
   
         /// <summary>
         /// {{{tipo_operacao_resource_consultar}}}
@@ -415,7 +439,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param>
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param>
         /// <returns>ApiResponse of TipoOperacaoResponse</returns>
-        ApiResponse<TipoOperacaoResponse> ConsultarUsingGET44WithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
+        ApiResponse<TipoOperacaoResponse> ConsultarUsingGET46WithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
         
         /// <summary>
         /// {{{tipo_telefone_resource_consultar}}}
@@ -426,7 +450,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param>
         /// <returns>TipoTelefoneResponse</returns>
-        TipoTelefoneResponse ConsultarUsingGET46 (long? id);
+        TipoTelefoneResponse ConsultarUsingGET48 (long? id);
   
         /// <summary>
         /// {{{tipo_telefone_resource_consultar}}}
@@ -437,7 +461,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoTelefoneResponse</returns>
-        ApiResponse<TipoTelefoneResponse> ConsultarUsingGET46WithHttpInfo (long? id);
+        ApiResponse<TipoTelefoneResponse> ConsultarUsingGET48WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{atendimento_cliente_resource_consultar}}}
@@ -448,7 +472,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param>
         /// <returns>AtendimentoClienteResponse</returns>
-        AtendimentoClienteResponse ConsultarUsingGET6 (long? id);
+        AtendimentoClienteResponse ConsultarUsingGET7 (long? id);
   
         /// <summary>
         /// {{{atendimento_cliente_resource_consultar}}}
@@ -459,7 +483,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param>
         /// <returns>ApiResponse of AtendimentoClienteResponse</returns>
-        ApiResponse<AtendimentoClienteResponse> ConsultarUsingGET6WithHttpInfo (long? id);
+        ApiResponse<AtendimentoClienteResponse> ConsultarUsingGET7WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{banco_resource_consultar}}}
@@ -470,7 +494,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param>
         /// <returns>BancoResponse</returns>
-        BancoResponse ConsultarUsingGET8 (long? id);
+        BancoResponse ConsultarUsingGET9 (long? id);
   
         /// <summary>
         /// {{{banco_resource_consultar}}}
@@ -481,7 +505,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of BancoResponse</returns>
-        ApiResponse<BancoResponse> ConsultarUsingGET8WithHttpInfo (long? id);
+        ApiResponse<BancoResponse> ConsultarUsingGET9WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{campanha_resource_listar_campanhas}}}
@@ -778,6 +802,32 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTipoCampanhaResponse> ListarTiposCampanhasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// {{{banco_resource_listar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{banco_resource_listar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>PageBancoResponse</returns>
+        PageBancoResponse ListarUsingGET10 (List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// {{{banco_resource_listar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{banco_resource_listar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>ApiResponse of PageBancoResponse</returns>
+        ApiResponse<PageBancoResponse> ListarUsingGET10WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// {{{configuracao_registro_cobranca_resource_listar}}}
         /// </summary>
         /// <remarks>
@@ -788,7 +838,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ConfiguracaoRegistroCobrancaResponse</returns>
-        ConfiguracaoRegistroCobrancaResponse ListarUsingGET14 (List<string> sort = null, int? page = null, int? limit = null);
+        ConfiguracaoRegistroCobrancaResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{configuracao_registro_cobranca_resource_listar}}}
@@ -801,7 +851,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of ConfiguracaoRegistroCobrancaResponse</returns>
-        ApiResponse<ConfiguracaoRegistroCobrancaResponse> ListarUsingGET14WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<ConfiguracaoRegistroCobrancaResponse> ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{configuracao_rotativo_resource_listar}}}
@@ -815,7 +865,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param>
         /// <returns>PageConfiguracaoRotativoResponse</returns>
-        PageConfiguracaoRotativoResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
+        PageConfiguracaoRotativoResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
   
         /// <summary>
         /// {{{configuracao_rotativo_resource_listar}}}
@@ -829,7 +879,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoRotativoResponse</returns>
-        ApiResponse<PageConfiguracaoRotativoResponse> ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
+        ApiResponse<PageConfiguracaoRotativoResponse> ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
         
         /// <summary>
         /// {{{portador_resource_listar}}}
@@ -852,7 +902,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param>
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param>
         /// <returns>PagePortadorResponse</returns>
-        PagePortadorResponse ListarUsingGET41 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
+        PagePortadorResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
   
         /// <summary>
         /// {{{portador_resource_listar}}}
@@ -875,7 +925,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param>
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param>
         /// <returns>ApiResponse of PagePortadorResponse</returns>
-        ApiResponse<PagePortadorResponse> ListarUsingGET41WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
+        ApiResponse<PagePortadorResponse> ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
         
         /// <summary>
         /// {{{produto_resource_listar}}}
@@ -891,7 +941,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param>
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param>
         /// <returns>PageProdutoResponse</returns>
-        PageProdutoResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
+        PageProdutoResponse ListarUsingGET44 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
   
         /// <summary>
         /// {{{produto_resource_listar}}}
@@ -907,7 +957,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param>
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param>
         /// <returns>ApiResponse of PageProdutoResponse</returns>
-        ApiResponse<PageProdutoResponse> ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
+        ApiResponse<PageProdutoResponse> ListarUsingGET44WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
         
         /// <summary>
         /// {{{promotor_resource_listar}}}
@@ -925,7 +975,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param>
         /// <returns>PagePromotorResponse</returns>
-        PagePromotorResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
+        PagePromotorResponse ListarUsingGET45 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
   
         /// <summary>
         /// {{{promotor_resource_listar}}}
@@ -943,7 +993,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param>
         /// <returns>ApiResponse of PagePromotorResponse</returns>
-        ApiResponse<PagePromotorResponse> ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
+        ApiResponse<PagePromotorResponse> ListarUsingGET45WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
         
         /// <summary>
         /// {{{tipo_ajuste_resource_consultar}}}
@@ -958,7 +1008,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param>
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param>
         /// <returns>PageTipoAjusteResponse</returns>
-        PageTipoAjusteResponse ListarUsingGET52 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        PageTipoAjusteResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
   
         /// <summary>
         /// {{{tipo_ajuste_resource_consultar}}}
@@ -973,7 +1023,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param>
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoAjusteResponse</returns>
-        ApiResponse<PageTipoAjusteResponse> ListarUsingGET52WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        ApiResponse<PageTipoAjusteResponse> ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
         
         /// <summary>
         /// {{{tipo_endereco_resource_listar}}}
@@ -988,7 +1038,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param>
         /// <returns>PageTipoEnderecoResponse</returns>
-        PageTipoEnderecoResponse ListarUsingGET54 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        PageTipoEnderecoResponse ListarUsingGET57 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
   
         /// <summary>
         /// {{{tipo_endereco_resource_listar}}}
@@ -1003,7 +1053,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoEnderecoResponse</returns>
-        ApiResponse<PageTipoEnderecoResponse> ListarUsingGET54WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        ApiResponse<PageTipoEnderecoResponse> ListarUsingGET57WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
         
         /// <summary>
         /// {{{tipo_telefone_resource_listar}}}
@@ -1018,7 +1068,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param>
         /// <returns>PageTipoTelefoneResponse</returns>
-        PageTipoTelefoneResponse ListarUsingGET56 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        PageTipoTelefoneResponse ListarUsingGET59 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
   
         /// <summary>
         /// {{{tipo_telefone_resource_listar}}}
@@ -1033,7 +1083,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoTelefoneResponse</returns>
-        ApiResponse<PageTipoTelefoneResponse> ListarUsingGET56WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        ApiResponse<PageTipoTelefoneResponse> ListarUsingGET59WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
         
         /// <summary>
         /// {{{vencimento_resource_listar}}}
@@ -1046,8 +1096,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param>
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param>
         /// <returns>PageControleVencimentoResponse</returns>
-        PageControleVencimentoResponse ListarUsingGET63 (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null);
+        PageControleVencimentoResponse ListarUsingGET66 (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
   
         /// <summary>
         /// {{{vencimento_resource_listar}}}
@@ -1060,8 +1111,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param>
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param>
         /// <returns>ApiResponse of PageControleVencimentoResponse</returns>
-        ApiResponse<PageControleVencimentoResponse> ListarUsingGET63WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null);
+        ApiResponse<PageControleVencimentoResponse> ListarUsingGET66WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         /// <summary>
         /// {{{atendimento_cliente_resource_listar}}}
@@ -1078,7 +1130,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param>
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param>
         /// <returns>PageAtendimentoClienteResponse</returns>
-        PageAtendimentoClienteResponse ListarUsingGET7 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
+        PageAtendimentoClienteResponse ListarUsingGET8 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
   
         /// <summary>
         /// {{{atendimento_cliente_resource_listar}}}
@@ -1095,33 +1147,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param>
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param>
         /// <returns>ApiResponse of PageAtendimentoClienteResponse</returns>
-        ApiResponse<PageAtendimentoClienteResponse> ListarUsingGET7WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
-        
-        /// <summary>
-        /// {{{banco_resource_listar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{banco_resource_listar_notes}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>PageBancoResponse</returns>
-        PageBancoResponse ListarUsingGET9 (List<string> sort = null, int? page = null, int? limit = null);
-  
-        /// <summary>
-        /// {{{banco_resource_listar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{banco_resource_listar_notes}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>ApiResponse of PageBancoResponse</returns>
-        ApiResponse<PageBancoResponse> ListarUsingGET9WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageAtendimentoClienteResponse> ListarUsingGET8WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
         
         /// <summary>
         /// {{{atendimento_cliente_resource_salvar}}}
@@ -1170,7 +1196,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param>
         /// <returns>CampanhaResponse</returns>
-        CampanhaResponse SalvarUsingPOST4 (CampanhaPersist campanhaPersist);
+        CampanhaResponse SalvarUsingPOST5 (CampanhaPersist campanhaPersist);
   
         /// <summary>
         /// {{{campanha_resource_salvar}}}
@@ -1181,7 +1207,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param>
         /// <returns>ApiResponse of CampanhaResponse</returns>
-        ApiResponse<CampanhaResponse> SalvarUsingPOST4WithHttpInfo (CampanhaPersist campanhaPersist);
+        ApiResponse<CampanhaResponse> SalvarUsingPOST5WithHttpInfo (CampanhaPersist campanhaPersist);
         
         /// <summary>
         /// {{{configuracao_rotativo_resource_salvar}}}
@@ -1192,7 +1218,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param>
         /// <returns>ConfiguracaoRotativoDetalheResponse</returns>
-        ConfiguracaoRotativoDetalheResponse SalvarUsingPOST6 (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
+        ConfiguracaoRotativoDetalheResponse SalvarUsingPOST7 (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
   
         /// <summary>
         /// {{{configuracao_rotativo_resource_salvar}}}
@@ -1203,7 +1229,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param>
         /// <returns>ApiResponse of ConfiguracaoRotativoDetalheResponse</returns>
-        ApiResponse<ConfiguracaoRotativoDetalheResponse> SalvarUsingPOST6WithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
+        ApiResponse<ConfiguracaoRotativoDetalheResponse> SalvarUsingPOST7WithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
         
         #endregion Synchronous Operations
         
@@ -1232,6 +1258,30 @@ namespace Conductor.Pier.Api
         /// <param name="convenioPersist">convenioPersist</param>
         /// <returns>Task of ApiResponse (ConvenioResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConvenioResponse>> AlterarConvenioUsingPUTAsyncWithHttpInfo (long? id, ConvenioPersist convenioPersist);
+        
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{vencimento_resource_alterar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ControleVencimentoResponse</returns>
+        System.Threading.Tasks.Task<ControleVencimentoResponse> AlterarCorteUsingPUTAsync (string dataVencimento, VencimentoUpdate update);
+
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{vencimento_resource_alterar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (ControleVencimentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleVencimentoResponse>> AlterarCorteUsingPUTAsyncWithHttpInfo (string dataVencimento, VencimentoUpdate update);
         
         /// <summary>
         /// {{{campanha_resource_alterar}}}
@@ -1450,7 +1500,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param>
         /// <returns>Task of ConfiguracaoRegistroCobrancaResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ConsultarUsingGET11Async (long? id);
+        System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ConsultarUsingGET13Async (long? id);
 
         /// <summary>
         /// {{{configuracao_registro_cobranca_resource_consultar}}}
@@ -1461,7 +1511,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRegistroCobrancaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ConsultarUsingGET11AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{configuracao_rotativo_resource_consultar}}}
@@ -1472,7 +1522,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ConfiguracaoRotativoDetalheResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> ConsultarUsingGET12Async (long? id);
+        System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> ConsultarUsingGET14Async (long? id);
 
         /// <summary>
         /// {{{configuracao_rotativo_resource_consultar}}}
@@ -1483,7 +1533,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRotativoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{produto_resource_consultar}}}
@@ -1494,7 +1544,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param>
         /// <returns>Task of ProdutoDetalhesResponse</returns>
-        System.Threading.Tasks.Task<ProdutoDetalhesResponse> ConsultarUsingGET32Async (long? id);
+        System.Threading.Tasks.Task<ProdutoDetalhesResponse> ConsultarUsingGET34Async (long? id);
 
         /// <summary>
         /// {{{produto_resource_consultar}}}
@@ -1505,7 +1555,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ProdutoDetalhesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProdutoDetalhesResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ProdutoDetalhesResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_transacoes_ajuste_resource_consultar}}}
@@ -1516,7 +1566,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoAjusteResponse</returns>
-        System.Threading.Tasks.Task<TipoAjusteResponse> ConsultarUsingGET41Async (long? id);
+        System.Threading.Tasks.Task<TipoAjusteResponse> ConsultarUsingGET43Async (long? id);
 
         /// <summary>
         /// {{{tipo_transacoes_ajuste_resource_consultar}}}
@@ -1527,7 +1577,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoAjusteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoAjusteResponse>> ConsultarUsingGET41AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoAjusteResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_boleto_resource_consultar}}}
@@ -1543,7 +1593,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param>
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param>
         /// <returns>Task of PageTipoBoletoResponse</returns>
-        System.Threading.Tasks.Task<PageTipoBoletoResponse> ConsultarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
+        System.Threading.Tasks.Task<PageTipoBoletoResponse> ConsultarUsingGET44Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
 
         /// <summary>
         /// {{{tipo_boleto_resource_consultar}}}
@@ -1559,7 +1609,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param>
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoBoletoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoBoletoResponse>> ConsultarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoBoletoResponse>> ConsultarUsingGET44AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null);
         
         /// <summary>
         /// {{{tipo_endereco_resource_consultar}}}
@@ -1570,7 +1620,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoEnderecoResponse</returns>
-        System.Threading.Tasks.Task<TipoEnderecoResponse> ConsultarUsingGET43Async (long? id);
+        System.Threading.Tasks.Task<TipoEnderecoResponse> ConsultarUsingGET45Async (long? id);
 
         /// <summary>
         /// {{{tipo_endereco_resource_consultar}}}
@@ -1581,7 +1631,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoEnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoEnderecoResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoEnderecoResponse>> ConsultarUsingGET45AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_operacao_resource_consultar}}}
@@ -1594,7 +1644,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param>
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param>
         /// <returns>Task of TipoOperacaoResponse</returns>
-        System.Threading.Tasks.Task<TipoOperacaoResponse> ConsultarUsingGET44Async (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
+        System.Threading.Tasks.Task<TipoOperacaoResponse> ConsultarUsingGET46Async (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
 
         /// <summary>
         /// {{{tipo_operacao_resource_consultar}}}
@@ -1607,7 +1657,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param>
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param>
         /// <returns>Task of ApiResponse (TipoOperacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
+        System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento);
         
         /// <summary>
         /// {{{tipo_telefone_resource_consultar}}}
@@ -1618,7 +1668,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTelefoneResponse</returns>
-        System.Threading.Tasks.Task<TipoTelefoneResponse> ConsultarUsingGET46Async (long? id);
+        System.Threading.Tasks.Task<TipoTelefoneResponse> ConsultarUsingGET48Async (long? id);
 
         /// <summary>
         /// {{{tipo_telefone_resource_consultar}}}
@@ -1629,7 +1679,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTelefoneResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoTelefoneResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{atendimento_cliente_resource_consultar}}}
@@ -1640,7 +1690,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param>
         /// <returns>Task of AtendimentoClienteResponse</returns>
-        System.Threading.Tasks.Task<AtendimentoClienteResponse> ConsultarUsingGET6Async (long? id);
+        System.Threading.Tasks.Task<AtendimentoClienteResponse> ConsultarUsingGET7Async (long? id);
 
         /// <summary>
         /// {{{atendimento_cliente_resource_consultar}}}
@@ -1651,7 +1701,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param>
         /// <returns>Task of ApiResponse (AtendimentoClienteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AtendimentoClienteResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AtendimentoClienteResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{banco_resource_consultar}}}
@@ -1662,7 +1712,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param>
         /// <returns>Task of BancoResponse</returns>
-        System.Threading.Tasks.Task<BancoResponse> ConsultarUsingGET8Async (long? id);
+        System.Threading.Tasks.Task<BancoResponse> ConsultarUsingGET9Async (long? id);
 
         /// <summary>
         /// {{{banco_resource_consultar}}}
@@ -1673,7 +1723,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (BancoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BancoResponse>> ConsultarUsingGET8AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<BancoResponse>> ConsultarUsingGET9AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{campanha_resource_listar_campanhas}}}
@@ -1970,6 +2020,32 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageTipoCampanhaResponse>> ListarTiposCampanhasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// {{{banco_resource_listar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{banco_resource_listar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of PageBancoResponse</returns>
+        System.Threading.Tasks.Task<PageBancoResponse> ListarUsingGET10Async (List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// {{{banco_resource_listar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{banco_resource_listar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageBancoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarUsingGET10AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// {{{configuracao_registro_cobranca_resource_listar}}}
         /// </summary>
         /// <remarks>
@@ -1980,7 +2056,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ConfiguracaoRegistroCobrancaResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ListarUsingGET14Async (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{configuracao_registro_cobranca_resource_listar}}}
@@ -1993,7 +2069,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRegistroCobrancaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ListarUsingGET14AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{configuracao_rotativo_resource_listar}}}
@@ -2007,7 +2083,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param>
         /// <returns>Task of PageConfiguracaoRotativoResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoRotativoResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
+        System.Threading.Tasks.Task<PageConfiguracaoRotativoResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
 
         /// <summary>
         /// {{{configuracao_rotativo_resource_listar}}}
@@ -2021,7 +2097,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoRotativoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoRotativoResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoRotativoResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null);
         
         /// <summary>
         /// {{{portador_resource_listar}}}
@@ -2044,7 +2120,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param>
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param>
         /// <returns>Task of PagePortadorResponse</returns>
-        System.Threading.Tasks.Task<PagePortadorResponse> ListarUsingGET41Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
+        System.Threading.Tasks.Task<PagePortadorResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
 
         /// <summary>
         /// {{{portador_resource_listar}}}
@@ -2067,7 +2143,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param>
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePortadorResponse>> ListarUsingGET41AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePortadorResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null);
         
         /// <summary>
         /// {{{produto_resource_listar}}}
@@ -2083,7 +2159,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param>
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param>
         /// <returns>Task of PageProdutoResponse</returns>
-        System.Threading.Tasks.Task<PageProdutoResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
+        System.Threading.Tasks.Task<PageProdutoResponse> ListarUsingGET44Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
 
         /// <summary>
         /// {{{produto_resource_listar}}}
@@ -2099,7 +2175,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param>
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageProdutoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageProdutoResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
+        System.Threading.Tasks.Task<ApiResponse<PageProdutoResponse>> ListarUsingGET44AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null);
         
         /// <summary>
         /// {{{promotor_resource_listar}}}
@@ -2117,7 +2193,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param>
         /// <returns>Task of PagePromotorResponse</returns>
-        System.Threading.Tasks.Task<PagePromotorResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
+        System.Threading.Tasks.Task<PagePromotorResponse> ListarUsingGET45Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
 
         /// <summary>
         /// {{{promotor_resource_listar}}}
@@ -2135,7 +2211,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePromotorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePromotorResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePromotorResponse>> ListarUsingGET45AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null);
         
         /// <summary>
         /// {{{tipo_ajuste_resource_consultar}}}
@@ -2150,7 +2226,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param>
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param>
         /// <returns>Task of PageTipoAjusteResponse</returns>
-        System.Threading.Tasks.Task<PageTipoAjusteResponse> ListarUsingGET52Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        System.Threading.Tasks.Task<PageTipoAjusteResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
 
         /// <summary>
         /// {{{tipo_ajuste_resource_consultar}}}
@@ -2165,7 +2241,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param>
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoAjusteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoAjusteResponse>> ListarUsingGET52AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoAjusteResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
         
         /// <summary>
         /// {{{tipo_endereco_resource_listar}}}
@@ -2180,7 +2256,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param>
         /// <returns>Task of PageTipoEnderecoResponse</returns>
-        System.Threading.Tasks.Task<PageTipoEnderecoResponse> ListarUsingGET54Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<PageTipoEnderecoResponse> ListarUsingGET57Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
 
         /// <summary>
         /// {{{tipo_endereco_resource_listar}}}
@@ -2195,7 +2271,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoEnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoEnderecoResponse>> ListarUsingGET54AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoEnderecoResponse>> ListarUsingGET57AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
         
         /// <summary>
         /// {{{tipo_telefone_resource_listar}}}
@@ -2210,7 +2286,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param>
         /// <returns>Task of PageTipoTelefoneResponse</returns>
-        System.Threading.Tasks.Task<PageTipoTelefoneResponse> ListarUsingGET56Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<PageTipoTelefoneResponse> ListarUsingGET59Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
 
         /// <summary>
         /// {{{tipo_telefone_resource_listar}}}
@@ -2225,7 +2301,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoTelefoneResponse>> ListarUsingGET56AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTelefoneResponse>> ListarUsingGET59AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
         
         /// <summary>
         /// {{{vencimento_resource_listar}}}
@@ -2238,8 +2314,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param>
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param>
         /// <returns>Task of PageControleVencimentoResponse</returns>
-        System.Threading.Tasks.Task<PageControleVencimentoResponse> ListarUsingGET63Async (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null);
+        System.Threading.Tasks.Task<PageControleVencimentoResponse> ListarUsingGET66Async (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
 
         /// <summary>
         /// {{{vencimento_resource_listar}}}
@@ -2252,8 +2329,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param>
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageControleVencimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageControleVencimentoResponse>> ListarUsingGET63AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageControleVencimentoResponse>> ListarUsingGET66AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         /// <summary>
         /// {{{atendimento_cliente_resource_listar}}}
@@ -2270,7 +2348,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param>
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param>
         /// <returns>Task of PageAtendimentoClienteResponse</returns>
-        System.Threading.Tasks.Task<PageAtendimentoClienteResponse> ListarUsingGET7Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
+        System.Threading.Tasks.Task<PageAtendimentoClienteResponse> ListarUsingGET8Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
 
         /// <summary>
         /// {{{atendimento_cliente_resource_listar}}}
@@ -2287,33 +2365,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param>
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageAtendimentoClienteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClienteResponse>> ListarUsingGET7AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
-        
-        /// <summary>
-        /// {{{banco_resource_listar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{banco_resource_listar_notes}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of PageBancoResponse</returns>
-        System.Threading.Tasks.Task<PageBancoResponse> ListarUsingGET9Async (List<string> sort = null, int? page = null, int? limit = null);
-
-        /// <summary>
-        /// {{{banco_resource_listar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{banco_resource_listar_notes}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of ApiResponse (PageBancoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarUsingGET9AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClienteResponse>> ListarUsingGET8AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null);
         
         /// <summary>
         /// {{{atendimento_cliente_resource_salvar}}}
@@ -2362,7 +2414,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param>
         /// <returns>Task of CampanhaResponse</returns>
-        System.Threading.Tasks.Task<CampanhaResponse> SalvarUsingPOST4Async (CampanhaPersist campanhaPersist);
+        System.Threading.Tasks.Task<CampanhaResponse> SalvarUsingPOST5Async (CampanhaPersist campanhaPersist);
 
         /// <summary>
         /// {{{campanha_resource_salvar}}}
@@ -2373,7 +2425,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param>
         /// <returns>Task of ApiResponse (CampanhaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampanhaResponse>> SalvarUsingPOST4AsyncWithHttpInfo (CampanhaPersist campanhaPersist);
+        System.Threading.Tasks.Task<ApiResponse<CampanhaResponse>> SalvarUsingPOST5AsyncWithHttpInfo (CampanhaPersist campanhaPersist);
         
         /// <summary>
         /// {{{configuracao_rotativo_resource_salvar}}}
@@ -2384,7 +2436,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param>
         /// <returns>Task of ConfiguracaoRotativoDetalheResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> SalvarUsingPOST6Async (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
+        System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> SalvarUsingPOST7Async (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
 
         /// <summary>
         /// {{{configuracao_rotativo_resource_salvar}}}
@@ -2395,7 +2447,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRotativoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> SalvarUsingPOST6AsyncWithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> SalvarUsingPOST7AsyncWithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist);
         
         #endregion Asynchronous Operations
         
@@ -2668,6 +2720,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ConvenioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConvenioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConvenioResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}} {{{vencimento_resource_alterar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param> 
+        /// <param name="update">update</param> 
+        /// <returns>ControleVencimentoResponse</returns>
+        public ControleVencimentoResponse AlterarCorteUsingPUT (string dataVencimento, VencimentoUpdate update)
+        {
+             ApiResponse<ControleVencimentoResponse> localVarResponse = AlterarCorteUsingPUTWithHttpInfo(dataVencimento, update);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}} {{{vencimento_resource_alterar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param> 
+        /// <param name="update">update</param> 
+        /// <returns>ApiResponse of ControleVencimentoResponse</returns>
+        public ApiResponse< ControleVencimentoResponse > AlterarCorteUsingPUTWithHttpInfo (string dataVencimento, VencimentoUpdate update)
+        {
+            
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null)
+                throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling GlobaltagcadastrogeralApi->AlterarCorteUsingPUT");
+            
+            // verify the required parameter 'update' is set
+            if (update == null)
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagcadastrogeralApi->AlterarCorteUsingPUT");
+            
+    
+            var localVarPath = "/api/vencimentos/{dataVencimento}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (dataVencimento != null) localVarPathParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCorteUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCorteUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleVencimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleVencimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleVencimentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}} {{{vencimento_resource_alterar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ControleVencimentoResponse</returns>
+        public async System.Threading.Tasks.Task<ControleVencimentoResponse> AlterarCorteUsingPUTAsync (string dataVencimento, VencimentoUpdate update)
+        {
+             ApiResponse<ControleVencimentoResponse> localVarResponse = await AlterarCorteUsingPUTAsyncWithHttpInfo(dataVencimento, update);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{vencimento_resource_alterar}}} {{{vencimento_resource_alterar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dataVencimento">{{{fatura_resource_consultar_fatura_param_data_vencimento}}}</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (ControleVencimentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleVencimentoResponse>> AlterarCorteUsingPUTAsyncWithHttpInfo (string dataVencimento, VencimentoUpdate update)
+        {
+            // verify the required parameter 'dataVencimento' is set
+            if (dataVencimento == null) throw new ApiException(400, "Missing required parameter 'dataVencimento' when calling AlterarCorteUsingPUT");
+            // verify the required parameter 'update' is set
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarCorteUsingPUT");
+            
+    
+            var localVarPath = "/api/vencimentos/{dataVencimento}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (dataVencimento != null) localVarPathParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCorteUsingPUT: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCorteUsingPUT: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleVencimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleVencimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleVencimentoResponse)));
             
         }
         
@@ -4231,9 +4465,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param> 
         /// <returns>ConfiguracaoRegistroCobrancaResponse</returns>
-        public ConfiguracaoRegistroCobrancaResponse ConsultarUsingGET11 (long? id)
+        public ConfiguracaoRegistroCobrancaResponse ConsultarUsingGET13 (long? id)
         {
-             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = ConsultarUsingGET11WithHttpInfo(id);
+             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = ConsultarUsingGET13WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4243,12 +4477,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of ConfiguracaoRegistroCobrancaResponse</returns>
-        public ApiResponse< ConfiguracaoRegistroCobrancaResponse > ConsultarUsingGET11WithHttpInfo (long? id)
+        public ApiResponse< ConfiguracaoRegistroCobrancaResponse > ConsultarUsingGET13WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET11");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET13");
             
     
             var localVarPath = "/api/configuracoes-registro-cobranca/{id}";
@@ -4294,9 +4528,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoRegistroCobrancaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4311,9 +4545,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param>
         /// <returns>Task of ConfiguracaoRegistroCobrancaResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ConsultarUsingGET11Async (long? id)
+        public async System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ConsultarUsingGET13Async (long? id)
         {
-             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = await ConsultarUsingGET11AsyncWithHttpInfo(id);
+             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = await ConsultarUsingGET13AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4324,10 +4558,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_registro_cobranca_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRegistroCobrancaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ConsultarUsingGET11AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ConsultarUsingGET13AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET11");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET13");
             
     
             var localVarPath = "/api/configuracoes-registro-cobranca/{id}";
@@ -4373,9 +4607,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoRegistroCobrancaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4389,9 +4623,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param> 
         /// <returns>ConfiguracaoRotativoDetalheResponse</returns>
-        public ConfiguracaoRotativoDetalheResponse ConsultarUsingGET12 (long? id)
+        public ConfiguracaoRotativoDetalheResponse ConsultarUsingGET14 (long? id)
         {
-             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
+             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4401,12 +4635,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of ConfiguracaoRotativoDetalheResponse</returns>
-        public ApiResponse< ConfiguracaoRotativoDetalheResponse > ConsultarUsingGET12WithHttpInfo (long? id)
+        public ApiResponse< ConfiguracaoRotativoDetalheResponse > ConsultarUsingGET14WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET12");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET14");
             
     
             var localVarPath = "/api/configuracoes-rotativos/{id}";
@@ -4452,9 +4686,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoRotativoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4469,9 +4703,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ConfiguracaoRotativoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> ConsultarUsingGET12Async (long? id)
+        public async System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> ConsultarUsingGET14Async (long? id)
         {
-             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
+             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4482,10 +4716,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{configuracao_rotativo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRotativoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET14");
             
     
             var localVarPath = "/api/configuracoes-rotativos/{id}";
@@ -4531,9 +4765,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoRotativoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4547,9 +4781,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param> 
         /// <returns>ProdutoDetalhesResponse</returns>
-        public ProdutoDetalhesResponse ConsultarUsingGET32 (long? id)
+        public ProdutoDetalhesResponse ConsultarUsingGET34 (long? id)
         {
-             ApiResponse<ProdutoDetalhesResponse> localVarResponse = ConsultarUsingGET32WithHttpInfo(id);
+             ApiResponse<ProdutoDetalhesResponse> localVarResponse = ConsultarUsingGET34WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4559,12 +4793,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of ProdutoDetalhesResponse</returns>
-        public ApiResponse< ProdutoDetalhesResponse > ConsultarUsingGET32WithHttpInfo (long? id)
+        public ApiResponse< ProdutoDetalhesResponse > ConsultarUsingGET34WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET32");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET34");
             
     
             var localVarPath = "/api/produtos/{id}";
@@ -4610,9 +4844,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ProdutoDetalhesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4627,9 +4861,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param>
         /// <returns>Task of ProdutoDetalhesResponse</returns>
-        public async System.Threading.Tasks.Task<ProdutoDetalhesResponse> ConsultarUsingGET32Async (long? id)
+        public async System.Threading.Tasks.Task<ProdutoDetalhesResponse> ConsultarUsingGET34Async (long? id)
         {
-             ApiResponse<ProdutoDetalhesResponse> localVarResponse = await ConsultarUsingGET32AsyncWithHttpInfo(id);
+             ApiResponse<ProdutoDetalhesResponse> localVarResponse = await ConsultarUsingGET34AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4640,10 +4874,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{produto_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ProdutoDetalhesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ProdutoDetalhesResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ProdutoDetalhesResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET32");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET34");
             
     
             var localVarPath = "/api/produtos/{id}";
@@ -4689,9 +4923,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ProdutoDetalhesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4705,9 +4939,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param> 
         /// <returns>TipoAjusteResponse</returns>
-        public TipoAjusteResponse ConsultarUsingGET41 (long? id)
+        public TipoAjusteResponse ConsultarUsingGET43 (long? id)
         {
-             ApiResponse<TipoAjusteResponse> localVarResponse = ConsultarUsingGET41WithHttpInfo(id);
+             ApiResponse<TipoAjusteResponse> localVarResponse = ConsultarUsingGET43WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4717,12 +4951,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoAjusteResponse</returns>
-        public ApiResponse< TipoAjusteResponse > ConsultarUsingGET41WithHttpInfo (long? id)
+        public ApiResponse< TipoAjusteResponse > ConsultarUsingGET43WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET41");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET43");
             
     
             var localVarPath = "/api/tipos-ajustes/{id}";
@@ -4768,9 +5002,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoAjusteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4785,9 +5019,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoAjusteResponse</returns>
-        public async System.Threading.Tasks.Task<TipoAjusteResponse> ConsultarUsingGET41Async (long? id)
+        public async System.Threading.Tasks.Task<TipoAjusteResponse> ConsultarUsingGET43Async (long? id)
         {
-             ApiResponse<TipoAjusteResponse> localVarResponse = await ConsultarUsingGET41AsyncWithHttpInfo(id);
+             ApiResponse<TipoAjusteResponse> localVarResponse = await ConsultarUsingGET43AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4798,10 +5032,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_transacoes_ajuste_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoAjusteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoAjusteResponse>> ConsultarUsingGET41AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoAjusteResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET41");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET43");
             
     
             var localVarPath = "/api/tipos-ajustes/{id}";
@@ -4847,9 +5081,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoAjusteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4868,9 +5102,9 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param> 
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param> 
         /// <returns>PageTipoBoletoResponse</returns>
-        public PageTipoBoletoResponse ConsultarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
+        public PageTipoBoletoResponse ConsultarUsingGET44 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
         {
-             ApiResponse<PageTipoBoletoResponse> localVarResponse = ConsultarUsingGET42WithHttpInfo(sort, page, limit, id, descricao, banco);
+             ApiResponse<PageTipoBoletoResponse> localVarResponse = ConsultarUsingGET44WithHttpInfo(sort, page, limit, id, descricao, banco);
              return localVarResponse.Data;
         }
 
@@ -4885,7 +5119,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param> 
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoBoletoResponse</returns>
-        public ApiResponse< PageTipoBoletoResponse > ConsultarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
+        public ApiResponse< PageTipoBoletoResponse > ConsultarUsingGET44WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
         {
             
     
@@ -4937,9 +5171,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoBoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4959,9 +5193,9 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param>
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param>
         /// <returns>Task of PageTipoBoletoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoBoletoResponse> ConsultarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
+        public async System.Threading.Tasks.Task<PageTipoBoletoResponse> ConsultarUsingGET44Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
         {
-             ApiResponse<PageTipoBoletoResponse> localVarResponse = await ConsultarUsingGET42AsyncWithHttpInfo(sort, page, limit, id, descricao, banco);
+             ApiResponse<PageTipoBoletoResponse> localVarResponse = await ConsultarUsingGET44AsyncWithHttpInfo(sort, page, limit, id, descricao, banco);
              return localVarResponse.Data;
 
         }
@@ -4977,7 +5211,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">{{{tipo_boleto_request_descricao_value}}} (optional)</param>
         /// <param name="banco">{{{tipo_boleto_request_banco_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoBoletoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoBoletoResponse>> ConsultarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoBoletoResponse>> ConsultarUsingGET44AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, long? banco = null)
         {
             
     
@@ -5029,9 +5263,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoBoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5045,9 +5279,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param> 
         /// <returns>TipoEnderecoResponse</returns>
-        public TipoEnderecoResponse ConsultarUsingGET43 (long? id)
+        public TipoEnderecoResponse ConsultarUsingGET45 (long? id)
         {
-             ApiResponse<TipoEnderecoResponse> localVarResponse = ConsultarUsingGET43WithHttpInfo(id);
+             ApiResponse<TipoEnderecoResponse> localVarResponse = ConsultarUsingGET45WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5057,12 +5291,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoEnderecoResponse</returns>
-        public ApiResponse< TipoEnderecoResponse > ConsultarUsingGET43WithHttpInfo (long? id)
+        public ApiResponse< TipoEnderecoResponse > ConsultarUsingGET45WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET43");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET45");
             
     
             var localVarPath = "/api/tipos-enderecos/{id}";
@@ -5108,9 +5342,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoEnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5125,9 +5359,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoEnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<TipoEnderecoResponse> ConsultarUsingGET43Async (long? id)
+        public async System.Threading.Tasks.Task<TipoEnderecoResponse> ConsultarUsingGET45Async (long? id)
         {
-             ApiResponse<TipoEnderecoResponse> localVarResponse = await ConsultarUsingGET43AsyncWithHttpInfo(id);
+             ApiResponse<TipoEnderecoResponse> localVarResponse = await ConsultarUsingGET45AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5138,10 +5372,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_endereco_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoEnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoEnderecoResponse>> ConsultarUsingGET43AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoEnderecoResponse>> ConsultarUsingGET45AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET43");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET45");
             
     
             var localVarPath = "/api/tipos-enderecos/{id}";
@@ -5187,9 +5421,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoEnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5205,9 +5439,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param> 
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param> 
         /// <returns>TipoOperacaoResponse</returns>
-        public TipoOperacaoResponse ConsultarUsingGET44 (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
+        public TipoOperacaoResponse ConsultarUsingGET46 (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
         {
-             ApiResponse<TipoOperacaoResponse> localVarResponse = ConsultarUsingGET44WithHttpInfo(idCartao, idEstabelecimento, codigoProcessamento);
+             ApiResponse<TipoOperacaoResponse> localVarResponse = ConsultarUsingGET46WithHttpInfo(idCartao, idEstabelecimento, codigoProcessamento);
              return localVarResponse.Data;
         }
 
@@ -5219,20 +5453,20 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param> 
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param> 
         /// <returns>ApiResponse of TipoOperacaoResponse</returns>
-        public ApiResponse< TipoOperacaoResponse > ConsultarUsingGET44WithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
+        public ApiResponse< TipoOperacaoResponse > ConsultarUsingGET46WithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
         {
             
             // verify the required parameter 'idCartao' is set
             if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET44");
+                throw new ApiException(400, "Missing required parameter 'idCartao' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET46");
             
             // verify the required parameter 'idEstabelecimento' is set
             if (idEstabelecimento == null)
-                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET44");
+                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET46");
             
             // verify the required parameter 'codigoProcessamento' is set
             if (codigoProcessamento == null)
-                throw new ApiException(400, "Missing required parameter 'codigoProcessamento' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET44");
+                throw new ApiException(400, "Missing required parameter 'codigoProcessamento' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET46");
             
     
             var localVarPath = "/api/tipos-operacoes";
@@ -5280,9 +5514,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5299,9 +5533,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param>
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param>
         /// <returns>Task of TipoOperacaoResponse</returns>
-        public async System.Threading.Tasks.Task<TipoOperacaoResponse> ConsultarUsingGET44Async (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
+        public async System.Threading.Tasks.Task<TipoOperacaoResponse> ConsultarUsingGET46Async (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
         {
-             ApiResponse<TipoOperacaoResponse> localVarResponse = await ConsultarUsingGET44AsyncWithHttpInfo(idCartao, idEstabelecimento, codigoProcessamento);
+             ApiResponse<TipoOperacaoResponse> localVarResponse = await ConsultarUsingGET46AsyncWithHttpInfo(idCartao, idEstabelecimento, codigoProcessamento);
              return localVarResponse.Data;
 
         }
@@ -5314,14 +5548,14 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}</param>
         /// <param name="codigoProcessamento">{{{tipo_operacao_resource_consultar_param_codigo_processamento}}}</param>
         /// <returns>Task of ApiResponse (TipoOperacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? idCartao, long? idEstabelecimento, string codigoProcessamento)
         {
             // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarUsingGET44");
+            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling ConsultarUsingGET46");
             // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling ConsultarUsingGET44");
+            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling ConsultarUsingGET46");
             // verify the required parameter 'codigoProcessamento' is set
-            if (codigoProcessamento == null) throw new ApiException(400, "Missing required parameter 'codigoProcessamento' when calling ConsultarUsingGET44");
+            if (codigoProcessamento == null) throw new ApiException(400, "Missing required parameter 'codigoProcessamento' when calling ConsultarUsingGET46");
             
     
             var localVarPath = "/api/tipos-operacoes";
@@ -5369,9 +5603,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5385,9 +5619,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param> 
         /// <returns>TipoTelefoneResponse</returns>
-        public TipoTelefoneResponse ConsultarUsingGET46 (long? id)
+        public TipoTelefoneResponse ConsultarUsingGET48 (long? id)
         {
-             ApiResponse<TipoTelefoneResponse> localVarResponse = ConsultarUsingGET46WithHttpInfo(id);
+             ApiResponse<TipoTelefoneResponse> localVarResponse = ConsultarUsingGET48WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5397,12 +5631,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoTelefoneResponse</returns>
-        public ApiResponse< TipoTelefoneResponse > ConsultarUsingGET46WithHttpInfo (long? id)
+        public ApiResponse< TipoTelefoneResponse > ConsultarUsingGET48WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET46");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET48");
             
     
             var localVarPath = "/api/tipos-telefones/{id}";
@@ -5448,9 +5682,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5465,9 +5699,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTelefoneResponse> ConsultarUsingGET46Async (long? id)
+        public async System.Threading.Tasks.Task<TipoTelefoneResponse> ConsultarUsingGET48Async (long? id)
         {
-             ApiResponse<TipoTelefoneResponse> localVarResponse = await ConsultarUsingGET46AsyncWithHttpInfo(id);
+             ApiResponse<TipoTelefoneResponse> localVarResponse = await ConsultarUsingGET48AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5478,10 +5712,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTelefoneResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTelefoneResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET46");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET48");
             
     
             var localVarPath = "/api/tipos-telefones/{id}";
@@ -5527,9 +5761,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5543,9 +5777,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param> 
         /// <returns>AtendimentoClienteResponse</returns>
-        public AtendimentoClienteResponse ConsultarUsingGET6 (long? id)
+        public AtendimentoClienteResponse ConsultarUsingGET7 (long? id)
         {
-             ApiResponse<AtendimentoClienteResponse> localVarResponse = ConsultarUsingGET6WithHttpInfo(id);
+             ApiResponse<AtendimentoClienteResponse> localVarResponse = ConsultarUsingGET7WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5555,12 +5789,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param> 
         /// <returns>ApiResponse of AtendimentoClienteResponse</returns>
-        public ApiResponse< AtendimentoClienteResponse > ConsultarUsingGET6WithHttpInfo (long? id)
+        public ApiResponse< AtendimentoClienteResponse > ConsultarUsingGET7WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET6");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET7");
             
     
             var localVarPath = "/api/atendimento-clientes/{id}";
@@ -5606,9 +5840,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AtendimentoClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5623,9 +5857,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param>
         /// <returns>Task of AtendimentoClienteResponse</returns>
-        public async System.Threading.Tasks.Task<AtendimentoClienteResponse> ConsultarUsingGET6Async (long? id)
+        public async System.Threading.Tasks.Task<AtendimentoClienteResponse> ConsultarUsingGET7Async (long? id)
         {
-             ApiResponse<AtendimentoClienteResponse> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(id);
+             ApiResponse<AtendimentoClienteResponse> localVarResponse = await ConsultarUsingGET7AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5636,10 +5870,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{atendimento_cliente_resource_consultar_param_id_atendimento}}}</param>
         /// <returns>Task of ApiResponse (AtendimentoClienteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AtendimentoClienteResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AtendimentoClienteResponse>> ConsultarUsingGET7AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET7");
             
     
             var localVarPath = "/api/atendimento-clientes/{id}";
@@ -5685,9 +5919,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AtendimentoClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5701,9 +5935,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param> 
         /// <returns>BancoResponse</returns>
-        public BancoResponse ConsultarUsingGET8 (long? id)
+        public BancoResponse ConsultarUsingGET9 (long? id)
         {
-             ApiResponse<BancoResponse> localVarResponse = ConsultarUsingGET8WithHttpInfo(id);
+             ApiResponse<BancoResponse> localVarResponse = ConsultarUsingGET9WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5713,12 +5947,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of BancoResponse</returns>
-        public ApiResponse< BancoResponse > ConsultarUsingGET8WithHttpInfo (long? id)
+        public ApiResponse< BancoResponse > ConsultarUsingGET9WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET8");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->ConsultarUsingGET9");
             
     
             var localVarPath = "/api/bancos/{id}";
@@ -5764,9 +5998,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BancoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5781,9 +6015,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param>
         /// <returns>Task of BancoResponse</returns>
-        public async System.Threading.Tasks.Task<BancoResponse> ConsultarUsingGET8Async (long? id)
+        public async System.Threading.Tasks.Task<BancoResponse> ConsultarUsingGET9Async (long? id)
         {
-             ApiResponse<BancoResponse> localVarResponse = await ConsultarUsingGET8AsyncWithHttpInfo(id);
+             ApiResponse<BancoResponse> localVarResponse = await ConsultarUsingGET9AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5794,10 +6028,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{banco_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (BancoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BancoResponse>> ConsultarUsingGET8AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<BancoResponse>> ConsultarUsingGET9AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET8");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET9");
             
     
             var localVarPath = "/api/bancos/{id}";
@@ -5843,9 +6077,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BancoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7694,6 +7928,170 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <returns>PageBancoResponse</returns>
+        public PageBancoResponse ListarUsingGET10 (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageBancoResponse> localVarResponse = ListarUsingGET10WithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <returns>ApiResponse of PageBancoResponse</returns>
+        public ApiResponse< PageBancoResponse > ListarUsingGET10WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/bancos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageBancoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageBancoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageBancoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of PageBancoResponse</returns>
+        public async System.Threading.Tasks.Task<PageBancoResponse> ListarUsingGET10Async (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageBancoResponse> localVarResponse = await ListarUsingGET10AsyncWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageBancoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarUsingGET10AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/bancos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageBancoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageBancoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageBancoResponse)));
+            
+        }
+        
+        /// <summary>
         /// {{{configuracao_registro_cobranca_resource_listar}}} {{{configuracao_registro_cobranca_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7701,9 +8099,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ConfiguracaoRegistroCobrancaResponse</returns>
-        public ConfiguracaoRegistroCobrancaResponse ListarUsingGET14 (List<string> sort = null, int? page = null, int? limit = null)
+        public ConfiguracaoRegistroCobrancaResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = ListarUsingGET14WithHttpInfo(sort, page, limit);
+             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = ListarUsingGET15WithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -7715,7 +8113,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of ConfiguracaoRegistroCobrancaResponse</returns>
-        public ApiResponse< ConfiguracaoRegistroCobrancaResponse > ListarUsingGET14WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< ConfiguracaoRegistroCobrancaResponse > ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -7764,9 +8162,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoRegistroCobrancaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7783,9 +8181,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ConfiguracaoRegistroCobrancaResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ListarUsingGET14Async (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ConfiguracaoRegistroCobrancaResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = await ListarUsingGET14AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<ConfiguracaoRegistroCobrancaResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -7798,7 +8196,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRegistroCobrancaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ListarUsingGET14AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRegistroCobrancaResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -7847,9 +8245,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoRegistroCobrancaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7866,9 +8264,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param> 
         /// <returns>PageConfiguracaoRotativoResponse</returns>
-        public PageConfiguracaoRotativoResponse ListarUsingGET15 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
+        public PageConfiguracaoRotativoResponse ListarUsingGET16 (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
         {
-             ApiResponse<PageConfiguracaoRotativoResponse> localVarResponse = ListarUsingGET15WithHttpInfo(sort, page, limit, idProduto);
+             ApiResponse<PageConfiguracaoRotativoResponse> localVarResponse = ListarUsingGET16WithHttpInfo(sort, page, limit, idProduto);
              return localVarResponse.Data;
         }
 
@@ -7881,7 +8279,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoRotativoResponse</returns>
-        public ApiResponse< PageConfiguracaoRotativoResponse > ListarUsingGET15WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
+        public ApiResponse< PageConfiguracaoRotativoResponse > ListarUsingGET16WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
         {
             
     
@@ -7931,9 +8329,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageConfiguracaoRotativoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7951,9 +8349,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param>
         /// <returns>Task of PageConfiguracaoRotativoResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoRotativoResponse> ListarUsingGET15Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
+        public async System.Threading.Tasks.Task<PageConfiguracaoRotativoResponse> ListarUsingGET16Async (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
         {
-             ApiResponse<PageConfiguracaoRotativoResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(sort, page, limit, idProduto);
+             ApiResponse<PageConfiguracaoRotativoResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(sort, page, limit, idProduto);
              return localVarResponse.Data;
 
         }
@@ -7967,7 +8365,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idProduto">{{{configuracao_rotativo_request_id_produto_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoRotativoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoRotativoResponse>> ListarUsingGET15AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoRotativoResponse>> ListarUsingGET16AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null)
         {
             
     
@@ -8017,9 +8415,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageConfiguracaoRotativoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8045,9 +8443,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param> 
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param> 
         /// <returns>PagePortadorResponse</returns>
-        public PagePortadorResponse ListarUsingGET41 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
+        public PagePortadorResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
         {
-             ApiResponse<PagePortadorResponse> localVarResponse = ListarUsingGET41WithHttpInfo(sort, page, limit, idConta, idProduto, idPessoa, idParentesco, tipoPortador, nomeImpresso, idTipoCartao, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
+             ApiResponse<PagePortadorResponse> localVarResponse = ListarUsingGET43WithHttpInfo(sort, page, limit, idConta, idProduto, idPessoa, idParentesco, tipoPortador, nomeImpresso, idTipoCartao, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
              return localVarResponse.Data;
         }
 
@@ -8069,7 +8467,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param> 
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param> 
         /// <returns>ApiResponse of PagePortadorResponse</returns>
-        public ApiResponse< PagePortadorResponse > ListarUsingGET41WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
+        public ApiResponse< PagePortadorResponse > ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
         {
             
     
@@ -8128,9 +8526,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8157,9 +8555,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param>
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param>
         /// <returns>Task of PagePortadorResponse</returns>
-        public async System.Threading.Tasks.Task<PagePortadorResponse> ListarUsingGET41Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
+        public async System.Threading.Tasks.Task<PagePortadorResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
         {
-             ApiResponse<PagePortadorResponse> localVarResponse = await ListarUsingGET41AsyncWithHttpInfo(sort, page, limit, idConta, idProduto, idPessoa, idParentesco, tipoPortador, nomeImpresso, idTipoCartao, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
+             ApiResponse<PagePortadorResponse> localVarResponse = await ListarUsingGET43AsyncWithHttpInfo(sort, page, limit, idConta, idProduto, idPessoa, idParentesco, tipoPortador, nomeImpresso, idTipoCartao, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
              return localVarResponse.Data;
 
         }
@@ -8182,7 +8580,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastroPortador">{{{portador_request_data_cadastro_portador_value}}} (optional)</param>
         /// <param name="dataCancelamentoPortador">{{{portador_request_data_cancelamento_portador_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePortadorResponse>> ListarUsingGET41AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePortadorResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idProduto = null, long? idPessoa = null, long? idParentesco = null, string tipoPortador = null, string nomeImpresso = null, long? idTipoCartao = null, int? flagAtivo = null, string dataCadastroPortador = null, string dataCancelamentoPortador = null)
         {
             
     
@@ -8241,9 +8639,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8262,9 +8660,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param> 
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param> 
         /// <returns>PageProdutoResponse</returns>
-        public PageProdutoResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
+        public PageProdutoResponse ListarUsingGET44 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
         {
-             ApiResponse<PageProdutoResponse> localVarResponse = ListarUsingGET42WithHttpInfo(sort, page, limit, nome, status, idFantasiaBasica);
+             ApiResponse<PageProdutoResponse> localVarResponse = ListarUsingGET44WithHttpInfo(sort, page, limit, nome, status, idFantasiaBasica);
              return localVarResponse.Data;
         }
 
@@ -8279,7 +8677,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param> 
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageProdutoResponse</returns>
-        public ApiResponse< PageProdutoResponse > ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
+        public ApiResponse< PageProdutoResponse > ListarUsingGET44WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
         {
             
     
@@ -8331,9 +8729,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8353,9 +8751,9 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param>
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param>
         /// <returns>Task of PageProdutoResponse</returns>
-        public async System.Threading.Tasks.Task<PageProdutoResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
+        public async System.Threading.Tasks.Task<PageProdutoResponse> ListarUsingGET44Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
         {
-             ApiResponse<PageProdutoResponse> localVarResponse = await ListarUsingGET42AsyncWithHttpInfo(sort, page, limit, nome, status, idFantasiaBasica);
+             ApiResponse<PageProdutoResponse> localVarResponse = await ListarUsingGET44AsyncWithHttpInfo(sort, page, limit, nome, status, idFantasiaBasica);
              return localVarResponse.Data;
 
         }
@@ -8371,7 +8769,7 @@ namespace Conductor.Pier.Api
         /// <param name="status">{{{produto_request_status_value}}} (optional)</param>
         /// <param name="idFantasiaBasica">{{{produto_request_id_fantasia_basica_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageProdutoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageProdutoResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageProdutoResponse>> ListarUsingGET44AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, int? status = null, long? idFantasiaBasica = null)
         {
             
     
@@ -8423,9 +8821,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8446,9 +8844,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param> 
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param> 
         /// <returns>PagePromotorResponse</returns>
-        public PagePromotorResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
+        public PagePromotorResponse ListarUsingGET45 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
         {
-             ApiResponse<PagePromotorResponse> localVarResponse = ListarUsingGET43WithHttpInfo(sort, page, limit, id, nome, dataCadastro, idEstabelecimento, idUsuario);
+             ApiResponse<PagePromotorResponse> localVarResponse = ListarUsingGET45WithHttpInfo(sort, page, limit, id, nome, dataCadastro, idEstabelecimento, idUsuario);
              return localVarResponse.Data;
         }
 
@@ -8465,7 +8863,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param> 
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param> 
         /// <returns>ApiResponse of PagePromotorResponse</returns>
-        public ApiResponse< PagePromotorResponse > ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
+        public ApiResponse< PagePromotorResponse > ListarUsingGET45WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
         {
             
     
@@ -8519,9 +8917,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePromotorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8543,9 +8941,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param>
         /// <returns>Task of PagePromotorResponse</returns>
-        public async System.Threading.Tasks.Task<PagePromotorResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
+        public async System.Threading.Tasks.Task<PagePromotorResponse> ListarUsingGET45Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
         {
-             ApiResponse<PagePromotorResponse> localVarResponse = await ListarUsingGET43AsyncWithHttpInfo(sort, page, limit, id, nome, dataCadastro, idEstabelecimento, idUsuario);
+             ApiResponse<PagePromotorResponse> localVarResponse = await ListarUsingGET45AsyncWithHttpInfo(sort, page, limit, id, nome, dataCadastro, idEstabelecimento, idUsuario);
              return localVarResponse.Data;
 
         }
@@ -8563,7 +8961,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{promotor_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="idUsuario">{{{promotor_request_id_usuario_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePromotorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePromotorResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePromotorResponse>> ListarUsingGET45AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string dataCadastro = null, long? idEstabelecimento = null, long? idUsuario = null)
         {
             
     
@@ -8617,9 +9015,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePromotorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8637,9 +9035,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param> 
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param> 
         /// <returns>PageTipoAjusteResponse</returns>
-        public PageTipoAjusteResponse ListarUsingGET52 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public PageTipoAjusteResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
-             ApiResponse<PageTipoAjusteResponse> localVarResponse = ListarUsingGET52WithHttpInfo(sort, page, limit, id, descricao);
+             ApiResponse<PageTipoAjusteResponse> localVarResponse = ListarUsingGET55WithHttpInfo(sort, page, limit, id, descricao);
              return localVarResponse.Data;
         }
 
@@ -8653,7 +9051,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param> 
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoAjusteResponse</returns>
-        public ApiResponse< PageTipoAjusteResponse > ListarUsingGET52WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public ApiResponse< PageTipoAjusteResponse > ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
             
     
@@ -8704,9 +9102,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoAjusteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8725,9 +9123,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param>
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param>
         /// <returns>Task of PageTipoAjusteResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoAjusteResponse> ListarUsingGET52Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public async System.Threading.Tasks.Task<PageTipoAjusteResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
-             ApiResponse<PageTipoAjusteResponse> localVarResponse = await ListarUsingGET52AsyncWithHttpInfo(sort, page, limit, id, descricao);
+             ApiResponse<PageTipoAjusteResponse> localVarResponse = await ListarUsingGET55AsyncWithHttpInfo(sort, page, limit, id, descricao);
              return localVarResponse.Data;
 
         }
@@ -8742,7 +9140,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_ajuste_request_id_value}}} (optional)</param>
         /// <param name="descricao">{{{tipo_ajuste_request_descricao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoAjusteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoAjusteResponse>> ListarUsingGET52AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoAjusteResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
             
     
@@ -8793,9 +9191,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET52: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoAjusteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8813,9 +9211,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param> 
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param> 
         /// <returns>PageTipoEnderecoResponse</returns>
-        public PageTipoEnderecoResponse ListarUsingGET54 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public PageTipoEnderecoResponse ListarUsingGET57 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageTipoEnderecoResponse> localVarResponse = ListarUsingGET54WithHttpInfo(sort, page, limit, id, nome);
+             ApiResponse<PageTipoEnderecoResponse> localVarResponse = ListarUsingGET57WithHttpInfo(sort, page, limit, id, nome);
              return localVarResponse.Data;
         }
 
@@ -8829,7 +9227,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param> 
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoEnderecoResponse</returns>
-        public ApiResponse< PageTipoEnderecoResponse > ListarUsingGET54WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public ApiResponse< PageTipoEnderecoResponse > ListarUsingGET57WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -8880,9 +9278,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoEnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8901,9 +9299,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param>
         /// <returns>Task of PageTipoEnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoEnderecoResponse> ListarUsingGET54Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<PageTipoEnderecoResponse> ListarUsingGET57Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageTipoEnderecoResponse> localVarResponse = await ListarUsingGET54AsyncWithHttpInfo(sort, page, limit, id, nome);
+             ApiResponse<PageTipoEnderecoResponse> localVarResponse = await ListarUsingGET57AsyncWithHttpInfo(sort, page, limit, id, nome);
              return localVarResponse.Data;
 
         }
@@ -8918,7 +9316,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_endereco_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_endereco_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoEnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoEnderecoResponse>> ListarUsingGET54AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoEnderecoResponse>> ListarUsingGET57AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -8969,9 +9367,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoEnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8989,9 +9387,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param> 
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param> 
         /// <returns>PageTipoTelefoneResponse</returns>
-        public PageTipoTelefoneResponse ListarUsingGET56 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public PageTipoTelefoneResponse ListarUsingGET59 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageTipoTelefoneResponse> localVarResponse = ListarUsingGET56WithHttpInfo(sort, page, limit, id, nome);
+             ApiResponse<PageTipoTelefoneResponse> localVarResponse = ListarUsingGET59WithHttpInfo(sort, page, limit, id, nome);
              return localVarResponse.Data;
         }
 
@@ -9005,7 +9403,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param> 
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoTelefoneResponse</returns>
-        public ApiResponse< PageTipoTelefoneResponse > ListarUsingGET56WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public ApiResponse< PageTipoTelefoneResponse > ListarUsingGET59WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -9056,9 +9454,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET59: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET59: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9077,9 +9475,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param>
         /// <returns>Task of PageTipoTelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoTelefoneResponse> ListarUsingGET56Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<PageTipoTelefoneResponse> ListarUsingGET59Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageTipoTelefoneResponse> localVarResponse = await ListarUsingGET56AsyncWithHttpInfo(sort, page, limit, id, nome);
+             ApiResponse<PageTipoTelefoneResponse> localVarResponse = await ListarUsingGET59AsyncWithHttpInfo(sort, page, limit, id, nome);
              return localVarResponse.Data;
 
         }
@@ -9094,7 +9492,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_telefone_request_id_value}}} (optional)</param>
         /// <param name="nome">{{{tipo_telefone_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTelefoneResponse>> ListarUsingGET56AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTelefoneResponse>> ListarUsingGET59AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -9145,9 +9543,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET59: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET59: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9163,10 +9561,11 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param> 
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param> 
         /// <returns>PageControleVencimentoResponse</returns>
-        public PageControleVencimentoResponse ListarUsingGET63 (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null)
+        public PageControleVencimentoResponse ListarUsingGET66 (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
-             ApiResponse<PageControleVencimentoResponse> localVarResponse = ListarUsingGET63WithHttpInfo(sort, page, limit, dataVencimento);
+             ApiResponse<PageControleVencimentoResponse> localVarResponse = ListarUsingGET66WithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
              return localVarResponse.Data;
         }
 
@@ -9178,8 +9577,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param> 
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageControleVencimentoResponse</returns>
-        public ApiResponse< PageControleVencimentoResponse > ListarUsingGET63WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null)
+        public ApiResponse< PageControleVencimentoResponse > ListarUsingGET66WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
             
     
@@ -9214,6 +9614,7 @@ namespace Conductor.Pier.Api
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataVencimentoFim != null) localVarQueryParams.Add("dataVencimentoFim", Configuration.ApiClient.ParameterToString(dataVencimentoFim)); // query parameter
             
             
             
@@ -9229,9 +9630,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET63: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET66: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET63: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET66: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageControleVencimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9248,10 +9649,11 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param>
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param>
         /// <returns>Task of PageControleVencimentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageControleVencimentoResponse> ListarUsingGET63Async (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null)
+        public async System.Threading.Tasks.Task<PageControleVencimentoResponse> ListarUsingGET66Async (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
-             ApiResponse<PageControleVencimentoResponse> localVarResponse = await ListarUsingGET63AsyncWithHttpInfo(sort, page, limit, dataVencimento);
+             ApiResponse<PageControleVencimentoResponse> localVarResponse = await ListarUsingGET66AsyncWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
              return localVarResponse.Data;
 
         }
@@ -9264,8 +9666,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="dataVencimento">{{{controle_vencimento_request_data_vencimento_value}}} (optional)</param>
+        /// <param name="dataVencimentoFim">{{{calendario_fatura_request_data_fim_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageControleVencimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageControleVencimentoResponse>> ListarUsingGET63AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleVencimentoResponse>> ListarUsingGET66AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
             
     
@@ -9300,6 +9703,7 @@ namespace Conductor.Pier.Api
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataVencimentoFim != null) localVarQueryParams.Add("dataVencimentoFim", Configuration.ApiClient.ParameterToString(dataVencimentoFim)); // query parameter
             
             
             
@@ -9315,9 +9719,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET63: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET66: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET63: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET66: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageControleVencimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9337,9 +9741,9 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param> 
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param> 
         /// <returns>PageAtendimentoClienteResponse</returns>
-        public PageAtendimentoClienteResponse ListarUsingGET7 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
+        public PageAtendimentoClienteResponse ListarUsingGET8 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
         {
-             ApiResponse<PageAtendimentoClienteResponse> localVarResponse = ListarUsingGET7WithHttpInfo(sort, page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
+             ApiResponse<PageAtendimentoClienteResponse> localVarResponse = ListarUsingGET8WithHttpInfo(sort, page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
              return localVarResponse.Data;
         }
 
@@ -9355,7 +9759,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param> 
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageAtendimentoClienteResponse</returns>
-        public ApiResponse< PageAtendimentoClienteResponse > ListarUsingGET7WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
+        public ApiResponse< PageAtendimentoClienteResponse > ListarUsingGET8WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
         {
             
     
@@ -9408,9 +9812,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAtendimentoClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9431,9 +9835,9 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param>
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param>
         /// <returns>Task of PageAtendimentoClienteResponse</returns>
-        public async System.Threading.Tasks.Task<PageAtendimentoClienteResponse> ListarUsingGET7Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
+        public async System.Threading.Tasks.Task<PageAtendimentoClienteResponse> ListarUsingGET8Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
         {
-             ApiResponse<PageAtendimentoClienteResponse> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(sort, page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
+             ApiResponse<PageAtendimentoClienteResponse> localVarResponse = await ListarUsingGET8AsyncWithHttpInfo(sort, page, limit, idTipoAtendimento, idConta, nomeAtendente, dataAtendimento);
              return localVarResponse.Data;
 
         }
@@ -9450,7 +9854,7 @@ namespace Conductor.Pier.Api
         /// <param name="nomeAtendente">{{{atendimento_cliente_request_nome_atendente_value}}} (optional)</param>
         /// <param name="dataAtendimento">{{{atendimento_cliente_request_data_atendimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageAtendimentoClienteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClienteResponse>> ListarUsingGET7AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAtendimentoClienteResponse>> ListarUsingGET8AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoAtendimento = null, long? idConta = null, string nomeAtendente = null, string dataAtendimento = null)
         {
             
     
@@ -9503,177 +9907,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAtendimentoClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageAtendimentoClienteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageAtendimentoClienteResponse)));
-            
-        }
-        
-        /// <summary>
-        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <returns>PageBancoResponse</returns>
-        public PageBancoResponse ListarUsingGET9 (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageBancoResponse> localVarResponse = ListarUsingGET9WithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <returns>ApiResponse of PageBancoResponse</returns>
-        public ApiResponse< PageBancoResponse > ListarUsingGET9WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/bancos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageBancoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageBancoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageBancoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of PageBancoResponse</returns>
-        public async System.Threading.Tasks.Task<PageBancoResponse> ListarUsingGET9Async (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageBancoResponse> localVarResponse = await ListarUsingGET9AsyncWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// {{{banco_resource_listar}}} {{{banco_resource_listar_notes}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of ApiResponse (PageBancoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarUsingGET9AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/bancos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageBancoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageBancoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageBancoResponse)));
             
         }
         
@@ -9883,9 +10123,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param> 
         /// <returns>CampanhaResponse</returns>
-        public CampanhaResponse SalvarUsingPOST4 (CampanhaPersist campanhaPersist)
+        public CampanhaResponse SalvarUsingPOST5 (CampanhaPersist campanhaPersist)
         {
-             ApiResponse<CampanhaResponse> localVarResponse = SalvarUsingPOST4WithHttpInfo(campanhaPersist);
+             ApiResponse<CampanhaResponse> localVarResponse = SalvarUsingPOST5WithHttpInfo(campanhaPersist);
              return localVarResponse.Data;
         }
 
@@ -9895,12 +10135,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param> 
         /// <returns>ApiResponse of CampanhaResponse</returns>
-        public ApiResponse< CampanhaResponse > SalvarUsingPOST4WithHttpInfo (CampanhaPersist campanhaPersist)
+        public ApiResponse< CampanhaResponse > SalvarUsingPOST5WithHttpInfo (CampanhaPersist campanhaPersist)
         {
             
             // verify the required parameter 'campanhaPersist' is set
             if (campanhaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'campanhaPersist' when calling GlobaltagcadastrogeralApi->SalvarUsingPOST4");
+                throw new ApiException(400, "Missing required parameter 'campanhaPersist' when calling GlobaltagcadastrogeralApi->SalvarUsingPOST5");
             
     
             var localVarPath = "/api/campanhas";
@@ -9952,9 +10192,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CampanhaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9969,9 +10209,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param>
         /// <returns>Task of CampanhaResponse</returns>
-        public async System.Threading.Tasks.Task<CampanhaResponse> SalvarUsingPOST4Async (CampanhaPersist campanhaPersist)
+        public async System.Threading.Tasks.Task<CampanhaResponse> SalvarUsingPOST5Async (CampanhaPersist campanhaPersist)
         {
-             ApiResponse<CampanhaResponse> localVarResponse = await SalvarUsingPOST4AsyncWithHttpInfo(campanhaPersist);
+             ApiResponse<CampanhaResponse> localVarResponse = await SalvarUsingPOST5AsyncWithHttpInfo(campanhaPersist);
              return localVarResponse.Data;
 
         }
@@ -9982,10 +10222,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campanhaPersist">campanhaPersist</param>
         /// <returns>Task of ApiResponse (CampanhaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampanhaResponse>> SalvarUsingPOST4AsyncWithHttpInfo (CampanhaPersist campanhaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<CampanhaResponse>> SalvarUsingPOST5AsyncWithHttpInfo (CampanhaPersist campanhaPersist)
         {
             // verify the required parameter 'campanhaPersist' is set
-            if (campanhaPersist == null) throw new ApiException(400, "Missing required parameter 'campanhaPersist' when calling SalvarUsingPOST4");
+            if (campanhaPersist == null) throw new ApiException(400, "Missing required parameter 'campanhaPersist' when calling SalvarUsingPOST5");
             
     
             var localVarPath = "/api/campanhas";
@@ -10037,9 +10277,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CampanhaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10053,9 +10293,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param> 
         /// <returns>ConfiguracaoRotativoDetalheResponse</returns>
-        public ConfiguracaoRotativoDetalheResponse SalvarUsingPOST6 (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
+        public ConfiguracaoRotativoDetalheResponse SalvarUsingPOST7 (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
         {
-             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = SalvarUsingPOST6WithHttpInfo(configuracaoRotativoPersist);
+             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = SalvarUsingPOST7WithHttpInfo(configuracaoRotativoPersist);
              return localVarResponse.Data;
         }
 
@@ -10065,12 +10305,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param> 
         /// <returns>ApiResponse of ConfiguracaoRotativoDetalheResponse</returns>
-        public ApiResponse< ConfiguracaoRotativoDetalheResponse > SalvarUsingPOST6WithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
+        public ApiResponse< ConfiguracaoRotativoDetalheResponse > SalvarUsingPOST7WithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
         {
             
             // verify the required parameter 'configuracaoRotativoPersist' is set
             if (configuracaoRotativoPersist == null)
-                throw new ApiException(400, "Missing required parameter 'configuracaoRotativoPersist' when calling GlobaltagcadastrogeralApi->SalvarUsingPOST6");
+                throw new ApiException(400, "Missing required parameter 'configuracaoRotativoPersist' when calling GlobaltagcadastrogeralApi->SalvarUsingPOST7");
             
     
             var localVarPath = "/api/configuracoes-rotativos";
@@ -10122,9 +10362,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoRotativoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10139,9 +10379,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param>
         /// <returns>Task of ConfiguracaoRotativoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> SalvarUsingPOST6Async (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
+        public async System.Threading.Tasks.Task<ConfiguracaoRotativoDetalheResponse> SalvarUsingPOST7Async (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
         {
-             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = await SalvarUsingPOST6AsyncWithHttpInfo(configuracaoRotativoPersist);
+             ApiResponse<ConfiguracaoRotativoDetalheResponse> localVarResponse = await SalvarUsingPOST7AsyncWithHttpInfo(configuracaoRotativoPersist);
              return localVarResponse.Data;
 
         }
@@ -10152,10 +10392,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configuracaoRotativoPersist">configuracaoRotativoPersist</param>
         /// <returns>Task of ApiResponse (ConfiguracaoRotativoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> SalvarUsingPOST6AsyncWithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoRotativoDetalheResponse>> SalvarUsingPOST7AsyncWithHttpInfo (ConfiguracaoRotativoPersist configuracaoRotativoPersist)
         {
             // verify the required parameter 'configuracaoRotativoPersist' is set
-            if (configuracaoRotativoPersist == null) throw new ApiException(400, "Missing required parameter 'configuracaoRotativoPersist' when calling SalvarUsingPOST6");
+            if (configuracaoRotativoPersist == null) throw new ApiException(400, "Missing required parameter 'configuracaoRotativoPersist' when calling SalvarUsingPOST7");
             
     
             var localVarPath = "/api/configuracoes-rotativos";
@@ -10207,9 +10447,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoRotativoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

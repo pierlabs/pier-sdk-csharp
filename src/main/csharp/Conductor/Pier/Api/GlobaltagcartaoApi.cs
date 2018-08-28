@@ -26,9 +26,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>string</returns>
-        string AlterarAlterarSenhaUsingPUT (long? id, string senha, string authorization = null);
+        string AlterarAlterarSenhaUsingPUT (long? id, string senha);
   
         /// <summary>
         /// {{{cartao_resource_alterar_alterar_senha}}}
@@ -39,9 +38,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha, string authorization = null);
+        ApiResponse<string> AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// {{{cartao_resource_alterar_estagio}}}
@@ -52,9 +50,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param>
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse AlterarEstagioUsingPOST (long? id, EstagioCartaoUpdate update, string authorization = null);
+        CartaoResponse AlterarEstagioUsingPOST (long? id, EstagioCartaoUpdate update);
   
         /// <summary>
         /// {{{cartao_resource_alterar_estagio}}}
@@ -65,9 +62,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param>
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> AlterarEstagioUsingPOSTWithHttpInfo (long? id, EstagioCartaoUpdate update, string authorization = null);
+        ApiResponse<CartaoResponse> AlterarEstagioUsingPOSTWithHttpInfo (long? id, EstagioCartaoUpdate update);
         
         /// <summary>
         /// {{{cartao_resource_alterar_status_impressao}}}
@@ -78,9 +74,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param>
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>HistoricoImpressaoCartaoResponse</returns>
-        HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao, string authorization = null);
+        HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao);
   
         /// <summary>
         /// {{{cartao_resource_alterar_status_impressao}}}
@@ -91,9 +86,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param>
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of HistoricoImpressaoCartaoResponse</returns>
-        ApiResponse<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao, string authorization = null);
+        ApiResponse<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao);
         
         /// <summary>
         /// {{{cartao_resource_atribuir_pessoa}}}
@@ -104,9 +98,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param>
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa, string authorization = null);
+        CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa);
   
         /// <summary>
         /// {{{cartao_resource_atribuir_pessoa}}}
@@ -117,9 +110,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param>
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa, string authorization = null);
+        ApiResponse<CartaoResponse> AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// {{{cartao_resource_bloquear}}}
@@ -131,9 +123,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse BloquearUsingPOST (long? id, long? idStatus, string observacao, string authorization = null);
+        CartaoResponse BloquearUsingPOST (long? id, long? idStatus, string observacao);
   
         /// <summary>
         /// {{{cartao_resource_bloquear}}}
@@ -145,9 +136,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> BloquearUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null);
+        ApiResponse<CartaoResponse> BloquearUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
         /// {{{cartao_resource_cadastrar_alterar_senha}}}
@@ -158,9 +148,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>string</returns>
-        string CadastrarAlterarSenhaUsingPOST (long? id, string senha, string authorization = null);
+        string CadastrarAlterarSenhaUsingPOST (long? id, string senha);
   
         /// <summary>
         /// {{{cartao_resource_cadastrar_alterar_senha}}}
@@ -171,9 +160,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha, string authorization = null);
+        ApiResponse<string> CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// {{{cartao_resource_cancelar}}}
@@ -185,9 +173,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse CancelarUsingPOST (long? id, long? idStatus, string observacao, string authorization = null);
+        CartaoResponse CancelarUsingPOST (long? id, long? idStatus, string observacao);
   
         /// <summary>
         /// {{{cartao_resource_cancelar}}}
@@ -199,9 +186,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> CancelarUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null);
+        ApiResponse<CartaoResponse> CancelarUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
         /// {{{cartao_resource_consultar_cartao_impressao}}}
@@ -211,9 +197,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>DadosCartaoImpressaoResponse</returns>
-        DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id, string authorization = null);
+        DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id);
   
         /// <summary>
         /// {{{cartao_resource_consultar_cartao_impressao}}}
@@ -223,9 +208,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of DadosCartaoImpressaoResponse</returns>
-        ApiResponse<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_dados_reais_cartao}}}
@@ -235,9 +219,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>DadosCartaoResponse</returns>
-        DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id, string authorization = null);
+        DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id);
   
         /// <summary>
         /// {{{cartao_resource_consultar_dados_reais_cartao}}}
@@ -247,9 +230,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of DadosCartaoResponse</returns>
-        ApiResponse<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_limite_disponibilidade}}}
@@ -259,9 +241,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id, string authorization = null);
+        LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id);
   
         /// <summary>
         /// {{{cartao_resource_consultar_limite_disponibilidade}}}
@@ -271,9 +252,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
@@ -283,9 +263,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>LoteCartoesPrePagosResponse</returns>
-        LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id, string authorization = null);
+        LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id);
   
         /// <summary>
         /// {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
@@ -295,9 +274,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
-        ApiResponse<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_portador}}}
@@ -307,9 +285,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>PortadorResponse</returns>
-        PortadorResponse ConsultarPortadorUsingGET (long? id, string authorization = null);
+        PortadorResponse ConsultarPortadorUsingGET (long? id);
   
         /// <summary>
         /// {{{cartao_resource_consultar_portador}}}
@@ -319,9 +296,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of PortadorResponse</returns>
-        ApiResponse<PortadorResponse> ConsultarPortadorUsingGETWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<PortadorResponse> ConsultarPortadorUsingGETWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar}}}
@@ -331,9 +307,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoDetalheResponse</returns>
-        CartaoDetalheResponse ConsultarUsingGET10 (long? id, string authorization = null);
+        CartaoDetalheResponse ConsultarUsingGET12 (long? id);
   
         /// <summary>
         /// {{{cartao_resource_consultar}}}
@@ -343,9 +318,30 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoDetalheResponse</returns>
-        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET10WithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoDetalheResponse> ConsultarUsingGET12WithHttpInfo (long? id);
+        
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param>
+        /// <returns>VinculoCartoesResponse</returns>
+        VinculoCartoesResponse CriarCartoesMultiAppUsingPOST (CartaoMultiAppPersistValue cartaoMultiAppPersist);
+  
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param>
+        /// <returns>ApiResponse of VinculoCartoesResponse</returns>
+        ApiResponse<VinculoCartoesResponse> CriarCartoesMultiAppUsingPOSTWithHttpInfo (CartaoMultiAppPersistValue cartaoMultiAppPersist);
         
         /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}}
@@ -355,9 +351,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id, string authorization = null);
+        CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}}
@@ -367,9 +362,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_desbloquear}}}
@@ -379,9 +373,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse DesbloquearUsingPOST (long? id, string authorization = null);
+        CartaoResponse DesbloquearUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_desbloquear}}}
@@ -391,9 +384,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> DesbloquearUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoResponse> DesbloquearUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -402,7 +394,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param>
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param>
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param>
@@ -411,7 +402,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param>
         /// <returns>LoteCartoesPrePagosResponse</returns>
-        LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
+        LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
   
         /// <summary>
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -420,7 +411,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param>
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param>
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param>
@@ -429,7 +419,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param>
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
-        ApiResponse<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
+        ApiResponse<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
         
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via_multiplo}}}
@@ -439,9 +429,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoMultiAppImpressaoResponse</returns>
-        CartaoMultiAppImpressaoResponse GerarNovaViaCartaoMultiAppUsingPOST (long? id, string authorization = null);
+        CartaoMultiAppImpressaoResponse GerarNovaViaCartaoMultiAppUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via_multiplo}}}
@@ -451,9 +440,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoMultiAppImpressaoResponse</returns>
-        ApiResponse<CartaoMultiAppImpressaoResponse> GerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoMultiAppImpressaoResponse> GerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via}}}
@@ -463,9 +451,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse GerarNovaViaUsingPOST (long? id, string authorization = null);
+        CartaoResponse GerarNovaViaUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via}}}
@@ -475,9 +462,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> GerarNovaViaUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoResponse> GerarNovaViaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_lancar_tarifa_segunda_via}}}
@@ -487,9 +473,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Object</returns>
-        Object LancarTarifaSegundaViaUsingPOST (long? id, string authorization = null);
+        Object LancarTarifaSegundaViaUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_lancar_tarifa_segunda_via}}}
@@ -499,9 +484,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> LancarTarifaSegundaViaUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<Object> LancarTarifaSegundaViaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
@@ -510,7 +494,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -525,7 +508,7 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param>
         /// <returns>PageLoteCartoesPrePagosResponse</returns>
-        PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
+        PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
   
         /// <summary>
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
@@ -534,7 +517,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -549,7 +531,7 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param>
         /// <returns>ApiResponse of PageLoteCartoesPrePagosResponse</returns>
-        ApiResponse<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETWithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
+        ApiResponse<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
         
         /// <summary>
         /// {{{cartao_resource_listar}}}
@@ -558,7 +540,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -580,8 +561,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param>
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param>
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param>
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param>
         /// <returns>PageCartaoResponse</returns>
-        PageCartaoResponse ListarUsingGET11 (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        PageCartaoResponse ListarUsingGET12 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null);
   
         /// <summary>
         /// {{{cartao_resource_listar}}}
@@ -590,7 +572,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -612,8 +593,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param>
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param>
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param>
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param>
         /// <returns>ApiResponse of PageCartaoResponse</returns>
-        ApiResponse<PageCartaoResponse> ListarUsingGET11WithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        ApiResponse<PageCartaoResponse> ListarUsingGET12WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null);
         
         /// <summary>
         /// {{{cartao_resource_reativar}}}
@@ -623,9 +605,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse ReativarUsingPOST (long? id, string authorization = null);
+        CartaoResponse ReativarUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_reativar}}}
@@ -635,9 +616,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> ReativarUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<CartaoResponse> ReativarUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_validar_c_v_v}}}
@@ -648,9 +628,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>string</returns>
-        string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV, string authorization = null);
+        string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV);
   
         /// <summary>
         /// {{{cartao_resource_validar_c_v_v}}}
@@ -661,9 +640,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV, string authorization = null);
+        ApiResponse<string> ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
         
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_bandeirado}}}
@@ -676,9 +654,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ValidaCartaoResponse</returns>
-        ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
   
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_bandeirado}}}
@@ -691,9 +668,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_nao_bandeirado}}}
@@ -706,9 +682,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ValidaCartaoResponse</returns>
-        ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
   
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_nao_bandeirado}}}
@@ -721,9 +696,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        ApiResponse<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// {{{cartao_resource_validar_de55_cartao_mastercard}}}
@@ -734,9 +708,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param>
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ValidaCartaoResponse</returns>
-        ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma, string authorization = null);
+        ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma);
   
         /// <summary>
         /// {{{cartao_resource_validar_de55_cartao_mastercard}}}
@@ -747,9 +720,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param>
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        ApiResponse<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma, string authorization = null);
+        ApiResponse<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma);
         
         /// <summary>
         /// {{{cartao_resource_validar_senha}}}
@@ -760,9 +732,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ValidaSenhaCartaoResponse</returns>
-        ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha, string authorization = null);
+        ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha);
   
         /// <summary>
         /// {{{cartao_resource_validar_senha}}}
@@ -773,9 +744,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
-        ApiResponse<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETWithHttpInfo (long? id, string senha, string authorization = null);
+        ApiResponse<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// {{{cartao_resource_validar_tarja}}}
@@ -787,9 +757,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param>
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param>
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ValidaCartaoResponse</returns>
-        ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2, string authorization = null);
+        ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2);
   
         /// <summary>
         /// {{{cartao_resource_validar_tarja}}}
@@ -801,9 +770,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param>
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param>
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        ApiResponse<ValidaCartaoResponse> ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2, string authorization = null);
+        ApiResponse<ValidaCartaoResponse> ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
         
         #endregion Synchronous Operations
         
@@ -818,9 +786,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha, string authorization = null);
+        System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha);
 
         /// <summary>
         /// {{{cartao_resource_alterar_alterar_senha}}}
@@ -831,9 +798,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// {{{cartao_resource_alterar_estagio}}}
@@ -844,9 +810,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param>
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> AlterarEstagioUsingPOSTAsync (long? id, EstagioCartaoUpdate update, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> AlterarEstagioUsingPOSTAsync (long? id, EstagioCartaoUpdate update);
 
         /// <summary>
         /// {{{cartao_resource_alterar_estagio}}}
@@ -857,9 +822,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param>
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AlterarEstagioUsingPOSTAsyncWithHttpInfo (long? id, EstagioCartaoUpdate update, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AlterarEstagioUsingPOSTAsyncWithHttpInfo (long? id, EstagioCartaoUpdate update);
         
         /// <summary>
         /// {{{cartao_resource_alterar_status_impressao}}}
@@ -870,9 +834,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param>
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of HistoricoImpressaoCartaoResponse</returns>
-        System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao, string authorization = null);
+        System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao);
 
         /// <summary>
         /// {{{cartao_resource_alterar_status_impressao}}}
@@ -883,9 +846,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param>
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (HistoricoImpressaoCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao);
         
         /// <summary>
         /// {{{cartao_resource_atribuir_pessoa}}}
@@ -896,9 +858,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param>
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa);
 
         /// <summary>
         /// {{{cartao_resource_atribuir_pessoa}}}
@@ -909,9 +870,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param>
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// {{{cartao_resource_bloquear}}}
@@ -923,9 +883,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPOSTAsync (long? id, long? idStatus, string observacao, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPOSTAsync (long? id, long? idStatus, string observacao);
 
         /// <summary>
         /// {{{cartao_resource_bloquear}}}
@@ -937,9 +896,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
         /// {{{cartao_resource_cadastrar_alterar_senha}}}
@@ -950,9 +908,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha, string authorization = null);
+        System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha);
 
         /// <summary>
         /// {{{cartao_resource_cadastrar_alterar_senha}}}
@@ -963,9 +920,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// {{{cartao_resource_cancelar}}}
@@ -977,9 +933,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> CancelarUsingPOSTAsync (long? id, long? idStatus, string observacao, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> CancelarUsingPOSTAsync (long? id, long? idStatus, string observacao);
 
         /// <summary>
         /// {{{cartao_resource_cancelar}}}
@@ -991,9 +946,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
         
         /// <summary>
         /// {{{cartao_resource_consultar_cartao_impressao}}}
@@ -1003,9 +957,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of DadosCartaoImpressaoResponse</returns>
-        System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_consultar_cartao_impressao}}}
@@ -1015,9 +968,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (DadosCartaoImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_dados_reais_cartao}}}
@@ -1027,9 +979,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of DadosCartaoResponse</returns>
-        System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_consultar_dados_reais_cartao}}}
@@ -1039,9 +990,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (DadosCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_limite_disponibilidade}}}
@@ -1051,9 +1001,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_consultar_limite_disponibilidade}}}
@@ -1063,9 +1012,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
@@ -1075,9 +1023,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
-        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
@@ -1087,9 +1034,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar_portador}}}
@@ -1099,9 +1045,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of PortadorResponse</returns>
-        System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_consultar_portador}}}
@@ -1111,9 +1056,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (PortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_consultar}}}
@@ -1123,9 +1067,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoDetalheResponse</returns>
-        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET10Async (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET12Async (long? id);
 
         /// <summary>
         /// {{{cartao_resource_consultar}}}
@@ -1135,9 +1078,30 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET10AsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param>
+        /// <returns>Task of VinculoCartoesResponse</returns>
+        System.Threading.Tasks.Task<VinculoCartoesResponse> CriarCartoesMultiAppUsingPOSTAsync (CartaoMultiAppPersistValue cartaoMultiAppPersist);
+
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param>
+        /// <returns>Task of ApiResponse (VinculoCartoesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VinculoCartoesResponse>> CriarCartoesMultiAppUsingPOSTAsyncWithHttpInfo (CartaoMultiAppPersistValue cartaoMultiAppPersist);
         
         /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}}
@@ -1147,9 +1111,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}}
@@ -1159,9 +1122,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_desbloquear}}}
@@ -1171,9 +1133,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_desbloquear}}}
@@ -1183,9 +1144,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -1194,7 +1154,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param>
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param>
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param>
@@ -1203,7 +1162,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
-        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
+        System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
 
         /// <summary>
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -1212,7 +1171,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param>
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param>
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param>
@@ -1221,7 +1179,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
+        System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null);
         
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via_multiplo}}}
@@ -1231,9 +1189,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoMultiAppImpressaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoMultiAppImpressaoResponse> GerarNovaViaCartaoMultiAppUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoMultiAppImpressaoResponse> GerarNovaViaCartaoMultiAppUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via_multiplo}}}
@@ -1243,9 +1200,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoMultiAppImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoMultiAppImpressaoResponse>> GerarNovaViaCartaoMultiAppUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoMultiAppImpressaoResponse>> GerarNovaViaCartaoMultiAppUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via}}}
@@ -1255,9 +1211,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via}}}
@@ -1267,9 +1222,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_lancar_tarifa_segunda_via}}}
@@ -1279,9 +1233,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> LancarTarifaSegundaViaUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<Object> LancarTarifaSegundaViaUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_lancar_tarifa_segunda_via}}}
@@ -1291,9 +1244,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
@@ -1302,7 +1254,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -1317,7 +1268,7 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of PageLoteCartoesPrePagosResponse</returns>
-        System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
+        System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
 
         /// <summary>
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
@@ -1326,7 +1277,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -1341,7 +1291,7 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageLoteCartoesPrePagosResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
+        System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null);
         
         /// <summary>
         /// {{{cartao_resource_listar}}}
@@ -1350,7 +1300,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -1372,8 +1321,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param>
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param>
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param>
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of PageCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET11Async (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET12Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null);
 
         /// <summary>
         /// {{{cartao_resource_listar}}}
@@ -1382,7 +1332,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -1404,8 +1353,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param>
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param>
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param>
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET11AsyncWithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET12AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null);
         
         /// <summary>
         /// {{{cartao_resource_reativar}}}
@@ -1415,9 +1365,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> ReativarUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<CartaoResponse> ReativarUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_reativar}}}
@@ -1427,9 +1376,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> ReativarUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> ReativarUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_validar_c_v_v}}}
@@ -1440,9 +1388,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV, string authorization = null);
+        System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV);
 
         /// <summary>
         /// {{{cartao_resource_validar_c_v_v}}}
@@ -1453,9 +1400,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV);
         
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_bandeirado}}}
@@ -1468,9 +1414,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
 
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_bandeirado}}}
@@ -1483,9 +1428,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_nao_bandeirado}}}
@@ -1498,9 +1442,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
 
         /// <summary>
         /// {{{cartao_resource_validar_dados_impressos_nao_bandeirado}}}
@@ -1513,9 +1456,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca);
         
         /// <summary>
         /// {{{cartao_resource_validar_de55_cartao_mastercard}}}
@@ -1526,9 +1468,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param>
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma, string authorization = null);
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma);
 
         /// <summary>
         /// {{{cartao_resource_validar_de55_cartao_mastercard}}}
@@ -1539,9 +1480,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param>
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma);
         
         /// <summary>
         /// {{{cartao_resource_validar_senha}}}
@@ -1552,9 +1492,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaSenhaCartaoResponse</returns>
-        System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha, string authorization = null);
+        System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha);
 
         /// <summary>
         /// {{{cartao_resource_validar_senha}}}
@@ -1565,9 +1504,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha);
         
         /// <summary>
         /// {{{cartao_resource_validar_tarja}}}
@@ -1579,9 +1517,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param>
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param>
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2, string authorization = null);
+        System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2);
 
         /// <summary>
         /// {{{cartao_resource_validar_tarja}}}
@@ -1593,9 +1530,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param>
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param>
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2);
         
         #endregion Asynchronous Operations
         
@@ -1695,11 +1631,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param> 
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>string</returns>
-        public string AlterarAlterarSenhaUsingPUT (long? id, string senha, string authorization = null)
+        public string AlterarAlterarSenhaUsingPUT (long? id, string senha)
         {
-             ApiResponse<string> localVarResponse = AlterarAlterarSenhaUsingPUTWithHttpInfo(id, senha, authorization);
+             ApiResponse<string> localVarResponse = AlterarAlterarSenhaUsingPUTWithHttpInfo(id, senha);
              return localVarResponse.Data;
         }
 
@@ -1709,9 +1644,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param> 
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha, string authorization = null)
+        public ApiResponse< string > AlterarAlterarSenhaUsingPUTWithHttpInfo (long? id, string senha)
         {
             
             // verify the required parameter 'id' is set
@@ -1752,7 +1686,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
@@ -1785,11 +1718,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha, string authorization = null)
+        public async System.Threading.Tasks.Task<string> AlterarAlterarSenhaUsingPUTAsync (long? id, string senha)
         {
-             ApiResponse<string> localVarResponse = await AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo(id, senha, authorization);
+             ApiResponse<string> localVarResponse = await AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo(id, senha);
              return localVarResponse.Data;
 
         }
@@ -1800,9 +1732,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarAlterarSenhaUsingPUTAsyncWithHttpInfo (long? id, string senha)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarAlterarSenhaUsingPUT");
@@ -1839,7 +1770,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
@@ -1871,11 +1801,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param> 
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse AlterarEstagioUsingPOST (long? id, EstagioCartaoUpdate update, string authorization = null)
+        public CartaoResponse AlterarEstagioUsingPOST (long? id, EstagioCartaoUpdate update)
         {
-             ApiResponse<CartaoResponse> localVarResponse = AlterarEstagioUsingPOSTWithHttpInfo(id, update, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = AlterarEstagioUsingPOSTWithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -1885,9 +1814,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param> 
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > AlterarEstagioUsingPOSTWithHttpInfo (long? id, EstagioCartaoUpdate update, string authorization = null)
+        public ApiResponse< CartaoResponse > AlterarEstagioUsingPOSTWithHttpInfo (long? id, EstagioCartaoUpdate update)
         {
             
             // verify the required parameter 'id' is set
@@ -1928,7 +1856,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             if (update.GetType() != typeof(byte[]))
@@ -1967,11 +1894,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param>
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> AlterarEstagioUsingPOSTAsync (long? id, EstagioCartaoUpdate update, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> AlterarEstagioUsingPOSTAsync (long? id, EstagioCartaoUpdate update)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await AlterarEstagioUsingPOSTAsyncWithHttpInfo(id, update, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await AlterarEstagioUsingPOSTAsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -1982,9 +1908,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_estagio_param_id}}}</param>
         /// <param name="update">{{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AlterarEstagioUsingPOSTAsyncWithHttpInfo (long? id, EstagioCartaoUpdate update, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AlterarEstagioUsingPOSTAsyncWithHttpInfo (long? id, EstagioCartaoUpdate update)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarEstagioUsingPOST");
@@ -2021,7 +1946,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             if (update.GetType() != typeof(byte[]))
@@ -2059,11 +1983,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param> 
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>HistoricoImpressaoCartaoResponse</returns>
-        public HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao, string authorization = null)
+        public HistoricoImpressaoCartaoResponse AlterarStatusImpressaoUsingPUT (long? id, long? idStatusImpressao)
         {
-             ApiResponse<HistoricoImpressaoCartaoResponse> localVarResponse = AlterarStatusImpressaoUsingPUTWithHttpInfo(id, idStatusImpressao, authorization);
+             ApiResponse<HistoricoImpressaoCartaoResponse> localVarResponse = AlterarStatusImpressaoUsingPUTWithHttpInfo(id, idStatusImpressao);
              return localVarResponse.Data;
         }
 
@@ -2073,9 +1996,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param> 
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of HistoricoImpressaoCartaoResponse</returns>
-        public ApiResponse< HistoricoImpressaoCartaoResponse > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao, string authorization = null)
+        public ApiResponse< HistoricoImpressaoCartaoResponse > AlterarStatusImpressaoUsingPUTWithHttpInfo (long? id, long? idStatusImpressao)
         {
             
             // verify the required parameter 'id' is set
@@ -2117,7 +2039,6 @@ namespace Conductor.Pier.Api
             
             if (idStatusImpressao != null) localVarQueryParams.Add("id_status_impressao", Configuration.ApiClient.ParameterToString(idStatusImpressao)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2149,11 +2070,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param>
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of HistoricoImpressaoCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao, string authorization = null)
+        public async System.Threading.Tasks.Task<HistoricoImpressaoCartaoResponse> AlterarStatusImpressaoUsingPUTAsync (long? id, long? idStatusImpressao)
         {
-             ApiResponse<HistoricoImpressaoCartaoResponse> localVarResponse = await AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo(id, idStatusImpressao, authorization);
+             ApiResponse<HistoricoImpressaoCartaoResponse> localVarResponse = await AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo(id, idStatusImpressao);
              return localVarResponse.Data;
 
         }
@@ -2164,9 +2084,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_alterar_status_impressao_param_id}}}</param>
         /// <param name="idStatusImpressao">{{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (HistoricoImpressaoCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<HistoricoImpressaoCartaoResponse>> AlterarStatusImpressaoUsingPUTAsyncWithHttpInfo (long? id, long? idStatusImpressao)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarStatusImpressaoUsingPUT");
@@ -2204,7 +2123,6 @@ namespace Conductor.Pier.Api
             
             if (idStatusImpressao != null) localVarQueryParams.Add("id_status_impressao", Configuration.ApiClient.ParameterToString(idStatusImpressao)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2235,11 +2153,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param> 
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa, string authorization = null)
+        public CartaoResponse AtribuirPessoaUsingPUT (long? id, long? idPessoa)
         {
-             ApiResponse<CartaoResponse> localVarResponse = AtribuirPessoaUsingPUTWithHttpInfo(id, idPessoa, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = AtribuirPessoaUsingPUTWithHttpInfo(id, idPessoa);
              return localVarResponse.Data;
         }
 
@@ -2249,9 +2166,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param> 
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa, string authorization = null)
+        public ApiResponse< CartaoResponse > AtribuirPessoaUsingPUTWithHttpInfo (long? id, long? idPessoa)
         {
             
             // verify the required parameter 'id' is set
@@ -2293,7 +2209,6 @@ namespace Conductor.Pier.Api
             
             if (idPessoa != null) localVarQueryParams.Add("id_pessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2325,11 +2240,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param>
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> AtribuirPessoaUsingPUTAsync (long? id, long? idPessoa)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await AtribuirPessoaUsingPUTAsyncWithHttpInfo(id, idPessoa, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await AtribuirPessoaUsingPUTAsyncWithHttpInfo(id, idPessoa);
              return localVarResponse.Data;
 
         }
@@ -2340,9 +2254,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_atribuir_pessoa_param_id_cartao}}}</param>
         /// <param name="idPessoa">{{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> AtribuirPessoaUsingPUTAsyncWithHttpInfo (long? id, long? idPessoa)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirPessoaUsingPUT");
@@ -2380,7 +2293,6 @@ namespace Conductor.Pier.Api
             
             if (idPessoa != null) localVarQueryParams.Add("id_pessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2412,11 +2324,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param> 
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param> 
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse BloquearUsingPOST (long? id, long? idStatus, string observacao, string authorization = null)
+        public CartaoResponse BloquearUsingPOST (long? id, long? idStatus, string observacao)
         {
-             ApiResponse<CartaoResponse> localVarResponse = BloquearUsingPOSTWithHttpInfo(id, idStatus, observacao, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = BloquearUsingPOSTWithHttpInfo(id, idStatus, observacao);
              return localVarResponse.Data;
         }
 
@@ -2427,9 +2338,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param> 
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param> 
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > BloquearUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null)
+        public ApiResponse< CartaoResponse > BloquearUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao)
         {
             
             // verify the required parameter 'id' is set
@@ -2476,7 +2386,6 @@ namespace Conductor.Pier.Api
             if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
             if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2509,11 +2418,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPOSTAsync (long? id, long? idStatus, string observacao, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> BloquearUsingPOSTAsync (long? id, long? idStatus, string observacao)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await BloquearUsingPOSTAsyncWithHttpInfo(id, idStatus, observacao, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await BloquearUsingPOSTAsyncWithHttpInfo(id, idStatus, observacao);
              return localVarResponse.Data;
 
         }
@@ -2525,9 +2433,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_bloquear_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_bloquear_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_bloquear_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling BloquearUsingPOST");
@@ -2568,7 +2475,6 @@ namespace Conductor.Pier.Api
             if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
             if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2599,11 +2505,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param> 
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>string</returns>
-        public string CadastrarAlterarSenhaUsingPOST (long? id, string senha, string authorization = null)
+        public string CadastrarAlterarSenhaUsingPOST (long? id, string senha)
         {
-             ApiResponse<string> localVarResponse = CadastrarAlterarSenhaUsingPOSTWithHttpInfo(id, senha, authorization);
+             ApiResponse<string> localVarResponse = CadastrarAlterarSenhaUsingPOSTWithHttpInfo(id, senha);
              return localVarResponse.Data;
         }
 
@@ -2613,9 +2518,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param> 
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha, string authorization = null)
+        public ApiResponse< string > CadastrarAlterarSenhaUsingPOSTWithHttpInfo (long? id, string senha)
         {
             
             // verify the required parameter 'id' is set
@@ -2656,7 +2560,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
@@ -2689,11 +2592,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha, string authorization = null)
+        public async System.Threading.Tasks.Task<string> CadastrarAlterarSenhaUsingPOSTAsync (long? id, string senha)
         {
-             ApiResponse<string> localVarResponse = await CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo(id, senha, authorization);
+             ApiResponse<string> localVarResponse = await CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo(id, senha);
              return localVarResponse.Data;
 
         }
@@ -2704,9 +2606,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_cadastrar_alterar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> CadastrarAlterarSenhaUsingPOSTAsyncWithHttpInfo (long? id, string senha)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarAlterarSenhaUsingPOST");
@@ -2743,7 +2644,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
@@ -2776,11 +2676,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param> 
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param> 
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse CancelarUsingPOST (long? id, long? idStatus, string observacao, string authorization = null)
+        public CartaoResponse CancelarUsingPOST (long? id, long? idStatus, string observacao)
         {
-             ApiResponse<CartaoResponse> localVarResponse = CancelarUsingPOSTWithHttpInfo(id, idStatus, observacao, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = CancelarUsingPOSTWithHttpInfo(id, idStatus, observacao);
              return localVarResponse.Data;
         }
 
@@ -2791,9 +2690,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param> 
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param> 
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > CancelarUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null)
+        public ApiResponse< CartaoResponse > CancelarUsingPOSTWithHttpInfo (long? id, long? idStatus, string observacao)
         {
             
             // verify the required parameter 'id' is set
@@ -2840,7 +2738,6 @@ namespace Conductor.Pier.Api
             if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
             if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2873,11 +2770,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> CancelarUsingPOSTAsync (long? id, long? idStatus, string observacao, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> CancelarUsingPOSTAsync (long? id, long? idStatus, string observacao)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await CancelarUsingPOSTAsyncWithHttpInfo(id, idStatus, observacao, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await CancelarUsingPOSTAsyncWithHttpInfo(id, idStatus, observacao);
              return localVarResponse.Data;
 
         }
@@ -2889,9 +2785,8 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{cartao_resource_cancelar_param_id}}}</param>
         /// <param name="idStatus">{{{cartao_resource_cancelar_param_id_status}}}</param>
         /// <param name="observacao">{{{cartao_resource_cancelar_param_observacao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarUsingPOSTAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarUsingPOST");
@@ -2932,7 +2827,6 @@ namespace Conductor.Pier.Api
             if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
             if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -2962,11 +2856,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>DadosCartaoImpressaoResponse</returns>
-        public DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id, string authorization = null)
+        public DadosCartaoImpressaoResponse ConsultarCartaoImpressaoUsingGET (long? id)
         {
-             ApiResponse<DadosCartaoImpressaoResponse> localVarResponse = ConsultarCartaoImpressaoUsingGETWithHttpInfo(id, authorization);
+             ApiResponse<DadosCartaoImpressaoResponse> localVarResponse = ConsultarCartaoImpressaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2975,9 +2868,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of DadosCartaoImpressaoResponse</returns>
-        public ApiResponse< DadosCartaoImpressaoResponse > ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< DadosCartaoImpressaoResponse > ConsultarCartaoImpressaoUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3014,7 +2906,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3045,11 +2936,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of DadosCartaoImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<DadosCartaoImpressaoResponse> ConsultarCartaoImpressaoUsingGETAsync (long? id)
         {
-             ApiResponse<DadosCartaoImpressaoResponse> localVarResponse = await ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo(id, authorization);
+             ApiResponse<DadosCartaoImpressaoResponse> localVarResponse = await ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3059,9 +2949,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_cartao_impressao_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (DadosCartaoImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoImpressaoResponse>> ConsultarCartaoImpressaoUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarCartaoImpressaoUsingGET");
@@ -3096,7 +2985,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3126,11 +3014,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>DadosCartaoResponse</returns>
-        public DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id, string authorization = null)
+        public DadosCartaoResponse ConsultarDadosReaisCartaoUsingGET (long? id)
         {
-             ApiResponse<DadosCartaoResponse> localVarResponse = ConsultarDadosReaisCartaoUsingGETWithHttpInfo(id, authorization);
+             ApiResponse<DadosCartaoResponse> localVarResponse = ConsultarDadosReaisCartaoUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3139,9 +3026,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of DadosCartaoResponse</returns>
-        public ApiResponse< DadosCartaoResponse > ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< DadosCartaoResponse > ConsultarDadosReaisCartaoUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3178,7 +3064,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3209,11 +3094,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of DadosCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<DadosCartaoResponse> ConsultarDadosReaisCartaoUsingGETAsync (long? id)
         {
-             ApiResponse<DadosCartaoResponse> localVarResponse = await ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo(id, authorization);
+             ApiResponse<DadosCartaoResponse> localVarResponse = await ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3223,9 +3107,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (DadosCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosCartaoResponse>> ConsultarDadosReaisCartaoUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDadosReaisCartaoUsingGET");
@@ -3260,7 +3143,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3290,11 +3172,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id, string authorization = null)
+        public LimiteDisponibilidadeResponse ConsultarLimiteDisponibilidadeUsingGET (long? id)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo(id, authorization);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3303,9 +3184,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarLimiteDisponibilidadeUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3342,7 +3222,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3373,11 +3252,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarLimiteDisponibilidadeUsingGETAsync (long? id)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo(id, authorization);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3387,9 +3265,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_limite_disponibilidade_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarLimiteDisponibilidadeUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarLimiteDisponibilidadeUsingGET");
@@ -3424,7 +3301,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3454,11 +3330,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>LoteCartoesPrePagosResponse</returns>
-        public LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id, string authorization = null)
+        public LoteCartoesPrePagosResponse ConsultarLotesCartoesPrePagosUsingGET (long? id)
         {
-             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo(id, authorization);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3467,9 +3342,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
-        public ApiResponse< LoteCartoesPrePagosResponse > ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< LoteCartoesPrePagosResponse > ConsultarLotesCartoesPrePagosUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3506,7 +3380,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3537,11 +3410,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
-        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> ConsultarLotesCartoesPrePagosUsingGETAsync (long? id)
         {
-             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(id, authorization);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3551,9 +3423,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> ConsultarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarLotesCartoesPrePagosUsingGET");
@@ -3588,7 +3459,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3618,11 +3488,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>PortadorResponse</returns>
-        public PortadorResponse ConsultarPortadorUsingGET (long? id, string authorization = null)
+        public PortadorResponse ConsultarPortadorUsingGET (long? id)
         {
-             ApiResponse<PortadorResponse> localVarResponse = ConsultarPortadorUsingGETWithHttpInfo(id, authorization);
+             ApiResponse<PortadorResponse> localVarResponse = ConsultarPortadorUsingGETWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3631,9 +3500,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of PortadorResponse</returns>
-        public ApiResponse< PortadorResponse > ConsultarPortadorUsingGETWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< PortadorResponse > ConsultarPortadorUsingGETWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3670,7 +3538,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3701,11 +3568,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of PortadorResponse</returns>
-        public async System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<PortadorResponse> ConsultarPortadorUsingGETAsync (long? id)
         {
-             ApiResponse<PortadorResponse> localVarResponse = await ConsultarPortadorUsingGETAsyncWithHttpInfo(id, authorization);
+             ApiResponse<PortadorResponse> localVarResponse = await ConsultarPortadorUsingGETAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3715,9 +3581,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_portador_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (PortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorUsingGETAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPortadorUsingGET");
@@ -3752,7 +3617,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3782,11 +3646,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoDetalheResponse</returns>
-        public CartaoDetalheResponse ConsultarUsingGET10 (long? id, string authorization = null)
+        public CartaoDetalheResponse ConsultarUsingGET12 (long? id)
         {
-             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET10WithHttpInfo(id, authorization);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3795,14 +3658,13 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoDetalheResponse</returns>
-        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET10WithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoDetalheResponse > ConsultarUsingGET12WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcartaoApi->ConsultarUsingGET10");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcartaoApi->ConsultarUsingGET12");
             
     
             var localVarPath = "/api/cartoes/{id}";
@@ -3834,7 +3696,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3849,9 +3710,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3865,11 +3726,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET10Async (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoDetalheResponse> ConsultarUsingGET12Async (long? id)
         {
-             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET10AsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoDetalheResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3879,12 +3739,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_consultar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET10AsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoDetalheResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET10");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
             
     
             var localVarPath = "/api/cartoes/{id}";
@@ -3916,7 +3775,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -3931,9 +3789,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3942,15 +3800,184 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}} {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param> 
+        /// <returns>VinculoCartoesResponse</returns>
+        public VinculoCartoesResponse CriarCartoesMultiAppUsingPOST (CartaoMultiAppPersistValue cartaoMultiAppPersist)
+        {
+             ApiResponse<VinculoCartoesResponse> localVarResponse = CriarCartoesMultiAppUsingPOSTWithHttpInfo(cartaoMultiAppPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}} {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param> 
+        /// <returns>ApiResponse of VinculoCartoesResponse</returns>
+        public ApiResponse< VinculoCartoesResponse > CriarCartoesMultiAppUsingPOSTWithHttpInfo (CartaoMultiAppPersistValue cartaoMultiAppPersist)
+        {
+            
+            // verify the required parameter 'cartaoMultiAppPersist' is set
+            if (cartaoMultiAppPersist == null)
+                throw new ApiException(400, "Missing required parameter 'cartaoMultiAppPersist' when calling GlobaltagcartaoApi->CriarCartoesMultiAppUsingPOST");
+            
+    
+            var localVarPath = "/api/cartoes/gerar-cartoes-multiapp";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (cartaoMultiAppPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cartaoMultiAppPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cartaoMultiAppPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CriarCartoesMultiAppUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CriarCartoesMultiAppUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<VinculoCartoesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VinculoCartoesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoCartoesResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}} {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param>
+        /// <returns>Task of VinculoCartoesResponse</returns>
+        public async System.Threading.Tasks.Task<VinculoCartoesResponse> CriarCartoesMultiAppUsingPOSTAsync (CartaoMultiAppPersistValue cartaoMultiAppPersist)
+        {
+             ApiResponse<VinculoCartoesResponse> localVarResponse = await CriarCartoesMultiAppUsingPOSTAsyncWithHttpInfo(cartaoMultiAppPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{conta_resource_cadastrar_cartao_multiapp}}} {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cartaoMultiAppPersist">cartaoMultiAppPersist</param>
+        /// <returns>Task of ApiResponse (VinculoCartoesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VinculoCartoesResponse>> CriarCartoesMultiAppUsingPOSTAsyncWithHttpInfo (CartaoMultiAppPersistValue cartaoMultiAppPersist)
+        {
+            // verify the required parameter 'cartaoMultiAppPersist' is set
+            if (cartaoMultiAppPersist == null) throw new ApiException(400, "Missing required parameter 'cartaoMultiAppPersist' when calling CriarCartoesMultiAppUsingPOST");
+            
+    
+            var localVarPath = "/api/cartoes/gerar-cartoes-multiapp";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (cartaoMultiAppPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cartaoMultiAppPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cartaoMultiAppPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CriarCartoesMultiAppUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CriarCartoesMultiAppUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VinculoCartoesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VinculoCartoesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoCartoesResponse)));
+            
+        }
+        
+        /// <summary>
         /// {{{cartao_resource_desbloquear_senha_incorreta}}} {{{cartao_resource_desbloquear_senha_incorreta_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id, string authorization = null)
+        public CartaoResponse DesbloquearSenhaIncorretaUsingPOST (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3959,9 +3986,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoResponse > DesbloquearSenhaIncorretaUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -3998,7 +4024,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4029,11 +4054,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearSenhaIncorretaUsingPOSTAsync (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4043,9 +4067,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_senha_incorreta_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearSenhaIncorretaUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesbloquearSenhaIncorretaUsingPOST");
@@ -4080,7 +4103,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4110,11 +4132,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse DesbloquearUsingPOST (long? id, string authorization = null)
+        public CartaoResponse DesbloquearUsingPOST (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = DesbloquearUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = DesbloquearUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4123,9 +4144,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > DesbloquearUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoResponse > DesbloquearUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -4162,7 +4182,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4193,11 +4212,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> DesbloquearUsingPOSTAsync (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await DesbloquearUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await DesbloquearUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4207,9 +4225,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_desbloquear_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> DesbloquearUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesbloquearUsingPOST");
@@ -4244,7 +4261,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4273,7 +4289,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param> 
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param> 
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param> 
@@ -4282,9 +4297,9 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param> 
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param> 
         /// <returns>LoteCartoesPrePagosResponse</returns>
-        public LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
+        public LoteCartoesPrePagosResponse GerarLotesCartoesPrePagosUsingPOST (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
-             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo(authorization, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, identificadorExterno);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, identificadorExterno);
              return localVarResponse.Data;
         }
 
@@ -4292,7 +4307,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param> 
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param> 
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param> 
@@ -4301,7 +4315,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param> 
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param> 
         /// <returns>ApiResponse of LoteCartoesPrePagosResponse</returns>
-        public ApiResponse< LoteCartoesPrePagosResponse > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
+        public ApiResponse< LoteCartoesPrePagosResponse > GerarLotesCartoesPrePagosUsingPOSTWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
             
     
@@ -4340,7 +4354,6 @@ namespace Conductor.Pier.Api
             if (quantidadeCartoes != null) localVarQueryParams.Add("quantidadeCartoes", Configuration.ApiClient.ParameterToString(quantidadeCartoes)); // query parameter
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4370,7 +4383,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param>
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param>
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param>
@@ -4379,9 +4391,9 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of LoteCartoesPrePagosResponse</returns>
-        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
+        public async System.Threading.Tasks.Task<LoteCartoesPrePagosResponse> GerarLotesCartoesPrePagosUsingPOSTAsync (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
-             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo(authorization, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, identificadorExterno);
+             ApiResponse<LoteCartoesPrePagosResponse> localVarResponse = await GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo(idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, identificadorExterno);
              return localVarResponse.Data;
 
         }
@@ -4390,7 +4402,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="idOrigemComercial">{{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} (optional)</param>
         /// <param name="idProduto">{{{lote_cartoes_pre_pagos_persist_id_produto_value}}} (optional)</param>
         /// <param name="idTipoCartao">{{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} (optional)</param>
@@ -4399,7 +4410,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeCartoes">{{{lote_cartoes_pre_pagos_persist_quantidade_cartoes_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (LoteCartoesPrePagosResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (string authorization = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LoteCartoesPrePagosResponse>> GerarLotesCartoesPrePagosUsingPOSTAsyncWithHttpInfo (long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string identificadorExterno = null)
         {
             
     
@@ -4438,7 +4449,6 @@ namespace Conductor.Pier.Api
             if (quantidadeCartoes != null) localVarQueryParams.Add("quantidadeCartoes", Configuration.ApiClient.ParameterToString(quantidadeCartoes)); // query parameter
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4468,11 +4478,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoMultiAppImpressaoResponse</returns>
-        public CartaoMultiAppImpressaoResponse GerarNovaViaCartaoMultiAppUsingPOST (long? id, string authorization = null)
+        public CartaoMultiAppImpressaoResponse GerarNovaViaCartaoMultiAppUsingPOST (long? id)
         {
-             ApiResponse<CartaoMultiAppImpressaoResponse> localVarResponse = GerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<CartaoMultiAppImpressaoResponse> localVarResponse = GerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4481,9 +4490,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoMultiAppImpressaoResponse</returns>
-        public ApiResponse< CartaoMultiAppImpressaoResponse > GerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoMultiAppImpressaoResponse > GerarNovaViaCartaoMultiAppUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -4520,7 +4528,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4551,11 +4558,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoMultiAppImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoMultiAppImpressaoResponse> GerarNovaViaCartaoMultiAppUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoMultiAppImpressaoResponse> GerarNovaViaCartaoMultiAppUsingPOSTAsync (long? id)
         {
-             ApiResponse<CartaoMultiAppImpressaoResponse> localVarResponse = await GerarNovaViaCartaoMultiAppUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoMultiAppImpressaoResponse> localVarResponse = await GerarNovaViaCartaoMultiAppUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4565,9 +4571,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoMultiAppImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoMultiAppImpressaoResponse>> GerarNovaViaCartaoMultiAppUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoMultiAppImpressaoResponse>> GerarNovaViaCartaoMultiAppUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarNovaViaCartaoMultiAppUsingPOST");
@@ -4602,7 +4607,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4632,11 +4636,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse GerarNovaViaUsingPOST (long? id, string authorization = null)
+        public CartaoResponse GerarNovaViaUsingPOST (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = GerarNovaViaUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = GerarNovaViaUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4645,9 +4648,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > GerarNovaViaUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoResponse > GerarNovaViaUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -4684,7 +4686,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4715,11 +4716,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await GerarNovaViaUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await GerarNovaViaUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4729,9 +4729,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarNovaViaUsingPOST");
@@ -4766,7 +4765,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4796,11 +4794,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>Object</returns>
-        public Object LancarTarifaSegundaViaUsingPOST (long? id, string authorization = null)
+        public Object LancarTarifaSegundaViaUsingPOST (long? id)
         {
-             ApiResponse<Object> localVarResponse = LancarTarifaSegundaViaUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<Object> localVarResponse = LancarTarifaSegundaViaUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4809,9 +4806,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > LancarTarifaSegundaViaUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< Object > LancarTarifaSegundaViaUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -4848,7 +4844,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4879,11 +4874,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> LancarTarifaSegundaViaUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<Object> LancarTarifaSegundaViaUsingPOSTAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<Object> localVarResponse = await LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4893,9 +4887,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> LancarTarifaSegundaViaUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LancarTarifaSegundaViaUsingPOST");
@@ -4930,7 +4923,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -4959,7 +4951,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
@@ -4974,9 +4965,9 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param> 
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param> 
         /// <returns>PageLoteCartoesPrePagosResponse</returns>
-        public PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
+        public PageLoteCartoesPrePagosResponse ListarLotesCartoesPrePagosUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
-             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = ListarLotesCartoesPrePagosUsingGETWithHttpInfo(authorization, sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
+             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = ListarLotesCartoesPrePagosUsingGETWithHttpInfo(sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
              return localVarResponse.Data;
         }
 
@@ -4984,7 +4975,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
@@ -4999,7 +4989,7 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param> 
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageLoteCartoesPrePagosResponse</returns>
-        public ApiResponse< PageLoteCartoesPrePagosResponse > ListarLotesCartoesPrePagosUsingGETWithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
+        public ApiResponse< PageLoteCartoesPrePagosResponse > ListarLotesCartoesPrePagosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
             
     
@@ -5044,7 +5034,6 @@ namespace Conductor.Pier.Api
             if (statusProcessamento != null) localVarQueryParams.Add("statusProcessamento", Configuration.ApiClient.ParameterToString(statusProcessamento)); // query parameter
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5074,7 +5063,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -5089,9 +5077,9 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of PageLoteCartoesPrePagosResponse</returns>
-        public async System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
+        public async System.Threading.Tasks.Task<PageLoteCartoesPrePagosResponse> ListarLotesCartoesPrePagosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
-             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = await ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(authorization, sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
+             ApiResponse<PageLoteCartoesPrePagosResponse> localVarResponse = await ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo(sort, page, limit, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
              return localVarResponse.Data;
 
         }
@@ -5100,7 +5088,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}} {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -5115,7 +5102,7 @@ namespace Conductor.Pier.Api
         /// <param name="statusProcessamento">{{{lote_cartoes_pre_pagos_request_status_processamento_value}}} (optional)</param>
         /// <param name="identificadorExterno">{{{lote_cartoes_pre_pagos_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageLoteCartoesPrePagosResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageLoteCartoesPrePagosResponse>> ListarLotesCartoesPrePagosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idOrigemComercial = null, long? idProduto = null, long? idTipoCartao = null, long? idImagem = null, long? idEndereco = null, int? quantidadeCartoes = null, string dataCadastro = null, string usuarioCadastro = null, int? statusProcessamento = null, string identificadorExterno = null)
         {
             
     
@@ -5160,7 +5147,6 @@ namespace Conductor.Pier.Api
             if (statusProcessamento != null) localVarQueryParams.Add("statusProcessamento", Configuration.ApiClient.ParameterToString(statusProcessamento)); // query parameter
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5189,7 +5175,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar}}} {{{cartao_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
@@ -5211,10 +5196,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param> 
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param> 
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param> 
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param> 
         /// <returns>PageCartaoResponse</returns>
-        public PageCartaoResponse ListarUsingGET11 (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public PageCartaoResponse ListarUsingGET12 (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null)
         {
-             ApiResponse<PageCartaoResponse> localVarResponse = ListarUsingGET11WithHttpInfo(authorization, sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
+             ApiResponse<PageCartaoResponse> localVarResponse = ListarUsingGET12WithHttpInfo(sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao, identificadorExterno);
              return localVarResponse.Data;
         }
 
@@ -5222,7 +5208,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar}}} {{{cartao_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
@@ -5244,8 +5229,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param> 
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param> 
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param> 
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageCartaoResponse</returns>
-        public ApiResponse< PageCartaoResponse > ListarUsingGET11WithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public ApiResponse< PageCartaoResponse > ListarUsingGET12WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null)
         {
             
     
@@ -5297,8 +5283,8 @@ namespace Conductor.Pier.Api
             if (flagProvisorio != null) localVarQueryParams.Add("flagProvisorio", Configuration.ApiClient.ParameterToString(flagProvisorio)); // query parameter
             if (codigoDesbloqueio != null) localVarQueryParams.Add("codigoDesbloqueio", Configuration.ApiClient.ParameterToString(codigoDesbloqueio)); // query parameter
             if (sequencialCartao != null) localVarQueryParams.Add("sequencialCartao", Configuration.ApiClient.ParameterToString(sequencialCartao)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5313,9 +5299,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5328,7 +5314,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar}}} {{{cartao_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -5350,10 +5335,11 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param>
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param>
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param>
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of PageCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET11Async (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public async System.Threading.Tasks.Task<PageCartaoResponse> ListarUsingGET12Async (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null)
         {
-             ApiResponse<PageCartaoResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(authorization, sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
+             ApiResponse<PageCartaoResponse> localVarResponse = await ListarUsingGET12AsyncWithHttpInfo(sort, page, limit, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao, identificadorExterno);
              return localVarResponse.Data;
 
         }
@@ -5362,7 +5348,6 @@ namespace Conductor.Pier.Api
         /// {{{cartao_resource_listar}}} {{{cartao_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -5384,8 +5369,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagProvisorio">{{{cartao_request_flag_provisorio_value}}} (optional)</param>
         /// <param name="codigoDesbloqueio">{{{cartao_request_codigo_desbloqueio_value}}} (optional)</param>
         /// <param name="sequencialCartao">{{{cartao_request_sequencial_cartao_value}}} (optional)</param>
+        /// <param name="identificadorExterno">{{{cartao_request_identificador_externo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET11AsyncWithHttpInfo (string authorization = null, List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoResponse>> ListarUsingGET12AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusCartao = null, long? idEstagioCartao = null, long? idConta = null, long? idPessoa = null, long? idProduto = null, string tipoPortador = null, string numeroCartao = null, string nomeImpresso = null, string dataGeracao = null, string dataStatusCartao = null, string dataEstagioCartao = null, string dataValidade = null, string dataImpressao = null, string arquivoImpressao = null, int? flagImpressaoOrigemComercial = null, int? flagProvisorio = null, string codigoDesbloqueio = null, int? sequencialCartao = null, long? identificadorExterno = null)
         {
             
     
@@ -5437,8 +5423,8 @@ namespace Conductor.Pier.Api
             if (flagProvisorio != null) localVarQueryParams.Add("flagProvisorio", Configuration.ApiClient.ParameterToString(flagProvisorio)); // query parameter
             if (codigoDesbloqueio != null) localVarQueryParams.Add("codigoDesbloqueio", Configuration.ApiClient.ParameterToString(codigoDesbloqueio)); // query parameter
             if (sequencialCartao != null) localVarQueryParams.Add("sequencialCartao", Configuration.ApiClient.ParameterToString(sequencialCartao)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5453,9 +5439,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5468,11 +5454,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse ReativarUsingPOST (long? id, string authorization = null)
+        public CartaoResponse ReativarUsingPOST (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = ReativarUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = ReativarUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5481,9 +5466,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > ReativarUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< CartaoResponse > ReativarUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -5520,7 +5504,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5551,11 +5534,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> ReativarUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<CartaoResponse> ReativarUsingPOSTAsync (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await ReativarUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<CartaoResponse> localVarResponse = await ReativarUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5565,9 +5547,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_reativar_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> ReativarUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> ReativarUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReativarUsingPOST");
@@ -5602,7 +5583,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5633,11 +5613,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param> 
         /// <param name="validaCVV">validaCVV</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>string</returns>
-        public string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV, string authorization = null)
+        public string ValidarCVVUsingPOST (long? id, ValidaCVVRequest validaCVV)
         {
-             ApiResponse<string> localVarResponse = ValidarCVVUsingPOSTWithHttpInfo(id, validaCVV, authorization);
+             ApiResponse<string> localVarResponse = ValidarCVVUsingPOSTWithHttpInfo(id, validaCVV);
              return localVarResponse.Data;
         }
 
@@ -5647,9 +5626,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param> 
         /// <param name="validaCVV">validaCVV</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV, string authorization = null)
+        public ApiResponse< string > ValidarCVVUsingPOSTWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
         {
             
             // verify the required parameter 'id' is set
@@ -5690,7 +5668,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             if (validaCVV.GetType() != typeof(byte[]))
@@ -5729,11 +5706,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV, string authorization = null)
+        public async System.Threading.Tasks.Task<string> ValidarCVVUsingPOSTAsync (long? id, ValidaCVVRequest validaCVV)
         {
-             ApiResponse<string> localVarResponse = await ValidarCVVUsingPOSTAsyncWithHttpInfo(id, validaCVV, authorization);
+             ApiResponse<string> localVarResponse = await ValidarCVVUsingPOSTAsyncWithHttpInfo(id, validaCVV);
              return localVarResponse.Data;
 
         }
@@ -5744,9 +5720,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_c_v_v_param_id}}}</param>
         /// <param name="validaCVV">validaCVV</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarCVVUsingPOSTAsyncWithHttpInfo (long? id, ValidaCVVRequest validaCVV)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ValidarCVVUsingPOST");
@@ -5783,7 +5758,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             if (validaCVV.GetType() != typeof(byte[]))
@@ -5823,11 +5797,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param> 
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param> 
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ValidaCartaoResponse</returns>
-        public ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public ValidaCartaoResponse ValidarDadosImpressosBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
         }
 
@@ -5839,9 +5812,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param> 
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param> 
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -5893,7 +5865,6 @@ namespace Conductor.Pier.Api
             if (dataValidade != null) localVarQueryParams.Add("data_validade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
             if (codigoSeguranca != null) localVarQueryParams.Add("codigo_seguranca", Configuration.ApiClient.ParameterToString(codigoSeguranca)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -5927,11 +5898,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
 
         }
@@ -5944,9 +5914,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarDadosImpressosBandeiradoUsingGET");
@@ -5990,7 +5959,6 @@ namespace Conductor.Pier.Api
             if (dataValidade != null) localVarQueryParams.Add("data_validade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
             if (codigoSeguranca != null) localVarQueryParams.Add("codigo_seguranca", Configuration.ApiClient.ParameterToString(codigoSeguranca)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -6023,11 +5991,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param> 
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param> 
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ValidaCartaoResponse</returns>
-        public ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public ValidaCartaoResponse ValidarDadosImpressosNaoBandeiradoUsingGET (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
         }
 
@@ -6039,9 +6006,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param> 
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param> 
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public ApiResponse< ValidaCartaoResponse > ValidarDadosImpressosNaoBandeiradoUsingGETWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -6093,7 +6059,6 @@ namespace Conductor.Pier.Api
             if (dataValidade != null) localVarQueryParams.Add("data_validade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
             if (codigoSeguranca != null) localVarQueryParams.Add("codigo_seguranca", Configuration.ApiClient.ParameterToString(codigoSeguranca)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -6127,11 +6092,10 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDadosImpressosNaoBandeiradoUsingGETAsync (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo(numeroCartao, nomePortador, dataValidade, codigoSeguranca);
              return localVarResponse.Data;
 
         }
@@ -6144,9 +6108,8 @@ namespace Conductor.Pier.Api
         /// <param name="nomePortador">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}</param>
         /// <param name="dataValidade">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}</param>
         /// <param name="codigoSeguranca">{{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDadosImpressosNaoBandeiradoUsingGETAsyncWithHttpInfo (string numeroCartao, string nomePortador, string dataValidade, string codigoSeguranca)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarDadosImpressosNaoBandeiradoUsingGET");
@@ -6190,7 +6153,6 @@ namespace Conductor.Pier.Api
             if (dataValidade != null) localVarQueryParams.Add("data_validade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
             if (codigoSeguranca != null) localVarQueryParams.Add("codigo_seguranca", Configuration.ApiClient.ParameterToString(codigoSeguranca)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -6221,11 +6183,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param> 
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ValidaCartaoResponse</returns>
-        public ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma, string authorization = null)
+        public ValidaCartaoResponse ValidarDe55CartaoMastercardUsingGET (string numeroCartao, string criptograma)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDe55CartaoMastercardUsingGETWithHttpInfo(numeroCartao, criptograma, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarDe55CartaoMastercardUsingGETWithHttpInfo(numeroCartao, criptograma);
              return localVarResponse.Data;
         }
 
@@ -6235,9 +6196,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param> 
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        public ApiResponse< ValidaCartaoResponse > ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma, string authorization = null)
+        public ApiResponse< ValidaCartaoResponse > ValidarDe55CartaoMastercardUsingGETWithHttpInfo (string numeroCartao, string criptograma)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -6279,7 +6239,6 @@ namespace Conductor.Pier.Api
             if (numeroCartao != null) localVarQueryParams.Add("numero_cartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
             if (criptograma != null) localVarQueryParams.Add("criptograma", Configuration.ApiClient.ParameterToString(criptograma)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -6311,11 +6270,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param>
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma, string authorization = null)
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarDe55CartaoMastercardUsingGETAsync (string numeroCartao, string criptograma)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo(numeroCartao, criptograma, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo(numeroCartao, criptograma);
              return localVarResponse.Data;
 
         }
@@ -6326,9 +6284,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numeroCartao">{{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}</param>
         /// <param name="criptograma">{{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarDe55CartaoMastercardUsingGETAsyncWithHttpInfo (string numeroCartao, string criptograma)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarDe55CartaoMastercardUsingGET");
@@ -6366,7 +6323,6 @@ namespace Conductor.Pier.Api
             if (numeroCartao != null) localVarQueryParams.Add("numero_cartao", Configuration.ApiClient.ParameterToString(numeroCartao)); // query parameter
             if (criptograma != null) localVarQueryParams.Add("criptograma", Configuration.ApiClient.ParameterToString(criptograma)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -6397,11 +6353,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param> 
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ValidaSenhaCartaoResponse</returns>
-        public ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha, string authorization = null)
+        public ValidaSenhaCartaoResponse ValidarSenhaUsingGET (long? id, string senha)
         {
-             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = ValidarSenhaUsingGETWithHttpInfo(id, senha, authorization);
+             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = ValidarSenhaUsingGETWithHttpInfo(id, senha);
              return localVarResponse.Data;
         }
 
@@ -6411,9 +6366,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param> 
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
-        public ApiResponse< ValidaSenhaCartaoResponse > ValidarSenhaUsingGETWithHttpInfo (long? id, string senha, string authorization = null)
+        public ApiResponse< ValidaSenhaCartaoResponse > ValidarSenhaUsingGETWithHttpInfo (long? id, string senha)
         {
             
             // verify the required parameter 'id' is set
@@ -6454,7 +6408,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
@@ -6487,11 +6440,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaSenhaCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha, string authorization = null)
+        public async System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaUsingGETAsync (long? id, string senha)
         {
-             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = await ValidarSenhaUsingGETAsyncWithHttpInfo(id, senha, authorization);
+             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = await ValidarSenhaUsingGETAsyncWithHttpInfo(id, senha);
              return localVarResponse.Data;
 
         }
@@ -6502,9 +6454,8 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_validar_senha_param_id}}}</param>
         /// <param name="senha">{{{cartao_resource_validar_senha_param_senha}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaUsingGETAsyncWithHttpInfo (long? id, string senha)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ValidarSenhaUsingGET");
@@ -6541,7 +6492,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
@@ -6574,11 +6524,10 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param> 
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param> 
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ValidaCartaoResponse</returns>
-        public ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2, string authorization = null)
+        public ValidaCartaoResponse ValidarTarjaUsingGET (string numeroCartao, string trilha1, string trilha2)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarTarjaUsingGETWithHttpInfo(numeroCartao, trilha1, trilha2, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = ValidarTarjaUsingGETWithHttpInfo(numeroCartao, trilha1, trilha2);
              return localVarResponse.Data;
         }
 
@@ -6589,9 +6538,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param> 
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param> 
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of ValidaCartaoResponse</returns>
-        public ApiResponse< ValidaCartaoResponse > ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2, string authorization = null)
+        public ApiResponse< ValidaCartaoResponse > ValidarTarjaUsingGETWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
         {
             
             // verify the required parameter 'numeroCartao' is set
@@ -6638,7 +6586,6 @@ namespace Conductor.Pier.Api
             if (trilha1 != null) localVarQueryParams.Add("trilha1", Configuration.ApiClient.ParameterToString(trilha1)); // query parameter
             if (trilha2 != null) localVarQueryParams.Add("trilha2", Configuration.ApiClient.ParameterToString(trilha2)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -6671,11 +6618,10 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param>
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param>
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ValidaCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2, string authorization = null)
+        public async System.Threading.Tasks.Task<ValidaCartaoResponse> ValidarTarjaUsingGETAsync (string numeroCartao, string trilha1, string trilha2)
         {
-             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarTarjaUsingGETAsyncWithHttpInfo(numeroCartao, trilha1, trilha2, authorization);
+             ApiResponse<ValidaCartaoResponse> localVarResponse = await ValidarTarjaUsingGETAsyncWithHttpInfo(numeroCartao, trilha1, trilha2);
              return localVarResponse.Data;
 
         }
@@ -6687,9 +6633,8 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCartao">{{{cartao_resource_validar_tarja_param_numero_cartao}}}</param>
         /// <param name="trilha1">{{{cartao_resource_validar_tarja_param_trilha1}}}</param>
         /// <param name="trilha2">{{{cartao_resource_validar_tarja_param_trilha2}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (ValidaCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaCartaoResponse>> ValidarTarjaUsingGETAsyncWithHttpInfo (string numeroCartao, string trilha1, string trilha2)
         {
             // verify the required parameter 'numeroCartao' is set
             if (numeroCartao == null) throw new ApiException(400, "Missing required parameter 'numeroCartao' when calling ValidarTarjaUsingGET");
@@ -6730,7 +6675,6 @@ namespace Conductor.Pier.Api
             if (trilha1 != null) localVarQueryParams.Add("trilha1", Configuration.ApiClient.ParameterToString(trilha1)); // query parameter
             if (trilha2 != null) localVarQueryParams.Add("trilha2", Configuration.ApiClient.ParameterToString(trilha2)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             

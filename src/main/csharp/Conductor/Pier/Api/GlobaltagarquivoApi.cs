@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param>
         /// <returns>ArquivoDetalheResponse</returns>
-        ArquivoDetalheResponse ConsultarUsingGET5 (long? id);
+        ArquivoDetalheResponse ConsultarUsingGET6 (long? id);
   
         /// <summary>
         /// {{{arquivo_resource_consultar}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of ArquivoDetalheResponse</returns>
-        ApiResponse<ArquivoDetalheResponse> ConsultarUsingGET5WithHttpInfo (long? id);
+        ApiResponse<ArquivoDetalheResponse> ConsultarUsingGET6WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{arquivo_resource_integrar}}}
@@ -158,7 +158,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>PageArquivoAUDResponse</returns>
-        PageArquivoAUDResponse ListarUsingGET5 (long? id, int? page = null, int? limit = null);
+        PageArquivoAUDResponse ListarUsingGET6 (long? id, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{arquivo_a_u_d_resource_listar}}}
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of PageArquivoAUDResponse</returns>
-        ApiResponse<PageArquivoAUDResponse> ListarUsingGET5WithHttpInfo (long? id, int? page = null, int? limit = null);
+        ApiResponse<PageArquivoAUDResponse> ListarUsingGET6WithHttpInfo (long? id, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{arquivo_resource_listar}}}
@@ -188,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param>
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param>
         /// <returns>PageArquivoResponse</returns>
-        PageArquivoResponse ListarUsingGET6 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        PageArquivoResponse ListarUsingGET7 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
   
         /// <summary>
         /// {{{arquivo_resource_listar}}}
@@ -205,7 +205,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param>
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param>
         /// <returns>ApiResponse of PageArquivoResponse</returns>
-        ApiResponse<PageArquivoResponse> ListarUsingGET6WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        ApiResponse<PageArquivoResponse> ListarUsingGET7WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
         
         /// <summary>
         /// {{{arquivo_resource_salvar}}}
@@ -242,7 +242,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ArquivoDetalheResponse</returns>
-        System.Threading.Tasks.Task<ArquivoDetalheResponse> ConsultarUsingGET5Async (long? id);
+        System.Threading.Tasks.Task<ArquivoDetalheResponse> ConsultarUsingGET6Async (long? id);
 
         /// <summary>
         /// {{{arquivo_resource_consultar}}}
@@ -253,7 +253,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ArquivoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ArquivoDetalheResponse>> ConsultarUsingGET5AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ArquivoDetalheResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{arquivo_resource_integrar}}}
@@ -374,7 +374,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageArquivoAUDResponse</returns>
-        System.Threading.Tasks.Task<PageArquivoAUDResponse> ListarUsingGET5Async (long? id, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageArquivoAUDResponse> ListarUsingGET6Async (long? id, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{arquivo_a_u_d_resource_listar}}}
@@ -387,7 +387,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageArquivoAUDResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageArquivoAUDResponse>> ListarUsingGET5AsyncWithHttpInfo (long? id, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageArquivoAUDResponse>> ListarUsingGET6AsyncWithHttpInfo (long? id, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{arquivo_resource_listar}}}
@@ -404,7 +404,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param>
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param>
         /// <returns>Task of PageArquivoResponse</returns>
-        System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET6Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET7Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
 
         /// <summary>
         /// {{{arquivo_resource_listar}}}
@@ -421,7 +421,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param>
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageArquivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET6AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET7AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null);
         
         /// <summary>
         /// {{{arquivo_resource_salvar}}}
@@ -543,9 +543,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param> 
         /// <returns>ArquivoDetalheResponse</returns>
-        public ArquivoDetalheResponse ConsultarUsingGET5 (long? id)
+        public ArquivoDetalheResponse ConsultarUsingGET6 (long? id)
         {
-             ApiResponse<ArquivoDetalheResponse> localVarResponse = ConsultarUsingGET5WithHttpInfo(id);
+             ApiResponse<ArquivoDetalheResponse> localVarResponse = ConsultarUsingGET6WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -555,12 +555,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of ArquivoDetalheResponse</returns>
-        public ApiResponse< ArquivoDetalheResponse > ConsultarUsingGET5WithHttpInfo (long? id)
+        public ApiResponse< ArquivoDetalheResponse > ConsultarUsingGET6WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagarquivoApi->ConsultarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagarquivoApi->ConsultarUsingGET6");
             
     
             var localVarPath = "/api/arquivos/{id}";
@@ -606,9 +606,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ArquivoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -623,9 +623,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ArquivoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ArquivoDetalheResponse> ConsultarUsingGET5Async (long? id)
+        public async System.Threading.Tasks.Task<ArquivoDetalheResponse> ConsultarUsingGET6Async (long? id)
         {
-             ApiResponse<ArquivoDetalheResponse> localVarResponse = await ConsultarUsingGET5AsyncWithHttpInfo(id);
+             ApiResponse<ArquivoDetalheResponse> localVarResponse = await ConsultarUsingGET6AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -636,10 +636,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{arquivo_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ArquivoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ArquivoDetalheResponse>> ConsultarUsingGET5AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ArquivoDetalheResponse>> ConsultarUsingGET6AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET5");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET6");
             
     
             var localVarPath = "/api/arquivos/{id}";
@@ -685,9 +685,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ArquivoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1395,9 +1395,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>PageArquivoAUDResponse</returns>
-        public PageArquivoAUDResponse ListarUsingGET5 (long? id, int? page = null, int? limit = null)
+        public PageArquivoAUDResponse ListarUsingGET6 (long? id, int? page = null, int? limit = null)
         {
-             ApiResponse<PageArquivoAUDResponse> localVarResponse = ListarUsingGET5WithHttpInfo(id, page, limit);
+             ApiResponse<PageArquivoAUDResponse> localVarResponse = ListarUsingGET6WithHttpInfo(id, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1409,12 +1409,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of PageArquivoAUDResponse</returns>
-        public ApiResponse< PageArquivoAUDResponse > ListarUsingGET5WithHttpInfo (long? id, int? page = null, int? limit = null)
+        public ApiResponse< PageArquivoAUDResponse > ListarUsingGET6WithHttpInfo (long? id, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagarquivoApi->ListarUsingGET5");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagarquivoApi->ListarUsingGET6");
             
     
             var localVarPath = "/api/arquivos/{id}/auditorias";
@@ -1462,9 +1462,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageArquivoAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1481,9 +1481,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of PageArquivoAUDResponse</returns>
-        public async System.Threading.Tasks.Task<PageArquivoAUDResponse> ListarUsingGET5Async (long? id, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageArquivoAUDResponse> ListarUsingGET6Async (long? id, int? page = null, int? limit = null)
         {
-             ApiResponse<PageArquivoAUDResponse> localVarResponse = await ListarUsingGET5AsyncWithHttpInfo(id, page, limit);
+             ApiResponse<PageArquivoAUDResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(id, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1496,10 +1496,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (PageArquivoAUDResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoAUDResponse>> ListarUsingGET5AsyncWithHttpInfo (long? id, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoAUDResponse>> ListarUsingGET6AsyncWithHttpInfo (long? id, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET5");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET6");
             
     
             var localVarPath = "/api/arquivos/{id}/auditorias";
@@ -1547,9 +1547,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageArquivoAUDResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1569,9 +1569,9 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param> 
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param> 
         /// <returns>PageArquivoResponse</returns>
-        public PageArquivoResponse ListarUsingGET6 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public PageArquivoResponse ListarUsingGET7 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
-             ApiResponse<PageArquivoResponse> localVarResponse = ListarUsingGET6WithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
+             ApiResponse<PageArquivoResponse> localVarResponse = ListarUsingGET7WithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
              return localVarResponse.Data;
         }
 
@@ -1587,7 +1587,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param> 
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageArquivoResponse</returns>
-        public ApiResponse< PageArquivoResponse > ListarUsingGET6WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public ApiResponse< PageArquivoResponse > ListarUsingGET7WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
             
     
@@ -1640,9 +1640,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageArquivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1663,9 +1663,9 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param>
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param>
         /// <returns>Task of PageArquivoResponse</returns>
-        public async System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET6Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public async System.Threading.Tasks.Task<PageArquivoResponse> ListarUsingGET7Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
-             ApiResponse<PageArquivoResponse> localVarResponse = await ListarUsingGET6AsyncWithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
+             ApiResponse<PageArquivoResponse> localVarResponse = await ListarUsingGET7AsyncWithHttpInfo(sort, page, limit, nome, idTipoArquivo, idStatusArquivo, extensao);
              return localVarResponse.Data;
 
         }
@@ -1682,7 +1682,7 @@ namespace Conductor.Pier.Api
         /// <param name="idStatusArquivo">{{{arquivo_request_id_status_arquivo_value}}} (optional)</param>
         /// <param name="extensao">{{{arquivo_request_extensao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageArquivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET6AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageArquivoResponse>> ListarUsingGET7AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, long? idTipoArquivo = null, long? idStatusArquivo = null, string extensao = null)
         {
             
     
@@ -1735,9 +1735,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageArquivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

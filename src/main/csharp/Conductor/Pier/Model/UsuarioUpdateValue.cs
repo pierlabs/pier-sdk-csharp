@@ -23,18 +23,34 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioUpdateValue" />class.
         /// </summary>
         /// <param name="Nome">{{{usuario_update_nome_value}}}.</param>
-        /// <param name="Login">{{{usuario_update_login_value}}}.</param>
+        /// <param name="Login">{{{usuario_update_login_value}}} (required).</param>
         /// <param name="Cpf">{{{usuario_update_cpf_value}}}.</param>
-        /// <param name="Email">{{{usuario_update_email_value}}}.</param>
+        /// <param name="Email">{{{usuario_update_email_value}}} (required).</param>
         /// <param name="Status">{{{usuario_update_status_value}}}.</param>
         /// <param name="BloquearAcesso">{{{usuario_update_bloquear_acesso_descricao}}}.</param>
 
         public UsuarioUpdateValue(string Nome = null, string Login = null, string Cpf = null, string Email = null, string Status = null, bool? BloquearAcesso = null)
         {
+            // to ensure "Login" is required (not null)
+            if (Login == null)
+            {
+                throw new InvalidDataException("Login is a required property for UsuarioUpdateValue and cannot be null");
+            }
+            else
+            {
+                this.Login = Login;
+            }
+            // to ensure "Email" is required (not null)
+            if (Email == null)
+            {
+                throw new InvalidDataException("Email is a required property for UsuarioUpdateValue and cannot be null");
+            }
+            else
+            {
+                this.Email = Email;
+            }
             this.Nome = Nome;
-            this.Login = Login;
             this.Cpf = Cpf;
-            this.Email = Email;
             this.Status = Status;
             this.BloquearAcesso = BloquearAcesso;
             

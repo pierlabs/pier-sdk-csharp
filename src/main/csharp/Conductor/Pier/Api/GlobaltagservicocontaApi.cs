@@ -26,7 +26,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param>
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -35,7 +34,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param>
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param>
         /// <returns>Object</returns>
-        Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
   
         /// <summary>
         /// {{{conta_resource_ativar_anuidade}}}
@@ -46,7 +45,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param>
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -55,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param>
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        ApiResponse<Object> AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
         /// {{{conta_resource_ativar_envio_fatura_email}}}
@@ -65,9 +63,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Object</returns>
-        Object AtivarEnvioFaturaEmailUsingPOST (long? id, string authorization = null);
+        Object AtivarEnvioFaturaEmailUsingPOST (long? id);
   
         /// <summary>
         /// {{{conta_resource_ativar_envio_fatura_email}}}
@@ -77,9 +74,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<Object> AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{conta_resource_desativar_envio_fatura_email}}}
@@ -89,9 +85,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Object</returns>
-        Object DesativarEnvioFaturaEmailUsingPOST (long? id, string authorization = null);
+        Object DesativarEnvioFaturaEmailUsingPOST (long? id);
   
         /// <summary>
         /// {{{conta_resource_desativar_envio_fatura_email}}}
@@ -101,9 +96,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id, string authorization = null);
+        ApiResponse<Object> DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{anuidade_resource_listar_anuidades}}}
@@ -170,7 +164,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param>
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -179,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param>
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
 
         /// <summary>
         /// {{{conta_resource_ativar_anuidade}}}
@@ -190,7 +183,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param>
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -199,7 +191,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param>
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
         
         /// <summary>
         /// {{{conta_resource_ativar_envio_fatura_email}}}
@@ -209,9 +201,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{conta_resource_ativar_envio_fatura_email}}}
@@ -221,9 +212,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{conta_resource_desativar_envio_fatura_email}}}
@@ -233,9 +223,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id, string authorization = null);
+        System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{conta_resource_desativar_envio_fatura_email}}}
@@ -245,9 +234,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{anuidade_resource_listar_anuidades}}}
@@ -399,7 +387,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param> 
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
@@ -408,9 +395,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param> 
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param> 
         /// <returns>Object</returns>
-        public Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public Object AtivarAnuidadeUsingPOST (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
-             ApiResponse<Object> localVarResponse = AtivarAnuidadeUsingPOSTWithHttpInfo(id, idAnuidade, authorization, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = AtivarAnuidadeUsingPOSTWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
              return localVarResponse.Data;
         }
 
@@ -420,7 +407,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param> 
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
@@ -429,7 +415,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param> 
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public ApiResponse< Object > AtivarAnuidadeUsingPOSTWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
             
             // verify the required parameter 'id' is set
@@ -478,7 +464,6 @@ namespace Conductor.Pier.Api
             if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
             if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -510,7 +495,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param>
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -519,9 +503,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param>
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeUsingPOSTAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
-             ApiResponse<Object> localVarResponse = await AtivarAnuidadeUsingPOSTAsyncWithHttpInfo(id, idAnuidade, authorization, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = await AtivarAnuidadeUsingPOSTAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
              return localVarResponse.Data;
 
         }
@@ -532,7 +516,6 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_anuidade_param_id}}}</param>
         /// <param name="idAnuidade">{{{anuidade_request_id_anuidade_value}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
@@ -541,7 +524,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperadora">{{{anuidade_request_id_operadora_value}}} (optional)</param>
         /// <param name="idOrigemComercial">{{{anuidade_request_id_origem_comercial_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, string authorization = null, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeUsingPOSTAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidadeUsingPOST");
@@ -586,7 +569,6 @@ namespace Conductor.Pier.Api
             if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
             if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -616,11 +598,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>Object</returns>
-        public Object AtivarEnvioFaturaEmailUsingPOST (long? id, string authorization = null)
+        public Object AtivarEnvioFaturaEmailUsingPOST (long? id)
         {
-             ApiResponse<Object> localVarResponse = AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<Object> localVarResponse = AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -629,9 +610,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< Object > AtivarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -668,7 +648,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -699,11 +678,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<Object> AtivarEnvioFaturaEmailUsingPOSTAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<Object> localVarResponse = await AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -713,9 +691,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_ativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarEnvioFaturaEmailUsingPOST");
@@ -750,7 +727,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -780,11 +756,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>Object</returns>
-        public Object DesativarEnvioFaturaEmailUsingPOST (long? id, string authorization = null)
+        public Object DesativarEnvioFaturaEmailUsingPOST (long? id)
         {
-             ApiResponse<Object> localVarResponse = DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo(id, authorization);
+             ApiResponse<Object> localVarResponse = DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -793,9 +768,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param> 
-        /// <param name="authorization">Authorization (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id, string authorization = null)
+        public ApiResponse< Object > DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -832,7 +806,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             
@@ -863,11 +836,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<Object> DesativarEnvioFaturaEmailUsingPOSTAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo(id, authorization);
+             ApiResponse<Object> localVarResponse = await DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -877,9 +849,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_resource_desativar_envio_fatura_email_param_id}}}</param>
-        /// <param name="authorization">Authorization (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id, string authorization = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarEnvioFaturaEmailUsingPOST");
@@ -914,7 +885,6 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (authorization != null) localVarHeaderParams.Add("Authorization", Configuration.ApiClient.ParameterToString(authorization)); // header parameter
             
             
             

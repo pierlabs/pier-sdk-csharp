@@ -24,15 +24,16 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
+        /// <param name="grupoChargebackId">grupoChargebackId</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="descricao"> (optional)</param>
         /// <param name="flagAtm"> (optional)</param>
-        /// <param name="idBandeira"> (optional)</param>
-        /// <param name="groupId"> (optional)</param>
+        /// <param name="grupoChargebackId2"> (optional)</param>
         /// <returns>PageCodigoChargebackResponse</returns>
-        PageCodigoChargebackResponse ListarCodigosUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null);
+        PageCodigoChargebackResponse ListarCodigosUsingGET (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
   
         /// <summary>
         /// {{{codigo_chargeback_resource_listar}}}
@@ -41,15 +42,16 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
+        /// <param name="grupoChargebackId">grupoChargebackId</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="descricao"> (optional)</param>
         /// <param name="flagAtm"> (optional)</param>
-        /// <param name="idBandeira"> (optional)</param>
-        /// <param name="groupId"> (optional)</param>
+        /// <param name="grupoChargebackId2"> (optional)</param>
         /// <returns>ApiResponse of PageCodigoChargebackResponse</returns>
-        ApiResponse<PageCodigoChargebackResponse> ListarCodigosUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null);
+        ApiResponse<PageCodigoChargebackResponse> ListarCodigosUsingGETWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
         
         /// <summary>
         /// {{{grupo_chargeback_resource_listar}}}
@@ -62,7 +64,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageGrupoChargebackResponse</returns>
-        PageGrupoChargebackResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null);
+        PageGrupoChargebackResponse ListarUsingGET28 (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{grupo_chargeback_resource_listar}}}
@@ -75,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        ApiResponse<PageGrupoChargebackResponse> ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageGrupoChargebackResponse> ListarUsingGET28WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         #endregion Synchronous Operations
         
@@ -88,15 +90,16 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
+        /// <param name="grupoChargebackId">grupoChargebackId</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="descricao"> (optional)</param>
         /// <param name="flagAtm"> (optional)</param>
-        /// <param name="idBandeira"> (optional)</param>
-        /// <param name="groupId"> (optional)</param>
+        /// <param name="grupoChargebackId2"> (optional)</param>
         /// <returns>Task of PageCodigoChargebackResponse</returns>
-        System.Threading.Tasks.Task<PageCodigoChargebackResponse> ListarCodigosUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null);
+        System.Threading.Tasks.Task<PageCodigoChargebackResponse> ListarCodigosUsingGETAsync (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
 
         /// <summary>
         /// {{{codigo_chargeback_resource_listar}}}
@@ -105,15 +108,16 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
+        /// <param name="grupoChargebackId">grupoChargebackId</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="descricao"> (optional)</param>
         /// <param name="flagAtm"> (optional)</param>
-        /// <param name="idBandeira"> (optional)</param>
-        /// <param name="groupId"> (optional)</param>
+        /// <param name="grupoChargebackId2"> (optional)</param>
         /// <returns>Task of ApiResponse (PageCodigoChargebackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCodigoChargebackResponse>> ListarCodigosUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCodigoChargebackResponse>> ListarCodigosUsingGETAsyncWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
         
         /// <summary>
         /// {{{grupo_chargeback_resource_listar}}}
@@ -126,7 +130,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageGrupoChargebackResponse</returns>
-        System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET28Async (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{grupo_chargeback_resource_listar}}}
@@ -139,7 +143,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET28AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -237,17 +241,18 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param> 
+        /// <param name="grupoChargebackId">grupoChargebackId</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <param name="id"> (optional)</param> 
+        /// <param name="descricao"> (optional)</param> 
         /// <param name="flagAtm"> (optional)</param> 
-        /// <param name="idBandeira"> (optional)</param> 
-        /// <param name="groupId"> (optional)</param> 
+        /// <param name="grupoChargebackId2"> (optional)</param> 
         /// <returns>PageCodigoChargebackResponse</returns>
-        public PageCodigoChargebackResponse ListarCodigosUsingGET (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null)
+        public PageCodigoChargebackResponse ListarCodigosUsingGET (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
         {
-             ApiResponse<PageCodigoChargebackResponse> localVarResponse = ListarCodigosUsingGETWithHttpInfo(id, sort, page, limit, flagAtm, idBandeira, groupId);
+             ApiResponse<PageCodigoChargebackResponse> localVarResponse = ListarCodigosUsingGETWithHttpInfo(grupoChargebackId, sort, page, limit, id, descricao, flagAtm, grupoChargebackId2);
              return localVarResponse.Data;
         }
 
@@ -255,23 +260,24 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param> 
+        /// <param name="grupoChargebackId">grupoChargebackId</param> 
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <param name="id"> (optional)</param> 
+        /// <param name="descricao"> (optional)</param> 
         /// <param name="flagAtm"> (optional)</param> 
-        /// <param name="idBandeira"> (optional)</param> 
-        /// <param name="groupId"> (optional)</param> 
+        /// <param name="grupoChargebackId2"> (optional)</param> 
         /// <returns>ApiResponse of PageCodigoChargebackResponse</returns>
-        public ApiResponse< PageCodigoChargebackResponse > ListarCodigosUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null)
+        public ApiResponse< PageCodigoChargebackResponse > ListarCodigosUsingGETWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
         {
             
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltaggrupochagebackApi->ListarCodigosUsingGET");
+            // verify the required parameter 'grupoChargebackId' is set
+            if (grupoChargebackId == null)
+                throw new ApiException(400, "Missing required parameter 'grupoChargebackId' when calling GlobaltaggrupochagebackApi->ListarCodigosUsingGET");
             
     
-            var localVarPath = "/api/grupos-chargeback/{id}/codigos";
+            var localVarPath = "/api/grupos-chargeback/{grupoChargebackId}/codigos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -297,14 +303,15 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (grupoChargebackId != null) localVarPathParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId)); // path parameter
             
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
             if (flagAtm != null) localVarQueryParams.Add("flagAtm", Configuration.ApiClient.ParameterToString(flagAtm)); // query parameter
-            if (idBandeira != null) localVarQueryParams.Add("idBandeira", Configuration.ApiClient.ParameterToString(idBandeira)); // query parameter
-            if (groupId != null) localVarQueryParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // query parameter
+            if (grupoChargebackId2 != null) localVarQueryParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId2)); // query parameter
             
             
             
@@ -335,17 +342,18 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
+        /// <param name="grupoChargebackId">grupoChargebackId</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="descricao"> (optional)</param>
         /// <param name="flagAtm"> (optional)</param>
-        /// <param name="idBandeira"> (optional)</param>
-        /// <param name="groupId"> (optional)</param>
+        /// <param name="grupoChargebackId2"> (optional)</param>
         /// <returns>Task of PageCodigoChargebackResponse</returns>
-        public async System.Threading.Tasks.Task<PageCodigoChargebackResponse> ListarCodigosUsingGETAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null)
+        public async System.Threading.Tasks.Task<PageCodigoChargebackResponse> ListarCodigosUsingGETAsync (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
         {
-             ApiResponse<PageCodigoChargebackResponse> localVarResponse = await ListarCodigosUsingGETAsyncWithHttpInfo(id, sort, page, limit, flagAtm, idBandeira, groupId);
+             ApiResponse<PageCodigoChargebackResponse> localVarResponse = await ListarCodigosUsingGETAsyncWithHttpInfo(grupoChargebackId, sort, page, limit, id, descricao, flagAtm, grupoChargebackId2);
              return localVarResponse.Data;
 
         }
@@ -354,21 +362,22 @@ namespace Conductor.Pier.Api
         /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
+        /// <param name="grupoChargebackId">grupoChargebackId</param>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="descricao"> (optional)</param>
         /// <param name="flagAtm"> (optional)</param>
-        /// <param name="idBandeira"> (optional)</param>
-        /// <param name="groupId"> (optional)</param>
+        /// <param name="grupoChargebackId2"> (optional)</param>
         /// <returns>Task of ApiResponse (PageCodigoChargebackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoChargebackResponse>> ListarCodigosUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? flagAtm = null, long? idBandeira = null, long? groupId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoChargebackResponse>> ListarCodigosUsingGETAsyncWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
         {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarCodigosUsingGET");
+            // verify the required parameter 'grupoChargebackId' is set
+            if (grupoChargebackId == null) throw new ApiException(400, "Missing required parameter 'grupoChargebackId' when calling ListarCodigosUsingGET");
             
     
-            var localVarPath = "/api/grupos-chargeback/{id}/codigos";
+            var localVarPath = "/api/grupos-chargeback/{grupoChargebackId}/codigos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -394,14 +403,15 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (grupoChargebackId != null) localVarPathParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId)); // path parameter
             
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
             if (flagAtm != null) localVarQueryParams.Add("flagAtm", Configuration.ApiClient.ParameterToString(flagAtm)); // query parameter
-            if (idBandeira != null) localVarQueryParams.Add("idBandeira", Configuration.ApiClient.ParameterToString(idBandeira)); // query parameter
-            if (groupId != null) localVarQueryParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // query parameter
+            if (grupoChargebackId2 != null) localVarQueryParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId2)); // query parameter
             
             
             
@@ -435,9 +445,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageGrupoChargebackResponse</returns>
-        public PageGrupoChargebackResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null)
+        public PageGrupoChargebackResponse ListarUsingGET28 (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = ListarUsingGET27WithHttpInfo(sort, page, limit);
+             ApiResponse<PageGrupoChargebackResponse> localVarResponse = ListarUsingGET28WithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -449,7 +459,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        public ApiResponse< PageGrupoChargebackResponse > ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageGrupoChargebackResponse > ListarUsingGET28WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -498,9 +508,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageGrupoChargebackResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -517,9 +527,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageGrupoChargebackResponse</returns>
-        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET28Async (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await ListarUsingGET27AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await ListarUsingGET28AsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -532,7 +542,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET28AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -581,9 +591,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageGrupoChargebackResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

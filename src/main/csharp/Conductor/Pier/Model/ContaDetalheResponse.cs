@@ -48,8 +48,9 @@ namespace Conductor.Pier.Model
         /// <param name="SaldoDisponivelGlobal">{{{conta_detalhe_response_saldo_disponivel_global_value}}}.</param>
         /// <param name="SaldoDisponivelSaque">{{{conta_detalhe_response_saldo_disponivel_saque_value}}}.</param>
         /// <param name="DiasAtraso">{{{conta_detalhe_response_dias_atraso_value}}}.</param>
+        /// <param name="ProximoVencimentoPadrao">{{{conta_response_proximo_vencimento_padrao_value}}}.</param>
 
-        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null)
+        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null, string ProximoVencimentoPadrao = null)
         {
             this.Id = Id;
             this.IdPessoa = IdPessoa;
@@ -77,6 +78,7 @@ namespace Conductor.Pier.Model
             this.SaldoDisponivelGlobal = SaldoDisponivelGlobal;
             this.SaldoDisponivelSaque = SaldoDisponivelSaque;
             this.DiasAtraso = DiasAtraso;
+            this.ProximoVencimentoPadrao = ProximoVencimentoPadrao;
             
         }
         
@@ -264,6 +266,13 @@ namespace Conductor.Pier.Model
         public long? DiasAtraso { get; set; }
     
         /// <summary>
+        /// {{{conta_response_proximo_vencimento_padrao_value}}}
+        /// </summary>
+        /// <value>{{{conta_response_proximo_vencimento_padrao_value}}}</value>
+        [DataMember(Name="proximoVencimentoPadrao", EmitDefaultValue=false)]
+        public string ProximoVencimentoPadrao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -297,6 +306,7 @@ namespace Conductor.Pier.Model
             sb.Append("  SaldoDisponivelGlobal: ").Append(SaldoDisponivelGlobal).Append("\n");
             sb.Append("  SaldoDisponivelSaque: ").Append(SaldoDisponivelSaque).Append("\n");
             sb.Append("  DiasAtraso: ").Append(DiasAtraso).Append("\n");
+            sb.Append("  ProximoVencimentoPadrao: ").Append(ProximoVencimentoPadrao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -463,6 +473,11 @@ namespace Conductor.Pier.Model
                     this.DiasAtraso == other.DiasAtraso ||
                     this.DiasAtraso != null &&
                     this.DiasAtraso.Equals(other.DiasAtraso)
+                ) && 
+                (
+                    this.ProximoVencimentoPadrao == other.ProximoVencimentoPadrao ||
+                    this.ProximoVencimentoPadrao != null &&
+                    this.ProximoVencimentoPadrao.Equals(other.ProximoVencimentoPadrao)
                 );
         }
 
@@ -555,6 +570,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DiasAtraso != null)
                     hash = hash * 59 + this.DiasAtraso.GetHashCode();
+                
+                if (this.ProximoVencimentoPadrao != null)
+                    hash = hash * 59 + this.ProximoVencimentoPadrao.GetHashCode();
                 
                 return hash;
             }

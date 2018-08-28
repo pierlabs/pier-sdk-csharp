@@ -15,7 +15,7 @@ namespace Conductor.Pier.Model
     /// {{{notificacao_push_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class NotificacaoPushResponseValue :  IEquatable<NotificacaoPushResponseValue>
+    public partial class NotificacaoPushResponse :  IEquatable<NotificacaoPushResponse>
     { 
     
         /// <summary>
@@ -32,7 +32,10 @@ namespace Conductor.Pier.Model
             CodigoSeguranca,
             
             [EnumMember(Value = "OUTROS")]
-            Outros
+            Outros,
+            
+            [EnumMember(Value = "OTP_3D_SECURE")]
+            Otp3dSecure
         }
 
     
@@ -106,8 +109,8 @@ namespace Conductor.Pier.Model
         public PlataformaEnum? Plataforma { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="NotificacaoPushResponseValue" /> class.
-        /// Initializes a new instance of the <see cref="NotificacaoPushResponseValue" />class.
+        /// Initializes a new instance of the <see cref="NotificacaoPushResponse" /> class.
+        /// Initializes a new instance of the <see cref="NotificacaoPushResponse" />class.
         /// </summary>
         /// <param name="DataEnvio">{{{notificacao_push_response_data_envio_value}}}.</param>
         /// <param name="IdEmissor">{{{notificacao_push_response_id_emissor_value}}}.</param>
@@ -121,12 +124,12 @@ namespace Conductor.Pier.Model
         /// <param name="Plataforma">{{{notificacao_push_response_plataforma_value}}}.</param>
         /// <param name="Protocolo">{{{notificacao_push_response_protocolo_value}}}.</param>
 
-        public NotificacaoPushResponseValue(string DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
+        public NotificacaoPushResponse(string DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
         {
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
             {
-                throw new InvalidDataException("IdPessoa is a required property for NotificacaoPushResponseValue and cannot be null");
+                throw new InvalidDataException("IdPessoa is a required property for NotificacaoPushResponse and cannot be null");
             }
             else
             {
@@ -135,7 +138,7 @@ namespace Conductor.Pier.Model
             // to ensure "IdConta" is required (not null)
             if (IdConta == null)
             {
-                throw new InvalidDataException("IdConta is a required property for NotificacaoPushResponseValue and cannot be null");
+                throw new InvalidDataException("IdConta is a required property for NotificacaoPushResponse and cannot be null");
             }
             else
             {
@@ -144,7 +147,7 @@ namespace Conductor.Pier.Model
             // to ensure "TokenDispositivo" is required (not null)
             if (TokenDispositivo == null)
             {
-                throw new InvalidDataException("TokenDispositivo is a required property for NotificacaoPushResponseValue and cannot be null");
+                throw new InvalidDataException("TokenDispositivo is a required property for NotificacaoPushResponse and cannot be null");
             }
             else
             {
@@ -153,7 +156,7 @@ namespace Conductor.Pier.Model
             // to ensure "Titulo" is required (not null)
             if (Titulo == null)
             {
-                throw new InvalidDataException("Titulo is a required property for NotificacaoPushResponseValue and cannot be null");
+                throw new InvalidDataException("Titulo is a required property for NotificacaoPushResponse and cannot be null");
             }
             else
             {
@@ -162,7 +165,7 @@ namespace Conductor.Pier.Model
             // to ensure "Conteudo" is required (not null)
             if (Conteudo == null)
             {
-                throw new InvalidDataException("Conteudo is a required property for NotificacaoPushResponseValue and cannot be null");
+                throw new InvalidDataException("Conteudo is a required property for NotificacaoPushResponse and cannot be null");
             }
             else
             {
@@ -241,7 +244,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class NotificacaoPushResponseValue {\n");
+            sb.Append("class NotificacaoPushResponse {\n");
             sb.Append("  DataEnvio: ").Append(DataEnvio).Append("\n");
             sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
             sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
@@ -275,15 +278,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as NotificacaoPushResponseValue);
+            return this.Equals(obj as NotificacaoPushResponse);
         }
 
         /// <summary>
-        /// Returns true if NotificacaoPushResponseValue instances are equal
+        /// Returns true if NotificacaoPushResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of NotificacaoPushResponseValue to be compared</param>
+        /// <param name="other">Instance of NotificacaoPushResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(NotificacaoPushResponseValue other)
+        public bool Equals(NotificacaoPushResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

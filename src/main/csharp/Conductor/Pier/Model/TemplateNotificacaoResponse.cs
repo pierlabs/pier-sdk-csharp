@@ -35,7 +35,10 @@ namespace Conductor.Pier.Model
             ValidarDispositivo,
             
             [EnumMember(Value = "NOTIFICACAO_EMAIL")]
-            NotificacaoEmail
+            NotificacaoEmail,
+            
+            [EnumMember(Value = "OTP_3D_SECURE")]
+            Otp3dSecure
         }
 
     
@@ -57,6 +60,9 @@ namespace Conductor.Pier.Model
             
             [EnumMember(Value = "PUSH_GCM")]
             PushGcm,
+            
+            [EnumMember(Value = "WEBHOOK")]
+            Webhook,
             
             [EnumMember(Value = "EMAIL")]
             Email

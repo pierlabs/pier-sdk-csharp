@@ -32,7 +32,10 @@ namespace Conductor.Pier.Model
             CodigoSeguranca,
             
             [EnumMember(Value = "OUTROS")]
-            Outros
+            Outros,
+            
+            [EnumMember(Value = "OTP_3D_SECURE")]
+            Otp3dSecure
         }
 
     

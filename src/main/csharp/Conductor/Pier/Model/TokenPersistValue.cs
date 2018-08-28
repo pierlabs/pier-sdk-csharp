@@ -26,8 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="_Base">{{{token_dto_base_value}}} (required).</param>
         /// <param name="Owner">{{{token_dto_owner_value}}} (required).</param>
         /// <param name="CriadoPor">{{{token_dto_criado_por_value}}} (required).</param>
+        /// <param name="IdAplicacao">{{{token_dto_id_application_value}}}.</param>
 
-        public TokenPersistValue(string Token = null, long? _Base = null, string Owner = null, string CriadoPor = null)
+        public TokenPersistValue(string Token = null, long? _Base = null, string Owner = null, string CriadoPor = null, long? IdAplicacao = null)
         {
             // to ensure "Token" is required (not null)
             if (Token == null)
@@ -65,6 +66,7 @@ namespace Conductor.Pier.Model
             {
                 this.CriadoPor = CriadoPor;
             }
+            this.IdAplicacao = IdAplicacao;
             
         }
         
@@ -98,6 +100,13 @@ namespace Conductor.Pier.Model
         public string CriadoPor { get; set; }
     
         /// <summary>
+        /// {{{token_dto_id_application_value}}}
+        /// </summary>
+        /// <value>{{{token_dto_id_application_value}}}</value>
+        [DataMember(Name="idAplicacao", EmitDefaultValue=false)]
+        public long? IdAplicacao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -109,6 +118,7 @@ namespace Conductor.Pier.Model
             sb.Append("  _Base: ").Append(_Base).Append("\n");
             sb.Append("  Owner: ").Append(Owner).Append("\n");
             sb.Append("  CriadoPor: ").Append(CriadoPor).Append("\n");
+            sb.Append("  IdAplicacao: ").Append(IdAplicacao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -165,6 +175,11 @@ namespace Conductor.Pier.Model
                     this.CriadoPor == other.CriadoPor ||
                     this.CriadoPor != null &&
                     this.CriadoPor.Equals(other.CriadoPor)
+                ) && 
+                (
+                    this.IdAplicacao == other.IdAplicacao ||
+                    this.IdAplicacao != null &&
+                    this.IdAplicacao.Equals(other.IdAplicacao)
                 );
         }
 
@@ -191,6 +206,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.CriadoPor != null)
                     hash = hash * 59 + this.CriadoPor.GetHashCode();
+                
+                if (this.IdAplicacao != null)
+                    hash = hash * 59 + this.IdAplicacao.GetHashCode();
                 
                 return hash;
             }

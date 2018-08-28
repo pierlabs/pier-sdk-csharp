@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param>
         /// <returns>LogAcessoUsuarioResposta</returns>
-        LogAcessoUsuarioResposta SalvarUsingPOST18 (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
+        LogAcessoUsuarioResposta SalvarUsingPOST19 (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
   
         /// <summary>
         /// {{{log_acesso_usuario_recurso_salvar}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param>
         /// <returns>ApiResponse of LogAcessoUsuarioResposta</returns>
-        ApiResponse<LogAcessoUsuarioResposta> SalvarUsingPOST18WithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
+        ApiResponse<LogAcessoUsuarioResposta> SalvarUsingPOST19WithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
         
         #endregion Synchronous Operations
         
@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param>
         /// <returns>Task of LogAcessoUsuarioResposta</returns>
-        System.Threading.Tasks.Task<LogAcessoUsuarioResposta> SalvarUsingPOST18Async (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
+        System.Threading.Tasks.Task<LogAcessoUsuarioResposta> SalvarUsingPOST19Async (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
 
         /// <summary>
         /// {{{log_acesso_usuario_recurso_salvar}}}
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param>
         /// <returns>Task of ApiResponse (LogAcessoUsuarioResposta)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LogAcessoUsuarioResposta>> SalvarUsingPOST18AsyncWithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
+        System.Threading.Tasks.Task<ApiResponse<LogAcessoUsuarioResposta>> SalvarUsingPOST19AsyncWithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist);
         
         #endregion Asynchronous Operations
         
@@ -163,9 +163,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param> 
         /// <returns>LogAcessoUsuarioResposta</returns>
-        public LogAcessoUsuarioResposta SalvarUsingPOST18 (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
+        public LogAcessoUsuarioResposta SalvarUsingPOST19 (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
         {
-             ApiResponse<LogAcessoUsuarioResposta> localVarResponse = SalvarUsingPOST18WithHttpInfo(logAcessoUsuarioPersist);
+             ApiResponse<LogAcessoUsuarioResposta> localVarResponse = SalvarUsingPOST19WithHttpInfo(logAcessoUsuarioPersist);
              return localVarResponse.Data;
         }
 
@@ -175,12 +175,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param> 
         /// <returns>ApiResponse of LogAcessoUsuarioResposta</returns>
-        public ApiResponse< LogAcessoUsuarioResposta > SalvarUsingPOST18WithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
+        public ApiResponse< LogAcessoUsuarioResposta > SalvarUsingPOST19WithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
         {
             
             // verify the required parameter 'logAcessoUsuarioPersist' is set
             if (logAcessoUsuarioPersist == null)
-                throw new ApiException(400, "Missing required parameter 'logAcessoUsuarioPersist' when calling GlobaltaglogApi->SalvarUsingPOST18");
+                throw new ApiException(400, "Missing required parameter 'logAcessoUsuarioPersist' when calling GlobaltaglogApi->SalvarUsingPOST19");
             
     
             var localVarPath = "/api/logs/log-acessos-usuario";
@@ -232,9 +232,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST18: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<LogAcessoUsuarioResposta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -249,9 +249,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param>
         /// <returns>Task of LogAcessoUsuarioResposta</returns>
-        public async System.Threading.Tasks.Task<LogAcessoUsuarioResposta> SalvarUsingPOST18Async (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
+        public async System.Threading.Tasks.Task<LogAcessoUsuarioResposta> SalvarUsingPOST19Async (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
         {
-             ApiResponse<LogAcessoUsuarioResposta> localVarResponse = await SalvarUsingPOST18AsyncWithHttpInfo(logAcessoUsuarioPersist);
+             ApiResponse<LogAcessoUsuarioResposta> localVarResponse = await SalvarUsingPOST19AsyncWithHttpInfo(logAcessoUsuarioPersist);
              return localVarResponse.Data;
 
         }
@@ -262,10 +262,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logAcessoUsuarioPersist">logAcessoUsuarioPersist</param>
         /// <returns>Task of ApiResponse (LogAcessoUsuarioResposta)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LogAcessoUsuarioResposta>> SalvarUsingPOST18AsyncWithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<LogAcessoUsuarioResposta>> SalvarUsingPOST19AsyncWithHttpInfo (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist)
         {
             // verify the required parameter 'logAcessoUsuarioPersist' is set
-            if (logAcessoUsuarioPersist == null) throw new ApiException(400, "Missing required parameter 'logAcessoUsuarioPersist' when calling SalvarUsingPOST18");
+            if (logAcessoUsuarioPersist == null) throw new ApiException(400, "Missing required parameter 'logAcessoUsuarioPersist' when calling SalvarUsingPOST19");
             
     
             var localVarPath = "/api/logs/log-acessos-usuario";
@@ -317,9 +317,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST18: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST18: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LogAcessoUsuarioResposta>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

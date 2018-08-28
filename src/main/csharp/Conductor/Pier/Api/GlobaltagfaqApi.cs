@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>FaqResponse</returns>
-        FaqResponse ConsultarUsingGET21 (long? id);
+        FaqResponse ConsultarUsingGET23 (long? id);
   
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>ApiResponse of FaqResponse</returns>
-        ApiResponse<FaqResponse> ConsultarUsingGET21WithHttpInfo (long? id);
+        ApiResponse<FaqResponse> ConsultarUsingGET23WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -123,7 +123,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param>
         /// <returns>PageFaqResponse</returns>
-        PageFaqResponse ListarUsingGET26 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        PageFaqResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -143,7 +143,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param>
         /// <returns>ApiResponse of PageFaqResponse</returns>
-        ApiResponse<PageFaqResponse> ListarUsingGET26WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        ApiResponse<PageFaqResponse> ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Synchronous Operations
         
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of FaqResponse</returns>
-        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET21Async (long? id);
+        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET23Async (long? id);
 
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -235,7 +235,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -255,7 +255,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param>
         /// <returns>Task of PageFaqResponse</returns>
-        System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET26Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -275,7 +275,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageFaqResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET26AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         #endregion Asynchronous Operations
         
@@ -775,9 +775,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param> 
         /// <returns>FaqResponse</returns>
-        public FaqResponse ConsultarUsingGET21 (long? id)
+        public FaqResponse ConsultarUsingGET23 (long? id)
         {
-             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET21WithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET23WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -787,12 +787,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param> 
         /// <returns>ApiResponse of FaqResponse</returns>
-        public ApiResponse< FaqResponse > ConsultarUsingGET21WithHttpInfo (long? id)
+        public ApiResponse< FaqResponse > ConsultarUsingGET23WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->ConsultarUsingGET21");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->ConsultarUsingGET23");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -838,9 +838,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -855,9 +855,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of FaqResponse</returns>
-        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET21Async (long? id)
+        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET23Async (long? id)
         {
-             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET21AsyncWithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET23AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -868,10 +868,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET23AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET21");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET23");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -917,9 +917,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -942,9 +942,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param> 
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param> 
         /// <returns>PageFaqResponse</returns>
-        public PageFaqResponse ListarUsingGET26 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public PageFaqResponse ListarUsingGET27 (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqResponse> localVarResponse = ListarUsingGET26WithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqResponse> localVarResponse = ListarUsingGET27WithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -963,7 +963,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param> 
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageFaqResponse</returns>
-        public ApiResponse< PageFaqResponse > ListarUsingGET26WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public ApiResponse< PageFaqResponse > ListarUsingGET27WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1019,9 +1019,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageFaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1045,9 +1045,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param>
         /// <returns>Task of PageFaqResponse</returns>
-        public async System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET26Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<PageFaqResponse> ListarUsingGET27Async (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<PageFaqResponse> localVarResponse = await ListarUsingGET26AsyncWithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<PageFaqResponse> localVarResponse = await ListarUsingGET27AsyncWithHttpInfo(sort, page, limit, idFaq, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -1067,7 +1067,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_request_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_request_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageFaqResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET26AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageFaqResponse>> ListarUsingGET27AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idFaq = null, string pergunta = null, string resposta = null, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
     
@@ -1123,9 +1123,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET27: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageFaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

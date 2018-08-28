@@ -18,6 +18,42 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param>
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param>
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param>
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param>
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param>
+        /// <returns>PageStatusContestacaoResponse</returns>
+        PageStatusContestacaoResponse ListarStatusContestacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+  
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param>
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param>
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param>
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param>
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param>
+        /// <returns>ApiResponse of PageStatusContestacaoResponse</returns>
+        ApiResponse<PageStatusContestacaoResponse> ListarStatusContestacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+        
+        /// <summary>
         /// {{{tipo_resolucao_contestacao_resource_listar_tipo_contestacao}}}
         /// </summary>
         /// <remarks>
@@ -50,6 +86,42 @@ namespace Conductor.Pier.Api
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param>
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param>
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param>
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param>
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param>
+        /// <returns>Task of PageStatusContestacaoResponse</returns>
+        System.Threading.Tasks.Task<PageStatusContestacaoResponse> ListarStatusContestacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param>
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param>
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param>
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param>
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageStatusContestacaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContestacaoResponse>> ListarStatusContestacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
         
         /// <summary>
         /// {{{tipo_resolucao_contestacao_resource_listar_tipo_contestacao}}}
@@ -172,6 +244,200 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}} {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param> 
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param> 
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param> 
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param> 
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param> 
+        /// <returns>PageStatusContestacaoResponse</returns>
+        public PageStatusContestacaoResponse ListarStatusContestacaoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        {
+             ApiResponse<PageStatusContestacaoResponse> localVarResponse = ListarStatusContestacaoUsingGETWithHttpInfo(sort, page, limit, idStatusContestacao, idStatusContestacaoOrigem, descricao, flagPermiteAlteracao, flagSistema);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}} {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param> 
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param> 
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param> 
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param> 
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param> 
+        /// <returns>ApiResponse of PageStatusContestacaoResponse</returns>
+        public ApiResponse< PageStatusContestacaoResponse > ListarStatusContestacaoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        {
+            
+    
+            var localVarPath = "/api/status-contestacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idStatusContestacao != null) localVarQueryParams.Add("idStatusContestacao", Configuration.ApiClient.ParameterToString(idStatusContestacao)); // query parameter
+            if (idStatusContestacaoOrigem != null) localVarQueryParams.Add("idStatusContestacaoOrigem", Configuration.ApiClient.ParameterToString(idStatusContestacaoOrigem)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (flagPermiteAlteracao != null) localVarQueryParams.Add("flagPermiteAlteracao", Configuration.ApiClient.ParameterToString(flagPermiteAlteracao)); // query parameter
+            if (flagSistema != null) localVarQueryParams.Add("flagSistema", Configuration.ApiClient.ParameterToString(flagSistema)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageStatusContestacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageStatusContestacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContestacaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}} {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param>
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param>
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param>
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param>
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param>
+        /// <returns>Task of PageStatusContestacaoResponse</returns>
+        public async System.Threading.Tasks.Task<PageStatusContestacaoResponse> ListarStatusContestacaoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        {
+             ApiResponse<PageStatusContestacaoResponse> localVarResponse = await ListarStatusContestacaoUsingGETAsyncWithHttpInfo(sort, page, limit, idStatusContestacao, idStatusContestacaoOrigem, descricao, flagPermiteAlteracao, flagSistema);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{status_contestacao_resource_listar_status_contestacao}}} {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}} (optional)</param>
+        /// <param name="idStatusContestacaoOrigem">{{{status_contestacao_request_idstatuscontestacaoOrigem_value}}} (optional)</param>
+        /// <param name="descricao">{{{status_contestacao_request_descricao_value}}} (optional)</param>
+        /// <param name="flagPermiteAlteracao">{{{status_contestacao_request_flagpermitealteracao_value}}} (optional)</param>
+        /// <param name="flagSistema">{{{status_contestacao_request_flagsistema_value}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageStatusContestacaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContestacaoResponse>> ListarStatusContestacaoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        {
+            
+    
+            var localVarPath = "/api/status-contestacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idStatusContestacao != null) localVarQueryParams.Add("idStatusContestacao", Configuration.ApiClient.ParameterToString(idStatusContestacao)); // query parameter
+            if (idStatusContestacaoOrigem != null) localVarQueryParams.Add("idStatusContestacaoOrigem", Configuration.ApiClient.ParameterToString(idStatusContestacaoOrigem)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (flagPermiteAlteracao != null) localVarQueryParams.Add("flagPermiteAlteracao", Configuration.ApiClient.ParameterToString(flagPermiteAlteracao)); // query parameter
+            if (flagSistema != null) localVarQueryParams.Add("flagSistema", Configuration.ApiClient.ParameterToString(flagSistema)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageStatusContestacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageStatusContestacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContestacaoResponse)));
+            
+        }
         
         /// <summary>
         /// {{{tipo_resolucao_contestacao_resource_listar_tipo_contestacao}}} {{{tipo_resolucao_contestacao_resource_listar_tipo_resolucao_contestacao_notes}}}

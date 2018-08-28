@@ -34,6 +34,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataContestacao">DataContestacao.</param>
         /// <param name="DataEnvioCB">DataEnvioCB.</param>
         /// <param name="DataTransacao">DataTransacao.</param>
+        /// <param name="Historico">Historico.</param>
         /// <param name="IdCompraContestada">IdCompraContestada.</param>
         /// <param name="Internacional">Internacional.</param>
         /// <param name="Mcc">Mcc.</param>
@@ -55,7 +56,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorContrato">ValorContrato.</param>
         /// <param name="ValorDestino">ValorDestino.</param>
 
-        public CompraContestadaTransacaoResponse(long? AgingCompras = null, long? AgingContestacao = null, string Bandeira = null, string CodigoAutorizacao = null, string CodigoContestacao = null, string CodigoEventoCompra = null, string CodigoMoedaDestino = null, string Data2Reapresentacao = null, DateTime? DataAlteracao = null, DateTime? DataContestacao = null, string DataEnvioCB = null, DateTime? DataTransacao = null, long? IdCompraContestada = null, int? Internacional = null, string Mcc = null, string ModoDeEntradaDescricao = null, string ModoEntrada = null, string Motivo2Reapresentacao = null, string NomeEstabelecimento = null, string NumeroControle = null, string RazaoCB = null, string ReferenceNumber = null, string ReporteBandeira = null, string ResponsavelAbertuda = null, string ResponsavelAlteracao = null, string StatusContestacao = null, string Texto2Reapresentacao = null, string TipoTransacao = null, string TransacaoSegura = null, double? ValorCompra = null, double? ValorContrato = null, double? ValorDestino = null)
+        public CompraContestadaTransacaoResponse(long? AgingCompras = null, long? AgingContestacao = null, string Bandeira = null, string CodigoAutorizacao = null, string CodigoContestacao = null, string CodigoEventoCompra = null, string CodigoMoedaDestino = null, string Data2Reapresentacao = null, DateTime? DataAlteracao = null, DateTime? DataContestacao = null, string DataEnvioCB = null, DateTime? DataTransacao = null, string Historico = null, long? IdCompraContestada = null, int? Internacional = null, string Mcc = null, string ModoDeEntradaDescricao = null, string ModoEntrada = null, string Motivo2Reapresentacao = null, string NomeEstabelecimento = null, string NumeroControle = null, string RazaoCB = null, string ReferenceNumber = null, string ReporteBandeira = null, string ResponsavelAbertuda = null, string ResponsavelAlteracao = null, string StatusContestacao = null, string Texto2Reapresentacao = null, string TipoTransacao = null, string TransacaoSegura = null, double? ValorCompra = null, double? ValorContrato = null, double? ValorDestino = null)
         {
             this.AgingCompras = AgingCompras;
             this.AgingContestacao = AgingContestacao;
@@ -69,6 +70,7 @@ namespace Conductor.Pier.Model
             this.DataContestacao = DataContestacao;
             this.DataEnvioCB = DataEnvioCB;
             this.DataTransacao = DataTransacao;
+            this.Historico = Historico;
             this.IdCompraContestada = IdCompraContestada;
             this.Internacional = Internacional;
             this.Mcc = Mcc;
@@ -164,6 +166,12 @@ namespace Conductor.Pier.Model
         /// </summary>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
         public DateTime? DataTransacao { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Historico
+        /// </summary>
+        [DataMember(Name="historico", EmitDefaultValue=false)]
+        public string Historico { get; set; }
     
         /// <summary>
         /// Gets or Sets IdCompraContestada
@@ -305,6 +313,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataContestacao: ").Append(DataContestacao).Append("\n");
             sb.Append("  DataEnvioCB: ").Append(DataEnvioCB).Append("\n");
             sb.Append("  DataTransacao: ").Append(DataTransacao).Append("\n");
+            sb.Append("  Historico: ").Append(Historico).Append("\n");
             sb.Append("  IdCompraContestada: ").Append(IdCompraContestada).Append("\n");
             sb.Append("  Internacional: ").Append(Internacional).Append("\n");
             sb.Append("  Mcc: ").Append(Mcc).Append("\n");
@@ -421,6 +430,11 @@ namespace Conductor.Pier.Model
                     this.DataTransacao == other.DataTransacao ||
                     this.DataTransacao != null &&
                     this.DataTransacao.Equals(other.DataTransacao)
+                ) && 
+                (
+                    this.Historico == other.Historico ||
+                    this.Historico != null &&
+                    this.Historico.Equals(other.Historico)
                 ) && 
                 (
                     this.IdCompraContestada == other.IdCompraContestada ||
@@ -571,6 +585,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataTransacao != null)
                     hash = hash * 59 + this.DataTransacao.GetHashCode();
+                
+                if (this.Historico != null)
+                    hash = hash * 59 + this.Historico.GetHashCode();
                 
                 if (this.IdCompraContestada != null)
                     hash = hash * 59 + this.IdCompraContestada.GetHashCode();
