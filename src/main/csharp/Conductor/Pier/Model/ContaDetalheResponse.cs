@@ -49,8 +49,17 @@ namespace Conductor.Pier.Model
         /// <param name="SaldoDisponivelSaque">{{{conta_detalhe_response_saldo_disponivel_saque_value}}}.</param>
         /// <param name="DiasAtraso">{{{conta_detalhe_response_dias_atraso_value}}}.</param>
         /// <param name="ProximoVencimentoPadrao">{{{conta_response_proximo_vencimento_padrao_value}}}.</param>
+        /// <param name="IdProposta">{{{conta_detalhe_response_id_proposta_value}}}.</param>
+        /// <param name="QuantidadePagamentos">{{{conta_detalhe_response_quantidade_pagamentos_value}}}.</param>
+        /// <param name="Correspondencia">{{{conta_detalhe_response_correspondencia_value}}}.</param>
+        /// <param name="DataInicioAtraso">{{{conta_detalhe_response_data_inicio_atraso_value}}}.</param>
+        /// <param name="AceitaNovaContaPorGrupoProduto">{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}.</param>
+        /// <param name="RotativoPagaJuros">{{{estado_conta_response_rotativo_paga_juros}}}.</param>
+        /// <param name="TotalPosProx">{{{estado_conta_response_total_pos_proximo}}}.</param>
+        /// <param name="SaldoAtualFinal">{{{estado_conta_response_saldo_atual_final}}}.</param>
+        /// <param name="SaldoExtratoAnterior">{{{estado_conta_response_saldo_extrato_anterior}}}.</param>
 
-        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null, string ProximoVencimentoPadrao = null)
+        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, double? ValorRenda = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, long? DiasAtraso = null, string ProximoVencimentoPadrao = null, long? IdProposta = null, int? QuantidadePagamentos = null, long? Correspondencia = null, string DataInicioAtraso = null, bool? AceitaNovaContaPorGrupoProduto = null, double? RotativoPagaJuros = null, double? TotalPosProx = null, double? SaldoAtualFinal = null, double? SaldoExtratoAnterior = null)
         {
             this.Id = Id;
             this.IdPessoa = IdPessoa;
@@ -79,6 +88,15 @@ namespace Conductor.Pier.Model
             this.SaldoDisponivelSaque = SaldoDisponivelSaque;
             this.DiasAtraso = DiasAtraso;
             this.ProximoVencimentoPadrao = ProximoVencimentoPadrao;
+            this.IdProposta = IdProposta;
+            this.QuantidadePagamentos = QuantidadePagamentos;
+            this.Correspondencia = Correspondencia;
+            this.DataInicioAtraso = DataInicioAtraso;
+            this.AceitaNovaContaPorGrupoProduto = AceitaNovaContaPorGrupoProduto;
+            this.RotativoPagaJuros = RotativoPagaJuros;
+            this.TotalPosProx = TotalPosProx;
+            this.SaldoAtualFinal = SaldoAtualFinal;
+            this.SaldoExtratoAnterior = SaldoExtratoAnterior;
             
         }
         
@@ -273,6 +291,69 @@ namespace Conductor.Pier.Model
         public string ProximoVencimentoPadrao { get; set; }
     
         /// <summary>
+        /// {{{conta_detalhe_response_id_proposta_value}}}
+        /// </summary>
+        /// <value>{{{conta_detalhe_response_id_proposta_value}}}</value>
+        [DataMember(Name="idProposta", EmitDefaultValue=false)]
+        public long? IdProposta { get; set; }
+    
+        /// <summary>
+        /// {{{conta_detalhe_response_quantidade_pagamentos_value}}}
+        /// </summary>
+        /// <value>{{{conta_detalhe_response_quantidade_pagamentos_value}}}</value>
+        [DataMember(Name="quantidadePagamentos", EmitDefaultValue=false)]
+        public int? QuantidadePagamentos { get; set; }
+    
+        /// <summary>
+        /// {{{conta_detalhe_response_correspondencia_value}}}
+        /// </summary>
+        /// <value>{{{conta_detalhe_response_correspondencia_value}}}</value>
+        [DataMember(Name="correspondencia", EmitDefaultValue=false)]
+        public long? Correspondencia { get; set; }
+    
+        /// <summary>
+        /// {{{conta_detalhe_response_data_inicio_atraso_value}}}
+        /// </summary>
+        /// <value>{{{conta_detalhe_response_data_inicio_atraso_value}}}</value>
+        [DataMember(Name="dataInicioAtraso", EmitDefaultValue=false)]
+        public string DataInicioAtraso { get; set; }
+    
+        /// <summary>
+        /// {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
+        /// </summary>
+        /// <value>{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}</value>
+        [DataMember(Name="aceitaNovaContaPorGrupoProduto", EmitDefaultValue=false)]
+        public bool? AceitaNovaContaPorGrupoProduto { get; set; }
+    
+        /// <summary>
+        /// {{{estado_conta_response_rotativo_paga_juros}}}
+        /// </summary>
+        /// <value>{{{estado_conta_response_rotativo_paga_juros}}}</value>
+        [DataMember(Name="rotativoPagaJuros", EmitDefaultValue=false)]
+        public double? RotativoPagaJuros { get; set; }
+    
+        /// <summary>
+        /// {{{estado_conta_response_total_pos_proximo}}}
+        /// </summary>
+        /// <value>{{{estado_conta_response_total_pos_proximo}}}</value>
+        [DataMember(Name="totalPosProx", EmitDefaultValue=false)]
+        public double? TotalPosProx { get; set; }
+    
+        /// <summary>
+        /// {{{estado_conta_response_saldo_atual_final}}}
+        /// </summary>
+        /// <value>{{{estado_conta_response_saldo_atual_final}}}</value>
+        [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
+        public double? SaldoAtualFinal { get; set; }
+    
+        /// <summary>
+        /// {{{estado_conta_response_saldo_extrato_anterior}}}
+        /// </summary>
+        /// <value>{{{estado_conta_response_saldo_extrato_anterior}}}</value>
+        [DataMember(Name="saldoExtratoAnterior", EmitDefaultValue=false)]
+        public double? SaldoExtratoAnterior { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -307,6 +388,15 @@ namespace Conductor.Pier.Model
             sb.Append("  SaldoDisponivelSaque: ").Append(SaldoDisponivelSaque).Append("\n");
             sb.Append("  DiasAtraso: ").Append(DiasAtraso).Append("\n");
             sb.Append("  ProximoVencimentoPadrao: ").Append(ProximoVencimentoPadrao).Append("\n");
+            sb.Append("  IdProposta: ").Append(IdProposta).Append("\n");
+            sb.Append("  QuantidadePagamentos: ").Append(QuantidadePagamentos).Append("\n");
+            sb.Append("  Correspondencia: ").Append(Correspondencia).Append("\n");
+            sb.Append("  DataInicioAtraso: ").Append(DataInicioAtraso).Append("\n");
+            sb.Append("  AceitaNovaContaPorGrupoProduto: ").Append(AceitaNovaContaPorGrupoProduto).Append("\n");
+            sb.Append("  RotativoPagaJuros: ").Append(RotativoPagaJuros).Append("\n");
+            sb.Append("  TotalPosProx: ").Append(TotalPosProx).Append("\n");
+            sb.Append("  SaldoAtualFinal: ").Append(SaldoAtualFinal).Append("\n");
+            sb.Append("  SaldoExtratoAnterior: ").Append(SaldoExtratoAnterior).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -478,6 +568,51 @@ namespace Conductor.Pier.Model
                     this.ProximoVencimentoPadrao == other.ProximoVencimentoPadrao ||
                     this.ProximoVencimentoPadrao != null &&
                     this.ProximoVencimentoPadrao.Equals(other.ProximoVencimentoPadrao)
+                ) && 
+                (
+                    this.IdProposta == other.IdProposta ||
+                    this.IdProposta != null &&
+                    this.IdProposta.Equals(other.IdProposta)
+                ) && 
+                (
+                    this.QuantidadePagamentos == other.QuantidadePagamentos ||
+                    this.QuantidadePagamentos != null &&
+                    this.QuantidadePagamentos.Equals(other.QuantidadePagamentos)
+                ) && 
+                (
+                    this.Correspondencia == other.Correspondencia ||
+                    this.Correspondencia != null &&
+                    this.Correspondencia.Equals(other.Correspondencia)
+                ) && 
+                (
+                    this.DataInicioAtraso == other.DataInicioAtraso ||
+                    this.DataInicioAtraso != null &&
+                    this.DataInicioAtraso.Equals(other.DataInicioAtraso)
+                ) && 
+                (
+                    this.AceitaNovaContaPorGrupoProduto == other.AceitaNovaContaPorGrupoProduto ||
+                    this.AceitaNovaContaPorGrupoProduto != null &&
+                    this.AceitaNovaContaPorGrupoProduto.Equals(other.AceitaNovaContaPorGrupoProduto)
+                ) && 
+                (
+                    this.RotativoPagaJuros == other.RotativoPagaJuros ||
+                    this.RotativoPagaJuros != null &&
+                    this.RotativoPagaJuros.Equals(other.RotativoPagaJuros)
+                ) && 
+                (
+                    this.TotalPosProx == other.TotalPosProx ||
+                    this.TotalPosProx != null &&
+                    this.TotalPosProx.Equals(other.TotalPosProx)
+                ) && 
+                (
+                    this.SaldoAtualFinal == other.SaldoAtualFinal ||
+                    this.SaldoAtualFinal != null &&
+                    this.SaldoAtualFinal.Equals(other.SaldoAtualFinal)
+                ) && 
+                (
+                    this.SaldoExtratoAnterior == other.SaldoExtratoAnterior ||
+                    this.SaldoExtratoAnterior != null &&
+                    this.SaldoExtratoAnterior.Equals(other.SaldoExtratoAnterior)
                 );
         }
 
@@ -573,6 +708,33 @@ namespace Conductor.Pier.Model
                 
                 if (this.ProximoVencimentoPadrao != null)
                     hash = hash * 59 + this.ProximoVencimentoPadrao.GetHashCode();
+                
+                if (this.IdProposta != null)
+                    hash = hash * 59 + this.IdProposta.GetHashCode();
+                
+                if (this.QuantidadePagamentos != null)
+                    hash = hash * 59 + this.QuantidadePagamentos.GetHashCode();
+                
+                if (this.Correspondencia != null)
+                    hash = hash * 59 + this.Correspondencia.GetHashCode();
+                
+                if (this.DataInicioAtraso != null)
+                    hash = hash * 59 + this.DataInicioAtraso.GetHashCode();
+                
+                if (this.AceitaNovaContaPorGrupoProduto != null)
+                    hash = hash * 59 + this.AceitaNovaContaPorGrupoProduto.GetHashCode();
+                
+                if (this.RotativoPagaJuros != null)
+                    hash = hash * 59 + this.RotativoPagaJuros.GetHashCode();
+                
+                if (this.TotalPosProx != null)
+                    hash = hash * 59 + this.TotalPosProx.GetHashCode();
+                
+                if (this.SaldoAtualFinal != null)
+                    hash = hash * 59 + this.SaldoAtualFinal.GetHashCode();
+                
+                if (this.SaldoExtratoAnterior != null)
+                    hash = hash * 59 + this.SaldoExtratoAnterior.GetHashCode();
                 
                 return hash;
             }

@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse AlterarUsingPUT23 (long? id, UsuarioUpdateValue update);
+        UsuarioResponse AlterarUsingPUT19 (long? id, UsuarioUpdateValue update);
   
         /// <summary>
         /// {{{usuario_resource_alterar}}}
@@ -89,7 +89,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> AlterarUsingPUT23WithHttpInfo (long? id, UsuarioUpdateValue update);
+        ApiResponse<UsuarioResponse> AlterarUsingPUT19WithHttpInfo (long? id, UsuarioUpdateValue update);
         
         /// <summary>
         /// {{{usuario_resource_ativar_usuario}}}
@@ -100,7 +100,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse AtivarUsuarioUsingPOST1 (long? id);
+        UsuarioResponse AtivarUsuarioUsingPOST (long? id);
   
         /// <summary>
         /// {{{usuario_resource_ativar_usuario}}}
@@ -111,7 +111,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> AtivarUsuarioUsingPOST1WithHttpInfo (long? id);
+        ApiResponse<UsuarioResponse> AtivarUsuarioUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{controle_seguranca_dispositivo_atualizar}}}
@@ -120,9 +120,10 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>ControleSegurancaDispositivoResponse</returns>
-        ControleSegurancaDispositivoResponse AtualizarUsingPUT3 (ControleSegurancaDispositivoUpdateValor update);
+        ControleSegurancaDispositivoResponse AtualizarUsingPUT2 (long? id, ControleSegurancaDispositivoUpdateValor update);
   
         /// <summary>
         /// {{{controle_seguranca_dispositivo_atualizar}}}
@@ -131,9 +132,10 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
-        ApiResponse<ControleSegurancaDispositivoResponse> AtualizarUsingPUT3WithHttpInfo (ControleSegurancaDispositivoUpdateValor update);
+        ApiResponse<ControleSegurancaDispositivoResponse> AtualizarUsingPUT2WithHttpInfo (long? id, ControleSegurancaDispositivoUpdateValor update);
         
         /// <summary>
         /// {{{usuario_recurso_listar_por_id_usuario}}}
@@ -175,7 +177,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageControleSegurancaDispositivoResponse</returns>
-        PageControleSegurancaDispositivoResponse ConsultarUsingGET17 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+        PageControleSegurancaDispositivoResponse ConsultarUsingGET14 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{controle_seguranca_dispositivo_consultar}}}
@@ -189,7 +191,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageControleSegurancaDispositivoResponse</returns>
-        ApiResponse<PageControleSegurancaDispositivoResponse> ConsultarUsingGET17WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageControleSegurancaDispositivoResponse> ConsultarUsingGET14WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -200,7 +202,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse ConsultarUsingGET53 (long? id);
+        UsuarioResponse ConsultarUsingGET46 (long? id);
   
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -211,7 +213,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> ConsultarUsingGET53WithHttpInfo (long? id);
+        ApiResponse<UsuarioResponse> ConsultarUsingGET46WithHttpInfo (long? id);
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
+        /// <returns>ControleSegurancaDispositivoResponse</returns>
+        ControleSegurancaDispositivoResponse DeletarUsingDELETE (long? id);
+  
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
+        /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
+        ApiResponse<ControleSegurancaDispositivoResponse> DeletarUsingDELETEWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{usuario_resource_desativar_usuario}}}
@@ -222,7 +246,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse DesativarUsuarioUsingPOST1 (long? id);
+        UsuarioResponse DesativarUsuarioUsingPOST (long? id);
   
         /// <summary>
         /// {{{usuario_resource_desativar_usuario}}}
@@ -233,7 +257,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> DesativarUsuarioUsingPOST1WithHttpInfo (long? id);
+        ApiResponse<UsuarioResponse> DesativarUsuarioUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{usuario_resource_listar}}}
@@ -250,7 +274,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param>
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param>
         /// <returns>PageUsuarioResponse</returns>
-        PageUsuarioResponse ListarUsingGET65 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        PageUsuarioResponse ListarUsingGET56 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
   
         /// <summary>
         /// {{{usuario_resource_listar}}}
@@ -267,7 +291,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param>
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param>
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        ApiResponse<PageUsuarioResponse> ListarUsingGET65WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        ApiResponse<PageUsuarioResponse> ListarUsingGET56WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// {{{usuario_resource_recuperar_senha}}}
@@ -292,28 +316,6 @@ namespace Conductor.Pier.Api
         ApiResponse<string> RecuperarSenhaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>ControleSegurancaDispositivoResponse</returns>
-        ControleSegurancaDispositivoResponse SalvarUsingPOST10 (ControleSegurancaDispositivoPersistencia persist);
-  
-        /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
-        ApiResponse<ControleSegurancaDispositivoResponse> SalvarUsingPOST10WithHttpInfo (ControleSegurancaDispositivoPersistencia persist);
-        
-        /// <summary>
         /// {{{usuario_resource_salvar}}}
         /// </summary>
         /// <remarks>
@@ -322,7 +324,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>UsuarioResponse</returns>
-        UsuarioResponse SalvarUsingPOST34 (UsuarioPersistencia persist);
+        UsuarioResponse SalvarUsingPOST28 (UsuarioPersistencia persist);
   
         /// <summary>
         /// {{{usuario_resource_salvar}}}
@@ -333,7 +335,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        ApiResponse<UsuarioResponse> SalvarUsingPOST34WithHttpInfo (UsuarioPersistencia persist);
+        ApiResponse<UsuarioResponse> SalvarUsingPOST28WithHttpInfo (UsuarioPersistencia persist);
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>ControleSegurancaDispositivoResponse</returns>
+        ControleSegurancaDispositivoResponse SalvarUsingPOST8 (ControleSegurancaDispositivoPersistencia persist);
+  
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
+        ApiResponse<ControleSegurancaDispositivoResponse> SalvarUsingPOST8WithHttpInfo (ControleSegurancaDispositivoPersistencia persist);
         
         /// <summary>
         /// {{{usuario_resource_validar_senha_forte}}}
@@ -368,8 +392,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param>
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param>
+        /// <param name="request">request (optional)</param>
         /// <returns>Object</returns>
-        Object ValidarSenhaLoginUsingPOST (string login, string senha);
+        Object ValidarSenhaLoginUsingPOST (string login, string senha, ValidarSenhaLoginRequest request = null);
   
         /// <summary>
         /// {{{usuario_resource_validar_senha_login}}}
@@ -380,8 +405,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param>
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param>
+        /// <param name="request">request (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha);
+        ApiResponse<Object> ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha, ValidarSenhaLoginRequest request = null);
         
         /// <summary>
         /// {{{usuario_resource_validar_senha}}}
@@ -493,7 +519,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT23Async (long? id, UsuarioUpdateValue update);
+        System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT19Async (long? id, UsuarioUpdateValue update);
 
         /// <summary>
         /// {{{usuario_resource_alterar}}}
@@ -505,7 +531,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT23AsyncWithHttpInfo (long? id, UsuarioUpdateValue update);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT19AsyncWithHttpInfo (long? id, UsuarioUpdateValue update);
         
         /// <summary>
         /// {{{usuario_resource_ativar_usuario}}}
@@ -516,7 +542,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> AtivarUsuarioUsingPOST1Async (long? id);
+        System.Threading.Tasks.Task<UsuarioResponse> AtivarUsuarioUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{usuario_resource_ativar_usuario}}}
@@ -527,7 +553,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AtivarUsuarioUsingPOST1AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AtivarUsuarioUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{controle_seguranca_dispositivo_atualizar}}}
@@ -536,9 +562,10 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
-        System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> AtualizarUsingPUT3Async (ControleSegurancaDispositivoUpdateValor update);
+        System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> AtualizarUsingPUT2Async (long? id, ControleSegurancaDispositivoUpdateValor update);
 
         /// <summary>
         /// {{{controle_seguranca_dispositivo_atualizar}}}
@@ -547,9 +574,10 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> AtualizarUsingPUT3AsyncWithHttpInfo (ControleSegurancaDispositivoUpdateValor update);
+        System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> AtualizarUsingPUT2AsyncWithHttpInfo (long? id, ControleSegurancaDispositivoUpdateValor update);
         
         /// <summary>
         /// {{{usuario_recurso_listar_por_id_usuario}}}
@@ -591,7 +619,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageControleSegurancaDispositivoResponse</returns>
-        System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET17Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET14Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{controle_seguranca_dispositivo_consultar}}}
@@ -605,7 +633,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageControleSegurancaDispositivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -616,7 +644,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET53Async (long? id);
+        System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET46Async (long? id);
 
         /// <summary>
         /// {{{usuario_resource_consultar}}}
@@ -627,7 +655,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET53AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
+        /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
+        System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> DeletarUsingDELETEAsync (long? id);
+
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
+        /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> DeletarUsingDELETEAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{usuario_resource_desativar_usuario}}}
@@ -638,7 +688,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> DesativarUsuarioUsingPOST1Async (long? id);
+        System.Threading.Tasks.Task<UsuarioResponse> DesativarUsuarioUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{usuario_resource_desativar_usuario}}}
@@ -649,7 +699,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> DesativarUsuarioUsingPOST1AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> DesativarUsuarioUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{usuario_resource_listar}}}
@@ -666,7 +716,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param>
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET65Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET56Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
 
         /// <summary>
         /// {{{usuario_resource_listar}}}
@@ -683,7 +733,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param>
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET65AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET56AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null);
         
         /// <summary>
         /// {{{usuario_resource_recuperar_senha}}}
@@ -708,28 +758,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<string>> RecuperarSenhaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
-        System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> SalvarUsingPOST10Async (ControleSegurancaDispositivoPersistencia persist);
-
-        /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}}
-        /// </summary>
-        /// <remarks>
-        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> SalvarUsingPOST10AsyncWithHttpInfo (ControleSegurancaDispositivoPersistencia persist);
-        
-        /// <summary>
         /// {{{usuario_resource_salvar}}}
         /// </summary>
         /// <remarks>
@@ -738,7 +766,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of UsuarioResponse</returns>
-        System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST34Async (UsuarioPersistencia persist);
+        System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST28Async (UsuarioPersistencia persist);
 
         /// <summary>
         /// {{{usuario_resource_salvar}}}
@@ -749,7 +777,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST34AsyncWithHttpInfo (UsuarioPersistencia persist);
+        System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST28AsyncWithHttpInfo (UsuarioPersistencia persist);
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
+        System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> SalvarUsingPOST8Async (ControleSegurancaDispositivoPersistencia persist);
+
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> SalvarUsingPOST8AsyncWithHttpInfo (ControleSegurancaDispositivoPersistencia persist);
         
         /// <summary>
         /// {{{usuario_resource_validar_senha_forte}}}
@@ -784,8 +834,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param>
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param>
+        /// <param name="request">request (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha);
+        System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha, ValidarSenhaLoginRequest request = null);
 
         /// <summary>
         /// {{{usuario_resource_validar_senha_login}}}
@@ -796,8 +847,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param>
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param>
+        /// <param name="request">request (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha, ValidarSenhaLoginRequest request = null);
         
         /// <summary>
         /// {{{usuario_resource_validar_senha}}}
@@ -1296,9 +1348,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse AlterarUsingPUT23 (long? id, UsuarioUpdateValue update)
+        public UsuarioResponse AlterarUsingPUT19 (long? id, UsuarioUpdateValue update)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = AlterarUsingPUT23WithHttpInfo(id, update);
+             ApiResponse<UsuarioResponse> localVarResponse = AlterarUsingPUT19WithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -1309,16 +1361,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > AlterarUsingPUT23WithHttpInfo (long? id, UsuarioUpdateValue update)
+        public ApiResponse< UsuarioResponse > AlterarUsingPUT19WithHttpInfo (long? id, UsuarioUpdateValue update)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->AlterarUsingPUT23");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->AlterarUsingPUT19");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagusuarioApi->AlterarUsingPUT23");
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagusuarioApi->AlterarUsingPUT19");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1371,9 +1423,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1389,9 +1441,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT23Async (long? id, UsuarioUpdateValue update)
+        public async System.Threading.Tasks.Task<UsuarioResponse> AlterarUsingPUT19Async (long? id, UsuarioUpdateValue update)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await AlterarUsingPUT23AsyncWithHttpInfo(id, update);
+             ApiResponse<UsuarioResponse> localVarResponse = await AlterarUsingPUT19AsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -1403,12 +1455,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{usuario_resource_alterar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT23AsyncWithHttpInfo (long? id, UsuarioUpdateValue update)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AlterarUsingPUT19AsyncWithHttpInfo (long? id, UsuarioUpdateValue update)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT23");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT19");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarUsingPUT23");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarUsingPUT19");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -1461,9 +1513,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT23: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT19: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT23: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1477,9 +1529,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse AtivarUsuarioUsingPOST1 (long? id)
+        public UsuarioResponse AtivarUsuarioUsingPOST (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = AtivarUsuarioUsingPOST1WithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = AtivarUsuarioUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1489,12 +1541,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > AtivarUsuarioUsingPOST1WithHttpInfo (long? id)
+        public ApiResponse< UsuarioResponse > AtivarUsuarioUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->AtivarUsuarioUsingPOST1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->AtivarUsuarioUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/ativar-usuario";
@@ -1540,9 +1592,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1557,9 +1609,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> AtivarUsuarioUsingPOST1Async (long? id)
+        public async System.Threading.Tasks.Task<UsuarioResponse> AtivarUsuarioUsingPOSTAsync (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await AtivarUsuarioUsingPOST1AsyncWithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = await AtivarUsuarioUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1570,10 +1622,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_ativar_usuario_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AtivarUsuarioUsingPOST1AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> AtivarUsuarioUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarUsuarioUsingPOST1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarUsuarioUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/ativar-usuario";
@@ -1619,9 +1671,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarUsuarioUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1633,11 +1685,12 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar}}} {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ControleSegurancaDispositivoResponse</returns>
-        public ControleSegurancaDispositivoResponse AtualizarUsingPUT3 (ControleSegurancaDispositivoUpdateValor update)
+        public ControleSegurancaDispositivoResponse AtualizarUsingPUT2 (long? id, ControleSegurancaDispositivoUpdateValor update)
         {
-             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = AtualizarUsingPUT3WithHttpInfo(update);
+             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = AtualizarUsingPUT2WithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -1645,17 +1698,22 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar}}} {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
-        public ApiResponse< ControleSegurancaDispositivoResponse > AtualizarUsingPUT3WithHttpInfo (ControleSegurancaDispositivoUpdateValor update)
+        public ApiResponse< ControleSegurancaDispositivoResponse > AtualizarUsingPUT2WithHttpInfo (long? id, ControleSegurancaDispositivoUpdateValor update)
         {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->AtualizarUsingPUT2");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagusuarioApi->AtualizarUsingPUT3");
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagusuarioApi->AtualizarUsingPUT2");
             
     
-            var localVarPath = "/api/controles-seguranca-dispositivos";
+            var localVarPath = "/api/controles-seguranca-dispositivos/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1681,6 +1739,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -1704,9 +1763,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1719,11 +1778,12 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar}}} {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> AtualizarUsingPUT3Async (ControleSegurancaDispositivoUpdateValor update)
+        public async System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> AtualizarUsingPUT2Async (long? id, ControleSegurancaDispositivoUpdateValor update)
         {
-             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = await AtualizarUsingPUT3AsyncWithHttpInfo(update);
+             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = await AtualizarUsingPUT2AsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -1732,15 +1792,18 @@ namespace Conductor.Pier.Api
         /// {{{controle_seguranca_dispositivo_atualizar}}} {{{controle_seguranca_dispositivo_atualizar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> AtualizarUsingPUT3AsyncWithHttpInfo (ControleSegurancaDispositivoUpdateValor update)
+        public async System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> AtualizarUsingPUT2AsyncWithHttpInfo (long? id, ControleSegurancaDispositivoUpdateValor update)
         {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT2");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarUsingPUT3");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarUsingPUT2");
             
     
-            var localVarPath = "/api/controles-seguranca-dispositivos";
+            var localVarPath = "/api/controles-seguranca-dispositivos/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1766,6 +1829,7 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
@@ -1789,9 +1853,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1984,9 +2048,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageControleSegurancaDispositivoResponse</returns>
-        public PageControleSegurancaDispositivoResponse ConsultarUsingGET17 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        public PageControleSegurancaDispositivoResponse ConsultarUsingGET14 (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = ConsultarUsingGET17WithHttpInfo(idUsuario, sort, page, limit);
+             ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(idUsuario, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1999,12 +2063,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageControleSegurancaDispositivoResponse</returns>
-        public ApiResponse< PageControleSegurancaDispositivoResponse > ConsultarUsingGET17WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageControleSegurancaDispositivoResponse > ConsultarUsingGET14WithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'idUsuario' is set
             if (idUsuario == null)
-                throw new ApiException(400, "Missing required parameter 'idUsuario' when calling GlobaltagusuarioApi->ConsultarUsingGET17");
+                throw new ApiException(400, "Missing required parameter 'idUsuario' when calling GlobaltagusuarioApi->ConsultarUsingGET14");
             
     
             var localVarPath = "/api/controles-seguranca-dispositivos";
@@ -2053,9 +2117,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageControleSegurancaDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2073,9 +2137,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageControleSegurancaDispositivoResponse</returns>
-        public async System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET17Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageControleSegurancaDispositivoResponse> ConsultarUsingGET14Async (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = await ConsultarUsingGET17AsyncWithHttpInfo(idUsuario, sort, page, limit);
+             ApiResponse<PageControleSegurancaDispositivoResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(idUsuario, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2089,10 +2153,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageControleSegurancaDispositivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET17AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleSegurancaDispositivoResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? idUsuario, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'idUsuario' is set
-            if (idUsuario == null) throw new ApiException(400, "Missing required parameter 'idUsuario' when calling ConsultarUsingGET17");
+            if (idUsuario == null) throw new ApiException(400, "Missing required parameter 'idUsuario' when calling ConsultarUsingGET14");
             
     
             var localVarPath = "/api/controles-seguranca-dispositivos";
@@ -2141,9 +2205,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageControleSegurancaDispositivoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2157,9 +2221,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse ConsultarUsingGET53 (long? id)
+        public UsuarioResponse ConsultarUsingGET46 (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET53WithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = ConsultarUsingGET46WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2169,12 +2233,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > ConsultarUsingGET53WithHttpInfo (long? id)
+        public ApiResponse< UsuarioResponse > ConsultarUsingGET46WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->ConsultarUsingGET53");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->ConsultarUsingGET46");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -2220,9 +2284,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2237,9 +2301,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET53Async (long? id)
+        public async System.Threading.Tasks.Task<UsuarioResponse> ConsultarUsingGET46Async (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET53AsyncWithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = await ConsultarUsingGET46AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2250,10 +2314,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET53AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET53");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET46");
             
     
             var localVarPath = "/api/usuarios/{id}";
@@ -2299,13 +2363,171 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET53: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UsuarioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsuarioResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}} {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param> 
+        /// <returns>ControleSegurancaDispositivoResponse</returns>
+        public ControleSegurancaDispositivoResponse DeletarUsingDELETE (long? id)
+        {
+             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = DeletarUsingDELETEWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}} {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param> 
+        /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
+        public ApiResponse< ControleSegurancaDispositivoResponse > DeletarUsingDELETEWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->DeletarUsingDELETE");
+            
+    
+            var localVarPath = "/api/controles-seguranca-dispositivos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarUsingDELETE: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarUsingDELETE: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSegurancaDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSegurancaDispositivoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}} {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
+        /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
+        public async System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> DeletarUsingDELETEAsync (long? id)
+        {
+             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = await DeletarUsingDELETEAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_deletar}}} {{{controle_seguranca_dispositivo_deletar_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{controle_seguranca_dispositivo_resource_param_id}}}</param>
+        /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> DeletarUsingDELETEAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarUsingDELETE");
+            
+    
+            var localVarPath = "/api/controles-seguranca-dispositivos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarUsingDELETE: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarUsingDELETE: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSegurancaDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSegurancaDispositivoResponse)));
             
         }
         
@@ -2315,9 +2537,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse DesativarUsuarioUsingPOST1 (long? id)
+        public UsuarioResponse DesativarUsuarioUsingPOST (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = DesativarUsuarioUsingPOST1WithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = DesativarUsuarioUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2327,12 +2549,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > DesativarUsuarioUsingPOST1WithHttpInfo (long? id)
+        public ApiResponse< UsuarioResponse > DesativarUsuarioUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->DesativarUsuarioUsingPOST1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagusuarioApi->DesativarUsuarioUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/desativar-usuario";
@@ -2378,9 +2600,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2395,9 +2617,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> DesativarUsuarioUsingPOST1Async (long? id)
+        public async System.Threading.Tasks.Task<UsuarioResponse> DesativarUsuarioUsingPOSTAsync (long? id)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await DesativarUsuarioUsingPOST1AsyncWithHttpInfo(id);
+             ApiResponse<UsuarioResponse> localVarResponse = await DesativarUsuarioUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2408,10 +2630,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{usuario_resource_desativar_usuario_param_id}}}</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> DesativarUsuarioUsingPOST1AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> DesativarUsuarioUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarUsuarioUsingPOST1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarUsuarioUsingPOST");
             
     
             var localVarPath = "/api/usuarios/{id}/desativar-usuario";
@@ -2457,9 +2679,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsuarioUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2479,9 +2701,9 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param> 
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param> 
         /// <returns>PageUsuarioResponse</returns>
-        public PageUsuarioResponse ListarUsingGET65 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public PageUsuarioResponse ListarUsingGET56 (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET65WithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = ListarUsingGET56WithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
         }
 
@@ -2497,7 +2719,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param> 
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageUsuarioResponse</returns>
-        public ApiResponse< PageUsuarioResponse > ListarUsingGET65WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public ApiResponse< PageUsuarioResponse > ListarUsingGET56WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -2550,9 +2772,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET65: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET65: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2573,9 +2795,9 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param>
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param>
         /// <returns>Task of PageUsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET65Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<PageUsuarioResponse> ListarUsingGET56Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
-             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET65AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
+             ApiResponse<PageUsuarioResponse> localVarResponse = await ListarUsingGET56AsyncWithHttpInfo(sort, page, limit, nome, cpf, email, status);
              return localVarResponse.Data;
 
         }
@@ -2592,7 +2814,7 @@ namespace Conductor.Pier.Api
         /// <param name="email">{{{usuario_request_email_value}}} (optional)</param>
         /// <param name="status">{{{usuario_request_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageUsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET65AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageUsuarioResponse>> ListarUsingGET56AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string cpf = null, string email = null, string status = null)
         {
             
     
@@ -2645,9 +2867,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET65: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET65: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageUsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2814,184 +3036,14 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param> 
-        /// <returns>ControleSegurancaDispositivoResponse</returns>
-        public ControleSegurancaDispositivoResponse SalvarUsingPOST10 (ControleSegurancaDispositivoPersistencia persist)
-        {
-             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = SalvarUsingPOST10WithHttpInfo(persist);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param> 
-        /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
-        public ApiResponse< ControleSegurancaDispositivoResponse > SalvarUsingPOST10WithHttpInfo (ControleSegurancaDispositivoPersistencia persist)
-        {
-            
-            // verify the required parameter 'persist' is set
-            if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagusuarioApi->SalvarUsingPOST10");
-            
-    
-            var localVarPath = "/api/controles-seguranca-dispositivos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (persist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persist; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleSegurancaDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSegurancaDispositivoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> SalvarUsingPOST10Async (ControleSegurancaDispositivoPersistencia persist)
-        {
-             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = await SalvarUsingPOST10AsyncWithHttpInfo(persist);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> SalvarUsingPOST10AsyncWithHttpInfo (ControleSegurancaDispositivoPersistencia persist)
-        {
-            // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST10");
-            
-    
-            var localVarPath = "/api/controles-seguranca-dispositivos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (persist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persist; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleSegurancaDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSegurancaDispositivoResponse)));
-            
-        }
-        
-        /// <summary>
         /// {{{usuario_resource_salvar}}} {{{usuario_resource_salvar_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>UsuarioResponse</returns>
-        public UsuarioResponse SalvarUsingPOST34 (UsuarioPersistencia persist)
+        public UsuarioResponse SalvarUsingPOST28 (UsuarioPersistencia persist)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = SalvarUsingPOST34WithHttpInfo(persist);
+             ApiResponse<UsuarioResponse> localVarResponse = SalvarUsingPOST28WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -3001,12 +3053,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of UsuarioResponse</returns>
-        public ApiResponse< UsuarioResponse > SalvarUsingPOST34WithHttpInfo (UsuarioPersistencia persist)
+        public ApiResponse< UsuarioResponse > SalvarUsingPOST28WithHttpInfo (UsuarioPersistencia persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagusuarioApi->SalvarUsingPOST34");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagusuarioApi->SalvarUsingPOST28");
             
     
             var localVarPath = "/api/usuarios";
@@ -3058,9 +3110,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3075,9 +3127,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of UsuarioResponse</returns>
-        public async System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST34Async (UsuarioPersistencia persist)
+        public async System.Threading.Tasks.Task<UsuarioResponse> SalvarUsingPOST28Async (UsuarioPersistencia persist)
         {
-             ApiResponse<UsuarioResponse> localVarResponse = await SalvarUsingPOST34AsyncWithHttpInfo(persist);
+             ApiResponse<UsuarioResponse> localVarResponse = await SalvarUsingPOST28AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -3088,10 +3140,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (UsuarioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST34AsyncWithHttpInfo (UsuarioPersistencia persist)
+        public async System.Threading.Tasks.Task<ApiResponse<UsuarioResponse>> SalvarUsingPOST28AsyncWithHttpInfo (UsuarioPersistencia persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST34");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST28");
             
     
             var localVarPath = "/api/usuarios";
@@ -3143,13 +3195,183 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST28: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsuarioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UsuarioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsuarioResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>ControleSegurancaDispositivoResponse</returns>
+        public ControleSegurancaDispositivoResponse SalvarUsingPOST8 (ControleSegurancaDispositivoPersistencia persist)
+        {
+             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = SalvarUsingPOST8WithHttpInfo(persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of ControleSegurancaDispositivoResponse</returns>
+        public ApiResponse< ControleSegurancaDispositivoResponse > SalvarUsingPOST8WithHttpInfo (ControleSegurancaDispositivoPersistencia persist)
+        {
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagusuarioApi->SalvarUsingPOST8");
+            
+    
+            var localVarPath = "/api/controles-seguranca-dispositivos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSegurancaDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSegurancaDispositivoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ControleSegurancaDispositivoResponse</returns>
+        public async System.Threading.Tasks.Task<ControleSegurancaDispositivoResponse> SalvarUsingPOST8Async (ControleSegurancaDispositivoPersistencia persist)
+        {
+             ApiResponse<ControleSegurancaDispositivoResponse> localVarResponse = await SalvarUsingPOST8AsyncWithHttpInfo(persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{controle_seguranca_dispositivo_salvar}}} {{{controle_seguranca_dispositivo_salvar_notas}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (ControleSegurancaDispositivoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleSegurancaDispositivoResponse>> SalvarUsingPOST8AsyncWithHttpInfo (ControleSegurancaDispositivoPersistencia persist)
+        {
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST8");
+            
+    
+            var localVarPath = "/api/controles-seguranca-dispositivos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleSegurancaDispositivoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSegurancaDispositivoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSegurancaDispositivoResponse)));
             
         }
         
@@ -3341,10 +3563,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param> 
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param> 
+        /// <param name="request">request (optional)</param> 
         /// <returns>Object</returns>
-        public Object ValidarSenhaLoginUsingPOST (string login, string senha)
+        public Object ValidarSenhaLoginUsingPOST (string login, string senha, ValidarSenhaLoginRequest request = null)
         {
-             ApiResponse<Object> localVarResponse = ValidarSenhaLoginUsingPOSTWithHttpInfo(login, senha);
+             ApiResponse<Object> localVarResponse = ValidarSenhaLoginUsingPOSTWithHttpInfo(login, senha, request);
              return localVarResponse.Data;
         }
 
@@ -3354,8 +3577,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param> 
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param> 
+        /// <param name="request">request (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha)
+        public ApiResponse< Object > ValidarSenhaLoginUsingPOSTWithHttpInfo (string login, string senha, ValidarSenhaLoginRequest request = null)
         {
             
             // verify the required parameter 'login' is set
@@ -3399,7 +3623,14 @@ namespace Conductor.Pier.Api
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
-            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
 
             
     
@@ -3428,10 +3659,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param>
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param>
+        /// <param name="request">request (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha)
+        public async System.Threading.Tasks.Task<Object> ValidarSenhaLoginUsingPOSTAsync (string login, string senha, ValidarSenhaLoginRequest request = null)
         {
-             ApiResponse<Object> localVarResponse = await ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo(login, senha);
+             ApiResponse<Object> localVarResponse = await ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo(login, senha, request);
              return localVarResponse.Data;
 
         }
@@ -3442,8 +3674,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="login">{{{usuario_resource_validar_senha_login_param_login}}}</param>
         /// <param name="senha">{{{usuario_resource_validar_senha_login_param_senha}}}</param>
+        /// <param name="request">request (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarSenhaLoginUsingPOSTAsyncWithHttpInfo (string login, string senha, ValidarSenhaLoginRequest request = null)
         {
             // verify the required parameter 'login' is set
             if (login == null) throw new ApiException(400, "Missing required parameter 'login' when calling ValidarSenhaLoginUsingPOST");
@@ -3483,7 +3716,14 @@ namespace Conductor.Pier.Api
             if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
-            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
 
             
 

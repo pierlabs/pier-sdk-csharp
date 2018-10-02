@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_emissorpier_response_object_description}}}
+    /// {{{page_parametro_produto_listar_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class PageEmissorPierResponse :  IEquatable<PageEmissorPierResponse>
+    public partial class PageParametroProdutoResponse :  IEquatable<PageParametroProdutoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageEmissorPierResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageEmissorPierResponse" />class.
+        /// Initializes a new instance of the <see cref="PageParametroProdutoResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageParametroProdutoResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageEmissorPierResponse(List<EmissorPierResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageParametroProdutoResponse(List<ParametrosProdutoResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<EmissorPierResponse> Content { get; set; }
+        public List<ParametrosProdutoResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageEmissorPierResponse {\n");
+            sb.Append("class PageParametroProdutoResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageEmissorPierResponse);
+            return this.Equals(obj as PageParametroProdutoResponse);
         }
 
         /// <summary>
-        /// Returns true if PageEmissorPierResponse instances are equal
+        /// Returns true if PageParametroProdutoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageEmissorPierResponse to be compared</param>
+        /// <param name="other">Instance of PageParametroProdutoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageEmissorPierResponse other)
+        public bool Equals(PageParametroProdutoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

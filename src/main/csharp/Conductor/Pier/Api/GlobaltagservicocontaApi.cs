@@ -151,6 +151,32 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of PageOperadoraResponse</returns>
         ApiResponse<PageOperadoraResponse> ListarOperadorasTelefonicasUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>PageTipoServicoResponse</returns>
+        PageTipoServicoResponse ListarTipoServicoUsingGET (List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>ApiResponse of PageTipoServicoResponse</returns>
+        ApiResponse<PageTipoServicoResponse> ListarTipoServicoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -288,6 +314,32 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageOperadoraResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of PageTipoServicoResponse</returns>
+        System.Threading.Tasks.Task<PageTipoServicoResponse> ListarTipoServicoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoServicoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoServicoResponse>> ListarTipoServicoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         #endregion Asynchronous Operations
         
@@ -1234,6 +1286,170 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageOperadoraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageOperadoraResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageOperadoraResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <returns>PageTipoServicoResponse</returns>
+        public PageTipoServicoResponse ListarTipoServicoUsingGET (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageTipoServicoResponse> localVarResponse = ListarTipoServicoUsingGETWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <returns>ApiResponse of PageTipoServicoResponse</returns>
+        public ApiResponse< PageTipoServicoResponse > ListarTipoServicoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/tipos-servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoServicoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoServicoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTipoServicoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoServicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoServicoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of PageTipoServicoResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoServicoResponse> ListarTipoServicoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageTipoServicoResponse> localVarResponse = await ListarTipoServicoUsingGETAsyncWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoServicoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoServicoResponse>> ListarTipoServicoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/tipos-servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoServicoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoServicoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTipoServicoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoServicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoServicoResponse)));
             
         }
         

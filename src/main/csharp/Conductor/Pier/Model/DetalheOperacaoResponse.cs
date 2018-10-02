@@ -41,8 +41,9 @@ namespace Conductor.Pier.Model
         /// <param name="Carencia">{{{detalhe_operacao_response_carencia_value}}}.</param>
         /// <param name="ExcedentePermitido">{{{detalhe_operacao_response_excedente_permitido_value}}}.</param>
         /// <param name="FlagPermitirParcelamento">{{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}.</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">{{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
 
-        public DetalheOperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, string DescricaoOperacao = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, bool? FlagCobraJuros = null, double? TaxaJuros = null, bool? FlagCobraTarifa = null, double? TaxaTarifa = null, double? ValorTac = null, double? PercentualTac = null, double? ValorOperacao = null, int? Carencia = null, double? ExcedentePermitido = null, bool? FlagPermitirParcelamento = null)
+        public DetalheOperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, string DescricaoOperacao = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, bool? FlagCobraJuros = null, double? TaxaJuros = null, bool? FlagCobraTarifa = null, double? TaxaTarifa = null, double? ValorTac = null, double? PercentualTac = null, double? ValorOperacao = null, int? Carencia = null, double? ExcedentePermitido = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null)
         {
             this.IdOperacao = IdOperacao;
             this.CodigoProcessamento = CodigoProcessamento;
@@ -63,6 +64,7 @@ namespace Conductor.Pier.Model
             this.Carencia = Carencia;
             this.ExcedentePermitido = ExcedentePermitido;
             this.FlagPermitirParcelamento = FlagPermitirParcelamento;
+            this.FlagManterTaxaJurosNoRotativo = FlagManterTaxaJurosNoRotativo;
             
         }
         
@@ -201,6 +203,13 @@ namespace Conductor.Pier.Model
         public bool? FlagPermitirParcelamento { get; set; }
     
         /// <summary>
+        /// {{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+        /// </summary>
+        /// <value>{{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
+        public bool? FlagManterTaxaJurosNoRotativo { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -227,6 +236,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Carencia: ").Append(Carencia).Append("\n");
             sb.Append("  ExcedentePermitido: ").Append(ExcedentePermitido).Append("\n");
             sb.Append("  FlagPermitirParcelamento: ").Append(FlagPermitirParcelamento).Append("\n");
+            sb.Append("  FlagManterTaxaJurosNoRotativo: ").Append(FlagManterTaxaJurosNoRotativo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -358,6 +368,11 @@ namespace Conductor.Pier.Model
                     this.FlagPermitirParcelamento == other.FlagPermitirParcelamento ||
                     this.FlagPermitirParcelamento != null &&
                     this.FlagPermitirParcelamento.Equals(other.FlagPermitirParcelamento)
+                ) && 
+                (
+                    this.FlagManterTaxaJurosNoRotativo == other.FlagManterTaxaJurosNoRotativo ||
+                    this.FlagManterTaxaJurosNoRotativo != null &&
+                    this.FlagManterTaxaJurosNoRotativo.Equals(other.FlagManterTaxaJurosNoRotativo)
                 );
         }
 
@@ -429,6 +444,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagPermitirParcelamento != null)
                     hash = hash * 59 + this.FlagPermitirParcelamento.GetHashCode();
+                
+                if (this.FlagManterTaxaJurosNoRotativo != null)
+                    hash = hash * 59 + this.FlagManterTaxaJurosNoRotativo.GetHashCode();
                 
                 return hash;
             }

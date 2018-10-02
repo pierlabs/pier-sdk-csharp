@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param>
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse AlterarUsingPUT9 (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
+        LimiteDisponibilidadeResponse AlterarUsingPUT8 (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
   
         /// <summary>
         /// {{{limite_disponibilidade_resource_alterar}}}
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param>
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> AlterarUsingPUT9WithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
+        ApiResponse<LimiteDisponibilidadeResponse> AlterarUsingPUT8WithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
         
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        LimiteDisponibilidadeResponse ConsultarUsingGET25 (long? idConta);
+        LimiteDisponibilidadeResponse ConsultarUsingGET21 (long? idConta);
   
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET25WithHttpInfo (long? idConta);
+        ApiResponse<LimiteDisponibilidadeResponse> ConsultarUsingGET21WithHttpInfo (long? idConta);
         
         /// <summary>
         /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
@@ -137,7 +137,7 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param>
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarUsingPUT9Async (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarUsingPUT8Async (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
 
         /// <summary>
         /// {{{limite_disponibilidade_resource_alterar}}}
@@ -161,7 +161,7 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param>
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarUsingPUT9AsyncWithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarUsingPUT8AsyncWithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null);
         
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET25Async (long? idConta);
+        System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET21Async (long? idConta);
 
         /// <summary>
         /// {{{limite_disponibilidade_resource_consultar}}}
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? idConta);
+        System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? idConta);
         
         /// <summary>
         /// {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
@@ -320,9 +320,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param> 
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse AlterarUsingPUT9 (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
+        public LimiteDisponibilidadeResponse AlterarUsingPUT8 (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = AlterarUsingPUT9WithHttpInfo(idConta, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = AlterarUsingPUT8WithHttpInfo(idConta, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo);
              return localVarResponse.Data;
         }
 
@@ -345,12 +345,12 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param> 
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > AlterarUsingPUT9WithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
+        public ApiResponse< LimiteDisponibilidadeResponse > AlterarUsingPUT8WithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->AlterarUsingPUT9");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->AlterarUsingPUT8");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -409,9 +409,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -439,9 +439,9 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param>
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarUsingPUT9Async (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> AlterarUsingPUT8Async (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await AlterarUsingPUT9AsyncWithHttpInfo(idConta, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await AlterarUsingPUT8AsyncWithHttpInfo(idConta, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo);
              return localVarResponse.Data;
 
         }
@@ -465,10 +465,10 @@ namespace Conductor.Pier.Api
         /// <param name="limiteInternacionalSaquePeriodo">{{{limite_disponibilidade_persist_limite_internacional_saque_periodo_value}}} (optional)</param>
         /// <param name="limiteMaximo">{{{limite_disponibilidade_persist_limite_maximo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarUsingPUT9AsyncWithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> AlterarUsingPUT8AsyncWithHttpInfo (long? idConta, double? limiteGlobal = null, double? limiteCompra = null, double? limiteParcelado = null, double? limiteParcelas = null, double? limiteSaqueGlobal = null, double? limiteSaquePeriodo = null, double? limiteConsignado = null, double? limiteInternacionalCompra = null, double? limiteInternacionalParcelado = null, double? limiteInternacionalParcelas = null, double? limiteInternacionalSaqueGlobal = null, double? limiteInternacionalSaquePeriodo = null, double? limiteMaximo = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling AlterarUsingPUT9");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling AlterarUsingPUT8");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -527,9 +527,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -543,9 +543,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param> 
         /// <returns>LimiteDisponibilidadeResponse</returns>
-        public LimiteDisponibilidadeResponse ConsultarUsingGET25 (long? idConta)
+        public LimiteDisponibilidadeResponse ConsultarUsingGET21 (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = ConsultarUsingGET21WithHttpInfo(idConta);
              return localVarResponse.Data;
         }
 
@@ -555,12 +555,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param> 
         /// <returns>ApiResponse of LimiteDisponibilidadeResponse</returns>
-        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET25WithHttpInfo (long? idConta)
+        public ApiResponse< LimiteDisponibilidadeResponse > ConsultarUsingGET21WithHttpInfo (long? idConta)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->ConsultarUsingGET25");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltaglimitedisponibilidadeApi->ConsultarUsingGET21");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -606,9 +606,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -623,9 +623,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of LimiteDisponibilidadeResponse</returns>
-        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET25Async (long? idConta)
+        public async System.Threading.Tasks.Task<LimiteDisponibilidadeResponse> ConsultarUsingGET21Async (long? idConta)
         {
-             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(idConta);
+             ApiResponse<LimiteDisponibilidadeResponse> localVarResponse = await ConsultarUsingGET21AsyncWithHttpInfo(idConta);
              return localVarResponse.Data;
 
         }
@@ -636,10 +636,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">{{{limite_disponibilidade_resource_consultar_param_id_conta}}}</param>
         /// <returns>Task of ApiResponse (LimiteDisponibilidadeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET25AsyncWithHttpInfo (long? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<LimiteDisponibilidadeResponse>> ConsultarUsingGET21AsyncWithHttpInfo (long? idConta)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET25");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarUsingGET21");
             
     
             var localVarPath = "/api/limites-disponibilidades";
@@ -685,9 +685,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LimiteDisponibilidadeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

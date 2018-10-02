@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_detalhe_ajuste_lote_response_description}}}
+    /// {{{page_tipo_servico_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class PageDetalheAjusteLoteResponse :  IEquatable<PageDetalheAjusteLoteResponse>
+    public partial class PageTipoServicoResponse :  IEquatable<PageTipoServicoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageDetalheAjusteLoteResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageDetalheAjusteLoteResponse" />class.
+        /// Initializes a new instance of the <see cref="PageTipoServicoResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageTipoServicoResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageDetalheAjusteLoteResponse(List<DetalheAjusteLoteResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageTipoServicoResponse(List<TipoServicoResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<DetalheAjusteLoteResponse> Content { get; set; }
+        public List<TipoServicoResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageDetalheAjusteLoteResponse {\n");
+            sb.Append("class PageTipoServicoResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageDetalheAjusteLoteResponse);
+            return this.Equals(obj as PageTipoServicoResponse);
         }
 
         /// <summary>
-        /// Returns true if PageDetalheAjusteLoteResponse instances are equal
+        /// Returns true if PageTipoServicoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageDetalheAjusteLoteResponse to be compared</param>
+        /// <param name="other">Instance of PageTipoServicoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageDetalheAjusteLoteResponse other)
+        public bool Equals(PageTipoServicoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

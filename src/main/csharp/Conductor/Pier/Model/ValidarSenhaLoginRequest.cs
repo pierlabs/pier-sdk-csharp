@@ -12,57 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_pay_update_description}}}
+    /// {{{validar_senha_login_request_description}}}
     /// </summary>
     [DataContract]
-    public partial class CartaoPayUpdate :  IEquatable<CartaoPayUpdate>
+    public partial class ValidarSenhaLoginRequest :  IEquatable<ValidarSenhaLoginRequest>
     { 
     
         /// <summary>
-        /// {{{cartao_pay_update_status_value}}}
+        /// Initializes a new instance of the <see cref="ValidarSenhaLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="ValidarSenhaLoginRequest" />class.
         /// </summary>
-        /// <value>{{{cartao_pay_update_status_value}}}</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
-            
-            [EnumMember(Value = "ATIVO")]
-            Ativo,
-            
-            [EnumMember(Value = "INATIVO")]
-            Inativo,
-            
-            [EnumMember(Value = "BLOQUEADO")]
-            Bloqueado
-        }
+        /// <param name="IdPlataforma">{{{validar_senha_login_request_id_plataforma_value}}}.</param>
 
-    
-        /// <summary>
-        /// {{{cartao_pay_update_status_value}}}
-        /// </summary>
-        /// <value>{{{cartao_pay_update_status_value}}}</value>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CartaoPayUpdate" /> class.
-        /// Initializes a new instance of the <see cref="CartaoPayUpdate" />class.
-        /// </summary>
-        /// <param name="Status">{{{cartao_pay_update_status_value}}} (required).</param>
-
-        public CartaoPayUpdate(StatusEnum? Status = null)
+        public ValidarSenhaLoginRequest(int? IdPlataforma = null)
         {
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for CartaoPayUpdate and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
+            this.IdPlataforma = IdPlataforma;
             
         }
         
+    
+        /// <summary>
+        /// {{{validar_senha_login_request_id_plataforma_value}}}
+        /// </summary>
+        /// <value>{{{validar_senha_login_request_id_plataforma_value}}}</value>
+        [DataMember(Name="idPlataforma", EmitDefaultValue=false)]
+        public int? IdPlataforma { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,8 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CartaoPayUpdate {\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("class ValidarSenhaLoginRequest {\n");
+            sb.Append("  IdPlataforma: ").Append(IdPlataforma).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -95,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CartaoPayUpdate);
+            return this.Equals(obj as ValidarSenhaLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if CartaoPayUpdate instances are equal
+        /// Returns true if ValidarSenhaLoginRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of CartaoPayUpdate to be compared</param>
+        /// <param name="other">Instance of ValidarSenhaLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CartaoPayUpdate other)
+        public bool Equals(ValidarSenhaLoginRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -111,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
+                    this.IdPlataforma == other.IdPlataforma ||
+                    this.IdPlataforma != null &&
+                    this.IdPlataforma.Equals(other.IdPlataforma)
                 );
         }
 
@@ -129,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
+                if (this.IdPlataforma != null)
+                    hash = hash * 59 + this.IdPlataforma.GetHashCode();
                 
                 return hash;
             }

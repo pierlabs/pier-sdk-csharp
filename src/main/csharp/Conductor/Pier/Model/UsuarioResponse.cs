@@ -55,8 +55,10 @@ namespace Conductor.Pier.Model
         /// <param name="DataModificacao">{{{usuario_response_data_modificacao_value}}}.</param>
         /// <param name="TentativasIncorretas">{{{usuario_response_tentativas_incorretas_value}}}.</param>
         /// <param name="BloquearAcesso">{{{usuario_response_bloquear_acesso_descricao}}}.</param>
+        /// <param name="DataValidade">{{{usuario_response_data_validade_value}}}.</param>
+        /// <param name="IdPlataforma">{{{usuario_response_id_plataforma_value}}}.</param>
 
-        public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, string DataCriacao = null, string DataModificacao = null, long? TentativasIncorretas = null, bool? BloquearAcesso = null)
+        public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, string DataCriacao = null, string DataModificacao = null, long? TentativasIncorretas = null, bool? BloquearAcesso = null, string DataValidade = null, int? IdPlataforma = null)
         {
             // to ensure "Login" is required (not null)
             if (Login == null)
@@ -85,6 +87,8 @@ namespace Conductor.Pier.Model
             this.DataModificacao = DataModificacao;
             this.TentativasIncorretas = TentativasIncorretas;
             this.BloquearAcesso = BloquearAcesso;
+            this.DataValidade = DataValidade;
+            this.IdPlataforma = IdPlataforma;
             
         }
         
@@ -160,6 +164,20 @@ namespace Conductor.Pier.Model
         public bool? BloquearAcesso { get; set; }
     
         /// <summary>
+        /// {{{usuario_response_data_validade_value}}}
+        /// </summary>
+        /// <value>{{{usuario_response_data_validade_value}}}</value>
+        [DataMember(Name="dataValidade", EmitDefaultValue=false)]
+        public string DataValidade { get; set; }
+    
+        /// <summary>
+        /// {{{usuario_response_id_plataforma_value}}}
+        /// </summary>
+        /// <value>{{{usuario_response_id_plataforma_value}}}</value>
+        [DataMember(Name="idPlataforma", EmitDefaultValue=false)]
+        public int? IdPlataforma { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -178,6 +196,8 @@ namespace Conductor.Pier.Model
             sb.Append("  DataModificacao: ").Append(DataModificacao).Append("\n");
             sb.Append("  TentativasIncorretas: ").Append(TentativasIncorretas).Append("\n");
             sb.Append("  BloquearAcesso: ").Append(BloquearAcesso).Append("\n");
+            sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
+            sb.Append("  IdPlataforma: ").Append(IdPlataforma).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -269,6 +289,16 @@ namespace Conductor.Pier.Model
                     this.BloquearAcesso == other.BloquearAcesso ||
                     this.BloquearAcesso != null &&
                     this.BloquearAcesso.Equals(other.BloquearAcesso)
+                ) && 
+                (
+                    this.DataValidade == other.DataValidade ||
+                    this.DataValidade != null &&
+                    this.DataValidade.Equals(other.DataValidade)
+                ) && 
+                (
+                    this.IdPlataforma == other.IdPlataforma ||
+                    this.IdPlataforma != null &&
+                    this.IdPlataforma.Equals(other.IdPlataforma)
                 );
         }
 
@@ -316,6 +346,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.BloquearAcesso != null)
                     hash = hash * 59 + this.BloquearAcesso.GetHashCode();
+                
+                if (this.DataValidade != null)
+                    hash = hash * 59 + this.DataValidade.GetHashCode();
+                
+                if (this.IdPlataforma != null)
+                    hash = hash * 59 + this.IdPlataforma.GetHashCode();
                 
                 return hash;
             }

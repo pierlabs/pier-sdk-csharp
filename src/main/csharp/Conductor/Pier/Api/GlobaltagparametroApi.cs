@@ -13,137 +13,125 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IGlobaltaggrupochagebackApi
+    public interface IGlobaltagparametroApi
     {
         #region Synchronous Operations
         
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}}
+        /// {{{parametro_emissor_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="descricao"> (optional)</param>
-        /// <param name="flagAtm"> (optional)</param>
-        /// <param name="grupoChargebackId2"> (optional)</param>
-        /// <returns>PageCodigoChargebackResponse</returns>
-        PageCodigoChargebackResponse ListarCodigosUsingGET (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
+        /// <returns>ParametroEmissorResponse</returns>
+        ParametroEmissorResponse ConsultarUsingGET25 (string codigo);
   
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}}
+        /// {{{parametro_emissor_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="descricao"> (optional)</param>
-        /// <param name="flagAtm"> (optional)</param>
-        /// <param name="grupoChargebackId2"> (optional)</param>
-        /// <returns>ApiResponse of PageCodigoChargebackResponse</returns>
-        ApiResponse<PageCodigoChargebackResponse> ListarCodigosUsingGETWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
+        /// <returns>ApiResponse of ParametroEmissorResponse</returns>
+        ApiResponse<ParametroEmissorResponse> ConsultarUsingGET25WithHttpInfo (string codigo);
         
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}}
+        /// {{{parametro_produto_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>PageGrupoChargebackResponse</returns>
-        PageGrupoChargebackResponse ListarUsingGET24 (List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <returns>PageParametroProdutoResponse</returns>
+        PageParametroProdutoResponse ListarParametrosProdutoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
   
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}}
+        /// {{{parametro_produto_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        ApiResponse<PageGrupoChargebackResponse> ListarUsingGET24WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <returns>ApiResponse of PageParametroProdutoResponse</returns>
+        ApiResponse<PageParametroProdutoResponse> ListarParametrosProdutoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}}
+        /// {{{parametro_emissor_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="descricao"> (optional)</param>
-        /// <param name="flagAtm"> (optional)</param>
-        /// <param name="grupoChargebackId2"> (optional)</param>
-        /// <returns>Task of PageCodigoChargebackResponse</returns>
-        System.Threading.Tasks.Task<PageCodigoChargebackResponse> ListarCodigosUsingGETAsync (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
+        /// <returns>Task of ParametroEmissorResponse</returns>
+        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET25Async (string codigo);
 
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}}
+        /// {{{parametro_emissor_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="descricao"> (optional)</param>
-        /// <param name="flagAtm"> (optional)</param>
-        /// <param name="grupoChargebackId2"> (optional)</param>
-        /// <returns>Task of ApiResponse (PageCodigoChargebackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCodigoChargebackResponse>> ListarCodigosUsingGETAsyncWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null);
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
+        /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET25AsyncWithHttpInfo (string codigo);
         
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}}
+        /// {{{parametro_produto_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of PageGrupoChargebackResponse</returns>
-        System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET24Async (List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <returns>Task of PageParametroProdutoResponse</returns>
+        System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
 
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}}
+        /// {{{parametro_produto_recurso}}}
         /// </summary>
         /// <remarks>
-        /// {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET24AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageParametroProdutoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
         
         #endregion Asynchronous Operations
         
@@ -152,13 +140,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class GlobaltaggrupochagebackApi : IGlobaltaggrupochagebackApi
+    public class GlobaltagparametroApi : IGlobaltagparametroApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GlobaltaggrupochagebackApi"/> class.
+        /// Initializes a new instance of the <see cref="GlobaltagparametroApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public GlobaltaggrupochagebackApi(String basePath)
+        public GlobaltagparametroApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -170,12 +158,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="GlobaltaggrupochagebackApi"/> class
+        /// Initializes a new instance of the <see cref="GlobaltagparametroApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public GlobaltaggrupochagebackApi(Configuration configuration = null)
+        public GlobaltagparametroApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -238,46 +226,32 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso}}} {{{parametro_emissor_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param> 
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <param name="id"> (optional)</param> 
-        /// <param name="descricao"> (optional)</param> 
-        /// <param name="flagAtm"> (optional)</param> 
-        /// <param name="grupoChargebackId2"> (optional)</param> 
-        /// <returns>PageCodigoChargebackResponse</returns>
-        public PageCodigoChargebackResponse ListarCodigosUsingGET (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param> 
+        /// <returns>ParametroEmissorResponse</returns>
+        public ParametroEmissorResponse ConsultarUsingGET25 (string codigo)
         {
-             ApiResponse<PageCodigoChargebackResponse> localVarResponse = ListarCodigosUsingGETWithHttpInfo(grupoChargebackId, sort, page, limit, id, descricao, flagAtm, grupoChargebackId2);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(codigo);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso}}} {{{parametro_emissor_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param> 
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <param name="id"> (optional)</param> 
-        /// <param name="descricao"> (optional)</param> 
-        /// <param name="flagAtm"> (optional)</param> 
-        /// <param name="grupoChargebackId2"> (optional)</param> 
-        /// <returns>ApiResponse of PageCodigoChargebackResponse</returns>
-        public ApiResponse< PageCodigoChargebackResponse > ListarCodigosUsingGETWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param> 
+        /// <returns>ApiResponse of ParametroEmissorResponse</returns>
+        public ApiResponse< ParametroEmissorResponse > ConsultarUsingGET25WithHttpInfo (string codigo)
         {
             
-            // verify the required parameter 'grupoChargebackId' is set
-            if (grupoChargebackId == null)
-                throw new ApiException(400, "Missing required parameter 'grupoChargebackId' when calling GlobaltaggrupochagebackApi->ListarCodigosUsingGET");
+            // verify the required parameter 'codigo' is set
+            if (codigo == null)
+                throw new ApiException(400, "Missing required parameter 'codigo' when calling GlobaltagparametroApi->ConsultarUsingGET25");
             
     
-            var localVarPath = "/api/grupos-chargeback/{grupoChargebackId}/codigos";
+            var localVarPath = "/api/parametros-emissor/{codigo}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -303,15 +277,8 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (grupoChargebackId != null) localVarPathParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId)); // path parameter
+            if (codigo != null) localVarPathParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // path parameter
             
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
-            if (flagAtm != null) localVarQueryParams.Add("flagAtm", Configuration.ApiClient.ParameterToString(flagAtm)); // query parameter
-            if (grupoChargebackId2 != null) localVarQueryParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId2)); // query parameter
             
             
             
@@ -327,57 +294,43 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageCodigoChargebackResponse>(localVarStatusCode,
+            return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCodigoChargebackResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoChargebackResponse)));
+                (ParametroEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroEmissorResponse)));
             
         }
 
         
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso}}} {{{parametro_emissor_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="descricao"> (optional)</param>
-        /// <param name="flagAtm"> (optional)</param>
-        /// <param name="grupoChargebackId2"> (optional)</param>
-        /// <returns>Task of PageCodigoChargebackResponse</returns>
-        public async System.Threading.Tasks.Task<PageCodigoChargebackResponse> ListarCodigosUsingGETAsync (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
+        /// <returns>Task of ParametroEmissorResponse</returns>
+        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET25Async (string codigo)
         {
-             ApiResponse<PageCodigoChargebackResponse> localVarResponse = await ListarCodigosUsingGETAsyncWithHttpInfo(grupoChargebackId, sort, page, limit, id, descricao, flagAtm, grupoChargebackId2);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(codigo);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// {{{codigo_chargeback_resource_listar}}} {{{codigo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_emissor_recurso}}} {{{parametro_emissor_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="grupoChargebackId">grupoChargebackId</param>
-        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
-        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
-        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id"> (optional)</param>
-        /// <param name="descricao"> (optional)</param>
-        /// <param name="flagAtm"> (optional)</param>
-        /// <param name="grupoChargebackId2"> (optional)</param>
-        /// <returns>Task of ApiResponse (PageCodigoChargebackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoChargebackResponse>> ListarCodigosUsingGETAsyncWithHttpInfo (long? grupoChargebackId, List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagAtm = null, long? grupoChargebackId2 = null)
+        /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
+        /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET25AsyncWithHttpInfo (string codigo)
         {
-            // verify the required parameter 'grupoChargebackId' is set
-            if (grupoChargebackId == null) throw new ApiException(400, "Missing required parameter 'grupoChargebackId' when calling ListarCodigosUsingGET");
+            // verify the required parameter 'codigo' is set
+            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling ConsultarUsingGET25");
             
     
-            var localVarPath = "/api/grupos-chargeback/{grupoChargebackId}/codigos";
+            var localVarPath = "/api/parametros-emissor/{codigo}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -403,15 +356,8 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (grupoChargebackId != null) localVarPathParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId)); // path parameter
+            if (codigo != null) localVarPathParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // path parameter
             
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
-            if (flagAtm != null) localVarQueryParams.Add("flagAtm", Configuration.ApiClient.ParameterToString(flagAtm)); // query parameter
-            if (grupoChargebackId2 != null) localVarQueryParams.Add("grupoChargebackId", Configuration.ApiClient.ParameterToString(grupoChargebackId2)); // query parameter
             
             
             
@@ -427,43 +373,51 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageCodigoChargebackResponse>(localVarStatusCode,
+            return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCodigoChargebackResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoChargebackResponse)));
+                (ParametroEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroEmissorResponse)));
             
         }
         
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}} {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <returns>PageGrupoChargebackResponse</returns>
-        public PageGrupoChargebackResponse ListarUsingGET24 (List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param> 
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param> 
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param> 
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param> 
+        /// <returns>PageParametroProdutoResponse</returns>
+        public PageParametroProdutoResponse ListarParametrosProdutoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = ListarUsingGET24WithHttpInfo(sort, page, limit);
+             ApiResponse<PageParametroProdutoResponse> localVarResponse = ListarParametrosProdutoUsingGETWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}} {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        public ApiResponse< PageGrupoChargebackResponse > ListarUsingGET24WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param> 
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param> 
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param> 
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param> 
+        /// <returns>ApiResponse of PageParametroProdutoResponse</returns>
+        public ApiResponse< PageParametroProdutoResponse > ListarParametrosProdutoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
             
     
-            var localVarPath = "/api/grupos-chargeback";
+            var localVarPath = "/api/parametros-produto";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -493,6 +447,10 @@ namespace Conductor.Pier.Api
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
+            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
+            if (idProduto != null) localVarQueryParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
             
             
             
@@ -508,45 +466,53 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageGrupoChargebackResponse>(localVarStatusCode,
+            return new ApiResponse<PageParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageGrupoChargebackResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageGrupoChargebackResponse)));
+                (PageParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageParametroProdutoResponse)));
             
         }
 
         
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}} {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of PageGrupoChargebackResponse</returns>
-        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET24Async (List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <returns>Task of PageParametroProdutoResponse</returns>
+        public async System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await ListarUsingGET24AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageParametroProdutoResponse> localVarResponse = await ListarParametrosProdutoUsingGETAsyncWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// {{{grupo_chargeback_resource_listar}}} {{{grupo_chargeback_resource_listar_notes}}}
+        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET24AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageParametroProdutoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
             
     
-            var localVarPath = "/api/grupos-chargeback";
+            var localVarPath = "/api/parametros-produto";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -576,6 +542,10 @@ namespace Conductor.Pier.Api
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
+            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
+            if (idProduto != null) localVarQueryParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
             
             
             
@@ -591,13 +561,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageGrupoChargebackResponse>(localVarStatusCode,
+            return new ApiResponse<PageParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageGrupoChargebackResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageGrupoChargebackResponse)));
+                (PageParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageParametroProdutoResponse)));
             
         }
         

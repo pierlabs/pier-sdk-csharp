@@ -33,8 +33,13 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroContaCorrente">{{{pessoa_detalhe_response_numero_conta_corrente_value}}}.</param>
         /// <param name="Email">{{{pessoa_detalhe_response_email_value}}}.</param>
         /// <param name="NomeEmpresa">{{{pessoa_detalhe_response_nome_empresa_value}}}.</param>
+        /// <param name="NomeReferencia1">{{{pessoa_detalhe_response_nome_referencia_1_value}}}.</param>
+        /// <param name="Salario">{{{pessoa_detalhe_response_salario_value}}}.</param>
+        /// <param name="EnderecoReferencia1">{{{pessoa_detalhe_response_endereco_referencia_1_value}}}.</param>
+        /// <param name="NomeReferencia2">{{{pessoa_detalhe_response_nome_referencia_2_value}}}.</param>
+        /// <param name="EnderecoReferencia2">{{{pessoa_detalhe_response_endereco_referencia_2_value}}}.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, double? Salario = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
@@ -47,6 +52,11 @@ namespace Conductor.Pier.Model
             this.NumeroContaCorrente = NumeroContaCorrente;
             this.Email = Email;
             this.NomeEmpresa = NomeEmpresa;
+            this.NomeReferencia1 = NomeReferencia1;
+            this.Salario = Salario;
+            this.EnderecoReferencia1 = EnderecoReferencia1;
+            this.NomeReferencia2 = NomeReferencia2;
+            this.EnderecoReferencia2 = EnderecoReferencia2;
             
         }
         
@@ -129,6 +139,41 @@ namespace Conductor.Pier.Model
         public string NomeEmpresa { get; set; }
     
         /// <summary>
+        /// {{{pessoa_detalhe_response_nome_referencia_1_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_nome_referencia_1_value}}}</value>
+        [DataMember(Name="nomeReferencia1", EmitDefaultValue=false)]
+        public string NomeReferencia1 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_salario_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_salario_value}}}</value>
+        [DataMember(Name="salario", EmitDefaultValue=false)]
+        public double? Salario { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_endereco_referencia_1_value}}}</value>
+        [DataMember(Name="enderecoReferencia1", EmitDefaultValue=false)]
+        public string EnderecoReferencia1 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_nome_referencia_2_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_nome_referencia_2_value}}}</value>
+        [DataMember(Name="nomeReferencia2", EmitDefaultValue=false)]
+        public string NomeReferencia2 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_endereco_referencia_2_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_endereco_referencia_2_value}}}</value>
+        [DataMember(Name="enderecoReferencia2", EmitDefaultValue=false)]
+        public string EnderecoReferencia2 { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -147,6 +192,11 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroContaCorrente: ").Append(NumeroContaCorrente).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  NomeEmpresa: ").Append(NomeEmpresa).Append("\n");
+            sb.Append("  NomeReferencia1: ").Append(NomeReferencia1).Append("\n");
+            sb.Append("  Salario: ").Append(Salario).Append("\n");
+            sb.Append("  EnderecoReferencia1: ").Append(EnderecoReferencia1).Append("\n");
+            sb.Append("  NomeReferencia2: ").Append(NomeReferencia2).Append("\n");
+            sb.Append("  EnderecoReferencia2: ").Append(EnderecoReferencia2).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -238,6 +288,31 @@ namespace Conductor.Pier.Model
                     this.NomeEmpresa == other.NomeEmpresa ||
                     this.NomeEmpresa != null &&
                     this.NomeEmpresa.Equals(other.NomeEmpresa)
+                ) && 
+                (
+                    this.NomeReferencia1 == other.NomeReferencia1 ||
+                    this.NomeReferencia1 != null &&
+                    this.NomeReferencia1.Equals(other.NomeReferencia1)
+                ) && 
+                (
+                    this.Salario == other.Salario ||
+                    this.Salario != null &&
+                    this.Salario.Equals(other.Salario)
+                ) && 
+                (
+                    this.EnderecoReferencia1 == other.EnderecoReferencia1 ||
+                    this.EnderecoReferencia1 != null &&
+                    this.EnderecoReferencia1.Equals(other.EnderecoReferencia1)
+                ) && 
+                (
+                    this.NomeReferencia2 == other.NomeReferencia2 ||
+                    this.NomeReferencia2 != null &&
+                    this.NomeReferencia2.Equals(other.NomeReferencia2)
+                ) && 
+                (
+                    this.EnderecoReferencia2 == other.EnderecoReferencia2 ||
+                    this.EnderecoReferencia2 != null &&
+                    this.EnderecoReferencia2.Equals(other.EnderecoReferencia2)
                 );
         }
 
@@ -285,6 +360,21 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeEmpresa != null)
                     hash = hash * 59 + this.NomeEmpresa.GetHashCode();
+                
+                if (this.NomeReferencia1 != null)
+                    hash = hash * 59 + this.NomeReferencia1.GetHashCode();
+                
+                if (this.Salario != null)
+                    hash = hash * 59 + this.Salario.GetHashCode();
+                
+                if (this.EnderecoReferencia1 != null)
+                    hash = hash * 59 + this.EnderecoReferencia1.GetHashCode();
+                
+                if (this.NomeReferencia2 != null)
+                    hash = hash * 59 + this.NomeReferencia2.GetHashCode();
+                
+                if (this.EnderecoReferencia2 != null)
+                    hash = hash * 59 + this.EnderecoReferencia2.GetHashCode();
                 
                 return hash;
             }

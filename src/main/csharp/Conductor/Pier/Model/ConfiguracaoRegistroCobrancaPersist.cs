@@ -59,8 +59,9 @@ namespace Conductor.Pier.Model
         /// <param name="Status">{{{configuracao_registro_cobranca_persist_status_value}}} (required).</param>
         /// <param name="Secret">{{{configuracao_registro_cobranca_persist_secret_value}}}.</param>
         /// <param name="ClientID">{{{configuracao_registro_cobranca_persist_client_id_value}}}.</param>
+        /// <param name="Chave">{{{configuracao_registro_cobranca_persist_chave_value}}}.</param>
 
-        public ConfiguracaoRegistroCobrancaPersist(long? CodigoBanco = null, string Uri = null, string KeyStoreName = null, string KeyStorePassword = null, string KeystoreAlias = null, string KeyStorePrivateKeyPassword = null, string TypeKeystore = null, string TrustStoreName = null, string TrustStorePassword = null, string TruststoreAlias = null, string TypeTruststore = null, string UriAdicional = null, StatusEnum? Status = null, string Secret = null, string ClientID = null)
+        public ConfiguracaoRegistroCobrancaPersist(long? CodigoBanco = null, string Uri = null, string KeyStoreName = null, string KeyStorePassword = null, string KeystoreAlias = null, string KeyStorePrivateKeyPassword = null, string TypeKeystore = null, string TrustStoreName = null, string TrustStorePassword = null, string TruststoreAlias = null, string TypeTruststore = null, string UriAdicional = null, StatusEnum? Status = null, string Secret = null, string ClientID = null, string Chave = null)
         {
             // to ensure "CodigoBanco" is required (not null)
             if (CodigoBanco == null)
@@ -93,6 +94,7 @@ namespace Conductor.Pier.Model
             this.UriAdicional = UriAdicional;
             this.Secret = Secret;
             this.ClientID = ClientID;
+            this.Chave = Chave;
             
         }
         
@@ -196,6 +198,13 @@ namespace Conductor.Pier.Model
         public string ClientID { get; set; }
     
         /// <summary>
+        /// {{{configuracao_registro_cobranca_persist_chave_value}}}
+        /// </summary>
+        /// <value>{{{configuracao_registro_cobranca_persist_chave_value}}}</value>
+        [DataMember(Name="chave", EmitDefaultValue=false)]
+        public string Chave { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -218,6 +227,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Secret: ").Append(Secret).Append("\n");
             sb.Append("  ClientID: ").Append(ClientID).Append("\n");
+            sb.Append("  Chave: ").Append(Chave).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -329,6 +339,11 @@ namespace Conductor.Pier.Model
                     this.ClientID == other.ClientID ||
                     this.ClientID != null &&
                     this.ClientID.Equals(other.ClientID)
+                ) && 
+                (
+                    this.Chave == other.Chave ||
+                    this.Chave != null &&
+                    this.Chave.Equals(other.Chave)
                 );
         }
 
@@ -388,6 +403,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ClientID != null)
                     hash = hash * 59 + this.ClientID.GetHashCode();
+                
+                if (this.Chave != null)
+                    hash = hash * 59 + this.Chave.GetHashCode();
                 
                 return hash;
             }

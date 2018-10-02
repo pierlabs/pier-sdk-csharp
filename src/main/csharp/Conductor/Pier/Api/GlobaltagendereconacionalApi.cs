@@ -25,8 +25,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param>
-        /// <returns>EnderecoResponse</returns>
-        EnderecoResponse ConsultarEnderecoUsingGET (string CEP);
+        /// <returns>EnderecoNacionalResponse</returns>
+        EnderecoNacionalResponse ConsultarEnderecoUsingGET (string CEP);
   
         /// <summary>
         /// {{{c_e_p_endereco_resource_consultar_endereco}}}
@@ -36,8 +36,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param>
-        /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> ConsultarEnderecoUsingGETWithHttpInfo (string CEP);
+        /// <returns>ApiResponse of EnderecoNacionalResponse</returns>
+        ApiResponse<EnderecoNacionalResponse> ConsultarEnderecoUsingGETWithHttpInfo (string CEP);
         
         #endregion Synchronous Operations
         
@@ -51,8 +51,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param>
-        /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> ConsultarEnderecoUsingGETAsync (string CEP);
+        /// <returns>Task of EnderecoNacionalResponse</returns>
+        System.Threading.Tasks.Task<EnderecoNacionalResponse> ConsultarEnderecoUsingGETAsync (string CEP);
 
         /// <summary>
         /// {{{c_e_p_endereco_resource_consultar_endereco}}}
@@ -62,8 +62,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param>
-        /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> ConsultarEnderecoUsingGETAsyncWithHttpInfo (string CEP);
+        /// <returns>Task of ApiResponse (EnderecoNacionalResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EnderecoNacionalResponse>> ConsultarEnderecoUsingGETAsyncWithHttpInfo (string CEP);
         
         #endregion Asynchronous Operations
         
@@ -162,10 +162,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param> 
-        /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse ConsultarEnderecoUsingGET (string CEP)
+        /// <returns>EnderecoNacionalResponse</returns>
+        public EnderecoNacionalResponse ConsultarEnderecoUsingGET (string CEP)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = ConsultarEnderecoUsingGETWithHttpInfo(CEP);
+             ApiResponse<EnderecoNacionalResponse> localVarResponse = ConsultarEnderecoUsingGETWithHttpInfo(CEP);
              return localVarResponse.Data;
         }
 
@@ -174,8 +174,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param> 
-        /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > ConsultarEnderecoUsingGETWithHttpInfo (string CEP)
+        /// <returns>ApiResponse of EnderecoNacionalResponse</returns>
+        public ApiResponse< EnderecoNacionalResponse > ConsultarEnderecoUsingGETWithHttpInfo (string CEP)
         {
             
             // verify the required parameter 'CEP' is set
@@ -230,9 +230,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarEnderecoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<EnderecoResponse>(localVarStatusCode,
+            return new ApiResponse<EnderecoNacionalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
+                (EnderecoNacionalResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoNacionalResponse)));
             
         }
 
@@ -242,10 +242,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param>
-        /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> ConsultarEnderecoUsingGETAsync (string CEP)
+        /// <returns>Task of EnderecoNacionalResponse</returns>
+        public async System.Threading.Tasks.Task<EnderecoNacionalResponse> ConsultarEnderecoUsingGETAsync (string CEP)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = await ConsultarEnderecoUsingGETAsyncWithHttpInfo(CEP);
+             ApiResponse<EnderecoNacionalResponse> localVarResponse = await ConsultarEnderecoUsingGETAsyncWithHttpInfo(CEP);
              return localVarResponse.Data;
 
         }
@@ -255,8 +255,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="CEP">CEP</param>
-        /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> ConsultarEnderecoUsingGETAsyncWithHttpInfo (string CEP)
+        /// <returns>Task of ApiResponse (EnderecoNacionalResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoNacionalResponse>> ConsultarEnderecoUsingGETAsyncWithHttpInfo (string CEP)
         {
             // verify the required parameter 'CEP' is set
             if (CEP == null) throw new ApiException(400, "Missing required parameter 'CEP' when calling ConsultarEnderecoUsingGET");
@@ -309,9 +309,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConsultarEnderecoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EnderecoResponse>(localVarStatusCode,
+            return new ApiResponse<EnderecoNacionalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
+                (EnderecoNacionalResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoNacionalResponse)));
             
         }
         

@@ -30,8 +30,9 @@ namespace Conductor.Pier.Model
         /// <param name="FlagCobraTarifa">{{{operacao_response_flag_cobra_tarifa_value}}}.</param>
         /// <param name="Carencia">{{{operacao_response_carencia_value}}}.</param>
         /// <param name="FlagPermitirParcelamento">{{{operacao_response_flag_permitir_parcelamento_value}}}.</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
 
-        public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null)
+        public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null)
         {
             this.IdOperacao = IdOperacao;
             this.CodigoProcessamento = CodigoProcessamento;
@@ -41,6 +42,7 @@ namespace Conductor.Pier.Model
             this.FlagCobraTarifa = FlagCobraTarifa;
             this.Carencia = Carencia;
             this.FlagPermitirParcelamento = FlagPermitirParcelamento;
+            this.FlagManterTaxaJurosNoRotativo = FlagManterTaxaJurosNoRotativo;
             
         }
         
@@ -102,6 +104,13 @@ namespace Conductor.Pier.Model
         public bool? FlagPermitirParcelamento { get; set; }
     
         /// <summary>
+        /// {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+        /// </summary>
+        /// <value>{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
+        public bool? FlagManterTaxaJurosNoRotativo { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -117,6 +126,7 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagCobraTarifa: ").Append(FlagCobraTarifa).Append("\n");
             sb.Append("  Carencia: ").Append(Carencia).Append("\n");
             sb.Append("  FlagPermitirParcelamento: ").Append(FlagPermitirParcelamento).Append("\n");
+            sb.Append("  FlagManterTaxaJurosNoRotativo: ").Append(FlagManterTaxaJurosNoRotativo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -193,6 +203,11 @@ namespace Conductor.Pier.Model
                     this.FlagPermitirParcelamento == other.FlagPermitirParcelamento ||
                     this.FlagPermitirParcelamento != null &&
                     this.FlagPermitirParcelamento.Equals(other.FlagPermitirParcelamento)
+                ) && 
+                (
+                    this.FlagManterTaxaJurosNoRotativo == other.FlagManterTaxaJurosNoRotativo ||
+                    this.FlagManterTaxaJurosNoRotativo != null &&
+                    this.FlagManterTaxaJurosNoRotativo.Equals(other.FlagManterTaxaJurosNoRotativo)
                 );
         }
 
@@ -231,6 +246,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagPermitirParcelamento != null)
                     hash = hash * 59 + this.FlagPermitirParcelamento.GetHashCode();
+                
+                if (this.FlagManterTaxaJurosNoRotativo != null)
+                    hash = hash * 59 + this.FlagManterTaxaJurosNoRotativo.GetHashCode();
                 
                 return hash;
             }

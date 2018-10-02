@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_cartao_pay_response_description}}}
+    /// {{{plano_parcelamentos_acordo_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class PageCartaoPayResponse :  IEquatable<PageCartaoPayResponse>
+    public partial class PlanoParcelamentosAcordoResponseValue :  IEquatable<PlanoParcelamentosAcordoResponseValue>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageCartaoPayResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageCartaoPayResponse" />class.
+        /// Initializes a new instance of the <see cref="PlanoParcelamentosAcordoResponseValue" /> class.
+        /// Initializes a new instance of the <see cref="PlanoParcelamentosAcordoResponseValue" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageCartaoPayResponse(List<CartaoPayResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PlanoParcelamentosAcordoResponseValue(List<ParcelamentoAcordoResponseValue> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<CartaoPayResponse> Content { get; set; }
+        public List<ParcelamentoAcordoResponseValue> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageCartaoPayResponse {\n");
+            sb.Append("class PlanoParcelamentosAcordoResponseValue {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageCartaoPayResponse);
+            return this.Equals(obj as PlanoParcelamentosAcordoResponseValue);
         }
 
         /// <summary>
-        /// Returns true if PageCartaoPayResponse instances are equal
+        /// Returns true if PlanoParcelamentosAcordoResponseValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageCartaoPayResponse to be compared</param>
+        /// <param name="other">Instance of PlanoParcelamentosAcordoResponseValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageCartaoPayResponse other)
+        public bool Equals(PlanoParcelamentosAcordoResponseValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

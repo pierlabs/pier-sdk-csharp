@@ -81,18 +81,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>PageGrupoChargebackResponse</returns>
-        PageGrupoChargebackResponse ListarUsingGET13 (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        PageGrupoChargebackResponse ListarUsingGET11 (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
   
         /// <summary>
         /// {{{cartao_com_compra_contestada_resource_listar}}}
@@ -110,18 +114,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        ApiResponse<PageGrupoChargebackResponse> ListarUsingGET13WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        ApiResponse<PageGrupoChargebackResponse> ListarUsingGET11WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
         
         /// <summary>
         /// {{{compra_contestada_transacoes_resource_listar}}}
@@ -140,18 +148,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>PageGrupoChargebackResponse</returns>
-        PageGrupoChargebackResponse TransacaoUsingGET (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        PageGrupoChargebackResponse TransacaoUsingGET (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
   
         /// <summary>
         /// {{{compra_contestada_transacoes_resource_listar}}}
@@ -170,18 +182,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        ApiResponse<PageGrupoChargebackResponse> TransacaoUsingGETWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        ApiResponse<PageGrupoChargebackResponse> TransacaoUsingGETWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
         
         #endregion Synchronous Operations
         
@@ -251,18 +267,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of PageGrupoChargebackResponse</returns>
-        System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET13Async (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET11Async (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
 
         /// <summary>
         /// {{{cartao_com_compra_contestada_resource_listar}}}
@@ -280,18 +300,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET13AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET11AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
         
         /// <summary>
         /// {{{compra_contestada_transacoes_resource_listar}}}
@@ -310,18 +334,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of PageGrupoChargebackResponse</returns>
-        System.Threading.Tasks.Task<PageGrupoChargebackResponse> TransacaoUsingGETAsync (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        System.Threading.Tasks.Task<PageGrupoChargebackResponse> TransacaoUsingGETAsync (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
 
         /// <summary>
         /// {{{compra_contestada_transacoes_resource_listar}}}
@@ -340,18 +368,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> TransacaoUsingGETAsyncWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
+        System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> TransacaoUsingGETAsyncWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null);
         
         #endregion Asynchronous Operations
         
@@ -802,20 +834,24 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param> 
         /// <param name="cpf"> (optional)</param> 
         /// <param name="conta"> (optional)</param> 
+        /// <param name="autorizacao"> (optional)</param> 
         /// <param name="statusCartao"> (optional)</param> 
         /// <param name="statusContestacao"> (optional)</param> 
-        /// <param name="dataContestacao"> (optional)</param> 
-        /// <param name="dataAlteracao"> (optional)</param> 
-        /// <param name="dataReapresentacao"> (optional)</param> 
+        /// <param name="dataContestacaoInicio"> (optional)</param> 
+        /// <param name="dataContestacaoFim"> (optional)</param> 
+        /// <param name="dataAlteracaoInicio"> (optional)</param> 
+        /// <param name="dataAlteracaoFim"> (optional)</param> 
+        /// <param name="dataReapresentacaoInicio"> (optional)</param> 
+        /// <param name="dataReapresentacaoFim"> (optional)</param> 
         /// <param name="diasContestacao"> (optional)</param> 
         /// <param name="diasCompra"> (optional)</param> 
         /// <param name="modoEntrada"> (optional)</param> 
         /// <param name="motivo"> (optional)</param> 
         /// <param name="valorCompra"> (optional)</param> 
         /// <returns>PageGrupoChargebackResponse</returns>
-        public PageGrupoChargebackResponse ListarUsingGET13 (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public PageGrupoChargebackResponse ListarUsingGET11 (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = ListarUsingGET13WithHttpInfo(sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, statusCartao, statusContestacao, dataContestacao, dataAlteracao, dataReapresentacao, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
+             ApiResponse<PageGrupoChargebackResponse> localVarResponse = ListarUsingGET11WithHttpInfo(sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, autorizacao, statusCartao, statusContestacao, dataContestacaoInicio, dataContestacaoFim, dataAlteracaoInicio, dataAlteracaoFim, dataReapresentacaoInicio, dataReapresentacaoFim, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
              return localVarResponse.Data;
         }
 
@@ -832,18 +868,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param> 
         /// <param name="cpf"> (optional)</param> 
         /// <param name="conta"> (optional)</param> 
+        /// <param name="autorizacao"> (optional)</param> 
         /// <param name="statusCartao"> (optional)</param> 
         /// <param name="statusContestacao"> (optional)</param> 
-        /// <param name="dataContestacao"> (optional)</param> 
-        /// <param name="dataAlteracao"> (optional)</param> 
-        /// <param name="dataReapresentacao"> (optional)</param> 
+        /// <param name="dataContestacaoInicio"> (optional)</param> 
+        /// <param name="dataContestacaoFim"> (optional)</param> 
+        /// <param name="dataAlteracaoInicio"> (optional)</param> 
+        /// <param name="dataAlteracaoFim"> (optional)</param> 
+        /// <param name="dataReapresentacaoInicio"> (optional)</param> 
+        /// <param name="dataReapresentacaoFim"> (optional)</param> 
         /// <param name="diasContestacao"> (optional)</param> 
         /// <param name="diasCompra"> (optional)</param> 
         /// <param name="modoEntrada"> (optional)</param> 
         /// <param name="motivo"> (optional)</param> 
         /// <param name="valorCompra"> (optional)</param> 
         /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        public ApiResponse< PageGrupoChargebackResponse > ListarUsingGET13WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public ApiResponse< PageGrupoChargebackResponse > ListarUsingGET11WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
             
     
@@ -883,11 +923,15 @@ namespace Conductor.Pier.Api
             if (cartao != null) localVarQueryParams.Add("cartao", Configuration.ApiClient.ParameterToString(cartao)); // query parameter
             if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
             if (conta != null) localVarQueryParams.Add("conta", Configuration.ApiClient.ParameterToString(conta)); // query parameter
+            if (autorizacao != null) localVarQueryParams.Add("autorizacao", Configuration.ApiClient.ParameterToString(autorizacao)); // query parameter
             if (statusCartao != null) localVarQueryParams.Add("statusCartao", Configuration.ApiClient.ParameterToString(statusCartao)); // query parameter
             if (statusContestacao != null) localVarQueryParams.Add("statusContestacao", Configuration.ApiClient.ParameterToString(statusContestacao)); // query parameter
-            if (dataContestacao != null) localVarQueryParams.Add("dataContestacao", Configuration.ApiClient.ParameterToString(dataContestacao)); // query parameter
-            if (dataAlteracao != null) localVarQueryParams.Add("dataAlteracao", Configuration.ApiClient.ParameterToString(dataAlteracao)); // query parameter
-            if (dataReapresentacao != null) localVarQueryParams.Add("dataReapresentacao", Configuration.ApiClient.ParameterToString(dataReapresentacao)); // query parameter
+            if (dataContestacaoInicio != null) localVarQueryParams.Add("dataContestacaoInicio", Configuration.ApiClient.ParameterToString(dataContestacaoInicio)); // query parameter
+            if (dataContestacaoFim != null) localVarQueryParams.Add("dataContestacaoFim", Configuration.ApiClient.ParameterToString(dataContestacaoFim)); // query parameter
+            if (dataAlteracaoInicio != null) localVarQueryParams.Add("dataAlteracaoInicio", Configuration.ApiClient.ParameterToString(dataAlteracaoInicio)); // query parameter
+            if (dataAlteracaoFim != null) localVarQueryParams.Add("dataAlteracaoFim", Configuration.ApiClient.ParameterToString(dataAlteracaoFim)); // query parameter
+            if (dataReapresentacaoInicio != null) localVarQueryParams.Add("dataReapresentacaoInicio", Configuration.ApiClient.ParameterToString(dataReapresentacaoInicio)); // query parameter
+            if (dataReapresentacaoFim != null) localVarQueryParams.Add("dataReapresentacaoFim", Configuration.ApiClient.ParameterToString(dataReapresentacaoFim)); // query parameter
             if (diasContestacao != null) localVarQueryParams.Add("diasContestacao", Configuration.ApiClient.ParameterToString(diasContestacao)); // query parameter
             if (diasCompra != null) localVarQueryParams.Add("diasCompra", Configuration.ApiClient.ParameterToString(diasCompra)); // query parameter
             if (modoEntrada != null) localVarQueryParams.Add("modoEntrada", Configuration.ApiClient.ParameterToString(modoEntrada)); // query parameter
@@ -908,9 +952,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageGrupoChargebackResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -932,20 +976,24 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of PageGrupoChargebackResponse</returns>
-        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET13Async (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> ListarUsingGET11Async (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await ListarUsingGET13AsyncWithHttpInfo(sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, statusCartao, statusContestacao, dataContestacao, dataAlteracao, dataReapresentacao, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
+             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await ListarUsingGET11AsyncWithHttpInfo(sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, autorizacao, statusCartao, statusContestacao, dataContestacaoInicio, dataContestacaoFim, dataAlteracaoInicio, dataAlteracaoFim, dataReapresentacaoInicio, dataReapresentacaoFim, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
              return localVarResponse.Data;
 
         }
@@ -963,18 +1011,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET13AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> ListarUsingGET11AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
             
     
@@ -1014,11 +1066,15 @@ namespace Conductor.Pier.Api
             if (cartao != null) localVarQueryParams.Add("cartao", Configuration.ApiClient.ParameterToString(cartao)); // query parameter
             if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
             if (conta != null) localVarQueryParams.Add("conta", Configuration.ApiClient.ParameterToString(conta)); // query parameter
+            if (autorizacao != null) localVarQueryParams.Add("autorizacao", Configuration.ApiClient.ParameterToString(autorizacao)); // query parameter
             if (statusCartao != null) localVarQueryParams.Add("statusCartao", Configuration.ApiClient.ParameterToString(statusCartao)); // query parameter
             if (statusContestacao != null) localVarQueryParams.Add("statusContestacao", Configuration.ApiClient.ParameterToString(statusContestacao)); // query parameter
-            if (dataContestacao != null) localVarQueryParams.Add("dataContestacao", Configuration.ApiClient.ParameterToString(dataContestacao)); // query parameter
-            if (dataAlteracao != null) localVarQueryParams.Add("dataAlteracao", Configuration.ApiClient.ParameterToString(dataAlteracao)); // query parameter
-            if (dataReapresentacao != null) localVarQueryParams.Add("dataReapresentacao", Configuration.ApiClient.ParameterToString(dataReapresentacao)); // query parameter
+            if (dataContestacaoInicio != null) localVarQueryParams.Add("dataContestacaoInicio", Configuration.ApiClient.ParameterToString(dataContestacaoInicio)); // query parameter
+            if (dataContestacaoFim != null) localVarQueryParams.Add("dataContestacaoFim", Configuration.ApiClient.ParameterToString(dataContestacaoFim)); // query parameter
+            if (dataAlteracaoInicio != null) localVarQueryParams.Add("dataAlteracaoInicio", Configuration.ApiClient.ParameterToString(dataAlteracaoInicio)); // query parameter
+            if (dataAlteracaoFim != null) localVarQueryParams.Add("dataAlteracaoFim", Configuration.ApiClient.ParameterToString(dataAlteracaoFim)); // query parameter
+            if (dataReapresentacaoInicio != null) localVarQueryParams.Add("dataReapresentacaoInicio", Configuration.ApiClient.ParameterToString(dataReapresentacaoInicio)); // query parameter
+            if (dataReapresentacaoFim != null) localVarQueryParams.Add("dataReapresentacaoFim", Configuration.ApiClient.ParameterToString(dataReapresentacaoFim)); // query parameter
             if (diasContestacao != null) localVarQueryParams.Add("diasContestacao", Configuration.ApiClient.ParameterToString(diasContestacao)); // query parameter
             if (diasCompra != null) localVarQueryParams.Add("diasCompra", Configuration.ApiClient.ParameterToString(diasCompra)); // query parameter
             if (modoEntrada != null) localVarQueryParams.Add("modoEntrada", Configuration.ApiClient.ParameterToString(modoEntrada)); // query parameter
@@ -1039,9 +1095,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET13: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET11: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageGrupoChargebackResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1063,20 +1119,24 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param> 
         /// <param name="cpf"> (optional)</param> 
         /// <param name="conta"> (optional)</param> 
+        /// <param name="autorizacao"> (optional)</param> 
         /// <param name="statusCartao"> (optional)</param> 
         /// <param name="statusContestacao"> (optional)</param> 
-        /// <param name="dataContestacao"> (optional)</param> 
-        /// <param name="dataAlteracao"> (optional)</param> 
-        /// <param name="dataReapresentacao"> (optional)</param> 
+        /// <param name="dataContestacaoInicio"> (optional)</param> 
+        /// <param name="dataContestacaoFim"> (optional)</param> 
+        /// <param name="dataAlteracaoInicio"> (optional)</param> 
+        /// <param name="dataAlteracaoFim"> (optional)</param> 
+        /// <param name="dataReapresentacaoInicio"> (optional)</param> 
+        /// <param name="dataReapresentacaoFim"> (optional)</param> 
         /// <param name="diasContestacao"> (optional)</param> 
         /// <param name="diasCompra"> (optional)</param> 
         /// <param name="modoEntrada"> (optional)</param> 
         /// <param name="motivo"> (optional)</param> 
         /// <param name="valorCompra"> (optional)</param> 
         /// <returns>PageGrupoChargebackResponse</returns>
-        public PageGrupoChargebackResponse TransacaoUsingGET (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public PageGrupoChargebackResponse TransacaoUsingGET (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = TransacaoUsingGETWithHttpInfo(idCartao, sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, statusCartao, statusContestacao, dataContestacao, dataAlteracao, dataReapresentacao, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
+             ApiResponse<PageGrupoChargebackResponse> localVarResponse = TransacaoUsingGETWithHttpInfo(idCartao, sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, autorizacao, statusCartao, statusContestacao, dataContestacaoInicio, dataContestacaoFim, dataAlteracaoInicio, dataAlteracaoFim, dataReapresentacaoInicio, dataReapresentacaoFim, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
              return localVarResponse.Data;
         }
 
@@ -1094,18 +1154,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param> 
         /// <param name="cpf"> (optional)</param> 
         /// <param name="conta"> (optional)</param> 
+        /// <param name="autorizacao"> (optional)</param> 
         /// <param name="statusCartao"> (optional)</param> 
         /// <param name="statusContestacao"> (optional)</param> 
-        /// <param name="dataContestacao"> (optional)</param> 
-        /// <param name="dataAlteracao"> (optional)</param> 
-        /// <param name="dataReapresentacao"> (optional)</param> 
+        /// <param name="dataContestacaoInicio"> (optional)</param> 
+        /// <param name="dataContestacaoFim"> (optional)</param> 
+        /// <param name="dataAlteracaoInicio"> (optional)</param> 
+        /// <param name="dataAlteracaoFim"> (optional)</param> 
+        /// <param name="dataReapresentacaoInicio"> (optional)</param> 
+        /// <param name="dataReapresentacaoFim"> (optional)</param> 
         /// <param name="diasContestacao"> (optional)</param> 
         /// <param name="diasCompra"> (optional)</param> 
         /// <param name="modoEntrada"> (optional)</param> 
         /// <param name="motivo"> (optional)</param> 
         /// <param name="valorCompra"> (optional)</param> 
         /// <returns>ApiResponse of PageGrupoChargebackResponse</returns>
-        public ApiResponse< PageGrupoChargebackResponse > TransacaoUsingGETWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public ApiResponse< PageGrupoChargebackResponse > TransacaoUsingGETWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
             
             // verify the required parameter 'idCartao' is set
@@ -1150,11 +1214,15 @@ namespace Conductor.Pier.Api
             if (cartao != null) localVarQueryParams.Add("cartao", Configuration.ApiClient.ParameterToString(cartao)); // query parameter
             if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
             if (conta != null) localVarQueryParams.Add("conta", Configuration.ApiClient.ParameterToString(conta)); // query parameter
+            if (autorizacao != null) localVarQueryParams.Add("autorizacao", Configuration.ApiClient.ParameterToString(autorizacao)); // query parameter
             if (statusCartao != null) localVarQueryParams.Add("statusCartao", Configuration.ApiClient.ParameterToString(statusCartao)); // query parameter
             if (statusContestacao != null) localVarQueryParams.Add("statusContestacao", Configuration.ApiClient.ParameterToString(statusContestacao)); // query parameter
-            if (dataContestacao != null) localVarQueryParams.Add("dataContestacao", Configuration.ApiClient.ParameterToString(dataContestacao)); // query parameter
-            if (dataAlteracao != null) localVarQueryParams.Add("dataAlteracao", Configuration.ApiClient.ParameterToString(dataAlteracao)); // query parameter
-            if (dataReapresentacao != null) localVarQueryParams.Add("dataReapresentacao", Configuration.ApiClient.ParameterToString(dataReapresentacao)); // query parameter
+            if (dataContestacaoInicio != null) localVarQueryParams.Add("dataContestacaoInicio", Configuration.ApiClient.ParameterToString(dataContestacaoInicio)); // query parameter
+            if (dataContestacaoFim != null) localVarQueryParams.Add("dataContestacaoFim", Configuration.ApiClient.ParameterToString(dataContestacaoFim)); // query parameter
+            if (dataAlteracaoInicio != null) localVarQueryParams.Add("dataAlteracaoInicio", Configuration.ApiClient.ParameterToString(dataAlteracaoInicio)); // query parameter
+            if (dataAlteracaoFim != null) localVarQueryParams.Add("dataAlteracaoFim", Configuration.ApiClient.ParameterToString(dataAlteracaoFim)); // query parameter
+            if (dataReapresentacaoInicio != null) localVarQueryParams.Add("dataReapresentacaoInicio", Configuration.ApiClient.ParameterToString(dataReapresentacaoInicio)); // query parameter
+            if (dataReapresentacaoFim != null) localVarQueryParams.Add("dataReapresentacaoFim", Configuration.ApiClient.ParameterToString(dataReapresentacaoFim)); // query parameter
             if (diasContestacao != null) localVarQueryParams.Add("diasContestacao", Configuration.ApiClient.ParameterToString(diasContestacao)); // query parameter
             if (diasCompra != null) localVarQueryParams.Add("diasCompra", Configuration.ApiClient.ParameterToString(diasCompra)); // query parameter
             if (modoEntrada != null) localVarQueryParams.Add("modoEntrada", Configuration.ApiClient.ParameterToString(modoEntrada)); // query parameter
@@ -1200,20 +1268,24 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of PageGrupoChargebackResponse</returns>
-        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> TransacaoUsingGETAsync (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public async System.Threading.Tasks.Task<PageGrupoChargebackResponse> TransacaoUsingGETAsync (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
-             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await TransacaoUsingGETAsyncWithHttpInfo(idCartao, sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, statusCartao, statusContestacao, dataContestacao, dataAlteracao, dataReapresentacao, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
+             ApiResponse<PageGrupoChargebackResponse> localVarResponse = await TransacaoUsingGETAsyncWithHttpInfo(idCartao, sort, page, limit, agingContestacao, nome, bandeira, cartao, cpf, conta, autorizacao, statusCartao, statusContestacao, dataContestacaoInicio, dataContestacaoFim, dataAlteracaoInicio, dataAlteracaoFim, dataReapresentacaoInicio, dataReapresentacaoFim, diasContestacao, diasCompra, modoEntrada, motivo, valorCompra);
              return localVarResponse.Data;
 
         }
@@ -1232,18 +1304,22 @@ namespace Conductor.Pier.Api
         /// <param name="cartao"> (optional)</param>
         /// <param name="cpf"> (optional)</param>
         /// <param name="conta"> (optional)</param>
+        /// <param name="autorizacao"> (optional)</param>
         /// <param name="statusCartao"> (optional)</param>
         /// <param name="statusContestacao"> (optional)</param>
-        /// <param name="dataContestacao"> (optional)</param>
-        /// <param name="dataAlteracao"> (optional)</param>
-        /// <param name="dataReapresentacao"> (optional)</param>
+        /// <param name="dataContestacaoInicio"> (optional)</param>
+        /// <param name="dataContestacaoFim"> (optional)</param>
+        /// <param name="dataAlteracaoInicio"> (optional)</param>
+        /// <param name="dataAlteracaoFim"> (optional)</param>
+        /// <param name="dataReapresentacaoInicio"> (optional)</param>
+        /// <param name="dataReapresentacaoFim"> (optional)</param>
         /// <param name="diasContestacao"> (optional)</param>
         /// <param name="diasCompra"> (optional)</param>
         /// <param name="modoEntrada"> (optional)</param>
         /// <param name="motivo"> (optional)</param>
         /// <param name="valorCompra"> (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoChargebackResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> TransacaoUsingGETAsyncWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacao = null, string dataAlteracao = null, string dataReapresentacao = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageGrupoChargebackResponse>> TransacaoUsingGETAsyncWithHttpInfo (long? idCartao, List<string> sort = null, int? page = null, int? limit = null, long? agingContestacao = null, string nome = null, string bandeira = null, string cartao = null, string cpf = null, string conta = null, string autorizacao = null, long? statusCartao = null, long? statusContestacao = null, string dataContestacaoInicio = null, string dataContestacaoFim = null, string dataAlteracaoInicio = null, string dataAlteracaoFim = null, string dataReapresentacaoInicio = null, string dataReapresentacaoFim = null, long? diasContestacao = null, long? diasCompra = null, string modoEntrada = null, string motivo = null, double? valorCompra = null)
         {
             // verify the required parameter 'idCartao' is set
             if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling TransacaoUsingGET");
@@ -1286,11 +1362,15 @@ namespace Conductor.Pier.Api
             if (cartao != null) localVarQueryParams.Add("cartao", Configuration.ApiClient.ParameterToString(cartao)); // query parameter
             if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
             if (conta != null) localVarQueryParams.Add("conta", Configuration.ApiClient.ParameterToString(conta)); // query parameter
+            if (autorizacao != null) localVarQueryParams.Add("autorizacao", Configuration.ApiClient.ParameterToString(autorizacao)); // query parameter
             if (statusCartao != null) localVarQueryParams.Add("statusCartao", Configuration.ApiClient.ParameterToString(statusCartao)); // query parameter
             if (statusContestacao != null) localVarQueryParams.Add("statusContestacao", Configuration.ApiClient.ParameterToString(statusContestacao)); // query parameter
-            if (dataContestacao != null) localVarQueryParams.Add("dataContestacao", Configuration.ApiClient.ParameterToString(dataContestacao)); // query parameter
-            if (dataAlteracao != null) localVarQueryParams.Add("dataAlteracao", Configuration.ApiClient.ParameterToString(dataAlteracao)); // query parameter
-            if (dataReapresentacao != null) localVarQueryParams.Add("dataReapresentacao", Configuration.ApiClient.ParameterToString(dataReapresentacao)); // query parameter
+            if (dataContestacaoInicio != null) localVarQueryParams.Add("dataContestacaoInicio", Configuration.ApiClient.ParameterToString(dataContestacaoInicio)); // query parameter
+            if (dataContestacaoFim != null) localVarQueryParams.Add("dataContestacaoFim", Configuration.ApiClient.ParameterToString(dataContestacaoFim)); // query parameter
+            if (dataAlteracaoInicio != null) localVarQueryParams.Add("dataAlteracaoInicio", Configuration.ApiClient.ParameterToString(dataAlteracaoInicio)); // query parameter
+            if (dataAlteracaoFim != null) localVarQueryParams.Add("dataAlteracaoFim", Configuration.ApiClient.ParameterToString(dataAlteracaoFim)); // query parameter
+            if (dataReapresentacaoInicio != null) localVarQueryParams.Add("dataReapresentacaoInicio", Configuration.ApiClient.ParameterToString(dataReapresentacaoInicio)); // query parameter
+            if (dataReapresentacaoFim != null) localVarQueryParams.Add("dataReapresentacaoFim", Configuration.ApiClient.ParameterToString(dataReapresentacaoFim)); // query parameter
             if (diasContestacao != null) localVarQueryParams.Add("diasContestacao", Configuration.ApiClient.ParameterToString(diasContestacao)); // query parameter
             if (diasCompra != null) localVarQueryParams.Add("diasCompra", Configuration.ApiClient.ParameterToString(diasCompra)); // query parameter
             if (modoEntrada != null) localVarQueryParams.Add("modoEntrada", Configuration.ApiClient.ParameterToString(modoEntrada)); // query parameter

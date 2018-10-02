@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>ContaBancariaPortadorResponse</returns>
-        ContaBancariaPortadorResponse AtualizarUsingPUT2 (long? id, ContaBancariaPortadorUpdateValue update);
+        ContaBancariaPortadorResponse AtualizarUsingPUT1 (long? id, ContaBancariaPortadorUpdateValue update);
   
         /// <summary>
         /// {{{conta_bancaria_resource_atualizar}}}
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        ApiResponse<ContaBancariaPortadorResponse> AtualizarUsingPUT2WithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update);
+        ApiResponse<ContaBancariaPortadorResponse> AtualizarUsingPUT1WithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
@@ -164,7 +164,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>ContaBancariaPortadorResponse</returns>
-        ContaBancariaPortadorResponse ConsultarUsingGET15 (long? id);
+        ContaBancariaPortadorResponse ConsultarUsingGET12 (long? id);
   
         /// <summary>
         /// {{{conta_bancaria_resource_consultar}}}
@@ -175,7 +175,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        ApiResponse<ContaBancariaPortadorResponse> ConsultarUsingGET15WithHttpInfo (long? id);
+        ApiResponse<ContaBancariaPortadorResponse> ConsultarUsingGET12WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -188,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>TransferenciaBancariaResponse</returns>
-        TransferenciaBancariaResponse ConsultarUsingGET50 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        TransferenciaBancariaResponse ConsultarUsingGET44 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
   
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET50WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET44WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
@@ -258,7 +258,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageContaBancariaPortadorResponse</returns>
-        PageContaBancariaPortadorResponse ListarUsingGET17 (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageContaBancariaPortadorResponse ListarUsingGET15 (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{conta_bancaria_resource_listar}}}
@@ -281,7 +281,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageContaBancariaPortadorResponse</returns>
-        ApiResponse<PageContaBancariaPortadorResponse> ListarUsingGET17WithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageContaBancariaPortadorResponse> ListarUsingGET15WithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar}}}
@@ -296,7 +296,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        PageTransferenciaBancariaResponse ListarUsingGET62 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        PageTransferenciaBancariaResponse ListarUsingGET54 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar}}}
@@ -311,7 +311,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET62WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTransferenciaBancariaResponse> ListarUsingGET54WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
@@ -346,7 +346,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ContaBancariaPortadorResponse</returns>
-        ContaBancariaPortadorResponse SalvarUsingPOST8 (ContaBancariaPortadorPersistValue persist);
+        ContaBancariaPortadorResponse SalvarUsingPOST6 (ContaBancariaPortadorPersistValue persist);
   
         /// <summary>
         /// {{{conta_bancaria_resource_salvar}}}
@@ -357,7 +357,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        ApiResponse<ContaBancariaPortadorResponse> SalvarUsingPOST8WithHttpInfo (ContaBancariaPortadorPersistValue persist);
+        ApiResponse<ContaBancariaPortadorResponse> SalvarUsingPOST6WithHttpInfo (ContaBancariaPortadorPersistValue persist);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
@@ -465,7 +465,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> AtualizarUsingPUT2Async (long? id, ContaBancariaPortadorUpdateValue update);
+        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> AtualizarUsingPUT1Async (long? id, ContaBancariaPortadorUpdateValue update);
 
         /// <summary>
         /// {{{conta_bancaria_resource_atualizar}}}
@@ -477,7 +477,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> AtualizarUsingPUT2AsyncWithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update);
+        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
@@ -578,7 +578,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET15Async (long? id);
+        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET12Async (long? id);
 
         /// <summary>
         /// {{{conta_bancaria_resource_consultar}}}
@@ -589,7 +589,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -602,7 +602,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET50Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET44Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
 
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -615,7 +615,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET50AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
@@ -672,7 +672,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET17Async (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET15Async (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{conta_bancaria_resource_listar}}}
@@ -695,7 +695,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET17AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET15AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar}}}
@@ -710,7 +710,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET62Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET54Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar}}}
@@ -725,7 +725,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET62AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET54AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
@@ -760,7 +760,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> SalvarUsingPOST8Async (ContaBancariaPortadorPersistValue persist);
+        System.Threading.Tasks.Task<ContaBancariaPortadorResponse> SalvarUsingPOST6Async (ContaBancariaPortadorPersistValue persist);
 
         /// <summary>
         /// {{{conta_bancaria_resource_salvar}}}
@@ -771,7 +771,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> SalvarUsingPOST8AsyncWithHttpInfo (ContaBancariaPortadorPersistValue persist);
+        System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> SalvarUsingPOST6AsyncWithHttpInfo (ContaBancariaPortadorPersistValue persist);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
@@ -1122,9 +1122,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ContaBancariaPortadorResponse</returns>
-        public ContaBancariaPortadorResponse AtualizarUsingPUT2 (long? id, ContaBancariaPortadorUpdateValue update)
+        public ContaBancariaPortadorResponse AtualizarUsingPUT1 (long? id, ContaBancariaPortadorUpdateValue update)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = AtualizarUsingPUT2WithHttpInfo(id, update);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = AtualizarUsingPUT1WithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -1135,16 +1135,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        public ApiResponse< ContaBancariaPortadorResponse > AtualizarUsingPUT2WithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update)
+        public ApiResponse< ContaBancariaPortadorResponse > AtualizarUsingPUT1WithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->AtualizarUsingPUT2");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->AtualizarUsingPUT1");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagtransferenciabancariaApi->AtualizarUsingPUT2");
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagtransferenciabancariaApi->AtualizarUsingPUT1");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -1197,9 +1197,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1215,9 +1215,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> AtualizarUsingPUT2Async (long? id, ContaBancariaPortadorUpdateValue update)
+        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> AtualizarUsingPUT1Async (long? id, ContaBancariaPortadorUpdateValue update)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await AtualizarUsingPUT2AsyncWithHttpInfo(id, update);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await AtualizarUsingPUT1AsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -1229,12 +1229,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{conta_bancaria_resource_atualizar_param_id}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> AtualizarUsingPUT2AsyncWithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> AtualizarUsingPUT1AsyncWithHttpInfo (long? id, ContaBancariaPortadorUpdateValue update)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT2");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarUsingPUT1");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarUsingPUT2");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarUsingPUT1");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -1287,9 +1287,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarUsingPUT1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1947,9 +1947,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>ContaBancariaPortadorResponse</returns>
-        public ContaBancariaPortadorResponse ConsultarUsingGET15 (long? id)
+        public ContaBancariaPortadorResponse ConsultarUsingGET12 (long? id)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = ConsultarUsingGET15WithHttpInfo(id);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = ConsultarUsingGET12WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1959,12 +1959,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        public ApiResponse< ContaBancariaPortadorResponse > ConsultarUsingGET15WithHttpInfo (long? id)
+        public ApiResponse< ContaBancariaPortadorResponse > ConsultarUsingGET12WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET15");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET12");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -2010,9 +2010,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2027,9 +2027,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET15Async (long? id)
+        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> ConsultarUsingGET12Async (long? id)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await ConsultarUsingGET15AsyncWithHttpInfo(id);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await ConsultarUsingGET12AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2040,10 +2040,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> ConsultarUsingGET12AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET15");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET12");
             
     
             var localVarPath = "/api/contas-bancarias-portador/{id}";
@@ -2089,9 +2089,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2107,9 +2107,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param> 
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param> 
         /// <returns>TransferenciaBancariaResponse</returns>
-        public TransferenciaBancariaResponse ConsultarUsingGET50 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public TransferenciaBancariaResponse ConsultarUsingGET44 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET50WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET44WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
         }
 
@@ -2121,16 +2121,16 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param> 
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param> 
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET50WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET44WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET50");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET44");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET50");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET44");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -2178,9 +2178,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2197,9 +2197,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET50Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET44Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET50AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET44AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
 
         }
@@ -2212,12 +2212,12 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET50AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET44AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET50");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET44");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET50");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET44");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -2265,9 +2265,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET44: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2481,9 +2481,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageContaBancariaPortadorResponse</returns>
-        public PageContaBancariaPortadorResponse ListarUsingGET17 (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageContaBancariaPortadorResponse ListarUsingGET15 (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = ListarUsingGET17WithHttpInfo(idConta, nomeAgencia, banco, numeroAgencia, numeroConta, flagAtivo, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
+             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = ListarUsingGET15WithHttpInfo(idConta, nomeAgencia, banco, numeroAgencia, numeroConta, flagAtivo, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2505,7 +2505,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageContaBancariaPortadorResponse</returns>
-        public ApiResponse< PageContaBancariaPortadorResponse > ListarUsingGET17WithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageContaBancariaPortadorResponse > ListarUsingGET15WithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2564,9 +2564,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2593,9 +2593,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET17Async (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageContaBancariaPortadorResponse> ListarUsingGET15Async (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = await ListarUsingGET17AsyncWithHttpInfo(idConta, nomeAgencia, banco, numeroAgencia, numeroConta, flagAtivo, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
+             ApiResponse<PageContaBancariaPortadorResponse> localVarResponse = await ListarUsingGET15AsyncWithHttpInfo(idConta, nomeAgencia, banco, numeroAgencia, numeroConta, flagAtivo, flagContaOrigemDoc, idPessoaFisica, favorecido, numeroReceiraFederal, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2618,7 +2618,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET17AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaBancariaPortadorResponse>> ListarUsingGET15AsyncWithHttpInfo (long? idConta = null, string nomeAgencia = null, long? banco = null, string numeroAgencia = null, string numeroConta = null, int? flagAtivo = null, int? flagContaOrigemDoc = null, long? idPessoaFisica = null, string favorecido = null, string numeroReceiraFederal = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2677,9 +2677,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET17: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2697,9 +2697,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageTransferenciaBancariaResponse</returns>
-        public PageTransferenciaBancariaResponse ListarUsingGET62 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public PageTransferenciaBancariaResponse ListarUsingGET54 (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET62WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = ListarUsingGET54WithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2713,12 +2713,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaBancariaResponse</returns>
-        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET62WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTransferenciaBancariaResponse > ListarUsingGET54WithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ListarUsingGET62");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ListarUsingGET54");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -2768,9 +2768,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2789,9 +2789,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageTransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET62Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaBancariaResponse> ListarUsingGET54Async (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET62AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
+             ApiResponse<PageTransferenciaBancariaResponse> localVarResponse = await ListarUsingGET54AsyncWithHttpInfo(id, idContaBancariaDestino, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2806,10 +2806,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET62AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaBancariaResponse>> ListarUsingGET54AsyncWithHttpInfo (long? id, long? idContaBancariaDestino = null, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET62");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET54");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias";
@@ -2859,9 +2859,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3057,9 +3057,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ContaBancariaPortadorResponse</returns>
-        public ContaBancariaPortadorResponse SalvarUsingPOST8 (ContaBancariaPortadorPersistValue persist)
+        public ContaBancariaPortadorResponse SalvarUsingPOST6 (ContaBancariaPortadorPersistValue persist)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = SalvarUsingPOST8WithHttpInfo(persist);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = SalvarUsingPOST6WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -3069,12 +3069,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of ContaBancariaPortadorResponse</returns>
-        public ApiResponse< ContaBancariaPortadorResponse > SalvarUsingPOST8WithHttpInfo (ContaBancariaPortadorPersistValue persist)
+        public ApiResponse< ContaBancariaPortadorResponse > SalvarUsingPOST6WithHttpInfo (ContaBancariaPortadorPersistValue persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagtransferenciabancariaApi->SalvarUsingPOST8");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagtransferenciabancariaApi->SalvarUsingPOST6");
             
     
             var localVarPath = "/api/contas-bancarias-portador";
@@ -3126,9 +3126,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3143,9 +3143,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ContaBancariaPortadorResponse</returns>
-        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> SalvarUsingPOST8Async (ContaBancariaPortadorPersistValue persist)
+        public async System.Threading.Tasks.Task<ContaBancariaPortadorResponse> SalvarUsingPOST6Async (ContaBancariaPortadorPersistValue persist)
         {
-             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await SalvarUsingPOST8AsyncWithHttpInfo(persist);
+             ApiResponse<ContaBancariaPortadorResponse> localVarResponse = await SalvarUsingPOST6AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -3156,10 +3156,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (ContaBancariaPortadorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> SalvarUsingPOST8AsyncWithHttpInfo (ContaBancariaPortadorPersistValue persist)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaBancariaPortadorResponse>> SalvarUsingPOST6AsyncWithHttpInfo (ContaBancariaPortadorPersistValue persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST8");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST6");
             
     
             var localVarPath = "/api/contas-bancarias-portador";
@@ -3211,9 +3211,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST6: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaBancariaPortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

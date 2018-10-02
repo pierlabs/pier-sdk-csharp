@@ -57,8 +57,9 @@ namespace Conductor.Pier.Model
         /// <param name="ValorPagamentoMinimo">{{{fatura_response_valor_pagamento_minimo_value}}}.</param>
         /// <param name="LancamentosFaturaResponse">{{{fatura_detalhe_response_lancamentos_fatura_response_value}}}.</param>
         /// <param name="SaldoAnterior">{{{fatura_response_saldo_anterior_value}}}.</param>
+        /// <param name="IdBoleto">{{{fatura_response_id_boleto_value}}}.</param>
 
-        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null)
+        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null, long? IdBoleto = null)
         {
             this.IdConta = IdConta;
             this.SituacaoProcessamento = SituacaoProcessamento;
@@ -70,6 +71,7 @@ namespace Conductor.Pier.Model
             this.ValorPagamentoMinimo = ValorPagamentoMinimo;
             this.LancamentosFaturaResponse = LancamentosFaturaResponse;
             this.SaldoAnterior = SaldoAnterior;
+            this.IdBoleto = IdBoleto;
             
         }
         
@@ -138,6 +140,13 @@ namespace Conductor.Pier.Model
         public double? SaldoAnterior { get; set; }
     
         /// <summary>
+        /// {{{fatura_response_id_boleto_value}}}
+        /// </summary>
+        /// <value>{{{fatura_response_id_boleto_value}}}</value>
+        [DataMember(Name="idBoleto", EmitDefaultValue=false)]
+        public long? IdBoleto { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -155,6 +164,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorPagamentoMinimo: ").Append(ValorPagamentoMinimo).Append("\n");
             sb.Append("  LancamentosFaturaResponse: ").Append(LancamentosFaturaResponse).Append("\n");
             sb.Append("  SaldoAnterior: ").Append(SaldoAnterior).Append("\n");
+            sb.Append("  IdBoleto: ").Append(IdBoleto).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -241,6 +251,11 @@ namespace Conductor.Pier.Model
                     this.SaldoAnterior == other.SaldoAnterior ||
                     this.SaldoAnterior != null &&
                     this.SaldoAnterior.Equals(other.SaldoAnterior)
+                ) && 
+                (
+                    this.IdBoleto == other.IdBoleto ||
+                    this.IdBoleto != null &&
+                    this.IdBoleto.Equals(other.IdBoleto)
                 );
         }
 
@@ -285,6 +300,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.SaldoAnterior != null)
                     hash = hash * 59 + this.SaldoAnterior.GetHashCode();
+                
+                if (this.IdBoleto != null)
+                    hash = hash * 59 + this.IdBoleto.GetHashCode();
                 
                 return hash;
             }

@@ -24,15 +24,17 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="NumeroCartao">{{{compra_contestada_cartao_detalhe_response_numero_cartao_value}}}.</param>
         /// <param name="Portador">{{{compra_contestada_cartao_detalhe_response_portador_value}}}.</param>
+        /// <param name="IdConta">{{{compra_contestada_cartao_detalhe_response_id_conta_value}}}.</param>
         /// <param name="NomePlastico">{{{compra_contestada_cartao_detalhe_response_nome_plastico_value}}}.</param>
         /// <param name="DataValidade">{{{compra_contestada_cartao_detalhe_response_data_validade_value}}}.</param>
         /// <param name="StatusCartao">{{{compra_contestada_cartao_detalhe_response_status_cartao_value}}}.</param>
         /// <param name="StatusCartaoDescricao">{{{compra_contestada_cartao_detalhe_response_status_cartao_descricao_value}}}.</param>
 
-        public CompraContestadaCartaoDetalheResponse(string NumeroCartao = null, string Portador = null, string NomePlastico = null, DateTime? DataValidade = null, string StatusCartao = null, string StatusCartaoDescricao = null)
+        public CompraContestadaCartaoDetalheResponse(string NumeroCartao = null, string Portador = null, long? IdConta = null, string NomePlastico = null, DateTime? DataValidade = null, string StatusCartao = null, string StatusCartaoDescricao = null)
         {
             this.NumeroCartao = NumeroCartao;
             this.Portador = Portador;
+            this.IdConta = IdConta;
             this.NomePlastico = NomePlastico;
             this.DataValidade = DataValidade;
             this.StatusCartao = StatusCartao;
@@ -54,6 +56,13 @@ namespace Conductor.Pier.Model
         /// <value>{{{compra_contestada_cartao_detalhe_response_portador_value}}}</value>
         [DataMember(Name="portador", EmitDefaultValue=false)]
         public string Portador { get; set; }
+    
+        /// <summary>
+        /// {{{compra_contestada_cartao_detalhe_response_id_conta_value}}}
+        /// </summary>
+        /// <value>{{{compra_contestada_cartao_detalhe_response_id_conta_value}}}</value>
+        [DataMember(Name="idConta", EmitDefaultValue=false)]
+        public long? IdConta { get; set; }
     
         /// <summary>
         /// {{{compra_contestada_cartao_detalhe_response_nome_plastico_value}}}
@@ -93,6 +102,7 @@ namespace Conductor.Pier.Model
             sb.Append("class CompraContestadaCartaoDetalheResponse {\n");
             sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
             sb.Append("  Portador: ").Append(Portador).Append("\n");
+            sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  NomePlastico: ").Append(NomePlastico).Append("\n");
             sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
             sb.Append("  StatusCartao: ").Append(StatusCartao).Append("\n");
@@ -145,6 +155,11 @@ namespace Conductor.Pier.Model
                     this.Portador.Equals(other.Portador)
                 ) && 
                 (
+                    this.IdConta == other.IdConta ||
+                    this.IdConta != null &&
+                    this.IdConta.Equals(other.IdConta)
+                ) && 
+                (
                     this.NomePlastico == other.NomePlastico ||
                     this.NomePlastico != null &&
                     this.NomePlastico.Equals(other.NomePlastico)
@@ -183,6 +198,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Portador != null)
                     hash = hash * 59 + this.Portador.GetHashCode();
+                
+                if (this.IdConta != null)
+                    hash = hash * 59 + this.IdConta.GetHashCode();
                 
                 if (this.NomePlastico != null)
                     hash = hash * 59 + this.NomePlastico.GetHashCode();

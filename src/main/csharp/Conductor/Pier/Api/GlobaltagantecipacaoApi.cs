@@ -133,7 +133,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param>
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param>
         /// <returns>PageCompraResponse</returns>
-        PageCompraResponse ListarUsingGET14 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        PageCompraResponse ListarUsingGET12 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
   
         /// <summary>
         /// {{{compra_antecipavel_resource_listar}}}
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param>
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param>
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        ApiResponse<PageCompraResponse> ListarUsingGET14WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        ApiResponse<PageCompraResponse> ListarUsingGET12WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
         /// {{{compra_antecipavel_resource_simular_antecipacao}}}
@@ -323,7 +323,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param>
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET14Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET12Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
 
         /// <summary>
         /// {{{compra_antecipavel_resource_listar}}}
@@ -341,7 +341,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param>
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET14AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET12AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
         /// {{{compra_antecipavel_resource_simular_antecipacao}}}
@@ -1202,9 +1202,9 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param> 
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param> 
         /// <returns>PageCompraResponse</returns>
-        public PageCompraResponse ListarUsingGET14 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public PageCompraResponse ListarUsingGET12 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = ListarUsingGET14WithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = ListarUsingGET12WithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
         }
 
@@ -1221,12 +1221,12 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param> 
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        public ApiResponse< PageCompraResponse > ListarUsingGET14WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public ApiResponse< PageCompraResponse > ListarUsingGET12WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltagantecipacaoApi->ListarUsingGET14");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling GlobaltagantecipacaoApi->ListarUsingGET12");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1279,9 +1279,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1303,9 +1303,9 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param>
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        public async System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET14Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<PageCompraResponse> ListarUsingGET12Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = await ListarUsingGET14AsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = await ListarUsingGET12AsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
 
         }
@@ -1323,10 +1323,10 @@ namespace Conductor.Pier.Api
         /// <param name="juros">{{{compra_d_t_o_juros_value}}} (optional)</param>
         /// <param name="tipoOrigemTransacao">{{{compra_d_t_o_tipo_origem_transacao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET14AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarUsingGET12AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET14");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarUsingGET12");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1379,9 +1379,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET12: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

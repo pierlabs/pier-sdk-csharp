@@ -12,39 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_pay_key_update_description}}}
+    /// {{{tipo_operacao_persist_description}}}
     /// </summary>
     [DataContract]
-    public partial class CartaoPayKeyUpdate :  IEquatable<CartaoPayKeyUpdate>
+    public partial class TipoOperacaoParcialUpdate :  IEquatable<TipoOperacaoParcialUpdate>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="CartaoPayKeyUpdate" /> class.
-        /// Initializes a new instance of the <see cref="CartaoPayKeyUpdate" />class.
+        /// Initializes a new instance of the <see cref="TipoOperacaoParcialUpdate" /> class.
+        /// Initializes a new instance of the <see cref="TipoOperacaoParcialUpdate" />class.
         /// </summary>
-        /// <param name="ChaveCriptograma">{{{cartao_pay_key_update_chave_criptograma_value}}} (required).</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
 
-        public CartaoPayKeyUpdate(string ChaveCriptograma = null)
+        public TipoOperacaoParcialUpdate(bool? FlagManterTaxaJurosNoRotativo = null)
         {
-            // to ensure "ChaveCriptograma" is required (not null)
-            if (ChaveCriptograma == null)
-            {
-                throw new InvalidDataException("ChaveCriptograma is a required property for CartaoPayKeyUpdate and cannot be null");
-            }
-            else
-            {
-                this.ChaveCriptograma = ChaveCriptograma;
-            }
+            this.FlagManterTaxaJurosNoRotativo = FlagManterTaxaJurosNoRotativo;
             
         }
         
     
         /// <summary>
-        /// {{{cartao_pay_key_update_chave_criptograma_value}}}
+        /// {{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}
         /// </summary>
-        /// <value>{{{cartao_pay_key_update_chave_criptograma_value}}}</value>
-        [DataMember(Name="chaveCriptograma", EmitDefaultValue=false)]
-        public string ChaveCriptograma { get; set; }
+        /// <value>{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
+        public bool? FlagManterTaxaJurosNoRotativo { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CartaoPayKeyUpdate {\n");
-            sb.Append("  ChaveCriptograma: ").Append(ChaveCriptograma).Append("\n");
+            sb.Append("class TipoOperacaoParcialUpdate {\n");
+            sb.Append("  FlagManterTaxaJurosNoRotativo: ").Append(FlagManterTaxaJurosNoRotativo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -77,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CartaoPayKeyUpdate);
+            return this.Equals(obj as TipoOperacaoParcialUpdate);
         }
 
         /// <summary>
-        /// Returns true if CartaoPayKeyUpdate instances are equal
+        /// Returns true if TipoOperacaoParcialUpdate instances are equal
         /// </summary>
-        /// <param name="other">Instance of CartaoPayKeyUpdate to be compared</param>
+        /// <param name="other">Instance of TipoOperacaoParcialUpdate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CartaoPayKeyUpdate other)
+        public bool Equals(TipoOperacaoParcialUpdate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,9 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.ChaveCriptograma == other.ChaveCriptograma ||
-                    this.ChaveCriptograma != null &&
-                    this.ChaveCriptograma.Equals(other.ChaveCriptograma)
+                    this.FlagManterTaxaJurosNoRotativo == other.FlagManterTaxaJurosNoRotativo ||
+                    this.FlagManterTaxaJurosNoRotativo != null &&
+                    this.FlagManterTaxaJurosNoRotativo.Equals(other.FlagManterTaxaJurosNoRotativo)
                 );
         }
 
@@ -111,8 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.ChaveCriptograma != null)
-                    hash = hash * 59 + this.ChaveCriptograma.GetHashCode();
+                if (this.FlagManterTaxaJurosNoRotativo != null)
+                    hash = hash * 59 + this.FlagManterTaxaJurosNoRotativo.GetHashCode();
                 
                 return hash;
             }

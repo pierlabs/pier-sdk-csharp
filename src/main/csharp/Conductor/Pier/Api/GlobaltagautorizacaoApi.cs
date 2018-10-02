@@ -178,6 +178,26 @@ namespace Conductor.Pier.Api
         ApiResponse<List<Object>> ListarCodigosProcessamentoAutorizacaoUsingGETWithHttpInfo ();
         
         /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;Object&gt;</returns>
+        List<Object> ListarTiposEventosTransacoesUsingGET ();
+  
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        ApiResponse<List<Object>> ListarTiposEventosTransacoesUsingGETWithHttpInfo ();
+        
+        /// <summary>
         /// {{{transacao_on_us_resource_simular}}}
         /// </summary>
         /// <remarks>
@@ -362,6 +382,26 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoUsingGETAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        System.Threading.Tasks.Task<List<Object>> ListarTiposEventosTransacoesUsingGETAsync ();
+
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposEventosTransacoesUsingGETAsyncWithHttpInfo ();
         
         /// <summary>
         /// {{{transacao_on_us_resource_simular}}}
@@ -1684,6 +1724,152 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacaoUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacaoUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)));
+            
+        }
+        
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}} {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;Object&gt;</returns>
+        public List<Object> ListarTiposEventosTransacoesUsingGET ()
+        {
+             ApiResponse<List<Object>> localVarResponse = ListarTiposEventosTransacoesUsingGETWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}} {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        public ApiResponse< List<Object> > ListarTiposEventosTransacoesUsingGETWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/tipos-eventos-transacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEventosTransacoesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEventosTransacoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}} {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Object>> ListarTiposEventosTransacoesUsingGETAsync ()
+        {
+             ApiResponse<List<Object>> localVarResponse = await ListarTiposEventosTransacoesUsingGETAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{enum_resource_listar_tipos_eventos_transacoes}}} {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposEventosTransacoesUsingGETAsyncWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/tipos-eventos-transacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEventosTransacoesUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposEventosTransacoesUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -12,40 +12,39 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{transacao_pay_query_response_description}}}
+    /// {{{tipo_servico_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class TransacaoPayQueryResponse :  IEquatable<TransacaoPayQueryResponse>
+    public partial class TipoServicoResponse :  IEquatable<TipoServicoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransacaoPayQueryResponse" /> class.
-        /// Initializes a new instance of the <see cref="TransacaoPayQueryResponse" />class.
+        /// Initializes a new instance of the <see cref="TipoServicoResponse" /> class.
+        /// Initializes a new instance of the <see cref="TipoServicoResponse" />class.
         /// </summary>
-        /// <param name="Codigo">{{{transacao_pay_query_response_codigo_value}}}.</param>
-        /// <param name="Descricao">{{{transacao_pay_query_response_descricao_value}}}.</param>
+        /// <param name="Descricao">Descricao.</param>
+        /// <param name="Id">{{{tipo_servico_response_id_value}}}.</param>
 
-        public TransacaoPayQueryResponse(string Codigo = null, string Descricao = null)
+        public TipoServicoResponse(string Descricao = null, long? Id = null)
         {
-            this.Codigo = Codigo;
             this.Descricao = Descricao;
+            this.Id = Id;
             
         }
         
     
         /// <summary>
-        /// {{{transacao_pay_query_response_codigo_value}}}
+        /// Gets or Sets Descricao
         /// </summary>
-        /// <value>{{{transacao_pay_query_response_codigo_value}}}</value>
-        [DataMember(Name="codigo", EmitDefaultValue=false)]
-        public string Codigo { get; set; }
-    
-        /// <summary>
-        /// {{{transacao_pay_query_response_descricao_value}}}
-        /// </summary>
-        /// <value>{{{transacao_pay_query_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
+    
+        /// <summary>
+        /// {{{tipo_servico_response_id_value}}}
+        /// </summary>
+        /// <value>{{{tipo_servico_response_id_value}}}</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,9 +53,9 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TransacaoPayQueryResponse {\n");
-            sb.Append("  Codigo: ").Append(Codigo).Append("\n");
+            sb.Append("class TipoServicoResponse {\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -79,15 +78,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TransacaoPayQueryResponse);
+            return this.Equals(obj as TipoServicoResponse);
         }
 
         /// <summary>
-        /// Returns true if TransacaoPayQueryResponse instances are equal
+        /// Returns true if TipoServicoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TransacaoPayQueryResponse to be compared</param>
+        /// <param name="other">Instance of TipoServicoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TransacaoPayQueryResponse other)
+        public bool Equals(TipoServicoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -95,14 +94,14 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Codigo == other.Codigo ||
-                    this.Codigo != null &&
-                    this.Codigo.Equals(other.Codigo)
-                ) && 
-                (
                     this.Descricao == other.Descricao ||
                     this.Descricao != null &&
                     this.Descricao.Equals(other.Descricao)
+                ) && 
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 );
         }
 
@@ -118,11 +117,11 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Codigo != null)
-                    hash = hash * 59 + this.Codigo.GetHashCode();
-                
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 return hash;
             }

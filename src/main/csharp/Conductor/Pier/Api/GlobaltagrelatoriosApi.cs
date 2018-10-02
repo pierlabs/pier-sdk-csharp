@@ -13,81 +13,73 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IGlobaltagparametrosprodutoApi
+    public interface IGlobaltagrelatoriosApi
     {
         #region Synchronous Operations
         
         /// <summary>
-        /// {{{parametro_produto_listar}}}
+        /// {{{relatorio_movimentos_controle_processos}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
-        /// <returns>ParametroProdutoResponse</returns>
-        ParametroProdutoResponse ListarUsingGET37 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
+        /// <param name="dataVencimento"> (optional)</param>
+        /// <param name="dataVencimentoFim"> (optional)</param>
+        /// <returns>PageRelatorioMovimentosControleProcessos</returns>
+        PageRelatorioMovimentosControleProcessos MovimentosControleProcessosUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
   
         /// <summary>
-        /// {{{parametro_produto_listar}}}
+        /// {{{relatorio_movimentos_controle_processos}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
-        /// <returns>ApiResponse of ParametroProdutoResponse</returns>
-        ApiResponse<ParametroProdutoResponse> ListarUsingGET37WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
+        /// <param name="dataVencimento"> (optional)</param>
+        /// <param name="dataVencimentoFim"> (optional)</param>
+        /// <returns>ApiResponse of PageRelatorioMovimentosControleProcessos</returns>
+        ApiResponse<PageRelatorioMovimentosControleProcessos> MovimentosControleProcessosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// {{{parametro_produto_listar}}}
+        /// {{{relatorio_movimentos_controle_processos}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
-        /// <returns>Task of ParametroProdutoResponse</returns>
-        System.Threading.Tasks.Task<ParametroProdutoResponse> ListarUsingGET37Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
+        /// <param name="dataVencimento"> (optional)</param>
+        /// <param name="dataVencimentoFim"> (optional)</param>
+        /// <returns>Task of PageRelatorioMovimentosControleProcessos</returns>
+        System.Threading.Tasks.Task<PageRelatorioMovimentosControleProcessos> MovimentosControleProcessosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
 
         /// <summary>
-        /// {{{parametro_produto_listar}}}
+        /// {{{relatorio_movimentos_controle_processos}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
-        /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ListarUsingGET37AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
+        /// <param name="dataVencimento"> (optional)</param>
+        /// <param name="dataVencimentoFim"> (optional)</param>
+        /// <returns>Task of ApiResponse (PageRelatorioMovimentosControleProcessos)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageRelatorioMovimentosControleProcessos>> MovimentosControleProcessosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         #endregion Asynchronous Operations
         
@@ -96,13 +88,13 @@ namespace Conductor.Pier.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class GlobaltagparametrosprodutoApi : IGlobaltagparametrosprodutoApi
+    public class GlobaltagrelatoriosApi : IGlobaltagrelatoriosApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GlobaltagparametrosprodutoApi"/> class.
+        /// Initializes a new instance of the <see cref="GlobaltagrelatoriosApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public GlobaltagparametrosprodutoApi(String basePath)
+        public GlobaltagrelatoriosApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -114,12 +106,12 @@ namespace Conductor.Pier.Api
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="GlobaltagparametrosprodutoApi"/> class
+        /// Initializes a new instance of the <see cref="GlobaltagrelatoriosApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public GlobaltagparametrosprodutoApi(Configuration configuration = null)
+        public GlobaltagrelatoriosApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -182,40 +174,36 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos}}} {{{relatorio_movimentos_controle_processos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param> 
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param> 
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param> 
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param> 
-        /// <returns>ParametroProdutoResponse</returns>
-        public ParametroProdutoResponse ListarUsingGET37 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
+        /// <param name="dataVencimento"> (optional)</param> 
+        /// <param name="dataVencimentoFim"> (optional)</param> 
+        /// <returns>PageRelatorioMovimentosControleProcessos</returns>
+        public PageRelatorioMovimentosControleProcessos MovimentosControleProcessosUsingGET (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
-             ApiResponse<ParametroProdutoResponse> localVarResponse = ListarUsingGET37WithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto);
+             ApiResponse<PageRelatorioMovimentosControleProcessos> localVarResponse = MovimentosControleProcessosUsingGETWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos}}} {{{relatorio_movimentos_controle_processos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param> 
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param> 
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param> 
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param> 
-        /// <returns>ApiResponse of ParametroProdutoResponse</returns>
-        public ApiResponse< ParametroProdutoResponse > ListarUsingGET37WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
+        /// <param name="dataVencimento"> (optional)</param> 
+        /// <param name="dataVencimentoFim"> (optional)</param> 
+        /// <returns>ApiResponse of PageRelatorioMovimentosControleProcessos</returns>
+        public ApiResponse< PageRelatorioMovimentosControleProcessos > MovimentosControleProcessosUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
             
     
-            var localVarPath = "/api/parametros-produto";
+            var localVarPath = "/api/relatorios/movimentos-controle-processos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -245,10 +233,8 @@ namespace Conductor.Pier.Api
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
-            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
-            if (idProduto != null) localVarQueryParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataVencimentoFim != null) localVarQueryParams.Add("dataVencimentoFim", Configuration.ApiClient.ParameterToString(dataVencimentoFim)); // query parameter
             
             
             
@@ -264,53 +250,49 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET37: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessosUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET37: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
+            return new ApiResponse<PageRelatorioMovimentosControleProcessos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroProdutoResponse)));
+                (PageRelatorioMovimentosControleProcessos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageRelatorioMovimentosControleProcessos)));
             
         }
 
         
         /// <summary>
-        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos}}} {{{relatorio_movimentos_controle_processos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
-        /// <returns>Task of ParametroProdutoResponse</returns>
-        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ListarUsingGET37Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
+        /// <param name="dataVencimento"> (optional)</param>
+        /// <param name="dataVencimentoFim"> (optional)</param>
+        /// <returns>Task of PageRelatorioMovimentosControleProcessos</returns>
+        public async System.Threading.Tasks.Task<PageRelatorioMovimentosControleProcessos> MovimentosControleProcessosUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
-             ApiResponse<ParametroProdutoResponse> localVarResponse = await ListarUsingGET37AsyncWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto);
+             ApiResponse<PageRelatorioMovimentosControleProcessos> localVarResponse = await MovimentosControleProcessosUsingGETAsyncWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notes}}}
+        /// {{{relatorio_movimentos_controle_processos}}} {{{relatorio_movimentos_controle_processos_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
-        /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ListarUsingGET37AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
+        /// <param name="dataVencimento"> (optional)</param>
+        /// <param name="dataVencimentoFim"> (optional)</param>
+        /// <returns>Task of ApiResponse (PageRelatorioMovimentosControleProcessos)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageRelatorioMovimentosControleProcessos>> MovimentosControleProcessosUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
             
     
-            var localVarPath = "/api/parametros-produto";
+            var localVarPath = "/api/relatorios/movimentos-controle-processos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -340,10 +322,8 @@ namespace Conductor.Pier.Api
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (codigo != null) localVarQueryParams.Add("codigo", Configuration.ApiClient.ParameterToString(codigo)); // query parameter
-            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
-            if (idProduto != null) localVarQueryParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataVencimentoFim != null) localVarQueryParams.Add("dataVencimentoFim", Configuration.ApiClient.ParameterToString(dataVencimentoFim)); // query parameter
             
             
             
@@ -359,13 +339,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET37: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessosUsingGET: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET37: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessosUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
+            return new ApiResponse<PageRelatorioMovimentosControleProcessos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ParametroProdutoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParametroProdutoResponse)));
+                (PageRelatorioMovimentosControleProcessos) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageRelatorioMovimentosControleProcessos)));
             
         }
         

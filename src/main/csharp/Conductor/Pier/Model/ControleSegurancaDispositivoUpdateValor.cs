@@ -22,21 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ControleSegurancaDispositivoUpdateValor" /> class.
         /// Initializes a new instance of the <see cref="ControleSegurancaDispositivoUpdateValor" />class.
         /// </summary>
-        /// <param name="Id">{{{controle_seguranca_dispositivo_id_descricao}}} (required).</param>
         /// <param name="IdUsuario">{{{controle_seguranca_dispositivo_id_usuario_descricao}}} (required).</param>
         /// <param name="PhoneId">{{{controle_seguranca_dispositivo_phone_id_descricao}}} (required).</param>
 
-        public ControleSegurancaDispositivoUpdateValor(long? Id = null, long? IdUsuario = null, string PhoneId = null)
+        public ControleSegurancaDispositivoUpdateValor(long? IdUsuario = null, string PhoneId = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for ControleSegurancaDispositivoUpdateValor and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
             // to ensure "IdUsuario" is required (not null)
             if (IdUsuario == null)
             {
@@ -60,13 +50,6 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_id_descricao}}}
-        /// </summary>
-        /// <value>{{{controle_seguranca_dispositivo_id_descricao}}}</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
-    
-        /// <summary>
         /// {{{controle_seguranca_dispositivo_id_usuario_descricao}}}
         /// </summary>
         /// <value>{{{controle_seguranca_dispositivo_id_usuario_descricao}}}</value>
@@ -88,7 +71,6 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ControleSegurancaDispositivoUpdateValor {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdUsuario: ").Append(IdUsuario).Append("\n");
             sb.Append("  PhoneId: ").Append(PhoneId).Append("\n");
             
@@ -129,11 +111,6 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
-                (
                     this.IdUsuario == other.IdUsuario ||
                     this.IdUsuario != null &&
                     this.IdUsuario.Equals(other.IdUsuario)
@@ -156,9 +133,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.IdUsuario != null)
                     hash = hash * 59 + this.IdUsuario.GetHashCode();

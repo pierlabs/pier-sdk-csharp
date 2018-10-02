@@ -52,8 +52,12 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteMaximo">{{{pessoa_fisica_aprovada_persist_limite_maximo_value}}} (required).</param>
         /// <param name="LimiteParcelas">{{{pessoa_fisica_aprovada_persist_limite_parcelas_value}}} (required).</param>
         /// <param name="LimiteConsignado">{{{pessoa_fisica_aprovada_persist_limite_consignado_value}}}.</param>
+        /// <param name="NomeReferencia1">{{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}.</param>
+        /// <param name="EnderecoReferencia1">{{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}.</param>
+        /// <param name="NomeReferencia2">{{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}.</param>
+        /// <param name="EnderecoReferencia2">{{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}.</param>
 
-        public PessoaFisicaAprovadaPersistValue(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersistValue> Telefones = null, List<EnderecoAprovadoPersistValue> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null)
+        public PessoaFisicaAprovadaPersistValue(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersistValue> Telefones = null, List<EnderecoAprovadoPersistValue> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -165,6 +169,10 @@ namespace Conductor.Pier.Model
             this.CanalEntrada = CanalEntrada;
             this.ValorPontuacao = ValorPontuacao;
             this.LimiteConsignado = LimiteConsignado;
+            this.NomeReferencia1 = NomeReferencia1;
+            this.EnderecoReferencia1 = EnderecoReferencia1;
+            this.NomeReferencia2 = NomeReferencia2;
+            this.EnderecoReferencia2 = EnderecoReferencia2;
             
         }
         
@@ -380,6 +388,34 @@ namespace Conductor.Pier.Model
         public double? LimiteConsignado { get; set; }
     
         /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}</value>
+        [DataMember(Name="nomeReferencia1", EmitDefaultValue=false)]
+        public string NomeReferencia1 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}</value>
+        [DataMember(Name="enderecoReferencia1", EmitDefaultValue=false)]
+        public string EnderecoReferencia1 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}</value>
+        [DataMember(Name="nomeReferencia2", EmitDefaultValue=false)]
+        public string NomeReferencia2 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}</value>
+        [DataMember(Name="enderecoReferencia2", EmitDefaultValue=false)]
+        public string EnderecoReferencia2 { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -417,6 +453,10 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
             sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
             sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
+            sb.Append("  NomeReferencia1: ").Append(NomeReferencia1).Append("\n");
+            sb.Append("  EnderecoReferencia1: ").Append(EnderecoReferencia1).Append("\n");
+            sb.Append("  NomeReferencia2: ").Append(NomeReferencia2).Append("\n");
+            sb.Append("  EnderecoReferencia2: ").Append(EnderecoReferencia2).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -603,6 +643,26 @@ namespace Conductor.Pier.Model
                     this.LimiteConsignado == other.LimiteConsignado ||
                     this.LimiteConsignado != null &&
                     this.LimiteConsignado.Equals(other.LimiteConsignado)
+                ) && 
+                (
+                    this.NomeReferencia1 == other.NomeReferencia1 ||
+                    this.NomeReferencia1 != null &&
+                    this.NomeReferencia1.Equals(other.NomeReferencia1)
+                ) && 
+                (
+                    this.EnderecoReferencia1 == other.EnderecoReferencia1 ||
+                    this.EnderecoReferencia1 != null &&
+                    this.EnderecoReferencia1.Equals(other.EnderecoReferencia1)
+                ) && 
+                (
+                    this.NomeReferencia2 == other.NomeReferencia2 ||
+                    this.NomeReferencia2 != null &&
+                    this.NomeReferencia2.Equals(other.NomeReferencia2)
+                ) && 
+                (
+                    this.EnderecoReferencia2 == other.EnderecoReferencia2 ||
+                    this.EnderecoReferencia2 != null &&
+                    this.EnderecoReferencia2.Equals(other.EnderecoReferencia2)
                 );
         }
 
@@ -707,6 +767,18 @@ namespace Conductor.Pier.Model
                 
                 if (this.LimiteConsignado != null)
                     hash = hash * 59 + this.LimiteConsignado.GetHashCode();
+                
+                if (this.NomeReferencia1 != null)
+                    hash = hash * 59 + this.NomeReferencia1.GetHashCode();
+                
+                if (this.EnderecoReferencia1 != null)
+                    hash = hash * 59 + this.EnderecoReferencia1.GetHashCode();
+                
+                if (this.NomeReferencia2 != null)
+                    hash = hash * 59 + this.NomeReferencia2.GetHashCode();
+                
+                if (this.EnderecoReferencia2 != null)
+                    hash = hash * 59 + this.EnderecoReferencia2.GetHashCode();
                 
                 return hash;
             }
