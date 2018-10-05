@@ -451,8 +451,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <returns>CartaoResponse</returns>
-        CartaoResponse GerarNovaViaUsingPOST (long? id);
+        /// <returns>CartaoImpressaoResponse</returns>
+        CartaoImpressaoResponse GerarNovaViaUsingPOST (long? id);
   
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via}}}
@@ -462,8 +462,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> GerarNovaViaUsingPOSTWithHttpInfo (long? id);
+        /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
+        ApiResponse<CartaoImpressaoResponse> GerarNovaViaUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_lancar_tarifa_segunda_via}}}
@@ -1211,8 +1211,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id);
+        /// <returns>Task of CartaoImpressaoResponse</returns>
+        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarNovaViaUsingPOSTAsync (long? id);
 
         /// <summary>
         /// {{{cartao_resource_gerar_nova_via}}}
@@ -1222,8 +1222,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{cartao_resource_lancar_tarifa_segunda_via}}}
@@ -4636,10 +4636,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param> 
-        /// <returns>CartaoResponse</returns>
-        public CartaoResponse GerarNovaViaUsingPOST (long? id)
+        /// <returns>CartaoImpressaoResponse</returns>
+        public CartaoImpressaoResponse GerarNovaViaUsingPOST (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = GerarNovaViaUsingPOSTWithHttpInfo(id);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarNovaViaUsingPOSTWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4648,8 +4648,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param> 
-        /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > GerarNovaViaUsingPOSTWithHttpInfo (long? id)
+        /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
+        public ApiResponse< CartaoImpressaoResponse > GerarNovaViaUsingPOSTWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -4704,9 +4704,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarNovaViaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<CartaoResponse>(localVarStatusCode,
+            return new ApiResponse<CartaoImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
+                (CartaoImpressaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoImpressaoResponse)));
             
         }
 
@@ -4716,10 +4716,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> GerarNovaViaUsingPOSTAsync (long? id)
+        /// <returns>Task of CartaoImpressaoResponse</returns>
+        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarNovaViaUsingPOSTAsync (long? id)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await GerarNovaViaUsingPOSTAsyncWithHttpInfo(id);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarNovaViaUsingPOSTAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4729,8 +4729,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{cartao_resource_gerar_nova_via_param_id_cartao}}}</param>
-        /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarNovaViaUsingPOSTAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarNovaViaUsingPOST");
@@ -4783,9 +4783,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarNovaViaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CartaoResponse>(localVarStatusCode,
+            return new ApiResponse<CartaoImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
+                (CartaoImpressaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoImpressaoResponse)));
             
         }
         
